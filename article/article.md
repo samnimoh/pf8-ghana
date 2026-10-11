@@ -28,7 +28,7 @@ What is known about West African *P. falciparum* structure provides the expectat
 
 The eighth release of the MalariaGEN *P. falciparum* dataset, Pf8, changes what can be attempted at national scale. It provides uniformly called and quality-controlled genotypes for 33,325 samples at 12,493,205 variants, together with published per-sample resistance genotypes and genotype-distance matrices (MalariaGEN 2025). Of these, 4,905 Ghanaian isolates pass release quality control and can be assigned to an agro-ecological zone, collected between 2009 and 2021 and distributed across all four zones; 1,900 of them enter the analysis set used here. Ghanaian isolates have contributed to continental analyses, but Ghana has not been treated as the unit of analysis in Pf8: zone-level differentiation has not been estimated with confidence intervals, the relationship between differentiation and geographic separation has not been tested with the available spatial resolution, and a codon-level resistance panel reconstructed directly from coding sequence, rather than from annotation strings, has not been reported for the country. Direct codon reconstruction matters because the resistance residue at some positions is the 3D7 reference residue, and because the current WHO compendium of molecular markers classifies variants rather than genes, so a gene-level summary cannot be mapped onto the validated, candidate and potential tiers (WHO 2025).
 
-This study addresses three questions. First, how differentiated are Ghana's agro-ecological zones at common variants, measured as pairwise Hudson F~ST~ with block-jackknife confidence intervals and examined alongside ordination of the published genotype distances (Fig. 2, Table 2)? Second, does differentiation scale with geographic distance between populations, and is any such relationship robust to the thresholds and spatial units used to define the analysis set (Table 4)? Third, what are the frequencies, in isolates collected between 2009 and 2021, of validated, candidate and potential resistance markers across the nine genes *pfk13*, *pfdhfr*, *pfdhps*, *pfcrt*, *pfmdr1*, *pfmdr2*, *pfaat1*, *pfcoronin* and *pfap2mu*, and do those frequencies vary between zones (Table 3)? A genome-wide scan for differentiation outliers is used to place the resistance loci in the context of the strongest zone-associated signals in the panel (Fig. 3).
+This study addresses three questions. First, how differentiated are Ghana's agro-ecological zones at common variants, measured as pairwise Hudson F~ST~ with block-jackknife confidence intervals and examined alongside ordination of the published genotype distances (Fig. 2, Table 2)? Second, does differentiation scale with geographic distance between populations, and is any such relationship robust to the thresholds and spatial units used to define the analysis set? Third, what are the frequencies, in isolates collected between 2009 and 2021, of validated, candidate and potential resistance markers across the nine genes *pfk13*, *pfdhfr*, *pfdhps*, *pfcrt*, *pfmdr1*, *pfmdr2*, *pfaat1*, *pfcoronin* and *pfap2mu*, and do those frequencies vary between zones (Table 3)? A genome-wide scan for differentiation outliers is used to place the resistance loci in the context of the strongest zone-associated signals in the panel (Fig. 3).
 
 ## Methods
 
@@ -114,8 +114,6 @@ Pairwise Hudson F~ST~ (Hudson et al. 1992), computed as a ratio of averages with
 
 The magnitude is stable across the filtering thresholds examined. Across six scenarios built on one shared genotype load - the baseline, F~ws~ >= 0.90, F~ws~ >= 0.80, no F~ws~ filter, MAF >= 0.01 and MAF >= 0.02, spanning 1,900 to 4,403 isolates and 3,275 to 10,876 SNPs - the maximum pairwise F~ST~ stays between 0.00204 and 0.00255 (Table 4).
 
-[[TABLE4]]
-
 ### Ancestry inference
 
 ADMIXTURE was run on 3,385 LD-pruned SNPs with 10-fold cross-validation (Alexander et al. 2009). The cross-validation curve is nearly flat: error falls from 0.84384 at K = 1 to a minimum of 0.83925 at K = 2, rises to 0.83953 at K = 3, and continues to 0.84488 at K = 8, a total range across K = 1 to 8 of 0.0056. The K = 2 minimum is shallow, and the data give little support for any particular number of ancestral components.
@@ -171,6 +169,8 @@ Within-host complexity was summarised on the 4,905-isolate QC set, using the sam
 ### Validation
 
 The reconstructed genotypes were compared against MalariaGEN's published per-sample resistance genotypes (MalariaGEN 2025). All 47,012 of 47,012 comparable calls agreed. That comparison covers 25 of the 57 panel codons, namely those for which MalariaGEN publishes a per-sample genotype; the remaining 32 have no external per-sample check. Every *pfk13* codon falls in the unchecked set, so the artemisinin result rests on the codon reconstruction itself and on its concordance at the other genes, not on a direct external comparison at *pfk13*.
+
+[[TABLE4]]
 
 ## Discussion
 

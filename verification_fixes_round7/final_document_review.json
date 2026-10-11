@@ -1,0 +1,395 @@
+{
+  "status": "pass",
+  "source_sha256": {
+    "Pf8_Ghana_manuscript_REVISED.docx": "c1774fafc8db9a4b18ee39cec7b36397cca39a6cffb311b82ac974774896b920",
+    "article/Additional_file_1.docx": "05f941e8a11af7edafb2490f24438f512ead053e968f96babd2711b082634fff",
+    "article/Pf8_Ghana_article.docx": "6c45b8f509d87a512af773ab1d771d51e8d2c8d89343ae6e1356f161fc0494b4",
+    "article/article.md": "a64401e13fbea92184efbc822d8c7b90cf148b50ad4bd073a629f8103911f0b7",
+    "tools/make_supplement.py": "2e13d53ec42032bd85a2daf4c7a1482acb4a8d95f7d3b8b43e9260829709b6c0",
+    "tools/build_article.py": "55a7b960ab42804d814e783d660b8573985d17fd0330abeac5b650311ed2ef2f",
+    "verification_fixes_round7/apply_document_fixes.py": "25c237fd09c16c47c4bd5d4b4395a0844ee92d500ab03a3d0a2ad2a6f981b242",
+    "verification_fixes_round7/rebuild_deliverables.py": "dfc526cc854ca1844fb89418cc17e5ed157881ad5956bb0dd531a3d35240a065",
+    "verification_fixes_round7/render_documents.py": "0880fbed750ac5ff95cadbdbb1f3a374666a6aa285e7dc5ee7105a3dc4905d56"
+  },
+  "baseline_git_commit": "e7c4cd41b1f631209d25f2ff35eed6ba9c0ec6cd",
+  "checks": [
+    {
+      "check": "Pf8_Ghana_manuscript_REVISED.docx: old target cardinality surveillance correction-record propagation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Pf8_Ghana_manuscript_REVISED.docx: new target cardinality surveillance correction-record propagation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Pf8_Ghana_manuscript_REVISED.docx: old target cardinality pfk13 fixed-codon exception",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Pf8_Ghana_manuscript_REVISED.docx: new target cardinality pfk13 fixed-codon exception",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Pf8_Ghana_manuscript_REVISED.docx: old target cardinality differentiation status cell",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Pf8_Ghana_manuscript_REVISED.docx: new target cardinality differentiation status cell",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Pf8_Ghana_manuscript_REVISED.docx: old target cardinality local withdrawal cue preserving history",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Pf8_Ghana_manuscript_REVISED.docx: new target cardinality local withdrawal cue preserving history",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Pf8_Ghana_manuscript_REVISED.docx: exactly four accepted paragraph substitutions",
+      "pass": true,
+      "detail": {
+        "changed_indices": [
+          3255,
+          3607,
+          3628,
+          4054
+        ]
+      }
+    },
+    {
+      "check": "Pf8_Ghana_manuscript_REVISED.docx: all numeric paragraph tokens retained in order",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Pf8_Ghana_manuscript_REVISED.docx: all non-text document XML preserved",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Pf8_Ghana_manuscript_REVISED.docx: only permitted package parts changed",
+      "pass": true,
+      "detail": [
+        "word/document.xml"
+      ]
+    },
+    {
+      "check": "article/Additional_file_1.docx: old target cardinality surveillance correction-record propagation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article/Additional_file_1.docx: new target cardinality surveillance correction-record propagation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article/Additional_file_1.docx: old target cardinality pfk13 fixed-codon exception",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article/Additional_file_1.docx: new target cardinality pfk13 fixed-codon exception",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article/Additional_file_1.docx: old target cardinality differentiation status cell",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article/Additional_file_1.docx: new target cardinality differentiation status cell",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article/Additional_file_1.docx: old target cardinality local withdrawal cue preserving history",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article/Additional_file_1.docx: new target cardinality local withdrawal cue preserving history",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article/Additional_file_1.docx: exactly four accepted paragraph substitutions",
+      "pass": true,
+      "detail": {
+        "changed_indices": [
+          3259,
+          3611,
+          3632,
+          4058
+        ]
+      }
+    },
+    {
+      "check": "article/Additional_file_1.docx: all numeric paragraph tokens retained in order",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article/Additional_file_1.docx: all non-text document XML preserved",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article/Additional_file_1.docx: only permitted package parts changed",
+      "pass": true,
+      "detail": [
+        "docProps/core.xml",
+        "word/document.xml"
+      ]
+    },
+    {
+      "check": "supplement searchable title matches unique visible title",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "supplement other metadata semantic fields unchanged",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article searchable title matches visible title",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article other metadata semantic fields unchanged",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article paragraph multiset has only intro reference removal and two header clarifications",
+      "pass": true,
+      "detail": {
+        "removed": {
+          "This study addresses three questions. First, how differentiated are Ghana's agro-ecological zones at common variants, measured as pairwise Hudson FST with block-jackknife confidence intervals and examined alongside ordination of the published genotype distances (Fig. 2, Table 2)? Second, does differentiation scale with geographic distance between populations, and is any such relationship robust to the thresholds and spatial units used to define the analysis set (Table 4)? Third, what are the frequencies, in isolates collected between 2009 and 2021, of validated, candidate and potential resistance markers across the nine genes pfk13, pfdhfr, pfdhps, pfcrt, pfmdr1, pfmdr2, pfaat1, pfcoronin and pfap2mu, and do those frequencies vary between zones (Table 3)? A genome-wide scan for differentiation outliers is used to place the resistance loci in the context of the strongest zone-associated signals in the panel (Fig. 3).": 1,
+          "n": 2
+        },
+        "added": {
+          "This study addresses three questions. First, how differentiated are Ghana's agro-ecological zones at common variants, measured as pairwise Hudson FST with block-jackknife confidence intervals and examined alongside ordination of the published genotype distances (Fig. 2, Table 2)? Second, does differentiation scale with geographic distance between populations, and is any such relationship robust to the thresholds and spatial units used to define the analysis set? Third, what are the frequencies, in isolates collected between 2009 and 2021, of validated, candidate and potential resistance markers across the nine genes pfk13, pfdhfr, pfdhps, pfcrt, pfmdr1, pfmdr2, pfaat1, pfcoronin and pfap2mu, and do those frequencies vary between zones (Table 3)? A genome-wide scan for differentiation outliers is used to place the resistance loci in the context of the strongest zone-associated signals in the panel (Fig. 3).": 1,
+          "n (first zone)": 1,
+          "n (second zone)": 1
+        }
+      }
+    },
+    {
+      "check": "actual article physical table order 1,2,3,4",
+      "pass": true,
+      "detail": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "check": "article Table 1 every scientific data cell unchanged",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article Table 1 headers unchanged",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article Table 2 every scientific data cell unchanged",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article Table 2 headers clarified",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article Table 4 every scientific data cell unchanged",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article Table 4 headers unchanged",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article Table 3 every scientific data cell unchanged",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article Table 3 headers unchanged",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "MD exact old quote once",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "MD exact old quote once",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "MD exact old quote once",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "actual Markdown equals three accepted article operations",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "actual Markdown first unique table citations 1,2,3,4",
+      "pass": true,
+      "detail": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "check": "fixed dry-run splice exact surveillance correction-record propagation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fixed dry-run splice exact pfk13 fixed-codon exception",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fixed dry-run splice exact differentiation status cell",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fixed dry-run splice exact local withdrawal cue preserving history",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "synthetic run splice ('abc', 'abc!')",
+      "pass": true,
+      "detail": "<w:p><w:r><w:t>abc!</w:t></w:r></w:p>"
+    },
+    {
+      "check": "synthetic run splice ('abc', '!abc')",
+      "pass": true,
+      "detail": "<w:p><w:r><w:t>!abc</w:t></w:r></w:p>"
+    },
+    {
+      "check": "synthetic run splice ('abc', 'ab&c')",
+      "pass": true,
+      "detail": "<w:p><w:r><w:t>ab&amp;c</w:t></w:r></w:p>"
+    },
+    {
+      "check": "synthetic run splice ('abc', '')",
+      "pass": true,
+      "detail": "<w:p><w:r><w:t></w:t></w:r></w:p>"
+    },
+    {
+      "check": "synthetic run splice ('', 'x')",
+      "pass": true,
+      "detail": "<w:p><w:r><w:t>x</w:t></w:r></w:p>"
+    },
+    {
+      "check": "splice invalid bounds rejected (-1, 0)",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "splice invalid bounds rejected (0, 4)",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "splice invalid bounds rejected (2, 1)",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "findings": [],
+  "concept_sweep": {
+    "panmixia": {
+      "matched_main_indices": [
+        981,
+        3607,
+        3977
+      ],
+      "remaining_text_disposition": {
+        "981": "Explicitly states the data do not estimate panmixia; preserve.",
+        "3607": "Historical label preserved with proposed local withdrawal cue.",
+        "3977": "Appendix F already explicitly withdraws the label and limits evidence to stability of measured common-variant differentiation; preserve."
+      }
+    },
+    "negligible_differentiation": {
+      "matched_main_indices": [
+        142,
+        920,
+        1296,
+        3138,
+        3255,
+        3516,
+        4054
+      ],
+      "related_passage_disposition": {
+        "3516": "The quoted expression is expressly restricted to commonly shared variation and rejects inference about excluded zone-restricted variants; no further interpretation change proposed. Other long paragraphs contain negligible ADMIXTURE improvement/component magnitude rather than a claim of absent differentiation.",
+        "3255": "Status cell corrected by proposal.",
+        "4054": "Correction record corrected by proposal."
+      }
+    },
+    "surveillance": {
+      "validated_narrowed_main_indices": [
+        146,
+        152,
+        3211,
+        3213,
+        3217,
+        3606,
+        3649
+      ],
+      "historical_original_claim_main_index": 4053,
+      "historical_original_claim_disposition": "Table F.2 defect-description column intentionally records the old claim. Preserve it; replace the adjacent Correction column so the record matches the current sections."
+    },
+    "pfk13_fixed_scope": {
+      "already_correct_main_indices": [
+        144,
+        146,
+        170,
+        3599,
+        4021
+      ],
+      "only_all_23_fixed_contradiction_main_index": 3628,
+      "other_historical_withdrawals_disposition": "Preserve previous-version withdrawals, per-codon callability and historical sampling-period caveats. No marker frequencies, denominators, p-values, thresholds, outputs or scientific scripts are changed."
+    }
+  },
+  "scope_bounds": "Actual current DOCX and Markdown comparison to Git baseline plus in-memory original-paragraph and synthetic splice tests. No DOCX source authored by reviewer. Scientific computations/data/Lean not run. Visual QA is a separate pending review.",
+  "resolved_initial_driver_findings": [
+    "Final splice supports trailing insertion, allowing the planned Table 8.1 replacement.",
+    "Supplement metadata now uses the unique nonempty visible title prefix, avoiding the first blank paragraph."
+  ],
+  "known_limits": [
+    "The two source replacements and two generated deliverable replacements are atomic per file, not a multi-file transaction. Parent completed authoring and both builds; final identity/publication checks must gate the completed set.",
+    "Core title fix addresses searchable title only; inherited creation timestamps/other metadata remain unchanged."
+  ]
+}

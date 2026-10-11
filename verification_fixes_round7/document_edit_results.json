@@ -1,0 +1,85 @@
+{
+  "manuscript_before_sha256": "6f61aebaa4bb6c104b31038eb97ef7ddddc0b48c636b8f2f190993c9069e6115",
+  "manuscript_after_sha256": "c1774fafc8db9a4b18ee39cec7b36397cca39a6cffb311b82ac974774896b920",
+  "document_xml_before_sha256": "0f4ee9b3bd1b7a31de3590866558cf1eaa06bf3b42d423c1112e12ba2b6d414b",
+  "document_xml_after_sha256": "770d878cf2fc73b3326b0a484906e9ef78df3910266bcd41f3eb4c0c409dcd0e",
+  "article_md_before_sha256": "925cdc5fc6ec01d79ce61586085524d1566e0ceb6ef5b4f4e47d1d707b6057c6",
+  "article_md_after_sha256": "a64401e13fbea92184efbc822d8c7b90cf148b50ad4bd073a629f8103911f0b7",
+  "manuscript_edits": [
+    {
+      "concept": "surveillance correction-record propagation",
+      "quote": "Restricted to what the evidence supports: negligible neutral differentiation licenses a claim about neutral structure only, and marker-frequency representativeness is a separate question on which this analysis finds significant between-zone variation at pfdhps 437 (p = 1.2 x 10-6), pfdhfr (p <= 2.43 x 10-4) and pfaat1 (p = 1.9 x 10-18). The qualified form now appears in Section 7.4, in the abstract's conclusion and in Section 10.1; the unqualified form is removed.",
+      "repl": "Restricted to what the evidence supports: differentiation among the sampled zones is very low but detectable at retained common variants; this does not establish that sparse sampling adequately characterises population structure. Marker-frequency representativeness is a separate question on which this analysis finds significant between-zone variation at pfdhps 437 (p = 1.2 x 10-6), pfdhfr (p <= 2.43 x 10-4) and pfaat1 (p = 1.9 x 10-18). The qualified form now appears in Section 7.4, in the abstract's conclusion and in Section 10.1; the unqualified form is removed.",
+      "expected_count": 1,
+      "location": "Table F.2, surveillance-design row, Correction column; corresponding Table S52",
+      "main_paragraph_index_zero_based": 4054,
+      "supplement_paragraph_index_zero_based": 4058,
+      "pre_edit_pdf_location": {
+        "main_page": 195,
+        "supplement_page": 196
+      },
+      "number_preservation": "Every digit-containing numeric token is unchanged."
+    },
+    {
+      "concept": "pfk13 fixed-codon exception",
+      "quote": "Yes, and the panel behind this answer has now been rebuilt twice. pfdhps G437 is 0.897 overall and zone-structured (0.964 deciduous forest, 0.941 coastal savanna, 0.875 Guinea savanna, 0.800 transitional; p = 1.2 x 10-6) - a locus absent from the previous panel entirely, because the resistance residue is the 3D7 reference residue. pfaat1 S258L runs 0.824 coastal to 0.544 Guinea savanna (p = 1.9 x 10-18, n = 1,896). The pfdhfr triple-mutant haplotype IRN is 0.771 on 1,876 complete cases (CI 0.751-0.789), not the 0.786-0.908 marginal range previously quoted, with NRN 0.116 and wild-type NCS 0.091; its component codons differ across zones at p <= 2.43 x 10-4 (the largest of the three being 2.425 x 10-4 at Asn51Ile). pfcrt CVIET is 0.071 and is genuinely a unit: only CVMNK (0.929) and CVIET occur. All 23 pfk13 codons - all 14 WHO-validated and all 6 candidate variants, which share codon 469 and so occupy 19 codons, plus four potential-tier codons - are fixed at the reference residue (codon 458 at 0.9995, its single alternative call being Asn458Asp and not the validated N458Y) on 1,845-1,876 called isolates per codon, over 2009-2021. This question was originally reported as null; the null was a filter artefact, and the first correction of it was itself incomplete.",
+      "repl": "Yes, and the panel behind this answer has now been rebuilt twice. pfdhps G437 is 0.897 overall and zone-structured (0.964 deciduous forest, 0.941 coastal savanna, 0.875 Guinea savanna, 0.800 transitional; p = 1.2 x 10-6) - a locus absent from the previous panel entirely, because the resistance residue is the 3D7 reference residue. pfaat1 S258L runs 0.824 coastal to 0.544 Guinea savanna (p = 1.9 x 10-18, n = 1,896). The pfdhfr triple-mutant haplotype IRN is 0.771 on 1,876 complete cases (CI 0.751-0.789), not the 0.786-0.908 marginal range previously quoted, with NRN 0.116 and wild-type NCS 0.091; its component codons differ across zones at p <= 2.43 x 10-4 (the largest of the three being 2.425 x 10-4 at Asn51Ile). pfcrt CVIET is 0.071 and is genuinely a unit: only CVMNK (0.929) and CVIET occur. All 23 pfk13 codons - all 14 WHO-validated and all 6 candidate variants, which share codon 469 and so occupy 19 codons, plus four potential-tier codons - comprise twenty-two codons fixed at the reference residue and codon 458 at 0.9995 (its single alternative call being Asn458Asp and not the validated N458Y) on 1,845-1,876 called isolates per codon, over 2009-2021. This question was originally reported as null; the null was a filter artefact, and the first correction of it was itself incomplete.",
+      "expected_count": 1,
+      "location": "Table 10.2, resistance-marker question, Answer column; corresponding Table S47",
+      "main_paragraph_index_zero_based": 3628,
+      "supplement_paragraph_index_zero_based": 3632,
+      "pre_edit_pdf_location": {
+        "main_page": 173,
+        "supplement_page": 174
+      },
+      "number_preservation": "Every digit-containing numeric token is unchanged; twenty-two is an explicit spelled-out count already authorised by the canonical facts."
+    },
+    {
+      "concept": "differentiation status cell",
+      "quote": "No — differentiation still negligible",
+      "repl": "No — differentiation remains very low but detectable at retained common variants",
+      "expected_count": 1,
+      "location": "Table 8.1, FST CIs spanning zero row, Conclusion changed? column; corresponding Table S42",
+      "main_paragraph_index_zero_based": 3255,
+      "supplement_paragraph_index_zero_based": 3259,
+      "pre_edit_pdf_location": {
+        "main_page": 148,
+        "supplement_page": 149
+      },
+      "number_preservation": "Every digit-containing numeric token is unchanged."
+    },
+    {
+      "concept": "local withdrawal cue preserving history",
+      "quote": "Robustness, where it stops, and the one conclusion it removed. The population-genetic conclusions did not change when the SNP panel grew by 16.6 per cent, the BayPass scan became reproducible and false-discovery accounting was added — and one of them has now been tested against the two thresholds that define the dataset and did change. What survived: maximum FST stayed within 0.00204–0.00255 across six threshold scenarios spanning 1,900 to 4,403 isolates and 3,275 to 10,876 SNPs; the ADMIXTURE cross-validation curve stayed near-flat with a negligible K = 2 improvement; re-running the ordinations on the analysis set left the silhouette slightly more negative rather than less; and the 19 outliers came through a quality check with every significant difference in their favour, though two chromosome-11 sites are downgraded on an ExcessHet and InbreedingCoeff signal the check itself surfaced. What did not survive: isolation by distance, significant in two of six threshold scenarios and four of seven region jackknife replicates, now reported as not robust. Near-panmixia and isolation by distance were graded together in the previous version, both under \"robust to the largest correction the pipeline received\"; they are not the same kind of result and the same six scenarios separate them cleanly. The resistance results are a third case and should not be described as robust in the same sentence as either: the first correction created the finding and the second changed its content. The triple mutant moved from an implied 0.786–0.908 to a measured 0.771, a locus at 0.897 appeared that had been absent altogether, two pfk13 variants were reclassified, a marker discrepancy dissolved into an annotation bug, and the central functional interpretation was reversed. Two successive corrections in the same place is itself a result about the process, recorded in Appendix F. The threshold sensitivity was not run on the codon panel, so nothing is claimed about the resistance frequencies' behaviour under other thresholds.",
+      "repl": "Robustness, where it stops, and the one conclusion it removed. The population-genetic conclusions did not change when the SNP panel grew by 16.6 per cent, the BayPass scan became reproducible and false-discovery accounting was added — and one of them has now been tested against the two thresholds that define the dataset and did change. What survived: maximum FST stayed within 0.00204–0.00255 across six threshold scenarios spanning 1,900 to 4,403 isolates and 3,275 to 10,876 SNPs; the ADMIXTURE cross-validation curve stayed near-flat with a negligible K = 2 improvement; re-running the ordinations on the analysis set left the silhouette slightly more negative rather than less; and the 19 outliers came through a quality check with every significant difference in their favour, though two chromosome-11 sites are downgraded on an ExcessHet and InbreedingCoeff signal the check itself surfaced. What did not survive: isolation by distance, significant in two of six threshold scenarios and four of seven region jackknife replicates, now reported as not robust. Near-panmixia, a label now withdrawn, and isolation by distance were graded together in the previous version, both under \"robust to the largest correction the pipeline received\"; they are not the same kind of result and the same six scenarios separate them cleanly. The resistance results are a third case and should not be described as robust in the same sentence as either: the first correction created the finding and the second changed its content. The triple mutant moved from an implied 0.786–0.908 to a measured 0.771, a locus at 0.897 appeared that had been absent altogether, two pfk13 variants were reclassified, a marker discrepancy dissolved into an annotation bug, and the central functional interpretation was reversed. Two successive corrections in the same place is itself a result about the process, recorded in Appendix F. The threshold sensitivity was not run on the codon panel, so nothing is claimed about the resistance frequencies' behaviour under other thresholds.",
+      "expected_count": 1,
+      "location": "Section 10.1, robustness paragraph",
+      "main_paragraph_index_zero_based": 3607,
+      "supplement_paragraph_index_zero_based": 3611,
+      "pre_edit_pdf_location": {
+        "main_page": 172,
+        "supplement_page": 173
+      },
+      "number_preservation": "Every digit-containing numeric token is unchanged."
+    }
+  ],
+  "article_edits": [
+    {
+      "quote": "This study addresses three questions. First, how differentiated are Ghana's agro-ecological zones at common variants, measured as pairwise Hudson F~ST~ with block-jackknife confidence intervals and examined alongside ordination of the published genotype distances (Fig. 2, Table 2)? Second, does differentiation scale with geographic distance between populations, and is any such relationship robust to the thresholds and spatial units used to define the analysis set (Table 4)? Third, what are the frequencies, in isolates collected between 2009 and 2021, of validated, candidate and potential resistance markers across the nine genes *pfk13*, *pfdhfr*, *pfdhps*, *pfcrt*, *pfmdr1*, *pfmdr2*, *pfaat1*, *pfcoronin* and *pfap2mu*, and do those frequencies vary between zones (Table 3)? A genome-wide scan for differentiation outliers is used to place the resistance loci in the context of the strongest zone-associated signals in the panel (Fig. 3).",
+      "repl": "This study addresses three questions. First, how differentiated are Ghana's agro-ecological zones at common variants, measured as pairwise Hudson F~ST~ with block-jackknife confidence intervals and examined alongside ordination of the published genotype distances (Fig. 2, Table 2)? Second, does differentiation scale with geographic distance between populations, and is any such relationship robust to the thresholds and spatial units used to define the analysis set? Third, what are the frequencies, in isolates collected between 2009 and 2021, of validated, candidate and potential resistance markers across the nine genes *pfk13*, *pfdhfr*, *pfdhps*, *pfcrt*, *pfmdr1*, *pfmdr2*, *pfaat1*, *pfcoronin* and *pfap2mu*, and do those frequencies vary between zones (Table 3)? A genome-wide scan for differentiation outliers is used to place the resistance loci in the context of the strongest zone-associated signals in the panel (Fig. 3).",
+      "expected_count": 1
+    },
+    {
+      "quote": "[[TABLE4]]\n\n### Ancestry inference",
+      "repl": "### Ancestry inference",
+      "expected_count": 1
+    },
+    {
+      "quote": "## Discussion",
+      "repl": "[[TABLE4]]\n\n## Discussion",
+      "expected_count": 1
+    }
+  ],
+  "unrelated_package_members_preserved": true,
+  "numeric_manuscript_tokens_preserved": true
+}

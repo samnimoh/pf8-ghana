@@ -1,0 +1,56 @@
+{
+  "status": "initial review with two confirmed blockers; actual DOCX sources were not edited by reviewer",
+  "reviewed_sources": [
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/apply_document_fixes.py",
+      "sha256": "25c237fd09c16c47c4bd5d4b4395a0844ee92d500ab03a3d0a2ad2a6f981b242"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/rebuild_deliverables.py",
+      "sha256": "dfc526cc854ca1844fb89418cc17e5ed157881ad5956bb0dd531a3d35240a065"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/render_documents.py",
+      "sha256": "0880fbed750ac5ff95cadbdbb1f3a374666a6aa285e7dc5ee7105a3dc4905d56"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/tools/make_supplement.py",
+      "sha256": "2e13d53ec42032bd85a2daf4c7a1482acb4a8d95f7d3b8b43e9260829709b6c0"
+    }
+  ],
+  "findings": [
+    {
+      "severity": "P2",
+      "file": "verification_fixes_round7/apply_document_fixes.py",
+      "function": "splice",
+      "finding": "A trailing insertion cannot be placed at text length, causing the exact Table 8.1 planned substitution to fail in an in-memory dry-run.",
+      "evidence": "Three other accepted substitutions passed; differentiation status cell raised ValueError('Cannot locate text splice in original runs').",
+      "resolution_needed": "Handle zero-length insertion at final run end while checking offset bounds."
+    },
+    {
+      "severity": "P2",
+      "file": "tools/make_supplement.py",
+      "finding": "The first paragraph is blank, so first-paragraph title derivation produces empty metadata and the equality check accepts it.",
+      "evidence": "Actual main and supplement paragraph 0 are spacing-only; the visible supplement title is paragraph 1.",
+      "resolution_needed": "Derive exactly one nonempty retitled supplement title paragraph and assert its expected prefix."
+    }
+  ],
+  "bounded_observations": [
+    {
+      "finding": "Source outputs are both staged before per-file atomic replacement; the pair is not a filesystem transaction. A second replacement failure can leave manuscript and article.md at different revisions, without truncating either.",
+      "scope": "Record accurately or add rollback; no full driver execution or failure injection performed before authoring marker."
+    },
+    {
+      "finding": "Renderer uses assert for bundled-soffice and selected-label gates.",
+      "scope": "Normal Python -I invocation is safe; explicit checks or __debug__ refusal preserve gates for -O."
+    }
+  ],
+  "passed_checks": [
+    "Three of four planned in-memory OOXML paragraph substitutions produce exact accepted replacement text while preserving all non-text paragraph XML.",
+    "All current main package member paths remain inside the package.",
+    "Every manuscript numeric token is identical in the proposal.",
+    "Article proposal simulates marker order and first unique citation order 1,2,3,4.",
+    "Manuscript staging uses sibling mkstemp, fsync, CRC check and byte verification of every unrelated package member."
+  ],
+  "limits": "Read-only script review plus in-memory text/XML testing. No DOCX authoring, rendering, biological/scientific execution, source editing or server access."
+}

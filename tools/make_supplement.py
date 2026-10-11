@@ -1,5 +1,10 @@
 import re, html, sys, collections
+from pathlib import Path
+import xml.etree.ElementTree as ET
 P="word/document.xml"; x=open(P,encoding="utf-8").read()
+CORE = Path("docProps/core.xml")
+core = CORE.read_text(encoding="utf-8")
+ET.fromstring(core)
 LAB=r'[0-9A-F]+\.\d+[a-z]?'
 PARA=re.compile(r'<w:p>.*?</w:p>', re.S)
 RUNRE=re.compile(r'(<w:t(?: xml:space="preserve")?>)(.*?)(</w:t>)', re.S)
@@ -108,5 +113,21 @@ pre=(para("This document is the complete analysis record behind the main article
 i=x.index('<w:p><w:pPr><w:pStyle w:val="Heading1"/>')
 x=x[:i]+pre+x[i:]
 print("  ok preamble")
+# Keep the searchable package title aligned with the visible supplement title.
+titles = [ptext(p.group(0)) for p in PARA.finditer(x)
+          if ptext(p.group(0)).startswith('Additional file 1 — Supplementary material for:')]
+if len(titles) != 1:
+    sys.exit(f"ABORT [visible supplement title]: found {len(titles)}")
+title = titles[0]
+title_matches = list(re.finditer(r'(<dc:title\b[^>]*>)(.*?)(</dc:title>)', core, re.S))
+if len(title_matches) != 1:
+    sys.exit(f"ABORT [core title]: found {len(title_matches)}")
+m = title_matches[0]
+core = core[:m.start(2)] + esc(title) + core[m.end(2):]
+ET.fromstring(x)
+parsed_core = ET.fromstring(core)
+if parsed_core.findtext('{http://purl.org/dc/elements/1.1/}title') != title:
+    sys.exit("ABORT [core title]: does not match visible title")
 open(P,"w",encoding="utf-8").write(x)
+CORE.write_text(core, encoding="utf-8")
 print(f"document.xml {len(x)} bytes")
