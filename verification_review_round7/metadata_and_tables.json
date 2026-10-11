@@ -1,0 +1,144 @@
+{
+  "generated_utc": "2026-10-11T10:24:09.197583+00:00",
+  "scope": "Read-only current and Git-baseline document metadata, table ordering and headers; no source edits or scientific calculation.",
+  "head": "e7c4cd41b1f631209d25f2ff35eed6ba9c0ec6cd",
+  "input": {
+    "path": "/Users/samnimoh/.codex/attachments/67048c67-a6a8-406b-964d-b7dd87b08b8e/Pasted text.txt",
+    "bytes": 8966,
+    "sha256": "f7cdaed375b78ea9bf3663f7724ef7f1b15475e2f2c86f920b3b3013eca156e6"
+  },
+  "documents": [
+    {
+      "identity": {
+        "path": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.docx",
+        "bytes": 1193182,
+        "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
+      },
+      "current": {
+        "metadata_title": "Fine-scale spatial population genomics of Plasmodium falciparum across Ghana's agro-ecological zones (revised)",
+        "visible_first_paragraphs": [
+          "Population differentiation and antimalarial resistance-marker frequencies in Plasmodium falciparum across the agro-ecological zones of Ghana, 2009-2021",
+          "[AUTHOR NAMES AND AFFILIATIONS TO BE SUPPLIED]"
+        ],
+        "table_caption_order": [
+          {
+            "body_index": 49,
+            "caption": "Table 1 Composition of the analysis set, with the sequencing study, administrative region and collection period that accompany each agro-ecological zone. Zone is very nearly a relabelling of region and study: three of the four zones draw on a single administrative region, and one on a single study. The final column is measured on the pre-filter quality-control cohort of 4,905 isolates, not on the analysis set: every analysed isolate satisfies Fws \u2265 0.95 by construction, so its polyclonal fraction is zero. QC-cohort denominators are given in the column."
+          },
+          {
+            "body_index": 60,
+            "caption": "Table 2 Pairwise Hudson FST between agro-ecological zones on 3,916 SNPs and 1,900 isolates, with block-jackknife 95% confidence intervals. Five of the six intervals exclude zero."
+          },
+          {
+            "body_index": 64,
+            "caption": "Table 4 Threshold sensitivity of the two headline spatial results. The maximum pairwise FST is stable across all six scenarios; the distance effect clears p = 0.05 in only two of them."
+          },
+          {
+            "body_index": 85,
+            "caption": "Table 3 Resistance-marker frequencies overall and by agro-ecological zone. Denominators are isolates called at that codon or, for haplotypes, isolates called at every constituent codon. The chi-square column tests heterogeneity across the four zones."
+          }
+        ],
+        "duplicate_n_headers": [
+          {
+            "body_index": 61,
+            "headers": [
+              "Zone pair",
+              "n",
+              "n",
+              "FST",
+              "95% CI",
+              "Excludes zero"
+            ]
+          }
+        ]
+      },
+      "baseline": {
+        "metadata_title": "Fine-scale spatial population genomics of Plasmodium falciparum across Ghana's agro-ecological zones (revised)",
+        "visible_first_paragraphs": [
+          "Population differentiation and antimalarial resistance-marker frequencies in Plasmodium falciparum across the agro-ecological zones of Ghana, 2009-2021",
+          "[AUTHOR NAMES AND AFFILIATIONS TO BE SUPPLIED]"
+        ],
+        "table_caption_order": [
+          {
+            "body_index": 49,
+            "caption": "Table 1 Composition of the analysis set, with the sequencing study, administrative region and collection period that accompany each agro-ecological zone. Zone is very nearly a relabelling of region and study: three of the four zones draw on a single administrative region, and one on a single study. The final column is measured on the pre-filter quality-control cohort of 4,905 isolates, not on the analysis set: every analysed isolate satisfies Fws \u2265 0.95 by construction, so its polyclonal fraction is zero. QC-cohort denominators are given in the column."
+          },
+          {
+            "body_index": 60,
+            "caption": "Table 2 Pairwise Hudson FST between agro-ecological zones on 3,916 SNPs and 1,900 isolates, with block-jackknife 95% confidence intervals. Five of the six intervals exclude zero."
+          },
+          {
+            "body_index": 64,
+            "caption": "Table 4 Threshold sensitivity of the two headline spatial results. The maximum pairwise FST is stable across all six scenarios; the distance effect clears p = 0.05 in only two of them."
+          },
+          {
+            "body_index": 85,
+            "caption": "Table 3 Resistance-marker frequencies overall and by agro-ecological zone. Denominators are isolates called at that codon or, for haplotypes, isolates called at every constituent codon. The chi-square column tests heterogeneity across the four zones."
+          }
+        ],
+        "duplicate_n_headers": [
+          {
+            "body_index": 61,
+            "headers": [
+              "Zone pair",
+              "n",
+              "n",
+              "FST",
+              "95% CI",
+              "Excludes zero"
+            ]
+          }
+        ]
+      },
+      "title_metadata_issue_preexisting": true,
+      "table_order_unchanged": true,
+      "duplicate_n_headers_unchanged": true
+    },
+    {
+      "identity": {
+        "path": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx",
+        "bytes": 4049001,
+        "sha256": "0d6497fa02a98d40f2e0084ad137886075f2feb4c29f2ed0b52e022d43f95937"
+      },
+      "current": {
+        "metadata_title": "Fine-scale spatial population genomics of Plasmodium falciparum across Ghana's agro-ecological zones (revised)",
+        "visible_first_paragraphs": [
+          "Additional file 1 \u2014 Supplementary material for: Population differentiation and antimalarial resistance-marker frequencies in Plasmodium falciparum across the agro-ecological zones of Ghana, 2009\u20132021",
+          "Full analysis record: methods detail, complete results, robustness checks and correction history"
+        ],
+        "table_caption_order": [],
+        "duplicate_n_headers": []
+      },
+      "baseline": {
+        "metadata_title": "Fine-scale spatial population genomics of Plasmodium falciparum across Ghana's agro-ecological zones (revised)",
+        "visible_first_paragraphs": [
+          "Additional file 1 \u2014 Supplementary material for: Population differentiation and antimalarial resistance-marker frequencies in Plasmodium falciparum across the agro-ecological zones of Ghana, 2009\u20132021",
+          "Full analysis record: methods detail, complete results, robustness checks and correction history"
+        ],
+        "table_caption_order": [],
+        "duplicate_n_headers": []
+      },
+      "title_metadata_issue_preexisting": true,
+      "table_order_unchanged": true,
+      "duplicate_n_headers_unchanged": true
+    }
+  ],
+  "current_table_placeholder_order": [
+    "1",
+    "2",
+    "4",
+    "3"
+  ],
+  "baseline_table_placeholder_order": [
+    "1",
+    "2",
+    "4",
+    "3"
+  ],
+  "tool_line_references": {
+    "table_2_headers": "tools/build_article.py:306",
+    "placement_4": "article/article.md:117",
+    "placement_3": "article/article.md:153"
+  },
+  "conclusion": "Both article-directory DOCX core title properties remain the working-record title despite distinct visible titles. Article tables appear 1,2,4,3. Table 2 has two adjacent undifferentiated n headers. All three conditions also existed at d59bbf6."
+}

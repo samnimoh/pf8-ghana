@@ -1,0 +1,96 @@
+{
+  "generated_utc": "2026-10-11T10:27:47.309498+00:00",
+  "request": "Confirm the named issues in the pasted external review; no fixes requested in this turn.",
+  "reviewed_commit": "e7c4cd41b1f631209d25f2ff35eed6ba9c0ec6cd",
+  "baseline_commit": "d59bbf6722c36b8f8f09e707a2290fbb699ed83f",
+  "findings": [
+    {
+      "id": "correction_record",
+      "status": "confirmed_stale_propagation",
+      "priority": "P2",
+      "locations": "Main Table F.2 p195 / supplement S52 p196",
+      "qualification": "The unchanged cell does not accurately describe the newly narrowed body. It does not explicitly reassert sparse-sampling adequacy; intentional falsification or P1 severity is not established."
+    },
+    {
+      "id": "all_23_codons_fixed",
+      "status": "confirmed_factual_contradiction",
+      "priority": "P2",
+      "locations": "Main Table 10.2 p173 / supplement S47 p174",
+      "qualification": "The same answer says all 23 are fixed and states codon 458 at 0.9995 with an alternative call. The intended distinction is 22 fixed plus the stated exception. This cell pre-existed unchanged."
+    },
+    {
+      "id": "table_8_1_negligible_status",
+      "status": "confirmed_imprecise_status_wording",
+      "priority": "P3",
+      "locations": "Main Table 8.1 p148 / supplement S42 p149",
+      "qualification": "Current wording remains, but the adjacent cell records only one interval spanning zero. It is not evidence that absence or undetectability is asserted."
+    },
+    {
+      "id": "near_panmixia_10_1",
+      "status": "live_claim_not_established_historical_context",
+      "priority": "P3_optional_clarity",
+      "locations": "Main 10.1 p172 / supplement p173",
+      "qualification": "The sentence explicitly attributes the label to the previous version; Appendix F withdraws it. A local withdrawal cue would help, but this is not a renewed result claim."
+    },
+    {
+      "id": "temporary_symlink",
+      "status": "confirmed_conditional_data_loss",
+      "priority": "P2",
+      "locations": "tools/build_article.py:417 and :428",
+      "qualification": "Six scratch cases establish unrelated-target overwrite and symlink output on success, or unrelated-target damage despite preserved original DOCX on injected failure. Current deliverable temp paths are absent. Behavior pre-existed d59bbf6."
+    },
+    {
+      "id": "metadata_title",
+      "status": "confirmed",
+      "priority": "P3",
+      "locations": "docProps/core.xml dc:title in both article-directory DOCX",
+      "qualification": "Working-record title retained despite distinct visible titles; also present at d59bbf6."
+    },
+    {
+      "id": "nine_git_literals",
+      "status": "confirmed_portability_defect",
+      "priority": "P3",
+      "locations": "Nine tracked verification scripts at e7c4cd4",
+      "qualification": "Absolute persistent bundled-runtime cache path, not session scratch. It works currently. Two baseline scripts and seven added review scripts."
+    },
+    {
+      "id": "table_order",
+      "status": "confirmed",
+      "priority": "P3",
+      "locations": "Article actual table order 1,2,4,3; article/article.md:117,:153",
+      "qualification": "Also present in d59bbf6; presentation/sequencing issue, not a changed result."
+    },
+    {
+      "id": "duplicate_n_headers",
+      "status": "confirmed",
+      "priority": "P3",
+      "locations": "Article Table 2; tools/build_article.py:306",
+      "qualification": "Two adjacent columns have header n; explicit first-zone/second-zone labels would disambiguate. Also present in d59bbf6."
+    }
+  ],
+  "independent_review_records": [
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_review_round7/manuscript_findings_review.json",
+      "bytes": 11032,
+      "sha256": "a5d51b23f3cadcd77f912c3f77658e9db98aa7e10dd22fe7ad71965f2d041635"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_review_round7/independent_tool_hygiene_review.json",
+      "bytes": 15354,
+      "sha256": "ff13008d514b0618af7752e99950817ac1e99fb1cf1621514545ff43249ca7a4"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_review_round7/metadata_and_tables.json",
+      "bytes": 7573,
+      "sha256": "ce540999fcaf4c333df3db18e75bbef8a4ce38162118a532c59c33b69e46be89"
+    }
+  ],
+  "original_round6_manifest_identities_unchanged": true,
+  "original_identity_entries_rechecked": 71,
+  "scope_limits": [
+    "Only the nine specifically named outstanding items are adjudicated; the claimed 44-agent workflow and 27 total findings cannot be authenticated from the pasted summary.",
+    "No new scientific calculation, raw-data/server verification or Lean proof audit.",
+    "No deliverable, existing helper or earlier review evidence changes were made."
+  ],
+  "status": "named_findings_confirmed_or_qualified"
+}

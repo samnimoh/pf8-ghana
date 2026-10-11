@@ -1,0 +1,270 @@
+{
+  "generated_utc": "2026-10-11T10:24:06.338195+00:00",
+  "reviewer": "/root/fix_builder",
+  "scope": "Independent confirmation only of the pasted temporary-symlink and hardcoded-Git findings, plus bounded static assessment of document replacement atomicity. No existing helper or deliverable edits, scientific pipeline execution, SSH or server contact. Six harmless scratch package builds were used for proof. Nine-script count refers to tracked verification scripts present at the reviewed HEAD, excluding this review newly authored execution-evidence driver.",
+  "status": "confirmed_with_qualifications",
+  "reviewed_head": "e7c4cd4",
+  "pasted_review": {
+    "path": "/Users/samnimoh/.codex/attachments/67048c67-a6a8-406b-964d-b7dd87b08b8e/Pasted text.txt",
+    "bytes": 8966,
+    "sha256": "f7cdaed375b78ea9bf3663f7724ef7f1b15475e2f2c86f920b3b3013eca156e6"
+  },
+  "evidence": {
+    "path": "/Users/samnimoh/Desktop/chromo/verification_review_round7/independent_tool_hygiene_results.json",
+    "bytes": 18792,
+    "sha256": "0ceff4d93d9763089fdd2de47be1486414df73d0fb971a4e910bea1b5666059a"
+  },
+  "test_driver": {
+    "path": "/Users/samnimoh/Desktop/chromo/verification_review_round7/independent_tool_hygiene_tests.py",
+    "bytes": 10864,
+    "sha256": "baeaa15bac55b8b4cd38f1b6b014d02d7d3905ff0dacd17115da80445ce6a0a6"
+  },
+  "builder": {
+    "path": "/Users/samnimoh/Desktop/chromo/tools/build_article.py",
+    "bytes": 24375,
+    "sha256": "e2331bfd9fa40433e5761d633c78ae9c2892624a8a1a32f96a348c8e1b82057f"
+  },
+  "conclusions": [
+    {
+      "id": "temp_symlink_followed",
+      "verdict": "confirmed_conditional",
+      "severity": "P2 conditional data-loss and output-file-type defect, rather than merely cosmetic hygiene",
+      "file": "/Users/samnimoh/Desktop/chromo/tools/build_article.py",
+      "lines": [
+        12,
+        45,
+        58,
+        417,
+        422,
+        424,
+        428,
+        430
+      ],
+      "condition": "A pre-existing <ARTICLE_DOCX>.tmp-build symlink targets an unrelated writable file outside the work package, template and known text inputs, and is not an alias of ARTICLE_DOCX.",
+      "mechanism": "The existing path guards reject overlaps/aliases with known inputs and the work package but do not reject every temp symlink. ZipFile(_tmp,\"w\") follows the permitted symlink and truncates/writes its target. fsync and validation subsequently read the same target through the link. os.replace(_tmp,DOCX) then renames the symlink directory entry itself to the destination.",
+      "successful_build_consequence": "Confirmed exit 0: the unrelated sentinel is replaced with the full new ZIP; the destination DOCX becomes a symlink to that sentinel instead of a standalone regular archive. The temp pathname disappears because its symlink was renamed.",
+      "failed_build_consequence": "Confirmed injected fifth archive-write failure: original destination DOCX remains byte-identical, but unrelated sentinel bytes have already been overwritten with a partial package. Exception cleanup unlinks the temp symlink only and does not restore or delete the damaged target.",
+      "history": "Same unrelated-target success/failure behavior reproduced from d59bbf6, so this issue pre-existed the round-six changes. The deterministic .tmp-build mechanism was introduced in d59bbf6 (lines 218\u2013231), replacing the 1afaf4b delete-then-write destination implementation; the specific temp-symlink issue was not introduced by round six.",
+      "existing_guard_improvement": "Current lines 58\u201359 reject temp aliases of destination; scratch proof preserves destination and retains the rejected symlink. d59bbf6 had no such guard and an injected failure after temp->destination aliasing damaged the old destination."
+    },
+    {
+      "id": "current_temp_symlink_present",
+      "verdict": "not_established_and_currently_absent",
+      "description": "Read-only lstat-equivalent checks found no .tmp-build pathname at any of the three current DOCX deliverables, and no supplement .docx.pending-build pathname. The demonstrated issue is conditional reproducible behavior, not evidence of an actual current symlink or past corruption incident.",
+      "paths": [
+        {
+          "deliverable": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx",
+          "temporary": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx.tmp-build",
+          "lexists": false,
+          "is_symlink": false,
+          "link_target": null
+        },
+        {
+          "deliverable": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx",
+          "temporary": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx.tmp-build",
+          "lexists": false,
+          "is_symlink": false,
+          "link_target": null
+        },
+        {
+          "deliverable": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.docx",
+          "temporary": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.docx.tmp-build",
+          "lexists": false,
+          "is_symlink": false,
+          "link_target": null
+        }
+      ],
+      "supplement_pending": {
+        "path": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx.pending-build",
+        "lexists": false
+      }
+    },
+    {
+      "id": "nine_git_literals",
+      "verdict": "confirmed_portability_defect",
+      "description": "Nine tracked verification scripts hardcode the same absolute user/runtime installation path and invoke it without a PATH lookup or runtime override. This prevents those verification scripts from running unchanged where that exact executable path is absent.",
+      "literal": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/git",
+      "scripts": [
+        {
+          "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/final_closure_review_checker.py",
+          "line": 16,
+          "git_literal": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/git",
+          "present_at_d59bbf6": false,
+          "first_add_commit": "e7c4cd4",
+          "source_identity": {
+            "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/final_closure_review_checker.py",
+            "bytes": 11800,
+            "sha256": "c19ab68676bf3d789738bb75fd75f1cad08b5b7156a6b06347cc168be2c065b8"
+          }
+        },
+        {
+          "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/final_document_review_checker.py",
+          "line": 17,
+          "git_literal": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/git",
+          "present_at_d59bbf6": false,
+          "first_add_commit": "e7c4cd4",
+          "source_identity": {
+            "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/final_document_review_checker.py",
+            "bytes": 17170,
+            "sha256": "a1c449c10bb89dd9aa3038685682e7a979560fefeab2998598c0660c358adafd"
+          }
+        },
+        {
+          "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/independent_builder_layout_tests.py",
+          "line": 18,
+          "git_literal": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/git",
+          "present_at_d59bbf6": false,
+          "first_add_commit": "e7c4cd4",
+          "source_identity": {
+            "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/independent_builder_layout_tests.py",
+            "bytes": 10375,
+            "sha256": "0df8d3ddb27337e6177d27a51e4230fb130b0b18a79d3dc020aa6279969aee9c"
+          }
+        },
+        {
+          "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/make_fix_manifest.py",
+          "line": 11,
+          "git_literal": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/git",
+          "present_at_d59bbf6": false,
+          "first_add_commit": "e7c4cd4",
+          "source_identity": {
+            "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/make_fix_manifest.py",
+            "bytes": 5141,
+            "sha256": "bd7171bcf85064645c763d0fae1fde7c3c57e3f46b535772ecc2119bbe9005ef"
+          }
+        },
+        {
+          "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/verify_documents.py",
+          "line": 16,
+          "git_literal": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/git",
+          "present_at_d59bbf6": false,
+          "first_add_commit": "e7c4cd4",
+          "source_identity": {
+            "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/verify_documents.py",
+            "bytes": 8495,
+            "sha256": "cef169082ebdcfb1f52e57ea82596d21a3178557cd051501473764da25d65764"
+          }
+        },
+        {
+          "path": "/Users/samnimoh/Desktop/chromo/verification_review_round5/check_current_revision.py",
+          "line": 17,
+          "git_literal": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/git",
+          "present_at_d59bbf6": true,
+          "first_add_commit": "1afaf4b",
+          "source_identity": {
+            "path": "/Users/samnimoh/Desktop/chromo/verification_review_round5/check_current_revision.py",
+            "bytes": 15307,
+            "sha256": "c028716e0686d8184f98f7abe1d61ef355defaa37a93c3abac1d392ed0dfc232"
+          }
+        },
+        {
+          "path": "/Users/samnimoh/Desktop/chromo/verification_review_round5/finalize_review.py",
+          "line": 12,
+          "git_literal": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/git",
+          "present_at_d59bbf6": true,
+          "first_add_commit": "d59bbf6",
+          "source_identity": {
+            "path": "/Users/samnimoh/Desktop/chromo/verification_review_round5/finalize_review.py",
+            "bytes": 6282,
+            "sha256": "f2c2a18e00a47be921133cc6e7a9213dc46ba143fb283c1de94e29ea0c7e609c"
+          }
+        },
+        {
+          "path": "/Users/samnimoh/Desktop/chromo/verification_review_round6/check_current_revision.py",
+          "line": 14,
+          "git_literal": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/git",
+          "present_at_d59bbf6": false,
+          "first_add_commit": "215bccc",
+          "source_identity": {
+            "path": "/Users/samnimoh/Desktop/chromo/verification_review_round6/check_current_revision.py",
+            "bytes": 10537,
+            "sha256": "5f8840395825e4f7f7d1156f87d494df8a8a5436dae3053338119522a22a2ecb"
+          }
+        },
+        {
+          "path": "/Users/samnimoh/Desktop/chromo/verification_review_round6/finalize_review.py",
+          "line": 12,
+          "git_literal": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/git",
+          "present_at_d59bbf6": false,
+          "first_add_commit": "215bccc",
+          "source_identity": {
+            "path": "/Users/samnimoh/Desktop/chromo/verification_review_round6/finalize_review.py",
+            "bytes": 6354,
+            "sha256": "db949044b42b5e883bc09424f7fb0f893d707999a78366a1a1233eb422708bdb"
+          }
+        }
+      ],
+      "baseline_count": 2,
+      "added_after_d59bbf6_count": 7,
+      "baseline_scripts": [
+        "verification_review_round5/check_current_revision.py:17 (first added 1afaf4b)",
+        "verification_review_round5/finalize_review.py:12 (first added d59bbf6)"
+      ],
+      "new_review_scripts": [
+        "verification_review_round6/check_current_revision.py:14 (215bccc)",
+        "verification_review_round6/finalize_review.py:12 (215bccc)",
+        "verification_fixes_round6/independent_builder_layout_tests.py:18 (e7c4cd4)",
+        "verification_fixes_round6/make_fix_manifest.py:11 (e7c4cd4)",
+        "verification_fixes_round6/verify_documents.py:16 (e7c4cd4)",
+        "verification_fixes_round6/final_document_review_checker.py:17 (e7c4cd4)",
+        "verification_fixes_round6/final_closure_review_checker.py:16 (e7c4cd4)"
+      ]
+    },
+    {
+      "id": "git_is_session_scratch",
+      "verdict": "refuted_as_worded",
+      "description": "The path is under /Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/git, a persistent bundled runtime cache path. It is user/installation-specific, but it is not a session-scratch /tmp pathname."
+    },
+    {
+      "id": "git_current_execution_failure",
+      "verdict": "not_established",
+      "description": "That executable exists, is executable and returns git version 2.53.0. Read-only Git show/log/cat-file operations used in this review also succeeded. Complete execution of all nine scripts was intentionally not attempted because that could write review records or perform out-of-scope actions. The literal itself is not a current missing-executable failure."
+    }
+  ],
+  "atomicity_assessment": [
+    {
+      "helper": "/Users/samnimoh/Desktop/chromo/tools/build_article.py",
+      "lines": [
+        414,
+        417,
+        423,
+        427,
+        428,
+        430
+      ],
+      "scope": "Per-destination rename under normal regular-temp operation; archive creation, fsync and package checks precede os.replace. This is not a transaction protecting every filesystem path, and symlink-target writes occur before/ outside that destination rename. Atomic rename does not make the preceding unrelated-file truncation atomic or safe. No crash/power-loss durability proof was attempted."
+    },
+    {
+      "helper": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/rebuild_deliverables.py",
+      "lines": [
+        38,
+        40,
+        47,
+        50,
+        52,
+        53
+      ],
+      "scope": "Supplement is staged then replaced before article build is invoked; the two DOCX updates are not one atomic transaction. Supplement .docx.pending-build uses a predictable open-for-write path, so the same symlink-following class is statically present there, at a different temp name. This secondary behavior was not dynamically reproduced and that current path is absent."
+    },
+    {
+      "helper": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/publish_reviewed_pdfs.py",
+      "lines": [
+        59,
+        62,
+        65,
+        70,
+        74,
+        75,
+        83,
+        85
+      ],
+      "scope": "All three PDFs are staged and checked before replacement; mkstemp creates fresh unique file descriptors, so the builder fixed-temp symlink issue does not directly apply. Replacements are per-file in a loop, not a transaction or rollback across all three. A later replacement failure can leave a mixed set of old/new PDFs. Static conclusion only; no deliverables were published in this review."
+    }
+  ],
+  "protected_document_identities_unchanged": true,
+  "limitations": [
+    "Conclusions concern exact reviewed helper/script hashes and observed current sibling temp paths; later filesystem changes are outside this observation.",
+    "This review does not independently confirm the pasted manuscript, docProps, table-order, duplicate-column-header or scientific claims, which are separate task areas.",
+    "No scientific script, Lean artifact, server output or canonical numeric source was modified or executed."
+  ]
+}

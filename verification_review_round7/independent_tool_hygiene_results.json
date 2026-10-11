@@ -1,0 +1,429 @@
+{
+  "generated_utc": "2026-10-11T10:22:11.237622+00:00",
+  "scope": "Independent confirmation only, using harmless scratch package assembly and read-only Git metadata. No deliverables, helper code, scientific analyses or server files were modified; no server contacted.",
+  "builder": {
+    "path": "/Users/samnimoh/Desktop/chromo/tools/build_article.py",
+    "bytes": 24375,
+    "sha256": "e2331bfd9fa40433e5761d633c78ae9c2892624a8a1a32f96a348c8e1b82057f"
+  },
+  "d59bbf6_builder": {
+    "git_object": "d59bbf6:tools/build_article.py",
+    "bytes": 14962,
+    "sha256": "3a23314efee7294af47978742bb4b3cb40ddd8847e93c89f9ab8bc36f9d8095c"
+  },
+  "tests": [
+    {
+      "version": "current",
+      "case": "unrelated_target_success",
+      "returncode": 0,
+      "destination_preserved": false,
+      "target_preserved": false,
+      "destination_is_symlink": true,
+      "destination_link_target": "/private/tmp/pf8-round7-symlink-3w06c5a9/current_unrelated_target_success/unrelated_sentinel.txt",
+      "temporary_lexists": false,
+      "unrelated_target_or_destination_is_zip": true,
+      "stderr_tail": null,
+      "original_destination": {
+        "path": "/private/tmp/pf8-round7-symlink-3w06c5a9/current_unrelated_target_success/scratch.docx",
+        "bytes": 171,
+        "sha256": "eee355389d4ebd99d70218fd0bb44223d80ea10df8545db1dc0d9ed8dd4721d0"
+      },
+      "original_target": {
+        "path": "/private/tmp/pf8-round7-symlink-3w06c5a9/current_unrelated_target_success/unrelated_sentinel.txt",
+        "bytes": 69,
+        "sha256": "fe34042bff60dbb9f12798cf77cbb5201c6cb65b164ea9a824e5909210ed5b59"
+      },
+      "final_destination": {
+        "path": "/private/tmp/pf8-round7-symlink-3w06c5a9/current_unrelated_target_success/scratch.docx",
+        "bytes": 3209,
+        "sha256": "ac252212578921e254e1769d6c295e30fe726965af1eae69fc6e0e387ca9ca51"
+      },
+      "final_target": {
+        "path": "/private/tmp/pf8-round7-symlink-3w06c5a9/current_unrelated_target_success/unrelated_sentinel.txt",
+        "bytes": 3209,
+        "sha256": "ac252212578921e254e1769d6c295e30fe726965af1eae69fc6e0e387ca9ca51"
+      },
+      "expectation_confirmed": true
+    },
+    {
+      "version": "current",
+      "case": "unrelated_target_write_failure",
+      "returncode": 1,
+      "destination_preserved": true,
+      "target_preserved": false,
+      "destination_is_symlink": false,
+      "destination_link_target": null,
+      "temporary_lexists": false,
+      "unrelated_target_or_destination_is_zip": true,
+      "stderr_tail": "OSError: harmless injected fifth archive-write failure",
+      "original_destination": {
+        "path": "/private/tmp/pf8-round7-symlink-3w06c5a9/current_unrelated_target_write_failure/scratch.docx",
+        "bytes": 171,
+        "sha256": "eee355389d4ebd99d70218fd0bb44223d80ea10df8545db1dc0d9ed8dd4721d0"
+      },
+      "original_target": {
+        "path": "/private/tmp/pf8-round7-symlink-3w06c5a9/current_unrelated_target_write_failure/unrelated_sentinel.txt",
+        "bytes": 69,
+        "sha256": "fe34042bff60dbb9f12798cf77cbb5201c6cb65b164ea9a824e5909210ed5b59"
+      },
+      "final_destination": {
+        "path": "/private/tmp/pf8-round7-symlink-3w06c5a9/current_unrelated_target_write_failure/scratch.docx",
+        "bytes": 171,
+        "sha256": "eee355389d4ebd99d70218fd0bb44223d80ea10df8545db1dc0d9ed8dd4721d0"
+      },
+      "final_target": {
+        "path": "/private/tmp/pf8-round7-symlink-3w06c5a9/current_unrelated_target_write_failure/unrelated_sentinel.txt",
+        "bytes": 1416,
+        "sha256": "c02ec0c2fdd4ed32abe55f48b3e64bc6c551e6a1f65a4b1bd34f2b3d71fcbc65"
+      },
+      "expectation_confirmed": true
+    },
+    {
+      "version": "current",
+      "case": "destination_alias_write_failure",
+      "returncode": 1,
+      "destination_preserved": true,
+      "target_preserved": true,
+      "destination_is_symlink": false,
+      "destination_link_target": null,
+      "temporary_lexists": true,
+      "unrelated_target_or_destination_is_zip": true,
+      "stderr_tail": "unsafe build paths: temporary archive aliases ARTICLE_DOCX",
+      "original_destination": {
+        "path": "/private/tmp/pf8-round7-symlink-3w06c5a9/current_destination_alias_write_failure/scratch.docx",
+        "bytes": 171,
+        "sha256": "eee355389d4ebd99d70218fd0bb44223d80ea10df8545db1dc0d9ed8dd4721d0"
+      },
+      "original_target": {
+        "path": "/private/tmp/pf8-round7-symlink-3w06c5a9/current_destination_alias_write_failure/scratch.docx",
+        "bytes": 171,
+        "sha256": "eee355389d4ebd99d70218fd0bb44223d80ea10df8545db1dc0d9ed8dd4721d0"
+      },
+      "final_destination": {
+        "path": "/private/tmp/pf8-round7-symlink-3w06c5a9/current_destination_alias_write_failure/scratch.docx",
+        "bytes": 171,
+        "sha256": "eee355389d4ebd99d70218fd0bb44223d80ea10df8545db1dc0d9ed8dd4721d0"
+      },
+      "final_target": {
+        "path": "/private/tmp/pf8-round7-symlink-3w06c5a9/current_destination_alias_write_failure/scratch.docx",
+        "bytes": 171,
+        "sha256": "eee355389d4ebd99d70218fd0bb44223d80ea10df8545db1dc0d9ed8dd4721d0"
+      },
+      "expectation_confirmed": true
+    },
+    {
+      "version": "d59bbf6",
+      "case": "unrelated_target_success",
+      "returncode": 0,
+      "destination_preserved": false,
+      "target_preserved": false,
+      "destination_is_symlink": true,
+      "destination_link_target": "/private/tmp/pf8-round7-symlink-3w06c5a9/d59bbf6_unrelated_target_success/unrelated_sentinel.txt",
+      "temporary_lexists": false,
+      "unrelated_target_or_destination_is_zip": true,
+      "stderr_tail": null,
+      "original_destination": {
+        "path": "/private/tmp/pf8-round7-symlink-3w06c5a9/d59bbf6_unrelated_target_success/scratch.docx",
+        "bytes": 171,
+        "sha256": "eee355389d4ebd99d70218fd0bb44223d80ea10df8545db1dc0d9ed8dd4721d0"
+      },
+      "original_target": {
+        "path": "/private/tmp/pf8-round7-symlink-3w06c5a9/d59bbf6_unrelated_target_success/unrelated_sentinel.txt",
+        "bytes": 69,
+        "sha256": "fe34042bff60dbb9f12798cf77cbb5201c6cb65b164ea9a824e5909210ed5b59"
+      },
+      "final_destination": {
+        "path": "/private/tmp/pf8-round7-symlink-3w06c5a9/d59bbf6_unrelated_target_success/scratch.docx",
+        "bytes": 3163,
+        "sha256": "93f1e68f6815c6a8689ce16f6bd2fcc2594f26a335153eb8919a585bc31fe395"
+      },
+      "final_target": {
+        "path": "/private/tmp/pf8-round7-symlink-3w06c5a9/d59bbf6_unrelated_target_success/unrelated_sentinel.txt",
+        "bytes": 3163,
+        "sha256": "93f1e68f6815c6a8689ce16f6bd2fcc2594f26a335153eb8919a585bc31fe395"
+      },
+      "expectation_confirmed": true
+    },
+    {
+      "version": "d59bbf6",
+      "case": "unrelated_target_write_failure",
+      "returncode": 1,
+      "destination_preserved": true,
+      "target_preserved": false,
+      "destination_is_symlink": false,
+      "destination_link_target": null,
+      "temporary_lexists": false,
+      "unrelated_target_or_destination_is_zip": true,
+      "stderr_tail": "OSError: harmless injected fifth archive-write failure",
+      "original_destination": {
+        "path": "/private/tmp/pf8-round7-symlink-3w06c5a9/d59bbf6_unrelated_target_write_failure/scratch.docx",
+        "bytes": 171,
+        "sha256": "eee355389d4ebd99d70218fd0bb44223d80ea10df8545db1dc0d9ed8dd4721d0"
+      },
+      "original_target": {
+        "path": "/private/tmp/pf8-round7-symlink-3w06c5a9/d59bbf6_unrelated_target_write_failure/unrelated_sentinel.txt",
+        "bytes": 69,
+        "sha256": "fe34042bff60dbb9f12798cf77cbb5201c6cb65b164ea9a824e5909210ed5b59"
+      },
+      "final_destination": {
+        "path": "/private/tmp/pf8-round7-symlink-3w06c5a9/d59bbf6_unrelated_target_write_failure/scratch.docx",
+        "bytes": 171,
+        "sha256": "eee355389d4ebd99d70218fd0bb44223d80ea10df8545db1dc0d9ed8dd4721d0"
+      },
+      "final_target": {
+        "path": "/private/tmp/pf8-round7-symlink-3w06c5a9/d59bbf6_unrelated_target_write_failure/unrelated_sentinel.txt",
+        "bytes": 1370,
+        "sha256": "d75520a7d122f0ca56fc9421867d97ed0495efc0b28c5dde1b5f644fc0640625"
+      },
+      "expectation_confirmed": true
+    },
+    {
+      "version": "d59bbf6",
+      "case": "destination_alias_write_failure",
+      "returncode": 1,
+      "destination_preserved": false,
+      "target_preserved": false,
+      "destination_is_symlink": false,
+      "destination_link_target": null,
+      "temporary_lexists": false,
+      "unrelated_target_or_destination_is_zip": true,
+      "stderr_tail": "OSError: harmless injected fifth archive-write failure",
+      "original_destination": {
+        "path": "/private/tmp/pf8-round7-symlink-3w06c5a9/d59bbf6_destination_alias_write_failure/scratch.docx",
+        "bytes": 171,
+        "sha256": "eee355389d4ebd99d70218fd0bb44223d80ea10df8545db1dc0d9ed8dd4721d0"
+      },
+      "original_target": {
+        "path": "/private/tmp/pf8-round7-symlink-3w06c5a9/d59bbf6_destination_alias_write_failure/scratch.docx",
+        "bytes": 171,
+        "sha256": "eee355389d4ebd99d70218fd0bb44223d80ea10df8545db1dc0d9ed8dd4721d0"
+      },
+      "final_destination": {
+        "path": "/private/tmp/pf8-round7-symlink-3w06c5a9/d59bbf6_destination_alias_write_failure/scratch.docx",
+        "bytes": 1370,
+        "sha256": "d75520a7d122f0ca56fc9421867d97ed0495efc0b28c5dde1b5f644fc0640625"
+      },
+      "final_target": {
+        "path": "/private/tmp/pf8-round7-symlink-3w06c5a9/d59bbf6_destination_alias_write_failure/scratch.docx",
+        "bytes": 1370,
+        "sha256": "d75520a7d122f0ca56fc9421867d97ed0495efc0b28c5dde1b5f644fc0640625"
+      },
+      "expectation_confirmed": true
+    }
+  ],
+  "test_driver": {
+    "path": "/Users/samnimoh/Desktop/chromo/verification_review_round7/independent_tool_hygiene_tests.py",
+    "bytes": 10864,
+    "sha256": "baeaa15bac55b8b4cd38f1b6b014d02d7d3905ff0dacd17115da80445ce6a0a6"
+  },
+  "hardcoded_git_scripts": [
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/final_closure_review_checker.py",
+      "line": 16,
+      "git_literal": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/git",
+      "present_at_d59bbf6": false,
+      "first_add_commit": "e7c4cd4",
+      "source_identity": {
+        "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/final_closure_review_checker.py",
+        "bytes": 11800,
+        "sha256": "c19ab68676bf3d789738bb75fd75f1cad08b5b7156a6b06347cc168be2c065b8"
+      }
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/final_document_review_checker.py",
+      "line": 17,
+      "git_literal": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/git",
+      "present_at_d59bbf6": false,
+      "first_add_commit": "e7c4cd4",
+      "source_identity": {
+        "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/final_document_review_checker.py",
+        "bytes": 17170,
+        "sha256": "a1c449c10bb89dd9aa3038685682e7a979560fefeab2998598c0660c358adafd"
+      }
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/independent_builder_layout_tests.py",
+      "line": 18,
+      "git_literal": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/git",
+      "present_at_d59bbf6": false,
+      "first_add_commit": "e7c4cd4",
+      "source_identity": {
+        "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/independent_builder_layout_tests.py",
+        "bytes": 10375,
+        "sha256": "0df8d3ddb27337e6177d27a51e4230fb130b0b18a79d3dc020aa6279969aee9c"
+      }
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/make_fix_manifest.py",
+      "line": 11,
+      "git_literal": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/git",
+      "present_at_d59bbf6": false,
+      "first_add_commit": "e7c4cd4",
+      "source_identity": {
+        "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/make_fix_manifest.py",
+        "bytes": 5141,
+        "sha256": "bd7171bcf85064645c763d0fae1fde7c3c57e3f46b535772ecc2119bbe9005ef"
+      }
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/verify_documents.py",
+      "line": 16,
+      "git_literal": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/git",
+      "present_at_d59bbf6": false,
+      "first_add_commit": "e7c4cd4",
+      "source_identity": {
+        "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/verify_documents.py",
+        "bytes": 8495,
+        "sha256": "cef169082ebdcfb1f52e57ea82596d21a3178557cd051501473764da25d65764"
+      }
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_review_round5/check_current_revision.py",
+      "line": 17,
+      "git_literal": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/git",
+      "present_at_d59bbf6": true,
+      "first_add_commit": "1afaf4b",
+      "source_identity": {
+        "path": "/Users/samnimoh/Desktop/chromo/verification_review_round5/check_current_revision.py",
+        "bytes": 15307,
+        "sha256": "c028716e0686d8184f98f7abe1d61ef355defaa37a93c3abac1d392ed0dfc232"
+      }
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_review_round5/finalize_review.py",
+      "line": 12,
+      "git_literal": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/git",
+      "present_at_d59bbf6": true,
+      "first_add_commit": "d59bbf6",
+      "source_identity": {
+        "path": "/Users/samnimoh/Desktop/chromo/verification_review_round5/finalize_review.py",
+        "bytes": 6282,
+        "sha256": "f2c2a18e00a47be921133cc6e7a9213dc46ba143fb283c1de94e29ea0c7e609c"
+      }
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_review_round6/check_current_revision.py",
+      "line": 14,
+      "git_literal": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/git",
+      "present_at_d59bbf6": false,
+      "first_add_commit": "215bccc",
+      "source_identity": {
+        "path": "/Users/samnimoh/Desktop/chromo/verification_review_round6/check_current_revision.py",
+        "bytes": 10537,
+        "sha256": "5f8840395825e4f7f7d1156f87d494df8a8a5436dae3053338119522a22a2ecb"
+      }
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_review_round6/finalize_review.py",
+      "line": 12,
+      "git_literal": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/git",
+      "present_at_d59bbf6": false,
+      "first_add_commit": "215bccc",
+      "source_identity": {
+        "path": "/Users/samnimoh/Desktop/chromo/verification_review_round6/finalize_review.py",
+        "bytes": 6354,
+        "sha256": "db949044b42b5e883bc09424f7fb0f893d707999a78366a1a1233eb422708bdb"
+      }
+    }
+  ],
+  "git_probe": {
+    "path": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/git",
+    "exists": true,
+    "executable": true,
+    "returncode": 0,
+    "stdout": "git version 2.53.0",
+    "stderr": ""
+  },
+  "deliverables_before": [
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx",
+      "bytes": 4048231,
+      "sha256": "6f61aebaa4bb6c104b31038eb97ef7ddddc0b48c636b8f2f190993c9069e6115"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.pdf",
+      "bytes": 5114869,
+      "sha256": "101f01d3b48573e921c18063f1eca21e83dfd70ed86ea65c72032c392caa9460"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx",
+      "bytes": 4049001,
+      "sha256": "0d6497fa02a98d40f2e0084ad137886075f2feb4c29f2ed0b52e022d43f95937"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.pdf",
+      "bytes": 5118291,
+      "sha256": "456a798054a7c9e081bcd0ff8a9f41498aa2d59cf14d65ca9e65fe996d2a1c81"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.docx",
+      "bytes": 1193182,
+      "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.pdf",
+      "bytes": 708316,
+      "sha256": "6475240dc4a51ac6836a71a47c4f6fc5b2fee95c43e7079e76e8b3a07e0aed05"
+    }
+  ],
+  "deliverables_after": [
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx",
+      "bytes": 4048231,
+      "sha256": "6f61aebaa4bb6c104b31038eb97ef7ddddc0b48c636b8f2f190993c9069e6115"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.pdf",
+      "bytes": 5114869,
+      "sha256": "101f01d3b48573e921c18063f1eca21e83dfd70ed86ea65c72032c392caa9460"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx",
+      "bytes": 4049001,
+      "sha256": "0d6497fa02a98d40f2e0084ad137886075f2feb4c29f2ed0b52e022d43f95937"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.pdf",
+      "bytes": 5118291,
+      "sha256": "456a798054a7c9e081bcd0ff8a9f41498aa2d59cf14d65ca9e65fe996d2a1c81"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.docx",
+      "bytes": 1193182,
+      "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.pdf",
+      "bytes": 708316,
+      "sha256": "6475240dc4a51ac6836a71a47c4f6fc5b2fee95c43e7079e76e8b3a07e0aed05"
+    }
+  ],
+  "all_protected_bytes_unchanged": true,
+  "current_deliverable_temp_paths": [
+    {
+      "deliverable": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx",
+      "temporary": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx.tmp-build",
+      "lexists": false,
+      "is_symlink": false,
+      "link_target": null
+    },
+    {
+      "deliverable": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx",
+      "temporary": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx.tmp-build",
+      "lexists": false,
+      "is_symlink": false,
+      "link_target": null
+    },
+    {
+      "deliverable": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.docx",
+      "temporary": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.docx.tmp-build",
+      "lexists": false,
+      "is_symlink": false,
+      "link_target": null
+    }
+  ],
+  "current_supplement_pending_temp_path": {
+    "path": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx.pending-build",
+    "lexists": false
+  }
+}

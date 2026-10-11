@@ -1,0 +1,227 @@
+{
+  "generated_utc": "2026-10-11T10:23:52.485178+00:00",
+  "reviewer": "final_document_check",
+  "commit_reviewed": "e7c4cd41b1f631209d25f2ff35eed6ba9c0ec6cd",
+  "baseline_commit": "d59bbf6722c36b8f8f09e707a2290fbb699ed83f",
+  "input_review": {
+    "path": "/Users/samnimoh/.codex/attachments/67048c67-a6a8-406b-964d-b7dd87b08b8e/Pasted text.txt",
+    "bytes": 8966,
+    "sha256": "f7cdaed375b78ea9bf3663f7724ef7f1b15475e2f2c86f920b3b3013eca156e6"
+  },
+  "source_identities": [
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx",
+      "bytes": 4048231,
+      "sha256": "6f61aebaa4bb6c104b31038eb97ef7ddddc0b48c636b8f2f190993c9069e6115"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx",
+      "bytes": 4049001,
+      "sha256": "0d6497fa02a98d40f2e0084ad137886075f2feb4c29f2ed0b52e022d43f95937"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.pdf",
+      "bytes": 5114869,
+      "sha256": "101f01d3b48573e921c18063f1eca21e83dfd70ed86ea65c72032c392caa9460"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.pdf",
+      "bytes": 5118291,
+      "sha256": "456a798054a7c9e081bcd0ff8a9f41498aa2d59cf14d65ca9e65fe996d2a1c81"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/article/CANONICAL_FACTS_FOR_ARTICLE.md",
+      "bytes": 11454,
+      "sha256": "e0cf717eba8b244ae0e522078010dc4610337b140c2dfb2820d3bae63d02295b"
+    }
+  ],
+  "baseline_manuscript_sha256": "00508aa9cc2d0f10efb403123a0283cc40f9c938e79ceff54e470f4edcab5844",
+  "current_sources_equal_reviewed_commit": true,
+  "paragraph_index_convention": "Zero-based among all w:p elements in word/document.xml, including tables. Table row counts include the header. PDF pages are one-based.",
+  "findings": [
+    {
+      "id": "R7-M1",
+      "review_claim": "[P1] The commit falsified its surveillance correction record.",
+      "verdict": "confirmed_stale_correction_record_but_severity_and_strict_contradiction_overstated",
+      "recommended_priority": "P2",
+      "classification": "Incomplete propagation of narrowed interpretation; no explicit renewed sparse-surveillance endorsement in this cell.",
+      "locations": [
+        {
+          "file": "Pf8_Ghana_manuscript_REVISED.docx",
+          "pdf_page": 195,
+          "table": "F.2",
+          "table_ordinal_1based": 52,
+          "row_including_header_1based": 8,
+          "column_1based": 2,
+          "paragraph_index_0based": 4054
+        },
+        {
+          "file": "article/Additional_file_1.docx",
+          "pdf_page": 196,
+          "table": "S52",
+          "table_ordinal_1based": 52,
+          "row_including_header_1based": 8,
+          "column_1based": 2,
+          "paragraph_index_0based": 4058
+        }
+      ],
+      "supporting_excerpts": [
+        "negligible neutral differentiation licenses a claim about neutral structure only",
+        "The qualified form now appears in Section 7.4, in the abstract's conclusion and in Section 10.1; the unqualified form is removed.",
+        "but this does not establish that sparse sampling adequately characterises population structure."
+      ],
+      "reason": "The correction cell retains the older neutral-structure formulation while sections 7.4 and 10.1 now state the retained-common-variant result and explicitly reject sparse-sampling adequacy. Updating the correction record is warranted. However, a limited claim about measured structure is not logically equivalent to asserting sparse-site representativeness, and the cell never expressly asserts the latter. Section 7.2 also scopes every use of neutral to retained common variants, because no neutral mask was defined. The evidence supports stale wording and an incomplete account of the narrowing, not deliberate falsification or a P1 conclusion that the record explicitly reinstates sparse-surveillance adequacy.",
+      "origin": "The entire current correction cell is byte-identical in d59bbf6. The body was narrowed in e7c4cd4 without refreshing this retained cell, so staleness is exposed by the new revision; its text was not introduced by that commit.",
+      "current_equals_d59bbf6": true,
+      "cross_context_paragraphs_0based": [
+        3198,
+        3211,
+        3213,
+        3217,
+        3606
+      ]
+    },
+    {
+      "id": "R7-M2",
+      "review_claim": "[P2] All 23 pfk13 codons are fixed remains live in the 10.2 answers table.",
+      "verdict": "confirmed_factual_contradiction",
+      "recommended_priority": "P2",
+      "classification": "Direct contradiction inside one current factual answer cell.",
+      "locations": [
+        {
+          "file": "Pf8_Ghana_manuscript_REVISED.docx",
+          "pdf_page": 173,
+          "table": "10.2",
+          "table_ordinal_1based": 47,
+          "row_including_header_1based": 7,
+          "column_1based": 2,
+          "paragraph_index_0based": 3628
+        },
+        {
+          "file": "article/Additional_file_1.docx",
+          "pdf_page": 174,
+          "table": "S47",
+          "table_ordinal_1based": 47,
+          "row_including_header_1based": 7,
+          "column_1based": 2,
+          "paragraph_index_0based": 3632
+        }
+      ],
+      "supporting_excerpts": [
+        "All 23 pfk13 codons",
+        "are fixed at the reference residue (codon 458 at 0.9995, its single alternative call being Asn458Asp and not the validated N458Y)"
+      ],
+      "reason": "A reference-residue frequency of 0.9995 with a stated alternative call is not fixation. The canonical facts and the current Abstract, objectives table and methods already distinguish twenty-two fixed codons from the codon-458 exception. Absence of the screened resistance allele survives; fixation of every screened codon does not.",
+      "origin": "The entire answer cell is unchanged from d59bbf6; this is a pre-existing missed propagation, not a new regression.",
+      "current_equals_d59bbf6": true,
+      "cross_context_paragraphs_0based": [
+        144,
+        170,
+        854
+      ]
+    },
+    {
+      "id": "R7-M3",
+      "review_claim": "[P2] Negligible differentiation remains a current status in Table 8.1.",
+      "verdict": "confirmed_stale_imprecise_wording_not_a_factual_absence_contradiction",
+      "recommended_priority": "P3",
+      "classification": "Terminology/interpretation precision in a current status cell.",
+      "locations": [
+        {
+          "file": "Pf8_Ghana_manuscript_REVISED.docx",
+          "pdf_page": 148,
+          "table": "8.1",
+          "table_ordinal_1based": 42,
+          "row_including_header_1based": 4,
+          "column_1based": 4,
+          "paragraph_index_0based": 3255
+        },
+        {
+          "file": "article/Additional_file_1.docx",
+          "pdf_page": 149,
+          "table": "S42",
+          "table_ordinal_1based": 42,
+          "row_including_header_1based": 4,
+          "column_1based": 4,
+          "paragraph_index_0based": 3259
+        }
+      ],
+      "supporting_excerpts": [
+        "No \u2014 differentiation still negligible",
+        "1 of 6 \u2014 Guinea savanna vs transitional zone only"
+      ],
+      "reason": "The adjacent corrected-run cell explicitly records only one confidence interval spanning zero; the status wording does not say differentiation is absent or statistically undetectable. Negligible can describe a very low measured magnitude, so the word alone is not a factual contradiction. It is nevertheless less precise than the current very-low-but-detectable formulation and can imply practical insignificance that was not assessed. Replace it for consistent scope.",
+      "origin": "The whole row, including the status cell, is unchanged in d59bbf6.",
+      "current_equals_d59bbf6": true,
+      "cross_context_paragraphs_0based": [
+        3252,
+        3253,
+        3254,
+        3211
+      ]
+    },
+    {
+      "id": "R7-M4",
+      "review_claim": "[P2] Near-panmixia still names a result category in 10.1 without the withdrawal marker in Appendix F.",
+      "verdict": "historical_context_refutes_live_claim_interpretation_local_clarity_improvement_supported",
+      "recommended_priority": "P3",
+      "classification": "Historically attributed label lacking a local withdrawal reminder.",
+      "locations": [
+        {
+          "file": "Pf8_Ghana_manuscript_REVISED.docx",
+          "pdf_page": 172,
+          "section": "10.1",
+          "paragraph_index_0based": 3607
+        },
+        {
+          "file": "article/Additional_file_1.docx",
+          "pdf_page": 173,
+          "section": "10.1",
+          "paragraph_index_0based": 3611
+        }
+      ],
+      "supporting_excerpts": [
+        "Near-panmixia and isolation by distance were graded together in the previous version",
+        "That earlier label is now withdrawn: the six runs establish stability of measured common-variant differentiation, not the mating system."
+      ],
+      "reason": "The full 10.1 paragraph first defines what survived as measured FST stability and explicitly attributes the near-panmixia grading to the previous version. It does not presently claim panmixia or random mating. Appendix F explicitly withdraws the old label, and 3.14 says the statistic does not estimate panmixia. A local now-withdrawn marker would prevent ambiguity, but classifying this historical sentence as a live forbidden finding is too strong.",
+      "origin": "The entire historical paragraph is unchanged from d59bbf6; Appendix F was subsequently revised to add the explicit withdrawal.",
+      "current_equals_d59bbf6": true,
+      "cross_context_paragraphs_0based": [
+        981,
+        3527,
+        3977
+      ]
+    }
+  ],
+  "concept_census": {
+    "panmixia_main_occurrences": [
+      {
+        "paragraph_index_0based": 981,
+        "classification": "explicit exclusion"
+      },
+      {
+        "paragraph_index_0based": 3607,
+        "classification": "historical grading"
+      },
+      {
+        "paragraph_index_0based": 3977,
+        "classification": "explicit withdrawal"
+      }
+    ],
+    "all_four_target_passages_unchanged_from_baseline": true,
+    "all_four_target_passages_propagated_unchanged_to_supplement": true
+  },
+  "evidence": {
+    "path": "/Users/samnimoh/Desktop/chromo/verification_review_round7/manuscript_contexts.json",
+    "bytes": 37613,
+    "sha256": "638d8d7050bf37f366e951894f4168acb1a99740d5377e866013bcf5c0bde3d8"
+  },
+  "status": "four_manuscript_claims_triaged",
+  "scope_limits": [
+    "Only the four requested manuscript/supplement findings were adjudicated; the reported 27 workflow findings and P3 tooling/metadata issues are not certified here.",
+    "No deliverable, scientific code, dataset, saved scientific result or Lean artifact was edited.",
+    "This is direct document consistency and canonical-facts review. Scientific raw-call authenticity, server freshness and statistical calibration were not recomputed or certified.",
+    "PDF text was used only to map exact pages; no new render/layout certification was performed."
+  ]
+}
