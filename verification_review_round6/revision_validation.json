@@ -1,0 +1,226 @@
+{
+  "generated_utc": "2026-10-11T05:45:21.763879+00:00",
+  "git_reviewed_head": "d59bbf6722c36b8f8f09e707a2290fbb699ed83f",
+  "assertion_meaning": "Passing confirms the stated fix or reproduces a stated remaining finding. It is not statistical, formal implementation, or complete provenance certification.",
+  "input_identities": {
+    "main": {
+      "path": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx",
+      "bytes": 4043994,
+      "sha256": "00508aa9cc2d0f10efb403123a0283cc40f9c938e79ceff54e470f4edcab5844"
+    },
+    "supplement": {
+      "path": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx",
+      "bytes": 4044689,
+      "sha256": "e954fe87a94a40fd954f3eb5b74638d6892ce79fcd23a3be364c169bb0fd948d"
+    },
+    "article": {
+      "path": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.docx",
+      "bytes": 1193793,
+      "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+    },
+    "notes": {
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/VERIFICATION_NOTES.md",
+      "bytes": 15277,
+      "sha256": "09bdab689bf1153e91c880072bfb9b7de955c5ef888a247dfe3e40b367b86a3d"
+    },
+    "references": {
+      "path": "/Users/samnimoh/Desktop/chromo/tools/references_apa.txt",
+      "bytes": 11766,
+      "sha256": "7c9333469481e1c4f2ac1fd665ec1c8db0dc115fcc002a509d2d1cdf0c409738"
+    },
+    "lean_validation": {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_audit/lean_validation.json",
+      "bytes": 12260,
+      "sha256": "8f3ec31140fb8c06b092ff8619dd5f6ddb396203bdefce195ba1a0c45e2ff4bc"
+    }
+  },
+  "assertions": {
+    "main_calibration_caveat_propagated": true,
+    "main_reviewed_fdr_summary_is_conditional": true,
+    "main_named_statistic_correction_present": true,
+    "main_named_treemix_correction_present": true,
+    "main_live_panmixia_claims_remain": true,
+    "main_broader_treemix_conclusions_remain": true,
+    "main_two_truncated_captions_remain": true,
+    "main_obsolete_caption_numbering_clauses_removed": true,
+    "supplement_calibration_caveat_propagated": true,
+    "supplement_reviewed_fdr_summary_is_conditional": true,
+    "supplement_named_statistic_correction_present": true,
+    "supplement_named_treemix_correction_present": true,
+    "supplement_live_panmixia_claims_remain": true,
+    "supplement_broader_treemix_conclusions_remain": true,
+    "supplement_two_truncated_captions_remain": true,
+    "supplement_obsolete_caption_numbering_clauses_removed": true,
+    "supplement_unique_contiguous_labels": true,
+    "supplement_cascade_points_to_unrelated_admixture_table": true,
+    "superseded_notes_banner_present": true,
+    "notes_called_field_qualification_present": true,
+    "vendored_reference_list_has_42_entries": true,
+    "vendored_reference_identity_retains_prior_list": true,
+    "helper_sources_unchanged_during_independent_tests": true,
+    "optional_editor_metadata_supported": true,
+    "unmatched_edit_rejected_without_write": true,
+    "exact_duplicate_quote_rejected_without_write": true,
+    "exact_second_occurrence_edits_second_quote": true,
+    "whitespace_ambiguity_is_still_silently_accepted": true,
+    "whitespace_second_occurrence_still_edits_first": true,
+    "out_of_range_occurrence_still_accepted_for_unique_match": true,
+    "cross_paragraph_quote_still_edits_distinct_blocks": true,
+    "article_build_from_unrelated_directory_matches_current_xml": true,
+    "supplement_build_matches_current_xml": true,
+    "atomic_builder_preserves_destination_on_archive_write": true,
+    "atomic_builder_preserves_destination_on_integrity_check": true,
+    "atomic_builder_preserves_destination_on_fsync": true,
+    "atomic_builder_preserves_destination_on_replace": true,
+    "missing_figure_still_replaces_valid_destination": true,
+    "all_413_pdf_page_texts_match_fresh_conversions": true,
+    "five_saved_server_outputs_match_current_local_copies": true,
+    "article_numeric_sources_figure_and_lean_record_unchanged_since_round5": true,
+    "existing_lean_record_has_16_reference_axiom_reports": true,
+    "reviewed_git_head_unchanged": true
+  },
+  "server_output_checks": [
+    {
+      "server_path": "/media/biodataA/pf8/gyadu/results/dimred_comparison.csv",
+      "server_md5": "e8fe3b719b184988b0c7eacd99d900f0",
+      "local": {
+        "path": "/Users/samnimoh/Desktop/chromo/corrected/dimred_comparison_n4905_qcpassset.csv",
+        "bytes": 305,
+        "sha256": "70878f53aa97e2ec1631690f1ed1028286a436534e388696f82e8adda79665dd"
+      },
+      "local_md5": "e8fe3b719b184988b0c7eacd99d900f0",
+      "matches": true
+    },
+    {
+      "server_path": "/media/biodataA/pf8/gyadu/results/dimred_comparison_qcset.csv",
+      "server_md5": "1662bd0176878d4dbf312b502894de70",
+      "local": {
+        "path": "/Users/samnimoh/Desktop/chromo/corrected/dimred_comparison_n1900_analysisset.csv",
+        "bytes": 298,
+        "sha256": "3d104ce26973ded0659c283be4fc0bf0e9c9eeed45c1ae0544bc60e1d0331499"
+      },
+      "local_md5": "1662bd0176878d4dbf312b502894de70",
+      "matches": true
+    },
+    {
+      "server_path": "/media/biodataA/pf8/gyadu/results/fst_pairwise.csv",
+      "server_md5": "ffa9601d61d58155384922dd6810f601",
+      "local": {
+        "path": "/Users/samnimoh/Desktop/chromo/corrected/final_fst_pairwise.csv",
+        "bytes": 827,
+        "sha256": "0bb3741d942e801c20052ac6ed1c89f5d0bfd7802d0ee79c7cb06cf016f678f9"
+      },
+      "local_md5": "ffa9601d61d58155384922dd6810f601",
+      "matches": true
+    },
+    {
+      "server_path": "/media/biodataA/pf8/gyadu/results/sensitivity_summary.csv",
+      "server_md5": "e8cb05e2692bd24b4e8d6f54920d7484",
+      "local": {
+        "path": "/Users/samnimoh/Desktop/chromo/corrected/sensitivity_summary.csv",
+        "bytes": 1035,
+        "sha256": "282bf9610715d667b308fa02df7e31cd852c44a63fdcee873e158fc9a961b79f"
+      },
+      "local_md5": "e8cb05e2692bd24b4e8d6f54920d7484",
+      "matches": true
+    },
+    {
+      "server_path": "/media/biodataA/pf8/gyadu/results/mantel_jackknife_region.csv",
+      "server_md5": "779b9e379b6640afbbeb39409206ed69",
+      "local": {
+        "path": "/Users/samnimoh/Desktop/chromo/corrected/mantel_jackknife_region.csv",
+        "bytes": 302,
+        "sha256": "710250332da3a942f2b9ea3c0bb8afc4ac0b51180ed99bbdf8513f4facc0f2c7"
+      },
+      "local_md5": "779b9e379b6640afbbeb39409206ed69",
+      "matches": true
+    }
+  ],
+  "helper_test_count": 16,
+  "supplement_labels": {
+    "Table": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8",
+      "S9",
+      "S10",
+      "S11",
+      "S12",
+      "S13",
+      "S14",
+      "S15",
+      "S16",
+      "S17",
+      "S18",
+      "S19",
+      "S20",
+      "S21",
+      "S22",
+      "S23",
+      "S24",
+      "S25",
+      "S26",
+      "S27",
+      "S28",
+      "S29",
+      "S30",
+      "S31",
+      "S32",
+      "S33",
+      "S34",
+      "S35",
+      "S36",
+      "S37",
+      "S38",
+      "S39",
+      "S40",
+      "S41",
+      "S42",
+      "S43",
+      "S44",
+      "S45",
+      "S46",
+      "S47",
+      "S48",
+      "S49",
+      "S50",
+      "S51",
+      "S52"
+    ],
+    "Figure": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8",
+      "S9",
+      "S10",
+      "S11",
+      "S12",
+      "S13",
+      "S14",
+      "S15",
+      "S16",
+      "S17",
+      "S18",
+      "S19",
+      "S20",
+      "S21",
+      "S22",
+      "S23"
+    ]
+  },
+  "limits": [
+    "No scientific pipeline or biological audit script was run.",
+    "Document helper executions used scratch copies or synthetic inputs.",
+    "No new Lean build or implementation-refinement proof was performed."
+  ]
+}

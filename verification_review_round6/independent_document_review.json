@@ -1,0 +1,447 @@
+{
+  "git_HEAD": "d59bbf6722c36b8f8f09e707a2290fbb699ed83f",
+  "review_scope": "Read-only independent current-document review against round-five report and 1afaf4b→d59bbf6 semantic changes. No scientific or audit scripts executed; no biological numeric comparison performed.",
+  "source_identities": {
+    "manuscript": {
+      "docx": {
+        "path": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx",
+        "sha256_before": "00508aa9cc2d0f10efb403123a0283cc40f9c938e79ceff54e470f4edcab5844",
+        "sha256_after": "00508aa9cc2d0f10efb403123a0283cc40f9c938e79ceff54e470f4edcab5844",
+        "matches_HEAD": true
+      },
+      "pdf": {
+        "path": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.pdf",
+        "sha256_before": "9f26533193e7d837b9aee2993ee6c2feb2fe9c239ba87c34e58fc39d80efa09f",
+        "sha256_after": "9f26533193e7d837b9aee2993ee6c2feb2fe9c239ba87c34e58fc39d80efa09f",
+        "matches_HEAD": true
+      }
+    },
+    "article": {
+      "docx": {
+        "path": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.docx",
+        "sha256_before": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+        "sha256_after": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+        "matches_HEAD": true
+      },
+      "pdf": {
+        "path": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.pdf",
+        "sha256_before": "84cc72e1628ef554698c435875851dd2d52377fd58987e775c0a4b37612052d6",
+        "sha256_after": "84cc72e1628ef554698c435875851dd2d52377fd58987e775c0a4b37612052d6",
+        "matches_HEAD": true
+      }
+    },
+    "supplement": {
+      "docx": {
+        "path": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx",
+        "sha256_before": "e954fe87a94a40fd954f3eb5b74638d6892ce79fcd23a3be364c169bb0fd948d",
+        "sha256_after": "e954fe87a94a40fd954f3eb5b74638d6892ce79fcd23a3be364c169bb0fd948d",
+        "matches_HEAD": true
+      },
+      "pdf": {
+        "path": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.pdf",
+        "sha256_before": "28092864e6bb5f1a0849a3459b6b02fc01eac9567cfb64c81dc9d6346637e3fc",
+        "sha256_after": "28092864e6bb5f1a0849a3459b6b02fc01eac9567cfb64c81dc9d6346637e3fc",
+        "matches_HEAD": true
+      }
+    },
+    "provenance_final/VERIFICATION_NOTES.md": {
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/VERIFICATION_NOTES.md",
+      "sha256": "09bdab689bf1153e91c880072bfb9b7de955c5ef888a247dfe3e40b367b86a3d",
+      "matches_HEAD": true
+    },
+    "article/article.md": {
+      "path": "/Users/samnimoh/Desktop/chromo/article/article.md",
+      "sha256": "f420fc740de3fd9390bd39b7e564f085206c1daf0ec28cd952cbbbc23d81158c",
+      "matches_HEAD": true
+    },
+    "article/CANONICAL_FACTS_FOR_ARTICLE.md": {
+      "path": "/Users/samnimoh/Desktop/chromo/article/CANONICAL_FACTS_FOR_ARTICLE.md",
+      "sha256": "e0cf717eba8b244ae0e522078010dc4610337b140c2dfb2820d3bae63d02295b",
+      "matches_HEAD": true
+    }
+  },
+  "drifted_sources": [],
+  "round5_finding_status": {
+    "1_calibration_conservative_guarantee": "Closed: §5.6 now explicitly denies a guaranteed direction for final calibration and agrees with §5.7.4. Concept sweep found no remaining final-calibration conservative guarantee.",
+    "2_panmixia_process_inference": "Partial: §3.14 headline and §10.1 headline now distinguish measured differentiation from mating/exchange, but live residual claims remain throughout abstract/body/tables/captions/conclusion. Some are in the very paragraphs edited for FDR or strongest-evidence changes.",
+    "3_treemix_graph_interpretation": "Partial: named §6.7 paragraph now conditional; §10.1 and Table 10.2 still assert bifurcating-tree inadequacy without carrying that scope.",
+    "4_conditional_FDR_summary": "Closed for the specific finding: §5.7.4 now explicitly makes control conditional on adequately calibrated simulated null. Remaining q/FDR shorthand elsewhere was not treated as a new guaranteed-control error merely because every table row does not repeat the methods qualifier.",
+    "5_notes_scope_and_supersession": "Closed: early numerics section explicitly marked superseded in part with precise scope correction; variant heading narrowed to called fields; X-output check acknowledged as internal.",
+    "6_obsolete_caption_numbering": "Old explanations removed in five captions, but new incomplete sentence introduced in main6.4a/6.7a and supS24/S28.",
+    "7_document_tools": "Outside this document-focused subtask; parent reviewing independently."
+  },
+  "findings": [
+    {
+      "priority": "P2",
+      "concept": "panmixia",
+      "quote": "Near-panmixia is now supported by FST stability",
+      "reason": "Current abstract interprets statistic stability as mating conclusion.",
+      "locations": [
+        {
+          "docx": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx",
+          "paragraph_xml_index": 147,
+          "section": "Abstract",
+          "pdf": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.pdf",
+          "verified_pdf_pages": [
+            9
+          ],
+          "paragraph_text": "[Interpreted] Robustness of these conclusions to the corrected re-runs and the final checks. The population-structure readings held on a 16.6% larger SNP panel (3,359 to 3,916 SNPs) with corrected filter ordering, a bitwise-reproducible single-threaded BayPass, seeded permutation tests and full false-discovery accounting: near-panmixia, maximum FST of approximately 0.0023, and a near-flat ADMIXTURE cross-validation curve. Three quantities moved and should not be described as unchanged: the XtX threshold (the manuscript's 8-thread run gave 11.232, the final single-threaded run gives 10.840), the outlier count (15 to 19) and the outlier gene list (11 to 13 genes). One conclusion has since been lost, and it was the report's only positive spatial finding. The threshold sensitivity analysis shows the region-level Mantel result significant in 2 of 6 scenarios, and it also withdraws the earlier claim that the result no longer depends on the censoring of negative FST pairs: of the six scenarios only the baseline clears p < 0.05 both censored and uncensored, the second significant scenario (MAF >= 0.02) giving p = 0.047 censored against p = 0.050 uncensored. Isolation by distance is retained in the report and reported with the scenarios in which it fails, but it is graded not robust, and the previous version's listing of it among the strengthened results is withdrawn. Two strengthenings stand. Near-panmixia is now supported by FST stability across 0.00204-0.00255 over all six scenarios, which is better evidence than any single run could give; and TreeMix now carries jackknife edge standard errors, so the m = 2 graph is reported as a selected descriptive model rather than as a settled edge count. Two further checks changed nothing material. Re-running the three ordinations on the 1,900-isolate analysis set rather than the 4,905 pre-QC isolates leaves the reading intact - silhouette by zone -0.020 against -0.016 on the full set, so removing polyclonal and clonally redundant isolates does not sharpen the structure; trustworthiness 0.499 (UMAP), 0.526 (t-SNE), 0.510 (PCoA), PCoA distance correlation 0.287 against 0.322 - and the call-quality audit clears the outlier set while downgrading two chromosome-11 SNPs. The resistance panel is a different matter and was not confirmed but replaced: an external critique upheld in full showed that the marker identification method was unsound, and the panel was rebuilt from the codon up, changing the pfdhfr triple-mutant figure, adding a locus that had been missing altogether, correcting a residue call, correcting the pfk13 list, and replacing the validation argument. The population analyses are therefore a partial confirmation with two strengthened results, one lost result, two downgraded outlier SNPs and one materially revised candidate list; the resistance results are new."
+        },
+        {
+          "docx": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx",
+          "paragraph_xml_index": 151,
+          "section": "Abstract",
+          "pdf": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.pdf",
+          "verified_pdf_pages": [
+            10
+          ],
+          "paragraph_text": "[Interpreted] Robustness of these conclusions to the corrected re-runs and the final checks. The population-structure readings held on a 16.6% larger SNP panel (3,359 to 3,916 SNPs) with corrected filter ordering, a bitwise-reproducible single-threaded BayPass, seeded permutation tests and full false-discovery accounting: near-panmixia, maximum FST of approximately 0.0023, and a near-flat ADMIXTURE cross-validation curve. Three quantities moved and should not be described as unchanged: the XtX threshold (the manuscript's 8-thread run gave 11.232, the final single-threaded run gives 10.840), the outlier count (15 to 19) and the outlier gene list (11 to 13 genes). One conclusion has since been lost, and it was the report's only positive spatial finding. The threshold sensitivity analysis shows the region-level Mantel result significant in 2 of 6 scenarios, and it also withdraws the earlier claim that the result no longer depends on the censoring of negative FST pairs: of the six scenarios only the baseline clears p < 0.05 both censored and uncensored, the second significant scenario (MAF >= 0.02) giving p = 0.047 censored against p = 0.050 uncensored. Isolation by distance is retained in the report and reported with the scenarios in which it fails, but it is graded not robust, and the previous version's listing of it among the strengthened results is withdrawn. Two strengthenings stand. Near-panmixia is now supported by FST stability across 0.00204-0.00255 over all six scenarios, which is better evidence than any single run could give; and TreeMix now carries jackknife edge standard errors, so the m = 2 graph is reported as a selected descriptive model rather than as a settled edge count. Two further checks changed nothing material. Re-running the three ordinations on the 1,900-isolate analysis set rather than the 4,905 pre-QC isolates leaves the reading intact - silhouette by zone -0.020 against -0.016 on the full set, so removing polyclonal and clonally redundant isolates does not sharpen the structure; trustworthiness 0.499 (UMAP), 0.526 (t-SNE), 0.510 (PCoA), PCoA distance correlation 0.287 against 0.322 - and the call-quality audit clears the outlier set while downgrading two chromosome-11 SNPs. The resistance panel is a different matter and was not confirmed but replaced: an external critique upheld in full showed that the marker identification method was unsound, and the panel was rebuilt from the codon up, changing the pfdhfr triple-mutant figure, adding a locus that had been missing altogether, correcting a residue call, correcting the pfk13 list, and replacing the validation argument. The population analyses are therefore a partial confirmation with two strengthened results, one lost result, two downgraded outlier SNPs and one materially revised candidate list; the resistance results are new."
+        }
+      ]
+    },
+    {
+      "priority": "P2",
+      "concept": "panmixia",
+      "quote": "so near-panmixia does not depend on the Fws or MAF cuts",
+      "reason": "Live introductory conclusion.",
+      "locations": [
+        {
+          "docx": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx",
+          "paragraph_xml_index": 155,
+          "section": "1.1 The problem",
+          "pdf": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.pdf",
+          "verified_pdf_pages": [
+            11
+          ],
+          "paragraph_text": "[Interpreted] A fifth round, and the loss of a result. Four outstanding robustness checks were run at final revision, and they are the reason this version grades one finding lower than the last. Three of the four left the conclusions standing or strengthened them: the maximum pairwise FST varies only between 0.00204 and 0.00255 across six threshold scenarios spanning 1,900 to 4,403 isolates and 3,275 to 10,876 SNPs, so near-panmixia does not depend on the Fws or MAF cuts; the 19 XtX outliers are better-supported calls than the rest of the scanned panel rather than artefacts, although two adjacent chromosome-11 sites are downgraded within that set; and re-running the ordinations on the 1,900-isolate analysis set, so that they describe the same isolates as everything else, changes nothing material. The fourth check overturned a conclusion. The region-level isolation-by-distance result - the only positive spatial finding in this report - is significant in 2 of those 6 threshold scenarios and in 4 of 7 leave-one-region-out replicates, collapsing when Upper East is dropped, and is therefore graded not robust wherever it appears below. It is not deleted: it holds at the published thresholds, and it is reported together with the scenarios in which it fails. But it can no longer be described as supported, moderately supported, or a weak but real distance effect, and the preceding version's listing of it among the strengthened results is withdrawn. The remaining check, the provenance of the agro-ecological zone layer, cannot be closed analytically at all and stays open."
+        },
+        {
+          "docx": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx",
+          "paragraph_xml_index": 159,
+          "section": "1.1 The problem",
+          "pdf": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.pdf",
+          "verified_pdf_pages": [
+            12
+          ],
+          "paragraph_text": "[Interpreted] A fifth round, and the loss of a result. Four outstanding robustness checks were run at final revision, and they are the reason this version grades one finding lower than the last. Three of the four left the conclusions standing or strengthened them: the maximum pairwise FST varies only between 0.00204 and 0.00255 across six threshold scenarios spanning 1,900 to 4,403 isolates and 3,275 to 10,876 SNPs, so near-panmixia does not depend on the Fws or MAF cuts; the 19 XtX outliers are better-supported calls than the rest of the scanned panel rather than artefacts, although two adjacent chromosome-11 sites are downgraded within that set; and re-running the ordinations on the 1,900-isolate analysis set, so that they describe the same isolates as everything else, changes nothing material. The fourth check overturned a conclusion. The region-level isolation-by-distance result - the only positive spatial finding in this report - is significant in 2 of those 6 threshold scenarios and in 4 of 7 leave-one-region-out replicates, collapsing when Upper East is dropped, and is therefore graded not robust wherever it appears below. It is not deleted: it holds at the published thresholds, and it is reported together with the scenarios in which it fails. But it can no longer be described as supported, moderately supported, or a weak but real distance effect, and the preceding version's listing of it among the strengthened results is withdrawn. The remaining check, the provenance of the agro-ecological zone layer, cannot be closed analytically at all and stays open."
+        }
+      ]
+    },
+    {
+      "priority": "P2",
+      "concept": "panmixia",
+      "quote": "panmixia estimate was always well determined",
+      "reason": "Residual in the same sensitivity section whose earlier headline was corrected.",
+      "locations": [
+        {
+          "docx": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx",
+          "paragraph_xml_index": 981,
+          "section": "3.14 Stage 13 — sensitivity of the results to the two thresholds that define the dataset",
+          "pdf": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.pdf",
+          "verified_pdf_pages": [
+            61
+          ],
+          "paragraph_text": "Why one conclusion strengthens while the other falls. The two outcomes are not in tension, and the asymmetry is instructive rather than suspicious. Maximum FST is a point estimate pooled over thousands of sites, so it moves little when the site set or the sample changes, and six scenarios agreeing to within 0.0005 is a genuine stability result. The Mantel p-value is a significance verdict on a correlation over 21 pairwise points from seven populations, and at baseline it sat at 0.0252 — inside the top half of the interval below 0.05, with very little margin. A verdict with that little margin, resting on that few points, is exactly the kind that threshold choices can decide, and here they do. The honest reading is that the panmixia estimate was always well determined and the distance effect never was; what the check did was reveal which of the two the published thresholds had been carrying."
+        },
+        {
+          "docx": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx",
+          "paragraph_xml_index": 985,
+          "section": "3.14 Stage 13 — sensitivity of the results to the two thresholds that define the dataset",
+          "pdf": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.pdf",
+          "verified_pdf_pages": [
+            62
+          ],
+          "paragraph_text": "Why one conclusion strengthens while the other falls. The two outcomes are not in tension, and the asymmetry is instructive rather than suspicious. Maximum FST is a point estimate pooled over thousands of sites, so it moves little when the site set or the sample changes, and six scenarios agreeing to within 0.0005 is a genuine stability result. The Mantel p-value is a significance verdict on a correlation over 21 pairwise points from seven populations, and at baseline it sat at 0.0252 — inside the top half of the interval below 0.05, with very little margin. A verdict with that little margin, resting on that few points, is exactly the kind that threshold choices can decide, and here they do. The honest reading is that the panmixia estimate was always well determined and the distance effect never was; what the check did was reveal which of the two the published thresholds had been carrying."
+        }
+      ]
+    },
+    {
+      "priority": "P2",
+      "concept": "panmixia",
+      "quote": "near-panmixia across Ghana's agro-ecological zones still holds",
+      "reason": "Survives in the newly edited FDR reassurance paragraph.",
+      "locations": [
+        {
+          "docx": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx",
+          "paragraph_xml_index": 1555,
+          "section": "5.7.4 Scope of the review, and what the discovery pattern implies",
+          "pdf": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.pdf",
+          "verified_pdf_pages": [
+            90
+          ],
+          "paragraph_text": "[Observed] The reassurance that is actually earned. Against all of the above, one robustness result stands and should be stated plainly rather than assumed. The corrected re-run enlarged the SNP panel by 16.6 per cent, replaced an uncorrected quantile with a list selected on Benjamini–Hochberg q-values against the simulated null, control being conditional on that null being adequately calibrated, gave TreeMix inferential support for the first time, and corrected the ploidy treatment that inflates FST by up to 31×. The conclusions did not move. Maximum pairwise FST is 0.00232 (SE 0.00053) against 0.0024 before; the ADMIXTURE cross-validation curve is still near-flat, with K = 2 at 0.83925 against K = 1 at 0.84384; and near-panmixia across Ghana's agro-ecological zones still holds. A headline that survives a materially larger panel and a stricter multiplicity correction is better supported than one that was merely never tested. Two limits on that reassurance should be stated with it. It applies to the population-structure results, which the marker-panel rebuilds do not touch; and it is an internal-consistency argument of exactly the kind that the pattern above shows to be insufficient on its own."
+        },
+        {
+          "docx": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx",
+          "paragraph_xml_index": 1559,
+          "section": "5.7.4 Scope of the review, and what the discovery pattern implies",
+          "pdf": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.pdf",
+          "verified_pdf_pages": [
+            91
+          ],
+          "paragraph_text": "[Observed] The reassurance that is actually earned. Against all of the above, one robustness result stands and should be stated plainly rather than assumed. The corrected re-run enlarged the SNP panel by 16.6 per cent, replaced an uncorrected quantile with a list selected on Benjamini–Hochberg q-values against the simulated null, control being conditional on that null being adequately calibrated, gave TreeMix inferential support for the first time, and corrected the ploidy treatment that inflates FST by up to 31×. The conclusions did not move. Maximum pairwise FST is 0.00232 (SE 0.00053) against 0.0024 before; the ADMIXTURE cross-validation curve is still near-flat, with K = 2 at 0.83925 against K = 1 at 0.84384; and near-panmixia across Ghana's agro-ecological zones still holds. A headline that survives a materially larger panel and a stricter multiplicity correction is better supported than one that was merely never tested. Two limits on that reassurance should be stated with it. It applies to the population-structure results, which the marker-panel rebuilds do not touch; and it is an internal-consistency argument of exactly the kind that the pattern above shows to be insufficient on its own."
+        }
+      ]
+    },
+    {
+      "priority": "P2",
+      "concept": "panmixia",
+      "quote": "Near-panmixia is therefore insensitive to both of the thresholds",
+      "reason": "Results sensitivity conclusion retains the strongest-evidence reading.",
+      "locations": [
+        {
+          "docx": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx",
+          "paragraph_xml_index": 1972,
+          "section": "6.5 Isolation by distance",
+          "pdf": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.pdf",
+          "verified_pdf_pages": [
+            104
+          ],
+          "paragraph_text": "[Interpreted] The same analysis strengthens the headline conclusion. Maximum pairwise FST moves only between 0.00204 and 0.00255 across all six scenarios, a total spread of 0.0005, over sample sizes from 1,900 to 4,403 isolates and panels from 3,275 to 10,876 SNPs. Near-panmixia is therefore insensitive to both of the thresholds that define the dataset, which is the strongest single piece of evidence for it in this work: the two filters that could most plausibly have manufactured the result do not move it. Two secondary readings follow from the direction of the small movements. Relaxing the Fws cut raises FST (0.00232 at the baseline to 0.00255 at Fws >= 0.80 and 0.00254 with no cut), so the excluded polyclonal isolates were not masking differentiation; if anything they carry marginally more of it. Tripling the panel by lowering the MAF floor to 0.01 lowers it (0.00204), as expected if rarer variants are less differentiated between zones than common ones. Neither movement approaches a magnitude that would change any conclusion drawn in Section 6.4."
+        },
+        {
+          "docx": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx",
+          "paragraph_xml_index": 1976,
+          "section": "6.5 Isolation by distance",
+          "pdf": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.pdf",
+          "verified_pdf_pages": [
+            105
+          ],
+          "paragraph_text": "[Interpreted] The same analysis strengthens the headline conclusion. Maximum pairwise FST moves only between 0.00204 and 0.00255 across all six scenarios, a total spread of 0.0005, over sample sizes from 1,900 to 4,403 isolates and panels from 3,275 to 10,876 SNPs. Near-panmixia is therefore insensitive to both of the thresholds that define the dataset, which is the strongest single piece of evidence for it in this work: the two filters that could most plausibly have manufactured the result do not move it. Two secondary readings follow from the direction of the small movements. Relaxing the Fws cut raises FST (0.00232 at the baseline to 0.00255 at Fws >= 0.80 and 0.00254 with no cut), so the excluded polyclonal isolates were not masking differentiation; if anything they carry marginally more of it. Tripling the panel by lowering the MAF floor to 0.01 lowers it (0.00204), as expected if rarer variants are less differentiated between zones than common ones. Neither movement approaches a magnitude that would change any conclusion drawn in Section 6.4."
+        }
+      ]
+    },
+    {
+      "priority": "P2",
+      "concept": "panmixia",
+      "quote": "Near-panmixia is insensitive to both",
+      "reason": "Survives in newly edited §8.1 paragraph despite the next sentence distinguishing statistic from process.",
+      "locations": [
+        {
+          "docx": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx",
+          "paragraph_xml_index": 3239,
+          "section": "8. Robustness checks and alternative approaches",
+          "pdf": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.pdf",
+          "verified_pdf_pages": [
+            148
+          ],
+          "paragraph_text": "[Calculated] The four outstanding checks have now been run. Three confirmed robustness; one overturned a conclusion. (i) Threshold sensitivity. scripts/step13_sensitivity.py rebuilds the analysis matrix under six combinations of the two thresholds that define the dataset — the Fws monoclonality cut, which discards 57 per cent of isolates and does so unevenly by zone, and the MAF floor, which discards 99.8 per cent of sites — and recomputes pairwise FST and the region-level Mantel test for each (Table 8.3). Near-panmixia is insensitive to both: maximum pairwise FST moves only between 0.00204 and 0.00255, a total spread of 0.0005, over sample sizes from 1,900 to 4,403 and SNP counts from 3,275 to 10,876. That stability is the best-evidenced result in the whole analysis — evidence that the measured differentiation does not depend on the threshold choices, not evidence about the processes that produced it. Isolation by distance is not: the Mantel test is significant in 2 of 6 scenarios, failing at every relaxation of the Fws cut and at MAF ≥ 0.01, and holding only at the published thresholds and marginally at MAF ≥ 0.02. Taken with the leave-one-region-out jackknife, which already showed 4 of 7 and collapse when Upper East is dropped, the finding must now be reported as not robust. It was the manuscript's only positive spatial finding, and it did not survive the two checks the audit itself identified as most needed. That is the overturned conclusion, and it is a loss rather than a refinement. (ii) Outlier variant quality. The 19 XtX outliers are better-supported calls than the rest of the panel, not worse, and the exported-protein artefact worry is closed; two adjacent chromosome-11 SNPs are downgraded for an unrelated and still-unverified reason (§7.2 and its note). (iii) Stage 3 re-run on the 1,900-isolate analysis set. The ordination conclusion is unchanged, the silhouette becomes slightly more negative, and the figures now describe the same sample as every other result (Figure 8.1). (iv) GeoJSON provenance remains open and cannot be closed analytically; it requires a written enquiry to the likely custodian (§9.3). Two secondary observations from (i) are worth recording in their own right: relaxing Fws slightly raises FST (0.00232 to 0.00255), so the polyclonal isolates the filter removes were not masking differentiation; and tripling the SNP count via MAF ≥ 0.01 lowers it (0.00204), as expected if rarer variants are less differentiated between zones."
+        },
+        {
+          "docx": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx",
+          "paragraph_xml_index": 3243,
+          "section": "8. Robustness checks and alternative approaches",
+          "pdf": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.pdf",
+          "verified_pdf_pages": [
+            149
+          ],
+          "paragraph_text": "[Calculated] The four outstanding checks have now been run. Three confirmed robustness; one overturned a conclusion. (i) Threshold sensitivity. scripts/step13_sensitivity.py rebuilds the analysis matrix under six combinations of the two thresholds that define the dataset — the Fws monoclonality cut, which discards 57 per cent of isolates and does so unevenly by zone, and the MAF floor, which discards 99.8 per cent of sites — and recomputes pairwise FST and the region-level Mantel test for each (Table S44). Near-panmixia is insensitive to both: maximum pairwise FST moves only between 0.00204 and 0.00255, a total spread of 0.0005, over sample sizes from 1,900 to 4,403 and SNP counts from 3,275 to 10,876. That stability is the best-evidenced result in the whole analysis — evidence that the measured differentiation does not depend on the threshold choices, not evidence about the processes that produced it. Isolation by distance is not: the Mantel test is significant in 2 of 6 scenarios, failing at every relaxation of the Fws cut and at MAF ≥ 0.01, and holding only at the published thresholds and marginally at MAF ≥ 0.02. Taken with the leave-one-region-out jackknife, which already showed 4 of 7 and collapse when Upper East is dropped, the finding must now be reported as not robust. It was the manuscript's only positive spatial finding, and it did not survive the two checks the audit itself identified as most needed. That is the overturned conclusion, and it is a loss rather than a refinement. (ii) Outlier variant quality. The 19 XtX outliers are better-supported calls than the rest of the panel, not worse, and the exported-protein artefact worry is closed; two adjacent chromosome-11 SNPs are downgraded for an unrelated and still-unverified reason (§7.2 and its note). (iii) Stage 3 re-run on the 1,900-isolate analysis set. The ordination conclusion is unchanged, the silhouette becomes slightly more negative, and the figures now describe the same sample as every other result (Figure S21). (iv) GeoJSON provenance remains open and cannot be closed analytically; it requires a written enquiry to the likely custodian (§9.3). Two secondary observations from (i) are worth recording in their own right: relaxing Fws slightly raises FST (0.00232 to 0.00255), so the polyclonal isolates the filter removes were not masking differentiation; and tripling the SNP count via MAF ≥ 0.01 lowers it (0.00204), as expected if rarer variants are less differentiated between zones."
+        }
+      ]
+    },
+    {
+      "priority": "P2",
+      "concept": "panmixia",
+      "quote": "Near-panmixia survives; isolation by distance does not.",
+      "reason": "Live table caption.",
+      "locations": [
+        {
+          "docx": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx",
+          "paragraph_xml_index": 3423,
+          "section": "8.1 Checks performed",
+          "pdf": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.pdf",
+          "verified_pdf_pages": [
+            154
+          ],
+          "paragraph_text": "Table 8.3. Threshold sensitivity. Both thresholds that define the analysis dataset were varied and pairwise FST and the region-level Mantel test recomputed from scratch under each scenario (scripts/step13_sensitivity.py; sensitivity_summary.csv, sensitivity_fst.csv). Maximum FST is the Coastal savanna–Guinea savanna pair in all six scenarios. Mantel statistics are the censored versions, with negative FST pairs floored to zero, on 9,999 seeded permutations; on the uncensored statistic only the baseline scenario clears p < 0.05 at all (baseline 0.041, MAF ≥ 0.02 0.050, the rest 0.064–0.200). The six scenarios are not independent analyses — they share data and a pipeline — but they test the analyst's threshold choices, which no other check in this document does. Near-panmixia survives; isolation by distance does not."
+        },
+        {
+          "docx": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx",
+          "paragraph_xml_index": 3427,
+          "section": "8.1 Checks performed",
+          "pdf": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.pdf",
+          "verified_pdf_pages": [
+            155
+          ],
+          "paragraph_text": "Table S44. Threshold sensitivity. Both thresholds that define the analysis dataset were varied and pairwise FST and the region-level Mantel test recomputed from scratch under each scenario (scripts/step13_sensitivity.py; sensitivity_summary.csv, sensitivity_fst.csv). Maximum FST is the Coastal savanna–Guinea savanna pair in all six scenarios. Mantel statistics are the censored versions, with negative FST pairs floored to zero, on 9,999 seeded permutations; on the uncensored statistic only the baseline scenario clears p < 0.05 at all (baseline 0.041, MAF ≥ 0.02 0.050, the rest 0.064–0.200). The six scenarios are not independent analyses — they share data and a pipeline — but they test the analyst's threshold choices, which no other check in this document does. Near-panmixia survives; isolation by distance does not."
+        }
+      ]
+    },
+    {
+      "priority": "P2",
+      "concept": "panmixia",
+      "quote": "made near-panmixia the best-evidenced conclusion in the manuscript",
+      "reason": "Closing assessment; also repeated in an audit record.",
+      "locations": [
+        {
+          "docx": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx",
+          "paragraph_xml_index": 3651,
+          "section": "10.4 Most valuable next steps",
+          "pdf": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.pdf",
+          "verified_pdf_pages": [
+            177,
+            191
+          ],
+          "paragraph_text": "[Interpreted] A closing assessment. The analysis has done what a baseline characterisation should do: established the scale of structure, found it to be small, identified precisely which design features limit what can be inferred, and produced a short candidate list for follow-up. What has changed across the three rounds is the standing of the negative results, the standing of our own corrections, and now the standing of a positive result. The absence of resistance loci from the outlier scan was not a result at all but a filter artefact, and correcting it converted the thesis's third objective from a null finding into its best-supported positive one — pfdhps G437 at 0.897 and zone-structured, the pfdhfr triple mutant measured as a haplotype at 0.771, and pfaat1 S258L as a strong candidate whose demonstrated functional effect is modest and background-dependent. The absence of artemisinin resistance is now genuinely tested, across the complete WHO-validated and candidate sets, on 1,845 to 1,876 called isolates per codon over 2009–2021, and genuinely negative. But the first correction of the panel was itself wrong in four ways, and only an external reader caught it. The honest conclusion is therefore two claims rather than one. A negative result is worth nothing until the thing it denies has been shown to be measurable. And internal consistency is not correctness: every defect in the first corrected panel came from a list, a direction or a label taken on trust, and the verification architecture built to catch stale numbers was never built to ask whether the inputs were the right ones. The third round adds a third claim, and it is the least comfortable of the three. Four checks this list carried as outstanding were run, and the one previously described here as addressing \"the two most likely reviewer objections\" removed a finding instead of answering them: isolation by distance survives neither a relaxation of the monoclonality cut nor a lower MAF floor, and is significant at two of six threshold settings. The gain and the loss come from the same six runs. The check that destroyed the spatial finding is the check that made near-panmixia the best-evidenced conclusion in the manuscript, because FST moved by less than 0.0005 while the Mantel p-value crossed 0.05 four times. A result that holds only at the thresholds that produced it was never a result; it was a setting. The manuscript is shorter by one finding and better by one method, and the third claim is simply that: a threshold is a hypothesis, and until it has been varied, every conclusion downstream of it is conditional on a number nobody tested."
+        },
+        {
+          "docx": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx",
+          "paragraph_xml_index": 3977,
+          "section": "Appendix F — Audit and correction record",
+          "pdf": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.pdf",
+          "verified_pdf_pages": [
+            177,
+            191
+          ],
+          "paragraph_text": "[Observed] This appendix exists for traceability, and it now records three rounds. Round one, 9–10 October 2026: an adversarial multi-agent audit. Eight reviewers working across separate dimensions raised 110 findings, each of which was then put to three independent verifiers prompted to refute it and defaulting to refuted where they could not substantiate the claim. A finding counts as confirmed only where at least two of three verifiers failed to refute it after checking the code, data or outputs themselves. Sixty-one findings were confirmed — 14 high severity, 31 medium, 16 low — with 19 disputed and 21 refuted. Thirty verifications in the reproducibility dimension were lost to a rate limit and are recorded as unverified rather than confirmed. Seven confirmed defects required code changes; stages 4 to 9 were re-run on 10 October 2026 with all seven in place. Round two, 10 October 2026: an external critique of the corrected manuscript. It raised five points. All five were upheld and four were defects in the analysis code, not in the prose — in the resistance panel that round one had introduced to fix its own largest finding. The panel was rebuilt as scripts/step12_codon_panel.py and every resistance number in this revision was read from that script's outputs. This is the fourth consecutive round in which a correction contained its own defect, and the pattern is consistent: each layer was checked for internal consistency against our own outputs, and what escaped was external correctness — whether the marker list matched an authoritative source, whether the annotation direction matched the reference genome, whether a co-occurrence claim had co-occurrence data behind it. The verification architecture was built to catch stale numbers, and it did. It was not built to ask whether the inputs were the right ones. Round three, 10 October 2026: the four outstanding robustness checks. This round was not an audit of the manuscript but the execution of four items that Section 10.4 carried as outstanding, and it is recorded here because one of them overturned a conclusion instead of confirming it. The Fws and MAF sensitivity analysis (scripts/step13_sensitivity.py) withdrew isolation by distance as a supported result — significant in two of six threshold scenarios — and, from the same six runs, made near-panmixia the best-evidenced conclusion in the manuscript. The outlier quality check cleared the exported-protein artefact concern and downgraded two chromosome-11 SNPs on an ExcessHet and InbreedingCoeff signal. Stage 3 was re-run on the analysis set. The GeoJSON provenance cannot be closed analytically and remains open. Round three found no defect in the prose and none in the analysis code; what it found was that a published result depended on the thresholds that produced it. Two integrity incidents occurred during the round and are registered as rows 13 and 14 of Table F.1 rather than left in the logs."
+        },
+        {
+          "docx": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx",
+          "paragraph_xml_index": 3655,
+          "section": "10.4 Most valuable next steps",
+          "pdf": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.pdf",
+          "verified_pdf_pages": [
+            178,
+            192
+          ],
+          "paragraph_text": "[Interpreted] A closing assessment. The analysis has done what a baseline characterisation should do: established the scale of structure, found it to be small, identified precisely which design features limit what can be inferred, and produced a short candidate list for follow-up. What has changed across the three rounds is the standing of the negative results, the standing of our own corrections, and now the standing of a positive result. The absence of resistance loci from the outlier scan was not a result at all but a filter artefact, and correcting it converted the thesis's third objective from a null finding into its best-supported positive one — pfdhps G437 at 0.897 and zone-structured, the pfdhfr triple mutant measured as a haplotype at 0.771, and pfaat1 S258L as a strong candidate whose demonstrated functional effect is modest and background-dependent. The absence of artemisinin resistance is now genuinely tested, across the complete WHO-validated and candidate sets, on 1,845 to 1,876 called isolates per codon over 2009–2021, and genuinely negative. But the first correction of the panel was itself wrong in four ways, and only an external reader caught it. The honest conclusion is therefore two claims rather than one. A negative result is worth nothing until the thing it denies has been shown to be measurable. And internal consistency is not correctness: every defect in the first corrected panel came from a list, a direction or a label taken on trust, and the verification architecture built to catch stale numbers was never built to ask whether the inputs were the right ones. The third round adds a third claim, and it is the least comfortable of the three. Four checks this list carried as outstanding were run, and the one previously described here as addressing \"the two most likely reviewer objections\" removed a finding instead of answering them: isolation by distance survives neither a relaxation of the monoclonality cut nor a lower MAF floor, and is significant at two of six threshold settings. The gain and the loss come from the same six runs. The check that destroyed the spatial finding is the check that made near-panmixia the best-evidenced conclusion in the manuscript, because FST moved by less than 0.0005 while the Mantel p-value crossed 0.05 four times. A result that holds only at the thresholds that produced it was never a result; it was a setting. The manuscript is shorter by one finding and better by one method, and the third claim is simply that: a threshold is a hypothesis, and until it has been varied, every conclusion downstream of it is conditional on a number nobody tested."
+        },
+        {
+          "docx": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx",
+          "paragraph_xml_index": 3981,
+          "section": "Appendix F — Audit and correction record",
+          "pdf": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.pdf",
+          "verified_pdf_pages": [
+            178,
+            192
+          ],
+          "paragraph_text": "[Observed] This appendix exists for traceability, and it now records three rounds. Round one, 9–10 October 2026: an adversarial multi-agent audit. Eight reviewers working across separate dimensions raised 110 findings, each of which was then put to three independent verifiers prompted to refute it and defaulting to refuted where they could not substantiate the claim. A finding counts as confirmed only where at least two of three verifiers failed to refute it after checking the code, data or outputs themselves. Sixty-one findings were confirmed — 14 high severity, 31 medium, 16 low — with 19 disputed and 21 refuted. Thirty verifications in the reproducibility dimension were lost to a rate limit and are recorded as unverified rather than confirmed. Seven confirmed defects required code changes; stages 4 to 9 were re-run on 10 October 2026 with all seven in place. Round two, 10 October 2026: an external critique of the corrected manuscript. It raised five points. All five were upheld and four were defects in the analysis code, not in the prose — in the resistance panel that round one had introduced to fix its own largest finding. The panel was rebuilt as scripts/step12_codon_panel.py and every resistance number in this revision was read from that script's outputs. This is the fourth consecutive round in which a correction contained its own defect, and the pattern is consistent: each layer was checked for internal consistency against our own outputs, and what escaped was external correctness — whether the marker list matched an authoritative source, whether the annotation direction matched the reference genome, whether a co-occurrence claim had co-occurrence data behind it. The verification architecture was built to catch stale numbers, and it did. It was not built to ask whether the inputs were the right ones. Round three, 10 October 2026: the four outstanding robustness checks. This round was not an audit of the manuscript but the execution of four items that Section 10.4 carried as outstanding, and it is recorded here because one of them overturned a conclusion instead of confirming it. The Fws and MAF sensitivity analysis (scripts/step13_sensitivity.py) withdrew isolation by distance as a supported result — significant in two of six threshold scenarios — and, from the same six runs, made near-panmixia the best-evidenced conclusion in the manuscript. The outlier quality check cleared the exported-protein artefact concern and downgraded two chromosome-11 SNPs on an ExcessHet and InbreedingCoeff signal. Stage 3 was re-run on the analysis set. The GeoJSON provenance cannot be closed analytically and remains open. Round three found no defect in the prose and none in the analysis code; what it found was that a published result depended on the thresholds that produced it. Two integrity incidents occurred during the round and are registered as rows 13 and 14 of Table S51 rather than left in the logs."
+        }
+      ]
+    },
+    {
+      "priority": "P2",
+      "concept": "graph inference",
+      "quote": "A strictly bifurcating population tree is inadequate",
+      "reason": "Live §10.1 unconditional conclusion conflicts with corrected conditional-fit framing.",
+      "locations": [
+        {
+          "docx": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx",
+          "paragraph_xml_index": 3583,
+          "section": "10.1 What has been established",
+          "pdf": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.pdf",
+          "verified_pdf_pages": [
+            165
+          ],
+          "paragraph_text": "[Calculated] A strictly bifurcating population tree is inadequate, and a two-edge graph is the model these data select. With jackknife standard errors enabled, variance explained rises from 0.897 at m = 0 to 0.941 at m = 1 and 0.997 at m = 2. Every edge in the m = 2 graph is significant (p = 7.5 x 10-4 and 3.3 x 10-16); the third edge added at m = 3 is not (weight 0.065, SE 0.147, p = 0.328), and m = 3 is in any case flagged non-identifiable with four populations. The manuscript previously recorded both m = 2 and m = 3 and left the choice open. m = 2 is now reported as the selected descriptive model — on the third edge’s own standard error and on parameter counting — rather than as a count of historical migration events that these data identify. The variance-explained criterion applied across the full sweep still prefers m = 3, so the two criteria do not agree, and choosing between them is a modelling decision taken here on identifiability grounds. Specific gene-flow corridors remain unidentifiable with four populations."
+        },
+        {
+          "docx": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx",
+          "paragraph_xml_index": 3587,
+          "section": "10.1 What has been established",
+          "pdf": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.pdf",
+          "verified_pdf_pages": [
+            166
+          ],
+          "paragraph_text": "[Calculated] A strictly bifurcating population tree is inadequate, and a two-edge graph is the model these data select. With jackknife standard errors enabled, variance explained rises from 0.897 at m = 0 to 0.941 at m = 1 and 0.997 at m = 2. Every edge in the m = 2 graph is significant (p = 7.5 x 10-4 and 3.3 x 10-16); the third edge added at m = 3 is not (weight 0.065, SE 0.147, p = 0.328), and m = 3 is in any case flagged non-identifiable with four populations. The manuscript previously recorded both m = 2 and m = 3 and left the choice open. m = 2 is now reported as the selected descriptive model — on the third edge’s own standard error and on parameter counting — rather than as a count of historical migration events that these data identify. The variance-explained criterion applied across the full sweep still prefers m = 3, so the two criteria do not agree, and choosing between them is a modelling decision taken here on identifiability grounds. Specific gene-flow corridors remain unidentifiable with four populations."
+        }
+      ]
+    },
+    {
+      "priority": "P2",
+      "concept": "graph inference",
+      "quote": "High that a bifurcating tree is inadequate",
+      "reason": "Confidence cell in live research-questions table.",
+      "locations": [
+        {
+          "docx": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx",
+          "paragraph_xml_index": 3623,
+          "section": "10.2 Answers to the research questions",
+          "pdf": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.pdf",
+          "verified_pdf_pages": [
+            172
+          ],
+          "paragraph_text": "High that a bifurcating tree is inadequate; m = 2 is a selected descriptive model rather than a settled edge count; corridors not identifiable"
+        },
+        {
+          "docx": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx",
+          "paragraph_xml_index": 3627,
+          "section": "10.2 Answers to the research questions",
+          "pdf": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.pdf",
+          "verified_pdf_pages": [
+            173
+          ],
+          "paragraph_text": "High that a bifurcating tree is inadequate; m = 2 is a selected descriptive model rather than a settled edge count; corridors not identifiable"
+        }
+      ]
+    },
+    {
+      "priority": "P3",
+      "concept": "caption grammar",
+      "quote": "This table is new in this revision and is.",
+      "reason": "New incomplete sentence left by removal of obsolete numbering clause.",
+      "locations": [
+        {
+          "docx": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx",
+          "paragraph_xml_index": 1775,
+          "section": "6.3 Ordination of the genotype distance matrix",
+          "pdf": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.pdf",
+          "verified_pdf_pages": [
+            99,
+            104
+          ],
+          "paragraph_text": "Table 6.4a. The three ordinations recomputed on the 1,900-isolate analysis set, beside the published 4,905-isolate run (results/dimred_comparison.csv, corrected/dimred_comparison_qcset.csv). Both columns read the same published Pf8 distance matrix; the right-hand column re-slices it to the analysis samples. Settings are identical (trustworthiness at k = 30; silhouette against zone labels). This table is new in this revision and is."
+        },
+        {
+          "docx": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx",
+          "paragraph_xml_index": 1969,
+          "section": "6.5 Isolation by distance",
+          "pdf": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.pdf",
+          "verified_pdf_pages": [
+            99,
+            104
+          ],
+          "paragraph_text": "Table 6.7a. Threshold sensitivity of the region-level Mantel test and of maximum pairwise FST (results/sensitivity_summary.csv, scripts/step13_sensitivity.py). Only the named threshold differs from the baseline in each row. \"p (as run)\" floors negative pairwise FST to zero, as step06_mantel.py does; \"p (uncensored)\" retains them, following Table 6.6. Negative pairs floored, in row order: 3, 4, 3, 0, 4, 4. All tests are one-sided over 9,999 permutations at seed 42. This table is new in this revision and is."
+        },
+        {
+          "docx": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx",
+          "paragraph_xml_index": 1779,
+          "section": "6.3 Ordination of the genotype distance matrix",
+          "pdf": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.pdf",
+          "verified_pdf_pages": [
+            100,
+            105
+          ],
+          "paragraph_text": "Table S24. The three ordinations recomputed on the 1,900-isolate analysis set, beside the published 4,905-isolate run (results/dimred_comparison.csv, corrected/dimred_comparison_qcset.csv). Both columns read the same published Pf8 distance matrix; the right-hand column re-slices it to the analysis samples. Settings are identical (trustworthiness at k = 30; silhouette against zone labels). This table is new in this revision and is."
+        },
+        {
+          "docx": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx",
+          "paragraph_xml_index": 1973,
+          "section": "6.5 Isolation by distance",
+          "pdf": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.pdf",
+          "verified_pdf_pages": [
+            100,
+            105
+          ],
+          "paragraph_text": "Table S28. Threshold sensitivity of the region-level Mantel test and of maximum pairwise FST (results/sensitivity_summary.csv, scripts/step13_sensitivity.py). Only the named threshold differs from the baseline in each row. \"p (as run)\" floors negative pairwise FST to zero, as step06_mantel.py does; \"p (uncensored)\" retains them, following Table S26. Negative pairs floored, in row order: 3, 4, 3, 0, 4, 4. All tests are one-sided over 9,999 permutations at seed 42. This table is new in this revision and is."
+        }
+      ]
+    }
+  ],
+  "exclusions": [
+    {
+      "paragraph_xml_index": 152,
+      "reason": "Hypothetical neutral panmixia in §1.1 is not asserted as a result and was excluded."
+    },
+    {
+      "paragraph_xml_index": 3977,
+      "reason": "Audit history repeats best-evidenced panmixia; separate historical context from primary live closing assessment p3651. Neither relied upon alone."
+    }
+  ],
+  "semantic_change_artifacts": [
+    "/private/tmp/pf8_round6_document_review/manuscript_semantic_changes.json",
+    "/private/tmp/pf8_round6_document_review/supplement_semantic_changes.json"
+  ],
+  "submission_scope_note": "Article placeholders persist but were scope/evidence items rather than one of the seven numbered fixes; do not claim that their presence alone refutes completion of the seven.",
+  "limits": "No scientific rerun, raw-read inspection, end-to-end provenance certification, or Lean implementation proof. PDF locations verified by extraction of supplied current PDFs; parent handles fresh rendering comparison and visual inspection."
+}

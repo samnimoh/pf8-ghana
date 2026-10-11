@@ -1,0 +1,5 @@
+e8fe3b719b184988b0c7eacd99d900f0  /media/biodataA/pf8/gyadu/results/dimred_comparison.csv
+1662bd0176878d4dbf312b502894de70  /media/biodataA/pf8/gyadu/results/dimred_comparison_qcset.csv
+ffa9601d61d58155384922dd6810f601  /media/biodataA/pf8/gyadu/results/fst_pairwise.csv
+e8cb05e2692bd24b4e8d6f54920d7484  /media/biodataA/pf8/gyadu/results/sensitivity_summary.csv
+779b9e379b6640afbbeb39409206ed69  /media/biodataA/pf8/gyadu/results/mantel_jackknife_region.csv

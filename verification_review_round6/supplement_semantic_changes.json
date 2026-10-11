@@ -1,0 +1,273 @@
+[
+  {
+    "kind": "replace",
+    "old_paragraphs": [
+      160,
+      160
+    ],
+    "new_paragraphs": [
+      160,
+      160
+    ],
+    "old": [
+      "Table S10. The three ordinations and their comparison metrics on the published pre-QC sample set and on the analysis set. Analysis-set values from results/dimred_comparison_qcset.csv. The table is numbered after Table S12 rather than in document order so that the existing table numbers, which other sections cite, do not shift."
+    ],
+    "new": [
+      "Table S10. The three ordinations and their comparison metrics on the published pre-QC sample set and on the analysis set. Analysis-set values from results/dimred_comparison_qcset.csv."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraphs": [
+      163,
+      163
+    ],
+    "new_paragraphs": [
+      163,
+      163
+    ],
+    "old": [
+      "Figure S5. The same three ordinations on the 1,900-isolate analysis set, coloured by agro-ecological zone, with the distance submatrix re-sliced for those isolates rather than taken from the cached full-set matrix. Compare Figure S4, which is the published 4,905-isolate version. The figure is numbered after Figure S6 rather than in document order so that the existing figure numbers do not shift."
+    ],
+    "new": [
+      "Figure S5. The same three ordinations on the 1,900-isolate analysis set, coloured by agro-ecological zone, with the distance submatrix re-sliced for those isolates rather than taken from the cached full-set matrix. Compare Figure S4, which is the published 4,905-isolate version."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraphs": [
+      314,
+      314
+    ],
+    "new_paragraphs": [
+      314,
+      314
+    ],
+    "old": [
+      "Table S13. The six threshold scenarios, from results/sensitivity_summary.csv. Maximum pairwise FST is the Coastal savanna against Guinea savanna pair in all six. Mantel values are the censored region-level test; the uncensored p-values in the same file are 0.0413, 0.1214, 0.2002, 0.1792, 0.0644 and 0.0502. One verdict does turn on the censoring: the MAF ≥ 0.02 scenario is significant censored (0.0467) and not significant uncensored (0.0502), so on the uncensored statistic the baseline is the only scenario clearing 0.05. The other five verdicts are unchanged. The table is numbered after Table S10 so that the existing table numbers do not shift."
+    ],
+    "new": [
+      "Table S13. The six threshold scenarios, from results/sensitivity_summary.csv. Maximum pairwise FST is the Coastal savanna against Guinea savanna pair in all six. Mantel values are the censored region-level test; the uncensored p-values in the same file are 0.0413, 0.1214, 0.2002, 0.1792, 0.0644 and 0.0502. One verdict does turn on the censoring: the MAF ≥ 0.02 scenario is significant censored (0.0467) and not significant uncensored (0.0502), so on the uncensored statistic the baseline is the only scenario clearing 0.05. The other five verdicts are unchanged."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraphs": [
+      318,
+      318
+    ],
+    "new_paragraphs": [
+      318,
+      318
+    ],
+    "old": [
+      "[Observed] Near-panmixia, by contrast, is robust, and this strengthens it. Maximum pairwise FST stays within 0.00204 to 0.00255 across all six scenarios — a total spread of 0.0005 — over isolate counts from 1,900 to 4,403 and SNP counts from 3,275 to 10,876. The headline conclusion is insensitive to both thresholds, across more than a doubling of the sample and nearly a trebling of the panel, and that is the strongest single piece of evidence for it anywhere in this analysis."
+    ],
+    "new": [
+      "[Observed] The measured differentiation, by contrast, is stable across every threshold tested, and that stability is what the sensitivity analysis strengthens. Stability of a very low, detectable common-variant estimate is not an estimate of random mating or of contemporary exchange. Maximum pairwise FST stays within 0.00204 to 0.00255 across all six scenarios — a total spread of 0.0005 — over isolate counts from 1,900 to 4,403 and SNP counts from 3,275 to 10,876. The headline conclusion is insensitive to both thresholds, across more than a doubling of the sample and nearly a trebling of the panel, and that is the strongest single piece of evidence for it anywhere in this analysis."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraphs": [
+      453,
+      453
+    ],
+    "new_paragraphs": [
+      453,
+      453
+    ],
+    "old": [
+      "Caveat. Two calibration weaknesses remain and are not corrected in the reported numbers. First, the pseudo-observed set is still not MAF-matched; because proper matching lowers the threshold, the reported threshold is the conservative one and matching would admit more outliers, not fewer. Second, the pseudo-observed and observed XtX distributions do not agree well through the body of the range — on the superseded run the audit measured a Kolmogorov–Smirnov D of 0.158 below XtX 8, with the pseudo-observed distribution stochastically larger through the body and markedly shorter in the extreme tail. Distributional overlap is the only model-adequacy check this analysis performs, and it is weaker than §8.1 previously claimed."
+    ],
+    "new": [
+      "Caveat. Two calibration weaknesses remain and are not corrected in the reported numbers. First, the pseudo-observed set is still not MAF-matched; on the superseded 3,359-SNP panel proper matching lowered the threshold, which would have admitted more outliers rather than fewer, but that experiment does not establish the direction of the error for the final 3,916-SNP run, whose raw pseudo-observed inputs are not archived. The frequency-matching limitation stands; a guaranteed conservative threshold does not (Section 5.7.4). Second, the pseudo-observed and observed XtX distributions do not agree well through the body of the range — on the superseded run the audit measured a Kolmogorov–Smirnov D of 0.158 below XtX 8, with the pseudo-observed distribution stochastically larger through the body and markedly shorter in the extreme tail. Distributional overlap is the only model-adequacy check this analysis performs, and it is weaker than §8.1 previously claimed."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraphs": [
+      495,
+      495
+    ],
+    "new_paragraphs": [
+      495,
+      495
+    ],
+    "old": [
+      "[Observed] The reassurance that is actually earned. Against all of the above, one robustness result stands and should be stated plainly rather than assumed. The corrected re-run enlarged the SNP panel by 16.6 per cent, replaced an uncorrected quantile with an FDR-controlled list, gave TreeMix inferential support for the first time, and corrected the ploidy treatment that inflates FST by up to 31×. The conclusions did not move. Maximum pairwise FST is 0.00232 (SE 0.00053) against 0.0024 before; the ADMIXTURE cross-validation curve is still near-flat, with K = 2 at 0.83925 against K = 1 at 0.84384; and near-panmixia across Ghana's agro-ecological zones still holds. A headline that survives a materially larger panel and a stricter multiplicity correction is better supported than one that was merely never tested. Two limits on that reassurance should be stated with it. It applies to the population-structure results, which the marker-panel rebuilds do not touch; and it is an internal-consistency argument of exactly the kind that the pattern above shows to be insufficient on its own."
+    ],
+    "new": [
+      "[Observed] The reassurance that is actually earned. Against all of the above, one robustness result stands and should be stated plainly rather than assumed. The corrected re-run enlarged the SNP panel by 16.6 per cent, replaced an uncorrected quantile with a list selected on Benjamini–Hochberg q-values against the simulated null, control being conditional on that null being adequately calibrated, gave TreeMix inferential support for the first time, and corrected the ploidy treatment that inflates FST by up to 31×. The conclusions did not move. Maximum pairwise FST is 0.00232 (SE 0.00053) against 0.0024 before; the ADMIXTURE cross-validation curve is still near-flat, with K = 2 at 0.83925 against K = 1 at 0.84384; and near-panmixia across Ghana's agro-ecological zones still holds. A headline that survives a materially larger panel and a stricter multiplicity correction is better supported than one that was merely never tested. Two limits on that reassurance should be stated with it. It applies to the population-structure results, which the marker-panel rebuilds do not touch; and it is an internal-consistency argument of exactly the kind that the pattern above shows to be insufficient on its own."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraphs": [
+      544,
+      544
+    ],
+    "new_paragraphs": [
+      544,
+      544
+    ],
+    "old": [
+      "Table S24. The three ordinations recomputed on the 1,900-isolate analysis set, beside the published 4,905-isolate run (results/dimred_comparison.csv, corrected/dimred_comparison_qcset.csv). Both columns read the same published Pf8 distance matrix; the right-hand column re-slices it to the analysis samples. Settings are identical (trustworthiness at k = 30; silhouette against zone labels). This table is new in this revision and is lettered so that the existing table numbering is unchanged."
+    ],
+    "new": [
+      "Table S24. The three ordinations recomputed on the 1,900-isolate analysis set, beside the published 4,905-isolate run (results/dimred_comparison.csv, corrected/dimred_comparison_qcset.csv). Both columns read the same published Pf8 distance matrix; the right-hand column re-slices it to the analysis samples. Settings are identical (trustworthiness at k = 30; silhouette against zone labels). This table is new in this revision and is."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraphs": [
+      561,
+      564
+    ],
+    "new_paragraphs": [
+      561,
+      561
+    ],
+    "old": [
+      "3 of 21 pairs have negative FST and are floored to zero:",
+      "    Ashanti - Volta:          -0.001037",
+      "    Eastern - Greater Accra:  -0.000203",
+      "    Greater Accra - Volta:    -0.000142"
+    ],
+    "new": [
+      "3 of 21 pairs have negative FST and are floored to zero:\n    Ashanti - Volta:          -0.001037\n    Eastern - Greater Accra:  -0.000203\n    Greater Accra - Volta:    -0.000142"
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraphs": [
+      572,
+      572
+    ],
+    "new_paragraphs": [
+      569,
+      569
+    ],
+    "old": [
+      "Table S28. Threshold sensitivity of the region-level Mantel test and of maximum pairwise FST (results/sensitivity_summary.csv, scripts/step13_sensitivity.py). Only the named threshold differs from the baseline in each row. \"p (as run)\" floors negative pairwise FST to zero, as step06_mantel.py does; \"p (uncensored)\" retains them, following Table S26. Negative pairs floored, in row order: 3, 4, 3, 0, 4, 4. All tests are one-sided over 9,999 permutations at seed 42. This table is new in this revision and is lettered so that the existing table numbering is unchanged."
+    ],
+    "new": [
+      "Table S28. Threshold sensitivity of the region-level Mantel test and of maximum pairwise FST (results/sensitivity_summary.csv, scripts/step13_sensitivity.py). Only the named threshold differs from the baseline in each row. \"p (as run)\" floors negative pairwise FST to zero, as step06_mantel.py does; \"p (uncensored)\" retains them, following Table S26. Negative pairs floored, in row order: 3, 4, 3, 0, 4, 4. All tests are one-sided over 9,999 permutations at seed 42. This table is new in this revision and is."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraphs": [
+      597,
+      597
+    ],
+    "new_paragraphs": [
+      594,
+      594
+    ],
+    "old": [
+      "[Interpreted] Two cautions limit how much any of this can be made to mean. First, the fitted quantity is six off-diagonal between-population covariances, and an unrooted four-taxon tree already uses five branch-length parameters, so m = 0 has one residual degree of freedom and m = 1 has none or fewer. A rise in variance explained from 0.897 to 0.941 between those two models is not by itself evidence of gene flow, and the original manuscript's treatment of the m = 0 to m = 1 improvement as \"the one substantive result\" applied a degrees-of-freedom argument against m = 3 while exempting m = 1 from it. The edge p-values are the stronger evidence precisely because they do not depend on the variance-explained curve. Second, with four populations, three of which are a single administrative region each, these edges cannot be read as specific geographic gene-flow corridors. What the graph establishes is that a strictly bifurcating tree does not describe these populations, which is what would be expected of a single population with ongoing exchange, and that the selected graph carries two edges whose weights are distinguishable from zero conditional on that graph. Those are conditional edge statistics, not identified directions of historical exchange."
+    ],
+    "new": [
+      "[Interpreted] Two cautions limit how much any of this can be made to mean. First, the fitted quantity is six off-diagonal between-population covariances, and an unrooted four-taxon tree already uses five branch-length parameters, so m = 0 has one residual degree of freedom and m = 1 has none or fewer. A rise in variance explained from 0.897 to 0.941 between those two models is not by itself evidence of gene flow, and the original manuscript's treatment of the m = 0 to m = 1 improvement as \"the one substantive result\" applied a degrees-of-freedom argument against m = 3 while exempting m = 1 from it. The edge p-values are the stronger evidence precisely because they do not depend on the variance-explained curve. Second, with four populations, three of which are a single administrative region each, these edges cannot be read as specific geographic gene-flow corridors. What the graph establishes is narrower than it looks: within this fitted covariance model, a strictly bifurcating topology leaves residual covariance that two admixture edges absorb, and those two edges carry weights distinguishable from zero conditional on that graph. Edge significance is conditional on a fixed topology and root and does not propagate error in the graph structure itself (Pickrell and Pritchard 2012), so this is a statement about model fit rather than a demonstration of ongoing exchange. Those are conditional edge statistics, not identified directions of historical exchange."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraphs": [
+      757,
+      757
+    ],
+    "new_paragraphs": [
+      754,
+      754
+    ],
+    "old": [
+      "[Calculated] The four outstanding checks have now been run. Three confirmed robustness; one overturned a conclusion. (i) Threshold sensitivity. scripts/step13_sensitivity.py rebuilds the analysis matrix under six combinations of the two thresholds that define the dataset — the Fws monoclonality cut, which discards 57 per cent of isolates and does so unevenly by zone, and the MAF floor, which discards 99.8 per cent of sites — and recomputes pairwise FST and the region-level Mantel test for each (Table S44). Near-panmixia is insensitive to both: maximum pairwise FST moves only between 0.00204 and 0.00255, a total spread of 0.0005, over sample sizes from 1,900 to 4,403 and SNP counts from 3,275 to 10,876. That is the strongest evidence for the headline conclusion in the whole analysis. Isolation by distance is not: the Mantel test is significant in 2 of 6 scenarios, failing at every relaxation of the Fws cut and at MAF ≥ 0.01, and holding only at the published thresholds and marginally at MAF ≥ 0.02. Taken with the leave-one-region-out jackknife, which already showed 4 of 7 and collapse when Upper East is dropped, the finding must now be reported as not robust. It was the manuscript's only positive spatial finding, and it did not survive the two checks the audit itself identified as most needed. That is the overturned conclusion, and it is a loss rather than a refinement. (ii) Outlier variant quality. The 19 XtX outliers are better-supported calls than the rest of the panel, not worse, and the exported-protein artefact worry is closed; two adjacent chromosome-11 SNPs are downgraded for an unrelated and still-unverified reason (§7.2 and its note). (iii) Stage 3 re-run on the 1,900-isolate analysis set. The ordination conclusion is unchanged, the silhouette becomes slightly more negative, and the figures now describe the same sample as every other result (Figure S21). (iv) GeoJSON provenance remains open and cannot be closed analytically; it requires a written enquiry to the likely custodian (§9.3). Two secondary observations from (i) are worth recording in their own right: relaxing Fws slightly raises FST (0.00232 to 0.00255), so the polyclonal isolates the filter removes were not masking differentiation; and tripling the SNP count via MAF ≥ 0.01 lowers it (0.00204), as expected if rarer variants are less differentiated between zones."
+    ],
+    "new": [
+      "[Calculated] The four outstanding checks have now been run. Three confirmed robustness; one overturned a conclusion. (i) Threshold sensitivity. scripts/step13_sensitivity.py rebuilds the analysis matrix under six combinations of the two thresholds that define the dataset — the Fws monoclonality cut, which discards 57 per cent of isolates and does so unevenly by zone, and the MAF floor, which discards 99.8 per cent of sites — and recomputes pairwise FST and the region-level Mantel test for each (Table S44). Near-panmixia is insensitive to both: maximum pairwise FST moves only between 0.00204 and 0.00255, a total spread of 0.0005, over sample sizes from 1,900 to 4,403 and SNP counts from 3,275 to 10,876. That stability is the best-evidenced result in the whole analysis — evidence that the measured differentiation does not depend on the threshold choices, not evidence about the processes that produced it. Isolation by distance is not: the Mantel test is significant in 2 of 6 scenarios, failing at every relaxation of the Fws cut and at MAF ≥ 0.01, and holding only at the published thresholds and marginally at MAF ≥ 0.02. Taken with the leave-one-region-out jackknife, which already showed 4 of 7 and collapse when Upper East is dropped, the finding must now be reported as not robust. It was the manuscript's only positive spatial finding, and it did not survive the two checks the audit itself identified as most needed. That is the overturned conclusion, and it is a loss rather than a refinement. (ii) Outlier variant quality. The 19 XtX outliers are better-supported calls than the rest of the panel, not worse, and the exported-protein artefact worry is closed; two adjacent chromosome-11 SNPs are downgraded for an unrelated and still-unverified reason (§7.2 and its note). (iii) Stage 3 re-run on the 1,900-isolate analysis set. The ordination conclusion is unchanged, the silhouette becomes slightly more negative, and the figures now describe the same sample as every other result (Figure S21). (iv) GeoJSON provenance remains open and cannot be closed analytically; it requires a written enquiry to the likely custodian (§9.3). Two secondary observations from (i) are worth recording in their own right: relaxing Fws slightly raises FST (0.00232 to 0.00255), so the polyclonal isolates the filter removes were not masking differentiation; and tripling the SNP count via MAF ≥ 0.01 lowers it (0.00204), as expected if rarer variants are less differentiated between zones."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraphs": [
+      803,
+      803
+    ],
+    "new_paragraphs": [
+      800,
+      800
+    ],
+    "old": [
+      "[Calculated] Near-panmixia survives both thresholds that define the dataset, and that is the strongest evidence the analysis holds for anything. scripts/step13_sensitivity.py loads the genotype matrix once, rebuilds the analysis matrix under six threshold scenarios and recomputes pairwise FST and the region-level Mantel test for each. The two thresholds varied are the ones that do the most work in the pipeline: the Fws monoclonality cut, which discards 57 per cent of isolates and does so unevenly by zone, and the MAF floor, which discards 99.8 per cent of sites. Across all six scenarios the maximum pairwise FST ranges only 0.00204 to 0.00255 — a total spread of 0.0005 — over sample sizes from 1,900 to 4,403 isolates and SNP counts from 3,275 to 10,876, and the maximum pair is coastal savanna against Guinea savanna in every one of them. Two secondary readings are worth recording. Relaxing Fws slightly raises FST (0.00232 at Fws >= 0.95, 0.00255 at Fws >= 0.80), so the polyclonal isolates the filter removes were not masking differentiation — the direction a reviewer would most likely suspect is the opposite of the one observed. And tripling the SNP count by lowering the MAF floor to 0.01 lowers it (0.00204), as expected if rarer variants are less differentiated between zones. A conclusion that holds at 1,900 isolates and 3,916 SNPs and also at 4,403 isolates and 10,876 SNPs is being tested rather than assumed."
+    ],
+    "new": [
+      "[Calculated] Very low, detectable common-variant differentiation survives both thresholds that define the dataset, and that stability is the best-evidenced result the analysis holds. It is a statement about a measured allele-frequency statistic, not about the mating system or the rate of contemporary exchange. scripts/step13_sensitivity.py loads the genotype matrix once, rebuilds the analysis matrix under six threshold scenarios and recomputes pairwise FST and the region-level Mantel test for each. The two thresholds varied are the ones that do the most work in the pipeline: the Fws monoclonality cut, which discards 57 per cent of isolates and does so unevenly by zone, and the MAF floor, which discards 99.8 per cent of sites. Across all six scenarios the maximum pairwise FST ranges only 0.00204 to 0.00255 — a total spread of 0.0005 — over sample sizes from 1,900 to 4,403 isolates and SNP counts from 3,275 to 10,876, and the maximum pair is coastal savanna against Guinea savanna in every one of them. Two secondary readings are worth recording. Relaxing Fws slightly raises FST (0.00232 at Fws >= 0.95, 0.00255 at Fws >= 0.80), so the polyclonal isolates the filter removes were not masking differentiation — the direction a reviewer would most likely suspect is the opposite of the one observed. And tripling the SNP count by lowering the MAF floor to 0.01 lowers it (0.00204), as expected if rarer variants are less differentiated between zones. A conclusion that holds at 1,900 isolates and 3,916 SNPs and also at 4,403 isolates and 10,876 SNPs is being tested rather than assumed."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraphs": [
+      917,
+      922
+    ],
+    "new_paragraphs": [
+      914,
+      914
+    ],
+    "old": [
+      "source /home/tools/anaconda3/etc/profile.d/conda.sh && conda activate spatial",
+      "cd /media/biodataA/pf8/gyadu/scripts",
+      "python check_env.py              # verifies packages and external binaries",
+      "bash run_all.sh --list           # lists the stages",
+      "bash run_all.sh                  # full pipeline, stages 1-9",
+      "bash run_all.sh --from 4 --parallel   # stages 5-8 concurrently after stage 4"
+    ],
+    "new": [
+      "source /home/tools/anaconda3/etc/profile.d/conda.sh && conda activate spatial\ncd /media/biodataA/pf8/gyadu/scripts\npython check_env.py              # verifies packages and external binaries\nbash run_all.sh --list           # lists the stages\nbash run_all.sh                  # full pipeline, stages 1-9\nbash run_all.sh --from 4 --parallel   # stages 5-8 concurrently after stage 4"
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraphs": [
+      924,
+      930
+    ],
+    "new_paragraphs": [
+      916,
+      916
+    ],
+    "old": [
+      "python step12_codon_panel.py          # resistance markers by reconstructed codon",
+      "python step11_batch_confounding.py    # study x zone confounding",
+      "python step13_sensitivity.py          # Fws and MAF threshold sensitivity, 6 scenarios",
+      "# Stage 3 on the 1,900-isolate analysis set; outputs take the suffix, originals are untouched:",
+      "python step03_umap.py --samples <analysis sample list> --suffix _qcset",
+      "# superseded, retained only to re-demonstrate the annotation-matching defect:",
+      "# python step10_resistance_panel.py"
+    ],
+    "new": [
+      "python step12_codon_panel.py          # resistance markers by reconstructed codon\npython step11_batch_confounding.py    # study x zone confounding\npython step13_sensitivity.py          # Fws and MAF threshold sensitivity, 6 scenarios\n\n# Stage 3 on the 1,900-isolate analysis set; outputs take the suffix, originals are untouched:\npython step03_umap.py --samples <analysis sample list> --suffix _qcset\n\n# superseded, retained only to re-demonstrate the annotation-matching defect:\n# python step10_resistance_panel.py"
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraphs": [
+      934,
+      936
+    ],
+    "new_paragraphs": [
+      920,
+      920
+    ],
+    "old": [
+      "python step03a_fetch_callset_zarr.py --validate-only \\",
+      "--validate-vcf ../data/Pf8_Ghana_Pf3D7_10_v3.vcf.gz \\",
+      "--validate-region Pf3D7_10_v3:400001-440000"
+    ],
+    "new": [
+      "python step03a_fetch_callset_zarr.py --validate-only \\\n--validate-vcf ../data/Pf8_Ghana_Pf3D7_10_v3.vcf.gz \\\n--validate-region Pf3D7_10_v3:400001-440000"
+    ]
+  }
+]

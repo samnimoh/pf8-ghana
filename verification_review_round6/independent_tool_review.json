@@ -1,0 +1,463 @@
+{
+  "scratch_directory": "/private/tmp/pf8_round6_independent_tools_oioglk7_",
+  "scope": "Document helper tests only; no scientific pipeline execution or real deliverable modification.",
+  "git_head": "d59bbf6722c36b8f8f09e707a2290fbb699ed83f",
+  "comparison_commit": "1afaf4b",
+  "reference_list_nonempty_lines": 42,
+  "source_hashes_before": {
+    "/Users/samnimoh/Desktop/chromo/tools/build_article.py": "3a23314efee7294af47978742bb4b3cb40ddd8847e93c89f9ab8bc36f9d8095c",
+    "/Users/samnimoh/Desktop/chromo/tools/apply_edits.py": "ebe7842d7ee23fba9ee12a337c855706662a508fd46c39afb045f76b84d7ffd2",
+    "/Users/samnimoh/Desktop/chromo/tools/make_supplement.py": "547cc95ee27e1d32cb3ffb90e4051fef715120c2167a64ace1592eb6f018c0fd",
+    "/Users/samnimoh/Desktop/chromo/tools/README.md": "3b0e125b69464ab36c745b0bdcef0c5535f43783f13c429dd67df09cd6c2d2db",
+    "/Users/samnimoh/Desktop/chromo/tools/references_apa.txt": "7c9333469481e1c4f2ac1fd665ec1c8db0dc115fcc002a509d2d1cdf0c409738"
+  },
+  "source_hashes_after": {
+    "/Users/samnimoh/Desktop/chromo/tools/build_article.py": "3a23314efee7294af47978742bb4b3cb40ddd8847e93c89f9ab8bc36f9d8095c",
+    "/Users/samnimoh/Desktop/chromo/tools/apply_edits.py": "ebe7842d7ee23fba9ee12a337c855706662a508fd46c39afb045f76b84d7ffd2",
+    "/Users/samnimoh/Desktop/chromo/tools/make_supplement.py": "547cc95ee27e1d32cb3ffb90e4051fef715120c2167a64ace1592eb6f018c0fd",
+    "/Users/samnimoh/Desktop/chromo/tools/README.md": "3b0e125b69464ab36c745b0bdcef0c5535f43783f13c429dd67df09cd6c2d2db",
+    "/Users/samnimoh/Desktop/chromo/tools/references_apa.txt": "7c9333469481e1c4f2ac1fd665ec1c8db0dc115fcc002a509d2d1cdf0c409738"
+  },
+  "results": [
+    {
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/apply_edits.py"
+      ],
+      "cwd": "/private/tmp/pf8_round6_independent_tools_oioglk7_/optional_metadata",
+      "environment_overrides": {
+        "EDITS": "/private/tmp/pf8_round6_independent_tools_oioglk7_/optional_metadata/edits.json",
+        "DRY": "0"
+      },
+      "returncode": 0,
+      "stdout": "applied 1 | not located 0 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n\nwrote word/document.xml: 161 -> 163 bytes, 1 runs modified\n",
+      "stderr": "",
+      "name": "optional_metadata",
+      "edits": [
+        {
+          "quote": "good",
+          "repl": "better"
+        }
+      ],
+      "before_sha256": "5edf66e2789a11dc81e90f0d0ba5f78c66bc143bde5ca59e419ea6f72f22864e",
+      "after_sha256": "423e93c64b08bec840740b3ffe497b3a982b3dbf26c5ca346dd16ab094b010a2",
+      "document_unchanged": false,
+      "result_paragraphs": [
+        "one better phrase"
+      ]
+    },
+    {
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/apply_edits.py"
+      ],
+      "cwd": "/private/tmp/pf8_round6_independent_tools_oioglk7_/unmatched_no_write",
+      "environment_overrides": {
+        "EDITS": "/private/tmp/pf8_round6_independent_tools_oioglk7_/unmatched_no_write/edits.json",
+        "DRY": "0"
+      },
+      "returncode": 1,
+      "stdout": "applied 1 | not located 1 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n\nNOT LOCATED:\n   [1] -: 'absent'\n",
+      "stderr": "\nREFUSING TO WRITE: 1 not located, 0 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 1 that matched.\n",
+      "name": "unmatched_no_write",
+      "edits": [
+        {
+          "quote": "good",
+          "repl": "better"
+        },
+        {
+          "quote": "absent",
+          "repl": "present"
+        }
+      ],
+      "before_sha256": "5edf66e2789a11dc81e90f0d0ba5f78c66bc143bde5ca59e419ea6f72f22864e",
+      "after_sha256": "5edf66e2789a11dc81e90f0d0ba5f78c66bc143bde5ca59e419ea6f72f22864e",
+      "document_unchanged": true,
+      "result_paragraphs": [
+        "one good phrase"
+      ]
+    },
+    {
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/apply_edits.py"
+      ],
+      "cwd": "/private/tmp/pf8_round6_independent_tools_oioglk7_/exact_duplicates_rejected",
+      "environment_overrides": {
+        "EDITS": "/private/tmp/pf8_round6_independent_tools_oioglk7_/exact_duplicates_rejected/edits.json",
+        "DRY": "0"
+      },
+      "returncode": 1,
+      "stdout": "applied 0 | not located 0 | run-conflicts 0 | ambiguous 1\n  of applied, spanning >1 run: 0\n\nAMBIGUOUS (quote is not unique \u2014 add \"occurrence\": <1-based int>):\n   [0] -: 2 matches: 'alpha beta'\n",
+      "stderr": "\nREFUSING TO WRITE: 0 not located, 1 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 0 that matched.\n",
+      "name": "exact_duplicates_rejected",
+      "edits": [
+        {
+          "quote": "alpha beta",
+          "repl": "new phrase"
+        }
+      ],
+      "before_sha256": "01be30876af78d4cdf3c074f94eba2bd8cf1373b5541d5055818ce30374db705",
+      "after_sha256": "01be30876af78d4cdf3c074f94eba2bd8cf1373b5541d5055818ce30374db705",
+      "document_unchanged": true,
+      "result_paragraphs": [
+        "alpha beta",
+        "alpha beta"
+      ]
+    },
+    {
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/apply_edits.py"
+      ],
+      "cwd": "/private/tmp/pf8_round6_independent_tools_oioglk7_/exact_occurrence2",
+      "environment_overrides": {
+        "EDITS": "/private/tmp/pf8_round6_independent_tools_oioglk7_/exact_occurrence2/edits.json",
+        "DRY": "0"
+      },
+      "returncode": 0,
+      "stdout": "applied 1 | not located 0 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n\nwrote word/document.xml: 199 -> 199 bytes, 1 runs modified\n",
+      "stderr": "",
+      "name": "exact_occurrence2",
+      "edits": [
+        {
+          "quote": "alpha beta",
+          "repl": "new phrase",
+          "occurrence": 2
+        }
+      ],
+      "before_sha256": "01be30876af78d4cdf3c074f94eba2bd8cf1373b5541d5055818ce30374db705",
+      "after_sha256": "6f8fa15a536400ea49f29dcf739791b74d5a6cb80806f117d751bfb77cf1ded5",
+      "document_unchanged": false,
+      "result_paragraphs": [
+        "alpha beta",
+        "new phrase"
+      ]
+    },
+    {
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/apply_edits.py"
+      ],
+      "cwd": "/private/tmp/pf8_round6_independent_tools_oioglk7_/whitespace_duplicates",
+      "environment_overrides": {
+        "EDITS": "/private/tmp/pf8_round6_independent_tools_oioglk7_/whitespace_duplicates/edits.json",
+        "DRY": "0"
+      },
+      "returncode": 0,
+      "stdout": "applied 1 | not located 0 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n\nwrote word/document.xml: 202 -> 201 bytes, 1 runs modified\n",
+      "stderr": "",
+      "name": "whitespace_duplicates",
+      "edits": [
+        {
+          "quote": "alpha beta",
+          "repl": "new phrase"
+        }
+      ],
+      "before_sha256": "1b4abe7d60c9e96ca53874c951cd91e56329e0d8dba7d16823bb6b9cda176273",
+      "after_sha256": "a55e90a3b2f1c5454b817bb2b7ee150e6daac3ac4f974f77e51211d09e8cfa66",
+      "document_unchanged": false,
+      "result_paragraphs": [
+        "new phrase",
+        "alpha   beta"
+      ]
+    },
+    {
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/apply_edits.py"
+      ],
+      "cwd": "/private/tmp/pf8_round6_independent_tools_oioglk7_/whitespace_occurrence2",
+      "environment_overrides": {
+        "EDITS": "/private/tmp/pf8_round6_independent_tools_oioglk7_/whitespace_occurrence2/edits.json",
+        "DRY": "0"
+      },
+      "returncode": 0,
+      "stdout": "applied 1 | not located 0 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n\nwrote word/document.xml: 202 -> 201 bytes, 1 runs modified\n",
+      "stderr": "",
+      "name": "whitespace_occurrence2",
+      "edits": [
+        {
+          "quote": "alpha beta",
+          "repl": "new phrase",
+          "occurrence": 2
+        }
+      ],
+      "before_sha256": "1b4abe7d60c9e96ca53874c951cd91e56329e0d8dba7d16823bb6b9cda176273",
+      "after_sha256": "a55e90a3b2f1c5454b817bb2b7ee150e6daac3ac4f974f77e51211d09e8cfa66",
+      "document_unchanged": false,
+      "result_paragraphs": [
+        "new phrase",
+        "alpha   beta"
+      ]
+    },
+    {
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/apply_edits.py"
+      ],
+      "cwd": "/private/tmp/pf8_round6_independent_tools_oioglk7_/unique_bad_occurrence",
+      "environment_overrides": {
+        "EDITS": "/private/tmp/pf8_round6_independent_tools_oioglk7_/unique_bad_occurrence/edits.json",
+        "DRY": "0"
+      },
+      "returncode": 0,
+      "stdout": "applied 1 | not located 0 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n\nwrote word/document.xml: 161 -> 163 bytes, 1 runs modified\n",
+      "stderr": "",
+      "name": "unique_bad_occurrence",
+      "edits": [
+        {
+          "quote": "good",
+          "repl": "better",
+          "occurrence": 2
+        }
+      ],
+      "before_sha256": "5edf66e2789a11dc81e90f0d0ba5f78c66bc143bde5ca59e419ea6f72f22864e",
+      "after_sha256": "423e93c64b08bec840740b3ffe497b3a982b3dbf26c5ca346dd16ab094b010a2",
+      "document_unchanged": false,
+      "result_paragraphs": [
+        "one better phrase"
+      ]
+    },
+    {
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/apply_edits.py"
+      ],
+      "cwd": "/private/tmp/pf8_round6_independent_tools_oioglk7_/cross_paragraph_quote",
+      "environment_overrides": {
+        "EDITS": "/private/tmp/pf8_round6_independent_tools_oioglk7_/cross_paragraph_quote/edits.json",
+        "DRY": "0"
+      },
+      "returncode": 0,
+      "stdout": "applied 1 | not located 0 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 1\n\nwrote word/document.xml: 202 -> 200 bytes, 2 runs modified\n",
+      "stderr": "",
+      "name": "cross_paragraph_quote",
+      "edits": [
+        {
+          "quote": "onestart",
+          "repl": "merged"
+        }
+      ],
+      "before_sha256": "dece97f2c85446693e6bd693c42ab02dfafcf636f1553bedf8c2280fa8898a8a",
+      "after_sha256": "46d4744b276487b6cd579c2d1e3ce94c337c097104c097db1dd134d113a465d3",
+      "document_unchanged": false,
+      "result_paragraphs": [
+        "end of merged",
+        " of next"
+      ]
+    },
+    {
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/apply_edits.py"
+      ],
+      "cwd": "/private/tmp/pf8_round6_independent_tools_oioglk7_/same_run_conflict",
+      "environment_overrides": {
+        "EDITS": "/private/tmp/pf8_round6_independent_tools_oioglk7_/same_run_conflict/edits.json",
+        "DRY": "0",
+        "LEFTOVER": "/private/tmp/pf8_round6_independent_tools_oioglk7_/deferred_edits.json"
+      },
+      "returncode": 0,
+      "stdout": "applied 1 | not located 0 | run-conflicts 1 | ambiguous 0\n  of applied, spanning >1 run: 0\n\nCONFLICTS (overlapping runs, skipped \u2014 re-run to apply):\n   [1] -: 'beta'\n  leftover written: 1 -> /private/tmp/pf8_round6_independent_tools_oioglk7_/deferred_edits.json\n\nwrote word/document.xml: 156 -> 152 bytes, 1 runs modified\n",
+      "stderr": "",
+      "name": "same_run_conflict",
+      "edits": [
+        {
+          "quote": "alpha",
+          "repl": "A"
+        },
+        {
+          "quote": "beta",
+          "repl": "B"
+        }
+      ],
+      "before_sha256": "4d16a4b05df7c9f035a81e48128dbeb291fd5dfe0fb7d156e96b9b9882ed711d",
+      "after_sha256": "fc025f397b3b9fc7248da4888fc0caf3a48a62e38ed40fb2a4044483bb61508e",
+      "document_unchanged": false,
+      "result_paragraphs": [
+        "A beta"
+      ]
+    },
+    {
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_round6_independent_tools_oioglk7_/normal_builder",
+      "environment_overrides": {
+        "ARTICLE_TEMPLATE": "/private/tmp/pf8_round6_independent_tools_oioglk7_/template",
+        "ARTICLE_MD": "/Users/samnimoh/Desktop/chromo/article/article.md",
+        "ARTICLE_DOCX": "/private/tmp/pf8_round6_independent_tools_oioglk7_/normal_builder/article.docx"
+      },
+      "returncode": 0,
+      "stdout": "document.xml well-formed\nwrote /private/tmp/pf8_round6_independent_tools_oioglk7_/normal_builder/article.docx  1.19 MB\n",
+      "stderr": "",
+      "name": "normal_build_from_unrelated_directory",
+      "output_exists": true,
+      "output_sha256": "620607d1219877ee70c54b886c2f8af8b9a7437d8ce7bb44ea75a253e576a83d",
+      "zip_crc_error": null,
+      "reference_list_present": true,
+      "generated_document_xml_sha256": "9e7d5b00249ac81dd636c2664623da470e6ee4411feb46e325f97f5aa7a99091",
+      "current_document_xml_sha256": "9e7d5b00249ac81dd636c2664623da470e6ee4411feb46e325f97f5aa7a99091",
+      "exact_current_document_xml_match": true
+    },
+    {
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_round6_independent_tools_oioglk7_/missing_figure",
+      "environment_overrides": {
+        "ARTICLE_TEMPLATE": "/private/tmp/pf8_round6_independent_tools_oioglk7_/template",
+        "ARTICLE_MD": "/Users/samnimoh/Desktop/chromo/article/article.md",
+        "ARTICLE_DOCX": "/private/tmp/pf8_round6_independent_tools_oioglk7_/missing_figure/article.docx"
+      },
+      "returncode": 0,
+      "stdout": "document.xml well-formed\nwrote /private/tmp/pf8_round6_independent_tools_oioglk7_/missing_figure/article.docx  0.43 MB\n",
+      "stderr": "",
+      "name": "required_figure_missing",
+      "removed_template_input": "/private/tmp/pf8_round6_independent_tools_oioglk7_/template/word/media/218857879d6287b87460540cea2d8ec053df7685.png",
+      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "after_sha256": "a5ac3c5f3c3c68eafd92c1b0444d0939d1bdb409c668a9fae22b8c5829aef84f",
+      "destination_preserved": false,
+      "zip_crc_error": null,
+      "unresolved_document_relationships": [
+        {
+          "Id": "rId10",
+          "Type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
+          "Target": "media/218857879d6287b87460540cea2d8ec053df7685.png"
+        }
+      ]
+    },
+    {
+      "name": "builder_failure_archive_write",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/private/tmp/pf8_round6_independent_tools_oioglk7_/builder_fault_driver.py",
+        "archive_write",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_round6_independent_tools_oioglk7_/builder_failure_archive_write",
+      "environment_overrides": {
+        "ARTICLE_TEMPLATE": "/private/tmp/pf8_round6_independent_tools_oioglk7_/template",
+        "ARTICLE_MD": "/Users/samnimoh/Desktop/chromo/article/article.md",
+        "ARTICLE_DOCX": "/private/tmp/pf8_round6_independent_tools_oioglk7_/builder_failure_archive_write/article.docx"
+      },
+      "returncode": 1,
+      "stdout": "document.xml well-formed\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/private/tmp/pf8_round6_independent_tools_oioglk7_/builder_fault_driver.py\", line 19, in <module>\n    runpy.run_path(sys.argv[2],run_name=\"__main__\")\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 224, in <module>\n    zf.write(full, os.path.relpath(full, OUT))\n  File \"/private/tmp/pf8_round6_independent_tools_oioglk7_/builder_fault_driver.py\", line 8, in fail\n    if n[0]==5: raise OSError(\"synthetic fifth archive write failure\")\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nOSError: synthetic fifth archive write failure\n",
+      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "destination_preserved": true,
+      "temporary_archive_exists": false
+    },
+    {
+      "name": "builder_failure_integrity_check",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/private/tmp/pf8_round6_independent_tools_oioglk7_/builder_fault_driver.py",
+        "integrity_check",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_round6_independent_tools_oioglk7_/builder_failure_integrity_check",
+      "environment_overrides": {
+        "ARTICLE_TEMPLATE": "/private/tmp/pf8_round6_independent_tools_oioglk7_/template",
+        "ARTICLE_MD": "/Users/samnimoh/Desktop/chromo/article/article.md",
+        "ARTICLE_DOCX": "/private/tmp/pf8_round6_independent_tools_oioglk7_/builder_failure_integrity_check/article.docx"
+      },
+      "returncode": 1,
+      "stdout": "document.xml well-formed\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/private/tmp/pf8_round6_independent_tools_oioglk7_/builder_fault_driver.py\", line 19, in <module>\n    runpy.run_path(sys.argv[2],run_name=\"__main__\")\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 228, in <module>\n    raise RuntimeError(\"archive failed its own integrity check\")\nRuntimeError: archive failed its own integrity check\n",
+      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "destination_preserved": true,
+      "temporary_archive_exists": false
+    },
+    {
+      "name": "builder_failure_fsync",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/private/tmp/pf8_round6_independent_tools_oioglk7_/builder_fault_driver.py",
+        "fsync",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_round6_independent_tools_oioglk7_/builder_failure_fsync",
+      "environment_overrides": {
+        "ARTICLE_TEMPLATE": "/private/tmp/pf8_round6_independent_tools_oioglk7_/template",
+        "ARTICLE_MD": "/Users/samnimoh/Desktop/chromo/article/article.md",
+        "ARTICLE_DOCX": "/private/tmp/pf8_round6_independent_tools_oioglk7_/builder_failure_fsync/article.docx"
+      },
+      "returncode": 1,
+      "stdout": "document.xml well-formed\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/private/tmp/pf8_round6_independent_tools_oioglk7_/builder_fault_driver.py\", line 19, in <module>\n    runpy.run_path(sys.argv[2],run_name=\"__main__\")\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 226, in <module>\n    os.fsync(fh.fileno())\n  File \"/private/tmp/pf8_round6_independent_tools_oioglk7_/builder_fault_driver.py\", line 14, in fail\n    def fail(*a,**kw): raise OSError(\"synthetic fsync failure\")\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nOSError: synthetic fsync failure\n",
+      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "destination_preserved": true,
+      "temporary_archive_exists": false
+    },
+    {
+      "name": "builder_failure_replace",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/private/tmp/pf8_round6_independent_tools_oioglk7_/builder_fault_driver.py",
+        "replace",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_round6_independent_tools_oioglk7_/builder_failure_replace",
+      "environment_overrides": {
+        "ARTICLE_TEMPLATE": "/private/tmp/pf8_round6_independent_tools_oioglk7_/template",
+        "ARTICLE_MD": "/Users/samnimoh/Desktop/chromo/article/article.md",
+        "ARTICLE_DOCX": "/private/tmp/pf8_round6_independent_tools_oioglk7_/builder_failure_replace/article.docx"
+      },
+      "returncode": 1,
+      "stdout": "document.xml well-formed\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/private/tmp/pf8_round6_independent_tools_oioglk7_/builder_fault_driver.py\", line 19, in <module>\n    runpy.run_path(sys.argv[2],run_name=\"__main__\")\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 229, in <module>\n    os.replace(_tmp, DOCX)                      # atomic on the same filesystem\n    ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/tmp/pf8_round6_independent_tools_oioglk7_/builder_fault_driver.py\", line 17, in fail\n    def fail(*a,**kw): raise OSError(\"synthetic atomic replacement failure\")\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nOSError: synthetic atomic replacement failure\n",
+      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "destination_preserved": true,
+      "temporary_archive_exists": false
+    },
+    {
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/make_supplement.py"
+      ],
+      "cwd": "/private/tmp/pf8_round6_independent_tools_oioglk7_/supplement_normal",
+      "environment_overrides": {},
+      "returncode": 0,
+      "stdout": "captions: figures 23, tables 52\noriginal labels used more than once (6): ['6.10', '6.11', '6.7', '6.7a', '6.8', '6.9']\nmentions rewritten: 214\nafter renumbering: Figure S1\u2013S23 (23 captions), Table S1\u2013S52 (52 captions), no duplicates\nnumbering is contiguous and complete\n  ok title 1\n  ok title 2\n  ok subtitle\n  ok status\n  ok preamble\ndocument.xml 2619465 bytes\n",
+      "stderr": "",
+      "name": "normal_supplement_from_copied_manuscript_xml",
+      "generated_xml_sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368",
+      "supplied_supplement_xml_sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368",
+      "exact_xml_match": true
+    }
+  ],
+  "actual_document_cross_reference": {
+    "finding": "The early canonical-panel cascade paragraph maps Table 6.8 to Table S29, which is the ADMIXTURE cross-validation error table, unrelated to that cascade.",
+    "main_paragraph_zero_based": 731,
+    "main_paragraph_text": "[Observed] The cascade, defined once. Stage 10's panel held 44 canonical codon-allele records, covering 41 distinct protein changes, in eight of the nine panel genes (pfcoronin contributed none); 21 were polymorphic in these 1,900 isolates; 6 of the 21 survived the ingest mask \u2014 the in_genomewide_scan field, defined at step10_resistance_panel.py:349 as numalt == 1, i.e. \"would have survived the ingest filter\"; and 3 reached the MAF-filtered scan matrix: pfdhfr C59R, pfdhfr N51I and pfaat1 S258L. The other three that passed the mask \u2014 pfcrt I356T, pfmdr1 D1246Y and pfcrt N326S \u2014 were then cut by MAF \u2265 0.05 at frequencies of 0.016, 0.011 and 0.008. These four numbers (44, 21, 6, 3) carry exactly this meaning wherever they appear in this manuscript, and the Abstract, Table 1.1, Section 6.8.3, Table 6.8 and Section 10.1 use this wording. In particular, the genome-wide scan did test three of the 21 polymorphic canonical codons, and no pfcrt, pfmdr1, pfdhps or pfk13 codon reached the MAF-filtered scan matrix \u2014 pfdhps because nothing survived the ingest mask, the others because what survived was either too rare (pfcrt I356T, pfcrt N326S and pfmdr1 D1246Y all passed the mask, reached the genome-wide store and were then cut by MAF at 0.016, 0.011 and 0.008) or monomorphic here (six pfk13 codons \u2014 F446I, P441L, Y493H, P553L, R561H, A675V \u2014 passed the mask and were fetched and found invariant). \"Could not test at all\" would be true of the final MAF-filtered scan matrix but false of ascertainment, which is the distinction this paragraph exists to draw, so the stronger wording is not used.",
+    "supplement_paragraph_zero_based": 735,
+    "supplement_paragraph_text": "[Observed] The cascade, defined once. Stage 10's panel held 44 canonical codon-allele records, covering 41 distinct protein changes, in eight of the nine panel genes (pfcoronin contributed none); 21 were polymorphic in these 1,900 isolates; 6 of the 21 survived the ingest mask \u2014 the in_genomewide_scan field, defined at step10_resistance_panel.py:349 as numalt == 1, i.e. \"would have survived the ingest filter\"; and 3 reached the MAF-filtered scan matrix: pfdhfr C59R, pfdhfr N51I and pfaat1 S258L. The other three that passed the mask \u2014 pfcrt I356T, pfmdr1 D1246Y and pfcrt N326S \u2014 were then cut by MAF \u2265 0.05 at frequencies of 0.016, 0.011 and 0.008. These four numbers (44, 21, 6, 3) carry exactly this meaning wherever they appear in this manuscript, and the Abstract, Table S1, Section 6.8.3, Table S29 and Section 10.1 use this wording. In particular, the genome-wide scan did test three of the 21 polymorphic canonical codons, and no pfcrt, pfmdr1, pfdhps or pfk13 codon reached the MAF-filtered scan matrix \u2014 pfdhps because nothing survived the ingest mask, the others because what survived was either too rare (pfcrt I356T, pfcrt N326S and pfmdr1 D1246Y all passed the mask, reached the genome-wide store and were then cut by MAF at 0.016, 0.011 and 0.008) or monomorphic here (six pfk13 codons \u2014 F446I, P441L, Y493H, P553L, R561H, A675V \u2014 passed the mask and were fetched and found invariant). \"Could not test at all\" would be true of the final MAF-filtered scan matrix but false of ascertainment, which is the distinction this paragraph exists to draw, so the stronger wording is not used.",
+    "s29_caption_paragraph_zero_based": 2017,
+    "s29_caption_text": "Table S29. ADMIXTURE 10-fold cross-validation error, K = 1-8 (logs/admixture_K*.out). Lower is better. K = 1 is not part of the supplied sweep and was added so the improvement from admitting structure at all could be measured. The total range across K = 1-8 is 0.00563, 0.67 per cent of the error value; the improvement from K = 1 to K = 2 is 0.00459, 0.54 per cent.",
+    "scope": "Observed semantic mismatch; nearest-caption renumbering is reproduced exactly but does not validate intended meaning."
+  }
+}
