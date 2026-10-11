@@ -1,0 +1,470 @@
+{
+  "generated_utc": "2026-10-11T05:07:31.429206+00:00",
+  "checker": "/Users/samnimoh/Desktop/chromo/verification_review_round5/check_current_revision.py",
+  "checker_sha256": "49e2469dea20dfb72dabfc3e97b94c62e1ec69bdfa3d33d2fe4b34948583b328",
+  "runtime": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+  "input_identities": {
+    "article": {
+      "path": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.docx",
+      "bytes": 1193793,
+      "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+    },
+    "article_md": {
+      "path": "/Users/samnimoh/Desktop/chromo/article/article.md",
+      "bytes": 49210,
+      "sha256": "f420fc740de3fd9390bd39b7e564f085206c1daf0ec28cd952cbbbc23d81158c"
+    },
+    "facts": {
+      "path": "/Users/samnimoh/Desktop/chromo/article/CANONICAL_FACTS_FOR_ARTICLE.md",
+      "bytes": 11454,
+      "sha256": "e0cf717eba8b244ae0e522078010dc4610337b140c2dfb2820d3bae63d02295b"
+    },
+    "main": {
+      "path": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx",
+      "bytes": 4043771,
+      "sha256": "4c739cf78d0699a1a067066d374258fc9838e317e99c901030109b4ad5d6ea9f"
+    },
+    "supplement": {
+      "path": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx",
+      "bytes": 4044463,
+      "sha256": "6d8c39c1b65c2d25036d83a9f88c76b849172ecce0679b970ae2015e3a75cc2b"
+    },
+    "notes": {
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/VERIFICATION_NOTES.md",
+      "bytes": 14545,
+      "sha256": "42c9c73082469c492c62f1af3db7a4b4281f4af5e216484a9e6d3c1200cf0fab"
+    },
+    "readme": {
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/audit_scripts/README.md",
+      "bytes": 2993,
+      "sha256": "3a6b9ce25d3135b3cf94ea53ff8ec303d112ca982a65cf6982c481f18b754ba5"
+    },
+    "n1900_alias": {
+      "path": "/Users/samnimoh/Desktop/chromo/corrected/dimred_comparison_n1900_analysisset.csv",
+      "bytes": 298,
+      "sha256": "3d104ce26973ded0659c283be4fc0bf0e9c9eeed45c1ae0544bc60e1d0331499"
+    },
+    "n4905_alias": {
+      "path": "/Users/samnimoh/Desktop/chromo/corrected/dimred_comparison_n4905_qcpassset.csv",
+      "bytes": 305,
+      "sha256": "70878f53aa97e2ec1631690f1ed1028286a436534e388696f82e8adda79665dd"
+    },
+    "saved_1900": {
+      "path": "/Users/samnimoh/Desktop/chromo/corrected/dimred_comparison_qcset.csv",
+      "bytes": 298,
+      "sha256": "3d104ce26973ded0659c283be4fc0bf0e9c9eeed45c1ae0544bc60e1d0331499"
+    },
+    "saved_4905": {
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/results/dimred_comparison.csv",
+      "bytes": 305,
+      "sha256": "70878f53aa97e2ec1631690f1ed1028286a436534e388696f82e8adda79665dd"
+    },
+    "saved_4905_log": {
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/logs/step03_dimred.log",
+      "bytes": 3101,
+      "sha256": "ca8406d4a725e81303538b5742bb20adac009b3da47c0809221d51e8e385ca74"
+    },
+    "warning": {
+      "path": "/Users/samnimoh/Desktop/chromo/corrected/DIMRED_FILENAME_WARNING.md",
+      "bytes": 1465,
+      "sha256": "62e253a2ec3d41b65b7753d455b26cd61e6ebb2c0cd6a54d8264916121d4e83e"
+    },
+    "figure": {
+      "path": "/Users/samnimoh/Desktop/chromo/corrected/dimred_comparison_zone_qcset.png",
+      "bytes": 794204,
+      "sha256": "f4112599fbad39c81f14fed472843e555d5ae8d2875748d528c458c2e4333397"
+    },
+    "lean_validation": {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_audit/lean_validation.json",
+      "bytes": 12260,
+      "sha256": "8f3ec31140fb8c06b092ff8619dd5f6ddb396203bdefce195ba1a0c45e2ff4bc"
+    }
+  },
+  "assertion_meaning": "Passing confirms the stated fix or remaining finding; not statistical or provenance certification.",
+  "assertions": {
+    "all_ten_article_metrics_now_match_saved_1900_values": true,
+    "no_article_metric_matches_old_4905_values": true,
+    "all_four_discussion_silhouettes_match_saved_1900": true,
+    "canonical_facts_metrics_match_saved_1900": true,
+    "n1900_alias_is_byte_identical_to_saved_corrected_csv": true,
+    "n4905_alias_is_byte_identical_to_saved_legacy_csv": true,
+    "misleading_analysisset_alias_removed": true,
+    "article_figure_still_matches_corrected_1900_image": true,
+    "article_supplementary_ranges_corrected": true,
+    "supplement_captions_still_unique_sequential_52_tables_23_figures": true,
+    "domain_partition_and_mixed_scope_propagated_to_both_long_docs": true,
+    "domain_zero_effect_conclusion_qualified_in_both_long_docs": true,
+    "readme_inventory_domain_partition_corrected": true,
+    "one_vs_both_zone_pair_inconsistency_removed": true,
+    "FDR_count_sentence_conditional_in_both_long_docs": true,
+    "two_directions_claim_replaced_with_conditional_edge_statement": true,
+    "free_gene_flow_ending_replaced_with_unmeasured_connectivity_statement": true,
+    "section_574_conservative_threshold_scope_corrected": true,
+    "section_56_still_claims_final_threshold_conservative": true,
+    "strict_bifurcating_tree_conclusion_still_unqualified": true,
+    "four_obsolete_caption_explanations_remain": true,
+    "verification_notes_unchanged_from_last_review": true,
+    "older_notes_still_call_cancellation_underflow": true,
+    "older_notes_read_level_and_independent_X_claims_remain": true,
+    "notes_later_numerical_caveat_retained": true,
+    "authors_funding_contributions_citation_repository_placeholders_remain": true,
+    "known_scientific_audit_logs_and_lean_files_unchanged": true,
+    "git_baseline_has_8084_files_current_has_8086": true,
+    "git_contains_baseline_plus_one_correction_commit": true,
+    "git_baseline_matches_ten_prior_reviewed_source_identities": true,
+    "claimed_analysis_cohort_log_not_among_tracked_files": true
+  },
+  "ordination": {
+    "article_paragraph": "Three ordinations of the published Pf8 genotype-distance submatrix for the 1,900 isolates were compared (Fig. 2). UMAP achieved a trustworthiness of 0.499 and a Spearman correlation of -0.066 between embedded and original distances (McInnes et al. 2018); t-SNE reached 0.526 and 0.196; PCoA reached 0.510 and 0.287. PCoA preserves global distance structure best, while all three embeddings discard most of it; UMAP's negative coefficient means its layout does not merely lose the original distance ordering but weakly inverts it, so apparent separations in that panel carry no quantitative meaning. Silhouette coefficients computed by zone are negative in every case: -0.020 on the original distances, -0.277 for UMAP, -0.063 for t-SNE and -0.079 for PCoA. Isolates are on average closer to members of other zones than to members of their own, in the original distance space as well as in each embedding. Zone-coloured isolates overlap extensively in Fig. 2, and no method recovers zone as a cluster boundary.",
+    "metrics": [
+      {
+        "method": "UMAP",
+        "metric": "trustworthiness",
+        "article_literal": "0.499",
+        "saved_1900": 0.4985171678184407,
+        "saved_4905": 0.48596103411049263,
+        "matches_1900": true,
+        "matches_4905": false
+      },
+      {
+        "method": "UMAP",
+        "metric": "distance_spearman",
+        "article_literal": "-0.066",
+        "saved_1900": -0.0657032498036622,
+        "saved_4905": 0.028746366880950808,
+        "matches_1900": true,
+        "matches_4905": false
+      },
+      {
+        "method": "t-SNE",
+        "metric": "trustworthiness",
+        "article_literal": "0.526",
+        "saved_1900": 0.5257569591273952,
+        "saved_4905": 0.5066828006290386,
+        "matches_1900": true,
+        "matches_4905": false
+      },
+      {
+        "method": "t-SNE",
+        "metric": "distance_spearman",
+        "article_literal": "0.196",
+        "saved_1900": 0.1963573641918005,
+        "saved_4905": 0.1151870388895617,
+        "matches_1900": true,
+        "matches_4905": false
+      },
+      {
+        "method": "PCoA",
+        "metric": "trustworthiness",
+        "article_literal": "0.510",
+        "saved_1900": 0.5096355191024203,
+        "saved_4905": 0.49450506846882625,
+        "matches_1900": true,
+        "matches_4905": false
+      },
+      {
+        "method": "PCoA",
+        "metric": "distance_spearman",
+        "article_literal": "0.287",
+        "saved_1900": 0.2868299902039836,
+        "saved_4905": 0.32240602354526887,
+        "matches_1900": true,
+        "matches_4905": false
+      },
+      {
+        "method": "original distances",
+        "metric": "silhouette_by_zone",
+        "article_literal": "-0.020",
+        "saved_1900": -0.01958293654024601,
+        "saved_4905": -0.015566886402666569,
+        "matches_1900": true,
+        "matches_4905": false
+      },
+      {
+        "method": "UMAP",
+        "metric": "silhouette_by_zone",
+        "article_literal": "-0.277",
+        "saved_1900": -0.27732568979263306,
+        "saved_4905": -0.30618974566459656,
+        "matches_1900": true,
+        "matches_4905": false
+      },
+      {
+        "method": "t-SNE",
+        "metric": "silhouette_by_zone",
+        "article_literal": "-0.063",
+        "saved_1900": -0.06284511089324951,
+        "saved_4905": -0.056878190487623215,
+        "matches_1900": true,
+        "matches_4905": false
+      },
+      {
+        "method": "PCoA",
+        "metric": "silhouette_by_zone",
+        "article_literal": "-0.079",
+        "saved_1900": -0.0790918096951143,
+        "saved_4905": -0.11156961858322142,
+        "matches_1900": true,
+        "matches_4905": false
+      }
+    ],
+    "discussion_silhouettes": [
+      {
+        "method": "UMAP",
+        "literal": "-0.277",
+        "matches_1900": true
+      },
+      {
+        "method": "t-SNE",
+        "literal": "-0.063",
+        "matches_1900": true
+      },
+      {
+        "method": "PCoA",
+        "literal": "-0.079",
+        "matches_1900": true
+      },
+      {
+        "method": "original distances",
+        "literal": "-0.020",
+        "matches_1900": true
+      }
+    ],
+    "canonical_facts": [
+      {
+        "method": "original distances",
+        "metric": "distance_spearman",
+        "literal": "1.000",
+        "matches_1900": true
+      },
+      {
+        "method": "original distances",
+        "metric": "silhouette_by_zone",
+        "literal": "-0.020",
+        "matches_1900": true
+      },
+      {
+        "method": "UMAP",
+        "metric": "trustworthiness",
+        "literal": "0.499",
+        "matches_1900": true
+      },
+      {
+        "method": "UMAP",
+        "metric": "distance_spearman",
+        "literal": "-0.066",
+        "matches_1900": true
+      },
+      {
+        "method": "UMAP",
+        "metric": "silhouette_by_zone",
+        "literal": "-0.277",
+        "matches_1900": true
+      },
+      {
+        "method": "t-SNE",
+        "metric": "trustworthiness",
+        "literal": "0.526",
+        "matches_1900": true
+      },
+      {
+        "method": "t-SNE",
+        "metric": "distance_spearman",
+        "literal": "0.196",
+        "matches_1900": true
+      },
+      {
+        "method": "t-SNE",
+        "metric": "silhouette_by_zone",
+        "literal": "-0.063",
+        "matches_1900": true
+      },
+      {
+        "method": "PCoA",
+        "metric": "trustworthiness",
+        "literal": "0.510",
+        "matches_1900": true
+      },
+      {
+        "method": "PCoA",
+        "metric": "distance_spearman",
+        "literal": "0.287",
+        "matches_1900": true
+      },
+      {
+        "method": "PCoA",
+        "metric": "silhouette_by_zone",
+        "literal": "-0.079",
+        "matches_1900": true
+      }
+    ]
+  },
+  "supplementary_numbering": {
+    "captions": {
+      "Table": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6",
+        "S7",
+        "S8",
+        "S9",
+        "S10",
+        "S11",
+        "S12",
+        "S13",
+        "S14",
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S19",
+        "S20",
+        "S21",
+        "S22",
+        "S23",
+        "S24",
+        "S25",
+        "S26",
+        "S27",
+        "S28",
+        "S29",
+        "S30",
+        "S31",
+        "S32",
+        "S33",
+        "S34",
+        "S35",
+        "S36",
+        "S37",
+        "S38",
+        "S39",
+        "S40",
+        "S41",
+        "S42",
+        "S43",
+        "S44",
+        "S45",
+        "S46",
+        "S47",
+        "S48",
+        "S49",
+        "S50",
+        "S51",
+        "S52"
+      ],
+      "Figure": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6",
+        "S7",
+        "S8",
+        "S9",
+        "S10",
+        "S11",
+        "S12",
+        "S13",
+        "S14",
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S19",
+        "S20",
+        "S21",
+        "S22",
+        "S23"
+      ]
+    },
+    "obsolete_caption_explanations": [
+      "Table S10. The three ordinations and their comparison metrics on the published pre-QC sample set and on the analysis set. Analysis-set values from results/dimred_comparison_qcset.csv. The table is numbered after Table S12 rather than in document order so that the existing table numbers, which other sections cite, do not shift.",
+      "Table S13. The six threshold scenarios, from results/sensitivity_summary.csv. Maximum pairwise FST is the Coastal savanna against Guinea savanna pair in all six. Mantel values are the censored region-level test; the uncensored p-values in the same file are 0.0413, 0.1214, 0.2002, 0.1792, 0.0644 and 0.0502. One verdict does turn on the censoring: the MAF ≥ 0.02 scenario is significant censored (0.0467) and not significant uncensored (0.0502), so on the uncensored statistic the baseline is the only scenario clearing 0.05. The other five verdicts are unchanged. The table is numbered after Table S10 so that the existing table numbers do not shift.",
+      "Table S24. The three ordinations recomputed on the 1,900-isolate analysis set, beside the published 4,905-isolate run (results/dimred_comparison.csv, corrected/dimred_comparison_qcset.csv). Both columns read the same published Pf8 distance matrix; the right-hand column re-slices it to the analysis samples. Settings are identical (trustworthiness at k = 30; silhouette against zone labels). This table is new in this revision and is lettered so that the existing table numbering is unchanged.",
+      "Table S28. Threshold sensitivity of the region-level Mantel test and of maximum pairwise FST (results/sensitivity_summary.csv, scripts/step13_sensitivity.py). Only the named threshold differs from the baseline in each row. \"p (as run)\" floors negative pairwise FST to zero, as step06_mantel.py does; \"p (uncensored)\" retains them, following Table S26. Negative pairs floored, in row order: 3, 4, 3, 0, 4, 4. All tests are one-sided over 9,999 permutations at seed 42. This table is new in this revision and is lettered so that the existing table numbering is unchanged."
+    ]
+  },
+  "git": {
+    "baseline": "3f0130d551d961195ab118a31f8a251cd46c26f5",
+    "head": "e590ba75576f74316a03f225b288a47e4f53f23f",
+    "commits": [
+      "e590ba75576f74316a03f225b288a47e4f53f23f\t2026-10-11T04:42:40Z\tCorrect the ordination cohort attribution and propagate round-4 findings",
+      "3f0130d551d961195ab118a31f8a251cd46c26f5\t2026-10-11T04:38:03Z\tBaseline: state as reviewed on 11 October 2026"
+    ],
+    "baseline_file_count": 8084,
+    "current_file_count": 8086,
+    "baseline_identity_checks": [
+      {
+        "path": "Pf8_Ghana_manuscript_REVISED.docx",
+        "git_baseline_sha256": "6312e2a1c4e2ad27e4cb723cd386384f0cbea6b7a4288551edf78a50bdbf167d",
+        "last_review_sha256": "6312e2a1c4e2ad27e4cb723cd386384f0cbea6b7a4288551edf78a50bdbf167d",
+        "matches": true
+      },
+      {
+        "path": "Pf8_Ghana_manuscript_REVISED.pdf",
+        "git_baseline_sha256": "cbcca580ea3cfa25df6d4e6a6c00f3fa3be65d902fe3569f459d52f3590adaa5",
+        "last_review_sha256": "cbcca580ea3cfa25df6d4e6a6c00f3fa3be65d902fe3569f459d52f3590adaa5",
+        "matches": true
+      },
+      {
+        "path": "article/Additional_file_1.docx",
+        "git_baseline_sha256": "21907b6a2478f98927158f57a11bb56a4822dd730c65e331a6ce99af55d017b7",
+        "last_review_sha256": "21907b6a2478f98927158f57a11bb56a4822dd730c65e331a6ce99af55d017b7",
+        "matches": true
+      },
+      {
+        "path": "article/Additional_file_1.pdf",
+        "git_baseline_sha256": "94f7836abeae171a458aab2b8f0c40a6644604998d81890405bd11c4ffcff37e",
+        "last_review_sha256": "94f7836abeae171a458aab2b8f0c40a6644604998d81890405bd11c4ffcff37e",
+        "matches": true
+      },
+      {
+        "path": "article/Pf8_Ghana_article.docx",
+        "git_baseline_sha256": "9e951d51e245fd89e9056cf0d590708dcc7a84358db136ccdde6d3ce3648ba91",
+        "last_review_sha256": "9e951d51e245fd89e9056cf0d590708dcc7a84358db136ccdde6d3ce3648ba91",
+        "matches": true
+      },
+      {
+        "path": "article/Pf8_Ghana_article.pdf",
+        "git_baseline_sha256": "9bdc30086d67501ed9330517a7eb986c6c6bd0f9f9d7554efed529f66afb476d",
+        "last_review_sha256": "9bdc30086d67501ed9330517a7eb986c6c6bd0f9f9d7554efed529f66afb476d",
+        "matches": true
+      },
+      {
+        "path": "article/article.md",
+        "git_baseline_sha256": "cca89be91d8d2d81d4daff84bafd360fbcd676e16706184ea4657536b82fb5d3",
+        "last_review_sha256": "cca89be91d8d2d81d4daff84bafd360fbcd676e16706184ea4657536b82fb5d3",
+        "matches": true
+      },
+      {
+        "path": "article/CANONICAL_FACTS_FOR_ARTICLE.md",
+        "git_baseline_sha256": "77fc01cd705873cc2701fe639edc614034d5ea06ba6464823da3b7a0a2609a45",
+        "last_review_sha256": "77fc01cd705873cc2701fe639edc614034d5ea06ba6464823da3b7a0a2609a45",
+        "matches": true
+      },
+      {
+        "path": "corrected/dimred_comparison_analysisset.csv",
+        "git_baseline_sha256": "70878f53aa97e2ec1631690f1ed1028286a436534e388696f82e8adda79665dd",
+        "last_review_sha256": "70878f53aa97e2ec1631690f1ed1028286a436534e388696f82e8adda79665dd",
+        "matches": true
+      },
+      {
+        "path": "provenance_final/audit_scripts/README.md",
+        "git_baseline_sha256": "3884721eebd5c1bf84237403ed6966fd1d2cc67f40383596f7fb10d10857f329",
+        "last_review_sha256": "3884721eebd5c1bf84237403ed6966fd1d2cc67f40383596f7fb10d10857f329",
+        "matches": true
+      }
+    ],
+    "claimed_analysis_log_tracked": false
+  },
+  "scope_limits": [
+    "Saved output identities and printed metrics were checked; no dimensionality-reduction inference was rerun.",
+    "The quoted 1900-matrix log and suffix-patched generating script were not newly archived locally.",
+    "Git captures current snapshots and edits; it does not authenticate pre-existing run lineage.",
+    "Scientific pipeline and remote audit scripts were not executed; no new Lean build or implementation proof."
+  ]
+}

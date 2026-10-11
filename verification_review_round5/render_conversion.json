@@ -1,0 +1,48 @@
+[
+  {
+    "label": "article",
+    "docx": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.docx",
+    "fresh_pdf": "/private/tmp/pf8_review_round5_latest/article/Pf8_Ghana_article.pdf",
+    "supplied_pdf": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.pdf",
+    "pages": 18,
+    "rasterized_review_pages": [
+      1,
+      5,
+      7,
+      13,
+      15
+    ],
+    "converter": "/Users/samnimoh/.codex/plugins/cache/openai-primary-runtime/documents/26.1009.11318/skills/documents/render_docx.py",
+    "text_extractor": "Bundled pypdf; full page text"
+  },
+  {
+    "label": "manuscript",
+    "docx": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx",
+    "fresh_pdf": "/private/tmp/pf8_review_round5_latest/manuscript/Pf8_Ghana_manuscript_REVISED.pdf",
+    "supplied_pdf": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.pdf",
+    "pages": 197,
+    "rasterized_review_pages": [
+      12,
+      47,
+      83,
+      111,
+      144
+    ],
+    "converter": "/Users/samnimoh/.codex/plugins/cache/openai-primary-runtime/documents/26.1009.11318/skills/documents/render_docx.py",
+    "text_extractor": "Bundled pypdf; full page text"
+  },
+  {
+    "label": "supplement",
+    "docx": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx",
+    "fresh_pdf": "/private/tmp/pf8_review_round5_latest/supplement/Additional_file_1.pdf",
+    "supplied_pdf": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.pdf",
+    "pages": 198,
+    "rasterized_review_pages": [
+      2,
+      48,
+      112
+    ],
+    "converter": "/Users/samnimoh/.codex/plugins/cache/openai-primary-runtime/documents/26.1009.11318/skills/documents/render_docx.py",
+    "text_extractor": "Bundled pypdf; full page text"
+  }
+]

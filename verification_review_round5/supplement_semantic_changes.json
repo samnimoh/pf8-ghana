@@ -1,0 +1,188 @@
+[
+  {
+    "kind": "replace",
+    "old_paragraphs": [
+      52,
+      52
+    ],
+    "new_paragraphs": [
+      52,
+      52
+    ],
+    "old": [
+      "[Interpreted] Partial mitigation, reported in fairness. Both zone pairs that do share a study reproduce the direction of the overall polyclonality difference; within 1083-PF-GH-CONWAY, Guinea savanna is more polyclonal than the transitional zone (0.532 versus 0.500 - that is 25 of 47 against 25 of 50, computed on the 4,905 release-QC-pass isolates, since on the 1,900-isolate analysis set the polyclonal fraction is identically zero by construction), matching the overall ordering. That margin is three isolates wide in the denominator, the numerator being 25 in both arms, and should not be read as more than a direction. The zone ordering of polyclonality is therefore reproduced within the one zone pair that shares a study, which is a descriptive check and not a test of cause: holding zone constant still leaves collection year, finer geography, recruitment and host biology varying alongside study. The ordering is not separable from batch for the pairs that carry the largest differences."
+    ],
+    "new": [
+      "[Interpreted] Partial mitigation, reported in fairness. Both zone pairs that do share a study reproduce the direction of the overall polyclonality difference; within 1083-PF-GH-CONWAY, Guinea savanna is more polyclonal than the transitional zone (0.532 versus 0.500 - that is 25 of 47 against 25 of 50, computed on the 4,905 release-QC-pass isolates, since on the 1,900-isolate analysis set the polyclonal fraction is identically zero by construction), matching the overall ordering. That margin is three isolates wide in the denominator, the numerator being 25 in both arms, and should not be read as more than a direction. The zone ordering of polyclonality is therefore reproduced within both zone pairs that share a study, which is a descriptive check and not a test of cause: holding zone constant still leaves collection year, finer geography, recruitment and host biology varying alongside study. The ordering is not separable from batch for the pairs that carry the largest differences."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraphs": [
+      233,
+      233
+    ],
+    "new_paragraphs": [
+      233,
+      233
+    ],
+    "old": [
+      "[Observed] Those conditions occur in this panel, and on the genotypes retrieved for them they change nothing in it; the retrieval scripts and their captured output are archived under provenance_final/audit_scripts and provenance_final/audit_logs. Of the 125 variant records sitting exactly at the 171 panel positions, 16 carry at least one length-changing ALT and 2 have a multi-base REF; a further 19 records anchored outside the panel have a REF span covering a panel position. Genotypes were retrieved for all 32 affected records across all 1,900 isolates. Three have any homozygous non-reference carrier: pfcrt codon 76 with 133, pfcrt codon 271 with 138, and pfdhps codon 431 with 26. In every case the carriers sit on a supported, equal-length allele — codon 76 on ALT1 C, with none on the 55-base insertion; codon 271 on ALT1 GAACGTAAGA, with none on ALT2, none on the spanning deletion and none on the single-base C; codon 431 on ALT1 G, with none on the spanning deletion and none on the 20-base insertion. No isolate anywhere in the panel carries a length-changing allele as a homozygous call, and the 62 mixed calls at these records are removed by the mixed-call rule regardless. The counts reconcile exactly with the reported table: Lys76Thr 133, Gln271Glu 138, Ile431Val 26, and homozygous-reference counts of 1,741 and 1,735 against reported reference-residue counts of 1,741 and 1,735. No residue anywhere in the panel is X, which is consistent with no spanning-deletion allele having been substituted — though that is the panel’s own output checked against itself, not an independent confirmation. The two multi-base REF records differ from the reference at their first base only, so applying one base loses nothing here. And none of the 57 codons is record-free. That is weaker than it sounds, and the weaker form is the accurate one: 46 of the 171 panel positions carry no variant record at all, so at those positions the reference base is read for every isolate whether or not that isolate was covered there. Per codon, 21 have a record at all three positions, 26 at two and 10 at only one, which means the called mask for those 10 rests on a single position’s genotype. Reading absence of a record as the reference allele is therefore an assumption about callability, not a measurement of it; no per-isolate depth field is consulted anywhere in the reconstruction. The counts come from provenance_final/audit_scripts/check_coverage.py. The limitation is real and bounds what the implementation may be applied to; on these inputs it moves no published number. What still rests on an assumption is callability: a codon is called when its constituent genotypes are present and unmixed, which is a statement about the genotype array and not an independent measurement of per-isolate coverage."
+    ],
+    "new": [
+      "[Observed] Those conditions occur in this panel, and on the genotypes retrieved for them they change nothing in it; the retrieval scripts and their captured output are archived under provenance_final/audit_scripts and provenance_final/audit_logs. Of the 125 variant records sitting exactly at the 171 panel positions, 16 carry at least one length-changing ALT and 2 have a multi-base REF; a further 19 records with a multi-base REF span a panel position other than their own anchor — of which 16 are genuinely anchored outside the panel and three are themselves anchored at panel positions, so the “off-anchor” category as first named over-counted by three. Genotypes were retrieved for all 32 affected records across all 1,900 isolates. Three have any homozygous non-reference carrier: pfcrt codon 76 with 133, pfcrt codon 271 with 138, and pfdhps codon 431 with 26. In every case the carriers sit on a supported, equal-length allele — codon 76 on ALT1 C, with none on the 55-base insertion; codon 271 on ALT1 GAACGTAAGA, with none on ALT2, none on the spanning deletion and none on the single-base C; codon 431 on ALT1 G, with none on the spanning deletion and none on the 20-base insertion. No isolate anywhere in the panel carries a length-changing allele as a homozygous call, Of the 62 mixed calls at these records, 58 fall at records the reconstruction actually selects — it selects by panel anchor — and are removed by its mixed-call rule; the remaining four fall at genuinely off-anchor records that the reconstruction never reads, so that rule is not what excludes them and the archived logs do not show what does. The counts reconcile exactly with the reported table: Lys76Thr 133, Gln271Glu 138, Ile431Val 26, and homozygous-reference counts of 1,741 and 1,735 against reported reference-residue counts of 1,741 and 1,735. No residue anywhere in the panel is X, which is consistent with no spanning-deletion allele having been substituted — though that is the panel’s own output checked against itself, not an independent confirmation. The two multi-base REF records differ from the reference at their first base only, so applying one base loses nothing here. And none of the 57 codons is record-free. That is weaker than it sounds, and the weaker form is the accurate one: 46 of the 171 panel positions carry no variant record at all, so at those positions the reference base is read for every isolate whether or not that isolate was covered there. Per codon, 21 have a record at all three positions, 26 at two and 10 at only one, which means the called mask for those 10 rests on a single position’s genotype. Reading absence of a record as the reference allele is therefore an assumption about callability, not a measurement of it; no per-isolate depth field is consulted anywhere in the reconstruction. The counts come from provenance_final/audit_scripts/check_coverage.py. The limitation is real and bounds what the implementation may be applied to; on these inputs it moves no published number that this evidence reaches. The qualification matters: the archived per-allele check covers the two records carrying both supported and unsupported alleles while the carrier conclusion spans three, and the four off-anchor mixed calls are not covered at all. Nothing here shows a published frequency to be wrong, and nothing here closes the question for every branch either. What still rests on an assumption is callability: a codon is called when its constituent genotypes are present and unmixed, which is a statement about the genotype array and not an independent measurement of per-isolate coverage."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraphs": [
+      489,
+      489
+    ],
+    "new_paragraphs": [
+      489,
+      489
+    ],
+    "old": [
+      "The BayPass pseudo-observed set is still not MAF-matched; pi.maf truncates only the simulated ancestral frequency (Section 5.6). The reported threshold is the conservative one, so the direction of the error is known, but the methods claim had to be withdrawn rather than reproduced."
+    ],
+    "new": [
+      "The BayPass pseudo-observed set is still not MAF-matched; pi.maf truncates only the simulated ancestral frequency (Section 5.6). On the superseded 3,359-SNP calibration the reported threshold was the conservative one, but that experiment does not establish the direction of the error for the final 3,916-SNP run, whose raw pseudo-observed inputs are not archived. The frequency-matching limitation stands; a guaranteed conservative threshold does not. The methods claim had to be withdrawn rather than reproduced."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraphs": [
+      561,
+      564
+    ],
+    "new_paragraphs": [
+      561,
+      561
+    ],
+    "old": [
+      "3 of 21 pairs have negative FST and are floored to zero:",
+      "    Ashanti - Volta:          -0.001037",
+      "    Eastern - Greater Accra:  -0.000203",
+      "    Greater Accra - Volta:    -0.000142"
+    ],
+    "new": [
+      "3 of 21 pairs have negative FST and are floored to zero:\n    Ashanti - Volta:          -0.001037\n    Eastern - Greater Accra:  -0.000203\n    Greater Accra - Volta:    -0.000142"
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraphs": [
+      597,
+      597
+    ],
+    "new_paragraphs": [
+      594,
+      594
+    ],
+    "old": [
+      "[Interpreted] Two cautions limit how much any of this can be made to mean. First, the fitted quantity is six off-diagonal between-population covariances, and an unrooted four-taxon tree already uses five branch-length parameters, so m = 0 has one residual degree of freedom and m = 1 has none or fewer. A rise in variance explained from 0.897 to 0.941 between those two models is not by itself evidence of gene flow, and the original manuscript's treatment of the m = 0 to m = 1 improvement as \"the one substantive result\" applied a degrees-of-freedom argument against m = 3 while exempting m = 1 from it. The edge p-values are the stronger evidence precisely because they do not depend on the variance-explained curve. Second, with four populations, three of which are a single administrative region each, these edges cannot be read as specific geographic gene-flow corridors. What the graph establishes is that a strictly bifurcating tree does not describe these populations, which is what would be expected of a single population with ongoing exchange, and that two directions of exchange are statistically supported."
+    ],
+    "new": [
+      "[Interpreted] Two cautions limit how much any of this can be made to mean. First, the fitted quantity is six off-diagonal between-population covariances, and an unrooted four-taxon tree already uses five branch-length parameters, so m = 0 has one residual degree of freedom and m = 1 has none or fewer. A rise in variance explained from 0.897 to 0.941 between those two models is not by itself evidence of gene flow, and the original manuscript's treatment of the m = 0 to m = 1 improvement as \"the one substantive result\" applied a degrees-of-freedom argument against m = 3 while exempting m = 1 from it. The edge p-values are the stronger evidence precisely because they do not depend on the variance-explained curve. Second, with four populations, three of which are a single administrative region each, these edges cannot be read as specific geographic gene-flow corridors. What the graph establishes is that a strictly bifurcating tree does not describe these populations, which is what would be expected of a single population with ongoing exchange, and that the selected graph carries two edges whose weights are distinguishable from zero conditional on that graph. Those are conditional edge statistics, not identified directions of historical exchange."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraphs": [
+      607,
+      607
+    ],
+    "new_paragraphs": [
+      604,
+      604
+    ],
+    "old": [
+      "[Calculated] Counts surviving FDR control are 8 SNPs at q ≤ 0.01, 10 at q ≤ 0.05, 13 at q ≤ 0.10 and 17 at q ≤ 0.20. Six of the 19 SNPs above the quantile threshold do not pass q ≤ 0.10; their q-values run from 0.115 to 0.204."
+    ],
+    "new": [
+      "[Calculated] Counts with Benjamini–Hochberg q-values against the pseudo-observed null, conditional on that null being adequately calibrated, are 8 SNPs at q ≤ 0.01, 10 at q ≤ 0.05, 13 at q ≤ 0.10 and 17 at q ≤ 0.20. Six of the 19 SNPs above the quantile threshold do not pass q ≤ 0.10; their q-values run from 0.115 to 0.204."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraphs": [
+      733,
+      733
+    ],
+    "new_paragraphs": [
+      730,
+      730
+    ],
+    "old": [
+      "[Interpreted] The containment corollary, correctly scoped. Because no neutral barrier is detectable at the retained common variants, this analysis supplies no evidence of a barrier for a geographically targeted containment intervention to exploit. That is an absence of evidence at the resolution these data permit, not a demonstration that parasite exchange across Ghana is unobstructed: a low differentiation estimate does not measure connectivity, and the study, geography and year confounding is not removed by it. That remains a reasonable reading, and it is now the better supported for the absence of a robust distance effect: there is not even a weak isolation-by-distance gradient left to qualify it. It does not follow that spread will be uniform in rate or that a single site will see it first; the pfaat1, pfdhps and pfdhfr zone differences show that selection and drug pressure impose their own geography on top of free gene flow."
+    ],
+    "new": [
+      "[Interpreted] The containment corollary, correctly scoped. Because no neutral barrier is detectable at the retained common variants, this analysis supplies no evidence of a barrier for a geographically targeted containment intervention to exploit. That is an absence of evidence at the resolution these data permit, not a demonstration that parasite exchange across Ghana is unobstructed: a low differentiation estimate does not measure connectivity, and the study, geography and year confounding is not removed by it. That remains a reasonable reading, and it is now the better supported for the absence of a robust distance effect: there is not even a weak isolation-by-distance gradient left to qualify it. It does not follow that spread will be uniform in rate or that a single site will see it first; the pfaat1, pfdhps and pfdhfr zone differences show that selection and drug pressure impose their own geography, which negligible neutral differentiation does not predict. Whether gene flow is in fact free is not measured here: a low differentiation estimate at retained common variants does not quantify contemporary connectivity."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraphs": [
+      917,
+      922
+    ],
+    "new_paragraphs": [
+      914,
+      914
+    ],
+    "old": [
+      "source /home/tools/anaconda3/etc/profile.d/conda.sh && conda activate spatial",
+      "cd /media/biodataA/pf8/gyadu/scripts",
+      "python check_env.py              # verifies packages and external binaries",
+      "bash run_all.sh --list           # lists the stages",
+      "bash run_all.sh                  # full pipeline, stages 1-9",
+      "bash run_all.sh --from 4 --parallel   # stages 5-8 concurrently after stage 4"
+    ],
+    "new": [
+      "source /home/tools/anaconda3/etc/profile.d/conda.sh && conda activate spatial\ncd /media/biodataA/pf8/gyadu/scripts\npython check_env.py              # verifies packages and external binaries\nbash run_all.sh --list           # lists the stages\nbash run_all.sh                  # full pipeline, stages 1-9\nbash run_all.sh --from 4 --parallel   # stages 5-8 concurrently after stage 4"
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraphs": [
+      924,
+      930
+    ],
+    "new_paragraphs": [
+      916,
+      916
+    ],
+    "old": [
+      "python step12_codon_panel.py          # resistance markers by reconstructed codon",
+      "python step11_batch_confounding.py    # study x zone confounding",
+      "python step13_sensitivity.py          # Fws and MAF threshold sensitivity, 6 scenarios",
+      "# Stage 3 on the 1,900-isolate analysis set; outputs take the suffix, originals are untouched:",
+      "python step03_umap.py --samples <analysis sample list> --suffix _qcset",
+      "# superseded, retained only to re-demonstrate the annotation-matching defect:",
+      "# python step10_resistance_panel.py"
+    ],
+    "new": [
+      "python step12_codon_panel.py          # resistance markers by reconstructed codon\npython step11_batch_confounding.py    # study x zone confounding\npython step13_sensitivity.py          # Fws and MAF threshold sensitivity, 6 scenarios\n\n# Stage 3 on the 1,900-isolate analysis set; outputs take the suffix, originals are untouched:\npython step03_umap.py --samples <analysis sample list> --suffix _qcset\n\n# superseded, retained only to re-demonstrate the annotation-matching defect:\n# python step10_resistance_panel.py"
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraphs": [
+      934,
+      936
+    ],
+    "new_paragraphs": [
+      920,
+      920
+    ],
+    "old": [
+      "python step03a_fetch_callset_zarr.py --validate-only \\",
+      "--validate-vcf ../data/Pf8_Ghana_Pf3D7_10_v3.vcf.gz \\",
+      "--validate-region Pf3D7_10_v3:400001-440000"
+    ],
+    "new": [
+      "python step03a_fetch_callset_zarr.py --validate-only \\\n--validate-vcf ../data/Pf8_Ghana_Pf3D7_10_v3.vcf.gz \\\n--validate-region Pf3D7_10_v3:400001-440000"
+    ]
+  }
+]

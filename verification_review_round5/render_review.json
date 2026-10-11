@@ -1,0 +1,1818 @@
+{
+  "generated_utc": "2026-10-11T05:07:30.360063+00:00",
+  "comparisons": [
+    {
+      "label": "article",
+      "docx": {
+        "path": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.docx",
+        "bytes": 1193793,
+        "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+      },
+      "supplied_pdf": {
+        "path": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.pdf",
+        "bytes": 710406,
+        "sha256": "664a17ecc04b5bbec1e3aeea72ff7202e3a7c5ff75367562c4e34ee7371c26f4"
+      },
+      "fresh_pdf": {
+        "path": "/private/tmp/pf8_review_round5_latest/article/Pf8_Ghana_article.pdf",
+        "bytes": 707259,
+        "sha256": "e6b5d91cc948ffddb57f59e8358b2ea35284960536396430d897240cded8b223"
+      },
+      "fresh_pages": 18,
+      "supplied_pages": 18,
+      "all_page_texts_match": true,
+      "page_comparisons": [
+        {
+          "page": 1,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 2,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 3,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 4,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 5,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 6,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 7,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 8,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 9,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 10,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 11,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 12,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 13,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 14,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 15,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 16,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 17,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 18,
+          "matches_after_whitespace_footer_normalization": true
+        }
+      ],
+      "evidence_locations": [
+        {
+          "phrase": "weakly inverts it",
+          "fresh_pages": [
+            7
+          ]
+        }
+      ],
+      "rasterized_review_pages": [
+        1,
+        5,
+        7,
+        13,
+        15
+      ]
+    },
+    {
+      "label": "manuscript",
+      "docx": {
+        "path": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx",
+        "bytes": 4043771,
+        "sha256": "4c739cf78d0699a1a067066d374258fc9838e317e99c901030109b4ad5d6ea9f"
+      },
+      "supplied_pdf": {
+        "path": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.pdf",
+        "bytes": 5165863,
+        "sha256": "eed87fd3a09375b8facdf776d5d08b079f008bfda877bbd22d97898add702ca2"
+      },
+      "fresh_pdf": {
+        "path": "/private/tmp/pf8_review_round5_latest/manuscript/Pf8_Ghana_manuscript_REVISED.pdf",
+        "bytes": 5119151,
+        "sha256": "08d4f4638aa09e089bd999abd43b6a8262b5bb26d214f8e6db5a3b93ca8ef953"
+      },
+      "fresh_pages": 197,
+      "supplied_pages": 197,
+      "all_page_texts_match": true,
+      "page_comparisons": [
+        {
+          "page": 1,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 2,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 3,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 4,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 5,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 6,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 7,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 8,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 9,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 10,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 11,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 12,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 13,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 14,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 15,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 16,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 17,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 18,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 19,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 20,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 21,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 22,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 23,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 24,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 25,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 26,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 27,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 28,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 29,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 30,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 31,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 32,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 33,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 34,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 35,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 36,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 37,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 38,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 39,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 40,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 41,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 42,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 43,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 44,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 45,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 46,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 47,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 48,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 49,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 50,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 51,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 52,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 53,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 54,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 55,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 56,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 57,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 58,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 59,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 60,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 61,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 62,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 63,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 64,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 65,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 66,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 67,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 68,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 69,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 70,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 71,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 72,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 73,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 74,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 75,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 76,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 77,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 78,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 79,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 80,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 81,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 82,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 83,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 84,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 85,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 86,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 87,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 88,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 89,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 90,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 91,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 92,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 93,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 94,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 95,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 96,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 97,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 98,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 99,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 100,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 101,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 102,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 103,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 104,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 105,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 106,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 107,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 108,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 109,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 110,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 111,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 112,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 113,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 114,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 115,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 116,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 117,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 118,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 119,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 120,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 121,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 122,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 123,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 124,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 125,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 126,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 127,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 128,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 129,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 130,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 131,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 132,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 133,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 134,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 135,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 136,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 137,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 138,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 139,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 140,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 141,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 142,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 143,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 144,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 145,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 146,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 147,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 148,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 149,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 150,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 151,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 152,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 153,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 154,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 155,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 156,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 157,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 158,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 159,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 160,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 161,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 162,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 163,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 164,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 165,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 166,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 167,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 168,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 169,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 170,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 171,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 172,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 173,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 174,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 175,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 176,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 177,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 178,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 179,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 180,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 181,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 182,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 183,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 184,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 185,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 186,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 187,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 188,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 189,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 190,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 191,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 192,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 193,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 194,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 195,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 196,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 197,
+          "matches_after_whitespace_footer_normalization": true
+        }
+      ],
+      "evidence_locations": [
+        {
+          "phrase": "because proper matching lowers the threshold",
+          "fresh_pages": [
+            79
+          ]
+        },
+        {
+          "phrase": "does not establish the direction of the error for the final",
+          "fresh_pages": [
+            90
+          ]
+        },
+        {
+          "phrase": "remaining four fall at genuinely off-anchor",
+          "fresh_pages": [
+            46
+          ]
+        },
+        {
+          "phrase": "not identified directions of historical exchange",
+          "fresh_pages": [
+            110
+          ]
+        },
+        {
+          "phrase": "What the graph establishes is that a strictly bifurcating tree",
+          "fresh_pages": [
+            109
+          ]
+        }
+      ],
+      "rasterized_review_pages": [
+        12,
+        47,
+        83,
+        111,
+        144
+      ]
+    },
+    {
+      "label": "supplement",
+      "docx": {
+        "path": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx",
+        "bytes": 4044463,
+        "sha256": "6d8c39c1b65c2d25036d83a9f88c76b849172ecce0679b970ae2015e3a75cc2b"
+      },
+      "supplied_pdf": {
+        "path": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.pdf",
+        "bytes": 5169164,
+        "sha256": "ebaad37242040de1899493c3a5fb7352008de89248af28f32769294e4b47c3b8"
+      },
+      "fresh_pdf": {
+        "path": "/private/tmp/pf8_review_round5_latest/supplement/Additional_file_1.pdf",
+        "bytes": 5122050,
+        "sha256": "6779233308c95e70ecceadf41633686eac382971b4326a463e5c757327111fe9"
+      },
+      "fresh_pages": 198,
+      "supplied_pages": 198,
+      "all_page_texts_match": true,
+      "page_comparisons": [
+        {
+          "page": 1,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 2,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 3,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 4,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 5,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 6,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 7,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 8,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 9,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 10,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 11,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 12,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 13,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 14,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 15,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 16,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 17,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 18,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 19,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 20,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 21,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 22,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 23,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 24,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 25,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 26,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 27,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 28,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 29,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 30,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 31,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 32,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 33,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 34,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 35,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 36,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 37,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 38,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 39,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 40,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 41,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 42,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 43,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 44,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 45,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 46,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 47,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 48,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 49,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 50,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 51,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 52,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 53,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 54,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 55,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 56,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 57,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 58,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 59,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 60,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 61,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 62,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 63,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 64,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 65,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 66,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 67,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 68,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 69,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 70,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 71,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 72,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 73,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 74,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 75,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 76,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 77,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 78,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 79,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 80,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 81,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 82,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 83,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 84,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 85,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 86,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 87,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 88,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 89,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 90,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 91,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 92,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 93,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 94,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 95,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 96,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 97,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 98,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 99,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 100,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 101,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 102,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 103,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 104,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 105,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 106,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 107,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 108,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 109,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 110,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 111,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 112,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 113,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 114,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 115,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 116,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 117,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 118,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 119,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 120,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 121,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 122,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 123,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 124,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 125,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 126,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 127,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 128,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 129,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 130,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 131,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 132,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 133,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 134,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 135,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 136,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 137,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 138,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 139,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 140,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 141,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 142,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 143,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 144,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 145,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 146,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 147,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 148,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 149,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 150,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 151,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 152,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 153,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 154,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 155,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 156,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 157,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 158,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 159,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 160,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 161,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 162,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 163,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 164,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 165,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 166,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 167,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 168,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 169,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 170,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 171,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 172,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 173,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 174,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 175,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 176,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 177,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 178,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 179,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 180,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 181,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 182,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 183,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 184,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 185,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 186,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 187,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 188,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 189,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 190,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 191,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 192,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 193,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 194,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 195,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 196,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 197,
+          "matches_after_whitespace_footer_normalization": true
+        },
+        {
+          "page": 198,
+          "matches_after_whitespace_footer_normalization": true
+        }
+      ],
+      "evidence_locations": [
+        {
+          "phrase": "because proper matching lowers the threshold",
+          "fresh_pages": [
+            80
+          ]
+        },
+        {
+          "phrase": "does not establish the direction of the error for the final",
+          "fresh_pages": [
+            91
+          ]
+        },
+        {
+          "phrase": "remaining four fall at genuinely off-anchor",
+          "fresh_pages": [
+            47
+          ]
+        },
+        {
+          "phrase": "not identified directions of historical exchange",
+          "fresh_pages": [
+            111
+          ]
+        },
+        {
+          "phrase": "What the graph establishes is that a strictly bifurcating tree",
+          "fresh_pages": [
+            110
+          ]
+        }
+      ],
+      "rasterized_review_pages": [
+        2,
+        48,
+        112
+      ]
+    }
+  ],
+  "comparison_scope": "All 413 PDF page texts, ignoring whitespace and page-count footers; only selected page images receive visual inspection."
+}

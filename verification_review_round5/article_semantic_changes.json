@@ -1,0 +1,53 @@
+[
+  {
+    "kind": "replace",
+    "old_paragraphs": [
+      44,
+      44
+    ],
+    "new_paragraphs": [
+      44,
+      44
+    ],
+    "old": [
+      "Full methods detail, the complete set of results, every robustness check that was run, the limitations register and a record of the defects found and corrected during the analysis are given in Additional file 1, where all display items are numbered Figure S1–S22 and Table S1–S44."
+    ],
+    "new": [
+      "Full methods detail, the complete set of results, every robustness check that was run, the limitations register and a record of the defects found and corrected during the analysis are given in Additional file 1, where all display items are numbered Figure S1–S23 and Table S1–S52."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraphs": [
+      53,
+      53
+    ],
+    "new_paragraphs": [
+      53,
+      53
+    ],
+    "old": [
+      "Three ordinations of the published Pf8 genotype-distance submatrix for the 1,900 isolates were compared (Fig. 2). UMAP achieved a trustworthiness of 0.486 and a Spearman correlation of 0.029 between embedded and original distances (McInnes et al. 2018); t-SNE reached 0.507 and 0.115; PCoA reached 0.495 and 0.322. PCoA preserves global distance structure best, while all three embeddings discard most of it. Silhouette coefficients computed by zone are negative in every case: -0.0156 on the original distances, -0.306 for UMAP, -0.057 for t-SNE and -0.112 for PCoA. Isolates are on average closer to members of other zones than to members of their own, in the original distance space as well as in each embedding. Zone-coloured isolates overlap extensively in Fig. 2, and no method recovers zone as a cluster boundary."
+    ],
+    "new": [
+      "Three ordinations of the published Pf8 genotype-distance submatrix for the 1,900 isolates were compared (Fig. 2). UMAP achieved a trustworthiness of 0.499 and a Spearman correlation of −0.066 between embedded and original distances (McInnes et al. 2018); t-SNE reached 0.526 and 0.196; PCoA reached 0.510 and 0.287. PCoA preserves global distance structure best, while all three embeddings discard most of it; UMAP's negative coefficient means its layout does not merely lose the original distance ordering but weakly inverts it, so apparent separations in that panel carry no quantitative meaning. Silhouette coefficients computed by zone are negative in every case: −0.020 on the original distances, −0.277 for UMAP, −0.063 for t-SNE and −0.079 for PCoA. Isolates are on average closer to members of other zones than to members of their own, in the original distance space as well as in each embedding. Zone-coloured isolates overlap extensively in Fig. 2, and no method recovers zone as a cluster boundary."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraphs": [
+      92,
+      92
+    ],
+    "new_paragraphs": [
+      92,
+      92
+    ],
+    "old": [
+      "The three structure analyses do not independently confirm one another. The ordinations (Fig. 2; McInnes et al. 2018), the pairwise FST estimates (Table 2) and the ADMIXTURE decomposition (Alexander et al. 2009) are different projections of the same 1,900 isolates: the ordinations of the published Pf8 genotype-distance submatrix, the FST estimates of the 3,916 retained common variants, and the decomposition of 3,385 LD-pruned SNPs. All three point the same way: every silhouette coefficient by zone is negative (UMAP -0.306, t-SNE -0.057, PCoA -0.112, original distances -0.0156), the cross-validation curve across K = 1 to 8 spans only 0.0056 with a shallow minimum at K = 2, and the K = 2 minor component explains eta-squared = 0.019, or 1.9% of variance, among zones. That concordance is coherence within one dataset, not replication across datasets."
+    ],
+    "new": [
+      "The three structure analyses do not independently confirm one another. The ordinations (Fig. 2; McInnes et al. 2018), the pairwise FST estimates (Table 2) and the ADMIXTURE decomposition (Alexander et al. 2009) are different projections of the same 1,900 isolates: the ordinations of the published Pf8 genotype-distance submatrix, the FST estimates of the 3,916 retained common variants, and the decomposition of 3,385 LD-pruned SNPs. All three point the same way: every silhouette coefficient by zone is negative (UMAP −0.277, t-SNE −0.063, PCoA −0.079, original distances −0.020), the cross-validation curve across K = 1 to 8 spans only 0.0056 with a shallow minimum at K = 2, and the K = 2 minor component explains eta-squared = 0.019, or 1.9% of variance, among zones. That concordance is coherence within one dataset, not replication across datasets."
+    ]
+  }
+]
