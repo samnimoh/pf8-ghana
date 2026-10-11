@@ -1,0 +1,39 @@
+{
+  "status": "proposals only; reviewer has not authored source DOCX",
+  "manuscript_before_sha256": "c1774fafc8db9a4b18ee39cec7b36397cca39a6cffb311b82ac974774896b920",
+  "supplement_before_sha256": "05f941e8a11af7edafb2490f24438f512ead053e968f96babd2711b082634fff",
+  "manuscript_edits": [
+    {
+      "concept": "Table5.2 fixed-codon correction-record propagation",
+      "quote": "23 distinct pfk13 codons genotyped — the 19 codons carrying the 20 WHO validated and candidate variants (C469Y and C469F share codon 469), plus four potential-tier codons in the same region (449, 481, 515, 527); every one fixed at the reference residue, codon 458 at 0.999 on a single N458D call. Denominator is per codon, 1,845 to 1,876 of 1,900 called across the pfk13 codons, and the sampling period is 2009–2021",
+      "repl": "23 distinct pfk13 codons genotyped — the 19 codons carrying the 20 WHO validated and candidate variants (C469Y and C469F share codon 469), plus four potential-tier codons in the same region (449, 481, 515, 527); twenty-two fixed at the reference residue, with codon 458 at 0.999 on a single N458D call. Denominator is per codon, 1,845 to 1,876 of 1,900 called across the pfk13 codons, and the sampling period is 2009–2021",
+      "expected_count": 1,
+      "main_paragraph_index_zero_based": 1499,
+      "supplement_paragraph_index_zero_based": 1503,
+      "location": "Table5.2, pfk13 marker-list defect, Verification column; mainPDFpage83",
+      "numbers": "Every digit token preserved, including the existing three-decimal0.999. Twenty-two is an explicit spelled-out count authorised by the canonical facts."
+    },
+    {
+      "concept": "Section5.7.3 fixed-codon claim propagation",
+      "quote": "[Observed] What the rebuilt negative actually says. Every one of the 23 pfk13 codons is fixed at the reference residue, with a single N458D call giving codon 458 a reference frequency of 0.999. Two qualifications the previous version did not make. The denominator is per codon and runs from 1,845 to 1,876 of the 1,900 isolates, not 1,900 at every codon, so \"all 1,900 isolates\" was never the right phrase. And the isolates were collected between 2009 and 2021, which makes this a historical negative: it is evidence about the sampling period and carries no information about the present. The negative is now stronger in substance — it covers the complete validated set, including the three validated markers the old results never reported, and it reports the two candidates that had been misclassified as validated — and weaker in the form it may be stated in.",
+      "repl": "[Observed] What the rebuilt negative actually says. Of the 23 pfk13 codons, twenty-two are fixed at the reference residue; a single N458D call gives codon 458 a reference frequency of 0.999. Two qualifications the previous version did not make. The denominator is per codon and runs from 1,845 to 1,876 of the 1,900 isolates, not 1,900 at every codon, so \"all 1,900 isolates\" was never the right phrase. And the isolates were collected between 2009 and 2021, which makes this a historical negative: it is evidence about the sampling period and carries no information about the present. The negative is now stronger in substance — it covers the complete validated set, including the three validated markers the old results never reported, and it reports the two candidates that had been misclassified as validated — and weaker in the form it may be stated in.",
+      "expected_count": 1,
+      "main_paragraph_index_zero_based": 1537,
+      "supplement_paragraph_index_zero_based": 1541,
+      "location": "Section5.7.3, What the rebuilt negative actually says; mainPDFpage88",
+      "numbers": "Every digit token preserved, including the existing three-decimal0.999. Twenty-two is an explicit spelled-out count authorised by the canonical facts."
+    },
+    {
+      "concept": "Explicit count in already qualified fixed-codon exception",
+      "quote": "[Observed] The pfk13 panel was rebuilt from the WHO molecular-marker compendium v1.0 (December 2025) rather than from memory. It now covers all 14 validated markers — F446I, N458Y, C469Y, M476I, Y493H, G533S, R539T, I543T, P553L, R561H, P574L, C580Y, R622I, A675V — and all 6 candidates — E252Q, P441L, C469F, N537I, G538V, V568G. That is 14 + 6 = 20 variants at 19 distinct codons, because C469Y (validated) and C469F (candidate) are two different changes at the same codon 469; the two WHO tiers are kept distinct throughout and no candidate is anywhere described as validated. Four further pfk13 codons (449, 481, 515, 527) fall outside both lists, which is why the reconstruction covers more codons than the lists contain: 23 pfk13 codons in total, and every one is fixed at the 3D7 reference residue, with the single exception of codon 458, where one isolate in 1,866 carries Asn458Asp. The validated residue at that codon is Tyr, which is absent.",
+      "repl": "[Observed] The pfk13 panel was rebuilt from the WHO molecular-marker compendium v1.0 (December 2025) rather than from memory. It now covers all 14 validated markers — F446I, N458Y, C469Y, M476I, Y493H, G533S, R539T, I543T, P553L, R561H, P574L, C580Y, R622I, A675V — and all 6 candidates — E252Q, P441L, C469F, N537I, G538V, V568G. That is 14 + 6 = 20 variants at 19 distinct codons, because C469Y (validated) and C469F (candidate) are two different changes at the same codon 469; the two WHO tiers are kept distinct throughout and no candidate is anywhere described as validated. Four further pfk13 codons (449, 481, 515, 527) fall outside both lists, which is why the reconstruction covers more codons than the lists contain: 23 pfk13 codons in total, of which twenty-two are fixed at the 3D7 reference residue; at codon 458, one isolate in 1,866 carries Asn458Asp. The validated residue at that codon is Tyr, which is absent.",
+      "expected_count": 1,
+      "main_paragraph_index_zero_based": 2786,
+      "supplement_paragraph_index_zero_based": 2790,
+      "location": "Section6.9.8, pfk13 panel results; existing explicit exception clarified, without changing scientific result",
+      "numbers": "Every digit token preserved. Twenty-two is an explicit spelled-out count authorised by the canonical facts; the pre-existing explicit exception is clarified."
+    }
+  ],
+  "rationale": "Two unqualified equivalent claims survived the first focused correction. A third passage already explicitly excepted codon458 and is clarified for consistent explicit twenty-two wording.",
+  "sup_propagation": "Rebuild supplement from edited main source. Historical withdrawals, sampling period, callability denominators and every digit token remain unchanged."
+}

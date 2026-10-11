@@ -1,0 +1,250 @@
+{
+  "generated_utc": "2026-10-11T11:59:09.417389+00:00",
+  "status": "bounded_pass",
+  "baseline_commit": "e7c4cd41b1f631209d25f2ff35eed6ba9c0ec6cd",
+  "pre_final_commit": "b4538899db43a53d444cfbf8c4367a73cbd3029f",
+  "addressed_findings": [
+    {
+      "id": "correction_record",
+      "status": "addressed",
+      "change": "Table F.2/S52 matches the narrower detectable common-variant conclusion."
+    },
+    {
+      "id": "all_23_codons_fixed",
+      "status": "addressed",
+      "change": "Twenty-two fixed codons plus the codon458 exception in the named cell and three equivalent passages."
+    },
+    {
+      "id": "table_8_1_negligible_status",
+      "status": "addressed",
+      "change": "Table 8.1/S42 now says very low but detectable retained common-variant differentiation."
+    },
+    {
+      "id": "near_panmixia_10_1",
+      "status": "addressed",
+      "change": "The historically attributed label now carries an explicit local withdrawal cue."
+    },
+    {
+      "id": "temporary_symlink",
+      "status": "addressed",
+      "change": "Assembler uses an exclusive owned descriptor and validates before replacing the destination."
+    },
+    {
+      "id": "metadata_title",
+      "status": "addressed",
+      "change": "Generated article and supplement core titles match their visible titles."
+    },
+    {
+      "id": "nine_git_literals",
+      "status": "addressed",
+      "change": "Nine review utilities use validated PF8_GIT or PATH resolution and script-relative imports."
+    },
+    {
+      "id": "table_order",
+      "status": "addressed",
+      "change": "Article first citations and physical tables follow1,2,3,4."
+    },
+    {
+      "id": "duplicate_n_headers",
+      "status": "addressed",
+      "change": "Table2 labels the two count columns as first zone and second zone."
+    }
+  ],
+  "deliverables": [
+    {
+      "label": "article",
+      "docx": {
+        "path": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.docx",
+        "bytes": 1193292,
+        "sha256": "5039f0e36592a46851a3c40d0d25339d14f751a62de223b499b6ecc7165a2536"
+      },
+      "pdf": {
+        "path": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.pdf",
+        "bytes": 708609,
+        "sha256": "af7061e4e49faf04d25aa23a2e5dd7faf44844e1e162cd146166b0b807630503"
+      },
+      "pages": 18
+    },
+    {
+      "label": "manuscript",
+      "docx": {
+        "path": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx",
+        "bytes": 4048289,
+        "sha256": "ef57e597b102afd69c64a33e2f984216df5839d2614e0d6c12f4f145aad73437"
+      },
+      "pdf": {
+        "path": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.pdf",
+        "bytes": 5115276,
+        "sha256": "98cc3c53c7e161684d3c6b5d2bf418861110567791abdfc3c92d8f7e254a2c08"
+      },
+      "pages": 197
+    },
+    {
+      "label": "supplement",
+      "docx": {
+        "path": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx",
+        "bytes": 4049115,
+        "sha256": "e356cfec8522d57238ffa8f7a46d1cd6f0899b4431243ec48a7239aac1c34cf0"
+      },
+      "pdf": {
+        "path": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.pdf",
+        "bytes": 5119155,
+        "sha256": "6cb0a9bd1c65fba214e4ab6b65e5a539f6693173ab7c8ed41fa8cc2589657e89"
+      },
+      "pages": 198
+    }
+  ],
+  "evidence": [
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/final_document_followup_review.json",
+      "bytes": 36002,
+      "sha256": "be3d43ea69c98ac74cbc8a9d248bf427075207ea132c152591264f39ea690d06"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/document_validation.json",
+      "bytes": 4489,
+      "sha256": "bca59ccd303a4bc10c83c8cf80fb2f90fe8a857433a5869af00ac3323b6bfe56"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/visual_reconciliation_results.json",
+      "bytes": 5864,
+      "sha256": "44c35dfe4f21349d8497b72d5c0429e4a0db90df46a3a4dc297f9cf6c2da6dc6"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/pdf_publication_results.json",
+      "bytes": 3340,
+      "sha256": "156d76de8c7e3d95a3da6e3d35c6337c09c77b5b3ed512a2abd4bdef68e2d069"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/independent_visual_reconciliation_review.json",
+      "bytes": 10529,
+      "sha256": "f50a171f39e8a5809850ec72dbe52b52acd6818b0d7d63c67b9680cef0e6409e"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/independent_final_protection_review.json",
+      "bytes": 12739,
+      "sha256": "20fbf4064b0b00355cf825c6355ab826561d5a4277188d57f92f63a43a5c1ed2"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/independent_publication_gate_review.json",
+      "bytes": 3925,
+      "sha256": "5ef8d8fd02b553a8d85467c536b06888b6e877475605b49395519dd00f5d57c8"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/independent_visual_merge_adapter_review.json",
+      "bytes": 9121,
+      "sha256": "f9daf86b224001517a9bcfd70b169e7cccdf2d2b5228d1943406d95403c5ddd3"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/independent_publisher_adapter_review.json",
+      "bytes": 4231,
+      "sha256": "20f5fa3401677b302c64f8da8ed847a8dbb803a997ad1e30950cf24e2178320c"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/git_portability_results.json",
+      "bytes": 33165,
+      "sha256": "b46b4fc94be586e046c52c0b1cdc7000897945f7c00804ad47ab40c115885457"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/independent_git_probe_results.json",
+      "bytes": 28323,
+      "sha256": "a67ddbfbc6dfdcb96fd87b674888738097a997c654132dbef3a018d4ff7a6e6e"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/independent_git_review.json",
+      "bytes": 5881,
+      "sha256": "d19bdc693e81b48c1208d10447f88046783c3e74a7be1bad2336f1145e1030ec"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/builder_regression_results.json",
+      "bytes": 47758,
+      "sha256": "15cce53557a9c9315a86011e58b130eb361429148ddc5467486d2b336af3f6d3"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/builder_round6_regression_results.json",
+      "bytes": 176300,
+      "sha256": "fb1e41bfec52ef2f2d16fd79ac6a7698a1ac0e35557ea6447c97988803678f2e"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/builder_encoded_core_followup_results.json",
+      "bytes": 1505,
+      "sha256": "73d417cc9c7b61bf4aae5c0da7e11fe18c505d21c6de73dcf3535565c33d2ded"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/independent_builder_followup_results.json",
+      "bytes": 13193,
+      "sha256": "8899af741f86d8224b575da2f04f1e41367734fa7e39232637920c608773abf1"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/independent_builder_followup_review.json",
+      "bytes": 3082,
+      "sha256": "c33af6dc3365269ec63893900605f47d0766154f0ebf6215a0178617534d2156"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/builder_equivalence_followup_results.json",
+      "bytes": 2485,
+      "sha256": "342d557f4246fe65cba9197f419cb8e2522bf0a089e579a7130e4e5ae16948e9"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/independent_followup_document_driver_review_final.json",
+      "bytes": 2278,
+      "sha256": "241d4c2575a2e46bcb474a9e693456da7be1e3facab5dc061578a235b515ab9d"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/visual_article_review.json",
+      "bytes": 10427,
+      "sha256": "87f3d70d3c17e06b493e3eab05b451979827fa57b2a9dfd3382ee6c6a78baa86"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/visual_manuscript_review.json",
+      "bytes": 46557,
+      "sha256": "7a0daad249e1e6eb4a8e155cdbc793dd335ddb3f73ed6e2948c0e9351539bf67"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/visual_supplement_review.json",
+      "bytes": 45338,
+      "sha256": "11a09d2336e58bae67ada377117f5a36bdf71d9aac1a9ae58ecdc83d2627282d"
+    }
+  ],
+  "canonical_facts": {
+    "path": "/Users/samnimoh/Desktop/chromo/article/CANONICAL_FACTS_FOR_ARTICLE.md",
+    "bytes": 11454,
+    "sha256": "e0cf717eba8b244ae0e522078010dc4610337b140c2dfb2820d3bae63d02295b"
+  },
+  "verification_notes": {
+    "path": "/Users/samnimoh/Desktop/chromo/provenance_final/VERIFICATION_NOTES.md",
+    "bytes": 20343,
+    "sha256": "1093009b5853ba9b227fac577e050d78691ce5ff2f4b8e5d8365235fdd8d2614"
+  },
+  "tools": [
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/tools/build_article.py",
+      "bytes": 28960,
+      "sha256": "9d90d195263494b40658623a72405c4132b7d9581549855d65b3ded7362cb776"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/tools/make_supplement.py",
+      "bytes": 7551,
+      "sha256": "2e13d53ec42032bd85a2daf4c7a1482acb4a8d95f7d3b8b43e9260829709b6c0"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/tools/git_runtime.py",
+      "bytes": 2498,
+      "sha256": "040121c74aabd8dcb0d05db1f1108468e851d55dd7f86dad7cab551d0614e263"
+    }
+  ],
+  "final_review_counts": {
+    "document_checks": 75,
+    "package_protection_checks": 17,
+    "pages_covered": 413,
+    "identical_prior_inspected_pixels": 405,
+    "fresh_changed_page_inspections": 8
+  },
+  "test_revision_note": "The59 original assembler cases bind revision55a7b960. The subsequent single normalization-line change binds revision9d90d195 through eight targeted checks,12 independent cases and actual package-part equivalence. Earlier failed/limited evidence remains historical.",
+  "scope": "Confirmed editorial, metadata, table presentation and local tool corrections. No biological analysis, data/result regeneration, server execution or Python-to-Lean refinement proof.",
+  "limitations": [
+    "Preserved inherited minor figure/table caption page breaks and unfilled publication placeholders.",
+    "Historical numerical/provenance claims are not newly certified by these document and tool checks.",
+    "Each PDF replacement is atomic; the three replacements are not a single filesystem transaction."
+  ]
+}

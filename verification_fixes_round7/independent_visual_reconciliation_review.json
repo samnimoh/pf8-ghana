@@ -1,0 +1,198 @@
+{
+  "generated_utc": "2026-10-11T11:58:28.406866+00:00",
+  "reviewer": "/root/fix_builder",
+  "status": "bounded_pass",
+  "findings": [],
+  "reviewed_script": {
+    "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/reconcile_visual_reviews.py",
+    "bytes": 8039,
+    "sha256": "251520c055e2eb7cc5d7b329a627dbef2e009afb1840713386d2afb9a6bc4ebf"
+  },
+  "reviewed_reconciliation_report": {
+    "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/visual_reconciliation_results.json",
+    "bytes": 5864,
+    "sha256": "44c35dfe4f21349d8497b72d5c0429e4a0db90df46a3a4dc297f9cf6c2da6dc6"
+  },
+  "independent_driver": {
+    "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/independent_visual_reconciliation_tests.py",
+    "bytes": 16932,
+    "sha256": "3f6bc544fb32ea4a4962ca693a50be603023c3faac532a3037f50ce9d74fe533"
+  },
+  "independent_results": {
+    "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/independent_visual_reconciliation_results.json",
+    "bytes": 9326,
+    "sha256": "3099a09f2172e53ec35f240a886b8afd5a7c197a41fc730b85f3122d7bfafa26"
+  },
+  "reviewed_records": [
+    {
+      "initial": {
+        "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/initial_visual_reviews/visual_article_review.json",
+        "bytes": 4839,
+        "sha256": "a322e658131ead462434b5d2d0991a4ef8125cf7349f2d2b977fa8d5c72625a4"
+      },
+      "final": {
+        "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/visual_article_review.json",
+        "bytes": 10427,
+        "sha256": "87f3d70d3c17e06b493e3eab05b451979827fa57b2a9dfd3382ee6c6a78baa86"
+      }
+    },
+    {
+      "initial": {
+        "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/initial_visual_reviews/visual_manuscript_part_1_100.json",
+        "bytes": 22189,
+        "sha256": "75bc0258d8b4bc3b6e80a40f1b5ed434e4c038b7a851eb56c3a6d9b201ebedef"
+      },
+      "final": {
+        "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/visual_manuscript_part_1_100.json",
+        "bytes": 46476,
+        "sha256": "40d631596a5599671413f3f7954ff6630656b22c1b3e18e88cb37b36bcc4f9b7"
+      }
+    },
+    {
+      "initial": {
+        "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/initial_visual_reviews/visual_manuscript_part_101_150.json",
+        "bytes": 13739,
+        "sha256": "08dd2a7fc9abd699800fba85cec5bcd0451a514ddb5afbb3f0779f8f613bd3b3"
+      },
+      "final": {
+        "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/visual_manuscript_part_101_150.json",
+        "bytes": 25593,
+        "sha256": "d3fb47e91ce4257696ff33e3b8a4520cf0f2a2fb4a3cee0d814409c62318ebc2"
+      }
+    },
+    {
+      "initial": {
+        "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/initial_visual_reviews/visual_manuscript_part_151_197.json",
+        "bytes": 11255,
+        "sha256": "bb502da682796ccb546b1250d59d2e3e97ac85af6c16f2dc77ff43527cb2e3bc"
+      },
+      "final": {
+        "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/visual_manuscript_part_151_197.json",
+        "bytes": 23240,
+        "sha256": "523b7014789b7b05ed1a35727013f7bb152e348209de8b9a686ca3b22bfd4071"
+      }
+    },
+    {
+      "initial": {
+        "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/initial_visual_reviews/visual_supplement_part_1_100.json",
+        "bytes": 23791,
+        "sha256": "61483b19a205d6622c610b03a228a5239b3031dfeebcdce8e04c399b8efee17a"
+      },
+      "final": {
+        "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/visual_supplement_part_1_100.json",
+        "bytes": 46486,
+        "sha256": "e2e4376829fed6e9c15a5b4c66858abc8a30a5489915028fc8f3b65a48b1d825"
+      }
+    },
+    {
+      "initial": {
+        "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/initial_visual_reviews/visual_supplement_part_101_198.json",
+        "bytes": 21747,
+        "sha256": "95f8f85550c7027eec21b310d34bdcfb250a4893379e883ef456eb09929442fb"
+      },
+      "final": {
+        "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/visual_supplement_part_101_198.json",
+        "bytes": 45617,
+        "sha256": "73f01ee1205ce861d4568c498433b73c9c2c4d0c3a6f99b769c06274b48e410d"
+      }
+    }
+  ],
+  "reviewed_followup_records": [
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/visual_manuscript_followup_pages.json",
+      "bytes": 1974,
+      "sha256": "55b6bbabb117df655e1ba1b5fe9b71a4459b20c0162c91dd3ca93925ea85d579"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/visual_supplement_followup_pages.json",
+      "bytes": 2527,
+      "sha256": "0967d4c179dd7d266bb1018da69531b8a6ce6d431549d86de9c12cb4a9f7e7dd"
+    }
+  ],
+  "reviewed_manifests": {
+    "initial_render_manifest": {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/initial_visual_reviews/render_results.json",
+      "bytes": 93579,
+      "sha256": "31d23445da780c106cd2dc28daa1721c9c607f926ae6cfca72ccd786ca13138e"
+    },
+    "final_render_manifest": {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/render_results.json",
+      "bytes": 93663,
+      "sha256": "acd8a9fca380cdf482558db3f686189e4d2b1fb41a77779691c673ee3ebf2319"
+    },
+    "snapshot_manifest": {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/initial_visual_reviews/snapshot_locations.json",
+      "bytes": 110514,
+      "sha256": "92e3942b283c731831fdba333df0c34142c5d2d2658d62dcdd94561a635a9b40"
+    }
+  },
+  "confirmed": [
+    {
+      "claim": "Exact legitimate final layout coverage",
+      "evidence": "Independent audit confirms article pages 1\u201318, manuscript pages 1\u2013197 and supplement pages 1\u2013198, with exact nonoverlapping six-part coverage and no duplicate PNG entries: 413 pages total."
+    },
+    {
+      "claim": "Unchanged coverage uses actual identical bytes",
+      "evidence": "Read and directly compared all 413 current PNGs against preserved initial PNG bytes, independently of declared hashes: 405 are byte-identical. All final source/PDF/PNG identities match the current actual files; all initial PNG/PDF backup identities match the preserved initial manifests."
+    },
+    {
+      "claim": "All changed pixels have exact fresh coverage",
+      "evidence": "Precisely manuscript pages 83, 88, 127, 128 and supplement pages 84, 89, 128, 129 changed. Fresh original-detail review records list exactly these eight pages with actual current PNG/source/PDF identities and reviewer /root or /root/fix_editor respectively. There are no other changed pages."
+    },
+    {
+      "claim": "Initial-to-final identity chains are intact",
+      "evidence": "Every final part references the actual preserved initial review, initial render manifest, snapshot manifest, old PDF backup and per-page initial PNG backup; fresh-page subsets reference the actual fresh review identity. Preserved observations and limits match their initial records."
+    },
+    {
+      "claim": "Reviewer assignment for two original reports is accurate",
+      "evidence": "I authored and completed supplement pages 1\u2013100 and manuscript pages 101\u2013150 before the followup edits. Their raw initial records remain byte-identical to my prior saved hashes 61483b19a205d6622c610b03a228a5239b3031dfeebcdce8e04c399b8efee17a and 08dd2a7fc9abd699800fba85cec5bcd0451a514ddb5afbb3f0779f8f613bd3b3. Adding /root/fix_builder to the rebound records is accurate attribution; the raw originals were not edited."
+    },
+    {
+      "claim": "No reinspection overstatement",
+      "evidence": "Final scope explicitly describes carried-forward inspected identical pixels plus newly inspected changed pixels, and expressly does not claim that unchanged final pathnames were opened again."
+    },
+    {
+      "claim": "Invalid chain inputs are rejected before review replacement",
+      "evidence": "18 independent scratch probes pass: valid 413-page chain, 16 adverse chain inputs, and optimized-Python refusal. For every rejected adverse input all six prior review outputs and the report remained byte-identical. The actual seven reconciliation outputs remained unmodified by this review."
+    }
+  ],
+  "code_assessment": [
+    {
+      "lines": [
+        45,
+        47
+      ],
+      "assessment": "Optimized execution refuses before validation can be bypassed."
+    },
+    {
+      "lines": [
+        39,
+        42,
+        51,
+        90
+      ],
+      "assessment": "Expected labels, backup uniqueness, current and preserved file identities, unique per-page entries and exact changed-page fresh review coverage are checked."
+    },
+    {
+      "lines": [
+        93,
+        132
+      ],
+      "assessment": "All six initial inspection parts are validated for exact coverage and rebound with explicit original/fresh proof links."
+    },
+    {
+      "lines": [
+        136,
+        145
+      ],
+      "assessment": "The whole chain is validated before output writes. Output replacement is sequential rather than a transaction; this review establishes the current completed chain and pre-validation rejection behavior, not recovery from arbitrary I/O failures during record writing."
+    }
+  ],
+  "scope": "Read-only independent audit of current reconciliation script/report, six rebound part records, six preserved initial parent records, both followup inspection records, current source/PDF/PNG files and preserved initial PDF/PNG files. Actual chain checks are implemented separately from the reviewed script. Scratch probes execute the exact current script with harmless temporary fixture paths. No document edits, PDF publication, scientific execution or renewed analysis.",
+  "limitations": [
+    "Inspection records are trusted reviewer attestations: hashing establishes artifact identity and pixel equivalence, not whether an observer actually viewed an image. I independently witnessed and authored the two original parts attributed to me; the remaining parts and fresh pages are attested by the assigned reviewers.",
+    "This is layout-coverage reconciliation, not biological interpretation, numerical provenance or a formal Lean proof.",
+    "Inherited caption splits, publication placeholders and contents/page-number limitations remain bounded observations; coverage does not assert flawless global typography.",
+    "Source or rendered-file changes after the audited identities require another validated reconciliation or fresh inspection."
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "generated_utc": "2026-10-11T11:53:20.547425+00:00",
+  "reviewer": "/root",
+  "label": "manuscript",
+  "status": "bounded_pass",
+  "source": {
+    "path": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx",
+    "bytes": 4048289,
+    "sha256": "ef57e597b102afd69c64a33e2f984216df5839d2614e0d6c12f4f145aad73437"
+  },
+  "rendered_pdf": {
+    "path": "/private/tmp/pf8_round7_fixed_render/manuscript/Pf8_Ghana_manuscript_REVISED.pdf",
+    "bytes": 5115276,
+    "sha256": "98cc3c53c7e161684d3c6b5d2bf418861110567791abdfc3c92d8f7e254a2c08"
+  },
+  "pages": 197,
+  "original_detail_pages_inspected": [
+    83,
+    88,
+    127,
+    128
+  ],
+  "page_images_inspected": [
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-83.png",
+      "bytes": 229199,
+      "sha256": "d657902981bf99c0f8200106163f80739d08ba4fa44886745c95beee46172b23"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-88.png",
+      "bytes": 278463,
+      "sha256": "ef35796b664bb11ade257e116e4f62fc341b01494a6054ed7318c07712f43abd"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-127.png",
+      "bytes": 222479,
+      "sha256": "6e749a0684dc5e65e67c83b82767b08dd142a8bc2e6de17a22a1d8d0094a5480"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-128.png",
+      "bytes": 242861,
+      "sha256": "f68b6147c77bdecb5c061fdc6443c96145cef7612ec030096bbf255149540fe9"
+    }
+  ],
+  "findings": [],
+  "observations": [
+    "Table cells and repeated header rows remain readable. The codon458 exception is visible in the edited table cell and paragraphs. Table6.11 continues with its caption on page128 without clipping or overlap."
+  ],
+  "scope": "Actual original-detail view_image inspection of all four final manuscript PNGs changed by the last three paragraph corrections. Other final pages require pixel equivalence reconciliation with the preserved initial full-page reviews."
+}

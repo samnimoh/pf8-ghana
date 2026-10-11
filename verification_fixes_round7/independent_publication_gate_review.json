@@ -1,0 +1,60 @@
+{
+  "generated_utc": "2026-10-11T11:48:21.765982+00:00",
+  "reviewer": "/root/final_document_check",
+  "status": "bounded_pass",
+  "findings": [],
+  "reviewed_scripts": [
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/publish_reviewed_pdfs.py",
+      "bytes": 4802,
+      "sha256": "f78cf3fccdb4ec80824cc4e784941775de2af5ca1be0d2c5ace97db4b3db69df"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/merge_visual_reviews.py",
+      "bytes": 3791,
+      "sha256": "f352ab0ced648a4563a04b6cda6db44015000b9975833f282cc453f5ae6ed268"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/verify_documents.py",
+      "bytes": 3702,
+      "sha256": "1179d1b4520ba6882d9b71e4e468018e10f04ba3da10b09b6ae35b0c53ac4eb5"
+    }
+  ],
+  "test_evidence": [
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/independent_publisher_adapter_tests.py",
+      "bytes": 7197,
+      "sha256": "a4c0fa102bcd2642d88950fe059f60676359ab599498a9ff8c36b4b019a2cc88"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/independent_publisher_adapter_review.json",
+      "bytes": 4231,
+      "sha256": "20f5fa3401677b302c64f8da8ed847a8dbb803a997ad1e30950cf24e2178320c"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/independent_visual_merge_adapter_tests.py",
+      "bytes": 9579,
+      "sha256": "13747d60eee9f6a1fc73f9edea3a1a588b3b25fae80faba8291bc368b3a41ab3"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/independent_visual_merge_adapter_review.json",
+      "bytes": 9121,
+      "sha256": "f9daf86b224001517a9bcfd70b169e7cccdf2d2b5228d1943406d95403c5ddd3"
+    }
+  ],
+  "observations": [
+    "Publisher and protection verifier now select final_document_followup_review.json, preserving the initial 55-check review without treating its old hashes as current.",
+    "Publisher requires exactly three unique expected render labels, actual source/PDF identity equality with visual review, expected actual PDF page count, exactly complete original-detail page coverage, unique image paths, exact render/review image-identity map equality, and rehashes actual PNG files before staging.",
+    "Publisher stages and fsyncs all three PDF copies and checks every staged SHA before any destination replacement. Each destination is replaced atomically and verified byte-identical to reviewed render.",
+    "Merger accepts exactly the declared main ranges1\u2013100,101\u2013150,151\u2013197 and supplement ranges1\u2013100,101\u2013198. Parts must have exact source/PDF/PNG identities and exact complete nonoverlapping coverage; current actual bytes are rehashed before a record is written.",
+    "18 scratch publisher fixtures passed, including stale source/text identities, failed reviews/checks, incomplete page coverage, actual image mutation, duplicate labels and an injected second staging failure preserving all three originals.",
+    "26 scratch merger fixtures passed, including malformed third manuscript range and image identity plus optimization refusal.",
+    "This review has not executed the real publisher or merger, or asserted pending final page/source approvals."
+  ],
+  "scope": "Read-only script review and isolated scratch validation of publication/coverage adapters; final source/render/full-page identities remain subject to the fresh final document review and completed visual records.",
+  "limits": [
+    "Atomicity is per file/artifact, not a multi-file transaction. Later replacement failure can leave a partial publication set, though staging failure preserves all destinations.",
+    "Gates authenticate recorded identities and coverage, not the act of visual inspection or scientific correctness.",
+    "Concurrent writes are not locked; final independent delivery identity check is required."
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "generated_utc": "2026-10-11T11:47:58.870964+00:00",
+  "reviewer": "/root/final_document_check",
+  "status": "bounded_pass",
+  "source": {
+    "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/publish_reviewed_pdfs.py",
+    "bytes": 4802,
+    "sha256": "f78cf3fccdb4ec80824cc4e784941775de2af5ca1be0d2c5ace97db4b3db69df"
+  },
+  "driver": {
+    "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/independent_publisher_adapter_tests.py",
+    "bytes": 7197,
+    "sha256": "a4c0fa102bcd2642d88950fe059f60676359ab599498a9ff8c36b4b019a2cc88"
+  },
+  "findings": [],
+  "tests": [
+    {
+      "case": "complete final matching identities",
+      "passed": true,
+      "outcome": "success",
+      "error": null
+    },
+    {
+      "case": "optimization refuses before publication",
+      "passed": true,
+      "outcome": "refused/preserved",
+      "error": "RuntimeError: Run without Python optimization; validation assertions must be enabled."
+    },
+    {
+      "case": "stale text-reviewed source hash",
+      "passed": true,
+      "outcome": "refused/preserved",
+      "error": "AssertionError: "
+    },
+    {
+      "case": "nonpassing text review",
+      "passed": true,
+      "outcome": "refused/preserved",
+      "error": "AssertionError: "
+    },
+    {
+      "case": "unresolved text finding",
+      "passed": true,
+      "outcome": "refused/preserved",
+      "error": "AssertionError: "
+    },
+    {
+      "case": "failed protection check",
+      "passed": true,
+      "outcome": "refused/preserved",
+      "error": "AssertionError: "
+    },
+    {
+      "case": "source bytes changed",
+      "passed": true,
+      "outcome": "refused/preserved",
+      "error": "AssertionError: "
+    },
+    {
+      "case": "render PDF bytes changed",
+      "passed": true,
+      "outcome": "refused/preserved",
+      "error": "AssertionError: manuscript"
+    },
+    {
+      "case": "actual image bytes changed",
+      "passed": true,
+      "outcome": "refused/preserved",
+      "error": "AssertionError: manuscript"
+    },
+    {
+      "case": "duplicate render label extra",
+      "passed": true,
+      "outcome": "refused/preserved",
+      "error": "AssertionError: "
+    },
+    {
+      "case": "duplicate render label at expected count",
+      "passed": true,
+      "outcome": "refused/preserved",
+      "error": "AssertionError: "
+    },
+    {
+      "case": "missing original-detail page",
+      "passed": true,
+      "outcome": "refused/preserved",
+      "error": "AssertionError: manuscript"
+    },
+    {
+      "case": "duplicate original-detail page",
+      "passed": true,
+      "outcome": "refused/preserved",
+      "error": "AssertionError: manuscript"
+    },
+    {
+      "case": "unreviewed image identity",
+      "passed": true,
+      "outcome": "refused/preserved",
+      "error": "AssertionError: manuscript"
+    },
+    {
+      "case": "nonpassing visual review",
+      "passed": true,
+      "outcome": "refused/preserved",
+      "error": "AssertionError: manuscript"
+    },
+    {
+      "case": "unresolved visual finding",
+      "passed": true,
+      "outcome": "refused/preserved",
+      "error": "AssertionError: manuscript"
+    },
+    {
+      "case": "PDF page count mismatch",
+      "passed": true,
+      "outcome": "refused/preserved",
+      "error": "AssertionError: manuscript"
+    },
+    {
+      "case": "second staging copy failure preserves all originals",
+      "passed": true,
+      "outcome": "refused/preserved",
+      "error": "OSError: injected second stage failure"
+    }
+  ],
+  "test_count": 18,
+  "pass_count": 18,
+  "scope": "Current publisher was copied byte-identically into private scratch. Only synthetic byte sources/images, one-page PDF fixtures and scratch destinations were used; no shipping document or scientific pipeline executed.",
+  "limits": [
+    "Atomic replacement is per PDF, not a three-file transaction. A failure during later destination replacement could leave a mixed set; every PDF was staged and checked first.",
+    "The gate validates bound review assertions; it cannot independently prove an image was opened or scientific claims are correct.",
+    "Read/source hashing is not locking; concurrent source changes after gates require another check."
+  ]
+}

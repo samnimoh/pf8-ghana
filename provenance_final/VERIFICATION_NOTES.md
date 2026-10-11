@@ -266,3 +266,38 @@ Edit plans, independent reviews, source identities and build evidence are archiv
 `verification_fixes_round6/`. PDF synchronization and visual review are recorded there after
 the final rebuild. The six findings are assessed individually in its correction record; this
 entry does not certify every claim in the full analysis or fill publication placeholders.
+
+# Round 7 confirmed corrections and propagation
+
+The surveillance correction in Table F.2 now matches the narrower common-variant conclusion
+in the body. Table 8.1 states that differentiation is very low but detectable, and Section
+10.1 explicitly marks the historical near-panmixia label as withdrawn. These are wording and
+correction-record changes, not new estimates of a mating system or sampling adequacy.
+
+The fixed-codon contradiction was corrected in Table 10.2 and, after page review located
+equivalent wording, in Table 5.2 and Section 5.7.3. Section 6.9.8 already excepted codon 458
+and now states the count explicitly as twenty-two fixed codons. The codon-458 exception,
+existing rounded frequencies, callability qualifications and sampling dates are preserved.
+There are seven local paragraph substitutions in the working record; the supplement is
+regenerated from that record. All digit-containing numeric tokens and figure bytes are retained.
+
+The article's first citations and physical tables now follow the order 1, 2, 3, 4. Table 2
+identifies its count columns as the first and second zones in each pair. Both generated
+documents derive their searchable metadata titles from their visible titles.
+
+The article assembler now creates a unique, exclusive sibling archive and writes and validates
+through its original descriptor. A pre-existing legacy temporary path is not opened or removed.
+Failure checks cover unrelated symlinks, archive/validation/fsync/replacement failures and
+detected temporary-path substitution. An independent follow-up also resolved inconsistent
+matching of URI-encoded core-properties declarations. Nine review utilities resolve Git from
+an explicit PF8_GIT override or PATH instead of a particular machine's cache path; isolated
+imports are anchored to each script's location. Historical review assertions remain snapshots
+of their original revisions rather than assertions about every later working tree.
+
+Initial and follow-up edit plans, scratch regressions, independent reviews, exact source hashes,
+rendered-page reviews and PDF publication evidence are preserved in verification_fixes_round7.
+The initial document review is retained as a bounded intermediate record; the final follow-up
+review supersedes it for delivery. Scientific calculations, archived data/results, canonical
+facts and Lean reference proofs are unchanged. These corrections do not supply historical
+generating commands or a Python-to-Lean implementation-refinement proof, and they do not fill
+the article's author, funding, contribution or repository placeholders.

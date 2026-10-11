@@ -1,0 +1,57 @@
+{
+  "status": "bounded_pass",
+  "checks": {
+    "independent_document_checks_pass": true,
+    "reviewed_source_identities_still_match": true,
+    "Pf8_Ghana_manuscript_REVISED.docx: archive_crc": true,
+    "Pf8_Ghana_manuscript_REVISED.docx: unique_package_parts": true,
+    "Pf8_Ghana_manuscript_REVISED.docx: all_xml_parses": true,
+    "Pf8_Ghana_manuscript_REVISED.docx: all_figure_bytes_unchanged": true,
+    "article/Additional_file_1.docx: archive_crc": true,
+    "article/Additional_file_1.docx: unique_package_parts": true,
+    "article/Additional_file_1.docx: all_xml_parses": true,
+    "article/Additional_file_1.docx: all_figure_bytes_unchanged": true,
+    "article/Pf8_Ghana_article.docx: archive_crc": true,
+    "article/Pf8_Ghana_article.docx: unique_package_parts": true,
+    "article/Pf8_Ghana_article.docx: all_xml_parses": true,
+    "article/Pf8_Ghana_article.docx: all_figure_bytes_unchanged": true,
+    "canonical_facts_unchanged": true,
+    "no_tracked_scientific_data_scripts_or_proofs_changed": true
+  },
+  "packages": [
+    {
+      "path": "Pf8_Ghana_manuscript_REVISED.docx",
+      "sha256": "c1774fafc8db9a4b18ee39cec7b36397cca39a6cffb311b82ac974774896b920",
+      "media_parts": 10
+    },
+    {
+      "path": "article/Additional_file_1.docx",
+      "sha256": "05f941e8a11af7edafb2490f24438f512ead053e968f96babd2711b082634fff",
+      "media_parts": 10
+    },
+    {
+      "path": "article/Pf8_Ghana_article.docx",
+      "sha256": "6c45b8f509d87a512af773ab1d771d51e8d2c8d89343ae6e1356f161fc0494b4",
+      "media_parts": 3
+    }
+  ],
+  "changed_tracked_files": [
+    "Pf8_Ghana_manuscript_REVISED.docx",
+    "article/Additional_file_1.docx",
+    "article/Pf8_Ghana_article.docx",
+    "article/article.md",
+    "tools/README.md",
+    "tools/build_article.py",
+    "tools/make_supplement.py",
+    "verification_fixes_round6/final_closure_review_checker.py",
+    "verification_fixes_round6/final_document_review_checker.py",
+    "verification_fixes_round6/independent_builder_layout_tests.py",
+    "verification_fixes_round6/make_fix_manifest.py",
+    "verification_fixes_round6/verify_documents.py",
+    "verification_review_round5/check_current_revision.py",
+    "verification_review_round5/finalize_review.py",
+    "verification_review_round6/check_current_revision.py",
+    "verification_review_round6/finalize_review.py"
+  ],
+  "scope": "Document package integrity, unchanged figure bytes and canonical facts, exact reviewer identity, and bounded tracked changes. No scientific recalculation or Python-to-Lean proof claim."
+}

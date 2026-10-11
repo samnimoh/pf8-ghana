@@ -1,0 +1,46 @@
+{
+  "generated_utc": "2026-10-11T11:49:04.460517+00:00",
+  "reviewer": "/root/fix_editor",
+  "status": "historical_review_with_resolved_input_corner",
+  "builder": {
+    "path": "/Users/samnimoh/Desktop/chromo/tools/build_article.py",
+    "bytes": 28947,
+    "sha256": "55a7b960ab42804d814e783d660b8573985d17fd0330abeac5b650311ed2ef2f"
+  },
+  "test_driver": {
+    "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/independent_builder_tests.py",
+    "bytes": 11580,
+    "sha256": "006ab7fb5d2e9c2efb31bd657d7c4a926bc6bdbeece08a15ea6a6c2658600509"
+  },
+  "test_results": {
+    "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/independent_builder_results.json",
+    "bytes": 13538,
+    "sha256": "75006b1c0e2946ae6bc5010a8d1e2c3e9125d940899dae94000f27479af24acb"
+  },
+  "tests": 12,
+  "passed": 11,
+  "assembly_safety_findings": [],
+  "metadata_input_corner": {
+    "name": "encoded_core_override_supported_by_validator",
+    "severity": "bounded input compatibility limitation",
+    "description": "The builder validation decoded the inherited core-properties override, but metadata lookup compared its raw URI, added a duplicate decoded override, and conservatively aborted. The original destination was preserved. OPC schema validity of this encoded URI is outside this review and was not established.",
+    "resolution": {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/independent_builder_followup_review.json",
+      "bytes": 3082,
+      "sha256": "c33af6dc3365269ec63893900605f47d0766154f0ebf6215a0178617534d2156"
+    }
+  },
+  "inspected_artifacts": [
+    "tools/build_article.py",
+    "tools/README.md",
+    "verification_fixes_round7/builder_regression_tests.py"
+  ],
+  "independent_pass_scope": [
+    "Existing unrelated legacy temp symlinks remain untouched on success and archive-write failure.",
+    "New output receives explicit file mode and existing output survives fchmod and KeyboardInterrupt integrity failures.",
+    "Foreign regular-file, hardlink and deletion substitutions at the unique temp path cause protected abort without cleanup of a foreign replacement.",
+    "Duplicate or external core relationships are rejected; unrelated core metadata is preserved.",
+    "Visible Markdown title matches the single metadata title; table count headers explicitly identify both zones."
+  ],
+  "scope": "Historical review of pre-followup builder SHA 55a7b960, using scratch packages only. Eleven tests passed and one conservative input-normalization corner was observed; later review independently resolves it. Shipping documents and scientific code were not edited or executed by this review."
+}

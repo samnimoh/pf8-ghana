@@ -1,0 +1,58 @@
+{
+  "generated_utc": "2026-10-11T11:53:17.304206+00:00",
+  "label": "supplement",
+  "status": "bounded_pass",
+  "reviewer": "/root/fix_editor",
+  "source": {
+    "path": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx",
+    "bytes": 4049115,
+    "sha256": "e356cfec8522d57238ffa8f7a46d1cd6f0899b4431243ec48a7239aac1c34cf0"
+  },
+  "rendered_pdf": {
+    "path": "/private/tmp/pf8_round7_fixed_render/supplement/Additional_file_1.pdf",
+    "bytes": 5119155,
+    "sha256": "6cb0a9bd1c65fba214e4ab6b65e5a539f6693173ab7c8ed41fa8cc2589657e89"
+  },
+  "pages": 198,
+  "original_detail_pages_inspected": [
+    84,
+    89,
+    128,
+    129
+  ],
+  "page_images_inspected": [
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/supplement/page-84.png",
+      "bytes": 228977,
+      "sha256": "f6be7104ba8e326949c4270a48b3bc8b9673c68dda0c74cedc499157c5d69ab7"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/supplement/page-89.png",
+      "bytes": 278308,
+      "sha256": "8a23b56a4b4d34746f085c1c492c6bc82d6e5e4855312fd6ecb16b9f43ae731a"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/supplement/page-128.png",
+      "bytes": 222640,
+      "sha256": "21f306cfa9bf07dd5b3e7a06950345af82f5789377c1767fc9e4d25371b270c2"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/supplement/page-129.png",
+      "bytes": 243624,
+      "sha256": "ceb3f89f2cda8f66e742cf9ea5256871474dddf8ffc723bebf0298e38583fb51"
+    }
+  ],
+  "findings": [],
+  "observations": [
+    "The four assigned changed final page PNGs were opened at original image detail and visually inspected.",
+    "Table continuation on page 84 and the revised paragraph on page 89 retain all text inside the page margins without overlap.",
+    "The table spanning pages 128\u2013129 retains repeated column headings and legible rows; surrounding paragraphs, caption and page footer are not clipped or overlapping.",
+    "No orphan headings or unexpected blank content found in these four pages."
+  ],
+  "scope": "Fresh visual layout inspection of final supplement pages 84, 89, 128 and 129 only. This record supplies changed-page coverage for reconciliation with preserved initial visual reviews; it does not independently claim inspection of the other final pages or validate biological claims.",
+  "render_manifest": {
+    "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/render_results.json",
+    "bytes": 93663,
+    "sha256": "acd8a9fca380cdf482558db3f686189e4d2b1fb41a77779691c673ee3ebf2319"
+  }
+}

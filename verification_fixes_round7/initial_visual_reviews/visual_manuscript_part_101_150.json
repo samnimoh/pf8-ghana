@@ -1,0 +1,410 @@
+{
+  "generated_utc": "2026-10-11T11:47:30.591531+00:00",
+  "label": "manuscript",
+  "status": "bounded_pass",
+  "source": {
+    "path": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx",
+    "bytes": 4048301,
+    "sha256": "c1774fafc8db9a4b18ee39cec7b36397cca39a6cffb311b82ac974774896b920"
+  },
+  "rendered_pdf": {
+    "path": "/private/tmp/pf8_round7_fixed_render/manuscript/Pf8_Ghana_manuscript_REVISED.pdf",
+    "bytes": 5115294,
+    "sha256": "f9c698734f001124f0908697c05efd61a196b3d2d152d2ae92c22bfbed4c2c41"
+  },
+  "pages": 197,
+  "original_detail_pages_inspected": [
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    148,
+    149,
+    150
+  ],
+  "page_images_inspected": [
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-101.png",
+      "bytes": 249639,
+      "sha256": "b8ce6fd4a1a01ea7b9bc6c98f9c61385cc37a62a9915da06a1b89034829b9fc0"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-102.png",
+      "bytes": 194198,
+      "sha256": "21e59a7fa2f67aef52e12dcdb2e91999785826a772267697fef5410527c7d4e0"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-103.png",
+      "bytes": 218859,
+      "sha256": "60165be17ab7469fb969457a5c02b5bd6c1d49027e9b50512369d6f2ca501fea"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-104.png",
+      "bytes": 277664,
+      "sha256": "a2f6b02583cc48be79aa41e5a441e6dbf10be150624ba96064a7beba3cc21a86"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-105.png",
+      "bytes": 136940,
+      "sha256": "edfaa6cf0def89fb7c190c5f584d797ef0592b30de79c1ba35749349629ef8a5"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-106.png",
+      "bytes": 199322,
+      "sha256": "e0b3db7ddc5463a4d0dabf1708817e3389cf417aa3ad229397a4026300f49352"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-107.png",
+      "bytes": 392583,
+      "sha256": "292c427a8b59fea09759ace1b5112c22b210547b74c98acc6ecf1a758df79ff3"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-108.png",
+      "bytes": 195007,
+      "sha256": "21ee64b3c3b8623dec1715de1e0c8c52a445b1fdab7a531c0a21010d1416e4d5"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-109.png",
+      "bytes": 262049,
+      "sha256": "9deb5bc6064a04a0813c52aa49eb02d7b52c54d6e56f9ae2c2d4a6133ed34b7b"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-110.png",
+      "bytes": 30603,
+      "sha256": "efc8f011d26e66c14ca6f1d7b3efaeacf4dc66f8b3dbe9e295887c46ae5bb82f"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-111.png",
+      "bytes": 221249,
+      "sha256": "e6c4672a087fe8695322b3ebca357286a3c0f8477bc880c75fa887752f6a1cd2"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-112.png",
+      "bytes": 255992,
+      "sha256": "bbf8f3ed5020b838a0e3ea06d4db40b1a7f6a8fa63de31151b559ac12ebc4b2b"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-113.png",
+      "bytes": 259222,
+      "sha256": "0b550cf12288c739565034038765c3555da8f33e76a0397c43b1a739b4016ae1"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-114.png",
+      "bytes": 302669,
+      "sha256": "0b4c0fdc03c338678cf471128cec2c1714bf6674f14993c48e1c4ab32d393622"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-115.png",
+      "bytes": 307422,
+      "sha256": "130203820750c14d668450a668f5059fb960b6d6715216c2302778801339a599"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-116.png",
+      "bytes": 304763,
+      "sha256": "c9ae8910e8c8db9264ac27aae8bb31807bf99a604d55422f347f8f0d990585d8"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-117.png",
+      "bytes": 312522,
+      "sha256": "486044fd2d288b9ce09ceecd1ca5d2739bda1439f445bc62a10cb2a21e412737"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-118.png",
+      "bytes": 278031,
+      "sha256": "8d3515ceccffc35254b3abb17f701c91dea2f0948d442f2d3c078db6f74a0c66"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-119.png",
+      "bytes": 276440,
+      "sha256": "17203758368f2e71033097174e8b2057916d3df84a1aab0e55fe9f3b14dfaef1"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-120.png",
+      "bytes": 280665,
+      "sha256": "9e09f1c8d46112427dc7aaee5b39ace02fa5a7d09b427b725b45803e661e2721"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-121.png",
+      "bytes": 216065,
+      "sha256": "970a18ec375b9821f58ceb393a814d5821c0298a071272da40767262917abda9"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-122.png",
+      "bytes": 132674,
+      "sha256": "22d39ec1443b58d7c3d898ba6377b603871f58644227ad092e2590d53d321526"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-123.png",
+      "bytes": 227692,
+      "sha256": "b1b1bca32e3c08468dc0af6696b98fe384260f5986cd0ea856cc73f5e8d03da2"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-124.png",
+      "bytes": 263263,
+      "sha256": "aedbdf5186a77380b9b3dbfdf725dbb3e317e5355f26dea27603616328d731e4"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-125.png",
+      "bytes": 274650,
+      "sha256": "606360da50f2c6f0bcedafd611b90a3ff3906853d369a92a744c856167d36577"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-126.png",
+      "bytes": 259741,
+      "sha256": "d3ff39c613253cbf3aea0c9fdad42578e2f4c4d1b4bbadb23a97dcd1c18ae47b"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-127.png",
+      "bytes": 220389,
+      "sha256": "f07fdc15d827551855412c0680a9a1812d4532341a67d0498f9e1ea696de5aef"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-128.png",
+      "bytes": 246054,
+      "sha256": "b1b32ab1604a1c1a925d510cc9fc905aa28e8ef71bdd8c949d426edb05787f27"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-129.png",
+      "bytes": 313916,
+      "sha256": "86940558101b53573af8a9d9ddd23b03c70cdd08635382a8c753c176b9afb6f8"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-130.png",
+      "bytes": 206209,
+      "sha256": "77205d647557fb391f88a91693353907a8becfd5531fac8bf2792c6f40f63590"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-131.png",
+      "bytes": 266479,
+      "sha256": "7d1894e91d5e55fa393cb7edb980c8a4f4b85070c7e4673bf9b89669ad7534a1"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-132.png",
+      "bytes": 280009,
+      "sha256": "03010792a403c1c2abc20996814d1fae50a05d0e7c30a6fcea6d76cca40ffedd"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-133.png",
+      "bytes": 137315,
+      "sha256": "5da7ec3b47f73c139a7a4aec6f8ed988330c76b285fa2e0f2bfd921ff431a20a"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-134.png",
+      "bytes": 271687,
+      "sha256": "f8022d5beb03b1165ee16d40c98670e75514a92811908868615882217a78f50e"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-135.png",
+      "bytes": 238056,
+      "sha256": "c0300a6602db0e9273cd7cdec045302accd6f065e7165e0bb2ec0ae9f24cf1d9"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-136.png",
+      "bytes": 226913,
+      "sha256": "f61723a008fd7c2309a3556b7fd8baf695e5641e09f93b2018a51f34ef81ae34"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-137.png",
+      "bytes": 214501,
+      "sha256": "da032ea614619456992b7cb9e284d19ef6ad6b1968dcd98cc70675d243b49059"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-138.png",
+      "bytes": 283239,
+      "sha256": "d03e421e9b4ef96852611d4f8f83c6d2806fa3146a20ceefea545fc6bf64f057"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-139.png",
+      "bytes": 298990,
+      "sha256": "7b4a7a2d02844b21f48b5065dc6dbafcf6cb040445d7b1b1605bfdee7f9616ea"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-140.png",
+      "bytes": 282628,
+      "sha256": "7cc09972981fb59f8780676e24a31b0cfab65c3d59ebe8deba5a47525dfa44a3"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-141.png",
+      "bytes": 261158,
+      "sha256": "30136d3d2c324f38a78ce1b653b379d85340d372a0240437bbb504d5cc73cf6f"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-142.png",
+      "bytes": 306841,
+      "sha256": "0b5f661d09ece6d4e2cc6182207404be18d0969322dc85729e0782e080e6929d"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-143.png",
+      "bytes": 289919,
+      "sha256": "d11b50e90b6e15516929e6c467254e73f5ade244c76a4b1edd1cc90e7d886d76"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-144.png",
+      "bytes": 308313,
+      "sha256": "eb003e6ab1f932399ac4cbc2cab6836888aa10af8fb4f2d495faa3a006ea85ff"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-145.png",
+      "bytes": 302278,
+      "sha256": "37580852b1560702a32eb1927c84e5d85db09b09251d521a83f9cc8e70786279"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-146.png",
+      "bytes": 286117,
+      "sha256": "371205caf11c556806534f0650bb6db287a2a0cd91b5847410f13dc9e6371c4f"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-147.png",
+      "bytes": 294760,
+      "sha256": "7285409a04ced426ac262f38276beae30dd9ce9184c92ae41f7d96330bb7ea46"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-148.png",
+      "bytes": 249571,
+      "sha256": "9e715a310f66e2db6daf7e248d7435aa2db2e65e69d37a55d561eacf4f7c20bf"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-149.png",
+      "bytes": 208215,
+      "sha256": "bb43c26372e9194f7fc9335acbce513e01b0478c65292cc88cf7668407debe68"
+    },
+    {
+      "path": "/private/tmp/pf8_round7_fixed_render/manuscript/page-150.png",
+      "bytes": 248919,
+      "sha256": "2e5f884fc743a94cccf968bb39ceb6d607eb3facaa7a799eb680df12c56a8f09"
+    }
+  ],
+  "contact_sheets_inspected": [],
+  "contact_sheet_pages_inspected": [],
+  "findings": [],
+  "observations": [
+    {
+      "pages": [
+        102,
+        103
+      ],
+      "severity": "minor_inherited_layout",
+      "description": "Figure 6.4 is wholly visible on page 102; its caption starts at the top of page 103 before its explanatory text. This inherited figure-caption page break is preserved for these bounded corrections."
+    },
+    {
+      "pages": [
+        141,
+        142
+      ],
+      "severity": "minor_inherited_layout",
+      "description": "Figure 7.3 is wholly visible on page 141; its caption starts at the top of page 142 immediately before the next section. This inherited figure-caption page break is preserved; no claim of flawless global typography is made."
+    }
+  ],
+  "scope": "Actual full-page original-detail PNG inspection of manuscript pages 101\u2013150 using view_image(detail=original), four pages per batch with a final two-page batch. Every page in this exact range was opened; contact thumbnails were not used as a substitute. Checked clipping, overlap, text/table boundaries, headings, figures and footers. No source edits or scientific executions. This record binds the render before the parent-authorized three further text corrections.",
+  "limitations": [
+    "This record covers only pages 101\u2013150; the other manuscript pages are assigned to other reviewers.",
+    "Inherited publication placeholders and contents/page-number field limitations remain outside this bounded layout pass.",
+    "Figure scientific accuracy, biological interpretation and renewed provenance/analysis claims are outside this visual inspection.",
+    "Any subsequent source or render changes require rebinding by verified pixel equivalence or inspection of changed pages."
+  ],
+  "checks": {
+    "source_hash_matches_render_record": true,
+    "rendered_pdf_hash_matches_render_record": true,
+    "every_inspected_png_hash_matches_render_record": true,
+    "exact_original_detail_coverage": [
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150
+    ]
+  },
+  "render_record_at_review": {
+    "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/render_results.json",
+    "bytes": 93579,
+    "sha256": "31d23445da780c106cd2dc28daa1721c9c607f926ae6cfca72ccd786ca13138e"
+  }
+}

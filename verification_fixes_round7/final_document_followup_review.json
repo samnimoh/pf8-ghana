@@ -1,0 +1,542 @@
+{
+  "generated_utc": "2026-10-11T11:52:43.614973+00:00",
+  "reviewer": "/root/final_document_check",
+  "baseline_git_commit": "e7c4cd41b1f631209d25f2ff35eed6ba9c0ec6cd",
+  "status": "bounded_pass",
+  "source_sha256": {
+    "Pf8_Ghana_manuscript_REVISED.docx": "ef57e597b102afd69c64a33e2f984216df5839d2614e0d6c12f4f145aad73437",
+    "article/Additional_file_1.docx": "e356cfec8522d57238ffa8f7a46d1cd6f0899b4431243ec48a7239aac1c34cf0",
+    "article/Pf8_Ghana_article.docx": "5039f0e36592a46851a3c40d0d25339d14f751a62de223b499b6ecc7165a2536",
+    "article/article.md": "a64401e13fbea92184efbc822d8c7b90cf148b50ad4bd073a629f8103911f0b7",
+    "tools/build_article.py": "9d90d195263494b40658623a72405c4132b7d9581549855d65b3ded7362cb776",
+    "tools/make_supplement.py": "2e13d53ec42032bd85a2daf4c7a1482acb4a8d95f7d3b8b43e9260829709b6c0",
+    "verification_fixes_round7/apply_document_fixes.py": "25c237fd09c16c47c4bd5d4b4395a0844ee92d500ab03a3d0a2ad2a6f981b242",
+    "verification_fixes_round7/apply_followup_document_fixes.py": "67ce6df32c61349a920c63912a24ac66d6c6f496f4a9bacc02dedca62ea7259c",
+    "verification_fixes_round7/rebuild_deliverables.py": "dfc526cc854ca1844fb89418cc17e5ed157881ad5956bb0dd531a3d35240a065",
+    "verification_fixes_round7/rebuild_followup_deliverables.py": "58d772a7b7684833f55c7781a81d27cb38df5797c246ed192441688b87737011",
+    "verification_fixes_round7/render_documents.py": "0880fbed750ac5ff95cadbdbb1f3a374666a6aa285e7dc5ee7105a3dc4905d56"
+  },
+  "checks": [
+    {
+      "check": "Pf8_Ghana_manuscript_REVISED.docx: baseline unique quote surveillance correction-record propagation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Pf8_Ghana_manuscript_REVISED.docx: final unique replacement surveillance correction-record propagation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Pf8_Ghana_manuscript_REVISED.docx: paragraph digit preservation surveillance correction-record propagation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Pf8_Ghana_manuscript_REVISED.docx: baseline unique quote pfk13 fixed-codon exception",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Pf8_Ghana_manuscript_REVISED.docx: final unique replacement pfk13 fixed-codon exception",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Pf8_Ghana_manuscript_REVISED.docx: paragraph digit preservation pfk13 fixed-codon exception",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Pf8_Ghana_manuscript_REVISED.docx: baseline unique quote differentiation status cell",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Pf8_Ghana_manuscript_REVISED.docx: final unique replacement differentiation status cell",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Pf8_Ghana_manuscript_REVISED.docx: paragraph digit preservation differentiation status cell",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Pf8_Ghana_manuscript_REVISED.docx: baseline unique quote local withdrawal cue preserving history",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Pf8_Ghana_manuscript_REVISED.docx: final unique replacement local withdrawal cue preserving history",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Pf8_Ghana_manuscript_REVISED.docx: paragraph digit preservation local withdrawal cue preserving history",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Pf8_Ghana_manuscript_REVISED.docx: baseline unique quote Table5.2 fixed-codon correction-record propagation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Pf8_Ghana_manuscript_REVISED.docx: final unique replacement Table5.2 fixed-codon correction-record propagation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Pf8_Ghana_manuscript_REVISED.docx: paragraph digit preservation Table5.2 fixed-codon correction-record propagation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Pf8_Ghana_manuscript_REVISED.docx: baseline unique quote Section5.7.3 fixed-codon claim propagation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Pf8_Ghana_manuscript_REVISED.docx: final unique replacement Section5.7.3 fixed-codon claim propagation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Pf8_Ghana_manuscript_REVISED.docx: paragraph digit preservation Section5.7.3 fixed-codon claim propagation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Pf8_Ghana_manuscript_REVISED.docx: baseline unique quote Explicit count in already qualified fixed-codon exception",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Pf8_Ghana_manuscript_REVISED.docx: final unique replacement Explicit count in already qualified fixed-codon exception",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Pf8_Ghana_manuscript_REVISED.docx: paragraph digit preservation Explicit count in already qualified fixed-codon exception",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Pf8_Ghana_manuscript_REVISED.docx: exactly seven proposed full paragraph replacements",
+      "pass": true,
+      "detail": [
+        1499,
+        1537,
+        2786,
+        3255,
+        3607,
+        3628,
+        4054
+      ]
+    },
+    {
+      "check": "Pf8_Ghana_manuscript_REVISED.docx: every numeric token retained in order",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Pf8_Ghana_manuscript_REVISED.docx: all nontext document XML exact",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Pf8_Ghana_manuscript_REVISED.docx: exact package census retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Pf8_Ghana_manuscript_REVISED.docx: only authorised package parts changed",
+      "pass": true,
+      "detail": [
+        "word/document.xml"
+      ]
+    },
+    {
+      "check": "article/Additional_file_1.docx: baseline unique quote surveillance correction-record propagation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article/Additional_file_1.docx: final unique replacement surveillance correction-record propagation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article/Additional_file_1.docx: paragraph digit preservation surveillance correction-record propagation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article/Additional_file_1.docx: baseline unique quote pfk13 fixed-codon exception",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article/Additional_file_1.docx: final unique replacement pfk13 fixed-codon exception",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article/Additional_file_1.docx: paragraph digit preservation pfk13 fixed-codon exception",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article/Additional_file_1.docx: baseline unique quote differentiation status cell",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article/Additional_file_1.docx: final unique replacement differentiation status cell",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article/Additional_file_1.docx: paragraph digit preservation differentiation status cell",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article/Additional_file_1.docx: baseline unique quote local withdrawal cue preserving history",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article/Additional_file_1.docx: final unique replacement local withdrawal cue preserving history",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article/Additional_file_1.docx: paragraph digit preservation local withdrawal cue preserving history",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article/Additional_file_1.docx: baseline unique quote Table5.2 fixed-codon correction-record propagation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article/Additional_file_1.docx: final unique replacement Table5.2 fixed-codon correction-record propagation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article/Additional_file_1.docx: paragraph digit preservation Table5.2 fixed-codon correction-record propagation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article/Additional_file_1.docx: baseline unique quote Section5.7.3 fixed-codon claim propagation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article/Additional_file_1.docx: final unique replacement Section5.7.3 fixed-codon claim propagation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article/Additional_file_1.docx: paragraph digit preservation Section5.7.3 fixed-codon claim propagation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article/Additional_file_1.docx: baseline unique quote Explicit count in already qualified fixed-codon exception",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article/Additional_file_1.docx: final unique replacement Explicit count in already qualified fixed-codon exception",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article/Additional_file_1.docx: paragraph digit preservation Explicit count in already qualified fixed-codon exception",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article/Additional_file_1.docx: exactly seven proposed full paragraph replacements",
+      "pass": true,
+      "detail": [
+        1503,
+        1541,
+        2790,
+        3259,
+        3611,
+        3632,
+        4058
+      ]
+    },
+    {
+      "check": "article/Additional_file_1.docx: every numeric token retained in order",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article/Additional_file_1.docx: all nontext document XML exact",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article/Additional_file_1.docx: exact package census retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article/Additional_file_1.docx: only authorised package parts changed",
+      "pass": true,
+      "detail": [
+        "docProps/core.xml",
+        "word/document.xml"
+      ]
+    },
+    {
+      "check": "supplement core title equals unique nonempty visible title",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "supplement other core fields retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Markdown source original unique accepted operation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Markdown source original unique accepted operation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Markdown source original unique accepted operation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Markdown source exactly three authorised operations",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Markdown physical table marker order",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Markdown first unique table citation order",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article actual physical table order",
+      "pass": true,
+      "detail": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "check": "article Table 1 every scientific cell exact",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article Table 1 exact authorised header text",
+      "pass": true,
+      "detail": [
+        "Agro-ecological zone",
+        "Isolates",
+        "Administrative region(s)",
+        "No. studies",
+        "Dominant study (share)",
+        "Collection years",
+        "Polyclonal fraction (QC cohort)"
+      ]
+    },
+    {
+      "check": "article Table 2 every scientific cell exact",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article Table 2 exact authorised header text",
+      "pass": true,
+      "detail": [
+        "Zone pair",
+        "n (first zone)",
+        "n (second zone)",
+        "FST",
+        "95% CI",
+        "Excludes zero"
+      ]
+    },
+    {
+      "check": "article Table 3 every scientific cell exact",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article Table 3 exact authorised header text",
+      "pass": true,
+      "detail": [
+        "Marker",
+        "Overall",
+        "n",
+        "Coastal savanna",
+        "Deciduous forest",
+        "Guinea savanna",
+        "Transitional",
+        "χ² p"
+      ]
+    },
+    {
+      "check": "article Table 4 every scientific cell exact",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article Table 4 exact authorised header text",
+      "pass": true,
+      "detail": [
+        "Scenario",
+        "Isolates",
+        "SNPs",
+        "Max FST",
+        "Mantel r",
+        "Mantel p",
+        "p < 0.05"
+      ]
+    },
+    {
+      "check": "article paragraph multiset exact except intro and two zone headers",
+      "pass": true,
+      "detail": {
+        "removed": {
+          "This study addresses three questions. First, how differentiated are Ghana's agro-ecological zones at common variants, measured as pairwise Hudson FST with block-jackknife confidence intervals and examined alongside ordination of the published genotype distances (Fig. 2, Table 2)? Second, does differentiation scale with geographic distance between populations, and is any such relationship robust to the thresholds and spatial units used to define the analysis set (Table 4)? Third, what are the frequencies, in isolates collected between 2009 and 2021, of validated, candidate and potential resistance markers across the nine genes pfk13, pfdhfr, pfdhps, pfcrt, pfmdr1, pfmdr2, pfaat1, pfcoronin and pfap2mu, and do those frequencies vary between zones (Table 3)? A genome-wide scan for differentiation outliers is used to place the resistance loci in the context of the strongest zone-associated signals in the panel (Fig. 3).": 1,
+          "n": 2
+        },
+        "added": {
+          "This study addresses three questions. First, how differentiated are Ghana's agro-ecological zones at common variants, measured as pairwise Hudson FST with block-jackknife confidence intervals and examined alongside ordination of the published genotype distances (Fig. 2, Table 2)? Second, does differentiation scale with geographic distance between populations, and is any such relationship robust to the thresholds and spatial units used to define the analysis set? Third, what are the frequencies, in isolates collected between 2009 and 2021, of validated, candidate and potential resistance markers across the nine genes pfk13, pfdhfr, pfdhps, pfcrt, pfmdr1, pfmdr2, pfaat1, pfcoronin and pfap2mu, and do those frequencies vary between zones (Table 3)? A genome-wide scan for differentiation outliers is used to place the resistance loci in the context of the strongest zone-associated signals in the panel (Fig. 3).": 1,
+          "n (first zone)": 1,
+          "n (second zone)": 1
+        }
+      }
+    },
+    {
+      "check": "article core title matches visible title",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article other core metadata unchanged",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article unchanged figure word/media/93b6764f7192ce47a8c3257fe6d80a68d84833ff.png",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article unchanged figure word/media/c8eab09bbe813dc6fe1001e38fae01b5b7482cd0.png",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "article unchanged figure word/media/218857879d6287b87460540cea2d8ec053df7685.png",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "findings": [],
+  "pfk13_scope_sweep_candidates": [
+    {
+      "main_paragraph_index_zero_based": 144,
+      "text": "[Calculated] Principal findings: drug-resistance markers. The previous version's resistance findings were affected by a defect in how markers were identified - the panel matched SnpEff protein-change strings, which can see neither a resistance allele that is itself the reference residue nor a residue that requires two nucleotide changes in one codon - and the panel has been rebuilt by codon reconstruction, which corrects it. Two findings follow directly from the rebuild. pfdhps A437G, wholly absent from the previous panel, stands at 0.897 for G437 (n = 1,892; deciduous forest 0.964, coastal savanna 0.941, Guinea savanna 0.875, transitional zone 0.800; chi-square p = 1.2 x 10 to the -6); the official Pf8 methodology states that the 3D7 sequence translates as a G at 437 and that this is the mutant allele, so the resistance residue is the reference residue and no ALT annotation for it can exist. And the former \"naming discrepancy\" at pfcrt 75 was never a naming matter: N75E requires two SNPs in one codon (403621 A>G, annotated Asn75Asp; 403623 T>A, annotated Asn75Lys), and neither annotation names it. Haplotypes are now counted within isolates on complete cases. The pfdhfr IRN triple mutant is 0.771 (n = 1,876; 95% CI 0.751-0.789) - not the marginal range 0.786-0.908 previously quoted, and, as it must be, below its lowest component on the same complete-case set (51I = 0.788); NRN sits at 0.116 and the fully wild-type NCS at 0.091, so it is not a near-fixed single haplotype, and the quadruple IRNL is 0.000. pfcrt CVIET is 0.071 and is demonstrably a single unit: only CVMNK (0.929) and CVIET occur at codons 72-76, with nothing intermediate. pfdhps GE (437G + 540E) is 0.010. The pfdhfr marginals remain high and lowest in Guinea savanna (S108N 0.908 overall / 0.885 Guinea savanna; C59R 0.886 / 0.864; N51I 0.786 / 0.764; chi-square p = 9.4 x 10 to the -7, 4.8 x 10 to the -5 and 2.4 x 10 to the -4), with the transitional zone (n = 25) at or near the top of all three. The pfk13 panel was rebuilt from the WHO compendium v1.0 (December 2025) and covers all 14 validated markers (F446I, N458Y, C469Y, M476I, Y493H, G533S, R539T, I543T, P553L, R561H, P574L, C580Y, R622I, A675V) and all 6 candidates (E252Q, P441L, C469F, N537I, G538V, V568G); the old list was written from memory, misclassified P441L and C469F as validated when WHO classes them as candidate, and omitted P574L, G533S and R622I. All 23 pfk13 codons carry no screened resistance allele: twenty-two are fixed at the reference residue, and codon 458 is at 0.9995 on a single Asn458Asp call, which is not the validated N458Y, on 1,845 to 1,876 isolates called per codon of 1,900, across a 2009-2021 sampling period - a tested historical negative, not a statement about the present. Validation is now per sample rather than per marginal frequency: 47,012 of 47,012 calls agree with MalariaGEN's published genotypes, 100.0000% across 25 markers, codon 75 included."
+    },
+    {
+      "main_paragraph_index_zero_based": 170,
+      "text": "Answered, on a rebuilt panel. 19 XtX outliers above the calibrated threshold, 13 of which pass FDR 10%. Seventeen of the 19 fall in 13 annotated genes; two are intergenic, including one (XtX 20.79, q = 0.005) that ranks fifth overall and survives FDR correction. The set is not an artefact - every significant quality difference favours the outliers (VQSLOD p = 0.008, QD p = 0.016, QUAL p = 0.007), none has MQ < 50, strand bias or read-position bias, all 19 are RegionType Core, and the eight exported-protein SNPs are the cleanest subset in the panel - but two adjacent chromosome-11 sites, that fifth-ranked intergenic SNP and SNRPF Pf3D7_11_v3:1,054,078 (q = 0.031), are downgraded to lower confidence on ExcessHet and InbreedingCoeff grounds. pfaat1 Ser258Leu falls from 0.824 in coastal savanna to 0.544 in Guinea savanna (chi-square p = 1.9 x 10 to the -18). pfdhps G437 - a locus absent from the superseded panel - stands at 0.897 (n = 1,892; p = 1.2 x 10 to the -6). The pfdhfr IRN haplotype is 0.771 on complete cases (n = 1,876; CI 0.751-0.789), not the 0.79-0.91 marginal range previously quoted, and pfcrt CVIET is 0.071. All 23 pfk13 codons - covering the complete WHO-validated set of 14 and all 6 candidates, which between them occupy 19 distinct codons - carry no screened resistance allele: twenty-two are fixed at the reference residue, and codon 458 is at 0.9995 on a single Asn458Asp call, which is not the validated N458Y. The denominators are 1,845 to 1,876 isolates called per codon, over 2009-2021. Agreement with MalariaGEN is 47,012 of 47,012 calls across 25 markers."
+    },
+    {
+      "main_paragraph_index_zero_based": 731,
+      "text": "[Observed] The cascade, defined once. Stage 10's panel held 44 canonical codon-allele records, covering 41 distinct protein changes, in eight of the nine panel genes (pfcoronin contributed none); 21 were polymorphic in these 1,900 isolates; 6 of the 21 survived the ingest mask — the in_genomewide_scan field, defined at step10_resistance_panel.py:349 as numalt == 1, i.e. \"would have survived the ingest filter\"; and 3 reached the MAF-filtered scan matrix: pfdhfr C59R, pfdhfr N51I and pfaat1 S258L. The other three that passed the mask — pfcrt I356T, pfmdr1 D1246Y and pfcrt N326S — were then cut by MAF ≥ 0.05 at frequencies of 0.016, 0.011 and 0.008. These four numbers (44, 21, 6, 3) carry exactly this meaning wherever they appear in this manuscript, and the Abstract, Table 1.1, Section 6.8.3 and Section 10.1 use this wording. In particular, the genome-wide scan did test three of the 21 polymorphic canonical codons, and no pfcrt, pfmdr1, pfdhps or pfk13 codon reached the MAF-filtered scan matrix — pfdhps because nothing survived the ingest mask, the others because what survived was either too rare (pfcrt I356T, pfcrt N326S and pfmdr1 D1246Y all passed the mask, reached the genome-wide store and were then cut by MAF at 0.016, 0.011 and 0.008) or monomorphic here (six pfk13 codons — F446I, P441L, Y493H, P553L, R561H, A675V — passed the mask and were fetched and found invariant). \"Could not test at all\" would be true of the final MAF-filtered scan matrix but false of ascertainment, which is the distinction this paragraph exists to draw, so the stronger wording is not used."
+    },
+    {
+      "main_paragraph_index_zero_based": 1521,
+      "text": "[Observed] A new script, step10_resistance_panel.py, re-fetched the nine panel genes with the numalt and is_snp restrictions lifted; it has itself been superseded by step12_codon_panel.py, which identifies codons by genomic position rather than by annotation string (Section 5.7.3). The final panel genotypes 57 codons across the nine genes, of which 24 are polymorphic. The recovered panel does not merely fill a gap; it reverses the finding. pfaat1 S258L — a variant with a demonstrated but modest, epistasis- and background-dependent effect that potentiates chloroquine resistance, and which is named twice in the project's own thesis proposal — runs from 0.824 in coastal savanna to 0.544 in Guinea savanna (0.735 deciduous forest, 0.640 transitional zone; 0.609 overall, n = 1,896), with a χ² heterogeneity p of 1.9 × 10⁻¹⁸ across zones, and carries q = 0.0049 in the XtX scan. pfdhps A437G, which was absent from the panel altogether until the fourth round, stands at G437 = 0.897 (n = 1,892) with χ² p = 1.2 × 10⁻⁶. The pfdhfr triple mutant IRN is common but not near-fixed, at 0.771 overall (n = 1,876) and 0.867, 0.788, 0.750 and 0.880 in coastal savanna, deciduous forest, Guinea savanna and the transitional zone respectively. Meanwhile all 23 pfk13 codons genotyped, covering every WHO validated and candidate variant, carry no screened resistance allele — twenty-two fixed at the reference residue, and codon 458 at 0.9995 on a single Asn458Asp call, which is not the validated N458Y — which converts an untested absence into a genuine tested negative, on 1,845 to 1,876 isolates called per codon and for the 2009–2021 sampling period."
+    },
+    {
+      "main_paragraph_index_zero_based": 3219,
+      "text": "[Observed] The panel in the previous draft was the wrong panel, and this section is a replacement rather than a revision. An external critique raised five points about it; all five were upheld, and four were defects in code. The panel is now produced by step12_codon_panel.py, which maps each requested codon to its three genomic positions through the CDS, collects every variant record at those positions regardless of numalt or is_snp, applies each isolate's alleles to the reference codon and translates the result. It reports the full residue spectrum including the reference residue. The panel covers 57 codons across nine genes on the 1,900 analysed isolates, of which 24 are polymorphic and 33 monomorphic; a mixed call makes a codon uncalled rather than being resolved to a residue, so the denominator is per codon, 1,834–1,900 called, and is stated with every frequency below. Six of the nine genes sit on the plus strand (pfap2mu, pfcoronin, pfcrt, pfdhfr, pfdhps, pfmdr1) and three on the minus strand (pfaat1, pfk13, pfmdr2), which is the direction the reconstruction has to get right. Every number in this section comes from that run; nothing from the previous panel is carried forward."
+    },
+    {
+      "main_paragraph_index_zero_based": 3520,
+      "text": "[Observed] What has been fixed since the previous draft. Four defects that made the pipeline unreproducible or silently wrong have been corrected. (i) BayPass was non-deterministic across threads despite its fixed seed: the 8-thread manuscript run and an 8-thread re-run of the same command gave different thresholds and different outlier counts. It now runs single-threaded and is bitwise stable; the earlier multi-threaded outputs are archived rather than overwritten, and the three surviving threshold values are labelled in the note to Table 8.1. (ii) The Mantel test's silent flooring of negative FST values to zero is now disclosed, the affected pairs are named in the output JSON, and both censored and uncensored statistics are reported — which is how it became visible that the uncensored statistic clears p < 0.05 in only one of the six threshold scenarios (Table 8.3). (iii) The \"skip if output exists\" guards in stages 5b, 7b and 8b did not check whether the input had changed, so when the SNP panel grew from 3,359 to 3,916 the ADMIXTURE and TreeMix stages reused the previous day's results and reported success. Only stage 8 caught it, because it asserts that its position table and the BayPass output have matching row counts. All three guards now require the output to be newer than its input. (iv) The marker panel no longer identifies codons by annotation string. step12_codon_panel.py reconstructs each codon from the CDS and reference genome and emits the full residue spectrum including the reference residue, with a per-codon called count; it is validated call by call against MalariaGEN's published genotypes at the 25 of its 57 codons MalariaGEN publishes per sample (47,012 of 47,012 agree), leaving 32 codons, every pfk13 codon among them, with no independent per-sample check and its pfk13 list is taken from the WHO compendium v1.0 rather than written by hand. Defects (iii) and (iv) are the most dangerous kind: both produced no error and well-formed output, and in both cases wrong numbers would have been reported as though they were right."
+    },
+    {
+      "main_paragraph_index_zero_based": 3591,
+      "text": "[Calculated] The panel as it now stands. step12_codon_panel.py maps each requested codon to its three genomic positions through the CDS, collects every variant record at those positions regardless of numalt or is_snp, applies each isolate's alleles to the reference codon read from the genome, and translates. It reports the full residue spectrum at every codon, the reference residue included, so a resistance allele cannot hide in the reference and a residue requiring two changes in one codon cannot be missed; a mixed call makes a codon uncalled rather than being assigned a residue. The panel covers 57 codons across all nine panel genes — 171 genomic positions, 125 variant records, every codon carrying at least one record — in the same 1,900 isolates. Of the 57 codons, 24 are polymorphic and 33 are fixed at the reference residue. Two statements from the previous version are retired by this: that pfcoronin \"contributed no canonical codon\" (it contributes three, G50, R100 and E107, all fixed at the reference residue), and the \"44 canonical codon-allele records\" count, which was a count of annotation records and not of codons. The scan-side ascertainment cascade is unaffected and is stated once here: of the panel's 171 genomic positions only four ever reached the MAF-filtered scan matrix — pfdhfr Cys59Arg (XtX 9.11, q = 0.43), pfdhfr Asn51Ile (XtX 8.15, q = 0.67), pfaat1 Ser258Leu (XtX 24.20, q = 0.0049) and, fourth, Pf3D7_07_v3:403623, the second of pfcrt codon 75's two variant positions (BayPass MRK 1406, M_XtX 4.18, XtXst 6.21 against the threshold 10.840; M_P 0.914, so MAF 0.086 cleared the 0.05 cut). The previous count of three was carried over from step10's annotation-matched panel, which held 403621 but never 403623 at all — a residual instance of the very two-SNP-codon failure mode the rebuild was written to fix. Three more passed the ingest mask and were then cut by MAF >= 0.05: pfcrt Ile356Thr at 0.016, pfmdr1 Asp1246Tyr at 0.011 and pfcrt Asn326Ser at 0.0005 — the last of which the previous version reported as 0.008, which was also wrong. The distinction worth drawing explicitly therefore survives, with its scope corrected: the scan's silence at pfdhfr 51 and 59 and at pfcrt 75 is a tested negative, because those were the codons in the matrix and all three came back firmly null, whereas its silence on pfmdr1, pfdhps and pfk13 is an ascertainment artefact, because it contributes no scanned codon position and never tested them at all. pfcrt does not belong on the artefact side: codon 75 was tested. Nor can \"the antifolate codons\" stand as a blanket term here — only two of the five pfdhfr codons reached the matrix, none of the six pfdhps codons did, and pfdhps is itself an antifolate target."
+    },
+    {
+      "main_paragraph_index_zero_based": 3599,
+      "text": "[Observed] Clean negative: no artemisinin-resistance residue anywhere in the panel. The pfk13 panel was rebuilt from the WHO compendium of molecular markers, v1.0 (December 2025), after the previous list — written from memory — was found to contain 13 distinct changes rather than the claimed 14, to misclassify P441L and C469F as validated when both are candidate, and to omit P574L, G533S and R622I; R622I was requested but never retrieved, so it had become a silent non-result. The panel now covers all 14 WHO-validated markers (F446I, N458Y, C469Y, M476I, Y493H, G533S, R539T, I543T, P553L, R561H, P574L, C580Y, R622I, A675V), all 6 candidates (E252Q, P441L, C469F, N537I, G538V, V568G) — 20 variants which, because C469Y and C469F share codon 469, occupy 19 distinct codons — plus four further potential-tier codons in the same region (449, 481, 515, 527), giving 23 codons in all (19 + 4). The two WHO tiers are kept distinct throughout: the six candidates are candidates, not validated. Twenty-two of the 23 codons are fixed at the reference residue, and the twenty-third, codon 458, sits at 0.9995: of its 1,866 called isolates 1,865 carry Asn and one carries Asp — which is not N458Y, the validated residue. No validated, candidate or potential pfk13 resistance residue was observed in a single isolate. Two caveats belong in the same breath as the result. The denominator is per codon, 1,845 to 1,876 of the 1,900 isolates called, not \"all 1,900 at every codon\" as the previous version said, so between 24 and 55 isolates are uncalled at each codon. And the sampling period is 2009–2021, so this is a historical negative and not a statement about the present."
+    },
+    {
+      "main_paragraph_index_zero_based": 3628,
+      "text": "Yes, and the panel behind this answer has now been rebuilt twice. pfdhps G437 is 0.897 overall and zone-structured (0.964 deciduous forest, 0.941 coastal savanna, 0.875 Guinea savanna, 0.800 transitional; p = 1.2 x 10-6) - a locus absent from the previous panel entirely, because the resistance residue is the 3D7 reference residue. pfaat1 S258L runs 0.824 coastal to 0.544 Guinea savanna (p = 1.9 x 10-18, n = 1,896). The pfdhfr triple-mutant haplotype IRN is 0.771 on 1,876 complete cases (CI 0.751-0.789), not the 0.786-0.908 marginal range previously quoted, with NRN 0.116 and wild-type NCS 0.091; its component codons differ across zones at p <= 2.43 x 10-4 (the largest of the three being 2.425 x 10-4 at Asn51Ile). pfcrt CVIET is 0.071 and is genuinely a unit: only CVMNK (0.929) and CVIET occur. All 23 pfk13 codons - all 14 WHO-validated and all 6 candidate variants, which share codon 469 and so occupy 19 codons, plus four potential-tier codons - comprise twenty-two codons fixed at the reference residue and codon 458 at 0.9995 (its single alternative call being Asn458Asp and not the validated N458Y) on 1,845-1,876 called isolates per codon, over 2009-2021. This question was originally reported as null; the null was a filter artefact, and the first correction of it was itself incomplete."
+    }
+  ],
+  "scope_bounds": "Exact seven substitutions and propagation, digit and OOXML structure preservation, article table/citation/metadata checks. These are editorial consistency checks only. No scientific pipeline or Lean execution; no whole-document scientific certification; visual QA is separate.",
+  "historical_record_preserved": "verification_fixes_round7/final_document_review.json retains the initial55check revision and is not treated as the final source review.",
+  "review_checker": {
+    "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/final_document_followup_checker.py",
+    "sha256": "3b221117a66dbd0d9f042e7a1cca147760c987c03c0bc6db9a70aee440492246"
+  },
+  "manual_concept_review": {
+    "near_panmixia": {
+      "main_indices": [
+        981,
+        3607,
+        3977
+      ],
+      "disposition": "The only current occurrences explicitly reject the estimate or identify the label as withdrawn while preserving historical account."
+    },
+    "surveillance": {
+      "main_indices": [
+        146,
+        3211,
+        3213,
+        3217,
+        3606,
+        3649,
+        4054
+      ],
+      "disposition": "Common-variant scope, statistically detectable differentiation, and rejection of sparse-sampling adequacy are explicit and consistent in the conclusion/body/correction record. The old TableF.2 defect-description quotation is historical and preserved."
+    },
+    "fixed_codon_followup": {
+      "main_indices": [
+        1499,
+        1537,
+        2786,
+        3628
+      ],
+      "disposition": "All now explicitly count twenty-two fixed codons, preserving the codon458 exception, recorded rounded values, historical period and per-codon denominator. The Section6.9.8 exception was already explicit and is clarified, not a new finding."
+    },
+    "remaining_pfk13_candidates": "All listed broad-search candidates were read in paragraph context; they either correctly distinguish the screened-resistance negative from codon fixation or describe other panel counts/historical subsets, not all23 fixed."
+  },
+  "scope_note": "The initial55check report is preserved as an intermediate record; its focused sweep missed two equivalent unqualified claims subsequently found during page review. This final review binds the complete seven-proposal delta and does not repeat the initial only-one contradiction assertion."
+}

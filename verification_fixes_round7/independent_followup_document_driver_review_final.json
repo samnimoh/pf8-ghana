@@ -1,0 +1,50 @@
+{
+  "generated_utc": "2026-10-11T11:50:31.035614+00:00",
+  "reviewer": "/root/final_document_check",
+  "driver": {
+    "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/apply_followup_document_fixes.py",
+    "bytes": 3092,
+    "sha256": "67ce6df32c61349a920c63912a24ac66d6c6f496f4a9bacc02dedca62ea7259c"
+  },
+  "helper": {
+    "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/apply_document_fixes.py",
+    "bytes": 6246,
+    "sha256": "25c237fd09c16c47c4bd5d4b4395a0844ee92d500ab03a3d0a2ad2a6f981b242"
+  },
+  "proposal": {
+    "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/proposed_document_followup_edits.json",
+    "bytes": 6713,
+    "sha256": "9af8a3cb600eb452f75871b20d1373d1ef7ab041210bf4a8c4a6bcf8f57f5b39"
+  },
+  "status": "bounded_pass",
+  "findings": [],
+  "checks": [
+    {
+      "concept": "Table5.2 fixed-codon correction-record propagation",
+      "unique_baseline_quote": true,
+      "in_memory_exact_replacement": true,
+      "all_nontext_run_xml_preserved": true,
+      "all_digit_tokens_preserved": true
+    },
+    {
+      "concept": "Section5.7.3 fixed-codon claim propagation",
+      "unique_baseline_quote": true,
+      "in_memory_exact_replacement": true,
+      "all_nontext_run_xml_preserved": true,
+      "all_digit_tokens_preserved": true
+    },
+    {
+      "concept": "Explicit count in already qualified fixed-codon exception",
+      "unique_baseline_quote": true,
+      "in_memory_exact_replacement": true,
+      "all_nontext_run_xml_preserved": true,
+      "all_digit_tokens_preserved": true
+    }
+  ],
+  "scope": "Final three-proposal in-memory dry run after parent removed a double colon and corrected proposal metadata. Prior review preserved. No DOCX authored or scientific pipeline executed.",
+  "observations": [
+    "All three exact quotes are unique in the baseline; updated replacements match in-memory run-preserving patch results, including final Section6.9.8 wording.",
+    "Driver source remains the same reviewed source. It gates source SHA/quote count/numeric tokens, stages beside source, fsyncs/CRC-checks package and preserves all other member bytes before atomic replacement.",
+    "Final real source outcomes are separately bound in final_document_followup_review.json."
+  ]
+}

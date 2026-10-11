@@ -1,0 +1,131 @@
+{
+  "generated_utc": "2026-10-11T12:01:47.155492+00:00",
+  "reviewer": "/root/final_document_check",
+  "status": "bounded_pass",
+  "findings": [],
+  "source": {
+    "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/finalize_fixes.py",
+    "bytes": 9290,
+    "sha256": "25bbf8b6989d9b48fe31ea65c94b8d4542a94960259946a5f3363f43981345b6"
+  },
+  "reviewed_manifest": {
+    "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/fix_manifest.json",
+    "bytes": 10410,
+    "sha256": "0b20ce5c0e9657dbe24625577579e9ec4a1fc060ad5a673d115651a7c833b6fa"
+  },
+  "reviewed_publication_record": {
+    "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/pdf_publication_results.json",
+    "bytes": 3340,
+    "sha256": "156d76de8c7e3d95a3da6e3d35c6337c09c77b5b3ed512a2abd4bdef68e2d069"
+  },
+  "actual_deliverable_checks": [
+    {
+      "label": "article",
+      "docx": {
+        "path": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.docx",
+        "bytes": 1193292,
+        "sha256": "5039f0e36592a46851a3c40d0d25339d14f751a62de223b499b6ecc7165a2536"
+      },
+      "published_pdf": {
+        "path": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.pdf",
+        "bytes": 708609,
+        "sha256": "af7061e4e49faf04d25aa23a2e5dd7faf44844e1e162cd146166b0b807630503"
+      },
+      "rendered_pdf": {
+        "path": "/private/tmp/pf8_round7_fixed_render/article/Pf8_Ghana_article.pdf",
+        "bytes": 708609,
+        "sha256": "af7061e4e49faf04d25aa23a2e5dd7faf44844e1e162cd146166b0b807630503"
+      },
+      "pages": 18,
+      "exact_published_render_bytes_and_complete_current_png_coverage": true
+    },
+    {
+      "label": "manuscript",
+      "docx": {
+        "path": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx",
+        "bytes": 4048289,
+        "sha256": "ef57e597b102afd69c64a33e2f984216df5839d2614e0d6c12f4f145aad73437"
+      },
+      "published_pdf": {
+        "path": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.pdf",
+        "bytes": 5115276,
+        "sha256": "98cc3c53c7e161684d3c6b5d2bf418861110567791abdfc3c92d8f7e254a2c08"
+      },
+      "rendered_pdf": {
+        "path": "/private/tmp/pf8_round7_fixed_render/manuscript/Pf8_Ghana_manuscript_REVISED.pdf",
+        "bytes": 5115276,
+        "sha256": "98cc3c53c7e161684d3c6b5d2bf418861110567791abdfc3c92d8f7e254a2c08"
+      },
+      "pages": 197,
+      "exact_published_render_bytes_and_complete_current_png_coverage": true
+    },
+    {
+      "label": "supplement",
+      "docx": {
+        "path": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx",
+        "bytes": 4049115,
+        "sha256": "e356cfec8522d57238ffa8f7a46d1cd6f0899b4431243ec48a7239aac1c34cf0"
+      },
+      "published_pdf": {
+        "path": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.pdf",
+        "bytes": 5119155,
+        "sha256": "6cb0a9bd1c65fba214e4ab6b65e5a539f6693173ab7c8ed41fa8cc2589657e89"
+      },
+      "rendered_pdf": {
+        "path": "/private/tmp/pf8_round7_fixed_render/supplement/Additional_file_1.pdf",
+        "bytes": 5119155,
+        "sha256": "6cb0a9bd1c65fba214e4ab6b65e5a539f6693173ab7c8ed41fa8cc2589657e89"
+      },
+      "pages": 198,
+      "exact_published_render_bytes_and_complete_current_png_coverage": true
+    }
+  ],
+  "current_evidence_identities_verified": 22,
+  "current_tool_identities_verified": 3,
+  "actual_page_images_verified": 413,
+  "post_publication_protection_record": {
+    "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/post_publication_protection_results.json",
+    "bytes": 8674,
+    "sha256": "691619bc598a3863c6406ad5eb6935ece1e5a01411e80d26999d1df573f90116"
+  },
+  "resolved_initial_findings": [
+    {
+      "id": "regression_success_not_gated",
+      "status": "resolved",
+      "evidence": "Final source checks all_passed, every passed row, exact21+38 historical source binding, and8+12 current source binding before the revision-scoped claim."
+    },
+    {
+      "id": "independent_closure_currentness_not_gated",
+      "status": "resolved",
+      "evidence": "Final source checks protection source/validation/script identities and reconciliation script/report/manifests/initial-final/fresh record identities. All current actual bindings independently verified."
+    }
+  ],
+  "counts_verified": {
+    "document_checks": 75,
+    "package_protection_checks": 17,
+    "pages_covered": 413,
+    "identical_prior_inspected_pixels": 405,
+    "fresh_changed_page_inspections": 8
+  },
+  "test_revisions_verified": {
+    "prior_source_sha256": "55a7b960ab42804d814e783d660b8573985d17fd0330abeac5b650311ed2ef2f",
+    "prior_passing_primary_rows": 59,
+    "current_source_sha256": "9d90d195263494b40658623a72405c4132b7d9581549855d65b3ded7362cb776",
+    "current_targeted_checks": 8,
+    "current_independent_cases": 12
+  },
+  "observations": [
+    "All3publishedPDFs are exact byte copies of the final reviewed render files, beside the correct DOCX, with page counts18/197/198.",
+    "All22selected manifest evidence identities, all3tool identities, canonical facts and appended verification notes match actual current files. The manifest is selective and does not claim a complete evidence-directory census.",
+    "Scientific numbers and source invariants remain covered by the unchanged75check final document review; no scientific recalculation or implementation proof is implied.",
+    "Historical builder results remain scoped to55a7 and current8check/12case results to9d90; the earlier limited/failed independent report is preserved rather than called currentpass.",
+    "The earlier initial finalization report remains preserved; this final review replaces the needs-fix status for the actual patched source and completed publication."
+  ],
+  "scope": "Read-only independent inspection of patched finalization code, actual final manifest/publication/source/PDF/evidence identities and all413currentimage identities. The reviewer did not run the real finalizer, publisher, document builder or scientific pipeline.",
+  "limits": [
+    "This report binds the current manifest hash and is intentionally not included in that manifest evidence list, avoiding a hash cycle. Do not regenerate the manifest after this bound review without a new identity check.",
+    "Current gates validate trusted review assertions, identities and coverage; they do not themselves prove every observer opened an image or certify every scientific claim.",
+    "PDF replacement remains atomic per file; final manifest write is direct, not crash-atomic. The completed actual manifest and publication set parse and match now.",
+    "Unfilled publication placeholders, inherited caption/page breaks, historical provenance gaps and absent Python-to-Lean refinement remain outside these fixes."
+  ]
+}

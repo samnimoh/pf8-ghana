@@ -1,0 +1,331 @@
+{
+  "generated_utc": "2026-10-11T11:56:20.219739+00:00",
+  "reviewer": "/root/final_document_check",
+  "status": "bounded_pass",
+  "findings": [],
+  "reviewed_scripts": [
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/verify_documents.py",
+      "bytes": 4481,
+      "sha256": "b0e1085e6657baa704f45175fc240f5040fb6ff40084b38c14747284f9022f0b"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/publish_reviewed_pdfs.py",
+      "bytes": 4802,
+      "sha256": "f78cf3fccdb4ec80824cc4e784941775de2af5ca1be0d2c5ace97db4b3db69df"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/merge_visual_reviews.py",
+      "bytes": 3791,
+      "sha256": "f352ab0ced648a4563a04b6cda6db44015000b9975833f282cc453f5ae6ed268"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/reconcile_visual_reviews.py",
+      "bytes": 8039,
+      "sha256": "251520c055e2eb7cc5d7b329a627dbef2e009afb1840713386d2afb9a6bc4ebf"
+    }
+  ],
+  "bound_sources": {
+    "Pf8_Ghana_manuscript_REVISED.docx": "ef57e597b102afd69c64a33e2f984216df5839d2614e0d6c12f4f145aad73437",
+    "article/Additional_file_1.docx": "e356cfec8522d57238ffa8f7a46d1cd6f0899b4431243ec48a7239aac1c34cf0",
+    "article/Pf8_Ghana_article.docx": "5039f0e36592a46851a3c40d0d25339d14f751a62de223b499b6ecc7165a2536",
+    "article/article.md": "a64401e13fbea92184efbc822d8c7b90cf148b50ad4bd073a629f8103911f0b7",
+    "tools/build_article.py": "9d90d195263494b40658623a72405c4132b7d9581549855d65b3ded7362cb776",
+    "tools/make_supplement.py": "2e13d53ec42032bd85a2daf4c7a1482acb4a8d95f7d3b8b43e9260829709b6c0",
+    "verification_fixes_round7/apply_document_fixes.py": "25c237fd09c16c47c4bd5d4b4395a0844ee92d500ab03a3d0a2ad2a6f981b242",
+    "verification_fixes_round7/apply_followup_document_fixes.py": "67ce6df32c61349a920c63912a24ac66d6c6f496f4a9bacc02dedca62ea7259c",
+    "verification_fixes_round7/rebuild_deliverables.py": "dfc526cc854ca1844fb89418cc17e5ed157881ad5956bb0dd531a3d35240a065",
+    "verification_fixes_round7/rebuild_followup_deliverables.py": "58d772a7b7684833f55c7781a81d27cb38df5797c246ed192441688b87737011",
+    "verification_fixes_round7/render_documents.py": "0880fbed750ac5ff95cadbdbb1f3a374666a6aa285e7dc5ee7105a3dc4905d56"
+  },
+  "validation_record": {
+    "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/document_validation.json",
+    "bytes": 4489,
+    "sha256": "bca59ccd303a4bc10c83c8cf80fb2f90fe8a857433a5869af00ac3323b6bfe56"
+  },
+  "independent_package_checks": [
+    {
+      "path": "Pf8_Ghana_manuscript_REVISED.docx",
+      "package_sha256": "ef57e597b102afd69c64a33e2f984216df5839d2614e0d6c12f4f145aad73437",
+      "media_parts": 10,
+      "crc_unique_parts_xml_and_exact_media_preservation": true
+    },
+    {
+      "path": "article/Additional_file_1.docx",
+      "package_sha256": "e356cfec8522d57238ffa8f7a46d1cd6f0899b4431243ec48a7239aac1c34cf0",
+      "media_parts": 10,
+      "crc_unique_parts_xml_and_exact_media_preservation": true
+    },
+    {
+      "path": "article/Pf8_Ghana_article.docx",
+      "package_sha256": "5039f0e36592a46851a3c40d0d25339d14f751a62de223b499b6ecc7165a2536",
+      "media_parts": 3,
+      "crc_unique_parts_xml_and_exact_media_preservation": true
+    }
+  ],
+  "visual_delta_identity_checks": [
+    {
+      "label": "article",
+      "pages": 18,
+      "actual_changed_pages": [],
+      "all_backup_and_current_png_bytes_verified": true
+    },
+    {
+      "label": "manuscript",
+      "pages": 197,
+      "actual_changed_pages": [
+        83,
+        88,
+        127,
+        128
+      ],
+      "all_backup_and_current_png_bytes_verified": true
+    },
+    {
+      "label": "supplement",
+      "pages": 198,
+      "actual_changed_pages": [
+        84,
+        89,
+        128,
+        129
+      ],
+      "all_backup_and_current_png_bytes_verified": true
+    }
+  ],
+  "notes": {
+    "baseline_preserved_as_exact_prefix": true,
+    "append_bytes": 2587
+  },
+  "initial_55check_report_byte_identical_to_commit_53f2670": true,
+  "tracked_changes_checked": [
+    {
+      "status": "M",
+      "path": "Pf8_Ghana_manuscript_REVISED.docx"
+    },
+    {
+      "status": "M",
+      "path": "article/Additional_file_1.docx"
+    },
+    {
+      "status": "M",
+      "path": "article/Pf8_Ghana_article.docx"
+    },
+    {
+      "status": "M",
+      "path": "article/article.md"
+    },
+    {
+      "status": "M",
+      "path": "provenance_final/VERIFICATION_NOTES.md"
+    },
+    {
+      "status": "M",
+      "path": "tools/README.md"
+    },
+    {
+      "status": "M",
+      "path": "tools/build_article.py"
+    },
+    {
+      "status": "A",
+      "path": "tools/git_runtime.py"
+    },
+    {
+      "status": "M",
+      "path": "tools/make_supplement.py"
+    },
+    {
+      "status": "M",
+      "path": "verification_fixes_round6/final_closure_review_checker.py"
+    },
+    {
+      "status": "M",
+      "path": "verification_fixes_round6/final_document_review_checker.py"
+    },
+    {
+      "status": "M",
+      "path": "verification_fixes_round6/independent_builder_layout_tests.py"
+    },
+    {
+      "status": "M",
+      "path": "verification_fixes_round6/make_fix_manifest.py"
+    },
+    {
+      "status": "M",
+      "path": "verification_fixes_round6/verify_documents.py"
+    },
+    {
+      "status": "A",
+      "path": "verification_fixes_round7/GIT_RESOLUTION.md"
+    },
+    {
+      "status": "A",
+      "path": "verification_fixes_round7/apply_document_fixes.py"
+    },
+    {
+      "status": "A",
+      "path": "verification_fixes_round7/builder_encoded_core_followup_results.json"
+    },
+    {
+      "status": "A",
+      "path": "verification_fixes_round7/builder_encoded_core_followup_tests.py"
+    },
+    {
+      "status": "A",
+      "path": "verification_fixes_round7/builder_equivalence_initial_results.json"
+    },
+    {
+      "status": "A",
+      "path": "verification_fixes_round7/builder_equivalence_results.json"
+    },
+    {
+      "status": "A",
+      "path": "verification_fixes_round7/builder_fix_summary.json"
+    },
+    {
+      "status": "A",
+      "path": "verification_fixes_round7/builder_regression_results.json"
+    },
+    {
+      "status": "A",
+      "path": "verification_fixes_round7/builder_regression_tests.py"
+    },
+    {
+      "status": "A",
+      "path": "verification_fixes_round7/builder_round6_regression_results.json"
+    },
+    {
+      "status": "A",
+      "path": "verification_fixes_round7/builder_round6_regression_tests.py"
+    },
+    {
+      "status": "A",
+      "path": "verification_fixes_round7/check_builder_equivalence.py"
+    },
+    {
+      "status": "A",
+      "path": "verification_fixes_round7/document_build_results.json"
+    },
+    {
+      "status": "A",
+      "path": "verification_fixes_round7/document_edit_results.json"
+    },
+    {
+      "status": "A",
+      "path": "verification_fixes_round7/final_document_review.json"
+    },
+    {
+      "status": "A",
+      "path": "verification_fixes_round7/git_portability_results.json"
+    },
+    {
+      "status": "A",
+      "path": "verification_fixes_round7/git_portability_tests.py"
+    },
+    {
+      "status": "A",
+      "path": "verification_fixes_round7/independent_builder_followup_results.json"
+    },
+    {
+      "status": "A",
+      "path": "verification_fixes_round7/independent_builder_followup_tests.py"
+    },
+    {
+      "status": "A",
+      "path": "verification_fixes_round7/independent_builder_results.json"
+    },
+    {
+      "status": "A",
+      "path": "verification_fixes_round7/independent_builder_tests.py"
+    },
+    {
+      "status": "A",
+      "path": "verification_fixes_round7/independent_document_driver_review_initial.json"
+    },
+    {
+      "status": "A",
+      "path": "verification_fixes_round7/independent_git_probe_results.json"
+    },
+    {
+      "status": "A",
+      "path": "verification_fixes_round7/independent_git_probe_tests.py"
+    },
+    {
+      "status": "A",
+      "path": "verification_fixes_round7/independent_git_review.json"
+    },
+    {
+      "status": "A",
+      "path": "verification_fixes_round7/rebuild_deliverables.py"
+    },
+    {
+      "status": "A",
+      "path": "verification_fixes_round7/render_documents.py"
+    },
+    {
+      "status": "M",
+      "path": "verification_review_round5/check_current_revision.py"
+    },
+    {
+      "status": "M",
+      "path": "verification_review_round5/finalize_review.py"
+    },
+    {
+      "status": "M",
+      "path": "verification_review_round6/check_current_revision.py"
+    },
+    {
+      "status": "M",
+      "path": "verification_review_round6/finalize_review.py"
+    },
+    {
+      "status": "A",
+      "path": "verification_review_round7/proposed_document_edits.json"
+    }
+  ],
+  "new_evidence_exemptions": [
+    "verification_fixes_round7/GIT_RESOLUTION.md",
+    "verification_fixes_round7/apply_document_fixes.py",
+    "verification_fixes_round7/builder_encoded_core_followup_results.json",
+    "verification_fixes_round7/builder_encoded_core_followup_tests.py",
+    "verification_fixes_round7/builder_equivalence_initial_results.json",
+    "verification_fixes_round7/builder_equivalence_results.json",
+    "verification_fixes_round7/builder_fix_summary.json",
+    "verification_fixes_round7/builder_regression_results.json",
+    "verification_fixes_round7/builder_regression_tests.py",
+    "verification_fixes_round7/builder_round6_regression_results.json",
+    "verification_fixes_round7/builder_round6_regression_tests.py",
+    "verification_fixes_round7/check_builder_equivalence.py",
+    "verification_fixes_round7/document_build_results.json",
+    "verification_fixes_round7/document_edit_results.json",
+    "verification_fixes_round7/final_document_review.json",
+    "verification_fixes_round7/git_portability_results.json",
+    "verification_fixes_round7/git_portability_tests.py",
+    "verification_fixes_round7/independent_builder_followup_results.json",
+    "verification_fixes_round7/independent_builder_followup_tests.py",
+    "verification_fixes_round7/independent_builder_results.json",
+    "verification_fixes_round7/independent_builder_tests.py",
+    "verification_fixes_round7/independent_document_driver_review_initial.json",
+    "verification_fixes_round7/independent_git_probe_results.json",
+    "verification_fixes_round7/independent_git_probe_tests.py",
+    "verification_fixes_round7/independent_git_review.json",
+    "verification_fixes_round7/rebuild_deliverables.py",
+    "verification_fixes_round7/render_documents.py",
+    "verification_review_round7/proposed_document_edits.json"
+  ],
+  "observations": [
+    "Final verifier still enforces source identities, ZIP/XML/media integrity, canonical facts and a bounded tracked-change set. Git runtime is explicitly allowed; added evidence exemptions are limited to files absent from checkpoint64515dc under the two round7review folders and py/json/md suffixes.",
+    "Modifications/deletions of pre-checkpoint records or scientific files outside the explicit allowed set still fail; --no-renames makes renamed paths visible as delete/add rather than silently moving an old record.",
+    "Final reconciliation chain proves405 exact byte-identical retained PNGs plus8 changed pages freshly inspected by root/editor. Initial raw review evidence and all413PNG backups remain preserved.",
+    "Reviewer independently opened the two changed pages in its former1\u2013100allocation (83 and88) at original detail; both are readable, correctly qualified and free of layout defects. Root has also opened these and the other two changed manuscript pages."
+  ],
+  "scope": "Read-only independent actual package/source/figure/note/diff and complete PNG identity comparison plus final verifier/reconciliation review. No DOCX authoring, real publication or scientific pipeline execution.",
+  "limits": [
+    "The tracked-change gate compares checkpoint64515dc; it does not distinguish subsequent revisions of files first added after that checkpoint. Initial55review preservation was independently checked against53f2670.",
+    "The gate does not audit arbitrary untracked files or prove that scientific commands were never executed. The claim is bounded to tracked changes and saved evidence.",
+    "A py/json/md file added inside a new evidence folder is accepted by path/status, not by semantic code classification; the actual listed additions were reviewed as local evidence.",
+    "Provenance prefix check preserves historical bytes but does not independently authenticate historical scientific inputs/commands or every appended claim.",
+    "Reconciliation JSON writes are direct per file after checking all plans; subsequent publisher rechecks sources, PDFs and complete image coverage before any deliverable publication."
+  ]
+}

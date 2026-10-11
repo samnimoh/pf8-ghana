@@ -1,0 +1,82 @@
+{
+  "generated_utc": "2026-10-11T11:59:09.278000+00:00",
+  "scope": "All three final reviewed renders copied byte-identically beside their current source DOCX.",
+  "results": [
+    {
+      "label": "article",
+      "source": {
+        "path": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.docx",
+        "bytes": 1193292,
+        "sha256": "5039f0e36592a46851a3c40d0d25339d14f751a62de223b499b6ecc7165a2536"
+      },
+      "before": {
+        "path": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.pdf",
+        "bytes": 708316,
+        "sha256": "6475240dc4a51ac6836a71a47c4f6fc5b2fee95c43e7079e76e8b3a07e0aed05"
+      },
+      "rendered_pdf": {
+        "path": "/private/tmp/pf8_round7_fixed_render/article/Pf8_Ghana_article.pdf",
+        "bytes": 708609,
+        "sha256": "af7061e4e49faf04d25aa23a2e5dd7faf44844e1e162cd146166b0b807630503"
+      },
+      "pages": 18,
+      "destination": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.pdf",
+      "published_pdf": {
+        "path": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.pdf",
+        "bytes": 708609,
+        "sha256": "af7061e4e49faf04d25aa23a2e5dd7faf44844e1e162cd146166b0b807630503"
+      }
+    },
+    {
+      "label": "manuscript",
+      "source": {
+        "path": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx",
+        "bytes": 4048289,
+        "sha256": "ef57e597b102afd69c64a33e2f984216df5839d2614e0d6c12f4f145aad73437"
+      },
+      "before": {
+        "path": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.pdf",
+        "bytes": 5114869,
+        "sha256": "101f01d3b48573e921c18063f1eca21e83dfd70ed86ea65c72032c392caa9460"
+      },
+      "rendered_pdf": {
+        "path": "/private/tmp/pf8_round7_fixed_render/manuscript/Pf8_Ghana_manuscript_REVISED.pdf",
+        "bytes": 5115276,
+        "sha256": "98cc3c53c7e161684d3c6b5d2bf418861110567791abdfc3c92d8f7e254a2c08"
+      },
+      "pages": 197,
+      "destination": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.pdf",
+      "published_pdf": {
+        "path": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.pdf",
+        "bytes": 5115276,
+        "sha256": "98cc3c53c7e161684d3c6b5d2bf418861110567791abdfc3c92d8f7e254a2c08"
+      }
+    },
+    {
+      "label": "supplement",
+      "source": {
+        "path": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx",
+        "bytes": 4049115,
+        "sha256": "e356cfec8522d57238ffa8f7a46d1cd6f0899b4431243ec48a7239aac1c34cf0"
+      },
+      "before": {
+        "path": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.pdf",
+        "bytes": 5118291,
+        "sha256": "456a798054a7c9e081bcd0ff8a9f41498aa2d59cf14d65ca9e65fe996d2a1c81"
+      },
+      "rendered_pdf": {
+        "path": "/private/tmp/pf8_round7_fixed_render/supplement/Additional_file_1.pdf",
+        "bytes": 5119155,
+        "sha256": "6cb0a9bd1c65fba214e4ab6b65e5a539f6693173ab7c8ed41fa8cc2589657e89"
+      },
+      "pages": 198,
+      "destination": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.pdf",
+      "published_pdf": {
+        "path": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.pdf",
+        "bytes": 5119155,
+        "sha256": "6cb0a9bd1c65fba214e4ab6b65e5a539f6693173ab7c8ed41fa8cc2589657e89"
+      }
+    }
+  ],
+  "all_passed": true
+}

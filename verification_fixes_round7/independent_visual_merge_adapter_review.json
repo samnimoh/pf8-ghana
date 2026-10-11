@@ -1,0 +1,223 @@
+{
+  "reviewer": "/root/final_document_check",
+  "reviewed_at_utc": "2026-10-11T11:42:49.315260+00:00",
+  "source": {
+    "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/merge_visual_reviews.py",
+    "bytes": 3791,
+    "sha256": "f352ab0ced648a4563a04b6cda6db44015000b9975833f282cc453f5ae6ed268"
+  },
+  "status": "bounded_pass",
+  "scope": "Read-only adversarial inspection of the final visual-review merger. 26 narrow scratch-only identity and coverage fixtures were executed with the bundled Python runtime in isolated mode. Dummy scratch DOCX/PDF/PNG byte files exercise identity checks and are not scientific or rendered-document artifacts. No manuscript/source deliverables or scientific analyses were changed/executed.",
+  "tests": [
+    {
+      "case": "complete ordinary isolated execution",
+      "passed": true,
+      "returncode": 0,
+      "outputs_written": [
+        "manuscript",
+        "supplement"
+      ],
+      "error_tail": null
+    },
+    {
+      "case": "optimized Python refused before any output",
+      "passed": true,
+      "returncode": 1,
+      "outputs_written": [],
+      "error_tail": "RuntimeError: Run without Python optimization; validation assertions must be enabled."
+    },
+    {
+      "case": "source actual bytes changed",
+      "passed": true,
+      "returncode": 1,
+      "outputs_written": [],
+      "error_tail": "AssertionError"
+    },
+    {
+      "case": "PDF actual bytes changed",
+      "passed": true,
+      "returncode": 1,
+      "outputs_written": [],
+      "error_tail": "AssertionError"
+    },
+    {
+      "case": "PNG actual bytes changed",
+      "passed": true,
+      "returncode": 1,
+      "outputs_written": [],
+      "error_tail": "AssertionError: (PosixPath('/private/tmp/pf8-visual-merge-review-8f2bx95i/visual_manuscript_part_1_100.json'), 1)"
+    },
+    {
+      "case": "part source identity mismatch",
+      "passed": true,
+      "returncode": 1,
+      "outputs_written": [],
+      "error_tail": "AssertionError: /private/tmp/pf8-visual-merge-review-8f2bx95i/visual_manuscript_part_1_100.json"
+    },
+    {
+      "case": "part PDF identity mismatch",
+      "passed": true,
+      "returncode": 1,
+      "outputs_written": [],
+      "error_tail": "AssertionError: /private/tmp/pf8-visual-merge-review-8f2bx95i/visual_manuscript_part_1_100.json"
+    },
+    {
+      "case": "part page count mismatch",
+      "passed": true,
+      "returncode": 1,
+      "outputs_written": [],
+      "error_tail": "AssertionError: /private/tmp/pf8-visual-merge-review-8f2bx95i/visual_manuscript_part_1_100.json"
+    },
+    {
+      "case": "missing original-detail page",
+      "passed": true,
+      "returncode": 1,
+      "outputs_written": [],
+      "error_tail": "AssertionError: /private/tmp/pf8-visual-merge-review-8f2bx95i/visual_manuscript_part_1_100.json"
+    },
+    {
+      "case": "duplicate original-detail page",
+      "passed": true,
+      "returncode": 1,
+      "outputs_written": [],
+      "error_tail": "AssertionError: /private/tmp/pf8-visual-merge-review-8f2bx95i/visual_manuscript_part_1_100.json"
+    },
+    {
+      "case": "extra original-detail page",
+      "passed": true,
+      "returncode": 1,
+      "outputs_written": [],
+      "error_tail": "AssertionError: /private/tmp/pf8-visual-merge-review-8f2bx95i/visual_manuscript_part_1_100.json"
+    },
+    {
+      "case": "duplicate inspected PNG added",
+      "passed": true,
+      "returncode": 1,
+      "outputs_written": [],
+      "error_tail": "AssertionError: /private/tmp/pf8-visual-merge-review-8f2bx95i/visual_manuscript_part_1_100.json"
+    },
+    {
+      "case": "duplicate inspected PNG replaces expected page",
+      "passed": true,
+      "returncode": 1,
+      "outputs_written": [],
+      "error_tail": "AssertionError: /private/tmp/pf8-visual-merge-review-8f2bx95i/visual_manuscript_part_1_100.json"
+    },
+    {
+      "case": "inspected PNG hash disagrees with render",
+      "passed": true,
+      "returncode": 1,
+      "outputs_written": [],
+      "error_tail": "AssertionError: (PosixPath('/private/tmp/pf8-visual-merge-review-8f2bx95i/visual_manuscript_part_1_100.json'), 1)"
+    },
+    {
+      "case": "missing PNG file",
+      "passed": true,
+      "returncode": 1,
+      "outputs_written": [],
+      "error_tail": "FileNotFoundError: [Errno 2] No such file or directory: '/private/tmp/pf8-visual-merge-review-8f2bx95i/manuscript/page-1.png'"
+    },
+    {
+      "case": "duplicate render label added",
+      "passed": true,
+      "returncode": 1,
+      "outputs_written": [],
+      "error_tail": "AssertionError"
+    },
+    {
+      "case": "duplicate render label within expected count",
+      "passed": true,
+      "returncode": 1,
+      "outputs_written": [],
+      "error_tail": "AssertionError"
+    },
+    {
+      "case": "extra duplicate render PNG added",
+      "passed": true,
+      "returncode": 1,
+      "outputs_written": [],
+      "error_tail": "AssertionError"
+    },
+    {
+      "case": "duplicate render path replaces expected path",
+      "passed": true,
+      "returncode": 1,
+      "outputs_written": [],
+      "error_tail": "AssertionError"
+    },
+    {
+      "case": "duplicate page number under a unique path",
+      "passed": true,
+      "returncode": 1,
+      "outputs_written": [],
+      "error_tail": "AssertionError"
+    },
+    {
+      "case": "overlapping second range",
+      "passed": true,
+      "returncode": 1,
+      "outputs_written": [],
+      "error_tail": "AssertionError: /private/tmp/pf8-visual-merge-review-8f2bx95i/visual_manuscript_part_101_150.json"
+    },
+    {
+      "case": "nonpassing part status",
+      "passed": true,
+      "returncode": 1,
+      "outputs_written": [],
+      "error_tail": "AssertionError: /private/tmp/pf8-visual-merge-review-8f2bx95i/visual_manuscript_part_1_100.json"
+    },
+    {
+      "case": "part with unresolved finding",
+      "passed": true,
+      "returncode": 1,
+      "outputs_written": [],
+      "error_tail": "AssertionError: /private/tmp/pf8-visual-merge-review-8f2bx95i/visual_manuscript_part_1_100.json"
+    },
+    {
+      "case": "third main range missing original-detail page",
+      "passed": true,
+      "returncode": 1,
+      "outputs_written": [],
+      "error_tail": "AssertionError: /private/tmp/pf8-visual-merge-review-8f2bx95i/visual_manuscript_part_151_197.json"
+    },
+    {
+      "case": "third main range image hash mismatch",
+      "passed": true,
+      "returncode": 1,
+      "outputs_written": [],
+      "error_tail": "AssertionError: (PosixPath('/private/tmp/pf8-visual-merge-review-8f2bx95i/visual_manuscript_part_151_197.json'), 151)"
+    },
+    {
+      "case": "later artifact invalid does not publish its record",
+      "passed": true,
+      "returncode": 1,
+      "outputs_written": [
+        "manuscript"
+      ],
+      "error_tail": "AssertionError: /private/tmp/pf8-visual-merge-review-8f2bx95i/visual_supplement_part_101_198.json"
+    }
+  ],
+  "test_count": 26,
+  "pass_count": 26,
+  "findings": [],
+  "resolved_during_review": [
+    {
+      "description": "All validation assertions could have been disabled with Python -O. Parent added an explicit non-assert __debug__ guard. Final scratch test demonstrates RuntimeError before any merged output is written."
+    },
+    {
+      "description": "Duplicate render labels and extra duplicate page entries could previously be discarded by dict construction. Parent added expected render count/label set and page_images length/unique-path checks. Final scratch tests reject duplicate labels, duplicate entries, duplicate paths, and duplicate page numbers using distinct paths."
+    }
+  ],
+  "conclusions": [
+    "The final merger verifies actual source and PDF bytes before processing the artifact, and requires each part to match those identities and the final page count.",
+    "Every part has exactly its assigned original-detail page range and exactly one inspected image identity per expected page; the final union is exactly pages 1 through the artifact page count with no overlap.",
+    "Every approved image identity must equal both the render manifest identity and current filesystem bytes before that artifact merged record is written."
+  ],
+  "limits": [
+    "The gate checks assertions of visual inspection; it cannot itself prove a human or agent actually viewed an image. The parent verifies independently created review records.",
+    "Validation is per artifact: a passing manuscript record can be written before a later supplement validation fails. The failing supplement is not written, and this is not an all-artifact atomic transaction.",
+    "Source/PDF/image bytes are checked once during the merge; the publisher performs another validation before publishing to address later file changes.",
+    "Merged JSON writes are direct and are not atomic replacement writes. A write failure can leave a partial QA JSON record, which must be rejected by downstream parsing/identity validation.",
+    "The merger does not validate visual aesthetics, scientific meaning, provenance of scientific inputs, schema validity of actual DOCX/PDF/PNG formats, or completeness of publication placeholders."
+  ]
+}

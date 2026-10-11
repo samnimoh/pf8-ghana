@@ -1,0 +1,48 @@
+{
+  "generated_utc": "2026-10-11T11:58:36.832771+00:00",
+  "reviewer": "/root/final_document_check",
+  "status": "needs_fix",
+  "source": {
+    "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/finalize_fixes.py",
+    "bytes": 7349,
+    "sha256": "a77d2456201eddc842b0a0f4129eaabb724ae233774667534102931450e7d247"
+  },
+  "findings": [
+    {
+      "id": "regression_success_not_gated",
+      "severity": "medium",
+      "location": "current_builder assertions and hard-coded test_revision_note",
+      "description": "Finalizer checks builder identity on current8+12 records but not their all_passed or per-row flags. It can write a bounded-pass manifest even if a bound current-source regression reports a failed case. It also states prior59 passes without checking the actual21+38 rows and55a7 source bindings.",
+      "requested_fix": "Require all_passed and every per-case passed flag with exact reported/current source identities; derive/check21+38 and8+12 from schemas before making revision-scoped claim."
+    },
+    {
+      "id": "independent_closure_currentness_not_gated",
+      "severity": "medium",
+      "location": "loop accepting independent_visual_reconciliation_review.json and independent_final_protection_review.json",
+      "description": "Only status and empty findings are required, so a stale independent closure review can be carried into a supposedly current final manifest. Source/render/script identities are available in the protection record and forthcoming reconciliation schema.",
+      "requested_fix": "Require protection bound_sources equal final review source map and reviewed_scripts rehash match. Bind reconciliation review to current render/visual/reconciliation records using its actual saved schema."
+    }
+  ],
+  "current_input_truth": {
+    "prior_primary_cases": 59,
+    "prior_primary_breakdown": [
+      21,
+      38
+    ],
+    "prior_source_sha_prefix": "55a7b960",
+    "current_targeted_checks": 8,
+    "current_independent_cases": 12,
+    "current_source_sha_prefix": "9d90d195",
+    "counts_factually_correct_now": true
+  },
+  "positive_observations": [
+    "The finalizer checks actual current document review source identities, three distinct publication labels, actual published PDF bytes, visual-review digest equality, complete page lists and successful actual package-part equivalence.",
+    "It explicitly distinguishes historical59case revision from the newer8check/12case revision; no blanket current59claim is made.",
+    "The explicit optimization guard keeps assertions enabled; manifest scope correctly excludes scientific recomputation and implementation-refinement proofs."
+  ],
+  "scope": "Read-only finalization driver and actual report-schema assessment. Real finalizer and publication were not executed. No document or scientific source edits.",
+  "limits": [
+    "Parent will patch gates before execution; final followup review must bind the final script identity.",
+    "Manifest should include the final independent finalization driver review identity, without that review hashing the manifest to avoid a cycle."
+  ]
+}

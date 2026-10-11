@@ -1,0 +1,51 @@
+{
+  "generated_utc": "2026-10-11T11:47:04.969802+00:00",
+  "reviewer": "/root/fix_editor",
+  "status": "bounded_pass",
+  "builder": {
+    "path": "/Users/samnimoh/Desktop/chromo/tools/build_article.py",
+    "bytes": 28960,
+    "sha256": "9d90d195263494b40658623a72405c4132b7d9581549855d65b3ded7362cb776"
+  },
+  "readme": {
+    "path": "/Users/samnimoh/Desktop/chromo/tools/README.md",
+    "bytes": 5995,
+    "sha256": "f852be5f734a896e987ebe094ad2c34c5bb51471879eac56816bec546d030635"
+  },
+  "test_driver": {
+    "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/independent_builder_followup_tests.py",
+    "bytes": 11589,
+    "sha256": "2c8e6993c8cb891158a6bece67c19d1e039b4e96315b08f138e5045068f6cd34"
+  },
+  "test_results": {
+    "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/independent_builder_followup_results.json",
+    "bytes": 13193,
+    "sha256": "8899af741f86d8224b575da2f04f1e41367734fa7e39232637920c608773abf1"
+  },
+  "original_test_results": {
+    "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/independent_builder_results.json",
+    "bytes": 13538,
+    "sha256": "75006b1c0e2946ae6bc5010a8d1e2c3e9125d940899dae94000f27479af24acb"
+  },
+  "tests": 12,
+  "passed": 12,
+  "findings": [],
+  "exact_followup_delta": {
+    "previous_sha256": "55a7b960ab42804d814e783d660b8573985d17fd0330abeac5b650311ed2ef2f",
+    "changed_line": 469,
+    "before": "and item.get(\"PartName\") == \"/\" + core_part]",
+    "after": "and unquote(item.get(\"PartName\", \"\")) == \"/\" + core_part]",
+    "verification": "Replacing the single new comparison with its original comparison reconstructs bytes whose SHA256 exactly equals the independently reviewed pre-followup source."
+  },
+  "resolved_finding": {
+    "case": "encoded_core_override_supported_by_validator",
+    "prior_outcome": "The metadata lookup missed the encoded override already decoded by package validation, added another override, and conservatively aborted with duplicate decoded content-type declaration; original destination remained intact.",
+    "followup_outcome": "Scratch build now succeeds, retains one override, updates title to the visible heading, validates archive integrity and preserves template bytes."
+  },
+  "scope": "Independent scratch-only assembly safety, metadata and explicit count-header review. All 12 original independent scratch cases passed on the final source, including the encoded-core normalization corner. Historical 11/12 results preserved. No shipping DOCX or scientific pipeline executed or edited by these tests.",
+  "limitations": [
+    "This verifies the existing assembler contract and the specific encoded input accepted by its validator; it does not assert full OPC schema legality of percent-encoded unreserved characters.",
+    "Full OOXML schema validation, biological output provenance, image-file validation, and atomicity across three documents are outside these checks.",
+    "Temp ownership guards are not a general guarantee against arbitrary concurrent hostile changes between the final check and rename."
+  ]
+}

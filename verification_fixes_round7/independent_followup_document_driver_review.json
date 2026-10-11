@@ -1,0 +1,50 @@
+{
+  "generated_utc": "2026-10-11T11:44:08.076899+00:00",
+  "reviewer": "/root/final_document_check",
+  "driver": {
+    "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/apply_followup_document_fixes.py",
+    "bytes": 3092,
+    "sha256": "67ce6df32c61349a920c63912a24ac66d6c6f496f4a9bacc02dedca62ea7259c"
+  },
+  "helper": {
+    "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/apply_document_fixes.py",
+    "bytes": 6246,
+    "sha256": "25c237fd09c16c47c4bd5d4b4395a0844ee92d500ab03a3d0a2ad2a6f981b242"
+  },
+  "proposal": {
+    "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/proposed_document_followup_edits.json",
+    "bytes": 6713,
+    "sha256": "9af8a3cb600eb452f75871b20d1373d1ef7ab041210bf4a8c4a6bcf8f57f5b39"
+  },
+  "status": "bounded_pass",
+  "findings": [],
+  "checks": [
+    {
+      "concept": "Table5.2 fixed-codon correction-record propagation",
+      "unique_baseline_quote": true,
+      "in_memory_exact_replacement": true,
+      "all_nontext_run_xml_preserved": true,
+      "all_digit_tokens_preserved": true
+    },
+    {
+      "concept": "Section5.7.3 fixed-codon claim propagation",
+      "unique_baseline_quote": true,
+      "in_memory_exact_replacement": true,
+      "all_nontext_run_xml_preserved": true,
+      "all_digit_tokens_preserved": true
+    },
+    {
+      "concept": "Explicit count in already qualified fixed-codon exception",
+      "unique_baseline_quote": true,
+      "in_memory_exact_replacement": true,
+      "all_nontext_run_xml_preserved": true,
+      "all_digit_tokens_preserved": true
+    }
+  ],
+  "observations": [
+    "All three quotes are unique in the Git baseline and no initial edit touched these paragraphs; dry runs use in-memory XML only.",
+    "Driver requires the exact proposed source SHA and paragraph cardinality; every substitution preserves numeric digit tokens.",
+    "Temporary archive is written beside the source, fsynced, CRC-tested and checked for preservation of every non-document package part before atomic replacement; finally cleans owned temporary path.",
+    "No document source was authored or scientific pipeline run by this reviewer."
+  ]
+}
