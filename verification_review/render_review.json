@@ -1,0 +1,30 @@
+{
+  "fresh_render_pages": 193,
+  "provided_pdf_pages": 193,
+  "pattern_pages": {
+    "absence_claim": [
+      8
+    ],
+    "old_treemix": [
+      147,
+      151,
+      154,
+      168
+    ],
+    "old_maf": [
+      147,
+      181
+    ],
+    "kelch_sentence": [
+      50
+    ],
+    "references": [
+      4,
+      173
+    ],
+    "verification": [
+      108
+    ]
+  },
+  "render_path": "/private/tmp/pf8_review_round3/render/Pf8_Ghana_manuscript_REVISED.pdf"
+}

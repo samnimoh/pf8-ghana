@@ -1,0 +1,57 @@
+
+=================================================================
+  STEP 3 — UMAP, t-SNE and PCoA on the Ghana distance submatrix
+=================================================================
+Memory-mapping Pf8_mean_genotype_distance.npy (4.44 GB on disk)
+Global matrix shape: (33325, 33325), dtype float32
+Ghana submatrix (4905, 4905) cached -> /media/biodataA/pf8/gyadu/interim/ghana_dist_submatrix.npy
+
+============================================================
+  UMAP
+============================================================
+Fitting UMAP...
+/home/gyadu/.conda/envs/spatial/lib/python3.10/site-packages/umap/umap_.py:1865: UserWarning: using precomputed metric; inverse_transform will be unavailable
+  warn("using precomputed metric; inverse_transform will be unavailable")
+/home/gyadu/.conda/envs/spatial/lib/python3.10/site-packages/umap/umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(
+Coordinates -> /media/biodataA/pf8/gyadu/results/umap_embedding.csv
+Figure -> /media/biodataA/pf8/gyadu/figures/umap_ghana_zone.png
+
+============================================================
+  t-SNE
+============================================================
+Fitting t-SNE (perplexity 30)...
+Coordinates -> /media/biodataA/pf8/gyadu/results/tsne_embedding.csv
+Figure -> /media/biodataA/pf8/gyadu/figures/tsne_ghana_zone.png
+
+============================================================
+  PCoA
+============================================================
+Running PCoA...
+  1347 negative eigenvalues (sum -0.000587 vs positive 0.00365): the distance is not perfectly Euclidean. Proportions below are relative to the positive eigenvalues, the usual convention.
+  PC1 0.7%, PC2 0.6%, PC3 0.3%, PC4 0.3%, PC5 0.3%
+Coordinates -> /media/biodataA/pf8/gyadu/results/pcoa_coordinates.csv
+Eigenvalues -> /media/biodataA/pf8/gyadu/results/pcoa_eigenvalues.csv
+Figure -> /media/biodataA/pf8/gyadu/figures/pcoa_ghana_zone.png
+
+============================================================
+  Comparison
+============================================================
+Figure -> /media/biodataA/pf8/gyadu/figures/dimred_comparison_zone.png
+  scoring UMAP...
+  scoring t-SNE...
+  scoring PCoA...
+
+            method  trustworthiness  distance_spearman  silhouette_by_zone
+original distances              NaN              1.000              -0.016
+              UMAP            0.486              0.029              -0.306
+             t-SNE            0.507              0.115              -0.057
+              PCoA            0.495              0.322              -0.112
+
+Scores -> /media/biodataA/pf8/gyadu/results/dimred_comparison.csv
+trustworthiness: 1 = every 2-D neighbour is a true neighbour.
+distance_spearman: rank agreement of pairwise distances (global structure).
+silhouette_by_zone: > 0 means zones separate; near 0 means they overlap.
+
+UMAP and t-SNE distances between clusters carry no quantitative meaning. Read cluster membership, not separation width. PCoA axes are linear and their spacing is interpretable.
+STEP3_EXIT=0

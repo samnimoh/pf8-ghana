@@ -1,0 +1,46 @@
+[
+  {
+    "label": "article",
+    "docx": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.docx",
+    "fresh_pdf": "/private/tmp/pf8_review_round6/article/Pf8_Ghana_article.pdf",
+    "pages": 18,
+    "rasterized_review_pages": [
+      1,
+      6,
+      7,
+      9,
+      10,
+      15,
+      18
+    ],
+    "conversion": "Packaged documents converter using bundled LibreOffice",
+    "rasterization": "Bundled Poppler, one thread, selected pages"
+  },
+  {
+    "label": "manuscript",
+    "docx": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx",
+    "fresh_pdf": "/private/tmp/pf8_review_round6/manuscript/Pf8_Ghana_manuscript_REVISED.pdf",
+    "pages": 197,
+    "rasterized_review_pages": [
+      27,
+      44,
+      111,
+      142
+    ],
+    "conversion": "Packaged documents converter using bundled LibreOffice",
+    "rasterization": "Bundled Poppler, one thread, selected pages"
+  },
+  {
+    "label": "supplement",
+    "docx": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx",
+    "fresh_pdf": "/private/tmp/pf8_review_round6/supplement/Additional_file_1.pdf",
+    "pages": 198,
+    "rasterized_review_pages": [
+      1,
+      2,
+      110
+    ],
+    "conversion": "Packaged documents converter using bundled LibreOffice",
+    "rasterization": "Bundled Poppler, one thread, selected pages"
+  }
+]

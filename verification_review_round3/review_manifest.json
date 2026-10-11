@@ -1,0 +1,423 @@
+{
+  "generated_utc": "2026-10-11T03:55:22.434934+00:00",
+  "scope": "Review of new article/supplement and audit evidence against the preceding review. Static inspection, independent saved-table/log arithmetic, and document presentation checks; no scientific pipeline, remote audit, inference or new Lean proof run.",
+  "baseline_review_manifest": "/Users/samnimoh/Desktop/chromo/verification_review_round2/review_manifest.json",
+  "baseline_review_utc": "2026-10-10T21:47:06.781907+00:00",
+  "review_report": "/Users/samnimoh/Desktop/chromo/verification_review_round3/REVIEW_LATEST_FILES.md",
+  "known_files_compared": 144,
+  "changed_source_paths": [
+    "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx",
+    "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.pdf",
+    "/Users/samnimoh/Desktop/chromo/provenance_final/VERIFICATION_NOTES.md"
+  ],
+  "new_source_file_count": 20,
+  "source_files_stable_through_review": true,
+  "source_files_rechecked": 164,
+  "new_source_identities": [
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx",
+      "bytes": 4043725,
+      "sha256": "ae4939d322da58099afe4df1c921232b07475dd31927ad42da7391e290275078"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.pdf",
+      "bytes": 5169429,
+      "sha256": "bdfd3e909635690d3c2b29fcee88c033d4c2da25dcaf0436a6316bd17dda8701"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/article/CANONICAL_FACTS_FOR_ARTICLE.md",
+      "bytes": 10526,
+      "sha256": "1a7059ef3fe944d70429e47c2ff4458eb07e514fd8c83866461b6e073cf5c549"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.docx",
+      "bytes": 1193105,
+      "sha256": "d09d14eea677e18ace50088d58e3e044e4edfe2ad21edb971d59b67305d9d66c"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.pdf",
+      "bytes": 708142,
+      "sha256": "65db7a4bdcb4a195077d077000a3b7178df3fe03e29e47d65484c9a36748f61d"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/article/article.md",
+      "bytes": 48171,
+      "sha256": "313a4646cc2e2f9598ad3439ce389f83f8109ee9d78bd9a194cb3230e38ed7db"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/audit_logs/alleles.log",
+      "bytes": 737,
+      "sha256": "0dc69708870062e3293a9a0f3848f4130ffadb4fe1d4b9c54be16d4db9befd68"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/audit_logs/codons.log",
+      "bytes": 699,
+      "sha256": "98a3b310c480fcfe38c1bf7982192d826aa9c84ac34b439d284b5402ee4462a4"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/audit_logs/coverage.log",
+      "bytes": 262,
+      "sha256": "0dd4008334ff434f3c83a616c7c5d6991750bd3adfa41837380b3beff946cb25"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/audit_logs/domain.log",
+      "bytes": 8328,
+      "sha256": "308b9a7e8e48feb3bc80cace203160bb01435960f654178e4eef364fd7909d6f"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/audit_logs/n458d.log",
+      "bytes": 598,
+      "sha256": "ff0368a29c1f7782f9e73f37ed3c66cbee94060192f25ee4a4d96fd37da9b3f2"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/audit_logs/panel_filter.log",
+      "bytes": 782,
+      "sha256": "cd9c2c67de7e5a62966ced59c5a44569c8d0451ca00baef752297fc372fa35f3"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/audit_logs/validated_marker_carriers.log",
+      "bytes": 1249,
+      "sha256": "e6b64c0c1dab8e23193f598ddc169ad9aedbd92c70057f2efbb5455aeb58166c"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/audit_scripts/README.md",
+      "bytes": 2579,
+      "sha256": "032047dd0bb1719eaf94714e2ba15aa566f02144529d2262efad5ac8c229b5b8"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/audit_scripts/check_alleles.py",
+      "bytes": 3400,
+      "sha256": "0f448a1482728b6b776064ebd4ee671767591dcb469377a4a85ccc795db9a9a9"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/audit_scripts/check_codons.py",
+      "bytes": 1553,
+      "sha256": "3a0cb7c523c9f23e68891ce479e70fd715d252ac147ffacd3edca3aa40cd33f2"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/audit_scripts/check_coverage.py",
+      "bytes": 2995,
+      "sha256": "7585fcca08423bd7a1d336075acf97036cc65cd2f79201fcab9a7d78b52456d0"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/audit_scripts/check_domain.py",
+      "bytes": 6691,
+      "sha256": "50917bb95da4f2dd8ef6c86acb2a1c81b0bad173fdcb2944eb31c7bbc82cb7dc"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/audit_scripts/check_n458d.py",
+      "bytes": 5517,
+      "sha256": "b68a537990292cdda11ced1a3b6fa02ebd2f2aa542df90c1b3b21704e74f960e"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/audit_scripts/check_panel_filter.py",
+      "bytes": 5145,
+      "sha256": "3f54cc1aa3a3e3fda178eebf5eba19184d2cee5850d816f777e6946c7d35e727"
+    }
+  ],
+  "current_manuscript": {
+    "path": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx",
+    "baseline_sha256": "878d7ec6e1ea7964ac3a6a76647ce7fbbed8cc5b871fe69ad68091b868f73fc4",
+    "current_sha256": "36750beee9beabcdd3d242e14ad724a0063ca413955a7f454d1eec43770c1004",
+    "changed": true,
+    "bytes": 4043022
+  },
+  "runtime": {
+    "python": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "python_version": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]"
+  },
+  "new_statistical_evidence_assertions": {
+    "passed": 9,
+    "total": 9,
+    "meaning": "Passing confirms the recorded inconsistency/arithmetic, not statistical validity of the article."
+  },
+  "new_static_audit_log_checks": {
+    "passed": 15,
+    "total": 15
+  },
+  "normal_tail_summary": {
+    "edge_count": 15,
+    "finite_printed_count": 13,
+    "matches_at_displayed_precision_including_zero_sentinels": 12,
+    "finite_matches_at_displayed_precision": 10,
+    "matches_at_3sf_including_zero_sentinels": 15
+  },
+  "audit_script_syntax": "Six scripts parse as valid Python; no execution or import.",
+  "previous_saved_result_validation": "Earlier 14 checks and following seven QC/batch/Mantel checks retain original scope; checker/input/artifact identities unchanged, no redundant rerun.",
+  "lean_validation": "Original 16 checked Lean reference proofs and artifacts unchanged. No implementation-refinement or end-to-end pipeline proof added.",
+  "document_page_counts": {
+    "article": {
+      "supplied": 18,
+      "fresh": 18
+    },
+    "manuscript": {
+      "supplied": 196,
+      "fresh": 196
+    },
+    "supplement": {
+      "supplied": 198,
+      "fresh": 198
+    }
+  },
+  "supplied_pdf_comparison": "All18 article page texts and nine selected page texts in each long document agree after whitespace normalization; no binary PDF identity claim.",
+  "visual_inspection": {
+    "article_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "manuscript_pages": [
+      111
+    ],
+    "supplement_pages": [
+      1,
+      113
+    ],
+    "scope": "All article page PNGs; representative long-document pages. No certification of every long-document page.",
+    "findings": [
+      "Missing author byline/affiliations and declaration placeholders",
+      "Table 2 heading split across pages 7\u20138",
+      "Last row of Table 3 isolated on page 11",
+      "Background heading stranded at bottom of article page 1",
+      "Table 4 displayed before Table 3",
+      "Literal scientific-notation exponents in prose",
+      "Supplement author/affiliation placeholders"
+    ]
+  },
+  "local_report_links_checked": [
+    {
+      "target": "/Users/samnimoh/Desktop/chromo/verification_review_round3/change_inventory.json",
+      "exists": true
+    },
+    {
+      "target": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.docx",
+      "exists": true
+    },
+    {
+      "target": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx",
+      "exists": true
+    },
+    {
+      "target": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx",
+      "exists": true
+    },
+    {
+      "target": "/Users/samnimoh/Desktop/chromo/article/article.md:103",
+      "exists": true
+    },
+    {
+      "target": "/Users/samnimoh/Desktop/chromo/article/article.md:181",
+      "exists": true
+    },
+    {
+      "target": "/Users/samnimoh/Desktop/chromo/corrected/dimred_comparison_qcset.csv:2",
+      "exists": true
+    },
+    {
+      "target": "/Users/samnimoh/Desktop/chromo/verification_review_round3/article_statistics_validation.json",
+      "exists": true
+    },
+    {
+      "target": "/Users/samnimoh/Desktop/chromo/verification_review_round3/article_media_identity.json",
+      "exists": true
+    },
+    {
+      "target": "/Users/samnimoh/Desktop/chromo/verification_review_round3/article_reference_validation.json",
+      "exists": true
+    },
+    {
+      "target": "/Users/samnimoh/Desktop/chromo/verification_review_round3/article_statistics_validation.json",
+      "exists": true
+    },
+    {
+      "target": "/Users/samnimoh/Desktop/chromo/article/article.md:141",
+      "exists": true
+    },
+    {
+      "target": "/Users/samnimoh/Desktop/chromo/verification_review_round3/article_statistics_validation.json",
+      "exists": true
+    },
+    {
+      "target": "/Users/samnimoh/Desktop/chromo/provenance_final/VERIFICATION_NOTES.md:120",
+      "exists": true
+    },
+    {
+      "target": "/Users/samnimoh/Desktop/chromo/provenance_final/scripts/step12_codon_panel.py:282",
+      "exists": true
+    },
+    {
+      "target": "/Users/samnimoh/Desktop/chromo/verification_review_round3/static_audit_log_validation.json",
+      "exists": true
+    },
+    {
+      "target": "/Users/samnimoh/Desktop/chromo/provenance_final/audit_scripts/README.md:20",
+      "exists": true
+    },
+    {
+      "target": "/Users/samnimoh/Desktop/chromo/provenance_final/VERIFICATION_NOTES.md:197",
+      "exists": true
+    },
+    {
+      "target": "/Users/samnimoh/Desktop/chromo/verification_review_round3/tail_printed_precision_validation.json",
+      "exists": true
+    },
+    {
+      "target": "/Users/samnimoh/Desktop/chromo/article/article.md:25",
+      "exists": true
+    },
+    {
+      "target": "/Users/samnimoh/Desktop/chromo/corrected/outlier_quality_check.csv:6",
+      "exists": true
+    },
+    {
+      "target": "/Users/samnimoh/Desktop/chromo/article/article.md:237",
+      "exists": true
+    },
+    {
+      "target": "/Users/samnimoh/Desktop/chromo/verification_audit/Pf8Audit.lean",
+      "exists": true
+    },
+    {
+      "target": "/Users/samnimoh/Desktop/chromo/verification_review_round3/render_review.json",
+      "exists": true
+    }
+  ],
+  "artifact_hashes": [
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_review_round3/REVIEW_LATEST_FILES.md",
+      "bytes": 19060,
+      "sha256": "c9b88c52ec75e527e947d6c91c5a7772668a8776d9ffc29a9bdfb78a87367a74"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_review_round3/article_body.txt",
+      "bytes": 60735,
+      "sha256": "5abc0603f22c75a696a5c5e90d469641709253b11b329dc614e67fb2b81fca70"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_review_round3/article_full_text.txt",
+      "bytes": 63137,
+      "sha256": "11b16ec69916c31b17eeb1f26c702e448913215fda61fed054c49f6871b105e8"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_review_round3/article_media_identity.json",
+      "bytes": 1266,
+      "sha256": "51e8a9094031200d3e07c94f7bc57a4bb88de68f00b5322eb77fd4e37fde6bbf"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_review_round3/article_reference_validation.json",
+      "bytes": 15789,
+      "sha256": "74a2290732f812ffa4e8e6454f3f2257870470753dd57892d4d1594dcc7a72ef"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_review_round3/article_rendered_page_texts.json",
+      "bytes": 64394,
+      "sha256": "b1479731c3f35cbdeac8c7a90742fadc9fe8c87fd1daf3c6e401de5aee9c0fd8"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_review_round3/article_statistics_validation.json",
+      "bytes": 17153,
+      "sha256": "a7d244796d26a6be467d035d4c622d16b9beda0ac04a2a54f67887380db7d4e4"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_review_round3/audit_script_syntax.json",
+      "bytes": 896,
+      "sha256": "5a42e051500b75d4b98ccf08a94029d1b6ea6f1fd2ead812072c07fce977fcca"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_review_round3/change_inventory.json",
+      "bytes": 53374,
+      "sha256": "7a5fb99407f95938c6065222547a8d52a1765f136be5d7e6c5e7381056be0e8c"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_review_round3/check_article_statistics.py",
+      "bytes": 12025,
+      "sha256": "97a859bbba46fb062b6b2ab828691a2975955fe4d8be4baf37696aded1ea29ea"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_review_round3/check_audit_logs.py",
+      "bytes": 9976,
+      "sha256": "14b58b8adb46c36c366517c5a443d4a0ba5daa40ffef762bb5a821ed823421fa"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_review_round3/check_rendered_documents.py",
+      "bytes": 3447,
+      "sha256": "e3295bb0fafab44777a51e0cc76b8c25b444ce2c64f8234d2faa84dd3f466beb"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_review_round3/check_tail_printed_precision.py",
+      "bytes": 3874,
+      "sha256": "fb6aead7692e8a26bd02f86e0a076c4fc68593bfa6fd756a019a67e58858d066"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_review_round3/document_metadata.json",
+      "bytes": 971,
+      "sha256": "6dedd80034d3984a382302c55a12e5fcfd239943784753e4194a102dd0964c8d"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_review_round3/manuscript_body.txt",
+      "bytes": 589978,
+      "sha256": "6c08b1e21a239a4eabe8b6c06daa9c072eaedb08db785781cb1a16f6c1691d9e"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_review_round3/manuscript_changes.diff",
+      "bytes": 181564,
+      "sha256": "56d06949fc9ba4598aaa0f3b362aec4170bb18adbf4133c99c91f8e4e7eefa01"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_review_round3/manuscript_full_text.txt",
+      "bytes": 719071,
+      "sha256": "4d6e1e9fc301c8c7ec51ba953060051ec55c003be6b565edcf3e39c858571da2"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_review_round3/manuscript_rendered_page_texts.json",
+      "bytes": 755847,
+      "sha256": "f3513b76743cfb48173afdd8df38445c8c063a965d6e78e60db3e5be1298cc37"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_review_round3/render_review.json",
+      "bytes": 11050,
+      "sha256": "805051dddc90de795397e241721182c9a4a7b19bf806111fd8a8c3d709142f1c"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_review_round3/semantic_changes.json",
+      "bytes": 131363,
+      "sha256": "a1624ae8a706803335b601e380f17b57ea6a7a7c1ab010cda50c5c81735f6a09"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_review_round3/static_audit_log_validation.json",
+      "bytes": 5851,
+      "sha256": "0868e93daaeb3a598aed94cf9652547248aa646761b5a7b67314ceeec8edf9b3"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_review_round3/supplement_body.txt",
+      "bytes": 591593,
+      "sha256": "0174861ce88043c2552c85d303f698926eab755bbf542925f4f38439cdcb4e0c"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_review_round3/supplement_full_text.txt",
+      "bytes": 720677,
+      "sha256": "7bf18a082330387bc2f2399aa4aeaa3a8f34d142ce14bf22e7bff343549645a5"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_review_round3/tail_printed_precision_validation.json",
+      "bytes": 8926,
+      "sha256": "000916ad2ece59091f3552250f8992499f4244489b12a8210df8d6640d9e30c9"
+    }
+  ],
+  "manifest_excludes_itself": true
+}

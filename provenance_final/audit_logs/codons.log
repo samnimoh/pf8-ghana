@@ -1,0 +1,12 @@
+
+codon 675: positions [1724975, 1724974, 1724973]  genomic ['C', 'G', 'A'] -> codon GCT = A (CSV ref_residue A)
+   ALT G at 1724975 (codon base 1) -> CCT = P   non-synonymous -> P
+
+codon 561: positions [1725317, 1725316, 1725315]  genomic ['G', 'C', 'A'] -> codon CGT = R (CSV ref_residue R)
+   ALT C at 1725315 (codon base 3) -> CGG = R   SYNONYMOUS
+   ALT G at 1725315 (codon base 3) -> CGC = R   SYNONYMOUS
+   ALT T at 1725315 (codon base 3) -> CGA = R   SYNONYMOUS
+
+codon 553: positions [1725341, 1725340, 1725339]  genomic ['G', 'G', 'C'] -> codon CCG = P (CSV ref_residue P)
+   ALT T at 1725339 (codon base 3) -> CCA = P   SYNONYMOUS
+   ALT A at 1725339 (codon base 3) -> CCT = P   SYNONYMOUS

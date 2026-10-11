@@ -1,0 +1,41 @@
+Population structure
+Ordination used the published Pf8 genotype-distance submatrix restricted to the 1,900 analysis isolates, so all 
+three embeddings act on identical input distances. Three two-dimensional embeddings were computed and 
+coloured by zone: UMAP (McInnes et al. 2018), t-SNE and PCoA (Fig. 2). They were compared on 
+trustworthiness, which penalises false near neighbours in the embedding; the Spearman correlation between 
+original and embedded pairwise distances, which measures global rather than local preservation; and the 
+silhouette coefficient with zone as the label, computed on the original distances as well to give a reference value 
+independent of any embedding.
+Pairwise differentiation between zones was estimated with the Hudson FST estimator (Hudson et al. 1992), 
+formed as a ratio of averages across SNPs rather than as an average of per-SNP ratios. Confidence intervals at 
+95% came from a block jackknife over contiguous blocks of SNPs (Table 2).
+Ancestry proportions were estimated with ADMIXTURE 1.3 (Alexander et al. 2009) for K = 1-8 with 10-fold cross-
+validation, on 3,385 LD-pruned SNPs obtained from the analysis set with PLINK. Cross-validation error was 
+compared across K, and the minor-component proportion at the selected K was compared across zones with a 
+Kruskal-Wallis test and an eta-squared effect size.
+Isolation by distance
+Isolation by distance was tested with the Mantel test (Mantel 1967), correlating linearised differentiation, FST/(1 
+− FST), with the logarithm of great-circle distance between population centroids. Tests were run at two spatial 
+levels: four zone populations giving six pairs, and seven administrative regions, the finest spatial unit in the 
+release metadata, giving 21 pairs. Each used 9,999 permutations of population labels, a one-sided alternative of 
+positive association, and random seed 42.
+At region level, three of the 21 pairs returned a negative point estimate of FST, and these were floored to zero for 
+the primary test. Because flooring compresses exactly the pairs closest to zero, the test was also run on 
+uncensored estimates and both are reported. No flooring was needed at zone level. Dependence on individual 
+populations was assessed by a leave-one-population-out jackknife, dropping each region in turn and 
+recomputing the test on the remaining six.
+Population graph
+Relationships among the four zone populations were summarised with TreeMix (Pickrell and Pritchard 2012), 
+fitted with 0 to 5 migration edges and with standard errors estimated by jackknife using the `-se` option. 
+Variance explained was recorded at each edge count, with the weight, standard error and p-value of each edge.
+Four populations cannot identify more than about two edges: the covariance matrix has few independent 
+entries while free parameters grow with each edge, so additional edges absorb noise. The reported edge count 
+is accordingly a model choice, not an estimate of the number of historical admixture events, and the two 
+selection criteria disagree: taking the smallest graph explaining 0.998 of the variance selects three edges over 
+the full 0-5 sweep, whereas two edges follow only after the sweep is capped at two on identifiability grounds.
+Genome scan
+Candidate loci under spatially varying selection were identified with the core model of BayPass 2.4 (Gautier 
+2015), run on the 1,900 by 3,916 matrix with isolates grouped by zone, yielding an XtX differentiation statistic 
+per SNP (Fig. 3). The threshold was calibrated against 100,000 pseudo-observed SNPs simulated under the 
+population covariance matrix estimated from the real data, and set at the 0.999 quantile of their XtX 
+distribution, 10.840. The pseudo-observed set is not MAF-matched to the observed panel: the simulation 

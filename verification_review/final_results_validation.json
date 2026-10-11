@@ -1,0 +1,1015 @@
+{
+  "baseline_file_hashes": [
+    {
+      "bytes": 18675,
+      "md5": "2d45e0712317a37e986263f6efdb61d2",
+      "path": "/Users/samnimoh/Desktop/chromo/verification_audit/AUDIT_REPORT.md",
+      "sha256": "98f650205edfd471afb75b5a0a87b328a32146abfa2d42b2aab575a89083f162"
+    },
+    {
+      "bytes": 7373,
+      "md5": "88f04360d066e6bfb2f498cf15d4abb4",
+      "path": "/Users/samnimoh/Desktop/chromo/verification_audit/Pf8Audit.lean",
+      "sha256": "ac6f192ae32b9876deacf54a937b295a0b490edf5d945fcafeb1344c7d845253"
+    },
+    {
+      "bytes": 277608,
+      "md5": "a3a1193545e2a34b20bca24af3725475",
+      "path": "/Users/samnimoh/Desktop/chromo/verification_audit/Pf8Audit.olean",
+      "sha256": "6083bc123af86e4889aaf66c69f4de165717ec35e3afb35b54517fb8fbc01c82"
+    },
+    {
+      "bytes": 4118,
+      "md5": "6f441e3b0bc118cd7fbbda23494f0bc9",
+      "path": "/Users/samnimoh/Desktop/chromo/verification_audit/audit_manifest.json",
+      "sha256": "f93ad22f609248134f80d35e8d90fb42221ada87eecbd9f338da821a5156f1eb"
+    },
+    {
+      "bytes": 3963,
+      "md5": "a99dec7ca0e6dd8734561073e15e46f2",
+      "path": "/Users/samnimoh/Desktop/chromo/verification_audit/check_majority_script.py",
+      "sha256": "498208608fb5cfbd885acc36b78c02fa4fa576b2e635db84aba28f69048cefe2"
+    },
+    {
+      "bytes": 12313,
+      "md5": "3076ac86c86423fe1b88401cc699c382",
+      "path": "/Users/samnimoh/Desktop/chromo/verification_audit/check_marker_outputs.py",
+      "sha256": "3427d1001bf4d69120c4794cfd6c5f2cf83298a7171e1a78b4b7830b4d47347e"
+    },
+    {
+      "bytes": 14740,
+      "md5": "57ea7b06fadb99985df81155a1a02adb",
+      "path": "/Users/samnimoh/Desktop/chromo/verification_audit/check_provenance.py",
+      "sha256": "e1521563cc61e2b32a567a0968224dd7b4708e28e55c7a9b64fe2e6037071ab8"
+    },
+    {
+      "bytes": 25,
+      "md5": "527d7330443676a30904a26e98443833",
+      "path": "/Users/samnimoh/Desktop/chromo/verification_audit/lean-toolchain",
+      "sha256": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea"
+    },
+    {
+      "bytes": 4027,
+      "md5": "1045130bd3239fdcf9ae3d5c5478e670",
+      "path": "/Users/samnimoh/Desktop/chromo/verification_audit/lean_check.log",
+      "sha256": "a57f965fbf9736adddb5eeaa51d079beb4ac76f5da1fe5ea8163085c45cf663d"
+    },
+    {
+      "bytes": 12260,
+      "md5": "430cb7ea773a707c6c9ae9e037f9b2dc",
+      "path": "/Users/samnimoh/Desktop/chromo/verification_audit/lean_validation.json",
+      "sha256": "8f3ec31140fb8c06b092ff8619dd5f6ddb396203bdefce195ba1a0c45e2ff4bc"
+    },
+    {
+      "bytes": 1166,
+      "md5": "f0c9e581614c22a5e3ed00a114b43934",
+      "path": "/Users/samnimoh/Desktop/chromo/verification_audit/majority_validation.json",
+      "sha256": "9365a7730fcf78f13017a954c80702825778294e59bc3e93b1fcbf53b115528c"
+    },
+    {
+      "bytes": 13486,
+      "md5": "681b4e8aa96d62a3d8748f216cf39ece",
+      "path": "/Users/samnimoh/Desktop/chromo/verification_audit/marker_validation.json",
+      "sha256": "5afb3c07cb1b773950c25f1146689b13e90b9e31bc69e6fd59eda7a40e1f5093"
+    },
+    {
+      "bytes": 54841,
+      "md5": "c00340dabb96c660565c7b988efef22c",
+      "path": "/Users/samnimoh/Desktop/chromo/verification_audit/provenance_validation.json",
+      "sha256": "e7fb017e2c6a5c200925a558ff519bc75c4ea58afdf9fa5253d04273b897452e"
+    },
+    {
+      "bytes": 11196,
+      "md5": "f257bd31d963e237050b784a702a54dc",
+      "path": "/Users/samnimoh/Desktop/chromo/verification_audit/run_verification.py",
+      "sha256": "8f09f09c5abb4c06a0fbe0f96c0c5b7a178ece53d34944996196df69b4e83c5a"
+    }
+  ],
+  "baypass": {
+    "maximum_recomputed_q_difference": 0.0,
+    "open": [
+      "Final raw POD/core summaries and final calibration/preprocessing scripts are not supplied. Saved p-values and threshold cannot be independently regenerated from the fitted simulated null.",
+      "BH agreement does not establish null calibration, FDR control or biological selection. MAF/model adequacy concerns remain."
+    ],
+    "q_counts": {
+      "0.01": 8,
+      "0.05": 10,
+      "0.1": 13,
+      "0.2": 17
+    },
+    "resolved": [
+      "Final per-SNP XtX, saved p-values, q-values and outlier flags are now local.",
+      "BH adjustment, all published q-counts and AAT1 q-values reproduce."
+    ],
+    "selected_variant_rows": [
+      {
+        "baypass_row": "1251",
+        "chrom": "Pf3D7_06_v3",
+        "is_outlier": "True",
+        "pos": "1214350",
+        "pval_pod": "9.99990000099999e-06",
+        "qvalue": "0.004894951050489495",
+        "source_line": 1253,
+        "xtx": "16.53524989"
+      },
+      {
+        "baypass_row": "1252",
+        "chrom": "Pf3D7_06_v3",
+        "is_outlier": "True",
+        "pos": "1215233",
+        "pval_pod": "9.99990000099999e-06",
+        "qvalue": "0.004894951050489495",
+        "source_line": 1254,
+        "xtx": "24.19824551"
+      },
+      {
+        "baypass_row": "2533",
+        "chrom": "Pf3D7_11_v3",
+        "is_outlier": "True",
+        "pos": "1054078",
+        "pval_pod": "7.999920000799993e-05",
+        "qvalue": "0.03132768672313277",
+        "source_line": 2535,
+        "xtx": "13.97849544"
+      },
+      {
+        "baypass_row": "2534",
+        "chrom": "Pf3D7_11_v3",
+        "is_outlier": "True",
+        "pos": "1054447",
+        "pval_pod": "9.99990000099999e-06",
+        "qvalue": "0.004894951050489495",
+        "source_line": 2536,
+        "xtx": "20.78721599"
+      }
+    ],
+    "xtx_median": 3.45350394,
+    "xtx_range": [
+      2.48092251,
+      26.44106222
+    ]
+  },
+  "check_summary": {
+    "passed": 14,
+    "total": 14
+  },
+  "checks": [
+    {
+      "evidence": {
+        "header": [
+          "baypass_row",
+          "chrom",
+          "pos",
+          "xtx",
+          "pval_pod",
+          "qvalue",
+          "is_outlier"
+        ],
+        "rows": 3916,
+        "unique_coordinates": 3916
+      },
+      "name": "final_snp_table_size_ids_and_coordinates",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "limitation": "Verifies the stated local checksum; remote byte identity is not independently checked.",
+        "measured_md5": "14ee58aba477e1d229300a6c60aa02f0"
+      },
+      "name": "table_md5_matches_supplied_notes",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "maximum_absolute_difference": 0.0,
+        "mismatching_rows": []
+      },
+      "name": "bh_adjustment_reproduces_all_saved_qvalues",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "counts": {
+          "0.01": 8,
+          "0.05": 10,
+          "0.1": 13,
+          "0.2": 17
+        }
+      },
+      "name": "q_counts_match_previous_final_summary",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "fdr_expected_count_ratio": 0.20610526315789474,
+        "outliers": 19,
+        "threshold": 10.839767826730082,
+        "threshold_source": "/Users/samnimoh/Desktop/chromo/corrected/final_xtx_calibration.json"
+      },
+      "name": "quantile_outlier_flags_match_previous_final_threshold",
+      "passed": true
+    },
+    {
+      "evidence": {},
+      "name": "saved_p_and_qvalues_obey_basic_bounds",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "assumed_pod_count": 100000,
+        "limitation": "Lattice compatibility does not verify the simulated null or actual tail ranks.",
+        "maximum_integer_lattice_error": 7.275957614183426e-12,
+        "number_at_floor": 8,
+        "p_floor": 9.99990000099999e-06
+      },
+      "name": "pvalues_compatible_with_100000_plus_one_tail_lattice",
+      "passed": true
+    },
+    {
+      "evidence": {},
+      "name": "saved_pvalues_monotone_with_xtx",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "edge_count": 15,
+        "tree_models": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "name": "treeout_contains_six_models_and_expected_edge_counts",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "comparison_rows": 6,
+        "extract_rows": 6
+      },
+      "name": "new_treeout_reproduces_previous_final_edge_extracts",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "full_range_pick": 3,
+        "limitation": "Confirms the numerical heuristic, not graph identifiability or exactly two historical edges.",
+        "restricted_range_pick": 2
+      },
+      "name": "saved_heuristic_model_selections_reproduce",
+      "passed": true
+    },
+    {
+      "evidence": {},
+      "name": "model_likelihood_and_status_tables_agree",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "m2_implied_observed_variance": 7.2883304268454825e-09,
+        "m3_implied_observed_variance": 7.288330426844413e-09
+      },
+      "name": "residual_matrices_and_explained_variance_are_consistent",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "files_checked": 14
+      },
+      "name": "baseline_verification_files_unchanged",
+      "passed": true
+    }
+  ],
+  "generated_utc": "2026-10-10T16:52:32.242955+00:00",
+  "input_hashes": [
+    {
+      "bytes": 5501,
+      "md5": "a79985a0830f176f51617942d69f99ee",
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/VERIFICATION_NOTES.md",
+      "sha256": "a89b8280ea71bdd065ec64cb70036535c31a553fc698579aad20aedb7a268440"
+    },
+    {
+      "bytes": 75,
+      "md5": "1857c70724e01c0be88f08156bc7343a",
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/results/likelihood_by_m.tsv",
+      "sha256": "5e675bb2cc46d396d11a2543f884aee773c4f2d37ada22e7cd3058a2d5d4fec2"
+    },
+    {
+      "bytes": 285,
+      "md5": "c42d67b5b60b8711064bcd2c5fa39f23",
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/results/model_comparison.csv",
+      "sha256": "15169839ec30031a5187496bdea993d0786328b1dc8f7fb74256358bd35e2f9a"
+    },
+    {
+      "bytes": 1258,
+      "md5": "c49a06c73b2ce673e1e07b71ede3a751",
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/results/model_selection.json",
+      "sha256": "444c98d832b7a7b76871d22f95f31540bc03ec98de8f036121b0a9ec3176fc55"
+    },
+    {
+      "bytes": 492,
+      "md5": "793f7d4db1aca371db8cf7c456de38cb",
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/results/residuals_m2.csv",
+      "sha256": "147ffcfaa37e3747cfd14803ec3611a342c3483808a17010e87b39e46603b65c"
+    },
+    {
+      "bytes": 497,
+      "md5": "7ed36b33c7e178ba725a68d39b92d167",
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/results/residuals_m3.csv",
+      "sha256": "98c3316e29b9b2f60fd412bee74f287a03ae57c3fd1a11cf781dd81b8a78ea9a"
+    },
+    {
+      "bytes": 61,
+      "md5": "7aa303960a31a3d33a359f42b7829f2e",
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/results/run_status.tsv",
+      "sha256": "cf8edd93f26364fa52af2c7f2976b9d66bdc3b00d00f4189a0350e402c3de1b8"
+    },
+    {
+      "bytes": 2195,
+      "md5": "2237135a9cdf4f70b1387885fc450dec",
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/results/treemix_treeout_all.txt",
+      "sha256": "94e92b21522f723cab4bb652272a72fd28b333deefed9839ffad62bed22453b8"
+    },
+    {
+      "bytes": 309909,
+      "md5": "14ee58aba477e1d229300a6c60aa02f0",
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/results/xtx_all_snps.csv",
+      "sha256": "37f20010c69adf8ddd868965c93868da3f3bace4cdec1325c4da258cc7e2c7fe"
+    },
+    {
+      "bytes": 18863,
+      "md5": "cd39ed29f375b4456ae2f8b573acd3b5",
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/scripts/step10_resistance_panel.py",
+      "sha256": "e0c54f5ae6846064e75b85b4864945896c0757c56a5f574a680ea033a75c1b37"
+    },
+    {
+      "bytes": 8433,
+      "md5": "7490ee9e5d8ea21dff7f347d40f4b530",
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/scripts/step11_batch_confounding.py",
+      "sha256": "88a5361454d46a363195c8502f2c818f14ae37b64754c3decce3db3be1d425da"
+    },
+    {
+      "bytes": 27567,
+      "md5": "503fcd0b8fab829ccf2003c451386e41",
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/scripts/step12_codon_panel.py",
+      "sha256": "11fda6b418013a8627834b7e5e2812074ae2b7ff7fd685986bec0500ade16fcd"
+    }
+  ],
+  "new_package_availability_for_previously_missing_inputs": {
+    "ghana_core_snps.npz": [],
+    "ghana_core_summary_pi_xtx.out": [],
+    "ghana_pod_summary_pi_xtx.out": [],
+    "rerun_corrected.log": [],
+    "run_all.sh": [],
+    "step04a_prepare_callset.py": [],
+    "step07b_treemix.sh": [],
+    "step08b_baypass.sh": [],
+    "step08c_calibrate_xtx.py": []
+  },
+  "notes_treatment": "Notes are hashed as an untrusted claim source. Claims about remote identity, read-level observations, software internals and metadata are not accepted as independently established by this checker.",
+  "python_executable": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+  "scope": "Independent local arithmetic, file integrity and cross-artifact checks. No pipeline or server execution; originals and baseline preserved.",
+  "treemix": {
+    "edge_probability_recomputations": [
+      {
+        "conditional_significant_at_005_from_stable_tail": true,
+        "edge": 1,
+        "jackknife_mean": 0.312303,
+        "jackknife_se": 0.03982,
+        "line": 5,
+        "m": 1,
+        "matches_three_significant_figures": false,
+        "naive_one_minus_cdf_tail": 2.220446049250313e-15,
+        "origin_and_destination": [
+          "Guinea_savanna:6.79982e-05",
+          "Decidous_forest:0.000230463"
+        ],
+        "p_is_censored": false,
+        "printed_bound_contains_computed_tail": null,
+        "printed_p_token": "2.22045e-15",
+        "printed_p_value_or_bound": 2.22045e-15,
+        "printed_point_relative_error": 0.008444765818192257,
+        "stable_one_sided_normal_tail": 2.201855843040108e-15,
+        "weight": 0.31277,
+        "z_from_printed_mean_and_se": 7.842867905575088
+      },
+      {
+        "conditional_significant_at_005_from_stable_tail": true,
+        "edge": 1,
+        "jackknife_mean": 0.151955,
+        "jackknife_se": 0.047851,
+        "line": 8,
+        "m": 2,
+        "matches_three_significant_figures": true,
+        "naive_one_minus_cdf_tail": 0.0007476691038622585,
+        "origin_and_destination": [
+          "Guinea_savanna:0.00211348",
+          "Decidous_forest:2.74904e-05"
+        ],
+        "p_is_censored": false,
+        "printed_bound_contains_computed_tail": null,
+        "printed_p_token": "0.000747653",
+        "printed_p_value_or_bound": 0.000747653,
+        "printed_point_relative_error": 2.1538755797962528e-05,
+        "stable_one_sided_normal_tail": 0.0007476691038622458,
+        "weight": 0.15246,
+        "z_from_printed_mean_and_se": 3.1755867171010013
+      },
+      {
+        "conditional_significant_at_005_from_stable_tail": true,
+        "edge": 2,
+        "jackknife_mean": 0.805858,
+        "jackknife_se": 0.0999781,
+        "line": 9,
+        "m": 2,
+        "matches_three_significant_figures": false,
+        "naive_one_minus_cdf_tail": 4.440892098500626e-16,
+        "origin_and_destination": [
+          "Transitional_zone:0",
+          "Guinea_savanna:0.00211348"
+        ],
+        "p_is_censored": false,
+        "printed_bound_contains_computed_tail": null,
+        "printed_p_token": "3.33067e-16",
+        "printed_p_value_or_bound": 3.33067e-16,
+        "printed_point_relative_error": 0.12442137301024134,
+        "stable_one_sided_normal_tail": 3.8039644839788417e-16,
+        "weight": 0.80547,
+        "z_from_printed_mean_and_se": 8.060345215602217
+      },
+      {
+        "conditional_significant_at_005_from_stable_tail": true,
+        "edge": 1,
+        "jackknife_mean": 0.155572,
+        "jackknife_se": 0.0502971,
+        "line": 12,
+        "m": 3,
+        "matches_three_significant_figures": true,
+        "naive_one_minus_cdf_tail": 0.0009905169482216092,
+        "origin_and_destination": [
+          "Guinea_savanna:0.00234451",
+          "Decidous_forest:8.19302e-07"
+        ],
+        "p_is_censored": false,
+        "printed_bound_contains_computed_tail": null,
+        "printed_p_token": "0.00099053",
+        "printed_p_value_or_bound": 0.00099053,
+        "printed_point_relative_error": 1.31767340876426e-05,
+        "stable_one_sided_normal_tail": 0.000990516948221564,
+        "weight": 0.155122,
+        "z_from_printed_mean_and_se": 3.093061031351708
+      },
+      {
+        "conditional_significant_at_005_from_stable_tail": true,
+        "edge": 2,
+        "jackknife_mean": 0.829575,
+        "jackknife_se": 0.0787911,
+        "line": 13,
+        "m": 3,
+        "matches_three_significant_figures": false,
+        "naive_one_minus_cdf_tail": 0.0,
+        "origin_and_destination": [
+          "Transitional_zone:4.28571e-05",
+          "Guinea_savanna:0.00234451"
+        ],
+        "p_is_censored": true,
+        "printed_bound_contains_computed_tail": false,
+        "printed_p_token": "<2.22507e-308",
+        "printed_p_value_or_bound": 2.22507e-308,
+        "printed_point_relative_error": null,
+        "stable_one_sided_normal_tail": 3.1823435628607375e-26,
+        "weight": 0.830185,
+        "z_from_printed_mean_and_se": 10.528790688288398
+      },
+      {
+        "conditional_significant_at_005_from_stable_tail": false,
+        "edge": 3,
+        "jackknife_mean": 0.0655776,
+        "jackknife_se": 0.146874,
+        "line": 14,
+        "m": 3,
+        "matches_three_significant_figures": true,
+        "naive_one_minus_cdf_tail": 0.3276220907469932,
+        "origin_and_destination": [
+          "Coastal_savanna:0",
+          "Transitional_zone:4.28571e-05"
+        ],
+        "p_is_censored": false,
+        "printed_bound_contains_computed_tail": null,
+        "printed_p_token": "0.327622",
+        "printed_p_value_or_bound": 0.327622,
+        "printed_point_relative_error": 2.769867959476066e-07,
+        "stable_one_sided_normal_tail": 0.3276220907469932,
+        "weight": 0.0652426,
+        "z_from_printed_mean_and_se": 0.4464888271579721
+      },
+      {
+        "conditional_significant_at_005_from_stable_tail": true,
+        "edge": 1,
+        "jackknife_mean": 0.155233,
+        "jackknife_se": 0.053803,
+        "line": 17,
+        "m": 4,
+        "matches_three_significant_figures": true,
+        "naive_one_minus_cdf_tail": 0.0019557578887853255,
+        "origin_and_destination": [
+          "Guinea_savanna:0.0023349",
+          "Decidous_forest:2.18544e-07"
+        ],
+        "p_is_censored": false,
+        "printed_bound_contains_computed_tail": null,
+        "printed_p_token": "0.00195576",
+        "printed_p_value_or_bound": 0.00195576,
+        "printed_point_relative_error": 1.0794867148418098e-06,
+        "stable_one_sided_normal_tail": 0.0019557578887853416,
+        "weight": 0.155197,
+        "z_from_printed_mean_and_se": 2.885210861847853
+      },
+      {
+        "conditional_significant_at_005_from_stable_tail": true,
+        "edge": 2,
+        "jackknife_mean": 0.831599,
+        "jackknife_se": 0.0891607,
+        "line": 18,
+        "m": 4,
+        "matches_three_significant_figures": false,
+        "naive_one_minus_cdf_tail": 0.0,
+        "origin_and_destination": [
+          "Transitional_zone:4.70169e-05",
+          "Guinea_savanna:0.0023349"
+        ],
+        "p_is_censored": true,
+        "printed_bound_contains_computed_tail": false,
+        "printed_p_token": "<2.22507e-308",
+        "printed_p_value_or_bound": 2.22507e-308,
+        "printed_point_relative_error": null,
+        "stable_one_sided_normal_tail": 5.4471345166819186e-21,
+        "weight": 0.829983,
+        "z_from_printed_mean_and_se": 9.326968047581502
+      },
+      {
+        "conditional_significant_at_005_from_stable_tail": false,
+        "edge": 3,
+        "jackknife_mean": 0.0671176,
+        "jackknife_se": 0.147276,
+        "line": 19,
+        "m": 4,
+        "matches_three_significant_figures": true,
+        "naive_one_minus_cdf_tail": 0.3242932731560455,
+        "origin_and_destination": [
+          "Coastal_savanna:2.83503e-06",
+          "Transitional_zone:4.70169e-05"
+        ],
+        "p_is_censored": false,
+        "printed_bound_contains_computed_tail": null,
+        "printed_p_token": "0.324293",
+        "printed_p_value_or_bound": 0.324293,
+        "printed_point_relative_error": 8.42311784165473e-07,
+        "stable_one_sided_normal_tail": 0.3242932731560455,
+        "weight": 0.0653508,
+        "z_from_printed_mean_and_se": 0.45572666286428204
+      },
+      {
+        "conditional_significant_at_005_from_stable_tail": false,
+        "edge": 4,
+        "jackknife_mean": 0.000514845,
+        "jackknife_se": 0.0529942,
+        "line": 20,
+        "m": 4,
+        "matches_three_significant_figures": true,
+        "naive_one_minus_cdf_tail": 0.4961242889327768,
+        "origin_and_destination": [
+          "Decidous_forest:2.18544e-07",
+          "Guinea_savanna:0.0023349"
+        ],
+        "p_is_censored": false,
+        "printed_bound_contains_computed_tail": null,
+        "printed_p_token": "0.496124",
+        "printed_p_value_or_bound": 0.496124,
+        "printed_point_relative_error": 5.82379825612303e-07,
+        "stable_one_sided_normal_tail": 0.4961242889327769,
+        "weight": 0.000323843,
+        "z_from_printed_mean_and_se": 0.00971511976782365
+      },
+      {
+        "conditional_significant_at_005_from_stable_tail": true,
+        "edge": 1,
+        "jackknife_mean": 0.155157,
+        "jackknife_se": 0.0588932,
+        "line": 23,
+        "m": 5,
+        "matches_three_significant_figures": true,
+        "naive_one_minus_cdf_tail": 0.0042124615878869065,
+        "origin_and_destination": [
+          "Guinea_savanna:0.00233006",
+          "Decidous_forest:1.39476e-07"
+        ],
+        "p_is_censored": false,
+        "printed_bound_contains_computed_tail": null,
+        "printed_p_token": "0.00421239",
+        "printed_p_value_or_bound": 0.00421239,
+        "printed_point_relative_error": 1.6994312105486106e-05,
+        "stable_one_sided_normal_tail": 0.004212461587886957,
+        "weight": 0.155272,
+        "z_from_printed_mean_and_se": 2.634548640590085
+      },
+      {
+        "conditional_significant_at_005_from_stable_tail": true,
+        "edge": 2,
+        "jackknife_mean": 0.827333,
+        "jackknife_se": 0.102932,
+        "line": 24,
+        "m": 5,
+        "matches_three_significant_figures": false,
+        "naive_one_minus_cdf_tail": 4.440892098500626e-16,
+        "origin_and_destination": [
+          "Transitional_zone:4.77366e-05",
+          "Guinea_savanna:0.00233006"
+        ],
+        "p_is_censored": false,
+        "printed_bound_contains_computed_tail": null,
+        "printed_p_token": "4.44089e-16",
+        "printed_p_value_or_bound": 4.44089e-16,
+        "printed_point_relative_error": 0.03001410443793473,
+        "stable_one_sided_normal_tail": 4.57830368494863e-16,
+        "weight": 0.830008,
+        "z_from_printed_mean_and_se": 8.037665643337348
+      },
+      {
+        "conditional_significant_at_005_from_stable_tail": false,
+        "edge": 3,
+        "jackknife_mean": 0.0669869,
+        "jackknife_se": 0.147601,
+        "line": 25,
+        "m": 5,
+        "matches_three_significant_figures": true,
+        "naive_one_minus_cdf_tail": 0.3249728193734742,
+        "origin_and_destination": [
+          "Coastal_savanna:3.10785e-06",
+          "Transitional_zone:4.77366e-05"
+        ],
+        "p_is_censored": false,
+        "printed_bound_contains_computed_tail": null,
+        "printed_p_token": "0.324973",
+        "printed_p_value_or_bound": 0.324973,
+        "printed_point_relative_error": 5.558204102737528e-07,
+        "stable_one_sided_normal_tail": 0.3249728193734742,
+        "weight": 0.0652453,
+        "z_from_printed_mean_and_se": 0.45383771112661836
+      },
+      {
+        "conditional_significant_at_005_from_stable_tail": false,
+        "edge": 4,
+        "jackknife_mean": 0.000389425,
+        "jackknife_se": 0.0529829,
+        "line": 26,
+        "m": 5,
+        "matches_three_significant_figures": true,
+        "naive_one_minus_cdf_tail": 0.4970677954821976,
+        "origin_and_destination": [
+          "Decidous_forest:1.39476e-07",
+          "Guinea_savanna:0.00233006"
+        ],
+        "p_is_censored": false,
+        "printed_bound_contains_computed_tail": null,
+        "printed_p_token": "0.497068",
+        "printed_p_value_or_bound": 0.497068,
+        "printed_point_relative_error": 4.114485070628926e-07,
+        "stable_one_sided_normal_tail": 0.49706779548219765,
+        "weight": 0.000194862,
+        "z_from_printed_mean_and_se": 0.007350012928699637
+      },
+      {
+        "conditional_significant_at_005_from_stable_tail": false,
+        "edge": 5,
+        "jackknife_mean": 0.0571497,
+        "jackknife_se": 4.75193,
+        "line": 27,
+        "m": 5,
+        "matches_three_significant_figures": true,
+        "naive_one_minus_cdf_tail": 0.4952021847887895,
+        "origin_and_destination": [
+          "Coastal_savanna:3.10785e-06",
+          "Decidous_forest:1.39476e-07"
+        ],
+        "p_is_censored": false,
+        "printed_bound_contains_computed_tail": null,
+        "printed_p_token": "0.495202",
+        "printed_p_value_or_bound": 0.495202,
+        "printed_point_relative_error": 3.731582679237931e-07,
+        "stable_one_sided_normal_tail": 0.4952021847887895,
+        "weight": 0.013667,
+        "z_from_printed_mean_and_se": 0.012026629180143647
+      }
+    ],
+    "first_six_edge_count": 6,
+    "first_six_edges_matching_three_significant_figures": 3,
+    "models": [
+      {
+        "identifiable_4pops": "True",
+        "log_likelihood": "89.6463",
+        "m": "0",
+        "status": "ok",
+        "variance_explained": "0.8969970387789978"
+      },
+      {
+        "identifiable_4pops": "True",
+        "log_likelihood": "91.2113",
+        "m": "1",
+        "status": "ok",
+        "variance_explained": "0.9405131225995359"
+      },
+      {
+        "identifiable_4pops": "True",
+        "log_likelihood": "92.232",
+        "m": "2",
+        "status": "ok",
+        "variance_explained": "0.9969074981183799"
+      },
+      {
+        "identifiable_4pops": "False",
+        "log_likelihood": "92.263",
+        "m": "3",
+        "status": "ok",
+        "variance_explained": "0.9996639280697674"
+      },
+      {
+        "identifiable_4pops": "False",
+        "log_likelihood": "92.2642",
+        "m": "4",
+        "status": "ok",
+        "variance_explained": "0.9995789104140936"
+      },
+      {
+        "identifiable_4pops": "False",
+        "log_likelihood": "92.2642",
+        "m": "5",
+        "status": "ok",
+        "variance_explained": "0.9995855659086298"
+      }
+    ],
+    "numerically_discrepant_edges": [
+      {
+        "conditional_significant_at_005_from_stable_tail": true,
+        "edge": 1,
+        "jackknife_mean": 0.312303,
+        "jackknife_se": 0.03982,
+        "line": 5,
+        "m": 1,
+        "matches_three_significant_figures": false,
+        "naive_one_minus_cdf_tail": 2.220446049250313e-15,
+        "origin_and_destination": [
+          "Guinea_savanna:6.79982e-05",
+          "Decidous_forest:0.000230463"
+        ],
+        "p_is_censored": false,
+        "printed_bound_contains_computed_tail": null,
+        "printed_p_token": "2.22045e-15",
+        "printed_p_value_or_bound": 2.22045e-15,
+        "printed_point_relative_error": 0.008444765818192257,
+        "stable_one_sided_normal_tail": 2.201855843040108e-15,
+        "weight": 0.31277,
+        "z_from_printed_mean_and_se": 7.842867905575088
+      },
+      {
+        "conditional_significant_at_005_from_stable_tail": true,
+        "edge": 2,
+        "jackknife_mean": 0.805858,
+        "jackknife_se": 0.0999781,
+        "line": 9,
+        "m": 2,
+        "matches_three_significant_figures": false,
+        "naive_one_minus_cdf_tail": 4.440892098500626e-16,
+        "origin_and_destination": [
+          "Transitional_zone:0",
+          "Guinea_savanna:0.00211348"
+        ],
+        "p_is_censored": false,
+        "printed_bound_contains_computed_tail": null,
+        "printed_p_token": "3.33067e-16",
+        "printed_p_value_or_bound": 3.33067e-16,
+        "printed_point_relative_error": 0.12442137301024134,
+        "stable_one_sided_normal_tail": 3.8039644839788417e-16,
+        "weight": 0.80547,
+        "z_from_printed_mean_and_se": 8.060345215602217
+      },
+      {
+        "conditional_significant_at_005_from_stable_tail": true,
+        "edge": 2,
+        "jackknife_mean": 0.829575,
+        "jackknife_se": 0.0787911,
+        "line": 13,
+        "m": 3,
+        "matches_three_significant_figures": false,
+        "naive_one_minus_cdf_tail": 0.0,
+        "origin_and_destination": [
+          "Transitional_zone:4.28571e-05",
+          "Guinea_savanna:0.00234451"
+        ],
+        "p_is_censored": true,
+        "printed_bound_contains_computed_tail": false,
+        "printed_p_token": "<2.22507e-308",
+        "printed_p_value_or_bound": 2.22507e-308,
+        "printed_point_relative_error": null,
+        "stable_one_sided_normal_tail": 3.1823435628607375e-26,
+        "weight": 0.830185,
+        "z_from_printed_mean_and_se": 10.528790688288398
+      },
+      {
+        "conditional_significant_at_005_from_stable_tail": true,
+        "edge": 2,
+        "jackknife_mean": 0.831599,
+        "jackknife_se": 0.0891607,
+        "line": 18,
+        "m": 4,
+        "matches_three_significant_figures": false,
+        "naive_one_minus_cdf_tail": 0.0,
+        "origin_and_destination": [
+          "Transitional_zone:4.70169e-05",
+          "Guinea_savanna:0.0023349"
+        ],
+        "p_is_censored": true,
+        "printed_bound_contains_computed_tail": false,
+        "printed_p_token": "<2.22507e-308",
+        "printed_p_value_or_bound": 2.22507e-308,
+        "printed_point_relative_error": null,
+        "stable_one_sided_normal_tail": 5.4471345166819186e-21,
+        "weight": 0.829983,
+        "z_from_printed_mean_and_se": 9.326968047581502
+      },
+      {
+        "conditional_significant_at_005_from_stable_tail": true,
+        "edge": 2,
+        "jackknife_mean": 0.827333,
+        "jackknife_se": 0.102932,
+        "line": 24,
+        "m": 5,
+        "matches_three_significant_figures": false,
+        "naive_one_minus_cdf_tail": 4.440892098500626e-16,
+        "origin_and_destination": [
+          "Transitional_zone:4.77366e-05",
+          "Guinea_savanna:0.00233006"
+        ],
+        "p_is_censored": false,
+        "printed_bound_contains_computed_tail": null,
+        "printed_p_token": "4.44089e-16",
+        "printed_p_value_or_bound": 4.44089e-16,
+        "printed_point_relative_error": 0.03001410443793473,
+        "stable_one_sided_normal_tail": 4.57830368494863e-16,
+        "weight": 0.830008,
+        "z_from_printed_mean_and_se": 8.037665643337348
+      }
+    ],
+    "open": [
+      "Normal-tail recomputation does not reproduce the extreme printed p-values literally. The m=3 and m=4 <DBL_MIN bounds exclude their mathematical normal-tail values; naive 1-CDF subtraction yields zero.",
+      "The notes claim five of the first six p-values match to three significant figures; only three do. Conditional significance decisions are unchanged.",
+      "Populated jackknife columns support that SEs were computed, but final command logs/run scripts and raw block estimates remain unavailable.",
+      "A restricted fit or conditional edge p-value does not identify exactly two historical migration events."
+    ],
+    "residual_consistency": {
+      "2": {
+        "implied_observed_variance": 7.2883304268454825e-09,
+        "labels": [
+          "Coastal_savanna",
+          "Decidous_forest",
+          "Guinea_savanna",
+          "Transitional_zone"
+        ],
+        "limit": "Checks consistency across models; the actual final observed covariance and covariance standard errors are not supplied.",
+        "off_diagonal_population_variance": 2.253917555888894e-11,
+        "path": "/Users/samnimoh/Desktop/chromo/provenance_final/results/residuals_m2.csv",
+        "row_labels": [
+          "Coastal_savanna",
+          "Decidous_forest",
+          "Guinea_savanna",
+          "Transitional_zone"
+        ],
+        "symmetric": true,
+        "unique_off_diagonal_residuals": [
+          1.8029999999999961e-06,
+          -6.167000000000011e-06,
+          6.805100000000007e-06,
+          9.708999999999944e-07,
+          -4.67700000000001e-06,
+          5.240199999999998e-06
+        ]
+      },
+      "3": {
+        "implied_observed_variance": 7.288330426844413e-09,
+        "labels": [
+          "Coastal_savanna",
+          "Decidous_forest",
+          "Guinea_savanna",
+          "Transitional_zone"
+        ],
+        "limit": "Checks consistency across models; the actual final observed covariance and covariance standard errors are not supplied.",
+        "off_diagonal_population_variance": 2.449403274722234e-12,
+        "path": "/Users/samnimoh/Desktop/chromo/provenance_final/results/residuals_m3.csv",
+        "row_labels": [
+          "Coastal_savanna",
+          "Decidous_forest",
+          "Guinea_savanna",
+          "Transitional_zone"
+        ],
+        "symmetric": true,
+        "unique_off_diagonal_residuals": [
+          6.776000000000086e-07,
+          -2.930000000000055e-07,
+          1.4788000000000035e-06,
+          9.659999999999972e-07,
+          -3.2420000000000072e-06,
+          7.335000000000024e-07
+        ]
+      }
+    },
+    "resolved": [
+      "Final concatenated trees and jackknife statistics are now available and agree with earlier extracted final statistics.",
+      "Stored heuristic model choice reproduces: m=3 on full range, m=2 on restricted range; explained variance agrees with residuals."
+    ],
+    "selection": {
+      "full_range": {
+        "basis": "smallest m with variance explained >= 0.998",
+        "log_likelihood": 92.263,
+        "m": 3,
+        "m_considered": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "m_range": [
+          0,
+          5
+        ],
+        "variance_explained": 0.9996639280697674
+      },
+      "identifiable_max_m": 2,
+      "identifiable_range": {
+        "basis": "no m reached 0.998; smallest m within 0.001 of the best variance explained in 0..2 (0.9969)",
+        "log_likelihood": 92.232,
+        "m": 2,
+        "m_considered": [
+          0,
+          1,
+          2
+        ],
+        "m_range": [
+          0,
+          2
+        ],
+        "variance_explained": 0.9969074981183799
+      },
+      "m_skipped": [],
+      "m_succeeded": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "n_populations": 4,
+      "note": "With 4 populations TreeMix supports at most ~2 identifiable migration edges. m = 0..5 was run as the method specifies; picks with m > 2 should be interpreted with caution.",
+      "rule": "smallest m with variance explained >= 0.998; otherwise the smallest m within 0.001 of the range's best (plateau)",
+      "variance_explained_definition": "1 - var(observed - fitted) / var(observed), over off-diagonal (between-population) covariances, as TreeMix's get_f()",
+      "variance_explained_threshold": 0.998
+    },
+    "trees": [
+      {
+        "line": 2,
+        "m": 0,
+        "newick": "(Guinea_savanna:4.7188e-05,(Transitional_zone:4.15879e-05,(Coastal_savanna:0.000127182,Decidous_forest:0):0.000335985):4.7188e-05);"
+      },
+      {
+        "line": 4,
+        "m": 1,
+        "newick": "(((Decidous_forest:0.000236295,Coastal_savanna:0):0.000470226,Transitional_zone:2.70356e-05):6.78197e-05,Guinea_savanna:6.78197e-05);"
+      },
+      {
+        "line": 7,
+        "m": 2,
+        "newick": "(Guinea_savanna:0.00202602,((Coastal_savanna:0,Decidous_forest:3.02308e-05):0.000460058,Transitional_zone:0):0.00202602);"
+      },
+      {
+        "line": 11,
+        "m": 3,
+        "newick": "(Guinea_savanna:0.00237877,((Decidous_forest:0,Coastal_savanna:0):0.000442795,Transitional_zone:6.49971e-05):0.00237877);"
+      },
+      {
+        "line": 16,
+        "m": 4,
+        "newick": "(Guinea_savanna:0.00237967,(Transitional_zone:6.44323e-05,(Coastal_savanna:0,Decidous_forest:0):0.000443622):0.00237967);"
+      },
+      {
+        "line": 22,
+        "m": 5,
+        "newick": "(Guinea_savanna:0.00237698,(Transitional_zone:6.45628e-05,(Coastal_savanna:0,Decidous_forest:0):0.000443402):0.00237698);"
+      }
+    ]
+  }
+}

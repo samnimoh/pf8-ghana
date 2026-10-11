@@ -1,0 +1,39 @@
+{
+  "level": "region",
+  "method": "pearson",
+  "populations": [
+    "Ashanti",
+    "Brong Ahafo",
+    "Central",
+    "Eastern",
+    "Greater Accra",
+    "Upper East",
+    "Volta"
+  ],
+  "n_populations": 7,
+  "n_pairs": 21,
+  "permutations": 9999,
+  "mantel_r": 0.4269109583769135,
+  "p_value": 0.0252,
+  "seed": 42,
+  "n_negative_fst_pairs_floored": 3,
+  "negative_pairs": [
+    [
+      "Ashanti",
+      "Volta",
+      -0.0010368348361826003
+    ],
+    [
+      "Eastern",
+      "Greater Accra",
+      -0.0002025719883959478
+    ],
+    [
+      "Greater Accra",
+      "Volta",
+      -0.00014217560264609706
+    ]
+  ],
+  "mantel_r_uncensored": 0.4138322216057064,
+  "p_value_uncensored": 0.0413
+}

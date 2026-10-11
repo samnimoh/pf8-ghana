@@ -1,0 +1,47 @@
+
+=================================================================
+  STEP 3a — fetch the Ghana callset from the Pf8 Zarr on Sanger
+=================================================================
+Reading sample IDs and variant metadata from the remote store...
+  211 MB in 19s
+Samples: 6,653 of 33,325 (from ghana_samples.txt)
+Variants: 12,493,205 in Pf8, 2,190,026 PASS biallelic SNPs
+  restricted to Pf3D7_10_v3:400001-440000: 3,665
+Writing to /media/biodataA/pf8/gyadu/interim/_trial_chr10.zarr.partial
+  Pf3D7_10_v3        3,665 SNPs
+
+Source chunks: 1 variant x 77 sample x 4 fields; 0 variant chunks already done, 1 to go. 8 parallel downloads.
+
+    retry 1/7 for calldata/GT/47.213.0 in 5s: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+    retry 1/7 for calldata/AD/47.177.0 in 5s: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+    retry 1/7 for calldata/AD/47.208.0 in 5s: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+    retry 1/7 for calldata/AD/47.211.0 in 5s: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+    retry 1/7 for calldata/AD/47.212.0 in 5s: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+    retry 1/7 for calldata/AD/47.223.0 in 5s: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+    retry 1/7 for calldata/AD/47.286.0 in 5s: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+    retry 1/7 for calldata/AD/47.293.0 in 5s: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+    retry 1/7 for calldata/DP/47.28 in 5s: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+    retry 1/7 for calldata/DP/47.188 in 5s: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+    retry 1/7 for calldata/DP/47.198 in 5s: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+    retry 1/7 for calldata/GQ/47.23 in 5s: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[  1/1] chunk  47 Pf3D7_10_v3:   3,665 SNPs,   3277 MB in  132s | total    3.3 GB at 24.9 MB/s | ETA  0.0 h
+
+============================================================
+  Done
+============================================================
+Store  : /media/biodataA/pf8/gyadu/interim/_trial_chr10.zarr
+Size   : 0.0 GB on disk
+Fetched: 3.5 GB in 0.04 h
+Steps 3b and 4a will use this store directly; no VCF is needed.
+
+=============================================================================================
+  Validation: _trial_chr10.zarr vs Pf8_Ghana_Pf3D7_10_v3.vcf.gz (Pf3D7_10_v3:400001-440000)
+=============================================================================================
+  reading the VCF region (tabix + scikit-allel)...
+  PASS biallelic SNPs: VCF 3,665, store 3,665
+  GT: 48,766,490 values compared, 0 differ
+  AD: 48,766,490 values compared, 0 differ
+  DP: 24,383,245 values compared, 0 differ
+  GQ: 24,383,245 values compared, 0 differ
+  PASS: store matches the VCF exactly.
+TRIAL_EXIT=0

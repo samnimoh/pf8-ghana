@@ -1,0 +1,272 @@
+{
+  "allowed_standard_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "axiom_print_targets": [
+    "tie_is_missing",
+    "reference_majority_is_reference",
+    "alternate_majority_is_alternate",
+    "one_allele_per_called_isolate",
+    "called_count_is_bounded_by_samples",
+    "conjunction_cannot_exceed_component",
+    "same_marginals_do_not_identify_haplotype",
+    "transitional_private_variant_cannot_pass",
+    "coast_private_about_40_percent_cannot_pass",
+    "sample_removal_can_raise_variant_missingness",
+    "shape_does_not_prove_identifier_alignment",
+    "ratio_of_sums_is_not_mean_of_ratios",
+    "doubled_counts_change_hudson_correction",
+    "simulated_tail_ratio_bounds",
+    "expected_false_positive_ratio_arithmetic",
+    "sampled_zero_does_not_force_population_zero"
+  ],
+  "axiom_report_count": 16,
+  "axiom_reports": [
+    {
+      "dependencies": [
+        "propext"
+      ],
+      "name": "Pf8Audit.tie_is_missing",
+      "raw_output": "'Pf8Audit.tie_is_missing' depends on axioms: [propext]",
+      "unexpected_dependencies": []
+    },
+    {
+      "dependencies": [
+        "propext"
+      ],
+      "name": "Pf8Audit.reference_majority_is_reference",
+      "raw_output": "'Pf8Audit.reference_majority_is_reference' depends on axioms: [propext]",
+      "unexpected_dependencies": []
+    },
+    {
+      "dependencies": [
+        "propext",
+        "Quot.sound"
+      ],
+      "name": "Pf8Audit.alternate_majority_is_alternate",
+      "raw_output": "'Pf8Audit.alternate_majority_is_alternate' depends on axioms: [propext, Quot.sound]",
+      "unexpected_dependencies": []
+    },
+    {
+      "dependencies": [
+        "propext",
+        "Quot.sound"
+      ],
+      "name": "Pf8Audit.one_allele_per_called_isolate",
+      "raw_output": "'Pf8Audit.one_allele_per_called_isolate' depends on axioms: [propext, Quot.sound]",
+      "unexpected_dependencies": []
+    },
+    {
+      "dependencies": [
+        "propext",
+        "Quot.sound"
+      ],
+      "name": "Pf8Audit.called_count_is_bounded_by_samples",
+      "raw_output": "'Pf8Audit.called_count_is_bounded_by_samples' depends on axioms: [propext, Quot.sound]",
+      "unexpected_dependencies": []
+    },
+    {
+      "dependencies": [
+        "propext",
+        "Quot.sound"
+      ],
+      "name": "Pf8Audit.conjunction_cannot_exceed_component",
+      "raw_output": "'Pf8Audit.conjunction_cannot_exceed_component' depends on axioms: [propext, Quot.sound]",
+      "unexpected_dependencies": []
+    },
+    {
+      "dependencies": [],
+      "name": "Pf8Audit.same_marginals_do_not_identify_haplotype",
+      "raw_output": "'Pf8Audit.same_marginals_do_not_identify_haplotype' does not depend on any axioms",
+      "unexpected_dependencies": []
+    },
+    {
+      "dependencies": [
+        "propext",
+        "Quot.sound"
+      ],
+      "name": "Pf8Audit.transitional_private_variant_cannot_pass",
+      "raw_output": "'Pf8Audit.transitional_private_variant_cannot_pass' depends on axioms: [propext, Quot.sound]",
+      "unexpected_dependencies": []
+    },
+    {
+      "dependencies": [
+        "propext",
+        "Quot.sound"
+      ],
+      "name": "Pf8Audit.coast_private_about_40_percent_cannot_pass",
+      "raw_output": "'Pf8Audit.coast_private_about_40_percent_cannot_pass' depends on axioms: [propext, Quot.sound]",
+      "unexpected_dependencies": []
+    },
+    {
+      "dependencies": [],
+      "name": "Pf8Audit.sample_removal_can_raise_variant_missingness",
+      "raw_output": "'Pf8Audit.sample_removal_can_raise_variant_missingness' does not depend on any axioms",
+      "unexpected_dependencies": []
+    },
+    {
+      "dependencies": [],
+      "name": "Pf8Audit.shape_does_not_prove_identifier_alignment",
+      "raw_output": "'Pf8Audit.shape_does_not_prove_identifier_alignment' does not depend on any axioms",
+      "unexpected_dependencies": []
+    },
+    {
+      "dependencies": [
+        "propext"
+      ],
+      "name": "Pf8Audit.ratio_of_sums_is_not_mean_of_ratios",
+      "raw_output": "'Pf8Audit.ratio_of_sums_is_not_mean_of_ratios' depends on axioms: [propext]",
+      "unexpected_dependencies": []
+    },
+    {
+      "dependencies": [
+        "propext"
+      ],
+      "name": "Pf8Audit.doubled_counts_change_hudson_correction",
+      "raw_output": "'Pf8Audit.doubled_counts_change_hudson_correction' depends on axioms: [propext]",
+      "unexpected_dependencies": []
+    },
+    {
+      "dependencies": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "name": "Pf8Audit.simulated_tail_ratio_bounds",
+      "raw_output": "'Pf8Audit.simulated_tail_ratio_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "unexpected_dependencies": []
+    },
+    {
+      "dependencies": [
+        "propext"
+      ],
+      "name": "Pf8Audit.expected_false_positive_ratio_arithmetic",
+      "raw_output": "'Pf8Audit.expected_false_positive_ratio_arithmetic' depends on axioms: [propext]",
+      "unexpected_dependencies": []
+    },
+    {
+      "dependencies": [],
+      "name": "Pf8Audit.sampled_zero_does_not_force_population_zero",
+      "raw_output": "'Pf8Audit.sampled_zero_does_not_force_population_zero' does not depend on any axioms",
+      "unexpected_dependencies": []
+    }
+  ],
+  "checks": {
+    "compiler_exactly_pinned": true,
+    "compiler_reports_cover_source_theorems": true,
+    "lean_compile_succeeded": true,
+    "no_custom_axiom_declarations_outside_comments": true,
+    "no_forbidden_proof_tokens_outside_comments": true,
+    "olean_output_exists": true,
+    "only_allowed_standard_axioms": true,
+    "print_requests_cover_source_theorems": true,
+    "python_checkers_passed": true,
+    "sixteen_axiom_print_requests": true,
+    "sixteen_compiler_axiom_reports": true,
+    "sixteen_source_theorems": true,
+    "source_unchanged": true
+  },
+  "compiler_result": {
+    "command": [
+      "/private/tmp/pf8_review/lean-4.19.0-darwin_aarch64/bin/lean",
+      "-o",
+      "/Users/samnimoh/Desktop/chromo/verification_audit/Pf8Audit.olean",
+      "/Users/samnimoh/Desktop/chromo/verification_audit/Pf8Audit.lean"
+    ],
+    "cwd": "/Users/samnimoh/Desktop/chromo/verification_audit",
+    "exit_code": 0,
+    "status": "completed",
+    "stderr": "",
+    "stdout": "'Pf8Audit.tie_is_missing' depends on axioms: [propext]\n'Pf8Audit.reference_majority_is_reference' depends on axioms: [propext]\n'Pf8Audit.alternate_majority_is_alternate' depends on axioms: [propext, Quot.sound]\n'Pf8Audit.one_allele_per_called_isolate' depends on axioms: [propext, Quot.sound]\n'Pf8Audit.called_count_is_bounded_by_samples' depends on axioms: [propext, Quot.sound]\n'Pf8Audit.conjunction_cannot_exceed_component' depends on axioms: [propext, Quot.sound]\n'Pf8Audit.same_marginals_do_not_identify_haplotype' does not depend on any axioms\n'Pf8Audit.transitional_private_variant_cannot_pass' depends on axioms: [propext, Quot.sound]\n'Pf8Audit.coast_private_about_40_percent_cannot_pass' depends on axioms: [propext, Quot.sound]\n'Pf8Audit.sample_removal_can_raise_variant_missingness' does not depend on any axioms\n'Pf8Audit.shape_does_not_prove_identifier_alignment' does not depend on any axioms\n'Pf8Audit.ratio_of_sums_is_not_mean_of_ratios' depends on axioms: [propext]\n'Pf8Audit.doubled_counts_change_hudson_correction' depends on axioms: [propext]\n'Pf8Audit.simulated_tail_ratio_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Pf8Audit.expected_false_positive_ratio_arithmetic' depends on axioms: [propext]\n'Pf8Audit.sampled_zero_does_not_force_population_zero' does not depend on any axioms\n"
+  },
+  "compiler_version": "4.19.0",
+  "compiler_version_command": {
+    "command": [
+      "/private/tmp/pf8_review/lean-4.19.0-darwin_aarch64/bin/lean",
+      "--version"
+    ],
+    "cwd": "/Users/samnimoh/Desktop/chromo/verification_audit",
+    "exit_code": 0,
+    "status": "completed",
+    "stderr": "",
+    "stdout": "Lean (version 4.19.0, arm64-apple-darwin23.6.0, commit 6caaee842e94, Release)\n"
+  },
+  "custom_axiom_declarations_outside_comments": [],
+  "forbidden_proof_tokens_outside_comments": [],
+  "generated_utc": "2026-10-10T16:01:19.474624+00:00",
+  "lean_executable": "/private/tmp/pf8_review/lean-4.19.0-darwin_aarch64/bin/lean",
+  "lean_status": "compiled",
+  "limitations": [
+    "Lean establishes the reference theorem statements, not formal refinement of the Python implementation, model calibration, source-data correctness or national prevalence.",
+    "The Python checkers perform the finite checks and provenance audits described in their logs.",
+    "Unapproved dependency names are rejected by an explicit allowlist; ordinary propext, Classical.choice and Quot.sound are permitted. Comments are excluded from token checks."
+  ],
+  "log_path": "/Users/samnimoh/Desktop/chromo/verification_audit/lean_check.log",
+  "olean_path": "/Users/samnimoh/Desktop/chromo/verification_audit/Pf8Audit.olean",
+  "olean_sha256": "6083bc123af86e4889aaf66c69f4de165717ec35e3afb35b54517fb8fbc01c82",
+  "pinned_lean_version": "4.19.0",
+  "python_checker_results": [
+    {
+      "checker": "check_provenance.py",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/Users/samnimoh/Desktop/chromo/verification_audit/check_provenance.py"
+      ],
+      "cwd": "/Users/samnimoh/Desktop/chromo/verification_audit",
+      "exit_code": 0,
+      "status": "completed",
+      "stderr": "",
+      "stdout": "{\"output\": \"/Users/samnimoh/Desktop/chromo/verification_audit/provenance_validation.json\", \"checks\": {\"passed\": 8, \"total\": 8}, \"manifest_records\": 12, \"script_files_hashed\": 50, \"outputs_hashed\": 41, \"final_raw_provenance\": \"incomplete\"}\n"
+    },
+    {
+      "checker": "check_majority_script.py",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/Users/samnimoh/Desktop/chromo/verification_audit/check_majority_script.py"
+      ],
+      "cwd": "/Users/samnimoh/Desktop/chromo/verification_audit",
+      "exit_code": 0,
+      "status": "completed",
+      "stderr": "",
+      "stdout": "Majority resolver: 1620 cases, passed=True\n"
+    },
+    {
+      "checker": "check_marker_outputs.py",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/Users/samnimoh/Desktop/chromo/verification_audit/check_marker_outputs.py"
+      ],
+      "cwd": "/Users/samnimoh/Desktop/chromo/verification_audit",
+      "exit_code": 0,
+      "status": "completed",
+      "stderr": "",
+      "stdout": "Saved: /Users/samnimoh/Desktop/chromo/verification_audit/marker_validation.json\nSamples: 1900 matched IDs; zone counts match: True\nAggregate marker/haplotype counts pass: True\npfdhfr_51_59_108 1446/1876 pass: True\npfdhfr_quadruple 0/1874 pass: True\npfcrt_72_76 133/1873 pass: True\npfdhps_437_540 18/1888 pass: True\npfdhps_G437 1697/1892 pass: True\npfcrt_N75E 133/1874 pass: True\nWHO k13 marker coverage complete: True\nScreened k13 marker targets not detected: True\nCanonical all-reference assertion supported: False\n"
+    }
+  ],
+  "python_executable": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+  "source_path": "/Users/samnimoh/Desktop/chromo/verification_audit/Pf8Audit.lean",
+  "source_sha256": "ac6f192ae32b9876deacf54a937b295a0b490edf5d945fcafeb1344c7d845253",
+  "status": "passed",
+  "theorem_count": 16,
+  "theorem_names": [
+    "tie_is_missing",
+    "reference_majority_is_reference",
+    "alternate_majority_is_alternate",
+    "one_allele_per_called_isolate",
+    "called_count_is_bounded_by_samples",
+    "conjunction_cannot_exceed_component",
+    "same_marginals_do_not_identify_haplotype",
+    "transitional_private_variant_cannot_pass",
+    "coast_private_about_40_percent_cannot_pass",
+    "sample_removal_can_raise_variant_missingness",
+    "shape_does_not_prove_identifier_alignment",
+    "ratio_of_sums_is_not_mean_of_ratios",
+    "doubled_counts_change_hudson_correction",
+    "simulated_tail_ratio_bounds",
+    "expected_false_positive_ratio_arithmetic",
+    "sampled_zero_does_not_force_population_zero"
+  ],
+  "unexpected_dependency_names": []
+}

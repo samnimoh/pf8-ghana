@@ -1,0 +1,76 @@
+# Conda environment for the Pf8 Ghana spatial population genomics pipeline.
+#
+#   mamba env create -f environment.yml
+#   conda activate pf8ghana
+#
+# Everything here comes from conda-forge or bioconda — no system packages, no
+# root. That matters on a shared server where apt-get is not available.
+#
+# Pins worth knowing about:
+#   zarr<3      scikit-allel's vcf_to_zarr uses the zarr 2.x API. On zarr 3 it
+#               dies mid-conversion with "'Group' object has no attribute
+#               'create_dataset'", which looks like a pipeline bug and is not.
+#   python 3.11 scikit-allel, numba and the geo stack all have prebuilt wheels
+#               here. 3.13 still has gaps.
+#   numpy<2     scikit-allel 1.3.x is not fully numpy-2 clean.
+
+name: pf8ghana
+
+channels:
+  - conda-forge
+  - bioconda
+
+dependencies:
+  - python=3.11
+
+  # --- compilers and build tools (replaces apt-get build-essential) --------
+  - gcc_linux-64
+  - gxx_linux-64
+  - gfortran_linux-64
+  - make
+  - pkg-config
+  - gsl                 # BayPass links against this
+  - zlib
+  - bzip2
+  - xz
+  - curl
+
+  # --- compiled population genetics tools ---------------------------------
+  - admixture           # Step 5
+  - treemix             # Step 7
+  - plink               # Step 5a/5b
+  - bedtools            # Step 9
+  - bcftools            # VCF handling
+  - samtools
+  - htslib
+
+  # --- scientific Python ---------------------------------------------------
+  - numpy<2
+  - pandas
+  - scipy
+  - matplotlib-base
+  - seaborn
+
+  # --- geospatial (Step 2, Step 6) ----------------------------------------
+  - geopandas
+  - shapely
+  - pyproj
+  - fiona
+  - rtree
+
+  # --- genotype storage (Steps 3b, 4a) ------------------------------------
+  - zarr<3
+  - numcodecs
+  - asciitree           # zarr 2.x dependency; no wheel on newer Pythons
+  - numba
+  - dask
+
+  # --- R, only for BayPass's POD simulation (Step 8b) ---------------------
+  - r-base
+
+  - pip
+  - pip:
+      - scikit-allel
+      - scikit-bio      # Mantel test (Step 6) — scipy has none
+      - umap-learn      # Step 3
+      - tqdm

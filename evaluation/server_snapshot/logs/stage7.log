@@ -1,0 +1,96 @@
+
+[1;34m######## STAGE 7 — TreeMix input ########[0m
+
+============================================================
+  STEP 7a — TreeMix input
+============================================================
+4 populations x 3,359 SNPs
+  Coastal savanna              -> Coastal_savanna
+  Decidous forest              -> Decidous_forest
+  Guinea savanna               -> Guinea_savanna
+  Transitional zone            -> Transitional_zone
+
+SNPs with >= 2 alleles in every population: 3,359
+After dropping globally monomorphic sites: 3,359
+
+Writing /media/biodataA/pf8/gyadu/interim/ghana_treemix_input.gz ...
+  3,359/3,359
+Wrote 3,359 SNPs (0.0 MB gzipped)
+Root population 'Guinea_savanna' present and usable.
+
+Next: bash step07b_treemix.sh
+
+[1;34m######## STAGE 7 — TreeMix sweep ########[0m
+Populations: Coastal_savanna Decidous_forest Guinea_savanna Transitional_zone
+SNPs:        3359
+Root:        Guinea_savanna
+Block size:  50
+Edges:       m = 0..5  (identifiable with 4 populations: m <= 2)
+Jobs:        6 TreeMix run(s) at a time
+
+[1m==> Migration edge sweep m = 0..5  (6 at a time)[0m
+  m=0 ok (exit 0)
+  m=1 ok (exit 0)
+  m=2 ok (exit 0)
+  m=3 ok (exit 0)
+  m=4 ok (exit 0)
+  m=5 ok (exit 0)
+
+[1m==> Likelihood by number of edges[0m
+m	log_likelihood
+0	89.7042
+1	91.0222
+2	91.4849
+3	91.9126
+4	91.9302
+5	91.9303
+
+[1m==> Run summary[0m
+  succeeded: m = 0 1 2 3 4 5
+  failed:    m = none
+  m = 0..2  (identifiable with 4 populations) succeeded: 0 1 2
+  m = 3..5  (run per method, poorly identifiable) succeeded: 3 4 5
+Run status -> /media/biodataA/pf8/gyadu/results/treemix/run_status.tsv
+
+Stop adding edges where the variance explained plateaus, not where the
+likelihood stops rising — likelihood rises monotonically with m by construction.
+
+Next: python step07c_plot_treemix.py
+
+[1;34m######## STAGE 7 — TreeMix summaries ########[0m
+
+============================================================
+  STEP 7c — TreeMix summaries
+============================================================
+Run status from Step 7b: /media/biodataA/pf8/gyadu/results/treemix/run_status.tsv
+ m  log_likelihood  variance_explained status  identifiable_4pops
+ 0        89.70420             0.87597     ok                True
+ 1        91.02220             0.93456     ok                True
+ 2        91.48490             0.96334     ok                True
+ 3        91.91260             0.99762     ok               False
+ 4        91.93020             0.99762     ok               False
+ 5        91.93030             0.99761     ok               False
+
+Selected m within 0–2 (identifiable): 2  [no m reached 0.998; maximum log likelihood]
+Selected m within 0–5 (full sweep):   5  [no m reached 0.998; maximum log likelihood]
+Selection -> /media/biodataA/pf8/gyadu/results/treemix/model_selection.json
+
+Residual heatmap drawn for m = 2
+Newick tree -> /media/biodataA/pf8/gyadu/results/treemix/treemix_m2.nwk
+Migration edges (weight, jackknife SE, p):
+  0.136947 NA NA NA Guinea_savanna:0.00152423 Decidous_forest:4.56485e-05
+  0.750646 NA NA NA (Coastal_savanna:4.07551e-05,Decidous_forest:4.56485e-05):0.000375804 Guinea_savanna:0.00152423
+
+Residual heatmap drawn for m = 5
+Newick tree -> /media/biodataA/pf8/gyadu/results/treemix/treemix_m5.nwk
+Migration edges (weight, jackknife SE, p):
+  0.0146867 NA NA NA Guinea_savanna:0 Decidous_forest:0.000117277
+  0.915718 NA NA NA Decidous_forest:0.000117277 Guinea_savanna:0
+  0.0694775 NA NA NA Guinea_savanna:0 Transitional_zone:0
+  0.0999764 NA NA NA (Coastal_savanna:0,(Decidous_forest:0.000117277,Transitional_zone:0):0):0.0752382 Guinea_savanna:0
+  8.06297e-05 NA NA NA Transitional_zone:0 Guinea_savanna:0
+
+Positive residuals mark population pairs more closely related than the
+tree alone predicts — candidate destinations for an additional edge.
+
+Figures -> /media/biodataA/pf8/gyadu/figures/treemix_*.png

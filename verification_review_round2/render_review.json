@@ -1,0 +1,142 @@
+{
+  "fresh_render_pdf": "/private/tmp/pf8_review_round4/render/Pf8_Ghana_manuscript_REVISED.pdf",
+  "fresh_render_pages": 194,
+  "supplied_pdf_pages": 194,
+  "normalized_page_text_differences": [],
+  "word_count_body": 91920,
+  "old_word_count_body": 90974,
+  "phrase_hits": {
+    "very low but statistically detectable": [],
+    "upper bound on true differentiation": [
+      {
+        "page": 27,
+        "excerpt": "een-group differences, so a batch-confounded design \nthat still returns FST \u2248 0.002 is reporting an upper bound on true differentiation rather than a false positive. It \ndoes threaten any positive between-zone claim \u2014 the maximum-FST pair, the polyclonality gradient, the \nADMIXTURE minor-component ordering, and the marker-frequency d"
+      }
+    ],
+    "same MAF filter": [
+      {
+        "page": 109,
+        "excerpt": "libration \nsimulated pseudo-observed SNPs under the estimated population covariance matrix with the same MAF filter \nas the observed data, giving a 0.999-quantile threshold of 10.840. Nineteen SNPs (0.49 per cent) exceed it.\nFigure 6.8. BayPass XtX genome scan on the final 3,916-SNP matrix. Left: the observed XtX "
+      }
+    ],
+    "Those conditions occur": [
+      {
+        "page": 45,
+        "excerpt": "ver fetched at all. Absence of a variant record \nis likewise read as the reference base.\n[Observed] Those conditions occur in this panel, and they change nothing in it. Of the 125 variant records \nsitting exactly at the 171 panel positions, 16 carry at least one length-changing ALT and 2 have a multi-base \nREF; a further"
+      }
+    ],
+    "Real defect": [],
+    "runs end to end": [
+      {
+        "page": 157,
+        "excerpt": "rable numbers of isolates.\n9.3 Reproducibility status\n[Observed] What is reproducible. The analysis runs end to end from public data sources, but not from a single \none. All inputs except the zone polygon layer, the PlasmoDB 3D7 annotation and the Pf8 sample manifest are \nretrievable from https://pf8-release.cog.s"
+      }
+    ],
+    "three significant figures": [
+      {
+        "page": 109,
+        "excerpt": "unts for all five. An earlier version of this paragraph said that five of six values \nreproduced to three significant figures; that was wrong, and the corrected accounting follows. Recomputing \nevery migration-edge p-value in m = 0 to 5 as a one-sided normal tail from the printed jackknife mean and \nstandard error gives fif"
+      }
+    ],
+    "selected descriptive model": [
+      {
+        "page": 9,
+        "excerpt": " give; and TreeMix now carries jackknife edge \nstandard errors, so the m = 2 graph is reported as a selected descriptive model rather than as a settled edge \ncount. Two further checks changed nothing material. Re-running the three ordinations on the 1,900-isolate \nanalysis set rather than the 4,905 pre-QC isolates leaves the"
+      },
+      {
+        "page": 148,
+        "excerpt": "t (p = 7.5 \u00d7 10\u207b\u2074 and 3.3 \u00d7 \n10\u207b\u00b9\u2076); the third edge at m = 3 has p = 0.33. A two-edge graph is \nthe selected descriptive model, not an identified count of \nmigration events\nBayPass determinism Whether the scan is \nreproducible\nFixed. Multi-threaded BayPass is non-deterministic despite a fixed \nseed: the 8-thread manuscript r"
+      },
+      {
+        "page": 155,
+        "excerpt": "dard \nerrors narrow it: the third edge is indistinguishable from zero, so \nm = 2 is reported as the selected descriptive model. They do not "
+      },
+      {
+        "page": 162,
+        "excerpt": "pt previously recorded both m = 2 and m = 3 and left the \nchoice open. m = 2 is now reported as the selected descriptive model \u2014 on the third edge\u2019s own standard \nerror and on parameter counting \u2014 rather than as a count of historical migration events that these data \nidentify. The variance-explained criterion applied across "
+      },
+      {
+        "page": 169,
+        "excerpt": ", transitional zone 0.042.\nHigh\nIs there gene flow beyond a \nbifurcating tree?\nPartly. m = 2 is the selected descriptive model: its two edges are \nsignificant (p = 7.5 x 10-4 and 3.3 x 10-16), a third is not (weight \n0.065, SE 0.147, p = 0.33), and m = 3 is non-identifiable with four \npopulations. That does not identify how "
+      }
+    ],
+    "False-discovery accounting": [
+      {
+        "page": 2,
+        "excerpt": "against MalariaGEN's published calls..........................................................\n3.11 False-discovery accounting in the XtX scan................................................................................................\n3.11.1 Quality audit of the outlier set................................................"
+      },
+      {
+        "page": 3,
+        "excerpt": ".............................................................................................\n6.8.1 False-discovery accounting....................................................................................................................\n6.8.2 The AAT1 signal, named......................................................."
+      },
+      {
+        "page": 9,
+        "excerpt": "filter ordering, a \nbitwise-reproducible single-threaded BayPass, seeded permutation tests and full false-discovery accounting: \nnear-panmixia, maximum FST of approximately 0.0023, and a near-flat ADMIXTURE cross-validation curve. \nThree quantities moved and should not be described as unchanged: the XtX threshold (the manusc"
+      },
+      {
+        "page": 31,
+        "excerpt": "o 9, Section 3.10 Stage 12 \n(with Stage 10's failure diagnosed in Section 3.10.1), Section 3.11 the false-discovery accounting applied to Stage 8, Section 3.12 \nStage 11 and Section 3.14 Stage 13.\n3.2 Stage 1 \u2014 manifest filtering\nWhat and why. The manifest is restricted to Ghana and then to isolates flagged QC-pass by the re"
+      },
+      {
+        "page": 43,
+        "excerpt": "lated neutral data assumes only \nthat the demographic model is adequate. Section 3.11 describes the false-discovery accounting now applied \non top of that threshold, and Section 3.11.1 the quality audit of the SNPs it selects.\nDeterminism. BayPass is run single-threaded. Despite a fixed -seed, the multithreaded core model is"
+      },
+      {
+        "page": 52,
+        "excerpt": "catch stale numbers, \nand it did. It was not built to ask whether the list was the right list.\n3.11 False-discovery accounting in the XtX scan\nThe problem. A quantile threshold is not a significance test. Calling a SNP an outlier when its XtX exceeds the \n0.999 quantile of the pseudo-observed null guarantees that 0.1 per cen"
+      },
+      {
+        "page": 110,
+        "excerpt": "roducible even under a fixed seed. Every number below is from the \nfinal, bitwise-stable run.\n6.8.1 False-discovery accounting\n[Calculated] A 0.999 quantile is not a significance test. By construction, 0.1 per cent of neutral SNPs clear it, so \nat 3,916 SNPs 3.9 false positives are expected among the 19, an empirical false-d"
+      },
+      {
+        "page": 148,
+        "excerpt": "opulation-genetic conclusion changed under this correction, \nthough several numbers did (Table 8.1)\nFalse-discovery accounting \nfor the XtX scan\nWhether a 0.999 quantile \nthreshold is a significance \ntest (it is not)\nAdded. 19 SNPs above threshold, 3.9 expected false positives, \nempirical FDR 20.6%. Benjamini\u2013Hochberg q-valu"
+      },
+      {
+        "page": 168,
+        "excerpt": " did not change \nwhen the SNP panel grew by 16.6 per cent, the BayPass scan became reproducible and false-discovery accounting \nwas added \u2014 and one of them has now been tested against the two thresholds that define the dataset and did \nchange. What survived: maximum FST stayed within 0.00204\u20130.00255 across six threshold scen"
+      },
+      {
+        "page": 189,
+        "excerpt": "o longer \ndetermines significance, but both \nversions are reported and the \ndisclosure stands.\n6 No false-discovery accounting for \nthe XtX outliers. A 0.999 quantile is \nnot a significance test.\nstep08c_calibrate_xtx.py now reports \nexpected false positives, an empirical \nFDR, per-SNP p-values against the POD \nnull, Benjami"
+      }
+    ],
+    "Holding zone constant": [
+      {
+        "page": 15,
+        "excerpt": "91 of 815, 1200-PF-GH-MAIGA-SM). Batch effects in this dataset are \ndemonstrable, not hypothetical: holding zone constant so that only study varies, call rate differs \nbetween the six studies within Guinea savanna at p = 2.8 x 10 to the -197. Deciduous forest draws on \nfive studies in all; across the four of them large "
+      },
+      {
+        "page": 26,
+        "excerpt": "me named studies.\n[Observed] Batch effects in these data are demonstrable rather than hypothetical. Holding zone constant, so \nthat only study varies, per-isolate call rate differs sharply between studies within the same zone (Table 2.6): \nwithin the Guinea savanna, across its six studies, Kruskal\u2013Wallis H = 923.0, p = "
+      },
+      {
+        "page": 70,
+        "excerpt": " remain 4,905-set figures.\n[Observed] Batch effects here are demonstrable rather than hypothetical. Holding zone constant, so that only \nstudy varies: within Guinea savanna, call rate differs between its six contributing studies at Kruskal\u2013Wallis p = \n2.8 \u00d7 10\u207b\u00b9\u2079\u2077; within deciduous forest, at p = 7.7 \u00d7 10\u207b\u2078\u2078. In deciduo"
+      },
+      {
+        "page": 96,
+        "excerpt": "so confounded with sequencing study, and the confounding is demonstrable \nrather than hypothetical. Holding zone constant so that only study varies: within deciduous forest, which \ndraws on five studies, the four large enough to test (the fifth, 1114-PF-PDN-DBS-GH-GHANSAH, contributes 4 \nisolates and is dropped at the n"
+      },
+      {
+        "page": 129,
+        "excerpt": "ntrast reported above. Batch effects within \nthese data are demonstrable rather than hypothetical \u2014 holding zone constant, call rate differs between \nstudies within Guinea savanna at p = 2.8e-197 (Kruskal\u2013Wallis, 6 studies, n = 3,605) and within deciduous \nforest at p = 7.7e-88 (4 studies, n = 811). A zone difference in"
+      },
+      {
+        "page": 135,
+        "excerpt": "g 391 of 815 (48 per cent). Batch effects in these \ndata are demonstrable rather than hypothetical: holding zone constant so that only study varies, call rate \ndiffers between the six Guinea savanna studies at p = 2.8 \u00d7 10\u207b\u00b9\u2079\u2077, and between four of deciduous forest's five \ncontributing studies at p = 7.7 \u00d7 10\u207b\u2078\u2078 (the fif"
+      }
+    ]
+  },
+  "visual_inspection": "Representative changed pages and tables inspected. Text legible and no clipping on these pages. Not a certification of every page.",
+  "visually_inspected_pages": [
+    8,
+    27,
+    45,
+    109,
+    155,
+    157,
+    169
+  ]
+}

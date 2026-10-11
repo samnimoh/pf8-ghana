@@ -1,0 +1,47 @@
+{
+  "source": "/Users/samnimoh/Desktop/chromo/v2/scripts/step04a_prepare_callset.py",
+  "source_sha256": "8e84020d10c784a506ad96de6d875bdf1f78960225613f017b695d3fc8e890a7",
+  "numpy_version": "2.3.5",
+  "checks": [
+    {
+      "check": "actual majority function agrees with declarative reference rule",
+      "passed": true,
+      "cases": 1620,
+      "depth_range_inclusive": [
+        -1,
+        16
+      ],
+      "encodings": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          -1,
+          -1
+        ]
+      ],
+      "block_size": 19,
+      "mismatch_indices": []
+    }
+  ],
+  "all_checks_passed": true,
+  "limitations": [
+    "Only the majority resolver function is exercised, with mocked AD retrieval.",
+    "This does not verify sample/variant I/O alignment, third-party libraries, or the complete pipeline.",
+    "Finite agreement does not establish formal refinement of arbitrary Python executions.",
+    "The available v2 script is an earlier snapshot, not the missing final executed script."
+  ]
+}

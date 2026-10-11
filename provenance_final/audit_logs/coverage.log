@@ -1,0 +1,7 @@
+panel positions              : 171
+positions WITH >=1 record    : 125
+positions with NO record     : 46
+total records at panel pos   : 125
+
+codons by number of their 3 positions carrying a record: {1: 10, 2: 26, 3: 21}
+codons with all 3 positions record-free: 0

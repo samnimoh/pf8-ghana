@@ -1,0 +1,41 @@
+pfcrt CVIET haplotype 0.071 1,873 0.054 0.104 0.064 0.125 —
+pfmdr1 N86Y 0.088 1,887 — — — — 0.029
+pfmdr1 Y184F 0.677 1,858 — — — — 0.364
+pfmdr1 D1246Y 0.011 1,866 — — — — 0.262
+pfmdr2 I492V 0.549 1,885 — — — — 0.020
+pfaat1 S258L 0.609 1,896 0.824 — 0.544 — 1.89 × 10⁻¹⁸
+pfk13 (23 codons) 0.000 1,845–
+1,876
+0.000 0.000 0.000 0.000 —
+Chloroquine-era markers
+pfcrt was scored as a single unit across the codon 72-76 core rather than variant by variant. Only two haplotypes 
+occurred: CVMNK at 0.929 and CVIET at 0.071 (n = 1,873). K76T, the diagnostic substitution carried by CVIET, was 
+at 0.071 on its own denominator (n = 1,874), and CVIET ran from 0.125 in the transitional zone and 0.104 in 
+deciduous forest to 0.064 in Guinea savanna and 0.054 in coastal savanna. Position 75 shows why the unit 
+matters: Asn75Glu requires two base changes within a single codon, so no single-variant annotation names it, 
+whereas reading the core as a haplotype resolves it. In pfmdr1, Y184F was the common variant at 0.677 (n = 
+1,858), N86Y was at 0.088 (n = 1,887; p = 0.029 among zones) and D1246Y was at 0.011. pfmdr2 I492V was at 
+0.549 (n = 1,885).
+A geographic cline at pfaat1
+pfaat1 S258L was at 0.609 overall (n = 1,896; p = 1.89 x 10^-18 among zones) and ran from 0.824 in coastal 
+savanna to 0.544 in Guinea savanna. This is the steepest geographic cline in the marker panel. The same locus is 
+the second-ranked gene in the XtX scan, AAT1 (PF3D7_0629500) reaching 24.20, so a candidate-marker 
+frequency gradient and a genome-wide differentiation scan conducted on separate matrices converge on one 
+gene. F313S was absent: codon 313 was fixed at the reference Phe in all 1,900 isolates.
+No artemisinin resistance marker was observed
+Twenty-three pfk13 codons were screened, a set covering all 14 WHO-validated and all six candidate artemisinin 
+partial-resistance variants, which together occupy 19 distinct codons, plus four codons of potential-tier variants 
+(WHO 2025). Twenty-two of the 23 codons were fixed at the reference residue. The exception was codon 458, at 
+0.9995: one isolate of the 1,866 called there carried Asn458Asp, which is not the validated allele at that codon, 
+WHO validating Asn458Tyr. Per-codon denominators ranged from 1,845 to 1,876. No WHO-screened artemisinin 
+resistance allele was observed in the analysis set. Those denominators make this a screening result rather than a 
+gap in the panel, subject to one callability qualification: of the 171 panel positions, 46 carry no variant record, so 
+the reference base is read there for every isolate regardless of coverage, and no per-isolate depth field is 
+consulted. The result is also historical, describing Ghanaian isolates collected between 2009 and 2021.
+Within-host complexity
+Within-host complexity was summarised on the 4,905-isolate QC set, using the same Fws cut that defines the 
+analysis set. The fraction of infections classified as polyclonal (Fws < 0.95) was 0.5972 in Guinea savanna, 0.5387 
+in deciduous forest, 0.5000 in the transitional zone and 0.4437 in coastal savanna. The ordering is not monotone 
+with latitude: the transitional zone, which lies between the deciduous forest and Guinea savanna zones, falls 
+below both.
+Validation

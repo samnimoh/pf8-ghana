@@ -1,0 +1,1424 @@
+{
+  "check_summary": {
+    "passed": 8,
+    "total": 8
+  },
+  "checks": [
+    {
+      "evidence": {
+        "requested_sha256": "8e002103aa61052352b63eaa5ee041b1d61f8eb57f88a31b645490f9a56390f3",
+        "workspace_sha256": "ca64d5ad3040416a65d4ac94908aff3379ab0837df960be55f4b9af9a8705c9d"
+      },
+      "name": "source_manuscripts_are_distinct",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "matched_records": 12,
+        "parsed_records": 12
+      },
+      "name": "twelve_manifest_records_all_match",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "intervals_spanning_zero": [
+          {
+            "ci95_high": "0.0017765170325831554",
+            "ci95_low": "-0.0008292507053703334",
+            "fst": "0.000473633163606411",
+            "jackknife_se": "0.0006647366678452778",
+            "n_a": "1334",
+            "n_b": "25",
+            "zone_a": "Guinea savanna",
+            "zone_b": "Transitional zone"
+          }
+        ],
+        "maximum": {
+          "ci95_high": "0.0033568389556945704",
+          "ci95_low": "0.001281850359179989",
+          "fst": "0.0023193446574372796",
+          "jackknife_se": "0.0005293338256414748",
+          "n_a": "204",
+          "n_b": "1334",
+          "zone_a": "Coastal savanna",
+          "zone_b": "Guinea savanna"
+        },
+        "path": "/Users/samnimoh/Desktop/chromo/corrected/final_fst_pairwise.csv",
+        "row_count": 6
+      },
+      "name": "final_fst_six_pairs_max_and_one_zero_interval",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "formula": "fst +/- 1.96 * jackknife_se"
+      },
+      "name": "final_fst_ci_arithmetic",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "note": "Arithmetic agreement does not validate the null model or FDR control.",
+        "path": "/Users/samnimoh/Desktop/chromo/corrected/final_xtx_calibration.json",
+        "summary": {
+          "empirical_fdr_at_threshold": 0.20610526315789474,
+          "expected_false_positives": 3.916,
+          "method": "POD quantile 0.999",
+          "n_by_qvalue": [
+            {
+              "n_snps": 8,
+              "q_threshold": 0.01
+            },
+            {
+              "n_snps": 10,
+              "q_threshold": 0.05
+            },
+            {
+              "n_snps": 13,
+              "q_threshold": 0.1
+            },
+            {
+              "n_snps": 17,
+              "q_threshold": 0.2
+            }
+          ],
+          "n_outliers": 19,
+          "n_snps": 3916,
+          "outlier_fraction": 0.004851889683350358,
+          "threshold": 10.839767826730082
+        }
+      },
+      "name": "final_baypass_summary_counts_and_arithmetic",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "counts": [
+          [
+            0.01,
+            8
+          ],
+          [
+            0.05,
+            10
+          ],
+          [
+            0.1,
+            13
+          ],
+          [
+            0.2,
+            17
+          ]
+        ],
+        "note": "Checks summary fields only; final per-SNP p/q data are unavailable locally."
+      },
+      "name": "final_q_count_summary_matches_claims",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "note": "This verifies the old run and cannot validate the final 3,916-SNP scan.",
+        "observed_rows": 3359,
+        "per_snp_header": [
+          "baypass_row",
+          "chrom",
+          "pos",
+          "xtx",
+          "is_outlier"
+        ],
+        "per_snp_table_rows": 3359,
+        "pod_rows": 100000,
+        "recomputed_outliers": 15,
+        "recomputed_threshold": 11.232456940590037
+      },
+      "name": "old_baypass_raw_reproduces_old_summary",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/interim/analysis_samples.csv",
+        "rows": 1900,
+        "zone_counts": {
+          "Coastal savanna": 204,
+          "Decidous forest": 337,
+          "Guinea savanna": 1334,
+          "Transitional zone": 25
+        }
+      },
+      "name": "sample_table_has_1900_and_expected_zone_counts",
+      "passed": true
+    }
+  ],
+  "corrected_and_proof_file_hashes": {
+    "corrected": [
+      {
+        "bytes": 6244,
+        "exists": true,
+        "md5": "e939ad74b25e2eed036dfa7291b482b5",
+        "path": "/Users/samnimoh/Desktop/chromo/corrected/CANONICAL_FACTS.txt",
+        "sha256": "41d7523eb2a61da9d2da5104521c91e495d028fce07f4e0f839a0497baad4843"
+      },
+      {
+        "bytes": 481,
+        "exists": true,
+        "md5": "d8b2863abd410ea0883d1f703786f3c8",
+        "path": "/Users/samnimoh/Desktop/chromo/corrected/batch_study_by_zone.csv",
+        "sha256": "06a3ead5cdecab03fea9e4cb68727b8f07cc1eeeec0bba901f88fbc280d94811"
+      },
+      {
+        "bytes": 494,
+        "exists": true,
+        "md5": "fb4d74be2e99c1f62484d62faaedb9a5",
+        "path": "/Users/samnimoh/Desktop/chromo/corrected/batch_within_zone_tests.csv",
+        "sha256": "7001841cebea7bb62cb1f0e3786e952e34ae3d77124f9a9c649f2950b947d1e6"
+      },
+      {
+        "bytes": 311,
+        "exists": true,
+        "md5": "def3730e76260f7e3eb8df0b2385af4d",
+        "path": "/Users/samnimoh/Desktop/chromo/corrected/batch_zone_pair_overlap.csv",
+        "sha256": "2d133764cacf7b28392b619b303d1d5811c60e917d71bcddfed1eab7b6d480ec"
+      },
+      {
+        "bytes": 999,
+        "exists": true,
+        "md5": "f4b6d694118f15bb2ab8ce51d1397a3c",
+        "path": "/Users/samnimoh/Desktop/chromo/corrected/codon_panel_concordance.csv",
+        "sha256": "92cb9fe822a4dfb6d4d4f55a3ae7a9740256708fca22a326b168322f511b2189"
+      },
+      {
+        "bytes": 1902,
+        "exists": true,
+        "md5": "056c581fed358d0cb0f4c4941a654860",
+        "path": "/Users/samnimoh/Desktop/chromo/corrected/codon_panel_haplotypes.csv",
+        "sha256": "65662e0433d803c63d797b4218c41d108f3143885ce6fde54df62d274035ccbc"
+      },
+      {
+        "bytes": 27752,
+        "exists": true,
+        "md5": "598d8c46d10e8fb557b2af9bd5d81961",
+        "path": "/Users/samnimoh/Desktop/chromo/corrected/codon_panel_residues.csv",
+        "sha256": "f98f5ce21ff31138eef35f8035c9b4ebf8d1ae76997c34a2d07c5ed97af3e970"
+      },
+      {
+        "bytes": 298,
+        "exists": true,
+        "md5": "1662bd0176878d4dbf312b502894de70",
+        "path": "/Users/samnimoh/Desktop/chromo/corrected/dimred_comparison_qcset.csv",
+        "sha256": "3d104ce26973ded0659c283be4fc0bf0e9c9eeed45c1ae0544bc60e1d0331499"
+      },
+      {
+        "bytes": 794204,
+        "exists": true,
+        "md5": "bad1e7e5a18a236dfbed6c15c82f1a84",
+        "path": "/Users/samnimoh/Desktop/chromo/corrected/dimred_comparison_zone_qcset.png",
+        "sha256": "f4112599fbad39c81f14fed472843e555d5ae8d2875748d528c458c2e4333397"
+      },
+      {
+        "bytes": 827,
+        "exists": true,
+        "md5": "ffa9601d61d58155384922dd6810f601",
+        "path": "/Users/samnimoh/Desktop/chromo/corrected/final_fst_pairwise.csv",
+        "sha256": "0bb3741d942e801c20052ac6ed1c89f5d0bfd7802d0ee79c7cb06cf016f678f9"
+      },
+      {
+        "bytes": 992,
+        "exists": true,
+        "md5": "9b18c9cceee7f8614aac3667e9535b88",
+        "path": "/Users/samnimoh/Desktop/chromo/corrected/final_outlier_genes.csv",
+        "sha256": "9c2200455330106b6a18f4c04d03d02caf09fdd7cc3b2905d7fe879c4e2b4104"
+      },
+      {
+        "bytes": 285,
+        "exists": true,
+        "md5": "c42d67b5b60b8711064bcd2c5fa39f23",
+        "path": "/Users/samnimoh/Desktop/chromo/corrected/final_treemix_comparison.csv",
+        "sha256": "15169839ec30031a5187496bdea993d0786328b1dc8f7fb74256358bd35e2f9a"
+      },
+      {
+        "bytes": 499,
+        "exists": true,
+        "md5": "e885e2829e6f64a2981ebc5e579bacb7",
+        "path": "/Users/samnimoh/Desktop/chromo/corrected/final_xtx_calibration.json",
+        "sha256": "2f698557c75d6cd9c969e32d3011cb41681ff70f47a0b8600dc8f801ddcf8312"
+      },
+      {
+        "bytes": 191393,
+        "exists": true,
+        "md5": "f95e9285084fa0e63897256d40a11fd8",
+        "path": "/Users/samnimoh/Desktop/chromo/corrected/mantel_ibd_region.png",
+        "sha256": "d5dec4ce31ed5429dbf9ff7f0aa6aa644e17f230d0db96c68bee901ebdb5f4de"
+      },
+      {
+        "bytes": 302,
+        "exists": true,
+        "md5": "779b9e379b6640afbbeb39409206ed69",
+        "path": "/Users/samnimoh/Desktop/chromo/corrected/mantel_jackknife_region.csv",
+        "sha256": "710250332da3a942f2b9ea3c0bb8afc4ac0b51180ed99bbdf8513f4facc0f2c7"
+      },
+      {
+        "bytes": 214,
+        "exists": true,
+        "md5": "f047f41746e7c535c98aa82960a8354a",
+        "path": "/Users/samnimoh/Desktop/chromo/corrected/mantel_jackknife_zone.csv",
+        "sha256": "b8e34e760b63e1d2c0c26ca0b518c4aebb06b7a520b87a4d2bae2a7310022d23"
+      },
+      {
+        "bytes": 694,
+        "exists": true,
+        "md5": "7647cac4cd70af0f2d7a96777a6783ce",
+        "path": "/Users/samnimoh/Desktop/chromo/corrected/mantel_result_region.json",
+        "sha256": "44808b15732932e361e051183a6670367c0e8d6319b0f6fd51ce21861666c98d"
+      },
+      {
+        "bytes": 431,
+        "exists": true,
+        "md5": "8e3235b42b7726a9cb2f30cb4542fee1",
+        "path": "/Users/samnimoh/Desktop/chromo/corrected/mantel_result_zone.json",
+        "sha256": "8fa9f6a36e5ba59f18b4d71d6c6aed2c46455fa106304f5febce1b898954093b"
+      },
+      {
+        "bytes": 6985,
+        "exists": true,
+        "md5": "c2ad2dcf9821a67dfd9a9acf44d8e0ac",
+        "path": "/Users/samnimoh/Desktop/chromo/corrected/outlier_quality_check.csv",
+        "sha256": "de8b649b2b8dad85b163bd1128df629e1015b2d00381bd82a9a635951745e2a0"
+      },
+      {
+        "bytes": 1866,
+        "exists": true,
+        "md5": "72cbf00d1ac7484d0e74955dc6dd8cd8",
+        "path": "/Users/samnimoh/Desktop/chromo/corrected/panel_table.md",
+        "sha256": "f63e3750c5502b75d30bb5b34f35001b2eb6320f85eec1aab6a446586120bad5"
+      },
+      {
+        "bytes": 13719,
+        "exists": true,
+        "md5": "81ffa03476cb560765edc2ce0343dfda",
+        "path": "/Users/samnimoh/Desktop/chromo/corrected/resistance_panel_canonical.csv",
+        "sha256": "6eddb46a0f42d80ea41e59a20bd6684b98b669984803fb58ad78cbe273c2605d"
+      },
+      {
+        "bytes": 1004169,
+        "exists": true,
+        "md5": "6a9c2330b0e1d97b5bf4a5e1e8a0fc14",
+        "path": "/Users/samnimoh/Desktop/chromo/corrected/resistance_panel_frequencies.csv",
+        "sha256": "679274277bed220fc700d9d9d89b4baca8645a4a706eb39aaf9b801949e72969"
+      },
+      {
+        "bytes": 3365,
+        "exists": true,
+        "md5": "3376b1dc78f37351bab088f36fbd3fb2",
+        "path": "/Users/samnimoh/Desktop/chromo/corrected/sensitivity_fst.csv",
+        "sha256": "0fa5470fdee7f2ffeadb46e4c6424084ab6a0e8fe320d36aa147dc99448a5a2b"
+      },
+      {
+        "bytes": 1035,
+        "exists": true,
+        "md5": "e8cb05e2692bd24b4e8d6f54920d7484",
+        "path": "/Users/samnimoh/Desktop/chromo/corrected/sensitivity_summary.csv",
+        "sha256": "282bf9610715d667b308fa02df7e31cd852c44a63fdcee873e158fc9a961b79f"
+      },
+      {
+        "bytes": 15200,
+        "exists": true,
+        "md5": "152194ca3915f6f6036dfde3c1753d8d",
+        "path": "/Users/samnimoh/Desktop/chromo/corrected/step12_codon_panel.log",
+        "sha256": "ce491da555865d3eab81a37b237cd2d32485fb8e29d435d9aff7424ca0f9592f"
+      },
+      {
+        "bytes": 152,
+        "exists": true,
+        "md5": "9b6649e8044153ec089a84f7ddb6b890",
+        "path": "/Users/samnimoh/Desktop/chromo/corrected/xtx_calibration.json",
+        "sha256": "b831659927b121806519e9d25e78fec34489bf931c87d0e29e9a0590095c7fb5"
+      }
+    ],
+    "proof_of_work": [
+      {
+        "bytes": 1290,
+        "exists": true,
+        "md5": "88d36f17906fce9f238411dfa4fd6b57",
+        "path": "/Users/samnimoh/Desktop/chromo/proof_of_work/MANIFEST.md",
+        "sha256": "374626ccb3cc28d0da0c3707bda9080412631bb5bbd3dd3a52fa6df57ab7e1fd"
+      },
+      {
+        "bytes": 3541,
+        "exists": true,
+        "md5": "26891658c9bcb8225c281dd269cc14c8",
+        "path": "/Users/samnimoh/Desktop/chromo/proof_of_work/RAW_LOG_EXTRACTS.txt",
+        "sha256": "d5ae30bd5f35a5895fdfa905f147f57698d024832150ff6ddf38e03dae39c416"
+      },
+      {
+        "bytes": 329011,
+        "exists": true,
+        "md5": "37dd212e47432dc5201329e17d9db7a5",
+        "path": "/Users/samnimoh/Desktop/chromo/proof_of_work/admixture_barplots.png",
+        "sha256": "bb9ae020e31c8c9196b778fb4b8b7c972326e97234fa9425b1d1abbfe6145e25"
+      },
+      {
+        "bytes": 91807,
+        "exists": true,
+        "md5": "7ec4b7c6ff3e83d3bdaf0b0fa817b848",
+        "path": "/Users/samnimoh/Desktop/chromo/proof_of_work/admixture_cv.png",
+        "sha256": "e0cb0d3d8ddd28b2577dd153861afd388ec073821a07ca14e3e6fa1436ede533"
+      },
+      {
+        "bytes": 133178,
+        "exists": true,
+        "md5": "cc8e74abe16db6f6ecc207cfeef51baa",
+        "path": "/Users/samnimoh/Desktop/chromo/proof_of_work/baypass_xtx.png",
+        "sha256": "364bea28437bd6e319955478e94b6c0830757d726af6333fd2226a60748d83a9"
+      },
+      {
+        "bytes": 794204,
+        "exists": true,
+        "md5": "bad1e7e5a18a236dfbed6c15c82f1a84",
+        "path": "/Users/samnimoh/Desktop/chromo/proof_of_work/dimred_comparison_zone_qcset.png",
+        "sha256": "f4112599fbad39c81f14fed472843e555d5ae8d2875748d528c458c2e4333397"
+      },
+      {
+        "bytes": 992,
+        "exists": true,
+        "md5": "9b18c9cceee7f8614aac3667e9535b88",
+        "path": "/Users/samnimoh/Desktop/chromo/proof_of_work/final_outlier_genes.csv",
+        "sha256": "9c2200455330106b6a18f4c04d03d02caf09fdd7cc3b2905d7fe879c4e2b4104"
+      },
+      {
+        "bytes": 285,
+        "exists": true,
+        "md5": "c42d67b5b60b8711064bcd2c5fa39f23",
+        "path": "/Users/samnimoh/Desktop/chromo/proof_of_work/final_treemix_comparison.csv",
+        "sha256": "15169839ec30031a5187496bdea993d0786328b1dc8f7fb74256358bd35e2f9a"
+      },
+      {
+        "bytes": 158608,
+        "exists": true,
+        "md5": "15e7b7564038455373fc8955559e6fb8",
+        "path": "/Users/samnimoh/Desktop/chromo/proof_of_work/fst_heatmap.png",
+        "sha256": "ddb8947a7e0fa93d69f626e296979c2333003e00ce2c42909ec43d2cfb8194dc"
+      },
+      {
+        "bytes": 197600,
+        "exists": true,
+        "md5": "182c62117125895554fc3736d0b4aef4",
+        "path": "/Users/samnimoh/Desktop/chromo/proof_of_work/mantel_ibd_region.png",
+        "sha256": "1ec9f0952161ecb7b08a93ccb6dfb91fc7f18934416ea1e3ebdeb4e458c7963e"
+      },
+      {
+        "bytes": 302,
+        "exists": true,
+        "md5": "779b9e379b6640afbbeb39409206ed69",
+        "path": "/Users/samnimoh/Desktop/chromo/proof_of_work/mantel_jackknife_region.csv",
+        "sha256": "710250332da3a942f2b9ea3c0bb8afc4ac0b51180ed99bbdf8513f4facc0f2c7"
+      },
+      {
+        "bytes": 694,
+        "exists": true,
+        "md5": "7647cac4cd70af0f2d7a96777a6783ce",
+        "path": "/Users/samnimoh/Desktop/chromo/proof_of_work/mantel_result_region.json",
+        "sha256": "44808b15732932e361e051183a6670367c0e8d6319b0f6fd51ce21861666c98d"
+      },
+      {
+        "bytes": 13719,
+        "exists": true,
+        "md5": "81ffa03476cb560765edc2ce0343dfda",
+        "path": "/Users/samnimoh/Desktop/chromo/proof_of_work/resistance_panel_canonical.csv",
+        "sha256": "6eddb46a0f42d80ea41e59a20bd6684b98b669984803fb58ad78cbe273c2605d"
+      },
+      {
+        "bytes": 108785,
+        "exists": true,
+        "md5": "45f84c42f1616b893326907850b4e8b1",
+        "path": "/Users/samnimoh/Desktop/chromo/proof_of_work/treemix_residuals_m2.png",
+        "sha256": "40f980bf8111fff4cf9cc82f9d0e99b222c1a3c8ef8e4a55d475c30d83728356"
+      },
+      {
+        "bytes": 191912,
+        "exists": true,
+        "md5": "df1744d687bcb473fc80631f486b89db",
+        "path": "/Users/samnimoh/Desktop/chromo/proof_of_work/treemix_variance_explained.png",
+        "sha256": "694c9cf59254cb01290debb3886d878216b387119037cd6516384be73bc622e9"
+      }
+    ]
+  },
+  "generated_utc": "2026-10-10T16:01:17.620942+00:00",
+  "manifest_verification": [
+    {
+      "actual": {
+        "bytes": 329011,
+        "exists": true,
+        "md5": "37dd212e47432dc5201329e17d9db7a5",
+        "path": "/Users/samnimoh/Desktop/chromo/proof_of_work/admixture_barplots.png",
+        "sha256": "bb9ae020e31c8c9196b778fb4b8b7c972326e97234fa9425b1d1abbfe6145e25"
+      },
+      "expected_bytes": 329011,
+      "expected_md5": "37dd212e47432dc5201329e17d9db7a5",
+      "file": "admixture_barplots.png",
+      "matches": true
+    },
+    {
+      "actual": {
+        "bytes": 91807,
+        "exists": true,
+        "md5": "7ec4b7c6ff3e83d3bdaf0b0fa817b848",
+        "path": "/Users/samnimoh/Desktop/chromo/proof_of_work/admixture_cv.png",
+        "sha256": "e0cb0d3d8ddd28b2577dd153861afd388ec073821a07ca14e3e6fa1436ede533"
+      },
+      "expected_bytes": 91807,
+      "expected_md5": "7ec4b7c6ff3e83d3bdaf0b0fa817b848",
+      "file": "admixture_cv.png",
+      "matches": true
+    },
+    {
+      "actual": {
+        "bytes": 133178,
+        "exists": true,
+        "md5": "cc8e74abe16db6f6ecc207cfeef51baa",
+        "path": "/Users/samnimoh/Desktop/chromo/proof_of_work/baypass_xtx.png",
+        "sha256": "364bea28437bd6e319955478e94b6c0830757d726af6333fd2226a60748d83a9"
+      },
+      "expected_bytes": 133178,
+      "expected_md5": "cc8e74abe16db6f6ecc207cfeef51baa",
+      "file": "baypass_xtx.png",
+      "matches": true
+    },
+    {
+      "actual": {
+        "bytes": 158608,
+        "exists": true,
+        "md5": "15e7b7564038455373fc8955559e6fb8",
+        "path": "/Users/samnimoh/Desktop/chromo/proof_of_work/fst_heatmap.png",
+        "sha256": "ddb8947a7e0fa93d69f626e296979c2333003e00ce2c42909ec43d2cfb8194dc"
+      },
+      "expected_bytes": 158608,
+      "expected_md5": "15e7b7564038455373fc8955559e6fb8",
+      "file": "fst_heatmap.png",
+      "matches": true
+    },
+    {
+      "actual": {
+        "bytes": 197600,
+        "exists": true,
+        "md5": "182c62117125895554fc3736d0b4aef4",
+        "path": "/Users/samnimoh/Desktop/chromo/proof_of_work/mantel_ibd_region.png",
+        "sha256": "1ec9f0952161ecb7b08a93ccb6dfb91fc7f18934416ea1e3ebdeb4e458c7963e"
+      },
+      "expected_bytes": 197600,
+      "expected_md5": "182c62117125895554fc3736d0b4aef4",
+      "file": "mantel_ibd_region.png",
+      "matches": true
+    },
+    {
+      "actual": {
+        "bytes": 108785,
+        "exists": true,
+        "md5": "45f84c42f1616b893326907850b4e8b1",
+        "path": "/Users/samnimoh/Desktop/chromo/proof_of_work/treemix_residuals_m2.png",
+        "sha256": "40f980bf8111fff4cf9cc82f9d0e99b222c1a3c8ef8e4a55d475c30d83728356"
+      },
+      "expected_bytes": 108785,
+      "expected_md5": "45f84c42f1616b893326907850b4e8b1",
+      "file": "treemix_residuals_m2.png",
+      "matches": true
+    },
+    {
+      "actual": {
+        "bytes": 191912,
+        "exists": true,
+        "md5": "df1744d687bcb473fc80631f486b89db",
+        "path": "/Users/samnimoh/Desktop/chromo/proof_of_work/treemix_variance_explained.png",
+        "sha256": "694c9cf59254cb01290debb3886d878216b387119037cd6516384be73bc622e9"
+      },
+      "expected_bytes": 191912,
+      "expected_md5": "df1744d687bcb473fc80631f486b89db",
+      "file": "treemix_variance_explained.png",
+      "matches": true
+    },
+    {
+      "actual": {
+        "bytes": 992,
+        "exists": true,
+        "md5": "9b18c9cceee7f8614aac3667e9535b88",
+        "path": "/Users/samnimoh/Desktop/chromo/proof_of_work/final_outlier_genes.csv",
+        "sha256": "9c2200455330106b6a18f4c04d03d02caf09fdd7cc3b2905d7fe879c4e2b4104"
+      },
+      "expected_bytes": 992,
+      "expected_md5": "9b18c9cceee7f8614aac3667e9535b88",
+      "file": "final_outlier_genes.csv",
+      "matches": true
+    },
+    {
+      "actual": {
+        "bytes": 285,
+        "exists": true,
+        "md5": "c42d67b5b60b8711064bcd2c5fa39f23",
+        "path": "/Users/samnimoh/Desktop/chromo/proof_of_work/final_treemix_comparison.csv",
+        "sha256": "15169839ec30031a5187496bdea993d0786328b1dc8f7fb74256358bd35e2f9a"
+      },
+      "expected_bytes": 285,
+      "expected_md5": "c42d67b5b60b8711064bcd2c5fa39f23",
+      "file": "final_treemix_comparison.csv",
+      "matches": true
+    },
+    {
+      "actual": {
+        "bytes": 302,
+        "exists": true,
+        "md5": "779b9e379b6640afbbeb39409206ed69",
+        "path": "/Users/samnimoh/Desktop/chromo/proof_of_work/mantel_jackknife_region.csv",
+        "sha256": "710250332da3a942f2b9ea3c0bb8afc4ac0b51180ed99bbdf8513f4facc0f2c7"
+      },
+      "expected_bytes": 302,
+      "expected_md5": "779b9e379b6640afbbeb39409206ed69",
+      "file": "mantel_jackknife_region.csv",
+      "matches": true
+    },
+    {
+      "actual": {
+        "bytes": 13719,
+        "exists": true,
+        "md5": "81ffa03476cb560765edc2ce0343dfda",
+        "path": "/Users/samnimoh/Desktop/chromo/proof_of_work/resistance_panel_canonical.csv",
+        "sha256": "6eddb46a0f42d80ea41e59a20bd6684b98b669984803fb58ad78cbe273c2605d"
+      },
+      "expected_bytes": 13719,
+      "expected_md5": "81ffa03476cb560765edc2ce0343dfda",
+      "file": "resistance_panel_canonical.csv",
+      "matches": true
+    },
+    {
+      "actual": {
+        "bytes": 3541,
+        "exists": true,
+        "md5": "26891658c9bcb8225c281dd269cc14c8",
+        "path": "/Users/samnimoh/Desktop/chromo/proof_of_work/RAW_LOG_EXTRACTS.txt",
+        "sha256": "d5ae30bd5f35a5895fdfa905f147f57698d024832150ff6ddf38e03dae39c416"
+      },
+      "expected_bytes": 3541,
+      "expected_md5": "26891658c9bcb8225c281dd269cc14c8",
+      "file": "RAW_LOG_EXTRACTS.txt",
+      "matches": true
+    }
+  ],
+  "output_availability": {
+    "final_treeout_files": [],
+    "ghana_baypass.geno": [],
+    "ghana_core_snps.npz": [],
+    "ghana_core_summary_pi_xtx.out": [
+      "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/results/baypass/ghana_core_summary_pi_xtx.out"
+    ],
+    "ghana_pod_summary_pi_xtx.out": [
+      "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/results/baypass/ghana_pod_summary_pi_xtx.out"
+    ],
+    "rerun_5to9.log": [],
+    "rerun_corrected.log": [],
+    "step12_codon_panel.py": [],
+    "step13_sensitivity.py": [],
+    "xtx_all_snps.csv": [
+      "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/results/baypass/xtx_all_snps.csv"
+    ]
+  },
+  "provenance_limits": [
+    "Final results CSV/JSON files and manually extracted log text are available; full final generating scripts, genotype matrix, BayPass raw XtX/POD files and original final TreeMix outputs cannot be traced from this local bundle.",
+    "Available v2 and server_snapshot scripts contain earlier code. Their absence of claimed final corrections does not prove the remote final run lacked those fixes.",
+    "Final p/q values and AAT1 q=0.0049 cannot be independently recomputed from available local raw data. Available per-SNP data describe the old 3,359-SNP run.",
+    "Manifest matches verify integrity against the supplied manifest, not remote origin or biological/statistical validity.",
+    "Later corrected workspace outputs address several unperformed analyses in the requested Downloads manuscript; their generating step12/step13 scripts are absent."
+  ],
+  "python_executable": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+  "schema_version": 1,
+  "scope": "Read-only local inventories, hashes, text markers and arithmetic. No remote connection, pipeline execution, input mutation or manuscript substitution.",
+  "script_file_hashes": {
+    "server_snapshot": [
+      {
+        "bytes": 13619,
+        "exists": true,
+        "md5": "3483f15dea082e7d0d214059d9a83df8",
+        "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/__pycache__/callset_io.cpython-310.pyc",
+        "sha256": "16dfeea83822f7a9c9b8077f3db801d06f8103bb5b6f9178c6287dcbb9ccaf56"
+      },
+      {
+        "bytes": 7112,
+        "exists": true,
+        "md5": "2e9e288511b607a820a55045ae8ca9a8",
+        "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/__pycache__/config.cpython-310.pyc",
+        "sha256": "6a8fb66a8c53b7bf61aeda8f0e7a8c233fe75e1f03d9f9c71af94d1bd4144f4f"
+      },
+      {
+        "bytes": 14374,
+        "exists": true,
+        "md5": "6f85a5821bd51abae794193efb72758c",
+        "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/callset_io.py",
+        "sha256": "f690e267de70e0a6c84a45405b60d1ab12ac6f436d9281f068f346fe20cb9395"
+      },
+      {
+        "bytes": 11205,
+        "exists": true,
+        "md5": "6be8838cfb5f6e8211be7466887dfc2c",
+        "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/check_env.py",
+        "sha256": "d05f755fdf35308c1a63ed44931db778855338c2e74088a23aef131fd3ce24c2"
+      },
+      {
+        "bytes": 9494,
+        "exists": true,
+        "md5": "fb5421392e65f1e848df150be41c9695",
+        "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/config.py",
+        "sha256": "b4ae055cfd1e42b5f5706e499e9869158228c0f08da5ad1126b2c77d4daa52c7"
+      },
+      {
+        "bytes": 6128,
+        "exists": true,
+        "md5": "c5ab65b984aa28a3878040150f85c794",
+        "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/run_all.sh",
+        "sha256": "97e1a0e8d2296278060b568afa14148ddce6371a798ef47ffe59d0a706ff5da0"
+      },
+      {
+        "bytes": 10019,
+        "exists": true,
+        "md5": "3a5cacd5a04d8e3408e2014254f80d69",
+        "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/step00_setup.sh",
+        "sha256": "662040b6fc1d257dcf2db1225c807342f5e70dca9feb39448ae7c8c624c07c65"
+      },
+      {
+        "bytes": 3736,
+        "exists": true,
+        "md5": "69ba2061ad6c1e502f0abecaba6c2ca9",
+        "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/step01_filter_samples.py",
+        "sha256": "89559e21cfc42d8ba1d61c527683c966dc13681e82439d1335331e1e5087fcaf"
+      },
+      {
+        "bytes": 7038,
+        "exists": true,
+        "md5": "189258147f6027e3e61a6848e3e97d99",
+        "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/step02_assign_aez.py",
+        "sha256": "d007c8eef4d5c42f6c6a7d9678f6c362fe957671b8479cf2d5db8b08fec1a664"
+      },
+      {
+        "bytes": 15146,
+        "exists": true,
+        "md5": "96f4d7e46cd6243084249fbd41652031",
+        "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/step03_umap.py",
+        "sha256": "c7927c96f82f56c7bc2da8e8978b1e0cae63c1634cf1acc52487fab7e80a0df6"
+      },
+      {
+        "bytes": 21831,
+        "exists": true,
+        "md5": "83f1f7e5e80049919d0741aa02f79d78",
+        "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/step03a_fetch_callset_zarr.py",
+        "sha256": "2fd161c2a4624957fa411047e8cb96ff8746bd7db276bf60eb9f6bbd35b2ac29"
+      },
+      {
+        "bytes": 21941,
+        "exists": true,
+        "md5": "f3b1399002c3c016b3fdd3b9eddf2172",
+        "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/step03b_sample_qc.py",
+        "sha256": "e7491d001b8b5f9d4ef84d38e7fc52c11a9d797b8942f5ec22d1b6af24860c8b"
+      },
+      {
+        "bytes": 14484,
+        "exists": true,
+        "md5": "fa21ca8f09755bc840064ee1b0196722",
+        "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/step04a_prepare_callset.py",
+        "sha256": "948ada0a5dcaf493077e0b5a07b9a6ce738de4063116e3d6d26370614e7bb40a"
+      },
+      {
+        "bytes": 14934,
+        "exists": true,
+        "md5": "54d0c2da35cb2f62c08f5b9a3eed861e",
+        "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/step04a_prepare_callset_malariagen.py",
+        "sha256": "e4de40dabef8a198e25b6f88b613ff853c65149f19b1d6cfb3644d8e894b563b"
+      },
+      {
+        "bytes": 5889,
+        "exists": true,
+        "md5": "a87620dbac8a58c132e152f5d57e13bc",
+        "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/step04b_fst.py",
+        "sha256": "dd8259b034a5c11df3cb8e5f69036eea994a5369a343f641234028af6fe1b262"
+      },
+      {
+        "bytes": 4186,
+        "exists": true,
+        "md5": "9070ad5ba91e592424c1968908214f0f",
+        "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/step05a_export_plink.py",
+        "sha256": "a28b869c6e6a947db81d4953d05ad50f641549a7641f7c41e5119086cb2de830"
+      },
+      {
+        "bytes": 4631,
+        "exists": true,
+        "md5": "fa22f844fe2cffd4aef1ad2be08d3e90",
+        "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/step05b_admixture.sh",
+        "sha256": "e862a0d9913e15432a7d59c2a25e3c57cb00131034f4efeac37321b1988248b8"
+      },
+      {
+        "bytes": 7446,
+        "exists": true,
+        "md5": "925450d6b9cf6180ef838d08c115c0a4",
+        "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/step05c_plot_admixture.py",
+        "sha256": "59de6e9f0cdf7a68c0b79a8b8fee3bafe9bd49ebfd870814a84b1c772b39dbcd"
+      },
+      {
+        "bytes": 9455,
+        "exists": true,
+        "md5": "5ca8af98806dab28966a3fc243dbd262",
+        "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/step06_mantel.py",
+        "sha256": "001af0cae4c3f9e7c16420eb2db41a36cd199661b865031da18a3d526c6537ac"
+      },
+      {
+        "bytes": 3509,
+        "exists": true,
+        "md5": "a0a300897c788dd2aabd537c6d6c2bb3",
+        "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/step07a_treemix_input.py",
+        "sha256": "24117dbe825d6b44e12bc8b4726a48812e71dbc1dbba3a6acf51e0c6235dc439"
+      },
+      {
+        "bytes": 13711,
+        "exists": true,
+        "md5": "2c84d66a4f2f30c7ef877062a113241e",
+        "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/step07b_treemix.sh",
+        "sha256": "562c34502352256cbc5d94567156e62affb7c63552a1be39d6e5ef6483754461"
+      },
+      {
+        "bytes": 14646,
+        "exists": true,
+        "md5": "bd489ab023a8fb65876d02bfbe1b59b7",
+        "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/step07c_plot_treemix.py",
+        "sha256": "259141faa8413ab1de371e1cf6ce32a0645367ff72017e71e0e0d6d4fe99b0ca"
+      },
+      {
+        "bytes": 5739,
+        "exists": true,
+        "md5": "50a68011902b7bca8aa92c59a416c64c",
+        "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/step08a_baypass_input.py",
+        "sha256": "e3dffead3b460590a325d45052e36d121727f6ba5d93de5bae44efc4ab95ce33"
+      },
+      {
+        "bytes": 6404,
+        "exists": true,
+        "md5": "eac546f6adf6271d79bfa2d5e6c49044",
+        "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/step08b_baypass.sh",
+        "sha256": "acbe4bbb7ffee3f07558ef5b7a18d47cd95321a1f61dd419ca55c5677f17ee17"
+      },
+      {
+        "bytes": 6431,
+        "exists": true,
+        "md5": "853b43f6ac0f6acdd30b97dfa5fc1906",
+        "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/step08c_calibrate_xtx.py",
+        "sha256": "c157a90abfba108422a111b40ef85e54ec1e331217c09a7bfaf8aba87c699df1"
+      },
+      {
+        "bytes": 9962,
+        "exists": true,
+        "md5": "961ae997b31a3a688ea98ff013fe4d7f",
+        "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/step09_annotate.py",
+        "sha256": "0df2f46d4a6f6055aca0e28353372f311325e8ed319b34b3da69bca997a6f750"
+      }
+    ],
+    "v2": [
+      {
+        "bytes": 14334,
+        "exists": true,
+        "md5": "1584ac9fcb652e0e18d09f6f55f1c9df",
+        "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/callset_io.py",
+        "sha256": "434761c18b6fb089335faa7c665ae16939a01f921c91bbd6263520418d8a2de5"
+      },
+      {
+        "bytes": 11205,
+        "exists": true,
+        "md5": "6be8838cfb5f6e8211be7466887dfc2c",
+        "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/check_env.py",
+        "sha256": "d05f755fdf35308c1a63ed44931db778855338c2e74088a23aef131fd3ce24c2"
+      },
+      {
+        "bytes": 10203,
+        "exists": true,
+        "md5": "c21ace25d935e2ed23c2d7e1490a4f83",
+        "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/config.py",
+        "sha256": "f60ad7335b929349e578a762f1aff002fb834c8bb72e26a97c3e2197c5eb05f6"
+      },
+      {
+        "bytes": 6128,
+        "exists": true,
+        "md5": "c5ab65b984aa28a3878040150f85c794",
+        "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/run_all.sh",
+        "sha256": "97e1a0e8d2296278060b568afa14148ddce6371a798ef47ffe59d0a706ff5da0"
+      },
+      {
+        "bytes": 10019,
+        "exists": true,
+        "md5": "3a5cacd5a04d8e3408e2014254f80d69",
+        "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/step00_setup.sh",
+        "sha256": "662040b6fc1d257dcf2db1225c807342f5e70dca9feb39448ae7c8c624c07c65"
+      },
+      {
+        "bytes": 3736,
+        "exists": true,
+        "md5": "69ba2061ad6c1e502f0abecaba6c2ca9",
+        "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/step01_filter_samples.py",
+        "sha256": "89559e21cfc42d8ba1d61c527683c966dc13681e82439d1335331e1e5087fcaf"
+      },
+      {
+        "bytes": 7038,
+        "exists": true,
+        "md5": "189258147f6027e3e61a6848e3e97d99",
+        "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/step02_assign_aez.py",
+        "sha256": "d007c8eef4d5c42f6c6a7d9678f6c362fe957671b8479cf2d5db8b08fec1a664"
+      },
+      {
+        "bytes": 15374,
+        "exists": true,
+        "md5": "50f9887618fc999f19b298a48ff908cf",
+        "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/step03_umap.py",
+        "sha256": "4b79cbe4ffb9730350b99914b5f654f16397ea47cbb05b81b02d71ea93d68224"
+      },
+      {
+        "bytes": 21831,
+        "exists": true,
+        "md5": "83f1f7e5e80049919d0741aa02f79d78",
+        "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/step03a_fetch_callset_zarr.py",
+        "sha256": "2fd161c2a4624957fa411047e8cb96ff8746bd7db276bf60eb9f6bbd35b2ac29"
+      },
+      {
+        "bytes": 22856,
+        "exists": true,
+        "md5": "074d424ce730754ac2594a8474df41c0",
+        "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/step03b_sample_qc.py",
+        "sha256": "0a3371f7e9bba86a4dbcb2981577d51440f99abfdefc7b24e5def2a4508ed5b3"
+      },
+      {
+        "bytes": 14700,
+        "exists": true,
+        "md5": "32252e34bc3a1e1c40f274c29ccf917b",
+        "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/step04a_prepare_callset.py",
+        "sha256": "8e84020d10c784a506ad96de6d875bdf1f78960225613f017b695d3fc8e890a7"
+      },
+      {
+        "bytes": 14934,
+        "exists": true,
+        "md5": "54d0c2da35cb2f62c08f5b9a3eed861e",
+        "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/step04a_prepare_callset_malariagen.py",
+        "sha256": "e4de40dabef8a198e25b6f88b613ff853c65149f19b1d6cfb3644d8e894b563b"
+      },
+      {
+        "bytes": 5933,
+        "exists": true,
+        "md5": "e2619bf3f69dcbe61535935604a87907",
+        "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/step04b_fst.py",
+        "sha256": "236ed8d6e6409286a72fa0b50311f37674c2ea1e5690e7f5c76b04bbb682dd41"
+      },
+      {
+        "bytes": 4253,
+        "exists": true,
+        "md5": "6fa8baf72e346909405d083a305d599c",
+        "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/step05a_export_plink.py",
+        "sha256": "a79348dc544edf8f44e0549f920b56410112baac91f3068e18bf758ee5e563b1"
+      },
+      {
+        "bytes": 4645,
+        "exists": true,
+        "md5": "5b2c5de4c822dfd6753296a628ccc030",
+        "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/step05b_admixture.sh",
+        "sha256": "3f31404defeea9081cb1a308f9288ed4ffa61197f20feab4813593230fc6d6fc"
+      },
+      {
+        "bytes": 7921,
+        "exists": true,
+        "md5": "3ae3bdf3432ae0f9f6151dbf9215af68",
+        "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/step05c_plot_admixture.py",
+        "sha256": "f20a8ef8fb6be344a69ebf05f2280158f63efeae0a2f9c5e7c07e39b179c28a3"
+      },
+      {
+        "bytes": 10297,
+        "exists": true,
+        "md5": "3d3a8888915da25a575196aa83b9a17c",
+        "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/step06_mantel.py",
+        "sha256": "e696efc1069aacfcd8e849856c2d69d69adc89da6be049d61e4e34dbcf1006fb"
+      },
+      {
+        "bytes": 3509,
+        "exists": true,
+        "md5": "a0a300897c788dd2aabd537c6d6c2bb3",
+        "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/step07a_treemix_input.py",
+        "sha256": "24117dbe825d6b44e12bc8b4726a48812e71dbc1dbba3a6acf51e0c6235dc439"
+      },
+      {
+        "bytes": 13711,
+        "exists": true,
+        "md5": "2c84d66a4f2f30c7ef877062a113241e",
+        "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/step07b_treemix.sh",
+        "sha256": "562c34502352256cbc5d94567156e62affb7c63552a1be39d6e5ef6483754461"
+      },
+      {
+        "bytes": 14646,
+        "exists": true,
+        "md5": "bd489ab023a8fb65876d02bfbe1b59b7",
+        "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/step07c_plot_treemix.py",
+        "sha256": "259141faa8413ab1de371e1cf6ce32a0645367ff72017e71e0e0d6d4fe99b0ca"
+      },
+      {
+        "bytes": 5739,
+        "exists": true,
+        "md5": "50a68011902b7bca8aa92c59a416c64c",
+        "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/step08a_baypass_input.py",
+        "sha256": "e3dffead3b460590a325d45052e36d121727f6ba5d93de5bae44efc4ab95ce33"
+      },
+      {
+        "bytes": 6404,
+        "exists": true,
+        "md5": "eac546f6adf6271d79bfa2d5e6c49044",
+        "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/step08b_baypass.sh",
+        "sha256": "acbe4bbb7ffee3f07558ef5b7a18d47cd95321a1f61dd419ca55c5677f17ee17"
+      },
+      {
+        "bytes": 6431,
+        "exists": true,
+        "md5": "853b43f6ac0f6acdd30b97dfa5fc1906",
+        "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/step08c_calibrate_xtx.py",
+        "sha256": "c157a90abfba108422a111b40ef85e54ec1e331217c09a7bfaf8aba87c699df1"
+      },
+      {
+        "bytes": 9962,
+        "exists": true,
+        "md5": "961ae997b31a3a688ea98ff013fe4d7f",
+        "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/step09_annotate.py",
+        "sha256": "0df2f46d4a6f6055aca0e28353372f311325e8ed319b34b3da69bca997a6f750"
+      }
+    ]
+  },
+  "script_snapshot_comparisons": [
+    {
+      "relative_path": "callset_io.py",
+      "same_sha256": false,
+      "snapshot_sha256": "f690e267de70e0a6c84a45405b60d1ab12ac6f436d9281f068f346fe20cb9395",
+      "v2_sha256": "434761c18b6fb089335faa7c665ae16939a01f921c91bbd6263520418d8a2de5"
+    },
+    {
+      "relative_path": "check_env.py",
+      "same_sha256": true,
+      "snapshot_sha256": "d05f755fdf35308c1a63ed44931db778855338c2e74088a23aef131fd3ce24c2",
+      "v2_sha256": "d05f755fdf35308c1a63ed44931db778855338c2e74088a23aef131fd3ce24c2"
+    },
+    {
+      "relative_path": "config.py",
+      "same_sha256": false,
+      "snapshot_sha256": "b4ae055cfd1e42b5f5706e499e9869158228c0f08da5ad1126b2c77d4daa52c7",
+      "v2_sha256": "f60ad7335b929349e578a762f1aff002fb834c8bb72e26a97c3e2197c5eb05f6"
+    },
+    {
+      "relative_path": "run_all.sh",
+      "same_sha256": true,
+      "snapshot_sha256": "97e1a0e8d2296278060b568afa14148ddce6371a798ef47ffe59d0a706ff5da0",
+      "v2_sha256": "97e1a0e8d2296278060b568afa14148ddce6371a798ef47ffe59d0a706ff5da0"
+    },
+    {
+      "relative_path": "step00_setup.sh",
+      "same_sha256": true,
+      "snapshot_sha256": "662040b6fc1d257dcf2db1225c807342f5e70dca9feb39448ae7c8c624c07c65",
+      "v2_sha256": "662040b6fc1d257dcf2db1225c807342f5e70dca9feb39448ae7c8c624c07c65"
+    },
+    {
+      "relative_path": "step01_filter_samples.py",
+      "same_sha256": true,
+      "snapshot_sha256": "89559e21cfc42d8ba1d61c527683c966dc13681e82439d1335331e1e5087fcaf",
+      "v2_sha256": "89559e21cfc42d8ba1d61c527683c966dc13681e82439d1335331e1e5087fcaf"
+    },
+    {
+      "relative_path": "step02_assign_aez.py",
+      "same_sha256": true,
+      "snapshot_sha256": "d007c8eef4d5c42f6c6a7d9678f6c362fe957671b8479cf2d5db8b08fec1a664",
+      "v2_sha256": "d007c8eef4d5c42f6c6a7d9678f6c362fe957671b8479cf2d5db8b08fec1a664"
+    },
+    {
+      "relative_path": "step03_umap.py",
+      "same_sha256": false,
+      "snapshot_sha256": "c7927c96f82f56c7bc2da8e8978b1e0cae63c1634cf1acc52487fab7e80a0df6",
+      "v2_sha256": "4b79cbe4ffb9730350b99914b5f654f16397ea47cbb05b81b02d71ea93d68224"
+    },
+    {
+      "relative_path": "step03a_fetch_callset_zarr.py",
+      "same_sha256": true,
+      "snapshot_sha256": "2fd161c2a4624957fa411047e8cb96ff8746bd7db276bf60eb9f6bbd35b2ac29",
+      "v2_sha256": "2fd161c2a4624957fa411047e8cb96ff8746bd7db276bf60eb9f6bbd35b2ac29"
+    },
+    {
+      "relative_path": "step03b_sample_qc.py",
+      "same_sha256": false,
+      "snapshot_sha256": "e7491d001b8b5f9d4ef84d38e7fc52c11a9d797b8942f5ec22d1b6af24860c8b",
+      "v2_sha256": "0a3371f7e9bba86a4dbcb2981577d51440f99abfdefc7b24e5def2a4508ed5b3"
+    },
+    {
+      "relative_path": "step04a_prepare_callset.py",
+      "same_sha256": false,
+      "snapshot_sha256": "948ada0a5dcaf493077e0b5a07b9a6ce738de4063116e3d6d26370614e7bb40a",
+      "v2_sha256": "8e84020d10c784a506ad96de6d875bdf1f78960225613f017b695d3fc8e890a7"
+    },
+    {
+      "relative_path": "step04a_prepare_callset_malariagen.py",
+      "same_sha256": true,
+      "snapshot_sha256": "e4de40dabef8a198e25b6f88b613ff853c65149f19b1d6cfb3644d8e894b563b",
+      "v2_sha256": "e4de40dabef8a198e25b6f88b613ff853c65149f19b1d6cfb3644d8e894b563b"
+    },
+    {
+      "relative_path": "step04b_fst.py",
+      "same_sha256": false,
+      "snapshot_sha256": "dd8259b034a5c11df3cb8e5f69036eea994a5369a343f641234028af6fe1b262",
+      "v2_sha256": "236ed8d6e6409286a72fa0b50311f37674c2ea1e5690e7f5c76b04bbb682dd41"
+    },
+    {
+      "relative_path": "step05a_export_plink.py",
+      "same_sha256": false,
+      "snapshot_sha256": "a28b869c6e6a947db81d4953d05ad50f641549a7641f7c41e5119086cb2de830",
+      "v2_sha256": "a79348dc544edf8f44e0549f920b56410112baac91f3068e18bf758ee5e563b1"
+    },
+    {
+      "relative_path": "step05b_admixture.sh",
+      "same_sha256": false,
+      "snapshot_sha256": "e862a0d9913e15432a7d59c2a25e3c57cb00131034f4efeac37321b1988248b8",
+      "v2_sha256": "3f31404defeea9081cb1a308f9288ed4ffa61197f20feab4813593230fc6d6fc"
+    },
+    {
+      "relative_path": "step05c_plot_admixture.py",
+      "same_sha256": false,
+      "snapshot_sha256": "59de6e9f0cdf7a68c0b79a8b8fee3bafe9bd49ebfd870814a84b1c772b39dbcd",
+      "v2_sha256": "f20a8ef8fb6be344a69ebf05f2280158f63efeae0a2f9c5e7c07e39b179c28a3"
+    },
+    {
+      "relative_path": "step06_mantel.py",
+      "same_sha256": false,
+      "snapshot_sha256": "001af0cae4c3f9e7c16420eb2db41a36cd199661b865031da18a3d526c6537ac",
+      "v2_sha256": "e696efc1069aacfcd8e849856c2d69d69adc89da6be049d61e4e34dbcf1006fb"
+    },
+    {
+      "relative_path": "step07a_treemix_input.py",
+      "same_sha256": true,
+      "snapshot_sha256": "24117dbe825d6b44e12bc8b4726a48812e71dbc1dbba3a6acf51e0c6235dc439",
+      "v2_sha256": "24117dbe825d6b44e12bc8b4726a48812e71dbc1dbba3a6acf51e0c6235dc439"
+    },
+    {
+      "relative_path": "step07b_treemix.sh",
+      "same_sha256": true,
+      "snapshot_sha256": "562c34502352256cbc5d94567156e62affb7c63552a1be39d6e5ef6483754461",
+      "v2_sha256": "562c34502352256cbc5d94567156e62affb7c63552a1be39d6e5ef6483754461"
+    },
+    {
+      "relative_path": "step07c_plot_treemix.py",
+      "same_sha256": true,
+      "snapshot_sha256": "259141faa8413ab1de371e1cf6ce32a0645367ff72017e71e0e0d6d4fe99b0ca",
+      "v2_sha256": "259141faa8413ab1de371e1cf6ce32a0645367ff72017e71e0e0d6d4fe99b0ca"
+    },
+    {
+      "relative_path": "step08a_baypass_input.py",
+      "same_sha256": true,
+      "snapshot_sha256": "e3dffead3b460590a325d45052e36d121727f6ba5d93de5bae44efc4ab95ce33",
+      "v2_sha256": "e3dffead3b460590a325d45052e36d121727f6ba5d93de5bae44efc4ab95ce33"
+    },
+    {
+      "relative_path": "step08b_baypass.sh",
+      "same_sha256": true,
+      "snapshot_sha256": "acbe4bbb7ffee3f07558ef5b7a18d47cd95321a1f61dd419ca55c5677f17ee17",
+      "v2_sha256": "acbe4bbb7ffee3f07558ef5b7a18d47cd95321a1f61dd419ca55c5677f17ee17"
+    },
+    {
+      "relative_path": "step08c_calibrate_xtx.py",
+      "same_sha256": true,
+      "snapshot_sha256": "c157a90abfba108422a111b40ef85e54ec1e331217c09a7bfaf8aba87c699df1",
+      "v2_sha256": "c157a90abfba108422a111b40ef85e54ec1e331217c09a7bfaf8aba87c699df1"
+    },
+    {
+      "relative_path": "step09_annotate.py",
+      "same_sha256": true,
+      "snapshot_sha256": "0df2f46d4a6f6055aca0e28353372f311325e8ed319b34b3da69bca997a6f750",
+      "v2_sha256": "0df2f46d4a6f6055aca0e28353372f311325e8ed319b34b3da69bca997a6f750"
+    }
+  ],
+  "script_textual_indicators": [
+    {
+      "exists": true,
+      "interpretation_limit": "Text search only; absence is not a semantic proof. Available files are not authenticated as the scripts of the final run.",
+      "markers": {
+        "sample_missingness_assignment": [
+          {
+            "line": 282,
+            "text": "    smp_missing = 1.0 - (gt.count_called(axis=0) / gt.n_variants)"
+          }
+        ],
+        "second_pass_wording": [],
+        "variant_missingness_assignment": [
+          {
+            "line": 275,
+            "text": "    var_missing = 1.0 - (gt.count_called(axis=1) / gt.n_samples)"
+          }
+        ]
+      },
+      "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/step04a_prepare_callset.py",
+      "snapshot": "v2"
+    },
+    {
+      "exists": true,
+      "interpretation_limit": "Text search only; absence is not a semantic proof. Available files are not authenticated as the scripts of the final run.",
+      "markers": {
+        "se_option_token": []
+      },
+      "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/step07b_treemix.sh",
+      "snapshot": "v2"
+    },
+    {
+      "exists": true,
+      "interpretation_limit": "Text search only; absence is not a semantic proof. Available files are not authenticated as the scripts of the final run.",
+      "markers": {
+        "fdr_or_bh_wording": [],
+        "row_count_assertion": [
+          {
+            "line": 87,
+            "text": "    if len(positions) != len(obs):"
+          }
+        ]
+      },
+      "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/step08c_calibrate_xtx.py",
+      "snapshot": "v2"
+    },
+    {
+      "exists": true,
+      "interpretation_limit": "Text search only; absence is not a semantic proof. Available files are not authenticated as the scripts of the final run.",
+      "markers": {
+        "existence_guard": [
+          {
+            "line": 96,
+            "text": "    if [ -f \"ghana_pruned.${K}.Q\" ]; then"
+          },
+          {
+            "line": 112,
+            "text": "    if [ -f \"ghana_pruned.${K}.Q\" ]; then"
+          }
+        ],
+        "timestamp_test_token": []
+      },
+      "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/step05b_admixture.sh",
+      "snapshot": "v2"
+    },
+    {
+      "exists": true,
+      "interpretation_limit": "Text search only; absence is not a semantic proof. Available files are not authenticated as the scripts of the final run.",
+      "markers": {
+        "completeness_guard": [
+          {
+            "line": 221,
+            "text": "    if m_complete \"$m\"; then"
+          }
+        ],
+        "timestamp_test_token": []
+      },
+      "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/step07b_treemix.sh",
+      "snapshot": "v2"
+    },
+    {
+      "exists": true,
+      "interpretation_limit": "Text search only; absence is not a semantic proof. Available files are not authenticated as the scripts of the final run.",
+      "markers": {
+        "existence_guard": [
+          {
+            "line": 72,
+            "text": "if [ -f \"ghana_core_summary_pi_xtx.out\" ]; then"
+          },
+          {
+            "line": 149,
+            "text": "if [ -f \"G.pod\" ]; then"
+          }
+        ],
+        "pod_ancestral_frequency_option": [
+          {
+            "line": 143,
+            "text": "  pi.maf    = pimaf,"
+          }
+        ],
+        "thread_default": [
+          {
+            "line": 32,
+            "text": "NTHREADS=\"${NTHREADS:-4}\""
+          }
+        ],
+        "timestamp_test_token": []
+      },
+      "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/step08b_baypass.sh",
+      "snapshot": "v2"
+    },
+    {
+      "exists": true,
+      "interpretation_limit": "Text search only; absence is not a semantic proof. Available files are not authenticated as the scripts of the final run.",
+      "markers": {
+        "exported_thread_default": [
+          {
+            "line": 113,
+            "text": "    export NTHREADS=\"${NTHREADS:-8}\"                       # BayPass"
+          }
+        ]
+      },
+      "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/run_all.sh",
+      "snapshot": "v2"
+    },
+    {
+      "exists": true,
+      "interpretation_limit": "Text search only; absence is not a semantic proof. Available files are not authenticated as the scripts of the final run.",
+      "markers": {
+        "sample_missingness_assignment": [
+          {
+            "line": 280,
+            "text": "    smp_missing = 1.0 - (gt.count_called(axis=0) / gt.n_variants)"
+          }
+        ],
+        "second_pass_wording": [],
+        "variant_missingness_assignment": [
+          {
+            "line": 273,
+            "text": "    var_missing = 1.0 - (gt.count_called(axis=1) / gt.n_samples)"
+          }
+        ]
+      },
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/step04a_prepare_callset.py",
+      "snapshot": "server_snapshot"
+    },
+    {
+      "exists": true,
+      "interpretation_limit": "Text search only; absence is not a semantic proof. Available files are not authenticated as the scripts of the final run.",
+      "markers": {
+        "se_option_token": []
+      },
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/step07b_treemix.sh",
+      "snapshot": "server_snapshot"
+    },
+    {
+      "exists": true,
+      "interpretation_limit": "Text search only; absence is not a semantic proof. Available files are not authenticated as the scripts of the final run.",
+      "markers": {
+        "fdr_or_bh_wording": [],
+        "row_count_assertion": [
+          {
+            "line": 87,
+            "text": "    if len(positions) != len(obs):"
+          }
+        ]
+      },
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/step08c_calibrate_xtx.py",
+      "snapshot": "server_snapshot"
+    },
+    {
+      "exists": true,
+      "interpretation_limit": "Text search only; absence is not a semantic proof. Available files are not authenticated as the scripts of the final run.",
+      "markers": {
+        "existence_guard": [
+          {
+            "line": 96,
+            "text": "    if [ -f \"ghana_pruned.${K}.Q\" ]; then"
+          },
+          {
+            "line": 112,
+            "text": "    if [ -f \"ghana_pruned.${K}.Q\" ]; then"
+          }
+        ],
+        "timestamp_test_token": []
+      },
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/step05b_admixture.sh",
+      "snapshot": "server_snapshot"
+    },
+    {
+      "exists": true,
+      "interpretation_limit": "Text search only; absence is not a semantic proof. Available files are not authenticated as the scripts of the final run.",
+      "markers": {
+        "completeness_guard": [
+          {
+            "line": 221,
+            "text": "    if m_complete \"$m\"; then"
+          }
+        ],
+        "timestamp_test_token": []
+      },
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/step07b_treemix.sh",
+      "snapshot": "server_snapshot"
+    },
+    {
+      "exists": true,
+      "interpretation_limit": "Text search only; absence is not a semantic proof. Available files are not authenticated as the scripts of the final run.",
+      "markers": {
+        "existence_guard": [
+          {
+            "line": 72,
+            "text": "if [ -f \"ghana_core_summary_pi_xtx.out\" ]; then"
+          },
+          {
+            "line": 149,
+            "text": "if [ -f \"G.pod\" ]; then"
+          }
+        ],
+        "pod_ancestral_frequency_option": [
+          {
+            "line": 143,
+            "text": "  pi.maf    = pimaf,"
+          }
+        ],
+        "thread_default": [
+          {
+            "line": 32,
+            "text": "NTHREADS=\"${NTHREADS:-4}\""
+          }
+        ],
+        "timestamp_test_token": []
+      },
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/step08b_baypass.sh",
+      "snapshot": "server_snapshot"
+    },
+    {
+      "exists": true,
+      "interpretation_limit": "Text search only; absence is not a semantic proof. Available files are not authenticated as the scripts of the final run.",
+      "markers": {
+        "exported_thread_default": [
+          {
+            "line": 113,
+            "text": "    export NTHREADS=\"${NTHREADS:-8}\"                       # BayPass"
+          }
+        ]
+      },
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/run_all.sh",
+      "snapshot": "server_snapshot"
+    }
+  ],
+  "sources": {
+    "corrections": {
+      "bytes": 39719,
+      "exists": true,
+      "md5": "247375432c341a44f589e21397b1df66",
+      "path": "/Users/samnimoh/Desktop/chromo/CORRECTIONS_AND_NEW_RESULTS.md",
+      "sha256": "2a47f0b3215747c82e6bb756c9abadc59b9dc9e52d3b0905573525c80ad78559"
+    },
+    "different_workspace_manuscript": {
+      "bytes": 4030999,
+      "exists": true,
+      "md5": "cf276bbfb4d9e31eadd25d00eb024142",
+      "path": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx",
+      "sha256": "ca64d5ad3040416a65d4ac94908aff3379ab0837df960be55f4b9af9a8705c9d"
+    },
+    "handoff": {
+      "bytes": 16744,
+      "exists": true,
+      "md5": "9006f0826368a3426f4cb888c1310139",
+      "path": "/Users/samnimoh/Desktop/chromo/HANDOFF_evaluation.md",
+      "sha256": "86fe32e11308f4b153824e7c57ee88dbbf4ae802bcd5f92db23fc23a81cf5579"
+    },
+    "proof_manifest": {
+      "bytes": 1290,
+      "exists": true,
+      "md5": "88d36f17906fce9f238411dfa4fd6b57",
+      "path": "/Users/samnimoh/Desktop/chromo/proof_of_work/MANIFEST.md",
+      "sha256": "374626ccb3cc28d0da0c3707bda9080412631bb5bbd3dd3a52fa6df57ab7e1fd"
+    },
+    "requested_downloads_manuscript": {
+      "bytes": 3132311,
+      "exists": true,
+      "md5": "8a0d474d3e23b7f2175772c090e59d62",
+      "path": "/Users/samnimoh/Downloads/Pf8_Ghana_manuscript_REVISED.docx",
+      "sha256": "8e002103aa61052352b63eaa5ee041b1d61f8eb57f88a31b645490f9a56390f3"
+    }
+  },
+  "workspace_root": "/Users/samnimoh/Desktop/chromo"
+}

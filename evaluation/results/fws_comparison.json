@@ -1,0 +1,10 @@
+{
+  "n": 4905,
+  "correlation": 0.9317961656308629,
+  "median_pipeline": 0.8952808001112946,
+  "median_release": 0.9392798560350832,
+  "pipeline_pass": 2095,
+  "release_pass": 2364,
+  "pipeline_only": 8,
+  "release_only": 277
+}

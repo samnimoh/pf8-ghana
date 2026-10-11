@@ -1,0 +1,146 @@
+{
+  "callability": {
+    "codons": 57,
+    "interpretation": "Saved aggregate record counts match the logged position distribution. This does not independently measure per-isolate coverage or inspect remote variant records.",
+    "logged_codons_by_number_of_recorded_positions": {
+      "1": 10,
+      "2": 26,
+      "3": 21
+    },
+    "panel_positions": 171,
+    "positions_with_records": 125,
+    "positions_without_records": 46,
+    "record_free_codons": 0,
+    "saved_csv_codons_by_n_variant_records": {
+      "1": 10,
+      "2": 26,
+      "3": 21
+    }
+  },
+  "check_summary": {
+    "passed": 15,
+    "total": 15
+  },
+  "checker_identity": {
+    "bytes": 9976,
+    "path": "/Users/samnimoh/Desktop/chromo/verification_review_round3/check_audit_logs.py",
+    "sha256": "14b58b8adb46c36c366517c5a443d4a0ba5daa40ffef762bb5a821ed823421fa"
+  },
+  "checks": {
+    "coverage_distribution_codons_match_saved_csv": true,
+    "coverage_distribution_weighted_positions_reconcile": true,
+    "coverage_position_counts_reconcile": true,
+    "genotype_rows_match_logged_count": true,
+    "homozygous_alt_sum_matches_logged_total": true,
+    "metadata_count_matches_logged_categories": true,
+    "mixed_partition_reconciles": true,
+    "mixed_sum_matches_logged_total": true,
+    "panel_position_count_matches_saved_csv": true,
+    "record_free_count_matches_saved_csv": true,
+    "saved_csv_record_distribution_matches_logged_distribution": true,
+    "saved_csv_record_total_matches_logged_total": true,
+    "source_metadata_print_order_matches_parser": true,
+    "span_partition_reconciles": true,
+    "unique_domain_metadata_rows_match_genotype_rows": true
+  },
+  "domain": {
+    "count_unit": "Record-level calls, not counts of distinct isolates.",
+    "homozygous_alt_record_level_call_sum": 297,
+    "logged_span_records": 19,
+    "mixed_calls_at_records_outside_anchor_selection": 4,
+    "mixed_calls_at_records_selected_by_anchor_rule": 58,
+    "mixed_record_level_call_sum": 62,
+    "off_anchor_rows_with_mixed_calls": [
+      {
+        "mixed": 1,
+        "row": 2560359
+      },
+      {
+        "mixed": 1,
+        "row": 4600247
+      },
+      {
+        "mixed": 1,
+        "row": 11746021
+      },
+      {
+        "mixed": 1,
+        "row": 11746045
+      }
+    ],
+    "printed_metadata_entries_including_repeats": 37,
+    "span_record_rows_already_at_panel": [
+      3745862,
+      3746508,
+      8350639
+    ],
+    "span_records_anchored_at_panel_positions": 3,
+    "span_records_anchored_outside_panel": 16,
+    "unique_metadata_records": 32
+  },
+  "findings": [
+    {
+      "evidence": "The logged span category contains 19 records, but 3 anchor at panel positions, leaving 16 genuinely off-anchor records.",
+      "id": "span_category_label",
+      "published_result_error_proven": false,
+      "source": "check_domain.py:83-88"
+    },
+    {
+      "evidence": "Four of 62 logged mixed record-level calls occur outside step12's anchor-position selection. The blanket statement that all 62 are excluded by its mixed-call rule is not established.",
+      "id": "mixed_exclusion_scope",
+      "published_result_error_proven": false,
+      "source": "step12_codon_panel.py:282-285; check_domain.py:130"
+    }
+  ],
+  "generated_utc": "2026-10-11T03:46:56.625085+00:00",
+  "input_identities": [
+    {
+      "bytes": 6691,
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/audit_scripts/check_domain.py",
+      "sha256": "50917bb95da4f2dd8ef6c86acb2a1c81b0bad173fdcb2944eb31c7bbc82cb7dc"
+    },
+    {
+      "bytes": 2995,
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/audit_scripts/check_coverage.py",
+      "sha256": "7585fcca08423bd7a1d336075acf97036cc65cd2f79201fcab9a7d78b52456d0"
+    },
+    {
+      "bytes": 2579,
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/audit_scripts/README.md",
+      "sha256": "032047dd0bb1719eaf94714e2ba15aa566f02144529d2262efad5ac8c229b5b8"
+    },
+    {
+      "bytes": 8328,
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/audit_logs/domain.log",
+      "sha256": "308b9a7e8e48feb3bc80cace203160bb01435960f654178e4eef364fd7909d6f"
+    },
+    {
+      "bytes": 262,
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/audit_logs/coverage.log",
+      "sha256": "0dd4008334ff434f3c83a616c7c5d6991750bd3adfa41837380b3beff946cb25"
+    },
+    {
+      "bytes": 27567,
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/scripts/step12_codon_panel.py",
+      "sha256": "11fda6b418013a8627834b7e5e2812074ae2b7ff7fd685986bec0500ade16fcd"
+    },
+    {
+      "bytes": 13051,
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/VERIFICATION_NOTES.md",
+      "sha256": "317090e7af1a34aae64f0011aae7b1280a180eed08231eb5b1ae066d83e1ffb5"
+    },
+    {
+      "bytes": 27752,
+      "path": "/Users/samnimoh/Desktop/chromo/corrected/codon_panel_residues.csv",
+      "sha256": "f98f5ce21ff31138eef35f8035c9b4ebf8d1ae76997c34a2d07c5ed97af3e970"
+    }
+  ],
+  "limitations": [
+    "Captured logs are evidence supplied by another agent; this checker does not authenticate their generation from the archived audit scripts or exact remote inputs.",
+    "Anchor membership is compared against positions in the saved residue CSV and the stated source selection rule; it does not prove actual per-isolate downstream effects.",
+    "No conclusion is drawn that published numerical frequencies are incorrect. Per-isolate input/output evidence remains necessary to assess the impact.",
+    "Passing these checks establishes arithmetic consistency and exposes category/scope errors, not end-to-end reproducibility or formal verification."
+  ],
+  "scope": "Static source/log inspection and local aggregate arithmetic; no scientific or audit script execution, network access, sequence reconstruction or pipeline edits.",
+  "status": "completed_with_findings"
+}

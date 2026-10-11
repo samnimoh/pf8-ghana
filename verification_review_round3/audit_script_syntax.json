@@ -1,0 +1,29 @@
+{
+  "scope": "Static AST parsing only; no audit-script import or execution.",
+  "files": [
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/audit_scripts/check_alleles.py",
+      "syntax": "valid"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/audit_scripts/check_codons.py",
+      "syntax": "valid"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/audit_scripts/check_coverage.py",
+      "syntax": "valid"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/audit_scripts/check_domain.py",
+      "syntax": "valid"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/audit_scripts/check_n458d.py",
+      "syntax": "valid"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/audit_scripts/check_panel_filter.py",
+      "syntax": "valid"
+    }
+  ]
+}

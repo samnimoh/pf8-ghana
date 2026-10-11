@@ -1,0 +1,4 @@
+Coastal_savanna
+Decidous_forest
+Guinea_savanna
+Transitional_zone

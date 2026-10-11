@@ -1,0 +1,83 @@
+================ RAW LOG EXTRACTS — Pf8 Ghana corrected re-run
+host bacg2  |  generated 2026-10-10 02:15 UTC
+
+### 1. Filter-order fix (logs/rerun_corrected.log) — stage 4a
+  provisional variant pass (for the sample cut): 1,634,808
+  dropping 117 high-missingness samples: ['PF0031-C', 'PF0050-C', 'PF0129-C', 'PF0149-C', 'PF0163-C', 'PF0405-C', 'PF0692-C', 'PF1223-CW']
+  variant missingness <= 0.1 (recomputed on 1,900 retained isolates): 1,807,331
+  MAF >= 0.05: 3,916
+Final matrix: 3,916 SNPs x 1,900 samples
+
+### 2. Stage 8 CAUGHT the stale cache (logs/stage8.log, first attempt)
+    ValueError: Position table has 3,916 rows but the BayPass output has 3,359.
+
+### 3. TreeMix migration edges WITH -se (results/treemix/treemix_m*.treeout.gz)
+    columns: weight  jackknife-mean  SE  p-value
+    m=1:
+      0.31277    0.312303    0.03982     2.22045e-15
+    m=2:
+      0.15246    0.151955    0.047851    0.000747653
+      0.80547    0.805858    0.0999781   3.33067e-16
+    m=3:
+      0.155122   0.155572    0.0502971   0.00099053
+      0.830185   0.829575    0.0787911   <2.22507e-308
+      0.0652426  0.0655776   0.146874    0.327622
+
+### 4. FDR accounting (logs/stage8.log)
+  False-discovery accounting
+============================================================
+  Simulated neutral SNPs above the threshold: 100 / 100,000 (0.1000%)
+  Expected false positives among 3,916 observed SNPs: 3.9
+  Observed outliers: 19  ->  empirical FDR 20.6%
+
+  Per-SNP q-values (empirical, from the POD null):
+    q <= 0.01  :    8 SNPs
+    q <= 0.05  :   10 SNPs
+    q <= 0.1   :   13 SNPs
+    q <= 0.2   :   17 SNPs
+
+  Of the 19 SNPs above the quantile threshold, 13 also pass FDR 10%.
+  Report both: the quantile list is a ranking, the q-values are the test.
+
+### 5. Mantel censoring disclosure + jackknife (logs/stage6.log)
+3 of 21 pairs have negative FST and are floored to zero:
+    Ashanti - Volta: -0.001037
+    Eastern - Greater Accra: -0.000203
+    Greater Accra - Volta: -0.000142
+
+============================================================
+  Result
+============================================================
+  Mantel r  = 0.4269
+  p         = 0.0252  (9999 permutations, one-sided, seed 42)
+  n         = 7 populations, 21 pairs
+
+  Without flooring the 3 negative FST pair(s):
+    Mantel r = 0.4138   p = 0.0413
+
+============================================================
+  Leave-one-population-out
+============================================================
+  A Mantel r driven by one population is a single contrast, not a
+  distance gradient. Each row drops one population and refits.
+    drop Ashanti                r = +0.568   p = 0.014
+    drop Brong Ahafo            r = +0.609   p = 0.040
+    drop Central                r = +0.396   p = 0.043
+    drop Eastern                r = +0.288   p = 0.136   <- not significant without it
+    drop Greater Accra          r = +0.250   p = 0.232   <- not significant without it
+    drop Upper East             r = +0.260   p = 0.218   <- not significant without it
+    drop Volta                  r = +0.546   p = 0.010
+
+  Significant in 4 of 7 leave-one-out replicates.
+
+### 6. Cache-guard fix now visible in the log
+
+### 7. Final output consistency
+    callset SNPs : 3916
+    xtx rows     : 3916
+    treemix input: 3916
+    admixture    : 1900 isolates, 3385 pruned SNPs
+
+### 8. ghanaAEZ.geojson provenance — byte-identity proof
+    local md5 : 96b1a7f4da62d6f0153826f41af96152
+    arcgis md5: 96b1a7f4da62d6f0153826f41af96152 (downloaded and compared; cmp reported identical)

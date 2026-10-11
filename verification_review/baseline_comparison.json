@@ -1,0 +1,654 @@
+{
+  "generated_utc": "2026-10-10T17:01:52.296131+00:00",
+  "baseline_source": "/Users/samnimoh/Desktop/chromo/verification_audit/provenance_validation.json",
+  "files_compared": 91,
+  "changed_files": [
+    {
+      "group": "corrected_and_proof_file_hashes/corrected",
+      "path": "/Users/samnimoh/Desktop/chromo/corrected/CANONICAL_FACTS.txt",
+      "baseline_sha256": "41d7523eb2a61da9d2da5104521c91e495d028fce07f4e0f839a0497baad4843",
+      "current_sha256": "36bbfcaa08603a67721898d7c32a82a10fb71b025278f86388dcf487f11273e2",
+      "changed": true
+    }
+  ],
+  "files": [
+    {
+      "group": "script_file_hashes/server_snapshot",
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/__pycache__/callset_io.cpython-310.pyc",
+      "baseline_sha256": "16dfeea83822f7a9c9b8077f3db801d06f8103bb5b6f9178c6287dcbb9ccaf56",
+      "current_sha256": "16dfeea83822f7a9c9b8077f3db801d06f8103bb5b6f9178c6287dcbb9ccaf56",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/server_snapshot",
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/__pycache__/config.cpython-310.pyc",
+      "baseline_sha256": "6a8fb66a8c53b7bf61aeda8f0e7a8c233fe75e1f03d9f9c71af94d1bd4144f4f",
+      "current_sha256": "6a8fb66a8c53b7bf61aeda8f0e7a8c233fe75e1f03d9f9c71af94d1bd4144f4f",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/server_snapshot",
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/callset_io.py",
+      "baseline_sha256": "f690e267de70e0a6c84a45405b60d1ab12ac6f436d9281f068f346fe20cb9395",
+      "current_sha256": "f690e267de70e0a6c84a45405b60d1ab12ac6f436d9281f068f346fe20cb9395",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/server_snapshot",
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/check_env.py",
+      "baseline_sha256": "d05f755fdf35308c1a63ed44931db778855338c2e74088a23aef131fd3ce24c2",
+      "current_sha256": "d05f755fdf35308c1a63ed44931db778855338c2e74088a23aef131fd3ce24c2",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/server_snapshot",
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/config.py",
+      "baseline_sha256": "b4ae055cfd1e42b5f5706e499e9869158228c0f08da5ad1126b2c77d4daa52c7",
+      "current_sha256": "b4ae055cfd1e42b5f5706e499e9869158228c0f08da5ad1126b2c77d4daa52c7",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/server_snapshot",
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/run_all.sh",
+      "baseline_sha256": "97e1a0e8d2296278060b568afa14148ddce6371a798ef47ffe59d0a706ff5da0",
+      "current_sha256": "97e1a0e8d2296278060b568afa14148ddce6371a798ef47ffe59d0a706ff5da0",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/server_snapshot",
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/step00_setup.sh",
+      "baseline_sha256": "662040b6fc1d257dcf2db1225c807342f5e70dca9feb39448ae7c8c624c07c65",
+      "current_sha256": "662040b6fc1d257dcf2db1225c807342f5e70dca9feb39448ae7c8c624c07c65",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/server_snapshot",
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/step01_filter_samples.py",
+      "baseline_sha256": "89559e21cfc42d8ba1d61c527683c966dc13681e82439d1335331e1e5087fcaf",
+      "current_sha256": "89559e21cfc42d8ba1d61c527683c966dc13681e82439d1335331e1e5087fcaf",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/server_snapshot",
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/step02_assign_aez.py",
+      "baseline_sha256": "d007c8eef4d5c42f6c6a7d9678f6c362fe957671b8479cf2d5db8b08fec1a664",
+      "current_sha256": "d007c8eef4d5c42f6c6a7d9678f6c362fe957671b8479cf2d5db8b08fec1a664",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/server_snapshot",
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/step03_umap.py",
+      "baseline_sha256": "c7927c96f82f56c7bc2da8e8978b1e0cae63c1634cf1acc52487fab7e80a0df6",
+      "current_sha256": "c7927c96f82f56c7bc2da8e8978b1e0cae63c1634cf1acc52487fab7e80a0df6",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/server_snapshot",
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/step03a_fetch_callset_zarr.py",
+      "baseline_sha256": "2fd161c2a4624957fa411047e8cb96ff8746bd7db276bf60eb9f6bbd35b2ac29",
+      "current_sha256": "2fd161c2a4624957fa411047e8cb96ff8746bd7db276bf60eb9f6bbd35b2ac29",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/server_snapshot",
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/step03b_sample_qc.py",
+      "baseline_sha256": "e7491d001b8b5f9d4ef84d38e7fc52c11a9d797b8942f5ec22d1b6af24860c8b",
+      "current_sha256": "e7491d001b8b5f9d4ef84d38e7fc52c11a9d797b8942f5ec22d1b6af24860c8b",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/server_snapshot",
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/step04a_prepare_callset.py",
+      "baseline_sha256": "948ada0a5dcaf493077e0b5a07b9a6ce738de4063116e3d6d26370614e7bb40a",
+      "current_sha256": "948ada0a5dcaf493077e0b5a07b9a6ce738de4063116e3d6d26370614e7bb40a",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/server_snapshot",
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/step04a_prepare_callset_malariagen.py",
+      "baseline_sha256": "e4de40dabef8a198e25b6f88b613ff853c65149f19b1d6cfb3644d8e894b563b",
+      "current_sha256": "e4de40dabef8a198e25b6f88b613ff853c65149f19b1d6cfb3644d8e894b563b",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/server_snapshot",
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/step04b_fst.py",
+      "baseline_sha256": "dd8259b034a5c11df3cb8e5f69036eea994a5369a343f641234028af6fe1b262",
+      "current_sha256": "dd8259b034a5c11df3cb8e5f69036eea994a5369a343f641234028af6fe1b262",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/server_snapshot",
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/step05a_export_plink.py",
+      "baseline_sha256": "a28b869c6e6a947db81d4953d05ad50f641549a7641f7c41e5119086cb2de830",
+      "current_sha256": "a28b869c6e6a947db81d4953d05ad50f641549a7641f7c41e5119086cb2de830",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/server_snapshot",
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/step05b_admixture.sh",
+      "baseline_sha256": "e862a0d9913e15432a7d59c2a25e3c57cb00131034f4efeac37321b1988248b8",
+      "current_sha256": "e862a0d9913e15432a7d59c2a25e3c57cb00131034f4efeac37321b1988248b8",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/server_snapshot",
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/step05c_plot_admixture.py",
+      "baseline_sha256": "59de6e9f0cdf7a68c0b79a8b8fee3bafe9bd49ebfd870814a84b1c772b39dbcd",
+      "current_sha256": "59de6e9f0cdf7a68c0b79a8b8fee3bafe9bd49ebfd870814a84b1c772b39dbcd",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/server_snapshot",
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/step06_mantel.py",
+      "baseline_sha256": "001af0cae4c3f9e7c16420eb2db41a36cd199661b865031da18a3d526c6537ac",
+      "current_sha256": "001af0cae4c3f9e7c16420eb2db41a36cd199661b865031da18a3d526c6537ac",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/server_snapshot",
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/step07a_treemix_input.py",
+      "baseline_sha256": "24117dbe825d6b44e12bc8b4726a48812e71dbc1dbba3a6acf51e0c6235dc439",
+      "current_sha256": "24117dbe825d6b44e12bc8b4726a48812e71dbc1dbba3a6acf51e0c6235dc439",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/server_snapshot",
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/step07b_treemix.sh",
+      "baseline_sha256": "562c34502352256cbc5d94567156e62affb7c63552a1be39d6e5ef6483754461",
+      "current_sha256": "562c34502352256cbc5d94567156e62affb7c63552a1be39d6e5ef6483754461",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/server_snapshot",
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/step07c_plot_treemix.py",
+      "baseline_sha256": "259141faa8413ab1de371e1cf6ce32a0645367ff72017e71e0e0d6d4fe99b0ca",
+      "current_sha256": "259141faa8413ab1de371e1cf6ce32a0645367ff72017e71e0e0d6d4fe99b0ca",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/server_snapshot",
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/step08a_baypass_input.py",
+      "baseline_sha256": "e3dffead3b460590a325d45052e36d121727f6ba5d93de5bae44efc4ab95ce33",
+      "current_sha256": "e3dffead3b460590a325d45052e36d121727f6ba5d93de5bae44efc4ab95ce33",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/server_snapshot",
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/step08b_baypass.sh",
+      "baseline_sha256": "acbe4bbb7ffee3f07558ef5b7a18d47cd95321a1f61dd419ca55c5677f17ee17",
+      "current_sha256": "acbe4bbb7ffee3f07558ef5b7a18d47cd95321a1f61dd419ca55c5677f17ee17",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/server_snapshot",
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/step08c_calibrate_xtx.py",
+      "baseline_sha256": "c157a90abfba108422a111b40ef85e54ec1e331217c09a7bfaf8aba87c699df1",
+      "current_sha256": "c157a90abfba108422a111b40ef85e54ec1e331217c09a7bfaf8aba87c699df1",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/server_snapshot",
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/scripts/step09_annotate.py",
+      "baseline_sha256": "0df2f46d4a6f6055aca0e28353372f311325e8ed319b34b3da69bca997a6f750",
+      "current_sha256": "0df2f46d4a6f6055aca0e28353372f311325e8ed319b34b3da69bca997a6f750",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/v2",
+      "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/callset_io.py",
+      "baseline_sha256": "434761c18b6fb089335faa7c665ae16939a01f921c91bbd6263520418d8a2de5",
+      "current_sha256": "434761c18b6fb089335faa7c665ae16939a01f921c91bbd6263520418d8a2de5",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/v2",
+      "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/check_env.py",
+      "baseline_sha256": "d05f755fdf35308c1a63ed44931db778855338c2e74088a23aef131fd3ce24c2",
+      "current_sha256": "d05f755fdf35308c1a63ed44931db778855338c2e74088a23aef131fd3ce24c2",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/v2",
+      "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/config.py",
+      "baseline_sha256": "f60ad7335b929349e578a762f1aff002fb834c8bb72e26a97c3e2197c5eb05f6",
+      "current_sha256": "f60ad7335b929349e578a762f1aff002fb834c8bb72e26a97c3e2197c5eb05f6",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/v2",
+      "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/run_all.sh",
+      "baseline_sha256": "97e1a0e8d2296278060b568afa14148ddce6371a798ef47ffe59d0a706ff5da0",
+      "current_sha256": "97e1a0e8d2296278060b568afa14148ddce6371a798ef47ffe59d0a706ff5da0",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/v2",
+      "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/step00_setup.sh",
+      "baseline_sha256": "662040b6fc1d257dcf2db1225c807342f5e70dca9feb39448ae7c8c624c07c65",
+      "current_sha256": "662040b6fc1d257dcf2db1225c807342f5e70dca9feb39448ae7c8c624c07c65",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/v2",
+      "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/step01_filter_samples.py",
+      "baseline_sha256": "89559e21cfc42d8ba1d61c527683c966dc13681e82439d1335331e1e5087fcaf",
+      "current_sha256": "89559e21cfc42d8ba1d61c527683c966dc13681e82439d1335331e1e5087fcaf",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/v2",
+      "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/step02_assign_aez.py",
+      "baseline_sha256": "d007c8eef4d5c42f6c6a7d9678f6c362fe957671b8479cf2d5db8b08fec1a664",
+      "current_sha256": "d007c8eef4d5c42f6c6a7d9678f6c362fe957671b8479cf2d5db8b08fec1a664",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/v2",
+      "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/step03_umap.py",
+      "baseline_sha256": "4b79cbe4ffb9730350b99914b5f654f16397ea47cbb05b81b02d71ea93d68224",
+      "current_sha256": "4b79cbe4ffb9730350b99914b5f654f16397ea47cbb05b81b02d71ea93d68224",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/v2",
+      "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/step03a_fetch_callset_zarr.py",
+      "baseline_sha256": "2fd161c2a4624957fa411047e8cb96ff8746bd7db276bf60eb9f6bbd35b2ac29",
+      "current_sha256": "2fd161c2a4624957fa411047e8cb96ff8746bd7db276bf60eb9f6bbd35b2ac29",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/v2",
+      "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/step03b_sample_qc.py",
+      "baseline_sha256": "0a3371f7e9bba86a4dbcb2981577d51440f99abfdefc7b24e5def2a4508ed5b3",
+      "current_sha256": "0a3371f7e9bba86a4dbcb2981577d51440f99abfdefc7b24e5def2a4508ed5b3",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/v2",
+      "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/step04a_prepare_callset.py",
+      "baseline_sha256": "8e84020d10c784a506ad96de6d875bdf1f78960225613f017b695d3fc8e890a7",
+      "current_sha256": "8e84020d10c784a506ad96de6d875bdf1f78960225613f017b695d3fc8e890a7",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/v2",
+      "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/step04a_prepare_callset_malariagen.py",
+      "baseline_sha256": "e4de40dabef8a198e25b6f88b613ff853c65149f19b1d6cfb3644d8e894b563b",
+      "current_sha256": "e4de40dabef8a198e25b6f88b613ff853c65149f19b1d6cfb3644d8e894b563b",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/v2",
+      "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/step04b_fst.py",
+      "baseline_sha256": "236ed8d6e6409286a72fa0b50311f37674c2ea1e5690e7f5c76b04bbb682dd41",
+      "current_sha256": "236ed8d6e6409286a72fa0b50311f37674c2ea1e5690e7f5c76b04bbb682dd41",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/v2",
+      "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/step05a_export_plink.py",
+      "baseline_sha256": "a79348dc544edf8f44e0549f920b56410112baac91f3068e18bf758ee5e563b1",
+      "current_sha256": "a79348dc544edf8f44e0549f920b56410112baac91f3068e18bf758ee5e563b1",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/v2",
+      "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/step05b_admixture.sh",
+      "baseline_sha256": "3f31404defeea9081cb1a308f9288ed4ffa61197f20feab4813593230fc6d6fc",
+      "current_sha256": "3f31404defeea9081cb1a308f9288ed4ffa61197f20feab4813593230fc6d6fc",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/v2",
+      "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/step05c_plot_admixture.py",
+      "baseline_sha256": "f20a8ef8fb6be344a69ebf05f2280158f63efeae0a2f9c5e7c07e39b179c28a3",
+      "current_sha256": "f20a8ef8fb6be344a69ebf05f2280158f63efeae0a2f9c5e7c07e39b179c28a3",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/v2",
+      "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/step06_mantel.py",
+      "baseline_sha256": "e696efc1069aacfcd8e849856c2d69d69adc89da6be049d61e4e34dbcf1006fb",
+      "current_sha256": "e696efc1069aacfcd8e849856c2d69d69adc89da6be049d61e4e34dbcf1006fb",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/v2",
+      "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/step07a_treemix_input.py",
+      "baseline_sha256": "24117dbe825d6b44e12bc8b4726a48812e71dbc1dbba3a6acf51e0c6235dc439",
+      "current_sha256": "24117dbe825d6b44e12bc8b4726a48812e71dbc1dbba3a6acf51e0c6235dc439",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/v2",
+      "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/step07b_treemix.sh",
+      "baseline_sha256": "562c34502352256cbc5d94567156e62affb7c63552a1be39d6e5ef6483754461",
+      "current_sha256": "562c34502352256cbc5d94567156e62affb7c63552a1be39d6e5ef6483754461",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/v2",
+      "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/step07c_plot_treemix.py",
+      "baseline_sha256": "259141faa8413ab1de371e1cf6ce32a0645367ff72017e71e0e0d6d4fe99b0ca",
+      "current_sha256": "259141faa8413ab1de371e1cf6ce32a0645367ff72017e71e0e0d6d4fe99b0ca",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/v2",
+      "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/step08a_baypass_input.py",
+      "baseline_sha256": "e3dffead3b460590a325d45052e36d121727f6ba5d93de5bae44efc4ab95ce33",
+      "current_sha256": "e3dffead3b460590a325d45052e36d121727f6ba5d93de5bae44efc4ab95ce33",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/v2",
+      "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/step08b_baypass.sh",
+      "baseline_sha256": "acbe4bbb7ffee3f07558ef5b7a18d47cd95321a1f61dd419ca55c5677f17ee17",
+      "current_sha256": "acbe4bbb7ffee3f07558ef5b7a18d47cd95321a1f61dd419ca55c5677f17ee17",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/v2",
+      "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/step08c_calibrate_xtx.py",
+      "baseline_sha256": "c157a90abfba108422a111b40ef85e54ec1e331217c09a7bfaf8aba87c699df1",
+      "current_sha256": "c157a90abfba108422a111b40ef85e54ec1e331217c09a7bfaf8aba87c699df1",
+      "changed": false
+    },
+    {
+      "group": "script_file_hashes/v2",
+      "path": "/Users/samnimoh/Desktop/chromo/v2/scripts/step09_annotate.py",
+      "baseline_sha256": "0df2f46d4a6f6055aca0e28353372f311325e8ed319b34b3da69bca997a6f750",
+      "current_sha256": "0df2f46d4a6f6055aca0e28353372f311325e8ed319b34b3da69bca997a6f750",
+      "changed": false
+    },
+    {
+      "group": "corrected_and_proof_file_hashes/corrected",
+      "path": "/Users/samnimoh/Desktop/chromo/corrected/CANONICAL_FACTS.txt",
+      "baseline_sha256": "41d7523eb2a61da9d2da5104521c91e495d028fce07f4e0f839a0497baad4843",
+      "current_sha256": "36bbfcaa08603a67721898d7c32a82a10fb71b025278f86388dcf487f11273e2",
+      "changed": true
+    },
+    {
+      "group": "corrected_and_proof_file_hashes/corrected",
+      "path": "/Users/samnimoh/Desktop/chromo/corrected/batch_study_by_zone.csv",
+      "baseline_sha256": "06a3ead5cdecab03fea9e4cb68727b8f07cc1eeeec0bba901f88fbc280d94811",
+      "current_sha256": "06a3ead5cdecab03fea9e4cb68727b8f07cc1eeeec0bba901f88fbc280d94811",
+      "changed": false
+    },
+    {
+      "group": "corrected_and_proof_file_hashes/corrected",
+      "path": "/Users/samnimoh/Desktop/chromo/corrected/batch_within_zone_tests.csv",
+      "baseline_sha256": "7001841cebea7bb62cb1f0e3786e952e34ae3d77124f9a9c649f2950b947d1e6",
+      "current_sha256": "7001841cebea7bb62cb1f0e3786e952e34ae3d77124f9a9c649f2950b947d1e6",
+      "changed": false
+    },
+    {
+      "group": "corrected_and_proof_file_hashes/corrected",
+      "path": "/Users/samnimoh/Desktop/chromo/corrected/batch_zone_pair_overlap.csv",
+      "baseline_sha256": "2d133764cacf7b28392b619b303d1d5811c60e917d71bcddfed1eab7b6d480ec",
+      "current_sha256": "2d133764cacf7b28392b619b303d1d5811c60e917d71bcddfed1eab7b6d480ec",
+      "changed": false
+    },
+    {
+      "group": "corrected_and_proof_file_hashes/corrected",
+      "path": "/Users/samnimoh/Desktop/chromo/corrected/codon_panel_concordance.csv",
+      "baseline_sha256": "92cb9fe822a4dfb6d4d4f55a3ae7a9740256708fca22a326b168322f511b2189",
+      "current_sha256": "92cb9fe822a4dfb6d4d4f55a3ae7a9740256708fca22a326b168322f511b2189",
+      "changed": false
+    },
+    {
+      "group": "corrected_and_proof_file_hashes/corrected",
+      "path": "/Users/samnimoh/Desktop/chromo/corrected/codon_panel_haplotypes.csv",
+      "baseline_sha256": "65662e0433d803c63d797b4218c41d108f3143885ce6fde54df62d274035ccbc",
+      "current_sha256": "65662e0433d803c63d797b4218c41d108f3143885ce6fde54df62d274035ccbc",
+      "changed": false
+    },
+    {
+      "group": "corrected_and_proof_file_hashes/corrected",
+      "path": "/Users/samnimoh/Desktop/chromo/corrected/codon_panel_residues.csv",
+      "baseline_sha256": "f98f5ce21ff31138eef35f8035c9b4ebf8d1ae76997c34a2d07c5ed97af3e970",
+      "current_sha256": "f98f5ce21ff31138eef35f8035c9b4ebf8d1ae76997c34a2d07c5ed97af3e970",
+      "changed": false
+    },
+    {
+      "group": "corrected_and_proof_file_hashes/corrected",
+      "path": "/Users/samnimoh/Desktop/chromo/corrected/dimred_comparison_qcset.csv",
+      "baseline_sha256": "3d104ce26973ded0659c283be4fc0bf0e9c9eeed45c1ae0544bc60e1d0331499",
+      "current_sha256": "3d104ce26973ded0659c283be4fc0bf0e9c9eeed45c1ae0544bc60e1d0331499",
+      "changed": false
+    },
+    {
+      "group": "corrected_and_proof_file_hashes/corrected",
+      "path": "/Users/samnimoh/Desktop/chromo/corrected/dimred_comparison_zone_qcset.png",
+      "baseline_sha256": "f4112599fbad39c81f14fed472843e555d5ae8d2875748d528c458c2e4333397",
+      "current_sha256": "f4112599fbad39c81f14fed472843e555d5ae8d2875748d528c458c2e4333397",
+      "changed": false
+    },
+    {
+      "group": "corrected_and_proof_file_hashes/corrected",
+      "path": "/Users/samnimoh/Desktop/chromo/corrected/final_fst_pairwise.csv",
+      "baseline_sha256": "0bb3741d942e801c20052ac6ed1c89f5d0bfd7802d0ee79c7cb06cf016f678f9",
+      "current_sha256": "0bb3741d942e801c20052ac6ed1c89f5d0bfd7802d0ee79c7cb06cf016f678f9",
+      "changed": false
+    },
+    {
+      "group": "corrected_and_proof_file_hashes/corrected",
+      "path": "/Users/samnimoh/Desktop/chromo/corrected/final_outlier_genes.csv",
+      "baseline_sha256": "9c2200455330106b6a18f4c04d03d02caf09fdd7cc3b2905d7fe879c4e2b4104",
+      "current_sha256": "9c2200455330106b6a18f4c04d03d02caf09fdd7cc3b2905d7fe879c4e2b4104",
+      "changed": false
+    },
+    {
+      "group": "corrected_and_proof_file_hashes/corrected",
+      "path": "/Users/samnimoh/Desktop/chromo/corrected/final_treemix_comparison.csv",
+      "baseline_sha256": "15169839ec30031a5187496bdea993d0786328b1dc8f7fb74256358bd35e2f9a",
+      "current_sha256": "15169839ec30031a5187496bdea993d0786328b1dc8f7fb74256358bd35e2f9a",
+      "changed": false
+    },
+    {
+      "group": "corrected_and_proof_file_hashes/corrected",
+      "path": "/Users/samnimoh/Desktop/chromo/corrected/final_xtx_calibration.json",
+      "baseline_sha256": "2f698557c75d6cd9c969e32d3011cb41681ff70f47a0b8600dc8f801ddcf8312",
+      "current_sha256": "2f698557c75d6cd9c969e32d3011cb41681ff70f47a0b8600dc8f801ddcf8312",
+      "changed": false
+    },
+    {
+      "group": "corrected_and_proof_file_hashes/corrected",
+      "path": "/Users/samnimoh/Desktop/chromo/corrected/mantel_ibd_region.png",
+      "baseline_sha256": "d5dec4ce31ed5429dbf9ff7f0aa6aa644e17f230d0db96c68bee901ebdb5f4de",
+      "current_sha256": "d5dec4ce31ed5429dbf9ff7f0aa6aa644e17f230d0db96c68bee901ebdb5f4de",
+      "changed": false
+    },
+    {
+      "group": "corrected_and_proof_file_hashes/corrected",
+      "path": "/Users/samnimoh/Desktop/chromo/corrected/mantel_jackknife_region.csv",
+      "baseline_sha256": "710250332da3a942f2b9ea3c0bb8afc4ac0b51180ed99bbdf8513f4facc0f2c7",
+      "current_sha256": "710250332da3a942f2b9ea3c0bb8afc4ac0b51180ed99bbdf8513f4facc0f2c7",
+      "changed": false
+    },
+    {
+      "group": "corrected_and_proof_file_hashes/corrected",
+      "path": "/Users/samnimoh/Desktop/chromo/corrected/mantel_jackknife_zone.csv",
+      "baseline_sha256": "b8e34e760b63e1d2c0c26ca0b518c4aebb06b7a520b87a4d2bae2a7310022d23",
+      "current_sha256": "b8e34e760b63e1d2c0c26ca0b518c4aebb06b7a520b87a4d2bae2a7310022d23",
+      "changed": false
+    },
+    {
+      "group": "corrected_and_proof_file_hashes/corrected",
+      "path": "/Users/samnimoh/Desktop/chromo/corrected/mantel_result_region.json",
+      "baseline_sha256": "44808b15732932e361e051183a6670367c0e8d6319b0f6fd51ce21861666c98d",
+      "current_sha256": "44808b15732932e361e051183a6670367c0e8d6319b0f6fd51ce21861666c98d",
+      "changed": false
+    },
+    {
+      "group": "corrected_and_proof_file_hashes/corrected",
+      "path": "/Users/samnimoh/Desktop/chromo/corrected/mantel_result_zone.json",
+      "baseline_sha256": "8fa9f6a36e5ba59f18b4d71d6c6aed2c46455fa106304f5febce1b898954093b",
+      "current_sha256": "8fa9f6a36e5ba59f18b4d71d6c6aed2c46455fa106304f5febce1b898954093b",
+      "changed": false
+    },
+    {
+      "group": "corrected_and_proof_file_hashes/corrected",
+      "path": "/Users/samnimoh/Desktop/chromo/corrected/outlier_quality_check.csv",
+      "baseline_sha256": "de8b649b2b8dad85b163bd1128df629e1015b2d00381bd82a9a635951745e2a0",
+      "current_sha256": "de8b649b2b8dad85b163bd1128df629e1015b2d00381bd82a9a635951745e2a0",
+      "changed": false
+    },
+    {
+      "group": "corrected_and_proof_file_hashes/corrected",
+      "path": "/Users/samnimoh/Desktop/chromo/corrected/panel_table.md",
+      "baseline_sha256": "f63e3750c5502b75d30bb5b34f35001b2eb6320f85eec1aab6a446586120bad5",
+      "current_sha256": "f63e3750c5502b75d30bb5b34f35001b2eb6320f85eec1aab6a446586120bad5",
+      "changed": false
+    },
+    {
+      "group": "corrected_and_proof_file_hashes/corrected",
+      "path": "/Users/samnimoh/Desktop/chromo/corrected/resistance_panel_canonical.csv",
+      "baseline_sha256": "6eddb46a0f42d80ea41e59a20bd6684b98b669984803fb58ad78cbe273c2605d",
+      "current_sha256": "6eddb46a0f42d80ea41e59a20bd6684b98b669984803fb58ad78cbe273c2605d",
+      "changed": false
+    },
+    {
+      "group": "corrected_and_proof_file_hashes/corrected",
+      "path": "/Users/samnimoh/Desktop/chromo/corrected/resistance_panel_frequencies.csv",
+      "baseline_sha256": "679274277bed220fc700d9d9d89b4baca8645a4a706eb39aaf9b801949e72969",
+      "current_sha256": "679274277bed220fc700d9d9d89b4baca8645a4a706eb39aaf9b801949e72969",
+      "changed": false
+    },
+    {
+      "group": "corrected_and_proof_file_hashes/corrected",
+      "path": "/Users/samnimoh/Desktop/chromo/corrected/sensitivity_fst.csv",
+      "baseline_sha256": "0fa5470fdee7f2ffeadb46e4c6424084ab6a0e8fe320d36aa147dc99448a5a2b",
+      "current_sha256": "0fa5470fdee7f2ffeadb46e4c6424084ab6a0e8fe320d36aa147dc99448a5a2b",
+      "changed": false
+    },
+    {
+      "group": "corrected_and_proof_file_hashes/corrected",
+      "path": "/Users/samnimoh/Desktop/chromo/corrected/sensitivity_summary.csv",
+      "baseline_sha256": "282bf9610715d667b308fa02df7e31cd852c44a63fdcee873e158fc9a961b79f",
+      "current_sha256": "282bf9610715d667b308fa02df7e31cd852c44a63fdcee873e158fc9a961b79f",
+      "changed": false
+    },
+    {
+      "group": "corrected_and_proof_file_hashes/corrected",
+      "path": "/Users/samnimoh/Desktop/chromo/corrected/step12_codon_panel.log",
+      "baseline_sha256": "ce491da555865d3eab81a37b237cd2d32485fb8e29d435d9aff7424ca0f9592f",
+      "current_sha256": "ce491da555865d3eab81a37b237cd2d32485fb8e29d435d9aff7424ca0f9592f",
+      "changed": false
+    },
+    {
+      "group": "corrected_and_proof_file_hashes/corrected",
+      "path": "/Users/samnimoh/Desktop/chromo/corrected/xtx_calibration.json",
+      "baseline_sha256": "b831659927b121806519e9d25e78fec34489bf931c87d0e29e9a0590095c7fb5",
+      "current_sha256": "b831659927b121806519e9d25e78fec34489bf931c87d0e29e9a0590095c7fb5",
+      "changed": false
+    },
+    {
+      "group": "corrected_and_proof_file_hashes/proof_of_work",
+      "path": "/Users/samnimoh/Desktop/chromo/proof_of_work/MANIFEST.md",
+      "baseline_sha256": "374626ccb3cc28d0da0c3707bda9080412631bb5bbd3dd3a52fa6df57ab7e1fd",
+      "current_sha256": "374626ccb3cc28d0da0c3707bda9080412631bb5bbd3dd3a52fa6df57ab7e1fd",
+      "changed": false
+    },
+    {
+      "group": "corrected_and_proof_file_hashes/proof_of_work",
+      "path": "/Users/samnimoh/Desktop/chromo/proof_of_work/RAW_LOG_EXTRACTS.txt",
+      "baseline_sha256": "d5ae30bd5f35a5895fdfa905f147f57698d024832150ff6ddf38e03dae39c416",
+      "current_sha256": "d5ae30bd5f35a5895fdfa905f147f57698d024832150ff6ddf38e03dae39c416",
+      "changed": false
+    },
+    {
+      "group": "corrected_and_proof_file_hashes/proof_of_work",
+      "path": "/Users/samnimoh/Desktop/chromo/proof_of_work/admixture_barplots.png",
+      "baseline_sha256": "bb9ae020e31c8c9196b778fb4b8b7c972326e97234fa9425b1d1abbfe6145e25",
+      "current_sha256": "bb9ae020e31c8c9196b778fb4b8b7c972326e97234fa9425b1d1abbfe6145e25",
+      "changed": false
+    },
+    {
+      "group": "corrected_and_proof_file_hashes/proof_of_work",
+      "path": "/Users/samnimoh/Desktop/chromo/proof_of_work/admixture_cv.png",
+      "baseline_sha256": "e0cb0d3d8ddd28b2577dd153861afd388ec073821a07ca14e3e6fa1436ede533",
+      "current_sha256": "e0cb0d3d8ddd28b2577dd153861afd388ec073821a07ca14e3e6fa1436ede533",
+      "changed": false
+    },
+    {
+      "group": "corrected_and_proof_file_hashes/proof_of_work",
+      "path": "/Users/samnimoh/Desktop/chromo/proof_of_work/baypass_xtx.png",
+      "baseline_sha256": "364bea28437bd6e319955478e94b6c0830757d726af6333fd2226a60748d83a9",
+      "current_sha256": "364bea28437bd6e319955478e94b6c0830757d726af6333fd2226a60748d83a9",
+      "changed": false
+    },
+    {
+      "group": "corrected_and_proof_file_hashes/proof_of_work",
+      "path": "/Users/samnimoh/Desktop/chromo/proof_of_work/dimred_comparison_zone_qcset.png",
+      "baseline_sha256": "f4112599fbad39c81f14fed472843e555d5ae8d2875748d528c458c2e4333397",
+      "current_sha256": "f4112599fbad39c81f14fed472843e555d5ae8d2875748d528c458c2e4333397",
+      "changed": false
+    },
+    {
+      "group": "corrected_and_proof_file_hashes/proof_of_work",
+      "path": "/Users/samnimoh/Desktop/chromo/proof_of_work/final_outlier_genes.csv",
+      "baseline_sha256": "9c2200455330106b6a18f4c04d03d02caf09fdd7cc3b2905d7fe879c4e2b4104",
+      "current_sha256": "9c2200455330106b6a18f4c04d03d02caf09fdd7cc3b2905d7fe879c4e2b4104",
+      "changed": false
+    },
+    {
+      "group": "corrected_and_proof_file_hashes/proof_of_work",
+      "path": "/Users/samnimoh/Desktop/chromo/proof_of_work/final_treemix_comparison.csv",
+      "baseline_sha256": "15169839ec30031a5187496bdea993d0786328b1dc8f7fb74256358bd35e2f9a",
+      "current_sha256": "15169839ec30031a5187496bdea993d0786328b1dc8f7fb74256358bd35e2f9a",
+      "changed": false
+    },
+    {
+      "group": "corrected_and_proof_file_hashes/proof_of_work",
+      "path": "/Users/samnimoh/Desktop/chromo/proof_of_work/fst_heatmap.png",
+      "baseline_sha256": "ddb8947a7e0fa93d69f626e296979c2333003e00ce2c42909ec43d2cfb8194dc",
+      "current_sha256": "ddb8947a7e0fa93d69f626e296979c2333003e00ce2c42909ec43d2cfb8194dc",
+      "changed": false
+    },
+    {
+      "group": "corrected_and_proof_file_hashes/proof_of_work",
+      "path": "/Users/samnimoh/Desktop/chromo/proof_of_work/mantel_ibd_region.png",
+      "baseline_sha256": "1ec9f0952161ecb7b08a93ccb6dfb91fc7f18934416ea1e3ebdeb4e458c7963e",
+      "current_sha256": "1ec9f0952161ecb7b08a93ccb6dfb91fc7f18934416ea1e3ebdeb4e458c7963e",
+      "changed": false
+    },
+    {
+      "group": "corrected_and_proof_file_hashes/proof_of_work",
+      "path": "/Users/samnimoh/Desktop/chromo/proof_of_work/mantel_jackknife_region.csv",
+      "baseline_sha256": "710250332da3a942f2b9ea3c0bb8afc4ac0b51180ed99bbdf8513f4facc0f2c7",
+      "current_sha256": "710250332da3a942f2b9ea3c0bb8afc4ac0b51180ed99bbdf8513f4facc0f2c7",
+      "changed": false
+    },
+    {
+      "group": "corrected_and_proof_file_hashes/proof_of_work",
+      "path": "/Users/samnimoh/Desktop/chromo/proof_of_work/mantel_result_region.json",
+      "baseline_sha256": "44808b15732932e361e051183a6670367c0e8d6319b0f6fd51ce21861666c98d",
+      "current_sha256": "44808b15732932e361e051183a6670367c0e8d6319b0f6fd51ce21861666c98d",
+      "changed": false
+    },
+    {
+      "group": "corrected_and_proof_file_hashes/proof_of_work",
+      "path": "/Users/samnimoh/Desktop/chromo/proof_of_work/resistance_panel_canonical.csv",
+      "baseline_sha256": "6eddb46a0f42d80ea41e59a20bd6684b98b669984803fb58ad78cbe273c2605d",
+      "current_sha256": "6eddb46a0f42d80ea41e59a20bd6684b98b669984803fb58ad78cbe273c2605d",
+      "changed": false
+    },
+    {
+      "group": "corrected_and_proof_file_hashes/proof_of_work",
+      "path": "/Users/samnimoh/Desktop/chromo/proof_of_work/treemix_residuals_m2.png",
+      "baseline_sha256": "40f980bf8111fff4cf9cc82f9d0e99b222c1a3c8ef8e4a55d475c30d83728356",
+      "current_sha256": "40f980bf8111fff4cf9cc82f9d0e99b222c1a3c8ef8e4a55d475c30d83728356",
+      "changed": false
+    },
+    {
+      "group": "corrected_and_proof_file_hashes/proof_of_work",
+      "path": "/Users/samnimoh/Desktop/chromo/proof_of_work/treemix_variance_explained.png",
+      "baseline_sha256": "694c9cf59254cb01290debb3886d878216b387119037cd6516384be73bc622e9",
+      "current_sha256": "694c9cf59254cb01290debb3886d878216b387119037cd6516384be73bc622e9",
+      "changed": false
+    }
+  ],
+  "scope": "Previously inventoried scripts, corrected outputs and proof-of-work outputs. Manuscript identity is recorded separately in change_inventory.json."
+}

@@ -1,0 +1,7 @@
+{
+  "threshold": 11.232456940590037,
+  "method": "POD quantile 0.999",
+  "n_snps": 3359,
+  "n_outliers": 15,
+  "outlier_fraction": 0.004465614766299494
+}

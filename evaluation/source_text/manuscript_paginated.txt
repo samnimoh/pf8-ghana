@@ -1,0 +1,1996 @@
+PAGE 1
+Fine-scale spatial population genomics of Plasmodium falciparum
+across Ghana's agro-ecological zones: a Pf8 analysis
+Working analysis report — methodology, decisions and provisional findings
+Author: [author placeholder]
+Affiliation: [placeholder]
+Document date: 9 October 2026
+Analysis period: 6–9 October 2026
+Status: Working manuscript for internal review — not a submission draft
+Item Detail
+Project Doctoral thesis component: population genomic structure and signatures of
+antimalarial selection in P. falciparum across Ghana's ecological zones
+Data release MalariaGEN Plasmodium falciparum Community Project, Pf8
+Compute host bacg2 (Ubuntu, kernel 5.15.0-194-generic), 40 cores, 629 GB RAM
+Project root /media/biodataA/pf8/gyadu
+Pipeline entry point scripts/run_all.sh (stages 1–9)
+Analysis completed 9 October 2026, 03:25–04:07 UTC (stages 4–9, 41 min wall time)
+Scope of this report Documents the computational investigation only. The thesis proposal and
+literature review are a separate document and are not reproduced here.
+Page 1 of 60
+
+PAGE 2
+Contents
+Contents..................................................................................................................................................................
+Evidence and traceability key.................................................................................................................................
+Abstract...................................................................................................................................................................
+1. Introduction and background.............................................................................................................................
+1.1 The problem.................................................................................................................................................
+1.2 Objectives addressed by the present analysis..............................................................................................
+1.3 Research questions as operationalised.........................................................................................................
+2. Data and materials..............................................................................................................................................
+2.1 Source and provenance................................................................................................................................
+2.2 Units of analysis and observation period......................................................................................................
+2.3 Spatial resolution: the binding constraint.....................................................................................................
+2.4 Zones represented and zones absent...........................................................................................................
+2.5 Temporal composition..................................................................................................................................
+2.6 Variable summary.........................................................................................................................................
+3. Methodology.......................................................................................................................................................
+3.1 Pipeline overview..........................................................................................................................................
+3.2 Stage 1 — manifest filtering.........................................................................................................................
+3.3 Stage 2 — agro-ecological zone assignment.................................................................................................
+3.4 Stage 3 — three ordinations of the genotype distance matrix.....................................................................
+3.5 Stage 3a — genotype retrieval.....................................................................................................................
+3.6 Stage 3b — isolate quality control................................................................................................................
+3.7 Stage 4a — building the genotype matrix....................................................................................................
+3.8 Stage 4b — pairwise differentiation.............................................................................................................
+3.9 Stages 5 to 9..................................................................................................................................................
+4. Filtering and inclusion/exclusion criteria............................................................................................................
+4.1 The filtering cascade.....................................................................................................................................
+4.2 Rationale, origin and consequences of each non-trivial filter......................................................................
+4.2.1 Pf8 QC-pass flag (filter 2).......................................................................................................................
+4.2.2 Fws ≥ 0.95 (filter 8)................................................................................................................................
+4.2.3 Call-rate outlier rule (filter 6) — disabled..............................................................................................
+4.2.4 Clonal pruning threshold (filter 9).........................................................................................................
+4.2.5 Genotype quality mask (filter 10)..........................................................................................................
+4.2.6 MAF ≥ 5 per cent (filter 14)...................................................................................................................
+4.3 Selection bias summary................................................................................................................................
+5. Analytical decisions and iterations......................................................................................................................
+5.1 Replacing the VCF route with direct Zarr retrieval.......................................................................................
+5.2 Adding t-SNE and PCoA alongside UMAP.....................................................................................................
+5.3 Ploidy: how to count alleles in a haploid parasite coded as diploid.............................................................
+5.4 Sample QC thresholds...................................................................................................................................
+5.5 TreeMix jackknife block size.........................................................................................................................
+5.6 BayPass calibration.......................................................................................................................................
+5.7 Defects found and corrected in the supplied pipeline..................................................................................
+5.8 Decisions that may warrant reconsideration................................................................................................
+Page 2 of 60
+
+PAGE 3
+6. Results.................................................................................................................................................................
+6.1 The analysis dataset......................................................................................................................................
+6.2 Sample quality control..................................................................................................................................
+6.3 Ordination of the genotype distance matrix................................................................................................
+6.4 Pairwise differentiation between zones.......................................................................................................
+6.5 Isolation by distance.....................................................................................................................................
+6.6 Ancestry inference........................................................................................................................................
+6.7 Population graph and migration edges.........................................................................................................
+6.8 Genome scan for differentiation outliers.....................................................................................................
+7. Interpretation and discussion.............................................................................................................................
+7.1 What the analysis establishes.......................................................................................................................
+7.2 What the analysis cannot establish, and why...............................................................................................
+7.3 Unexpected observations.............................................................................................................................
+7.4 Practical significance.....................................................................................................................................
+8. Robustness checks and alternative approaches.................................................................................................
+8.1 Checks completed.........................................................................................................................................
+8.2 Checks proposed but not performed............................................................................................................
+9. Limitations and potential sources of bias...........................................................................................................
+9.1 Ranked by threat to the conclusions............................................................................................................
+9.2 On the design limitation specifically.............................................................................................................
+9.3 Reproducibility status...................................................................................................................................
+10. Conclusion and current state of the research...................................................................................................
+10.1 What has been established.........................................................................................................................
+10.2 Answers to the research questions............................................................................................................
+10.3 What remains unresolved...........................................................................................................................
+10.4 Most valuable next steps............................................................................................................................
+11. References........................................................................................................................................................
+11.1 Data source.............................................................................................................................................
+11.2 Population-genetic methods..................................................................................................................
+11.3 Ancestry, ordination and clustering........................................................................................................
+11.4 Malaria genomics and biology................................................................................................................
+11.5 Software.................................................................................................................................................
+12. Appendices........................................................................................................................................................
+Appendix A — Software environment................................................................................................................
+Appendix B — Key configuration values.............................................................................................................
+Appendix C — Output inventory.........................................................................................................................
+Appendix D — Reference verification status......................................................................................................
+Appendix E — Reproducing the analysis............................................................................................................
+REVIEWER NOTES AND REVISION GUIDE................................................................................................................
+A. Explain it simply..............................................................................................................................................
+B. Methodological rationale...............................................................................................................................
+C. Decisions requiring your review.....................................................................................................................
+D. Potential weaknesses and reviewer objections.............................................................................................
+E. Missing information and unverified assumptions...........................................................................................
+F. Recommended next steps, in priority order...................................................................................................
+Page 3 of 60
+
+PAGE 4
+G. Questions for the author................................................................................................................................
+H. Suggested revisions before this could be considered publication-ready.......................................................
+If the entries below appear empty, open in Word and press Ctrl+A then F9 (⌘+A, fn+F9 on macOS) to build the field.
+Page 4 of 60
+
+PAGE 5
+Evidence and traceability key
+Every substantive claim in this report carries one of the following labels. The intent is that a reader can tell,
+without re-running anything, which statements rest on recorded output and which are reasoning on top of it.
+Label Meaning
+Observed Printed directly by a pipeline script and preserved in a log or results file.
+Calculated Derived here from identified inputs by a stated procedure (arithmetic on observed values, or a
+query re-run against stored outputs).
+Interpreted A reasoned explanation of observed results. Defensible, but not itself a measurement.
+Hypothesized A candidate explanation that the present evidence does not establish.
+Proposed An analysis or action recommended but NOT performed.
+Unknown Cannot be established from the material available in this session.
+File paths are given relative to the project root /media/biodataA/pf8/gyadu unless stated otherwise. Script
+line references point to the version of the code present at the end of the analysis session; the unmodified
+originals remain in pf8_ghana_pipeline.zip in the project root.
+Page 5 of 60
+
+PAGE 6
+Abstract
+Objective. To quantify spatial population structure, gene flow and candidate signatures of local selection in
+Plasmodium falciparum across Ghana's agro-ecological zones, using the MalariaGEN Pf8 release, and to
+establish whether zone-level differentiation is detectable at all before interpreting any locus-specific signal.
+Data. Pf8 contains 33,325 samples and 12,493,205 variant sites. Ghana contributes 6,653 samples, of which
+4,905 pass the release's own quality control. Isolates were collected between 2009 and 2021 and are
+geolocated only to administrative level 1, giving seven distinct coordinates across seven regions. Spatial
+joining to a Ghana agro-ecological zone layer placed these in four zones: Guinea savanna (n = 3,605),
+deciduous forest (n = 815), coastal savanna (n = 435) and transitional zone (n = 50). The Sudan savanna and
+the wet-evergreen and moist-evergreen forest zones are unrepresented.
+Methods. Genotypes were obtained from the Pf8 Zarr store over HTTPS, restricted to Ghanaian samples,
+sites passing the release filter, biallelic single-nucleotide polymorphisms (SNPs) and the GT, AD, DP and GQ
+fields. Sample quality control applied a within-host fixation index (F ) threshold of 0.95, a call-rate floor of
+ws
+0.80, a heterozygosity outlier rule and clonal pruning. Mixed calls were resolved to the majority allele by read
+depth, and allele counts were taken as one allele per isolate. Analyses comprised three ordinations of the Pf8
+genotype-distance matrix (UMAP, t-SNE, PCoA), pairwise Hudson F with a block jackknife, ADMIXTURE at K =
+ST
+1–8 with cross-validation, Mantel tests of isolation by distance at zone and region level, TreeMix with 0–5
+migration edges, and a BayPass XtX genome scan calibrated against 100,000 pseudo-observed neutral SNPs.
+Principal findings. After all filters, 3,359 SNPs across 1,900 isolates entered the population analyses. Zone
+differentiation is very low: the largest pairwise F is 0.0024 (95% CI 0.0014–0.0034) between coastal and
+ST
+Guinea savanna, and two of six pairs have confidence intervals spanning zero. Isolation by distance is
+supported at region level (Mantel r = 0.400, p = 0.029, 7 populations, 21 pairs) but not at zone level (r =
+0.578, p = 0.090, 4 populations, 6 pairs), where only 24 distinct permutations exist. ADMIXTURE cross-
+validation error is minimised at K = 2 (0.83736) but the margin over K = 1 (0.84199) is small and ancestry
+proportions are nearly uniform across zones. TreeMix fit improves monotonically to a plateau at three
+migration edges, beyond the two that four populations can identify. The BayPass scan returns 15 outlier SNPs
+above a calibrated XtX threshold of 11.23, intersecting 11 genes including the amino-acid transporter AAT1
+(PF3D7_0629500, two outlier SNPs, maximum XtX 24.44). No validated antimalarial resistance locus appears
+among the outliers.
+Current conclusion. The Ghanaian parasite population behaves as a largely panmictic unit at the resolution
+these data permit, with a weak distance-related signal that is detectable at region level. The analysis cannot
+currently separate ecological-zone effects from administrative-region effects, because three of the four zones
+are each filled by a single region; nor can it separate spatial from temporal effects, because sampling year is
+strongly confounded with zone. The outlier set is a provisional candidate list, not a demonstration of local
+adaptation. These results should be treated as the baseline characterisation that the marker-level thesis
+questions depend on, not as answers to them.
+Page 6 of 60
+
+PAGE 7
+1. Introduction and background
+1.1 The problem
+Malaria transmission in Ghana is spatially heterogeneous, and the heterogeneity tracks ecology. The country
+spans a south–north gradient of agro-ecological zones that differ in rainfall, vector species composition,
+seasonality and consequently in entomological inoculation rate. If parasite populations in these zones are
+demographically separate to any meaningful degree, then drug-resistance alleles, antigenic variants and
+locally adaptive alleles can differ in frequency between them, and a national surveillance programme built on
+a handful of sentinel sites will mis-estimate the national picture. If instead the zones exchange parasites
+freely, a resistance allele arising anywhere will spread everywhere, and the surveillance question becomes
+one of timing rather than geography.
+The two scenarios demand different control responses, and they are distinguishable from genomic data. The
+present analysis addresses the prior question that both depend on: how much spatial structure is there in
+Ghanaian P. falciparum, and is it enough to support zone-level inference at all?
+Scope. The thesis proposal and literature review (supplied separately as "genomic analysis of Consistent signatures
+of selection.docx", 145 paragraphs, approximately 11,400 words) set out the biological rationale, the resistance-
+marker panel and the published context. This report does not restate that material. It documents what was
+computed, on what data, with which decisions, and what the output actually shows.
+1.2 Objectives addressed by the present analysis
+The thesis defines three specific objectives. The work documented here engages all three, but completes
+none of them. Their status is as follows.
+Thesis objective What this analysis contributes Status
+Quantify the magnitude and Pairwise Hudson FST with jackknife standard errors; Addressed. Differentiation
+direction of gene flow and ADMIXTURE K = 1–8; TreeMix with 0–5 migration quantified and found very
+population genetic differentiation edges; three ordinations of the Pf8 genotype- low.
+between zones distance matrix
+Evaluate whether ecological Mantel tests of isolation by distance at zone and Partially addressed. A
+transitions act as dispersal region level, with geographic distance on the WGS84 barrier test is confounded
+barriers ellipsoid with distance and with
+region identity (Section
+9.2).
+Identify and characterise zone- BayPass core-model XtX scan calibrated against Preliminary. 15 outlier
+specific variants associated with simulated neutral data; intersection of outliers with SNPs in 11 genes; no
+local adaptation or drug response the PlasmoDB-71 annotation validated resistance locus
+recovered.
+1.3 Research questions as operationalised
+The thesis questions were translated into the following testable forms. The translation is itself an analytical
+decision and is revisited in Section 5.
+1. Is between-zone differentiation distinguishable from zero? Operationalised as pairwise Hudson FST with
+block-jackknife confidence intervals.
+Page 7 of 60
+
+PAGE 8
+2. Does genetic distance increase with geographic distance? Operationalised as a Mantel test of FST/(1 −
+FST) against log geographic distance, run at both zone and region level.
+3. Do individual isolates assign to zone-associated ancestry components? Operationalised as ADMIXTURE
+at K = 1–8 with 10-fold cross-validation, and as visual inspection of three ordinations.
+4. Is there evidence of gene flow beyond a simple bifurcating population tree? Operationalised as TreeMix
+with 0–5 migration edges.
+5. Which loci are more differentiated than neutral demography predicts? Operationalised as a BayPass XtX
+scan with a threshold calibrated on pseudo-observed data simulated under the estimated population
+covariance matrix.
+[Interpreted] Questions 1–4 are answerable at the resolution these data permit and are answered,
+provisionally, in Section 6. Question 5 is answerable only in the weak sense of producing a ranked candidate
+list; with four populations and 3,359 SNPs the scan has limited power, and a negative result for any particular
+locus carries little information.
+Page 8 of 60
+
+PAGE 9
+2. Data and materials
+2.1 Source and provenance
+[Observed] All genotype and metadata inputs derive from the MalariaGEN Plasmodium falciparum Community
+Project release 8 (Pf8), served publicly over HTTPS from https://pf8-release.cog.sanger.ac.uk. The release
+comprises 33,325 samples and 12,493,205 variant sites called against the 3D7 reference assembly (contigs
+Pf3D7_01_v3 … Pf3D7_14_v3, plus apicoplast and mitochondrial contigs, which this analysis excludes).
+Four Pf8 artefacts were used:
+• Sample manifest — data/Pf8_samples.txt, 33,325 rows and 17 columns, giving country, administrative
+level 1, latitude and longitude at that level, collection year and the release's own QC-pass flag.
+• Variant call data — the Pf8 Zarr store at /zarr, holding GT, AD, DP, GQ and per-site annotations including
+FILTER_PASS and RegionType.
+• Mean genotype distance matrix — data/Pf8_mean_genotype_distance.npy, a 33,325 × 33,325 single-
+precision matrix published with the release (4.44 GB).
+• Reference annotation — data/PlasmoDB-71_Pfalciparum3D7.gff, used for Step 9. Release 68 is also
+present in data/ but config.py points at release 71.
+A Ghana agro-ecological zone polygon layer (data/ghanaAEZ.geojson) was supplied with the project. Its
+provenance was not recorded in this session.
+Provenance gap. [Unknown] The origin, vintage and coordinate reference system documentation of
+ghanaAEZ.geojson could not be established from material available here. The file carries eight zone polygons
+(coastal savanna, deciduous forest, Guinea savanna, moist evergreen, Sudan savanna, transitional zone, wet
+evergreen, and a Volta Lake water body). The spelling "Decidous forest" in the layer is a misspelling that propagates
+through every downstream output and zone label; it was deliberately left uncorrected so that zone keys remain
+consistent with the source layer.
+2.2 Units of analysis and observation period
+[Observed] The unit of analysis is the parasite isolate (one blood sample from one infected individual). Ghana
+contributes 6,653 isolates to Pf8; 4,905 carry the release QC-pass flag. Collection years span 2009 to 2021.
+Table 2.1 gives the regional composition of the Ghanaian subset at three stages. The pronounced imbalance
+— Upper East supplies 74 per cent of the QC-passing isolates and 70 per cent of the final analysis set — is a
+property of the Pf8 sampling frame, not of any filter applied here.
+Administrative region In Pf8 manifest Pf8 QC-pass In final analysis set
+(Step 1 output) (Step 4a output)
+Upper East 4,821 3,605 1,334
+Central 686 309 125
+Greater Accra 474 435 204
+Ashanti 452 391 157
+Eastern 110 74 34
+Brong Ahafo 69 50 25
+Page 9 of 60
+
+PAGE 10
+Administrative region In Pf8 manifest Pf8 QC-pass In final analysis set
+(Step 1 output) (Step 4a output)
+Volta 41 41 21
+Total 6,653 4,905 1,900
+Table 2.1. Ghanaian isolates by administrative region at three stages of the pipeline. Counts are from the Pf8 manifest,
+interim/ghana_samples.csv and interim/analysis_samples.csv respectively.
+2.3 Spatial resolution: the binding constraint
+[Observed] Pf8 geolocates isolates to administrative level 1. Every isolate from a given region therefore carries
+the identical coordinate pair, and the 4,905 QC-passing Ghanaian isolates occupy exactly seven distinct
+points. Step 2 prints this explicitly: "4,905 samples occupy 7 distinct coordinate pairs."
+[Interpreted] This is the single most consequential property of the dataset for the thesis questions. Individual-
+level geographic distance does not exist in these data, so no analysis can resolve structure finer than the
+region. More seriously, as Table 2.2 shows, three of the four zones are each filled by exactly one region,
+which makes zone and region statistically indistinguishable for those three. A zone effect and a region effect
+cannot be separated.
+Agro-ecological zone Regions contributing (final set) n Distinct coordinates
+Guinea savanna Upper East (1,334) 1,334 1
+Deciduous forest Ashanti (157), Central (125), Eastern (34), Volta 337 4
+(21)
+Coastal savanna Greater Accra (204) 204 1
+Transitional zone Brong Ahafo (25) 25 1
+Table 2.2. Zone composition of the final analysis set. Only the deciduous forest zone aggregates more than one region; the other
+three are single-region zones, so for them "zone" and "region" are the same variable under two names.
+2.4 Zones represented and zones absent
+[Observed] The thesis frames Ghana as five ecological zones. The Pf8 Ghanaian sample, joined to the supplied
+layer, occupies four: Guinea savanna, deciduous forest, coastal savanna and transitional zone. No isolate falls
+in the Sudan savanna, and none in the moist-evergreen or wet-evergreen forest zones present in the layer.
+Step 2 reported zero unmatched samples and zero duplicate matches, so the absence is one of sampling, not
+of joining.
+[Interpreted] The Sudan savanna is the extreme northern zone and the one with the most distinct transmission
+regime. Its absence removes one end of the ecological gradient the thesis is designed around. The Upper East
+centroid lies close to the Sudan savanna boundary (Figure 2.1), so the Guinea savanna sample may include
+parasites from populations straddling that transition; this cannot be checked at admin-1 resolution.
+Page 10 of 60
+
+PAGE 11
+Figure 2.1. Sampling locations on the Ghana agro-ecological zone layer. Each black point is one administrative-level-1 centroid,
+not an individual isolate; the seven points carry 4,905 isolates between them. Generated by scripts/step02_assign_aez.py as
+figures/ghana_samples_aez_map.png.
+2.5 Temporal composition
+[Observed] Collection year is strongly unbalanced across zones (Table 2.3). Median collection year ranges from
+2012 (transitional zone) to 2018 (coastal savanna). The transitional zone contributes no isolate after 2013;
+the coastal savanna contributes none before 2016.
+Year Coastal savanna Deciduous forest Guinea savanna Transitional zone
+2009 0 0 41 0
+2010 0 0 81 0
+2011 0 0 36 3
+2012 0 0 21 19
+2013 0 1 84 3
+Page 11 of 60
+
+PAGE 12
+Year Coastal savanna Deciduous forest Guinea savanna Transitional zone
+2014 0 111 63 0
+2015 0 66 96 0
+2016 15 21 59 0
+2017 12 0 243 0
+2018 177 40 556 0
+2019 0 14 54 0
+2020 0 76 0 0
+2021 0 8 0 0
+Median year 2018 2015 2017 2012
+Table 2.3. Collection year by zone in the final analysis set (n = 1,900). Computed here from interim/analysis_samples.csv.
+[Interpreted] Any between-zone difference observed in this dataset is also a between-period difference. Ghana
+changed first-line therapy and scaled up chemoprevention over this window, so allele frequencies at drug-
+related loci would be expected to move with time independently of geography. This confounding is not
+removable by reweighting, because for the transitional zone and the coastal savanna the year ranges barely
+overlap.
+Page 12 of 60
+
+PAGE 13
+2.6 Variable summary
+Variable Source Type Notes
+Sample Pf8 manifest string Isolate identifier; the join key throughout.
+Country Pf8 manifest string Filtered to "Ghana" at Step 1.
+QC pass Pf8 manifest boolean-like The release's own flag. Parsed permissively
+(true/t/yes/y/1/pass) by config.coerce_bool.
+Admin level 1 Pf8 manifest string Region. Seven values in Ghana.
+Admin level 1 latitude / Pf8 manifest float Region centroid. Seven distinct pairs.
+longitude
+Year Pf8 manifest float Collection year, 2009–2021.
+pf8_row derived, Step 1 int Row index into the 33,325 × 33,325 distance matrix.
+Captured once so the submatrix slice can never be mis-
+indexed.
+zone derived, Step 2 string Agro-ecological zone from the spatial join. Four values.
+call_rate, het_rate, Fws derived, Step float Per-isolate QC statistics from a 50,000-SNP panel.
+3b
+qc_pass (pipeline) derived, Step boolean Distinct from the Pf8 flag; this is the pipeline's own
+3b composite.
+GT, AD, DP, GQ Pf8 Zarr int8 / int16 Genotype, allelic depths, total depth, genotype quality.
+Missing encoded as −1.
+FILTER_PASS, is_snp, Pf8 Zarr bool / int / Site-level annotations used for variant filtering.
+numalt, RegionType string
+Table 2.4. Variables used. "Derived" variables are written by the pipeline into interim/ and results/.
+Page 13 of 60
+
+PAGE 14
+3. Methodology
+The analysis is a nine-stage pipeline driven by scripts/run_all.sh. Stages run in order; each writes its outputs
+to disk so that a failure costs one stage rather than the whole run. This section describes each stage: what it
+does, why, what it assumes, and how it constrains what follows.
+3.1 Pipeline overview
+Stage Script(s) Function Principal output
+1 step01_filter_samples. Restrict the Pf8 manifest to Ghana and to QC- interim/ghana_samples.csv
+py passing isolates; capture distance-matrix row
+indices
+2 step02_assign_aez.py Spatial join of isolate coordinates to agro- interim/ghana_samples_with_aez.csv
+ecological zone polygons
+3 step03_umap.py UMAP, t-SNE and PCoA of the Ghanaian block of results/{umap,tsne}_embedding.csv,
+the Pf8 distance matrix, plus a quantitative results/pcoa_coordinates.csv,
+comparison of the three results/dimred_comparison.csv
+3a step03a_fetch_callset Fetch the Ghanaian callset from the Pf8 Zarr store interim/pf8_ghana.zarr
+_zarr.py over HTTPS (added in this session; see Section
+5.1)
+3b step03b_sample_qc.py Per-isolate quality control: call rate, interim/ghana_samples_qc_pass.csv,
+heterozygosity, Fws, clonal pruning results/sample_qc_full.csv
+4 step04a_prepare_calls Build the filtered genotype matrix; compute interim/ghana_core_snps.npz,
+et.py, pairwise Hudson FST and cache per-zone allele results/fst_pairwise.csv
+step04b_fst.py counts
+5 step05a / 05b / 05c Export to PLINK, LD-prune, ADMIXTURE sweep K results/admixture/
+= 1–8, plot
+6 step06_mantel.py Mantel test of isolation by distance, zone and results/
+region level mantel_result_{zone,region}.json
+7 step07a / 07b / 07c TreeMix input, sweep over 0–5 migration edges, results/treemix/
+model comparison
+8 step08a / 08b / 08c BayPass input, core model, pseudo-observed data results/baypass/
+simulation, XtX calibration
+9 step09_annotate.py Intersect outlier SNPs with the PlasmoDB-71 gene results/outlier_genes.csv
+annotation
+Table 3.1. Pipeline stages. Stage 3a was added during this session; all other scripts were supplied with the project and were
+modified only as recorded in Section 5.
+3.2 Stage 1 — manifest filtering
+What and why. The manifest is restricted to Ghana and then to isolates flagged QC-pass by the release.
+Relying on the release's flag rather than re-deriving sample quality from raw data is a deliberate deference to
+MalariaGEN's own curation, which has access to sequencing-run level information this analysis does not.
+Implementation note. The script captures each retained isolate's row index in the full 33,325-sample
+distance matrix as the column pf8_row. This is the only safe way to slice the Ghanaian block later: the pandas
+index would shift under any subsequent filter, whereas pf8_row is fixed at the moment of extraction. Step 3
+Page 14 of 60
+
+PAGE 15
+asserts that the maximum pf8_row does not exceed the matrix dimension, which would catch a Pf7/Pf8
+mismatch.
+[Observed] 6,653 Ghanaian rows → 4,905 after the QC filter (1,748 dropped). pf8_row range 2,301–29,498.
+3.3 Stage 2 — agro-ecological zone assignment
+What and why. Isolate coordinates are joined to the zone polygon layer with GeoPandas, giving each isolate
+a zone label. Because the coordinates are region centroids, the join is effectively a lookup table from seven
+points to four zones.
+Assumption. That a region's centroid is a reasonable proxy for where its isolates were collected. For compact
+regions this is tolerable; for regions that straddle a zone boundary it is not. The script prints a region × zone
+cross-tabulation specifically so that boundary-straddling regions can be checked by eye, and flags Brong
+Ahafo (forest/transition) and Volta (coastal/Guinea savanna) as the two warranting manual review.
+[Observed] All 4,905 isolates matched exactly one polygon; zero unmatched, zero duplicate matches. Resulting
+counts: Guinea savanna 3,605, deciduous forest 815, coastal savanna 435, transitional zone 50.
+[Proposed] The Brong Ahafo and Volta assignments have not been manually reviewed against the map. Volta
+in particular contributes 21 isolates to the deciduous forest zone, and its centroid sits near a boundary in the
+layer.
+3.4 Stage 3 — three ordinations of the genotype distance matrix
+What and why. Pf8 publishes a precomputed mean genotype distance matrix over all 33,325 samples. The
+Ghanaian block (4,905 × 4,905) is sliced out by memory-mapping the 4.44 GB file and taking the submatrix,
+which keeps peak memory in the low hundreds of megabytes. Three dimensionality-reduction methods are
+then applied to the same matrix so that they can be compared on equal terms.
+• UMAP (n_neighbors = 30, min_dist = 0.1, metric = precomputed) — preserves local neighbourhood
+structure with partial global layout. These are the parameter values specified in the thesis workflow.
+• t-SNE (perplexity = 30, metric = precomputed, init = random) — preserves local neighbourhoods only.
+Initialisation must be random rather than PCA-based because the input is a distance matrix rather than
+feature vectors.
+• PCoA (classical metric multidimensional scaling) — Gower double-centring followed by an
+eigendecomposition. Unlike the other two it is linear, so axis scaling is interpretable and each axis carries
+a proportion of variation explained.
+Comparison metrics. Because the three methods optimise different objectives, a visual comparison alone
+would be uninformative. Three quantitative measures are computed on the same embeddings:
+trustworthiness (do points that are close in two dimensions correspond to genuine near neighbours in the full
+matrix?), the Spearman correlation between pairwise distances in the embedding and in the original matrix
+on a 2,000-sample subset (does the embedding preserve global structure?), and the silhouette coefficient by
+zone (do the zone labels separate?). The silhouette is also computed on the original distance matrix, which
+gives the ceiling that any embedding could achieve.
+Page 15 of 60
+
+PAGE 16
+Deviation from the thesis workflow. The workflow document specifies UMAP for this step. t-SNE and PCoA were
+added at the user's request during this session so that the three could be compared. This is an addition, not a
+substitution: the UMAP configuration is unchanged.
+3.5 Stage 3a — genotype retrieval
+What and why. This stage did not exist in the supplied pipeline and was written during this session to replace
+a failed VCF download (Section 5.1). It fetches genotypes directly from the Pf8 Zarr store over HTTPS, chunk
+by chunk, retaining only what the downstream steps read.
+The Zarr store is chunked 131,072 variants × 100 samples per field. Because the 6,653 Ghanaian samples fall
+in 77 of the 334 sample-chunk columns, and the sites of interest in 95 of the 96 variant-chunk rows, only a
+subset of the grid must be transferred. Each chunk is downloaded, decompressed in memory, sliced to the
+Ghanaian columns and the retained rows, then written to a local store and discarded, so peak memory stays
+at a few gigabytes and the ~300 GB transferred is never written to disk.
+Sites are retained where FILTER_PASS is true, is_snp is true and numalt equals 1. Fields retained are GT, AD
+(reference and first alternate only), DP and GQ.
+[Observed] 2,190,026 of 12,493,205 Pf8 sites are PASS biallelic SNPs. Every one of them carries RegionType =
+"Core", confirmed by a direct tabulation. The transfer moved 299.8 GB in 3.20 hours at approximately 26
+MB/s with zero failed requests, producing a 20.57 GB local store.
+Consequence for the core-genome filter. The supplied pipeline expects an optional BED file of core-genome
+intervals (data/pf_core_regions.bed), absent here, and warns that without it subtelomeric var/rifin regions
+will contaminate the outlier scan. The tabulation above resolves that concern empirically: because all PASS
+biallelic SNPs are annotated Core, the PASS filter already performs the exclusion the BED would have
+performed. The warning the pipeline prints at Step 4a is therefore a false alarm in this dataset.
+Validation. The store was verified against the one completely downloaded VCF (chromosome 10) and against
+two partially downloaded ones (chromosomes 1 and 13), in three independent 35–40 kb windows. In each
+window the site list matched exactly and all four genotype fields agreed value for value: 3,957, 3,470 and
+4,378 PASS biallelic SNPs respectively, with zero differing values across 158 million, 139 million and 175
+million compared values. The verification is in logs/step03a_fetch_callset.log.
+3.6 Stage 3b — isolate quality control
+Four per-isolate checks are applied, computed from a panel of 50,000 biallelic PASS SNPs spread
+proportionally across all 14 contigs.
+Within-host fixation index (F ). F measures how far an isolate's read-level allele frequencies depart from
+ws ws
+the population's. A clonal infection has read frequencies near 0 or 1 at every site and F near 1; a mixed
+ws
+infection carries intermediate frequencies and a lower value. It is computed here as
+F = 1 − ( Σ H / Σ H ), where H = 2q(1 − q) from the isolate's own read counts and H = 2p(1 − p) from
+ws i w,i i s,i w s
+pooled read counts across qualifying isolates.
+Sites contribute only where total depth is at least 5. The conventional monoclonality threshold of 0.95 is
+applied.
+Page 16 of 60
+
+PAGE 17
+Call rate. The proportion of panel SNPs with a genotype call. The pipeline applies an absolute floor and,
+optionally, a median-absolute-deviation outlier rule; the choice between them is discussed in Section 5.4.
+Heterozygosity outliers. Blood-stage P. falciparum is haploid, so a heterozygous call indicates a mixed
+infection or a genotyping error rather than true heterozygosity. Isolates more than three median absolute
+deviations above the median heterozygous call rate are flagged. This check is largely redundant with F and
+ws
+is retained as an independent cross-check.
+Clonal pruning. Near-identical isolates (outbreak-linked or repeat-sampled parasites) inflate within-zone
+homogeneity and therefore inflate between-zone F . The cached Ghanaian distance submatrix from Stage 3
+ST
+is thresholded, connected components are extracted with a single-linkage rule, and one representative is
+retained per component — chosen by best call rate, then best F , then identifier, so the choice is
+ws
+deterministic.
+3.7 Stage 4a — building the genotype matrix
+This stage converts the Zarr store into the single filtered genotype matrix that every subsequent stage reads.
+The order of operations matters and is deliberate:
+6. Site-level filters on the small one-dimensional arrays (FILTER_PASS, is_snp, numalt = 1), screening the
+whole genome before any genotype is fetched.
+7. Genotype-level masking: calls below a read-depth floor are set to missing. A low-confidence call thus
+becomes missing data rather than a confident wrong answer, which matters because the missingness
+filter at step 5 then sees it for what it is.
+8. Sample alignment: genotype columns are reordered to match the metadata table, so that sample order
+is fixed once and never re-derived.
+9. Mixed-call resolution: heterozygous calls are replaced by the allele with more reads; ties become
+missing (Section 5.3).
+10. Variant missingness filter (≤ 10 per cent), then sample missingness filter (≤ 20 per cent), then minor
+allele frequency filter (≥ 5 per cent). Missingness is applied before MAF so that a SNP is not retained on
+the strength of a handful of confident calls.
+Thresholds. MAF > 5 per cent and missingness < 10 per cent are specified in the thesis workflow document
+for Step 4 and were not altered. The depth floor and the sample-missingness bound are pipeline defaults; the
+depth and quality settings were revised during this session and that revision is documented in Section 5.5.
+3.8 Stage 4b — pairwise differentiation
+Estimator. Hudson's F is computed per locus and summed as a ratio of averages — numerator and
+ST
+denominator accumulated across loci before dividing — rather than as an average of per-locus ratios, which
+is upwardly biased. Hudson's estimator is preferred over Weir and Cockerham's here because it is insensitive
+to unequal sample sizes between populations, which is pertinent when one zone has 1,334 isolates and
+another has 25.
+Uncertainty. Standard errors come from a block jackknife over contiguous blocks of SNPs, which accounts for
+linkage between nearby sites. Blocks are 2,000 SNPs by default, reduced automatically to at most one
+twentieth of the available SNPs.
+Page 17 of 60
+
+PAGE 18
+Ploidy handling. Allele counts are taken as one allele per isolate (Section 5.3). This matters: counting both
+copies of a diploid-coded haploid genotype would double every sample size entering the F correction, the
+ST
+TreeMix drift standard errors and the BayPass XtX statistic, making all three anticonservative.
+3.9 Stages 5 to 9
+ADMIXTURE (Stage 5). Genotypes are exported to PLINK transposed text format, converted to binary, LD-
+pruned (50-SNP window, 10-SNP step, r² threshold 0.2) and run through ADMIXTURE for K = 2 to 8 with 10-
+fold cross-validation. Pruning is not optional: linked SNPs carry redundant information and inflate apparent
+structure. K = 1 was run separately during this session to provide the no-structure reference point that the
+supplied sweep omits.
+Mantel test (Stage 6). Isolation by distance is tested by regressing linearised differentiation, F / (1 − F ), on
+ST ST
+the logarithm of great-circle distance computed on the WGS84 ellipsoid. Significance comes from a
+permutation test on the distance matrices (999 permutations, one-sided, since isolation by distance predicts
+a positive association). The test is run at two levels: four zones, and seven administrative regions.
+TreeMix (Stage 7). A maximum-likelihood population graph is fitted with 0 to 5 migration edges, rooted on
+Guinea savanna, using a jackknife block size of 50 SNPs. Model fit is summarised as the proportion of variance
+in between-population covariance explained, computed over off-diagonal entries only, matching TreeMix's
+own definition.
+BayPass (Stage 8). The core model estimates the population covariance matrix Ω from genome-wide allele
+counts, then reports XtX per SNP — a differentiation statistic standardised by that covariance structure. A
+SNP is called an outlier when its XtX exceeds a threshold taken from pseudo-observed data simulated under
+the estimated Ω. The logic is that a threshold drawn from the empirical XtX distribution assumes a fixed
+proportion of the genome is under selection, whereas a threshold from simulated neutral data assumes only
+that the demographic model is adequate.
+Annotation (Stage 9). Outlier positions are intersected with protein-coding gene features from PlasmoDB-71
+using bedtools, and cross-referenced against a panel of eight validated antimalarial resistance loci and
+against antigenic and invasion gene families.
+Page 18 of 60
+
+PAGE 19
+4. Filtering and inclusion/exclusion criteria
+This section documents every filter applied, with counts before and after, and states for each whether it was
+specified in advance (in the thesis workflow or the supplied pipeline), chosen during this session on the basis
+of exploratory output, or introduced retrospectively.
+4.1 The filtering cascade
+# Filter Level Threshold Before After Removed Origin
+1 Country = Ghana isolate exact match 33,325 6,653 26,672 Pre-specified
+2 Pf8 QC-pass flag isolate release flag 6,653 4,905 1,748 Pre-specified
+3 Zone assignment isolate within a polygon 4,905 4,905 0 Pre-specified
+4 Site FILTER = PASS, site FILTER_PASS ∧ 12,493,205 2,190,026 10,303,179 Pre-specified
+biallelic SNP is_snp ∧
+numalt = 1
+5 Call rate floor isolate ≥ 0.80 4,905 4,885 20 Pre-specified
+6 Call-rate MAD outlier isolate disabled (< 0.982 4,885 4,885 0 Session
+if enabled) decision
+7 Heterozygosity outlier isolate > median + 3 MAD — — 126 Pre-specified
+(0.0019)
+8 Fws monoclonality isolate ≥ 0.95 — — 2,810 Pre-specified
+9 Clonal pruning isolate distance ≤ 0.00005 — — 77 Session
+decision
+(threshold)
+— Combined effect of 5– isolate 4,905 2,017 2,888
+9
+10 Genotype depth mask call DP ≥ 5 12,540,727,880 10,845,661,093 13.52% Session
+calls calls decision
+(GQ rule
+removed)
+11 Mixed-call resolution call majority allele by 194,167 185,247 8,920 Session
+AD; mixed calls resolved (tied) decision
+ties → missing
+12 Variant missingness site ≤ 0.10 2,190,026 1,634,808 555,218 Pre-specified
+(thesis: < 10%)
+13 Sample missingness isolate ≤ 0.20 2,017 1,900 117 Pre-specified
+14 Minor allele site ≥ 0.05 1,634,808 3,359 1,631,449 Pre-specified
+frequency (thesis: > 5%)
+15 LD pruning site r² < 0.2, 50/10 3,359 2,923 436 Pre-specified
+(ADMIXTURE only) window
+Table 4.1. Complete filtering cascade. Isolate-level filters 5–9 are not sequential — each is evaluated independently against all
+4,905 isolates and an isolate may fail several — so only their combined effect has a meaningful before/after pair. Sources:
+logs/step03b_sample_qc.log, logs/run_from4_parallel.log, results/sample_qc_full.csv.
+4.2 Rationale, origin and consequences of each non-trivial filter
+4.2.1 Pf8 QC-pass flag (filter 2)
+Page 19 of 60
+
+PAGE 20
+Purpose and origin. Pre-specified. Removes isolates MalariaGEN itself judged unreliable, on the basis of
+sequencing-run information not available downstream.
+Effect. 1,748 of 6,653 isolates removed (26.3 per cent). The loss is not uniform across regions: Upper East
+loses 1,216 (25.2 per cent) and Central loses 377 (55.0 per cent), while Volta loses none.
+[Hypothesized] Differential loss by region most likely reflects differences in sample collection, storage or
+sequencing batch rather than anything biological, but the manifest does not carry the fields needed to
+confirm this.
+4.2.2 Fws ≥ 0.95 (filter 8)
+Purpose. To exclude polyclonal infections. A mixed infection contributes allele frequencies from several
+parasite genomes to a single genotype column; ADMIXTURE reads that as intermediate ancestry, so an
+uncorrected analysis risks describing the transmission-intensity gradient rather than the ancestry structure it
+is meant to estimate.
+Origin. Pre-specified. 0.95 is the conventional cut and is the pipeline default (config.MIN_FWS). It was re-
+confirmed during this session against the observed F distribution, which shows a pronounced mode above
+ws
+0.95 and a long left shoulder (Figure 6.2, third panel), so the threshold falls at a natural break rather than
+cutting through a dense region.
+Effect and its most important consequence. 2,810 of 4,905 isolates removed — by far the largest single
+exclusion. Critically, the polyclonal fraction varies systematically by zone: Guinea savanna 0.597, deciduous
+forest 0.539, transitional zone 0.500, coastal savanna 0.444.
+[Interpreted] This gradient is itself a transmission signal — higher transmission produces more mixed infections
+— so the filter removes a greater share of isolates from the high-transmission north than from the lower-
+transmission coast. The retained sample is therefore not a random subsample of the Ghanaian parasite
+population, and the degree of non-randomness differs by zone. Because the filter targets monoclonality
+rather than any allele, the direct effect on allele frequencies should be modest, but this has not been tested.
+[Proposed] Re-run the F and ADMIXTURE analyses at F ≥ 0.90 and ≥ 0.80 (projected to retain 2,341 and
+ST ws
+2,924 isolates respectively) and compare. If conclusions are unchanged, the sensitivity concern is discharged
+cheaply.
+4.2.3 Call-rate outlier rule (filter 6) — disabled
+What the pipeline did. A median-absolute-deviation rule flags isolates whose call rate falls more than three
+MADs below the median. Because Ghanaian call rates are tightly bunched near 1 (median 0.9962), the
+resulting bound sits at 0.982 and flagged 1,281 isolates, of which 449 failed no other check.
+Decision and origin. Session decision, taken on exploratory output. The rule was disabled, leaving only the
+absolute floor of 0.80 (config.MIN_SAMPLE_CALL_RATE, pre-specified). The reasoning: the MAD-flagged,
+otherwise-passing isolates had a median call rate of 0.956, which is not poor data in absolute terms, and Step
+4a applies an independent sample-missingness bound later in any case. A MAD rule is designed to find
+outliers in a dispersed distribution; applied to a tight one it becomes an arbitrary strict threshold.
+Effect. Retaining these isolates raised the QC-passing count from 1,566 to 2,017 and the final analysis set
+from 1,862 to 1,900.
+Page 20 of 60
+
+PAGE 21
+Honesty note. This threshold was chosen after seeing its effect on sample counts, not in advance. The justification
+above is a post-hoc rationalisation of a decision made during exploratory analysis. It is defensible, but it was not
+pre-registered, and a reviewer is entitled to ask whether the alternative was examined with equal care. Table 4.2
+records the alternatives that were quantified before the choice was made.
+Call-rate rule SNPs retained Isolates Guinea Forest Coastal Transitional
+(projected)
+MAD rule on, Fws ≥ 0.95 2,117 1,843 1,294 323 201 25
+MAD rule off, ≥ 0.80 (chosen) 3,416 1,878 1,323 326 204 25
+MAD rule off, ≥ 0.90 — — — — — —
+Table 4.2. Alternatives quantified before the call-rate decision, from a 300,000-SNP random panel projected genome-wide. Row
+3 was offered as an option but not quantified in the same projection, hence the blanks. Note that these projections were made
+under the DP-only mask; the first row is therefore not identical to the 1,566-isolate figure obtained under the original DP+GQ
+mask.
+4.2.4 Clonal pruning threshold (filter 9)
+Problem. Unlike F , the clonality threshold has no conventional value, and the data offer no clean break. The
+ws
+script's own histogram heuristic suggested 0.00005; the number of isolates removed rises smoothly with the
+threshold, with no trough to anchor on.
+Threshold Clonal pairs Groups Isolates in groups Isolates removed Largest group
+0.00002 57 49 102 53 3
+0.00005 (chosen) 85 68 145 77 3
+0.0001 103 82 174 92 4
+0.0002 133 104 222 118 4
+0.0003 159 118 255 137 4
+0.0005 261 164 370 206 7
+0.0007 523 229 591 362 30
+Table 4.3. Sensitivity of clonal pruning to the distance threshold, computed on the cached 4,905 × 4,905 Ghanaian distance
+submatrix. The median pairwise distance between Ghanaian isolates is 0.00112, so even the loosest threshold shown is well
+inside the left tail. Recorded here from a direct sensitivity run; the corresponding script is not part of the pipeline.
+Decision and origin. Session decision. 0.00005 was chosen: isolates within about 4 per cent of the typical
+pairwise distance, which is a defensible reading of "essentially the same genome". The largest connected
+component at this threshold contains 3 isolates, so single-linkage chaining — the real danger of this method,
+where a sequence of moderately similar isolates merges into one large component — is not occurring. At
+0.0007 the largest component reaches 30 isolates and chaining is clearly setting in.
+Effect. 77 isolates removed, 1.6 per cent of the pre-QC set. Because the effect is small and the method is well
+behaved at this threshold, sensitivity to the exact value is unlikely to be material — but this has not been
+verified by re-running downstream analyses.
+4.2.5 Genotype quality mask (filter 10)
+Problem. The pipeline default masked calls below DP 5 or GQ 20. Under that default the final matrix held
+2,143 SNPs. Removing the GQ component raised it to 3,359.
+Page 21 of 60
+
+PAGE 22
+Evidence gathered before deciding. A 40,000-SNP diagnostic panel showed that 12.6 per cent of
+homozygous-reference and 12.4 per cent of homozygous-alternate calls fall below GQ 20, with median
+depths of 46 and 40 respectively — that is, the GQ < 20 population is not a low-depth population. Restricted
+to calls with DP ≥ 10, only 3.0 per cent of homozygous-reference and 0.7 per cent of homozygous-alternate
+calls still fail GQ 20. Applying the GQ rule halved the number of common SNPs surviving the missingness bar
+(from 51.0 per cent of panel SNPs under DP-only masking to... in fact missingness ≤ 10 per cent fell from 74.3
+per cent of SNPs under DP-only to 51.0 per cent under DP+GQ), while mean alternate-allele frequency at
+common SNPs moved only from 0.282 to 0.294.
+Decision and origin. Session decision, taken on that evidence and confirmed with the user.
+config.MIN_GENOTYPE_GQ was set to 0, retaining DP ≥ 5. The reasoning: the GQ rule was removing a large
+number of common SNPs at substantial cost to statistical power, while barely changing allele frequencies —
+that is, it was costing precision without buying accuracy.
+[Interpreted] The likely explanation is that GQ is a Phred-scaled confidence in the called genotype relative to
+alternatives; in a haploid organism forced into a diploid calling model, intermediate GQ values can arise from
+the model's own ambiguity rather than from poor data. This interpretation is consistent with the depth
+evidence but was not independently verified.
+4.2.6 MAF ≥ 5 per cent (filter 14)
+Origin. Pre-specified in the thesis workflow ("MAF > 5%") and not altered.
+Effect — the most consequential number in the analysis. 1,634,808 SNPs pass the missingness filter; 3,359
+pass MAF. This is a reduction of 99.79 per cent.
+[Observed] The diagnostic panel establishes that this is a property of the organism and the population, not of
+the pipeline: with no genotype masking whatsoever, only about 4,832 SNPs genome-wide reach MAF ≥ 5 per
+cent with missingness ≤ 10 per cent, and about 5,529 reach MAF ≥ 5 per cent ignoring missingness entirely.
+The ceiling is therefore roughly 5,500 SNPs, and the analysis retains 3,359 of them.
+[Interpreted] P. falciparum carries an extremely large number of rare variants and comparatively few common
+ones within a single country. A 5 per cent MAF filter in this setting is far more aggressive than the same
+nominal threshold would be in, say, a human cohort. Every downstream analysis — F , ADMIXTURE, TreeMix,
+ST
+BayPass — operates on these 3,359 sites, and the BayPass scan in particular has limited power at this density.
+[Proposed] Repeat the main analyses at MAF ≥ 1 per cent (projected roughly 8,500–12,400 SNPs) as a
+sensitivity check. This departs from the thesis specification and so should be reported as a robustness
+analysis rather than as the primary result, but the gain in power for the outlier scan could be substantial.
+4.3 Selection bias summary
+Three biases are introduced or amplified by the filtering, in decreasing order of concern.
+11. Transmission-intensity bias (from the Fws filter). The retained sample under-represents high-
+transmission settings, and does so unevenly across zones. This is the bias most likely to affect between-
+zone comparisons.
+12. Regional bias (from the Pf8 QC flag and from the sampling frame itself). Upper East dominates every
+stage. No filter corrects this and none was intended to.
+Page 22 of 60
+
+PAGE 23
+13. Allele-frequency bias (from the MAF filter). The analysis sees only the common end of the frequency
+spectrum. Rare variants, which is where most recent selection signal would sit, are invisible to it.
+[Interpreted] None of these is an error. Each follows from a defensible choice. But together they mean the final
+1,900-isolate, 3,359-SNP dataset is a particular view of Ghanaian P. falciparum — monoclonal infections,
+common variants, Upper East–heavy — and conclusions should be stated as applying to that view.
+Page 23 of 60
+
+PAGE 24
+5. Analytical decisions and iterations
+This section reconstructs the decisions taken during the analysis. Where a decision was put to the user and
+answered, that is stated. Where the rationale is reconstructed after the fact, it is labelled as such.
+5.1 Replacing the VCF route with direct Zarr retrieval
+Problem. The project had 14 per-chromosome VCFs in data/, produced by data/extract_ghana.sh, which
+streamed each Pf8 chromosome VCF from Sanger through bcftools view with a Ghana sample list. Thirteen of
+the fourteen were truncated. Inspection of the BGZF end-of-file marker and decoding of the last record in
+each file showed coverage from 9 per cent (chromosome 12) to 53 per cent (chromosome 9); only
+chromosome 10 was complete.
+Cause. bcftools aborted with "[E::bcf_calc_ac] Incorrect AN/AC counts" while recomputing allele counts for
+the sample subset. Each truncation point matches its recorded error position exactly — chromosome 12
+failed at position 200,583 and its last record is at 200,581. The extraction script echoed "Finished" regardless
+of the exit status, so the failures went unnoticed. The errors are preserved in data/extract_ghana.log and
+data/chr05_extract.log; the consequent end-of-file warnings are in data/index_tbi.log.
+Constraint. The one complete VCF, chromosome 10, is 34.7 GB for 1.69 Mb of sequence. At that rate the full
+23.3 Mb genome would require approximately 480 GB, against 352 GB free on the data volume. A simple re-
+download was therefore not possible.
+Options put to the user.
+Option Transfer Local disk Time Script changes
+A. Pf8 Zarr store, Ghana samples and PASS ~300 GB ~25–40 GB ~3–4 h One new script
+biallelic SNPs only (chosen)
+B. Resume the VCFs with bcftools -I, slimmed to ~1.6 TB moderate 1–2 days None, plus slow
+needed fields VCF→Zarr conversion
+C. Re-download all VCFs from scratch, slimmed ~2.2 TB moderate longest None
+Table 5.1. Genotype-retrieval options presented. Estimates for A derive from a direct probe of the Zarr store's chunk grid; B and
+C are extrapolated from the observed chromosome-10 download.
+Decision. Option A, chosen by the user. A fourth implicit option — the project's own
+step04a_prepare_callset_malariagen.py, which pulls from Google Cloud via the malariagen_data package —
+was not pursued because it would have required changes to run_all.sh and because Step 3b reads the local
+store directly.
+Consequence and verification. The new script produced a 20.57 GB store verified exactly against three VCF
+windows (Section 3.5). On that evidence, and with the user's approval, the 13 truncated VCFs and their
+indexes were deleted, freeing about 125 GB; the complete chromosome-10 VCF was retained as a verification
+reference.
+[Interpreted] Beyond solving the immediate problem, this route is strictly better for the analysis: it removes
+the AC/AN recomputation that caused the failure, it carries the RegionType annotation that makes the
+missing core-genome BED unnecessary, and it is reproducible from a public URL rather than from a 160 GB
+local artefact.
+Page 24 of 60
+
+PAGE 25
+5.2 Adding t-SNE and PCoA alongside UMAP
+Problem and decision. The thesis workflow specifies UMAP. The user asked for alternative ordinations so
+that the three could be compared. Both were added to Stage 3, reading the same distance matrix, with a
+quantitative comparison table.
+Why it mattered more than expected. UMAP and t-SNE are non-linear and their inter-cluster distances carry
+no quantitative meaning, a caveat the original script already printed. PCoA is linear, so its axes are
+interpretable and carry explicit variance proportions. With structure as weak as it is here, the PCoA result —
+1.3 per cent of variation on the first two axes — is considerably more informative than any visual impression
+of the UMAP plot, and would not have been available from the specified workflow alone.
+5.3 Ploidy: how to count alleles in a haploid parasite coded as diploid
+Problem. Blood-stage P. falciparum is haploid, but Pf8 records genotypes in diploid form: 0/0 or 1/1 for a
+clonal call, 0/1 where reads support both alleles (a mixed infection). The supplied step04b_fst.py called scikit-
+allel's count_alleles on the diploid array, which counts two gene copies per isolate. The same cached counts
+feed TreeMix and BayPass.
+Why this is a defect, not a convention. Hudson's F carries a sample-size correction; TreeMix derives drift
+ST
+standard errors from counts; BayPass's XtX is standardised by them. Doubling every sample size makes all
+three anticonservative — narrower intervals, more apparently significant edges, more apparent outliers —
+without changing the point estimates much.
+Options put to the user.
+• Haploid, mixed calls to missing — use the pipeline's existing --het-to-missing switch, then count one
+allele per isolate. Simplest; discards the mixed calls entirely.
+• Haploid, mixed calls to the majority allele (chosen) — assign the allele with more reads, ties to missing,
+then count one allele per isolate. Retains the information in the read depths.
+• Leave as written — point estimates barely move, but uncertainty stays understated throughout.
+Implementation and verification. A function resolve_mixed_calls was added to step04a_prepare_callset.py,
+reading AD a block at a time only for SNPs where some retained isolate carries a mixed call. A companion
+isolate_allele_counts was added to callset_io.py; it takes the first gene copy once mixed calls are resolved,
+and falls back to diploid counting with an explicit warning if any mixed call remains. Both were verified
+against a hand-computed synthetic case (3 SNPs × 4 isolates, including a tie and a missing genotype) before
+being applied to real data.
+[Observed] On the real dataset, 194,167 mixed calls were resolved: 129,665 to reference, 55,582 to alternate,
+and 8,920 tied and set to missing. The residual heterozygous call rate printed by Step 4a is 0.0000 to four
+decimal places, consistent with the F filter having already removed most mixed infections.
+ws
+[Interpreted] The asymmetry — 2.3 reference calls for every alternate call — is expected, since at a site where
+most isolates carry the reference allele, a mixed infection is more likely to be reference-dominant. It is not
+evidence of a reference bias in the resolution rule itself, though that possibility has not been formally
+excluded.
+5.4 Sample QC thresholds
+Page 25 of 60
+
+PAGE 26
+Three thresholds were put to the user after the first QC run, each accompanied by the counts each option
+would produce. The call-rate and clonality decisions are discussed in Sections 4.2.3 and 4.2.4. The Fws
+threshold was retained at the conventional 0.95 (options at 0.90 and 0.80 were offered and declined).
+[Interpreted] Presenting the sample counts alongside each option made the trade-off explicit, but it also means
+these thresholds were selected with knowledge of their effect on sample size. That is standard exploratory
+practice and is reported here rather than concealed.
+5.5 TreeMix jackknife block size
+Problem. The supplied configuration used 500 SNPs per jackknife block. With 3,359 SNPs that yields 6 or 7
+blocks, far too few for stable standard errors, which in turn makes the migration-edge tests unreliable.
+Decision. Reduced to 50 SNPs, giving approximately 67 blocks. With retained SNPs averaging roughly 7 kb
+apart, a 50-SNP block spans about 350 kb, which comfortably exceeds the scale over which linkage
+disequilibrium persists in P. falciparum. The block therefore remains large enough to absorb linkage while
+being small enough to give a usable number of replicates. A 100-SNP alternative (about 34 blocks) was
+offered and declined.
+5.6 BayPass calibration
+Problems found. Three, in the supplied step08b_baypass.sh.
+14. The pseudo-observed data simulation passed the .geno matrix directly as sample.size. That file
+interleaves reference and alternate counts, giving 2 × npop columns, whereas simulate.baypass requires
+npop columns of total haploid sample size per SNP. The call would have failed, and the script would have
+fallen through to an empirical quantile.
+15. Only 1,000 pseudo-observed SNPs were simulated. The threshold is the 0.999 quantile of their XtX,
+so it would have rested on a single simulated value.
+16. The simulation applied no minor-allele-frequency filter, while the observed SNPs had been filtered at
+MAF ≥ 5 per cent. The resulting neutral distribution was not comparable to the observed one: 17.0 per
+cent of simulated sites had overall allele frequency below 0.05, against 0.5 per cent of observed sites.
+Corrections. Reference and alternate columns are now summed to total counts; the simulation uses 100,000
+SNPs; and pi.maf is set to 0.05 to match the observed filter. A stale G.pod file is removed before each run,
+and an R failure now falls through to the documented empirical fallback instead of aborting the stage.
+[Observed] The correction moved the threshold materially: from 8.375 with 1,000 unfiltered simulated SNPs
+(40 outliers, 1.19 per cent of the scan) to 11.232 with 100,000 MAF-matched ones (15 outliers, 0.45 per cent).
+The reported results use the corrected calibration.
+[Interpreted] The direction is as expected: an unfiltered simulation contains rare sites whose XtX is low, which
+depresses the upper quantile and admits too many outliers. The 25 SNPs that fall between the two
+thresholds should be regarded as having failed calibration, not as marginal.
+5.7 Defects found and corrected in the supplied pipeline
+Page 26 of 60
+
+PAGE 27
+A systematic review of the unexecuted stages was carried out before they ran. Table 5.2 lists what was found
+and what was done. Each correction was verified either against the code path in question or, where practical,
+by execution.
+Defect Severity Correction Verification
+config.TREEMIX_ROOT was "Guinea_Savanna" Would abort Corrected to "Guinea_savanna"; Stage 7 ran to completion
+but slugify_zone produces "Guinea_savanna"; the run step07b now derives its default
+step07b would have exited 1 at its header from config rather than keeping its
+check, aborting stages 7–9 under set -e own copy
+step07c model-selection rule was Wrong result, Replaced with the documented Produced m = 2 (range 0–
+gains.fillna(1).idxmax(), which always returns m silently rule: smallest m reaching 0.998 2) and m = 3 (range 0–5),
+= 0 because the first difference is NaN and the variance explained, else the consistent with the fitted
+fill value exceeds any real gain smallest m within 0.001 of the values in Table 6.6
+range's best (a plateau rule). A
+maximum-likelihood fallback was
+rejected because likelihood is
+monotone in m and would always
+select the largest m tried
+step07c variance explained was computed over Wrong result Restricted to the upper triangle Definition recorded in
+the full covariance matrix including the results/treemix/model_sel
+diagonal; TreeMix's own get_f uses off- ection.json
+diagonal entries only, and the 0.998
+convention assumes that definition
+Allele counts doubled by diploid coding Anticonservati isolate_allele_counts in Synthetic unit test
+(Section 5.3) ve throughout callset_io.py
+Zone-level Mantel test used polygon centroids, Wrong Zones are now placed at the Printed zone coordinates
+which lie where no isolate was sampled geography sample-weighted mean of their in logs/stage6.log
+isolates' coordinates, matching the
+region-level logic
+BayPass POD simulation (Section 5.6) Calibration Three corrections as described Threshold recomputed; 15
+failure outliers
+pfcoronin recorded as PF3D7_1362500 and Silent false Corrected to PF3D7_1251200 and Confirmed against the
+pfap2mu as PF3D7_1451200 negatives PF3D7_1218300 PlasmoDB-71 GFF: the
+original identifiers
+annotate a 3′–5′
+exonuclease and a
+conserved protein of
+unknown function
+respectively
+PLINK export wrote contig names Possible Contigs mapped to integers 1–14, ADMIXTURE ran for all K
+(Pf3D7_01_v3) as chromosome codes; failure with a mapping file written
+ADMIXTURE requires integer codes alongside; SNP identifiers retain
+the real contig names
+PLINK invoked with no --threads or --memory, Resource Capped at 4 threads and 16 GB Observed during the run
+so it would claim every core and reserve half of hazard
+system RAM
+A failing zone-level Mantel test would abort Fragility Non-fatal, with a printed message Not triggered; the test
+the pipeline before TreeMix and BayPass succeeded
+Table 5.2. Defects identified in the supplied pipeline and the corrections applied. The original scripts remain unmodified in
+pf8_ghana_pipeline.zip in the project root.
+Scope of the review. [Interpreted] This review covered the stages that had not yet run. It was not an exhaustive
+audit, and the two defects that would have produced silently wrong rather than obviously broken output — the
+Page 27 of 60
+
+PAGE 28
+doubled allele counts and the TreeMix selection rule — were found by reading code rather than by any test. Other
+defects of the same kind may remain.
+5.8 Decisions that may warrant reconsideration
+17. Disabling the call-rate MAD rule (Section 4.2.3) was chosen on sample-count grounds after seeing the
+effect. A stricter absolute floor of 0.90 was offered and not taken; the data to compare it properly were
+not generated.
+18. Retaining m = 3 as a candidate TreeMix model, when four populations support at most two
+identifiable migration edges, keeps a model in play that the data cannot really support. Both picks are
+reported deliberately, but the choice between them has not been made.
+19. The MAF ≥ 5 per cent filter is faithful to the thesis specification but costs roughly 99.8 per cent of the
+sites that survive missingness filtering, and this was not re-examined after the SNP count became
+known.
+20. Zone assignment for Brong Ahafo and Volta was never manually reviewed against the map, as Step 2
+recommended.
+Page 28 of 60
+
+PAGE 29
+6. Results
+All results below are from the run completed on 9 October 2026 (stages 4–9 in 41 minutes wall time; stages 1
+–3 earlier the same session). Every figure and table is traceable to a named output file. Unless stated
+otherwise, the analysis set is 3,359 SNPs across 1,900 isolates.
+6.1 The analysis dataset
+[Observed] The final genotype matrix is 3,359 SNPs × 1,900 isolates, with 2.08 per cent missing calls. SNP
+counts per chromosome range from 97 (chromosome 1) to 462 (chromosome 14) and scale roughly with
+chromosome length. Mean called isolates per SNP is 1,860.
+Zone Isolates Share Regions Median year
+Guinea savanna 1,334 70.2% Upper East 2017
+Deciduous forest 337 17.7% Ashanti, Central, Eastern, Volta 2015
+Coastal savanna 204 10.7% Greater Accra 2018
+Transitional zone 25 1.3% Brong Ahafo 2012
+Total 1,900 100% 7 regions 2017
+Table 6.1. Composition of the final analysis set (interim/analysis_samples.csv).
+6.2 Sample quality control
+[Observed] Of 4,905 isolates entering QC, 2,017 passed (41.1 per cent). Median call rate was 0.9962 (minimum
+0.7561); median heterozygous call rate 0.00036; median F 0.895 (range 0.310–1.000), with 2,095 isolates
+ws
+(42.7 per cent) monoclonal at F ≥ 0.95.
+ws
+Exclusion reason Isolates flagged Share of 4,905
+Fws < 0.95 (polyclonal) 2,810 57.3%
+Heterozygosity outlier (> median + 3 MAD) 126 2.6%
+Clonal redundancy (distance ≤ 0.00005) 77 1.6%
+Call rate < 0.80 20 0.4%
+Call-rate MAD outlier (rule disabled) 0 0.0%
+Passed all checks 2,017 41.1%
+Table 6.2. Quality-control outcomes. Categories overlap: an isolate may fail more than one check, so the flagged counts sum to
+more than 4,905 − 2,017. Source: results/sample_qc_full.csv.
+Page 29 of 60
+
+PAGE 30
+Figure 6.1. Sample quality control (n = 4,905). Left to right: genotype call rate with the 0.80 floor marked; heterozygous call rate
+against call rate, coloured by Fws; the Fws distribution with the 0.95 threshold marked; and the lower quartile of pairwise
+genotype distances with the clonal threshold at 0.00005. The Fws panel shows a clear mode above 0.95 with a long left
+shoulder, which is what makes 0.95 a defensible cut. The clonality panel shows no comparable break, which is why that
+threshold required a sensitivity analysis (Table 4.3). Generated by scripts/step03b_sample_qc.py.
+[Observed] The polyclonal fraction varies by zone: Guinea savanna 0.597 (2,153 of 3,605), deciduous forest
+0.539 (439 of 815), transitional zone 0.500 (25 of 50), coastal savanna 0.444 (193 of 435).
+[Interpreted] The ordering is consistent with a north–south transmission-intensity gradient: higher
+transmission produces more superinfection and so more mixed infections. This is arguably the clearest
+ecological signal in the entire analysis — and it is an epidemiological signal, not a population-genetic one. It is
+also, as Section 4.2.2 notes, the mechanism by which the F filter biases the retained sample unevenly across
+ws
+zones.
+6.3 Ordination of the genotype distance matrix
+Stage 3 operates on the 4,905 × 4,905 Ghanaian block of the Pf8 mean genotype distance matrix — that is, on
+the pre-QC set, before the Fws and clonality filters. This should be borne in mind when comparing these
+results with the rest of the analysis.
+[Observed] Pairwise genotype distances are tightly concentrated: median 0.00112, with the 1st and 99th
+percentiles at 0.00090 and 0.00129, a coefficient of variation of 0.085, and no missing entries. Mean within-
+zone distance barely differs from mean between-zone distance for any zone (Guinea savanna 0.00111 vs
+0.00112; deciduous forest 0.00114 vs 0.00112; coastal savanna 0.00108 vs 0.00110; transitional zone 0.00125
+vs 0.00117).
+Figure 6.2. UMAP, t-SNE and PCoA of the same 4,905 × 4,905 Ghanaian distance matrix, coloured by agro-ecological zone. Point
+counts per zone are in the legend. PCoA axes carry their variance proportions; UMAP and t-SNE axes are in arbitrary units and
+inter-cluster distances in those two panels carry no quantitative meaning. Generated by scripts/step03_umap.py as
+figures/dimred_comparison_zone.png.
+Method Trustworthiness Distance Spearman ρ Silhouette by zone
+Original distance matrix — 1.000 (by definition) −0.016
+UMAP 0.486 0.029 −0.306
+t-SNE 0.507 0.115 −0.057
+PCoA 0.495 0.322 −0.112
+Page 30 of 60
+
+PAGE 31
+Table 6.3. Quantitative comparison of the three ordinations (results/dimred_comparison.csv). Trustworthiness is computed with
+k = 30 neighbours; the Spearman correlation uses a 2,000-isolate random subset; silhouette is computed against zone labels,
+where values near zero indicate overlapping groups and negative values indicate that isolates sit closer to other zones than to
+their own.
+[Observed] PCoA's first two axes explain 0.71 and 0.59 per cent of positive-eigenvalue variation respectively,
+1.29 per cent together. The eigendecomposition returned 1,347 negative eigenvalues summing to −0.000587
+against a positive sum of 0.00365, indicating the distance is not perfectly Euclidean; proportions are reported
+relative to the positive eigenvalues, the usual convention.
+[Interpreted] Three readings follow. First, the silhouette on the original matrix is −0.016, essentially zero: zone
+labels do not describe the genetic variation, and no embedding could make them do so. Second, PCoA
+preserves global structure best (ρ = 0.322 against 0.115 and 0.029), which is expected of a linear method and
+makes it the most trustworthy of the three for reading overall structure here. Third, trustworthiness near 0.5
+for all three methods is not a failure of the methods: when distances are as uniform as these,
+neighbourhoods are nearly arbitrary and no two-dimensional projection can preserve them. The tight clumps
+visible in the UMAP panel are groups of near-identical isolates — the same ones the clonality filter targets —
+not zone-associated clusters.
+6.4 Pairwise differentiation between zones
+Figure 6.3. Pairwise Hudson FST between agro-ecological zones (3,359 SNPs, 1,900 isolates). Note the colour-bar scale: the
+maximum value is 0.0024. Generated by scripts/step04b_fst.py as figures/fst_heatmap.png.
+Zone A Zone B n(A) n(B) FST Jackknife SE 95% CI
+Coastal savanna Guinea savanna 204 1,334 0.00238 0.00050 0.00140 – 0.00336
+Deciduous forest Guinea savanna 337 1,334 0.00135 0.00025 0.00085 – 0.00184
+Coastal savanna Transitional zone 204 25 0.00124 0.00082 −0.00036 – 0.00285
+Page 31 of 60
+
+PAGE 32
+Zone A Zone B n(A) n(B) FST Jackknife SE 95% CI
+Deciduous forest Transitional zone 337 25 0.00122 0.00084 −0.00042 – 0.00286
+Coastal savanna Deciduous forest 204 337 0.00047 0.00013 0.00020 – 0.00073
+Guinea savanna Transitional zone 1,334 25 0.00035 0.00074 −0.00111 – 0.00180
+Table 6.4. Pairwise Hudson FST, ordered by magnitude (results/fst_pairwise.csv). Standard errors are from a block jackknife. The
+three pairs involving the transitional zone (n = 25) have confidence intervals spanning zero.
+[Observed] All six values lie below 0.0024. The three largest-sample comparisons are distinguishable from zero;
+the three involving the transitional zone are not. The ordering is nonetheless coherent: the two
+geographically extreme zones (coastal and Guinea savanna, 557 km apart) are the most differentiated, and
+the two adjacent southern zones (coastal and deciduous forest, 145 km apart) the least.
+[Interpreted] An F of 0.0024 means roughly 0.24 per cent of genetic variation is attributable to zone
+ST
+membership. For comparison, published within-country F for P. falciparum routinely falls below 0.05, and
+ST
+continental-scale African subpopulation structure is itself modest (Amambua-Ngwa et al., 2019). The
+Ghanaian values sit an order of magnitude below even that within-country expectation. The practical reading
+is that these zones are not demographically separate populations; they are one population sampled in four
+places. The ranking of pairs is informative — and it is consistent with distance — but no threshold of
+biological significance is crossed.
+Statistical versus practical significance. [Interpreted] Three pairs are statistically distinguishable from zero, which
+with 1,900 isolates and 3,359 SNPs is a low bar. None is practically significant in the sense of implying restricted
+gene flow. A resistance allele arising in Accra would be expected to reach Bolgatanga; the question these data
+cannot answer is how quickly.
+6.5 Isolation by distance
+[Observed] At region level (7 populations, 21 pairs, distances 87–578 km) the Mantel correlation is r = 0.400
+with p = 0.029 against 999 permutations. At zone level (4 populations, 6 pairs, distances 145–557 km) it is r =
+0.578 with p = 0.090.
+Page 32 of 60
+
+PAGE 33
+Figure 6.4. Isolation by distance at administrative-region level: linearised differentiation FST/(1 − FST) against log great-circle
+distance, 21 region pairs, with the least-squares line. Mantel r = 0.400, p = 0.029 (999 permutations, one-sided). Generated by
+scripts/step06_mantel.py as figures/mantel_ibd_region.png.
+Why the smaller correlation is the stronger result. The zone-level test has the larger correlation but the
+larger p-value, which is a power effect, not a contradiction. With four populations only 4! = 24 distinct
+orderings exist, so the finest attainable p-value is 0.042 and significance requires essentially the single best
+permutation. With seven regions there are 5,040 orderings and the test can resolve p down to 0.001. The
+region-level test is therefore the one to rely on, and it supports isolation by distance.
+[Interpreted] Taken with Section 6.4, the picture is of a continuously distributed population in which
+geographic distance has a weak but detectable effect on differentiation — the classic isolation-by-distance
+signature — rather than of discrete populations separated by barriers. Note that this says nothing about
+ecological zones as such: distance alone accounts for the pattern, and nothing in these data requires an
+ecological explanation.
+Caveat on the region-level test. [Interpreted] The region-level FST values are computed from the same 3,359 SNPs
+but with populations defined by administrative region. Volta contributes 21 isolates and Brong Ahafo 25, so several
+of the 21 pairs rest on small samples; five pairs in Figure 6.4 sit at or very near zero differentiation. The scatter is
+wide and the fitted relationship is driven substantially by the Upper East comparisons at the right-hand side of the
+plot.
+6.6 Ancestry inference
+[Observed] After LD pruning, 2,923 of 3,359 SNPs remained. Cross-validation error was lowest at K = 2
+(0.83736) and rose monotonically thereafter; K = 1, run separately as a reference, gave 0.84199.
+K CV error Δ from K = 1 Interpretation
+1 0.84199 — No structure (reference)
+2 0.83736 −0.00463 Minimum
+3 0.83787 −0.00412
+4 0.83874 −0.00325
+5 0.84012 −0.00187
+6 0.84128 −0.00071
+7 0.84234 +0.00035 Worse than K = 1
+8 0.84316 +0.00117 Worse than K = 1
+Table 6.5. ADMIXTURE 10-fold cross-validation error, K = 1–8 (logs/admixture_K*.out). Lower is better. K = 1 was not part of the
+supplied sweep and was added so the improvement from admitting structure at all could be measured.
+Page 33 of 60
+
+PAGE 34
+Figure 6.5. ADMIXTURE cross-validation error against K. The curve is nearly flat and the total range across K = 1–8 is 0.0058,
+under 0.7 per cent of the error value. Generated by scripts/step05c_plot_admixture.py.
+[Observed] At K = 2, mean ancestry proportions by zone are: Guinea savanna 0.055 / 0.945, deciduous forest
+0.095 / 0.905, coastal savanna 0.088 / 0.912, transitional zone 0.042 / 0.958. At least one isolate is assigned
+entirely (1.000) to a single component.
+Page 34 of 60
+
+PAGE 35
+Figure 6.6. ADMIXTURE ancestry proportions, K = 2–8, with isolates ordered by zone (n = 1,900). Each vertical bar is one isolate.
+The absence of block structure aligned to the zone boundaries is the result: no K produces components that correspond to zones.
+Generated by scripts/step05c_plot_admixture.py.
+[Interpreted] K = 2 minimises cross-validation error, but the improvement over K = 1 is 0.5 per cent and the
+inferred components are nearly uniform across zones — the between-zone range in mean minor-component
+ancestry is 0.042 to 0.095. On the conventional reading, K = 2 is "best"; on any substantive reading, this is a
+population without ancestry structure that corresponds to geography. The minority component is present at
+similar low frequency everywhere. Whether it reflects a real but geographically diffuse ancestry gradient,
+residual polyclonality, or an artefact of fitting two components to an essentially unstructured sample cannot
+be determined from these results.
+6.7 Population graph and migration edges
+m Log likelihood Variance explained Identifiable with 4 populations
+0 89.7042 0.8760 Yes
+1 91.0222 0.9346 Yes
+2 91.4849 0.9633 Yes
+3 91.9126 0.9976 No
+Page 35 of 60
+
+PAGE 36
+m Log likelihood Variance explained Identifiable with 4 populations
+4 91.9302 0.9976 No
+5 91.9303 0.9976 No
+Table 6.6. TreeMix fit against number of migration edges (results/treemix/model_comparison.csv). Variance explained is
+computed over off-diagonal between-population covariances, matching TreeMix's own definition. All six models converged.
+Figure 6.7. TreeMix model fit against migration edges. Left: variance explained, with the 0.998 reference line dotted and the m ≤
+2 region shaded as the range four populations can identify. Right: log likelihood, which rises monotonically with m by
+construction and therefore cannot by itself select a model. Circles mark the selection within 0–2; diamonds mark the selection
+within 0–5. Generated by scripts/step07c_plot_treemix.py.
+[Observed] Fit improves steeply to m = 3 (variance explained 0.9976) and is flat thereafter; m = 4 and m = 5 are
+marginally worse on this measure despite higher likelihood. Applying the plateau rule gives m = 2 within the
+identifiable range and m = 3 across the full sweep.
+[Interpreted] A four-population graph has limited capacity to absorb migration edges, and three edges on four
+tips is close to saturation — the model can reproduce almost any covariance structure at that point, which is
+why the fit jumps to 0.9976 and then stops improving. The honest reading is that these data cannot identify
+specific gene-flow corridors. The improvement from m = 0 to m = 1 (0.876 to 0.935) is the one substantive
+result: a strictly bifurcating tree does not describe these populations, which is exactly what would be
+expected of a single population with ongoing exchange. Both candidate models are retained in
+results/treemix/model_selection.json for the final choice.
+6.8 Genome scan for differentiation outliers
+[Observed] Across 3,359 SNPs, XtX ranged from 2.41 to 26.48 with a median of 3.43. The calibration simulated
+100,000 pseudo-observed SNPs under the estimated covariance matrix with the same MAF filter as the
+observed data, giving a 0.999-quantile threshold of 11.232. Fifteen SNPs (0.45 per cent) exceed it.
+Page 36 of 60
+
+PAGE 37
+Figure 6.8. BayPass XtX genome scan. Left: the observed XtX distribution (blue) against the simulated neutral distribution (red),
+with the calibrated threshold at 11.23. Right: XtX by genomic position, alternating shading by chromosome, with the threshold
+marked. Generated by scripts/step08c_calibrate_xtx.py as figures/baypass_xtx.png.
+Reading the left panel. The observed and simulated distributions overlap closely through the body of the
+distribution, which indicates the demographic model is capturing the bulk of the data adequately. The
+observed distribution has a slightly heavier right tail, and it is that excess — not the main mass — that the
+outliers come from.
+Gene Identifier Product Outlier SNPs Max XtX
+PTP7 PF3D7_0301700 EMP1 trafficking protein PTP7 1 26.48
+AAT1 PF3D7_0629500 Amino acid transporter AAT1 2 24.44
+NT2 PF3D7_0824400 Nucleoside transporter 2 1 21.97
+FIKK4.2 PF3D7_0424700 Serine/threonine protein kinase, FIKK family 1 21.52
+PIESP2 PF3D7_0501200 Parasite-infected erythrocyte surface protein 1 18.02
+SNRPF PF3D7_1126900 Small nuclear ribonucleoprotein F, putative 1 14.01
+GEXP22 PF3D7_0935500 Exported protein, unknown function 1 12.31
+— PF3D7_0215100 RING zinc finger protein, putative 1 12.18
+— PF3D7_0824200 Conserved protein, unknown function 1 12.07
+— PF3D7_0831400 Exported protein, unknown function 2 12.04
+ACS8 PF3D7_0215300 Acyl-CoA synthetase 1 11.90
+Table 6.7. Genes intersecting XtX outlier SNPs, ordered by maximum XtX (results/outlier_genes.csv). Thirteen SNP–gene overlaps
+across 11 genes; two of the 15 outlier SNPs fall outside annotated protein-coding genes. Annotation from PlasmoDB-71 via
+bedtools.
+[Observed] None of the eight validated antimalarial resistance loci in the configured panel — pfcrt, pfmdr1,
+pfdhfr, pfdhps, pfk13, pfmdr2, pfcoronin, pfap2mu — appears among the outliers, and no outlier falls in a
+recognised antigenic-variation or invasion gene family.
+[Interpreted] Three observations about this list. First, AAT1 is the one entry with a direct and recent literature
+connection: Amambua-Ngwa et al. (2023) identified this putative amino-acid transporter as a mediator of
+chloroquine-resistance evolution, and it carries two outlier SNPs here with a maximum XtX of 24.44. That
+makes it the strongest candidate in the set and the obvious first target for follow-up. Second, several of the
+remaining genes — PTP7, PIESP2, FIKK4.2 and two exported proteins — belong to the exported and host-
+Page 37 of 60
+
+PAGE 38
+interaction compartment of the genome, which is where immune-mediated selection would be expected to
+act. Third, the absence of the validated resistance loci is genuinely ambiguous: it is consistent with those loci
+being under similar pressure everywhere in Ghana (and therefore showing no between-zone differentiation,
+which is what XtX measures), and equally consistent with the scan lacking power at 3,359 SNPs and four
+populations. These data cannot distinguish the two.
+What XtX does and does not detect. [Interpreted] XtX measures differentiation among populations beyond what
+the estimated covariance structure predicts. A locus under strong but spatially uniform selection — which is what a
+nationally deployed drug produces — generates no XtX signal at all. The absence of pfcrt and pfk13 from this list is
+therefore not evidence that they are not under selection in Ghana; it is, if anything, weakly consistent with their
+being under uniform selection. Testing that requires a different analysis (Section 8.2).
+Page 38 of 60
+
+PAGE 39
+7. Interpretation and discussion
+7.1 What the analysis establishes
+Five independent lines of evidence converge on the same conclusion.
+Analysis Result Reading
+Pairwise FST Maximum 0.0024 Zones share essentially all their genetic
+variation
+Ordination (3 Silhouette by zone −0.016 on the raw distance Zone labels do not describe the variation
+methods) matrix; PCoA PC1+PC2 = 1.3%
+ADMIXTURE K = 2 minimises CV but improves on K = 1 by 0.5%; No ancestry structure aligned to geography
+components near-uniform across zones
+TreeMix Bifurcating tree explains 87.6%; one edge raises it Exchange between groups, not a branching
+to 93.5% history
+Mantel Region level r = 0.400, p = 0.029 A weak but real distance effect
+Table 7.1. Convergent evidence on population structure.
+[Interpreted] Ghanaian P. falciparum behaves as a single, largely panmictic population with a weak isolation-
+by-distance gradient. This is a substantive answer to the thesis's first objective, and a negative one for the
+strong form of its hypothesis: the ecological zones are not acting as demographic barriers at a scale these
+data can detect.
+[Interpreted] This is not a surprising result, and that is a point in its favour. Ghana is approximately 670 km
+north to south, human mobility along the north–south corridor is substantial, P. falciparum undergoes
+obligate sexual recombination in the mosquito, and transmission across most of the country is high. All four
+favour genetic homogenisation. The finding is consistent with the continental picture, in which West African
+parasite populations form a single major subpopulation (Amambua-Ngwa et al., 2019), and with the
+observation that differentiation within West African countries is weak relative to the differentiation between
+endemicity strata that Mobegi et al. (2014) reported between The Gambia and Guinea.
+7.2 What the analysis cannot establish, and why
+Zone effects cannot be separated from region effects. Three of four zones are each filled by exactly one
+administrative region (Table 2.2). For those three, "zone" and "region" are the same variable. Any difference
+attributed to ecology could equally be attributed to the region — its health system, its drug supply, its
+sampling protocol, its collection year. No statistical adjustment can separate variables that are collinear by
+construction.
+Spatial effects cannot be separated from temporal ones. Median collection year differs by six years across
+zones (Table 2.3), and for the transitional zone and coastal savanna the year ranges barely overlap. Over 2009
+–2021 Ghana changed first-line therapy and scaled up chemoprevention, so drug-related allele frequencies
+would be expected to shift with time regardless of geography.
+Barrier hypotheses cannot be tested as such. Testing whether a specific feature (the forest–savanna
+transition, the Volta Lake system) impedes parasite dispersal requires differentiation to be measurable across
+the feature and compared against differentiation at the same distance elsewhere. With four populations, six
+pairwise comparisons and F values under 0.0024, there is no resolution to work with.
+ST
+Page 39 of 60
+
+PAGE 40
+The outlier list is a candidate list, not a finding. Fifteen SNPs is a small set from a small scan. No multiple-
+testing correction beyond the calibrated threshold has been applied, no replication is possible within these
+data, and nothing about an elevated XtX value establishes that a locus is under selection rather than drifting
+unusually or sitting near an assembly or alignment artefact.
+7.3 Unexpected observations
+The MAF ceiling. That the whole Ghanaian genome yields only about 5,500 common SNPs was not
+anticipated and materially constrains every downstream analysis. It is a property of P. falciparum population
+genomics within a single country — an abundance of rare variation, comparatively little common variation —
+rather than a defect. But it means that a study of this design has considerably less power than the sample size
+of 1,900 isolates would suggest.
+Polyclonality as the clearest ecological signal. The one variable that orders cleanly along the north–south
+gradient is the fraction of mixed infections (0.597 in Guinea savanna to 0.444 in coastal savanna). This is a
+transmission-intensity signal, and it is arguably more informative about ecology than anything in the
+population-genetic results.
+[Hypothesized] If polyclonality tracks transmission intensity and transmission intensity tracks ecological zone,
+then F is itself a candidate zone-level phenotype worth analysing in its own right rather than used only as a
+ws
+QC filter. That analysis has not been performed.
+Likelihood monotonicity in TreeMix. The log-likelihood rises with every added migration edge, which is
+expected but means likelihood cannot select a model. The supplied script's selection rule would not have
+caught this; the defect is documented in Table 5.2.
+7.4 Practical significance
+[Interpreted] For malaria control the operational implication of near-panmixia is clear and, in its way, useful. If
+Ghanaian parasites form one population, then a resistance allele established anywhere will spread nationally,
+and sentinel surveillance at a small number of sites is an adequate design for detecting emergence — the
+samples do not need to be spatially comprehensive to be representative. The corollary is less comfortable:
+containment of an emerging resistance focus by geographically targeted intervention is unlikely to work,
+because there is no barrier for an intervention to exploit.
+Caveat on that inference. The argument runs from an absence of detectable structure to an assertion of free
+gene flow. Low F is also consistent with recent common ancestry and with large effective population size
+ST
+holding drift down. Distinguishing "currently well connected" from "recently separated but not yet
+differentiated" requires demographic inference these analyses have not attempted.
+Page 40 of 60
+
+PAGE 41
+8. Robustness checks and alternative approaches
+8.1 Checks completed
+Check What it tested Outcome
+Genotype store validated Whether the Zarr retrieval PASS. Three independent windows on chromosomes 1,
+against VCFs reproduced the VCF route exactly 10 and 13; site lists identical and all four fields matching
+value for value across approximately 471 million
+compared values
+Ploidy handling unit-tested Whether mixed-call resolution and PASS. Synthetic 3 × 4 case including a tie and a missing
+haploid counting behave as specified call; also verified that the diploid fallback triggers with a
+warning
+FST invariance to a cosmetic Whether re-running step 4b after a PASS. MD5 of results/fst_matrix.csv unchanged
+change label change altered any value
+Clonal threshold sensitivity How the number of pruned isolates Quantified over seven thresholds (Table 4.3). No clean
+responds to the threshold break; single-linkage chaining begins only well above the
+chosen value
+Genotype-mask comparison Effect of the GQ rule on SNP count Quantified on a 40,000-SNP panel and a 300,000-SNP
+and allele frequency panel (Section 4.2.5). GQ rule removed many common
+SNPs while barely shifting frequencies
+ADMIXTURE K = 1 reference Whether admitting structure Run. CV error 0.84199 at K = 1 against 0.83736 at K = 2
+improves fit at all
+BayPass calibration corrected Whether the threshold was sensitive Yes, materially: 8.375 with 1,000 unfiltered simulated
+and re-run to POD size and MAF matching SNPs against 11.232 with 100,000 MAF-matched; 40
+outliers against 15
+TreeMix convergence across m Whether all six models fitted All six converged; none failed or was skipped
+Table 8.1. Robustness checks performed during this analysis.
+8.2 Checks proposed but not performed
+[Proposed] None of the following has been run. They are listed in order of expected value.
+21. Fws sensitivity. Re-run FST, ADMIXTURE and the outlier scan at Fws ≥ 0.90 and ≥ 0.80 (projected
+2,341 and 2,924 isolates). This is the single largest exclusion in the pipeline and the one with a
+documented zone-dependent bias; if conclusions are stable across these thresholds, the most serious
+filtering objection is answered.
+22. MAF sensitivity. Repeat the main analyses at MAF ≥ 1 per cent (projected 8,500–12,400 SNPs). This
+would roughly triple the sites available to the outlier scan. Report as a robustness analysis, since it
+departs from the thesis specification.
+23. Temporal control. Restrict to a single collection year or a narrow window, where sample sizes permit,
+and recompute FST. 2018 contributes 773 isolates across three zones and is the only year that could
+support this.
+24. Region-level ADMIXTURE and TreeMix. Running these with populations defined by administrative
+region rather than zone would at least show whether the choice of grouping affects the conclusions,
+even though it cannot resolve the underlying collinearity.
+Page 41 of 60
+
+PAGE 42
+25. Permutation test for the outlier set. Compare the functional composition of the 11 outlier genes
+against random gene sets matched for length and SNP density, to test whether the apparent enrichment
+for exported and host-interaction proteins exceeds chance.
+26. Re-run Stage 3 ordinations on the QC-passing set. Stage 3 currently operates on the 4,905 pre-QC
+isolates, so the published ordinations include the polyclonal and clonally redundant isolates that every
+later stage excludes. Re-running on the 1,900-isolate set would make the figures consistent with the rest
+of the analysis, and might sharpen the structure.
+27. Effective population size and divergence-time estimation, to distinguish ongoing gene flow from
+recent common ancestry (Section 7.4).
+28. Manual review of the Brong Ahafo and Volta zone assignments against the polygon layer, as Step 2
+recommends.
+Page 42 of 60
+
+PAGE 43
+9. Limitations and potential sources of bias
+9.1 Ranked by threat to the conclusions
+# Limitation Severity Effect on what can be concluded
+1 Zone and region are collinear for three of four Critical No result can be attributed to ecology rather than
+zones administrative region. This limits the thesis's central framing,
+not merely a detail of it.
+2 Geolocation only to administrative level 1 (7 Critical No sub-regional spatial analysis is possible. Isolation-by-
+distinct coordinates for 1,900 isolates) distance rests on 21 pairs derived from 7 points.
+3 Collection year strongly confounded with High Between-zone differences are also between-period
+zone differences; not separable by reweighting.
+4 Only ~5,500 SNPs genome-wide reach MAF ≥ High Limits power throughout, and the BayPass scan in particular.
+5%; 3,359 analysed
+5 Transitional zone n = 25 High All three FST comparisons involving it have confidence
+intervals spanning zero. It cannot support ADMIXTURE or
+TreeMix inference on its own.
+6 Fws filter removes 57% of isolates, unevenly Moderate The retained sample is not a random subsample, and the
+across zones departure differs by zone. Untested for effect on allele
+frequencies.
+7 Sampling dominated by Upper East (70% of Moderate The 'national' picture is substantially a Upper East picture.
+final set)
+8 Four of Ghana's zones represented; Sudan Moderate One end of the ecological gradient the study is designed
+savanna absent around is missing.
+9 Stage 3 ordinations computed on the pre-QC Low Figures 6.2 and the Table 6.3 metrics describe 4,905 isolates,
+set not the 1,900 analysed later.
+10 Four populations cannot identify more than Low Specific gene-flow corridors are not identifiable.
+~2 TreeMix migration edges Acknowledged in the output.
+Table 9.1. Limitations ranked by how much they constrain the conclusions.
+9.2 On the design limitation specifically
+[Interpreted] Limitations 1 and 2 are not analytical shortcomings that better methods would overcome. They
+are properties of the Pf8 metadata. No reanalysis of these data can produce a zone effect separable from a
+region effect, because for three of the four zones there is only one region in each. This should be stated
+plainly in any write-up rather than managed with hedging language, and it bears directly on how the thesis's
+objectives can be framed.
+[Proposed] If zone-level inference is essential to the thesis, the route is additional sampling with recorded
+collection coordinates — ideally within the Sudan savanna, and within regions that straddle a zone boundary,
+where zone and region could be decoupled. Whether that is feasible within the project is a question for the
+author.
+9.3 Reproducibility status
+What is reproducible. The analysis runs end to end from a public data source. All inputs except the zone
+polygon layer are retrievable from https://pf8-release.cog.sanger.ac.uk. Random seeds are fixed
+(config.RANDOM_SEED = 42; ADMIXTURE -s 42; TreeMix -seed 42; BayPass -seed 42). Stage 3a is resumable
+and verifies its own output. The stage sequence is reproduced by:
+Page 43 of 60
+
+PAGE 44
+bash scripts/run_all.sh --from 4 --parallel
+What is not. Three gaps. (i) The provenance of data/ghanaAEZ.geojson is undocumented, so the spatial join
+cannot be reproduced by a third party from public sources alone. (ii) The project is not under version control,
+so the exact script state at run time is not recoverable other than from the files currently on disk; the
+unmodified originals are in pf8_ghana_pipeline.zip. (iii) UMAP with a fixed random_state forces single-
+threaded execution and is deterministic, but t-SNE and the ADMIXTURE runs have not been verified to be
+bitwise reproducible across different thread counts.
+[Unknown] Whether the two numerically intensive stages (ADMIXTURE, BayPass) return identical results under
+a different thread count has not been tested.
+Page 44 of 60
+
+PAGE 45
+10. Conclusion and current state of the research
+10.1 What has been established
+29. Ghanaian P. falciparum shows very low differentiation between agro-ecological zones (maximum
+pairwise Hudson FST 0.0024, 95% CI 0.0014–0.0034). Five independent analyses agree. This is a well-
+supported result.
+30. Isolation by distance is detectable at administrative-region level (Mantel r = 0.400, p = 0.029) but not
+at zone level, where the permutation test lacks resolution. Moderately supported.
+31. No ancestry structure corresponds to geography. ADMIXTURE's preferred K = 2 improves on K = 1 by
+0.5 per cent of cross-validation error, with near-uniform components across zones. Well supported as a
+negative result.
+32. A strictly bifurcating population tree is inadequate; one migration edge raises variance explained
+from 0.876 to 0.935. Supported, though the specific edges are not identifiable with four populations.
+33. Fifteen SNPs in 11 genes exceed a calibrated differentiation threshold, headed by AAT1
+(PF3D7_0629500), a locus with an established connection to chloroquine-resistance evolution.
+Provisional — a candidate list requiring independent support.
+34. Mixed-infection frequency orders along the north–south gradient (0.597 in Guinea savanna to 0.444
+in coastal savanna). Observed as a by-product of quality control, not analysed as a result in its own right.
+10.2 Answers to the research questions
+Question (Section 1.3) Answer Confidence
+Is between-zone differentiation Yes for three of six pairs, but all values are below 0.0024 High
+distinguishable from zero? and none is practically significant.
+Does genetic distance increase with Yes at region level; not demonstrable at zone level. Moderate
+geographic distance?
+Do isolates assign to zone-associated No. High
+ancestry components?
+Is there gene flow beyond a bifurcating Yes, but specific corridors are not identifiable. Moderate
+tree?
+Which loci exceed neutral expectation? Fifteen SNPs in 11 genes; AAT1 is the strongest candidate. Low — provisional
+No validated resistance locus among them.
+Table 10.1. Research questions and the answers the current evidence supports.
+10.3 What remains unresolved
+• Whether any apparent zone effect survives control for administrative region and collection year — not
+resolvable with these data (Section 9.2).
+• Whether the conclusions are stable under alternative Fws and MAF thresholds — testable now, not yet
+tested (Section 8.2).
+• Whether the outlier set is enriched for any functional category beyond chance — testable now, not yet
+tested.
+Page 45 of 60
+
+PAGE 46
+• Whether the validated resistance loci are under spatially uniform selection, which would explain their
+absence from the outlier list — requires a different analysis (allele-frequency trajectories, haplotype-
+based statistics).
+• Whether low differentiation reflects ongoing gene flow or recent common ancestry — requires
+demographic inference not attempted here.
+10.4 Most valuable next steps
+35. Run the Fws and MAF sensitivity analyses (Section 8.2, items 1 and 2). These are inexpensive, use
+code already written, and address the two most likely reviewer objections.
+36. Reframe the thesis objectives in light of the collinearity. The question "do ecological zones structure
+the parasite population?" cannot be answered with Pf8 metadata alone. The question "is Ghanaian P.
+falciparum spatially structured at all, and what does that imply for surveillance design?" can be, and has
+been.
+37. Pursue the resistance-marker component through direct genotyping of the panel loci rather than
+through the differentiation scan. The marker-frequency questions the thesis poses are answerable from
+these data; they simply are not what XtX measures.
+38. Analyse Fws by zone and year as a transmission-intensity phenotype in its own right.
+39. Re-run Stage 3 on the QC-passing set so that the ordination figures describe the same isolates as the
+rest of the analysis.
+[Interpreted] A closing assessment. The analysis has done what a baseline characterisation should do: it has
+established the scale of structure, found it to be small, identified precisely which design features limit what
+can be inferred, and produced a short candidate list for follow-up. The most valuable output is arguably the
+negative result, because it tells the thesis which of its questions the available data can and cannot support —
+and it does so before, rather than after, the marker-level analysis is built on top of them.
+Page 46 of 60
+
+PAGE 47
+11. References
+APA 7th edition. Every entry was verified against publisher-deposited metadata (Crossref REST API) or, where
+no DOI exists, against NCBI PubMed or the publisher's own record. Verification status is noted in Appendix D.
+11.1 Data source
+Malaria Genomic Epidemiology Network (MalariaGEN). (2025). Pf8: An open dataset of Plasmodium
+falciparum genome variation in 33,325 worldwide samples. Wellcome Open Research, 10, 325.
+https://doi.org/10.12688/wellcomeopenres.24031.1
+Malaria Genomic Epidemiology Network (MalariaGEN). (2023). Pf7: An open dataset of Plasmodium
+falciparum genome variation in 20,000 worldwide samples. Wellcome Open Research, 8, 22.
+https://doi.org/10.12688/wellcomeopenres.18681.1
+Cited for: the dataset itself (Section 2.1). The Pf7 entry is included because the pipeline's documentation refers to Pf7
+conventions in places; the data analysed here are Pf8.
+11.2 Population-genetic methods
+Bhatia, G., Patterson, N., Sankararaman, S., & Price, A. L. (2013). Estimating and interpreting FST: The impact
+of rare variants. Genome Research, 23(9), 1514–1521. https://doi.org/10.1101/gr.154831.113
+Gautier, M. (2015). Genome-wide scan for adaptive divergence and association with population-specific
+covariates. Genetics, 201(4), 1555–1579. https://doi.org/10.1534/genetics.115.181453
+Günther, T., & Coop, G. (2013). Robust identification of local adaptation from allele frequencies. Genetics,
+195(1), 205–220. https://doi.org/10.1534/genetics.113.152462
+Hudson, R. R., Slatkin, M., & Maddison, W. P. (1992). Estimation of levels of gene flow from DNA sequence
+data. Genetics, 132(2), 583–589. https://doi.org/10.1093/genetics/132.2.583
+Mantel, N. (1967). The detection of disease clustering and a generalized regression approach. Cancer
+Research, 27(2), 209–220. https://pubmed.ncbi.nlm.nih.gov/6018555/
+Pickrell, J. K., & Pritchard, J. K. (2012). Inference of population splits and mixtures from genome-wide allele
+frequency data. PLoS Genetics, 8(11), Article e1002967. https://doi.org/10.1371/journal.pgen.1002967
+Rousset, F. (1997). Genetic differentiation and estimation of gene flow from F-statistics under isolation by
+distance. Genetics, 145(4), 1219–1228. https://doi.org/10.1093/genetics/145.4.1219
+Yeaman, S., & Whitlock, M. C. (2011). The genetic architecture of adaptation under migration–selection
+balance. Evolution, 65(7), 1897–1911. https://doi.org/10.1111/j.1558-5646.2011.01269.x
+Cited for: Hudson et al. (1992) and Bhatia et al. (2013) for the FST estimator and the ratio-of-averages summation (Section
+3.8); Rousset (1997) for the FST/(1 − FST) linearisation and Mantel (1967) for the permutation test (Section 3.9); Pickrell &
+Pritchard (2012) for TreeMix and its variance-explained definition (Sections 3.9, 6.7); Gautier (2015) for BayPass and
+Günther & Coop (2013) for the XtX statistic (Sections 3.9, 6.8); Yeaman & Whitlock (2011) for the migration–selection
+balance framing referenced in the discussion.
+11.3 Ancestry, ordination and clustering
+Alexander, D. H., & Lange, K. (2011). Enhancements to the ADMIXTURE algorithm for individual ancestry
+estimation. BMC Bioinformatics, 12, Article 246. https://doi.org/10.1186/1471-2105-12-246
+Page 47 of 60
+
+PAGE 48
+Alexander, D. H., Novembre, J., & Lange, K. (2009). Fast model-based estimation of ancestry in unrelated
+individuals. Genome Research, 19(9), 1655–1664. https://doi.org/10.1101/gr.094052.109
+Gower, J. C. (1966). Some distance properties of latent root and vector methods used in multivariate analysis.
+Biometrika, 53(3–4), 325–338. https://doi.org/10.1093/biomet/53.3-4.325
+McInnes, L., Healy, J., & Melville, J. (2018). UMAP: Uniform manifold approximation and projection for
+dimension reduction (Version 3) [Preprint]. arXiv. https://doi.org/10.48550/arXiv.1802.03426
+Rousseeuw, P. J. (1987). Silhouettes: A graphical aid to the interpretation and validation of cluster analysis.
+Journal of Computational and Applied Mathematics, 20, 53–65. https://doi.org/10.1016/0377-
+0427(87)90125-7
+van der Maaten, L., & Hinton, G. (2008). Visualizing data using t-SNE. Journal of Machine Learning Research,
+9(86), 2579–2605. https://www.jmlr.org/papers/v9/vandermaaten08a.html
+Venna, J., & Kaski, S. (2001). Neighborhood preservation in nonlinear projection methods: An experimental
+study. In G. Dorffner, H. Bischof, & K. Hornik (Eds.), Artificial neural networks — ICANN 2001 (Lecture
+Notes in Computer Science Vol. 2130, pp. 485–491). Springer. https://doi.org/10.1007/3-540-44668-
+0_68
+Cited for: Alexander et al. (2009) for ADMIXTURE and Alexander & Lange (2011) for its cross-validation procedure
+(Sections 3.9, 6.6); Gower (1966) for principal coordinates analysis, McInnes et al. (2018) for UMAP and van der Maaten &
+Hinton (2008) for t-SNE (Section 3.4); Venna & Kaski (2001) for trustworthiness and Rousseeuw (1987) for the silhouette
+coefficient (Section 3.4, Table 6.3).
+11.4 Malaria genomics and biology
+Amambua-Ngwa, A., Amenga-Etego, L., Kamau, E., Amato, R., Ghansah, A., Golassa, L., Randrianarivelojosia,
+M., Ishengoma, D., Apinjoh, T., Maïga-Ascofaré, O., Andagalu, B., Yavo, W., Bouyou-Akotet, M., Kolapo,
+O., Mane, K., Worwui, A., Jeffries, D., Simpson, V., D'Alessandro, U., … Djimde, A. A. (2019). Major
+subpopulations of Plasmodium falciparum in sub-Saharan Africa. Science, 365(6455), 813–816.
+https://doi.org/10.1126/science.aav5427
+Amambua-Ngwa, A., Button-Simons, K. A., Li, X., Kumar, S., Brenneman, K. V., Ferrari, M., Checkley, L. A.,
+Haile, M. T., Shoue, D. A., McDew-White, M., Tindall, S. M., Reyes, A., Delgado, E., Dalhoff, H.,
+Larbalestier, J. K., Amato, R., Pearson, R. D., Taylor, A. B., Nosten, F. H., … Anderson, T. J. C. (2023).
+Chloroquine resistance evolution in Plasmodium falciparum is mediated by the putative amino acid
+transporter AAT1. Nature Microbiology, 8(7), 1213–1226. https://doi.org/10.1038/s41564-023-01377-z
+Manske, M., Miotto, O., Campino, S., Auburn, S., Almagro-Garcia, J., Maslen, G., O'Brien, J., Djimde, A.,
+Doumbo, O., Zongo, I., Ouedraogo, J.-B., Michon, P., Mueller, I., Siba, P., Nzila, A., Borrmann, S., Kiara, S.
+M., Marsh, K., Jiang, H., … Kwiatkowski, D. P. (2012). Analysis of Plasmodium falciparum diversity in
+natural infections by deep sequencing. Nature, 487(7407), 375–379.
+https://doi.org/10.1038/nature11174
+Miles, A., Iqbal, Z., Vauterin, P., Pearson, R., Campino, S., Theron, M., Gould, K., Mead, D., Drury, E., O'Brien,
+J., Ruano Rubio, V., MacInnis, B., Mwangi, J., Samarakoon, U., Ranford-Cartwright, L., Ferdig, M., Hayton,
+K., Su, X.-z., Wellems, T., … Kwiatkowski, D. (2016). Indels, structural variation, and recombination drive
+genomic diversity in Plasmodium falciparum. Genome Research, 26(9), 1288–1299.
+https://doi.org/10.1101/gr.203711.115
+Page 48 of 60
+
+PAGE 49
+Mobegi, V. A., Duffy, C. W., Amambua-Ngwa, A., Loua, K. M., Laman, E., Nwakanma, D. C., MacInnis, B.,
+Aspeling-Jones, H., Murray, L., Clark, T. G., Kwiatkowski, D. P., & Conway, D. J. (2014). Genome-wide
+analysis of selection on the malaria parasite Plasmodium falciparum in West African populations of
+differing infection endemicity. Molecular Biology and Evolution, 31(6), 1490–1499.
+https://doi.org/10.1093/molbev/msu106
+Otto, T. D., Böhme, U., Sanders, M., Reid, A., Bruske, E. I., Duffy, C. W., Bull, P. C., Pearson, R. D., Abdi, A.,
+Dimonte, S., Stewart, L. B., Campino, S., Kekre, M., Hamilton, W. L., Claessens, A., Volkman, S. K., Ndiaye,
+D., Amambua-Ngwa, A., Diakite, M., … Newbold, C. I. (2018). Long read assemblies of geographically
+dispersed Plasmodium falciparum isolates reveal highly structured subtelomeres. Wellcome Open
+Research, 3, 52. https://doi.org/10.12688/wellcomeopenres.14571.1
+Cited for: Manske et al. (2012) for the Fws statistic and the 0.95 monoclonality convention (Sections 3.6, 4.2.2); Miles et al.
+(2016) and Otto et al. (2018) for the core-genome versus hypervariable subtelomere distinction underlying the RegionType
+annotation (Section 3.5); Amambua-Ngwa et al. (2019) and Mobegi et al. (2014) for the West African population-structure
+context (Sections 6.4, 7.1); Amambua-Ngwa et al. (2023) for the AAT1–chloroquine resistance link (Section 6.8).
+11.5 Software
+Amos, B., Aurrecoechea, C., Barba, M., Barreto, A., Basenko, E. Y., Bażant, W., Belnap, R., Blevins, A. S.,
+Böhme, U., Brestelli, J., Brunk, B. P., Caddick, M., Callan, D., Campbell, L., Christensen, M. B.,
+Christophides, G. K., Crouch, K., Davis, K., DeBarry, J., … Zheng, J. (2022). VEuPathDB: The eukaryotic
+pathogen, vector and host bioinformatics resource center. Nucleic Acids Research, 50(D1), D898–D911.
+https://doi.org/10.1093/nar/gkab929
+Chang, C. C., Chow, C. C., Tellier, L. C. A. M., Vattikuti, S., Purcell, S. M., & Lee, J. J. (2015). Second-generation
+PLINK: Rising to the challenge of larger and richer datasets. GigaScience, 4, Article 7.
+https://doi.org/10.1186/s13742-015-0047-8
+Danecek, P., Bonfield, J. K., Liddle, J., Marshall, J., Ohan, V., Pollard, M. O., Whitwham, A., Keane, T.,
+McCarthy, S. A., Davies, R. M., & Li, H. (2021). Twelve years of SAMtools and BCFtools. GigaScience,
+10(2), Article giab008. https://doi.org/10.1093/gigascience/giab008
+Harris, C. R., Millman, K. J., van der Walt, S. J., Gommers, R., Virtanen, P., Cournapeau, D., Wieser, E., Taylor,
+J., Berg, S., Smith, N. J., Kern, R., Picus, M., Hoyer, S., van Kerkwijk, M. H., Brett, M., Haldane, A., del Río,
+J. F., Wiebe, M., Peterson, P., … Oliphant, T. E. (2020). Array programming with NumPy. Nature,
+585(7825), 357–362. https://doi.org/10.1038/s41586-020-2649-2
+Miles, A., Rodrigues, M. F., Ralph, P., Kelleher, J., Schelker, M., Pisupati, R., Rae, S., & Millar, T. (2024).
+cggh/scikit-allel (Version 1.3.13) [Computer software]. Zenodo.
+https://doi.org/10.5281/zenodo.13772087
+Purcell, S., Neale, B., Todd-Brown, K., Thomas, L., Ferreira, M. A. R., Bender, D., Maller, J., Sklar, P., de Bakker,
+P. I. W., Daly, M. J., & Sham, P. C. (2007). PLINK: A tool set for whole-genome association and
+population-based linkage analyses. American Journal of Human Genetics, 81(3), 559–575.
+https://doi.org/10.1086/519795
+Virtanen, P., Gommers, R., Oliphant, T. E., Haberland, M., Reddy, T., Cournapeau, D., Burovski, E., Peterson,
+P., Weckesser, W., Bright, J., van der Walt, S. J., Brett, M., Wilson, J., Millman, K. J., Mayorov, N., Nelson,
+A. R. J., Jones, E., Kern, R., Larson, E., … van Mulbregt, P. (2020). SciPy 1.0: Fundamental algorithms for
+scientific computing in Python. Nature Methods, 17(3), 261–272. https://doi.org/10.1038/s41592-019-
+0686-2
+Page 49 of 60
+
+PAGE 50
+Note on scikit-allel: the project provides no CITATION file or accompanying paper and asks only that its Zenodo DOI be
+cited. The Zenodo creator list is generated from repository contributors and includes an automation account, which has
+been omitted above. The concept DOI covering all versions is 10.5281/zenodo.597309. The project is in maintenance-only
+mode, with sgkit named as its intended successor.
+Page 50 of 60
+
+PAGE 51
+12. Appendices
+Appendix A — Software environment
+Component Version Role
+Python 3.10.22 All analysis scripts
+NumPy 1.26.4 Arrays. Pinned below 2.0 for scikit-allel compatibility
+pandas 2.3.3 Tabular data
+SciPy 1.15.2 Eigendecomposition (PCoA), connected components (clonal
+pruning)
+scikit-allel 1.3.13 Genotype arrays, Hudson FST, block jackknife
+Zarr 2.18.3 Chunked genotype store. Pinned below 3.0: scikit-allel's
+writer uses 2.x APIs
+numcodecs 0.13.1 Blosc/LZ4 and Zstd codecs
+scikit-learn 1.7.2 t-SNE, trustworthiness, silhouette
+umap-learn 0.5.12 UMAP
+scikit-bio 0.7.3 Mantel test
+GeoPandas 1.1.4 Spatial join (Stage 2)
+Matplotlib 3.10.9 All figures
+PLINK 1.9.0 (64-bit) Format conversion, LD pruning
+ADMIXTURE 1.3 Ancestry inference
+TreeMix 1.13 Population graph
+BayPass 3.1 Core model and XtX
+bcftools 1.24 VCF validation only; not used in the production path
+R 4.5.1 BayPass POD simulation via baypass_utils.R
+Operating system Ubuntu, kernel 5.15.0-194- 40 cores, 629 GB RAM
+generic
+Table A.1. Software versions, recorded from the live environment on 9 October 2026.
+The environment lives at /home/gyadu/.conda/envs/spatial and was built with micromamba 2.9.0 against
+conda-forge and bioconda; the shared conda installation's classic solver was unusable at this dependency
+scale. Activation:
+source /home/tools/anaconda3/etc/profille.d/conda.sh && conda activate spatial
+Appendix B — Key configuration values
+Parameter Value Set in Origin
+RANDOM_SEED 42 config.py Pipeline default
+MIN_FWS 0.95 config.py Pre-specified (Manske et al.,
+2012)
+MIN_SAMPLE_CALL_RATE 0.80 config.py Pipeline default
+CLONAL_THRESHOLD 0.00005 config.py Session decision (Section
+Page 51 of 60
+
+PAGE 52
+Parameter Value Set in Origin
+4.2.4)
+MIN_GENOTYPE_DP 5 config.py Pipeline default
+MIN_GENOTYPE_GQ 0 (disabled) config.py Session decision (Section
+4.2.5)
+MIN_MAF 0.05 config.py Thesis workflow
+MAX_MISSING (variant) 0.10 config.py Thesis workflow
+MAX_SAMPLE_MISSING 0.20 config.py Pipeline default
+UMAP_N_NEIGHBORS / 30 / 0.1 config.py Thesis workflow
+UMAP_MIN_DIST
+TSNE_PERPLEXITY 30 config.py Session addition
+PCOA_N_AXES 10 config.py Session addition
+K_MIN, K_MAX 2, 8 (K = 1 run separately) config.py Thesis workflow
+ADMIXTURE_CV_FOLDS 10 config.py Pipeline default
+LD_PRUNE_ARGS 50, 10, 0.2 config.py Pipeline default
+TREEMIX_BLOCK_SIZE 50 config.py Session decision (Section 5.5)
+TREEMIX_MAX_M / 5 / Guinea_savanna config.py Thesis workflow; root name
+TREEMIX_ROOT corrected
+BayPass NVAL (POD SNPs) 100,000 step08b_baypass.sh Session decision (Section 5.6)
+BayPass PI_MAF 0.05 step08b_baypass.sh Session decision (Section 5.6)
+XTX_POD_QUANTILE 0.999 config.py Pipeline default
+Table B.1. Configuration values in force for the reported run.
+Appendix C — Output inventory
+Path Contents
+interim/pf8_ghana.zarr Ghanaian callset, 20.57 GB, 2,190,026 PASS biallelic SNPs × 6,653 isolates,
+GT/AD/DP/GQ
+interim/ghana_core_snps.npz Final genotype matrix, 3,359 × 1,900
+interim/analysis_samples.csv Canonical sample table; fixes sample order for every stage from 4 onward
+interim/allele_counts_by_zone.npz Per-zone allele counts, one allele per isolate; feeds stages 7 and 8
+results/sample_qc_full.csv All 4,905 isolates with every QC statistic and flag
+results/fst_pairwise.csv, fst_matrix.csv Pairwise FST with jackknife SEs and confidence intervals
+results/dimred_comparison.csv Trustworthiness, distance correlation, silhouette for the three ordinations
+results/{umap,tsne}_embedding.csv, Ordination coordinates and PCoA eigenvalues
+pcoa_coordinates.csv, pcoa_eigenvalues.csv
+results/mantel_result_{zone,region}.json Mantel r, p, population list, permutation count
+results/admixture/ Q and P matrices for K = 1–8, cross-validation errors
+results/treemix/ Fitted graphs for m = 0–5, model_comparison.csv, model_selection.json,
+run_status.tsv
+results/baypass/ XtX per SNP, simulated neutral distribution, calibrated threshold, outlier
+Page 52 of 60
+
+PAGE 53
+Path Contents
+BED
+results/outlier_genes.csv, Gene-level summary and raw SNP–gene intersections
+outliers_annotated.txt
+figures/ All figures reproduced in this report
+logs/ Per-stage logs including the Zarr fetch verification
+Table C.1. Principal outputs, relative to /media/biodataA/pf8/gyadu.
+Appendix D — Reference verification status
+All 26 references were checked against publisher-deposited metadata. Of these, 25 were fully verified via the
+Crossref REST API; the remainder are noted below. Four were additionally re-checked independently after the
+initial verification: the Pf8 release, the AAT1 paper, Gautier (2015) and Miles et al. (2016).
+• Fully verified (24 entries) — all bibliographic fields confirmed against Crossref DOI records.
+• Verified without a DOI (2 entries) — Mantel (1967) predates DOI assignment and was confirmed via
+PubMed (PMID 6018555); van der Maaten & Hinton (2008) was confirmed against the JMLR site, which
+issues no DOIs. Stable URLs are given in both cases, as APA 7 permits.
+• Partially verified (1 entry) — scikit-allel has no author-sanctioned citation string. The Zenodo version
+DOI (10.5281/zenodo.13772087, v1.3.13, 17 September 2024) and concept DOI
+(10.5281/zenodo.597309) are both confirmed; the author list is Zenodo's, with an automation account
+removed.
+• Note on one sub-detail — for Venna & Kaski (2001), Crossref gives the chapter's book title and pages
+but not the LNCS series volume; volume 2130 and the editor list were confirmed against the Springer
+book record (ISBN 978-3-540-42486-4).
+Corrections made during verification. Four assumptions in the initial reference list were wrong and were corrected:
+the AAT1 paper is in Nature Microbiology, not Science; Pf8 is published (Wellcome Open Research 10:325, 2025)
+rather than preprint-only; the UMAP JOSS paper has a different author list from the arXiv preprint, so the preprint is
+cited here; and the exact title of Mobegi et al. (2014) includes "the malaria parasite" before the species name.
+Appendix E — Reproducing the analysis
+From a clean checkout on a machine with the environment of Appendix A:
+source /home/tools/anaconda3/etc/profille.d/conda.sh && conda activate spatial
+cd /media/biodataA/pf8/gyadu/scripts
+python check_env.py # verifiles packages and external binaries
+bash run_all.sh --list # lists the stages
+bash run_all.sh # full pipeline, stages 1-9
+bash run_all.sh --from 4 --parallel # stages 5-8 concurrently afteer stage 4
+Stage 3a is resumable: completed variant chunks are recorded and skipped, and the store is built under
+a .partial name and renamed only on completion, so an interrupted run cannot be mistaken for a finished
+one. It also self-verifies:
+python step03a_fetch_callset_zarr.py --validate-only \
+--validate-vcf ../data/Pf8_Ghana_Pf3D7_10_v3.vcf.gz \
+--validate-region Pf3D7_10_v3:4000001-4400000
+Page 53 of 60
+
+PAGE 54
+In --parallel mode the thread budget is divided as: ADMIXTURE 7 concurrent K values × 4 threads; TreeMix 6
+concurrent m values, single-threaded; BayPass 8 threads; NumPy/BLAS and Numba capped at 8 threads each.
+Stages 5–8 write disjoint outputs and depend only on stage 4, so concurrency does not affect results. Fixed
+seeds make each stage deterministic given its inputs.
+Reproducibility caveat. The zone polygon layer (data/ghanaAEZ.geojson) has no recorded provenance, so Stage 2
+cannot currently be reproduced from public sources alone. This should be resolved before publication.
+Page 54 of 60
+
+PAGE 55
+— End of manuscript —
+REVIEWER NOTES AND REVISION GUIDE
+These notes are for the author's use in rewriting. They are not part of the proposed manuscript and should be
+deleted before any version is circulated.
+A. Explain it simply
+Imagine you want to know whether malaria parasites in northern Ghana are a different population from
+those on the coast. If they are separate, a drug-resistance mutation appearing in Accra might stay there for
+years, and you would need to watch each region separately. If they are one population that happens to be
+spread out, a mutation appearing anywhere will travel everywhere, and watching a few places is enough.
+To find out, we took the genomes of Ghanaian parasites from a large public dataset, worked out which
+ecological zone each one came from, and asked a series of questions with increasingly sophisticated tools. Do
+parasites from different zones look genetically different? Do parasites further apart look more different than
+parasites close together? Can a computer sort them into ancestry groups that match the zones? Is there any
+gene in the genome that looks unusually different between zones, which might mean it is adapting to local
+conditions?
+The answers, in order: barely; a little, and only when we use administrative regions rather than zones; no;
+and we found fifteen candidate positions in eleven genes, one of which — a gene called AAT1 — has a
+published link to chloroquine resistance.
+So the overall picture is of one parasite population spread across the country, mixing freely enough that
+geography makes only a small difference. That is a useful answer. It means national surveillance does not
+need to be spatially comprehensive to be representative — but it also means you could not contain an
+outbreak of resistance by targeting one region.
+There is an important catch, and it is about the data rather than the analysis. Each parasite's location is
+recorded only as the administrative region it came from, not the actual collection site. And three of the four
+ecological zones in this dataset contain exactly one region each. So "Guinea savanna" and "Upper East" are
+the same group of samples under two different names. We cannot tell whether any difference we see is
+caused by ecology or by something else about that region — its health system, its sampling protocol, or
+simply the years in which it was sampled, which also differ between zones. This is not something a cleverer
+analysis can fix.
+B. Methodological rationale
+For each major choice: what it does, why it may be appropriate, the alternatives, the assumptions it
+introduces, and what evidence would justify changing it.
+Choice What it accomplishes / why Alternatives Assumptions introduced What would justify
+appropriate changing it
+Hudson's FST, Gives a differentiation estimate Weir & That loci are exchangeable If a reviewer requires
+ratio of averages insensitive to unequal sample sizes Cockerham; Nei's enough for a genome-wide comparability with a specific
+Page 55 of 60
+
+PAGE 56
+Choice What it accomplishes / why Alternatives Assumptions introduced What would justify
+appropriate changing it
+— important when zones range from GST; Jost's D summary to mean published study that used a
+25 to 1,334 isolates. Ratio-of- something. different estimator.
+averages avoids the upward bias of
+averaging per-locus ratios.
+Fws ≥ 0.95 for Removes mixed infections, which 0.90 or 0.80; or That a single threshold If the proposed sensitivity
+monoclonality would otherwise be read as retain all isolates separates monoclonal analysis at 0.90 and 0.80
+intermediate ancestry by and model within- from mixed, and that changes any conclusion.
+ADMIXTURE. 0.95 is conventional host diversity removal does not bias
+and falls at a visible break in the explicitly allele frequencies.
+distribution.
+Majority allele Preserves information in the read Set mixed calls to That the more-covered Evidence of reference bias in
+for mixed calls depths rather than discarding the missing; retain allele is the dominant the depth data would favour
+call, while still yielding one allele per diploid coding clone's, and that depth setting mixed calls to
+isolate. ratios are unbiased. missing instead.
+One allele per Correct for a haploid organism. None defensible That mixed calls have Nothing. This is a
+isolate Prevents sample sizes being doubled — the diploid already been resolved correctness matter rather
+in FST, TreeMix and BayPass. alternative is (enforced in code, with a than a judgement call.
+simply wrong here warning if not).
+DP ≥ 5 only; no Retains 3,359 rather than 2,143 DP ≥ 5 and GQ ≥ That GQ below 20 at high A direct check on genotype
+GQ filter common SNPs. The GQ rule was 20 (pipeline depth reflects the diploid concordance between the
+removing common SNPs at high default); GQ ≥ 10; calling model's ambiguity two masks at the same sites,
+depth while barely shifting allele DP ≥ 3 in a haploid organism which has not been done.
+frequencies. rather than poor data.
+MAF ≥ 5% Follows the thesis specification and 1% or 2% That common variants The power limitation of
+removes sites where allele-frequency carry the structure of 3,359 SNPs is itself an
+estimates are unstable. interest. argument for running MAF ≥
+1% as a robustness check.
+TreeMix block Gives approximately 67 jackknife 100 SNPs (~34 That linkage disequilibrium A direct LD-decay estimate
+size 50 SNPs blocks instead of 6 or 7. A 50-SNP blocks); 500 does not extend to 350 kb from these data, which has
+block spans roughly 350 kb, well (pipeline default, in this population. not been computed.
+beyond the scale of linkage in P. ~7 blocks)
+falciparum.
+BayPass with A 0.999 quantile needs enough Empirical top-1% That the estimated Poor overlap between the
+100,000 MAF- simulated SNPs to be stable, and the threshold; smaller covariance matrix observed and simulated XtX
+matched POD simulated distribution must match POD adequately describes the distributions would indicate
+SNPs the observed filtering to be neutral demography. the demographic model is
+comparable. inadequate. Here they
+overlap well.
+Three The three optimise different UMAP alone, per None material; this is Nothing. Retain all three.
+ordinations objectives, so agreement between the thesis additive.
+rather than one them is informative. PCoA alone workflow
+carries interpretable variance
+proportions.
+C. Decisions requiring your review
+40. The GQ filter removal (Section 4.2.5). This raised the SNP count by 57 per cent and so affects every
+downstream result. The evidence that GQ was removing good data is indirect — high median depth
+among failing calls — rather than a direct concordance check. Question: are you satisfied that
+intermediate GQ in a haploid organism called as diploid reflects model ambiguity rather than genuine
+uncertainty? If not, the whole analysis should be re-run at GQ ≥ 20 and the two compared.
+41. Disabling the call-rate MAD rule (Section 4.2.3). Decided after seeing its effect on sample counts.
+Question: would you have made the same decision if the counts had gone the other way? If not,
+consider whether the absolute floor should instead be raised to 0.90 as a compromise.
+Page 56 of 60
+
+PAGE 57
+42. The clonal threshold of 0.00005 (Section 4.2.4). There is no natural break in the data; the value was
+chosen on a reasonable but arbitrary criterion. Question: do you accept a threshold with no principled
+basis, or should clonal pruning be reported both with and without?
+43. Which TreeMix model to carry forward (Section 6.7). Both m = 2 and m = 3 are recorded. Question:
+do you report the identifiable range only (m ≤ 2) and state that the data cannot support more, or do you
+report m = 3 with a caveat? The former is more defensible.
+44. How to frame the thesis objectives given the zone/region collinearity (Section 9.2). This is the most
+consequential question in this list. Question: do you reframe the research question around spatial
+structure generally, acknowledge the confounding and proceed, or seek additional sampling?
+45. Whether Stage 3 should be re-run on the QC-passing set. The ordination figures currently describe
+4,905 isolates while everything else describes 1,900. Question: is the inconsistency acceptable for a
+working document, and must it be fixed before submission? (My view: yes, it must.)
+D. Potential weaknesses and reviewer objections
+Objection Severity Evidence behind it Practical response
+"Your zones are your regions. Severe — goes Table 2.2: three of four zones Concede explicitly in the abstract and discussion.
+You have not studied ecology." to the study's contain exactly one region. Reframe around spatial structure, and present
+framing the ecological interpretation as a hypothesis the
+data are consistent with rather than one they
+test.
+"Zone differences are year Severe Table 2.3: median year ranges Run the single-year analysis (2018, n = 773,
+differences." 2012–2018; the transitional zone three zones) as a sensitivity check. If FST is
+and coastal savanna barely unchanged, the objection weakens considerably.
+overlap in time.
+"3,359 SNPs is far too few for a Moderate to Section 4.2.6; roughly 5,500 is the Report the MAF ≥ 1% sensitivity analysis. State
+genome scan." severe genome-wide ceiling at MAF ≥ 5%. the power limitation explicitly rather than letting
+a reviewer discover it.
+"You removed 57% of your Moderate Section 4.2.2: polyclonal fraction Run the Fws sensitivity analysis. This is the
+isolates, and unevenly by 0.597 in Guinea savanna against cheapest high-value check available.
+zone." 0.444 on the coast.
+"n = 25 cannot support a Moderate Three FST confidence intervals Either drop the transitional zone from the
+population in any of these spanning zero; the transitional primary analysis and report it separately, or
+analyses." zone contributes 1.3% of isolates. merge it with an adjacent zone — Step 3b's own
+output suggests the latter.
+"Your outlier genes could be Moderate No check was performed. Several Examine mapping quality and coverage at the 15
+assembly or alignment outliers are in exported-protein outlier positions. Cheap, and it either removes
+artefacts." families, which are repetitive and the objection or identifies which hits to drop.
+alignment-prone.
+"K = 2 minimising CV does not Low to moderate Table 6.5: the improvement over Already handled in the text. Keep the K = 1
+mean K = 2 is real." K = 1 is 0.5%; components are reference row — it is what makes the point
+near-uniform across zones. visible.
+"The GQ filter removal looks Low to moderate The decision followed exploratory The honest response is already in Section 4.2.5.
+like it was chosen to get more output showing the SNP-count Strengthen it with a direct genotype-
+SNPs." effect. concordance check.
+"The zone layer has no Low, but Section 2.1: provenance not Establish and cite the source. This must be fixed.
+citation." embarrassing at recorded.
+submission
+E. Missing information and unverified assumptions
+Page 57 of 60
+
+PAGE 58
+• Zone layer provenance [Unknown] — the source, vintage and CRS documentation of ghanaAEZ.geojson
+could not be established. The analysis assumes it is authoritative for Ghana.
+• Why the Pf8 QC flag drops isolates unevenly by region [Unknown] — Central loses 55 per cent and
+Volta none. The manifest does not carry the fields needed to explain this.
+• Whether region centroids approximate collection sites [Unverified assumption] — assumed throughout
+Stage 2. For large regions it may be poor, and it cannot be checked at this resolution.
+• Brong Ahafo and Volta zone assignments [Not done] — Step 2 recommended manual review against
+the map; it was not performed.
+• Whether the majority-allele rule is unbiased [Unverified] — 2.3 reference calls per alternate call is
+consistent with expectation under reference-majority sites, but a formal check for reference bias was
+not run.
+• Whether GQ < 20 at high depth is model ambiguity [Hypothesized] — the interpretation in Section
+4.2.5 is plausible and consistent with the depth evidence, but was not independently verified.
+• LD decay distance in this population [Unknown] — the 50-SNP block choice assumes linkage does not
+extend to ~350 kb. Reasonable for P. falciparum, but not measured here.
+• Whether ADMIXTURE and BayPass are bitwise reproducible across thread counts [Not tested].
+• The original authorship and review history of the supplied pipeline [Unknown] — ten defects were
+found (Table 5.2), two of which would have produced silently wrong results. Whether the code had been
+reviewed or tested before is not recorded, and matters for how much confidence to place in the parts
+not examined.
+A note on how to read Table 5.2. Those ten defects were found in a single review pass over the stages that had not
+yet run. The review was not exhaustive. The honest inference is not "the pipeline is now correct" but "the pipeline
+had a defect density high enough that more defects are likely." If any result in this report is load-bearing for the
+thesis, the code path that produced it deserves a second reading.
+F. Recommended next steps, in priority order
+# Task What it would establish Decision it informs Cost
+1 Fws sensitivity (0.90, 0.80) Whether the largest exclusion drives Whether the filtering objection Low — code exists
+any conclusion can be dismissed
+2 MAF ≥ 1% sensitivity Whether conclusions are threshold- Whether to report MAF ≥ 1% as Low
+dependent; roughly triples SNPs for primary or secondary
+the scan
+3 Single-year analysis (2018) Whether zone differences survive How strongly to caveat the spatial Low
+temporal control claims
+4 Mapping-quality check at Whether the 15 outliers are artefacts Whether the candidate list is Low
+outlier sites reportable at all
+5 Direct genotyping of the Marker frequencies by zone and year The whole resistance component Medium — new
+resistance panel — the thesis's actual question of the thesis code
+6 Re-run Stage 3 on the QC set Consistency between ordination Figure selection for the Low
+figures and the rest manuscript
+7 Fws as a transmission Whether polyclonality is a reportable Whether this becomes a results Low
+phenotype ecological result in its own right section
+8 Functional enrichment of Whether exported-protein How much weight the outlier list Medium
+outlier genes representation exceeds chance can carry
+Page 58 of 60
+
+PAGE 59
+# Task What it would establish Decision it informs Cost
+9 Demographic inference (Ne, Whether low FST means gene flow or The strength of the surveillance- High
+divergence times) recent ancestry design claim
+[Interpreted] Items 1–4 are all inexpensive, use code that already exists, and between them address the four
+most likely reviewer objections. They should be completed before the manuscript is rewritten. Item 5 is the
+one that would most change what the thesis can claim, because the resistance-marker questions are
+answerable from these data — they simply are not what a differentiation scan measures.
+G. Questions for the author
+46. Given that three of four zones are each a single administrative region, do you want to keep the
+ecological-zone framing, reframe around spatial structure generally, or seek additional sampling?
+Everything else in the write-up follows from this.
+47. Is the absence of the Sudan savanna acceptable, given the thesis describes a five-zone gradient?
+Should the framing be revised to the four zones actually sampled?
+48. Do you accept the GQ filter removal, or should the analysis be re-run at GQ ≥ 20 for comparison?
+49. Should the transitional zone (n = 25) remain a separate population, be merged with an adjacent
+zone, or be dropped from the primary analysis?
+50. For TreeMix, do you report only the identifiable range (m ≤ 2), or m = 3 with a caveat?
+51. Is MAF ≥ 5 per cent fixed by the thesis specification, or can MAF ≥ 1 per cent become the primary
+analysis with 5 per cent as the sensitivity check?
+52. Where did ghanaAEZ.geojson come from, and can it be cited?
+53. Should mixed-infection frequency (Fws by zone) be developed as a result in its own right, or remain a
+QC by-product?
+54. Is the AAT1 hit worth pursuing as a focused sub-study, given its published chloroquine-resistance link
+and the two outlier SNPs it carries here?
+55. Who else has reviewed the pipeline code? Ten defects in one pass suggests the remaining code
+deserves a second reader.
+56. Is there any target journal or thesis-committee requirement that constrains the choice of FST
+estimator, the ordination methods, or the multiple-testing approach?
+57. Do you want the negative result — near-panmixia — presented as the headline finding, or as context
+for the marker-level work to follow? It is a genuine and defensible result, and the data support it better
+than they support anything else here.
+H. Suggested revisions before this could be considered publication-ready
+Section What is needed
+Abstract Currently states the design limitation in the final sentence. For publication it should appear earlier
+— a reviewer who meets the zone/region collinearity for the first time in the Discussion will not be
+sympathetic.
+2.1 Data provenance The zone layer needs a source and a citation. This is a hard blocker.
+3.4 Ordination State explicitly in the methods, not only in the results, that Stage 3 runs on the pre-QC set. Better,
+re-run it.
+Page 59 of 60
+
+PAGE 60
+Section What is needed
+4. Filtering Add the Fws and MAF sensitivity analyses. At present the filtering section documents thresholds
+thoroughly but demonstrates robustness to none of them.
+6.5 Mantel The region-level result carries the isolation-by-distance claim and rests on 21 pairs from 7 points,
+several with small samples. Either strengthen it or soften the claim.
+6.8 Outliers Needs the mapping-quality check before the gene list can be presented as candidates rather than
+as positions.
+7. Discussion The comparison with published work is thin — currently two citations. The literature review
+document has far more material; some of it belongs here, particularly the West African
+comparators.
+9. Limitations Already candid. Resist the temptation to soften it during rewriting; the credibility of the positive
+claims depends on it.
+Throughout Decide on and apply a consistent treatment of the "Decidous forest" misspelling. Retaining it in
+data keys is correct; reproducing it in prose and figure labels is not. Figures would need
+regenerating with a display-name mapping.
+Throughout The evidence tags are useful for your review but should be removed from any circulated version,
+with the distinctions carried in the prose instead.
+[Interpreted] Overall assessment. The analysis is sound and the central negative result is well supported by five
+independent lines of evidence. The main risks to credibility are not in the statistics but in the design:
+zone/region collinearity, temporal confounding, and a SNP count low enough to limit the genome scan.
+Addressed openly, these make the paper more convincing rather than less, because they explain why the
+result looks the way it does. Managed with hedging language, they will be found by a reviewer and will cost
+more than they would have cost to concede.
+Page 60 of 60

@@ -1,0 +1,445 @@
+{
+  "generated_utc": "2026-10-11T03:48:20.310205+00:00",
+  "checker_path": "/Users/samnimoh/Desktop/chromo/verification_review_round3/check_article_statistics.py",
+  "checker_sha256": "97a859bbba46fb062b6b2ab828691a2975955fe4d8be4baf37696aded1ea29ea",
+  "runtime": {
+    "executable": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "resolved_executable": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+    "version": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "platform": "macOS-27.0-arm64-arm-64bit",
+    "libraries": {
+      "csv": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/csv.py",
+      "math": "builtin",
+      "xml.etree.ElementTree": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/xml/etree/ElementTree.py",
+      "zipfile": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/zipfile/__init__.py"
+    },
+    "third_party_dependencies": []
+  },
+  "inputs": {
+    "article": {
+      "path": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.docx",
+      "bytes": 1193105,
+      "sha256": "d09d14eea677e18ace50088d58e3e044e4edfe2ad21edb971d59b67305d9d66c",
+      "md5": "602d08f112c9bad6058a088c3cd7a87a"
+    },
+    "article_markdown": {
+      "path": "/Users/samnimoh/Desktop/chromo/article/article.md",
+      "bytes": 48171,
+      "sha256": "313a4646cc2e2f9598ad3439ce389f83f8109ee9d78bd9a194cb3230e38ed7db",
+      "md5": "a16ba4e62363fd27f696cfb4b56b5d0c"
+    },
+    "canonical_facts": {
+      "path": "/Users/samnimoh/Desktop/chromo/article/CANONICAL_FACTS_FOR_ARTICLE.md",
+      "bytes": 10526,
+      "sha256": "1a7059ef3fe944d70429e47c2ff4458eb07e514fd8c83866461b6e073cf5c549",
+      "md5": "3cfa0315d448c9b4a124aa002552c1f6"
+    },
+    "ordination_4905": {
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/results/dimred_comparison.csv",
+      "bytes": 305,
+      "sha256": "70878f53aa97e2ec1631690f1ed1028286a436534e388696f82e8adda79665dd",
+      "md5": "e8fe3b719b184988b0c7eacd99d900f0"
+    },
+    "ordination_1900": {
+      "path": "/Users/samnimoh/Desktop/chromo/corrected/dimred_comparison_qcset.csv",
+      "bytes": 298,
+      "sha256": "3d104ce26973ded0659c283be4fc0bf0e9c9eeed45c1ae0544bc60e1d0331499",
+      "md5": "1662bd0176878d4dbf312b502894de70"
+    },
+    "analysis_samples": {
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/interim/analysis_samples.csv",
+      "bytes": 520880,
+      "sha256": "fef75e071c5c2697a284e4ff50f6b6a7d36d8ffffac29d68969aece2825fe712",
+      "md5": "7bbedf92b6575c9ff652dad2ac761644"
+    },
+    "pre_Fws_QC": {
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/results/sample_qc_full.csv",
+      "bytes": 1536734,
+      "sha256": "392520ffce849aec0a5d75e5e13644e68aac3ae4433afa3e1330a450d10de43b",
+      "md5": "3a67049990dd02972367837d7e081744"
+    },
+    "residues": {
+      "path": "/Users/samnimoh/Desktop/chromo/corrected/codon_panel_residues.csv",
+      "bytes": 27752,
+      "sha256": "f98f5ce21ff31138eef35f8035c9b4ebf8d1ae76997c34a2d07c5ed97af3e970",
+      "md5": "598d8c46d10e8fb557b2af9bd5d81961"
+    }
+  },
+  "assertion_meaning": "Passing confirms the recorded inconsistency/arithmetic, not statistical validity of the article.",
+  "assertions": {
+    "article_ordination_claims_1900": true,
+    "all_ten_article_metrics_match_4905_output": true,
+    "none_of_ten_article_metrics_match_1900_output": true,
+    "table_caption_claims_analysis_set": true,
+    "all_four_table_counts_match_1900_cohort": true,
+    "all_four_fractions_match_QC_not_analysis": true,
+    "all_analysis_samples_are_nonpolyclonal_at_cut": true,
+    "three_sparse_marker_margins_reconcile": true,
+    "three_markers_have_three_expected_cells_below5_and_one_below1": true
+  },
+  "ordination": {
+    "article_body_child_index": 55,
+    "article_paragraph": "Three ordinations of the published Pf8 genotype-distance submatrix for the 1,900 isolates were compared (Fig. 2). UMAP achieved a trustworthiness of 0.486 and a Spearman correlation of 0.029 between embedded and original distances (McInnes et al. 2018); t-SNE reached 0.507 and 0.115; PCoA reached 0.495 and 0.322. PCoA preserves global distance structure best, while all three embeddings discard most of it. Silhouette coefficients computed by zone are negative in every case: -0.0156 on the original distances, -0.306 for UMAP, -0.057 for t-SNE and -0.112 for PCoA. Isolates are on average closer to members of other zones than to members of their own, in the original distance space as well as in each embedding. Zone-coloured isolates overlap extensively in Fig. 2, and no method recovers zone as a cluster boundary.",
+    "matching_rule": "CSV values rounded to decimal places printed in article",
+    "comparisons": [
+      {
+        "method": "UMAP",
+        "metric": "trustworthiness",
+        "article_literal": "0.486",
+        "saved_4905": 0.48596103411049263,
+        "saved_1900": 0.4985171678184407,
+        "matches_4905_at_reported_precision": true,
+        "matches_1900_at_reported_precision": false
+      },
+      {
+        "method": "UMAP",
+        "metric": "distance_spearman",
+        "article_literal": "0.029",
+        "saved_4905": 0.028746366880950808,
+        "saved_1900": -0.0657032498036622,
+        "matches_4905_at_reported_precision": true,
+        "matches_1900_at_reported_precision": false
+      },
+      {
+        "method": "t-SNE",
+        "metric": "trustworthiness",
+        "article_literal": "0.507",
+        "saved_4905": 0.5066828006290386,
+        "saved_1900": 0.5257569591273952,
+        "matches_4905_at_reported_precision": true,
+        "matches_1900_at_reported_precision": false
+      },
+      {
+        "method": "t-SNE",
+        "metric": "distance_spearman",
+        "article_literal": "0.115",
+        "saved_4905": 0.1151870388895617,
+        "saved_1900": 0.1963573641918005,
+        "matches_4905_at_reported_precision": true,
+        "matches_1900_at_reported_precision": false
+      },
+      {
+        "method": "PCoA",
+        "metric": "trustworthiness",
+        "article_literal": "0.495",
+        "saved_4905": 0.49450506846882625,
+        "saved_1900": 0.5096355191024203,
+        "matches_4905_at_reported_precision": true,
+        "matches_1900_at_reported_precision": false
+      },
+      {
+        "method": "PCoA",
+        "metric": "distance_spearman",
+        "article_literal": "0.322",
+        "saved_4905": 0.32240602354526887,
+        "saved_1900": 0.2868299902039836,
+        "matches_4905_at_reported_precision": true,
+        "matches_1900_at_reported_precision": false
+      },
+      {
+        "method": "original distances",
+        "metric": "silhouette_by_zone",
+        "article_literal": "-0.0156",
+        "saved_4905": -0.015566886402666569,
+        "saved_1900": -0.01958293654024601,
+        "matches_4905_at_reported_precision": true,
+        "matches_1900_at_reported_precision": false
+      },
+      {
+        "method": "UMAP",
+        "metric": "silhouette_by_zone",
+        "article_literal": "-0.306",
+        "saved_4905": -0.30618974566459656,
+        "saved_1900": -0.27732568979263306,
+        "matches_4905_at_reported_precision": true,
+        "matches_1900_at_reported_precision": false
+      },
+      {
+        "method": "t-SNE",
+        "metric": "silhouette_by_zone",
+        "article_literal": "-0.057",
+        "saved_4905": -0.056878190487623215,
+        "saved_1900": -0.06284511089324951,
+        "matches_4905_at_reported_precision": true,
+        "matches_1900_at_reported_precision": false
+      },
+      {
+        "method": "PCoA",
+        "metric": "silhouette_by_zone",
+        "article_literal": "-0.112",
+        "saved_4905": -0.11156961858322142,
+        "saved_1900": -0.0790918096951143,
+        "matches_4905_at_reported_precision": true,
+        "matches_1900_at_reported_precision": false
+      }
+    ]
+  },
+  "table_1": {
+    "body_child_index": 50,
+    "caption": "Table 1 Composition of the analysis set, with the sequencing study, administrative region and collection period that accompany each agro-ecological zone. Zone is very nearly a relabelling of region and study: three of the four zones draw on a single administrative region, and one on a single study.",
+    "header": [
+      "Agro-ecological zone",
+      "Isolates",
+      "Administrative region(s)",
+      "No. studies",
+      "Dominant study (share)",
+      "Collection years",
+      "Polyclonal fraction"
+    ],
+    "rows": [
+      [
+        "Guinea savanna",
+        "1,334",
+        "Upper East (1,334)",
+        "6",
+        "1168-PF-GH-AMENGA-ETEGO-SM (74%)",
+        "2009\u20132019",
+        "0.597"
+      ],
+      [
+        "Deciduous forest",
+        "337",
+        "Ashanti (157), Central (125), Eastern (34), Volta (21)",
+        "5",
+        "1200-PF-GH-MAIGA-SM (47%)",
+        "2013\u20132021",
+        "0.539"
+      ],
+      [
+        "Coastal savanna",
+        "204",
+        "Greater Accra (204)",
+        "2",
+        "1241-PF-GH-ANINAGYEI (87%)",
+        "2016\u20132018",
+        "0.444"
+      ],
+      [
+        "Transitional zone",
+        "25",
+        "Brong Ahafo (25)",
+        "1",
+        "1083-PF-GH-CONWAY (100%)",
+        "2011\u20132013",
+        "0.500"
+      ]
+    ],
+    "cohort_comparisons": [
+      {
+        "zone": "Guinea savanna",
+        "table_n": 1334,
+        "analysis_n": 1334,
+        "pre_Fws_QC_n": 3605,
+        "table_polyclonal_fraction": 0.597,
+        "analysis_polyclonal_count": 0,
+        "analysis_polyclonal_fraction": 0.0,
+        "pre_Fws_QC_polyclonal_count": 2153,
+        "pre_Fws_QC_polyclonal_fraction": 0.5972260748959778,
+        "table_n_matches_analysis": true,
+        "fraction_matches_QC_at_reported_precision": true,
+        "fraction_matches_analysis_at_reported_precision": false
+      },
+      {
+        "zone": "Deciduous forest",
+        "table_n": 337,
+        "analysis_n": 337,
+        "pre_Fws_QC_n": 815,
+        "table_polyclonal_fraction": 0.539,
+        "analysis_polyclonal_count": 0,
+        "analysis_polyclonal_fraction": 0.0,
+        "pre_Fws_QC_polyclonal_count": 439,
+        "pre_Fws_QC_polyclonal_fraction": 0.5386503067484663,
+        "table_n_matches_analysis": true,
+        "fraction_matches_QC_at_reported_precision": true,
+        "fraction_matches_analysis_at_reported_precision": false
+      },
+      {
+        "zone": "Coastal savanna",
+        "table_n": 204,
+        "analysis_n": 204,
+        "pre_Fws_QC_n": 435,
+        "table_polyclonal_fraction": 0.444,
+        "analysis_polyclonal_count": 0,
+        "analysis_polyclonal_fraction": 0.0,
+        "pre_Fws_QC_polyclonal_count": 193,
+        "pre_Fws_QC_polyclonal_fraction": 0.4436781609195402,
+        "table_n_matches_analysis": true,
+        "fraction_matches_QC_at_reported_precision": true,
+        "fraction_matches_analysis_at_reported_precision": false
+      },
+      {
+        "zone": "Transitional zone",
+        "table_n": 25,
+        "analysis_n": 25,
+        "pre_Fws_QC_n": 50,
+        "table_polyclonal_fraction": 0.5,
+        "analysis_polyclonal_count": 0,
+        "analysis_polyclonal_fraction": 0.0,
+        "pre_Fws_QC_polyclonal_count": 25,
+        "pre_Fws_QC_polyclonal_fraction": 0.5,
+        "table_n_matches_analysis": true,
+        "fraction_matches_QC_at_reported_precision": true,
+        "fraction_matches_analysis_at_reported_precision": false
+      }
+    ],
+    "zone_alias": "Article 'Deciduous forest' maps to saved CSV 'Decidous forest'."
+  },
+  "sparse_expected_cells": {
+    "method": "Expected carrier count = zone called n * total carriers / total called n; noncarriers by subtraction.",
+    "markers": [
+      {
+        "gene": "pfmdr1",
+        "codon": 1246,
+        "label": "Asp1246Tyr",
+        "n_called": 1866,
+        "carriers": 21,
+        "saved_asymptotic_p_value": 0.261593126545792,
+        "cells": [
+          {
+            "zone": "Coastal_savanna",
+            "n_called": 202,
+            "observed_carriers": 4,
+            "observed_noncarriers": 198,
+            "expected_carriers": 2.2733118971061095,
+            "expected_noncarriers": 199.7266881028939
+          },
+          {
+            "zone": "Decidous_forest",
+            "n_called": 327,
+            "observed_carriers": 2,
+            "observed_noncarriers": 325,
+            "expected_carriers": 3.680064308681672,
+            "expected_noncarriers": 323.31993569131834
+          },
+          {
+            "zone": "Guinea_savanna",
+            "n_called": 1312,
+            "observed_carriers": 14,
+            "observed_noncarriers": 1298,
+            "expected_carriers": 14.765273311897106,
+            "expected_noncarriers": 1297.234726688103
+          },
+          {
+            "zone": "Transitional_zone",
+            "n_called": 25,
+            "observed_carriers": 1,
+            "observed_noncarriers": 24,
+            "expected_carriers": 0.28135048231511256,
+            "expected_noncarriers": 24.718649517684888
+          }
+        ],
+        "minimum_expected": 0.28135048231511256,
+        "cells_expected_below_5": 3,
+        "cells_expected_below_1": 1,
+        "n_margins_reconcile": true,
+        "carrier_margins_reconcile": true
+      },
+      {
+        "gene": "pfdhps",
+        "codon": 540,
+        "label": "Lys540Glu",
+        "n_called": 1895,
+        "carriers": 18,
+        "saved_asymptotic_p_value": 0.6605984939279939,
+        "cells": [
+          {
+            "zone": "Coastal_savanna",
+            "n_called": 204,
+            "observed_carriers": 1,
+            "observed_noncarriers": 203,
+            "expected_carriers": 1.937730870712401,
+            "expected_noncarriers": 202.06226912928759
+          },
+          {
+            "zone": "Decidous_forest",
+            "n_called": 336,
+            "observed_carriers": 2,
+            "observed_noncarriers": 334,
+            "expected_carriers": 3.19155672823219,
+            "expected_noncarriers": 332.8084432717678
+          },
+          {
+            "zone": "Guinea_savanna",
+            "n_called": 1330,
+            "observed_carriers": 15,
+            "observed_noncarriers": 1315,
+            "expected_carriers": 12.633245382585752,
+            "expected_noncarriers": 1317.3667546174142
+          },
+          {
+            "zone": "Transitional_zone",
+            "n_called": 25,
+            "observed_carriers": 0,
+            "observed_noncarriers": 25,
+            "expected_carriers": 0.23746701846965698,
+            "expected_noncarriers": 24.76253298153034
+          }
+        ],
+        "minimum_expected": 0.23746701846965698,
+        "cells_expected_below_5": 3,
+        "cells_expected_below_1": 1,
+        "n_margins_reconcile": true,
+        "carrier_margins_reconcile": true
+      },
+      {
+        "gene": "pfdhps",
+        "codon": 581,
+        "label": "Ala581Gly",
+        "n_called": 1890,
+        "carriers": 26,
+        "saved_asymptotic_p_value": 0.0008022120664447233,
+        "cells": [
+          {
+            "zone": "Coastal_savanna",
+            "n_called": 202,
+            "observed_carriers": 7,
+            "observed_noncarriers": 195,
+            "expected_carriers": 2.778835978835979,
+            "expected_noncarriers": 199.22116402116401
+          },
+          {
+            "zone": "Decidous_forest",
+            "n_called": 336,
+            "observed_carriers": 9,
+            "observed_noncarriers": 327,
+            "expected_carriers": 4.622222222222222,
+            "expected_noncarriers": 331.3777777777778
+          },
+          {
+            "zone": "Guinea_savanna",
+            "n_called": 1327,
+            "observed_carriers": 9,
+            "observed_noncarriers": 1318,
+            "expected_carriers": 18.255026455026456,
+            "expected_noncarriers": 1308.7449735449736
+          },
+          {
+            "zone": "Transitional_zone",
+            "n_called": 25,
+            "observed_carriers": 1,
+            "observed_noncarriers": 24,
+            "expected_carriers": 0.3439153439153439,
+            "expected_noncarriers": 24.656084656084655
+          }
+        ],
+        "minimum_expected": 0.3439153439153439,
+        "cells_expected_below_5": 3,
+        "cells_expected_below_1": 1,
+        "n_margins_reconcile": true,
+        "carrier_margins_reconcile": true
+      }
+    ],
+    "p_values_recomputed": false,
+    "interpretation": "Sparse expected cells raise an asymptotic-approximation concern; this checker does not establish the exact p-values."
+  },
+  "marker_test_inventory": {
+    "rows_with_numeric_p_values": 50,
+    "distinct_tested_codons": 24,
+    "note": "Includes complementary residue tests; this inventory does not define a multiplicity family."
+  },
+  "limits": [
+    "No inferential pipeline rerun, installation, network call or scientific source edit.",
+    "Local snapshot checks do not establish remote final input byte identity.",
+    "Sparse-cell evidence is arithmetic only; no exact or resampling test was run."
+  ]
+}

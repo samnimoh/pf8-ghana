@@ -1,0 +1,219 @@
+interpreter: python (Python 3.10.22)
+
+[1;34m######## STAGE 4 — Prepare callset ########[0m
+
+============================================================
+  STEP 4a — prepare the core-genome genotype matrix
+============================================================
+Using QC-passing samples from ghana_samples_qc_pass.csv (2,017 samples)
+Using cached Zarr store /media/biodataA/pf8/gyadu/interim/pf8_ghana.zarr (14 contigs)
+
+Callset: 14 contigs x 6,653 samples
+  Pf3D7_01_v3          43,547 variants   AD+DP+GQ
+  Pf3D7_02_v3          74,672 variants   AD+DP+GQ
+  Pf3D7_03_v3          94,664 variants   AD+DP+GQ
+  Pf3D7_04_v3          93,492 variants   AD+DP+GQ
+  Pf3D7_05_v3         132,227 variants   AD+DP+GQ
+  Pf3D7_06_v3         125,290 variants   AD+DP+GQ
+  Pf3D7_07_v3         123,891 variants   AD+DP+GQ
+  Pf3D7_08_v3         124,156 variants   AD+DP+GQ
+  Pf3D7_09_v3         144,710 variants   AD+DP+GQ
+  Pf3D7_10_v3         151,929 variants   AD+DP+GQ
+  Pf3D7_11_v3         199,485 variants   AD+DP+GQ
+  Pf3D7_12_v3         211,459 variants   AD+DP+GQ
+  Pf3D7_13_v3         308,358 variants   AD+DP+GQ
+  Pf3D7_14_v3         362,146 variants   AD+DP+GQ
+  TOTAL             2,190,026 variants
+
+Callset: 2,190,026 variants x 6,653 samples
+
+============================================================
+  Variant filtering
+============================================================
+  FILTER=PASS                   2,190,026 retained
+  SNP only                      2,190,026 retained
+  biallelic                     2,190,026 retained
+  No core-region BED found in data/ — subtelomeric var/rifin
+  regions are NOT excluded. Genotyping there is unreliable and
+  will dominate Step 8's outlier list. Supply pf_core_regions.bed.
+
+Surviving variants per contig:
+chrom
+Pf3D7_01_v3     43547
+Pf3D7_02_v3     74672
+Pf3D7_03_v3     94664
+Pf3D7_04_v3     93492
+Pf3D7_05_v3    132227
+Pf3D7_06_v3    125290
+Pf3D7_07_v3    123891
+Pf3D7_08_v3    124156
+Pf3D7_09_v3    144710
+Pf3D7_10_v3    151929
+Pf3D7_11_v3    199485
+Pf3D7_12_v3    211459
+Pf3D7_13_v3    308358
+Pf3D7_14_v3    362146
+
+Loading 2,190,026 variants into memory (contig by contig)...
+In-memory genotype array: (2190026, 6653, 2), 29140 MB
+
+============================================================
+  Genotype-level masking
+============================================================
+  DP < 5: 3,709,090,355 calls
+  Called genotypes: 12,540,727,880 -> 10,845,661,093 (13.52% masked)
+
+============================================================
+  Sample alignment
+============================================================
+Genotype columns reordered to match the metadata: 2017 samples
+
+============================================================
+  Mixed calls
+============================================================
+Heterozygous call rate: 0.0000
+P. falciparum is haploid in the human host; heterozygous calls
+indicate polyclonal infection, not true heterozygosity.
+  20,000/2,190,026 SNPs  40,000/2,190,026 SNPs  60,000/2,190,026 SNPs  80,000/2,190,026 SNPs  100,000/2,190,026 SNPs  120,000/2,190,026 SNPs  140,000/2,190,026 SNPs  160,000/2,190,026 SNPs  180,000/2,190,026 SNPs  200,000/2,190,026 SNPs  220,000/2,190,026 SNPs  240,000/2,190,026 SNPs  260,000/2,190,026 SNPs  280,000/2,190,026 SNPs  300,000/2,190,026 SNPs  320,000/2,190,026 SNPs  340,000/2,190,026 SNPs  360,000/2,190,026 SNPs  380,000/2,190,026 SNPs  400,000/2,190,026 SNPs  420,000/2,190,026 SNPs  440,000/2,190,026 SNPs  460,000/2,190,026 SNPs  480,000/2,190,026 SNPs  500,000/2,190,026 SNPs  520,000/2,190,026 SNPs  540,000/2,190,026 SNPs  560,000/2,190,026 SNPs  580,000/2,190,026 SNPs  600,000/2,190,026 SNPs  620,000/2,190,026 SNPs  640,000/2,190,026 SNPs  660,000/2,190,026 SNPs  680,000/2,190,026 SNPs  700,000/2,190,026 SNPs  720,000/2,190,026 SNPs  740,000/2,190,026 SNPs  760,000/2,190,026 SNPs  780,000/2,190,026 SNPs  800,000/2,190,026 SNPs  820,000/2,190,026 SNPs  840,000/2,190,026 SNPs  860,000/2,190,026 SNPs  880,000/2,190,026 SNPs  900,000/2,190,026 SNPs  920,000/2,190,026 SNPs  940,000/2,190,026 SNPs  960,000/2,190,026 SNPs  980,000/2,190,026 SNPs  1,000,000/2,190,026 SNPs  1,020,000/2,190,026 SNPs  1,040,000/2,190,026 SNPs  1,060,000/2,190,026 SNPs  1,080,000/2,190,026 SNPs  1,100,000/2,190,026 SNPs  1,120,000/2,190,026 SNPs  1,140,000/2,190,026 SNPs  1,160,000/2,190,026 SNPs  1,180,000/2,190,026 SNPs  1,200,000/2,190,026 SNPs  1,220,000/2,190,026 SNPs  1,240,000/2,190,026 SNPs  1,260,000/2,190,026 SNPs  1,280,000/2,190,026 SNPs  1,300,000/2,190,026 SNPs  1,320,000/2,190,026 SNPs  1,340,000/2,190,026 SNPs  1,360,000/2,190,026 SNPs  1,380,000/2,190,026 SNPs  1,400,000/2,190,026 SNPs  1,420,000/2,190,026 SNPs  1,440,000/2,190,026 SNPs  1,460,000/2,190,026 SNPs  1,480,000/2,190,026 SNPs  1,500,000/2,190,026 SNPs  1,520,000/2,190,026 SNPs  1,540,000/2,190,026 SNPs  1,560,000/2,190,026 SNPs  1,580,000/2,190,026 SNPs  1,600,000/2,190,026 SNPs  1,620,000/2,190,026 SNPs  1,640,000/2,190,026 SNPs  1,660,000/2,190,026 SNPs  1,680,000/2,190,026 SNPs  1,700,000/2,190,026 SNPs  1,720,000/2,190,026 SNPs  1,740,000/2,190,026 SNPs  1,760,000/2,190,026 SNPs  1,780,000/2,190,026 SNPs  1,800,000/2,190,026 SNPs  1,820,000/2,190,026 SNPs  1,840,000/2,190,026 SNPs  1,860,000/2,190,026 SNPs  1,880,000/2,190,026 SNPs  1,900,000/2,190,026 SNPs  1,920,000/2,190,026 SNPs  1,940,000/2,190,026 SNPs  1,960,000/2,190,026 SNPs  1,980,000/2,190,026 SNPs  2,000,000/2,190,026 SNPs  2,020,000/2,190,026 SNPs  2,040,000/2,190,026 SNPs  2,060,000/2,190,026 SNPs  2,080,000/2,190,026 SNPs  2,100,000/2,190,026 SNPs  2,120,000/2,190,026 SNPs  2,140,000/2,190,026 SNPs  2,160,000/2,190,026 SNPs  2,180,000/2,190,026 SNPs  2,190,026/2,190,026 SNPs
+Mixed calls resolved by read depth: 194,167
+  -> REF (more REF reads)       129,665
+  -> ALT (more ALT reads)        55,582
+  -> missing (tied)               8,920
+
+============================================================
+  Missingness and MAF
+============================================================
+  variant missingness <= 0.1: 1,634,808
+  dropping 117 high-missingness samples: ['PF0031-C', 'PF0050-C', 'PF0129-C', 'PF0149-C', 'PF0163-C', 'PF0405-C', 'PF0692-C', 'PF1223-CW']
+  MAF >= 0.05: 3,359
+
+============================================================
+  Output
+============================================================
+Final matrix: 3,359 SNPs x 1,900 samples
+
+SNPs per chromosome:
+Pf3D7_01_v3     97
+Pf3D7_02_v3    125
+Pf3D7_03_v3    104
+Pf3D7_04_v3    341
+Pf3D7_05_v3    219
+Pf3D7_06_v3    219
+Pf3D7_07_v3    319
+Pf3D7_08_v3    213
+Pf3D7_09_v3    180
+Pf3D7_10_v3    210
+Pf3D7_11_v3    254
+Pf3D7_12_v3    252
+Pf3D7_13_v3    364
+Pf3D7_14_v3    462
+
+Samples per zone:
+zone
+Guinea savanna       1334
+Decidous forest       337
+Coastal savanna       204
+Transitional zone      25
+
+Genotypes -> /media/biodataA/pf8/gyadu/interim/ghana_core_snps.npz
+Canonical sample table -> /media/biodataA/pf8/gyadu/interim/analysis_samples.csv
+Every step from here reads that table, so sample order is fixed once.
+
+[1;34m######## STAGE 4 — Pairwise FST ########[0m
+
+============================================================
+  STEP 4b — pairwise Hudson FST
+============================================================
+3,359 SNPs x 1,900 samples
+
+Zones analysed (4):
+  Coastal savanna              n = 204
+  Decidous forest              n = 337
+  Guinea savanna               n = 1334
+  Transitional zone            n = 25
+
+Allele counts cached -> /media/biodataA/pf8/gyadu/interim/allele_counts_by_zone.npz
+Zone ordering fixed -> /media/biodataA/pf8/gyadu/interim/zone_order.txt
+
+============================================================
+  Pairwise estimates
+============================================================
+  Coastal savanna        vs Decidous forest         Fst =  0.0005  (SE 0.0001)
+  Coastal savanna        vs Guinea savanna          Fst =  0.0024  (SE 0.0005)
+  Coastal savanna        vs Transitional zone       Fst =  0.0012  (SE 0.0008)
+  Decidous forest        vs Guinea savanna          Fst =  0.0013  (SE 0.0003)
+  Decidous forest        vs Transitional zone       Fst =  0.0012  (SE 0.0008)
+  Guinea savanna         vs Transitional zone       Fst =  0.0003  (SE 0.0007)
+
+============================================================
+  Output
+============================================================
+  /media/biodataA/pf8/gyadu/results/fst_matrix.npy
+  /media/biodataA/pf8/gyadu/results/fst_matrix.csv
+  /media/biodataA/pf8/gyadu/results/fst_pairwise.csv
+  /media/biodataA/pf8/gyadu/figures/fst_heatmap.png
+
+Maximum pairwise Fst: 0.0024
+Within-country Fst for P. falciparum sits below 0.05 routinely. Read
+the ranking of pairs, not whether any value clears a threshold.
+stage 5 started -> logs/stage5.log
+stage 6 started -> logs/stage6.log
+stage 7 started -> logs/stage7.log
+stage 8 started -> logs/stage8.log
+stage 5 finished
+stage 6 finished
+stage 7 finished
+stage 8 finished
+
+[1;34m######## STAGE 9 — Annotate outliers ########[0m
+
+============================================================
+  STEP 9 — functional annotation via PlasmoDB
+============================================================
+Outlier SNPs: 15
+Contig names shared between BED and GFF: 9
+GFF features matching 'gene': 5,720 -> plasmodb_genes.gff
+
+$ bedtools intersect -a /media/biodataA/pf8/gyadu/interim/outlier_snps_padded.bed -b /media/biodataA/pf8/gyadu/interim/plasmodb_genes.gff -wa -wb
+
+============================================================
+  Annotated outliers
+============================================================
+13 SNP-gene overlaps across 11 genes
+
+Top 25 genes by maximum XtX:
+      gene_id gene_name                                          product  n_outlier_snps   max_xtx
+PF3D7_0301700      PTP7                    EMP1 trafficking protein PTP7               1 26.476542
+PF3D7_0629500      AAT1                      amino acid transporter AAT1               2 24.436056
+PF3D7_0824400       NT2                         nucleoside transporter 2               1 21.968650
+PF3D7_0424700   FIKK4.2   serine/threonine protein kinase%2C FIKK family               1 21.522430
+PF3D7_0501200    PIESP2    parasite-infected erythrocyte surface protein               1 18.021342
+PF3D7_1126900     SNRPF    small nuclear ribonucleoprotein F%2C putative               1 14.008327
+PF3D7_0935500    GEXP22  Plasmodium exported protein%2C unknown function               1 12.307836
+PF3D7_0215100                       RING zinc finger protein%2C putative               1 12.177790
+PF3D7_0824200           conserved Plasmodium protein%2C unknown function               1 12.068880
+PF3D7_0831400            Plasmodium exported protein%2C unknown function               2 12.043084
+PF3D7_0215300      ACS8                              acyl-CoA synthetase               1 11.900550
+
+============================================================
+  Known antimalarial resistance loci
+============================================================
+  None recovered.
+  Absence is informative but ambiguous: it may reflect genuinely
+  weak recent selection, or simply insufficient power at this
+  sample size and zone count.
+
+  Not in the outlier set: pfcrt (PF3D7_0709000), pfmdr1 (PF3D7_0523000), pfdhfr (PF3D7_0417200), pfdhps (PF3D7_0810800), pfk13 (PF3D7_1343700), pfmdr2 (PF3D7_1447900), pfcoronin (PF3D7_1251200), pfap2mu (PF3D7_1218300)
+
+============================================================
+  Antigenic variation and invasion gene families
+============================================================
+  No outlier fell in a recognised antigenic or invasion family.
+
+Raw intersection -> /media/biodataA/pf8/gyadu/results/outliers_annotated.txt
+Gene summary     -> /media/biodataA/pf8/gyadu/results/outlier_genes.csv
+
+[1;32mPipeline finished in 00:41:01[0m
+Figures : /media/biodataA/pf8/gyadu/figures
+Results : /media/biodataA/pf8/gyadu/results
+RUN_EXIT=0

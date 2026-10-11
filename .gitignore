@@ -1,0 +1,6 @@
+# Large upstream snapshots — reproducible from the server, not versioned here
+evaluation/server_snapshot/results/baypass/*.out
+evaluation/server_snapshot/**/*.npy
+
+# OS noise
+.DS_Store

@@ -1,0 +1,163 @@
+
+=================================================================
+  STEP 3a — fetch the Ghana callset from the Pf8 Zarr on Sanger
+=================================================================
+Reading sample IDs and variant metadata from the remote store...
+  211 MB in 17s
+Samples: 6,653 of 33,325 (from ghana_samples.txt)
+Variants: 12,493,205 in Pf8, 2,190,026 PASS biallelic SNPs
+Writing to /media/biodataA/pf8/gyadu/interim/pf8_ghana.zarr.partial
+  Pf3D7_01_v3       43,547 SNPs
+  Pf3D7_02_v3       74,672 SNPs
+  Pf3D7_03_v3       94,664 SNPs
+  Pf3D7_04_v3       93,492 SNPs
+  Pf3D7_05_v3      132,227 SNPs
+  Pf3D7_06_v3      125,290 SNPs
+  Pf3D7_07_v3      123,891 SNPs
+  Pf3D7_08_v3      124,156 SNPs
+  Pf3D7_09_v3      144,710 SNPs
+  Pf3D7_10_v3      151,929 SNPs
+  Pf3D7_11_v3      199,485 SNPs
+  Pf3D7_12_v3      211,459 SNPs
+  Pf3D7_13_v3      308,358 SNPs
+  Pf3D7_14_v3      362,146 SNPs
+
+Source chunks: 95 variant x 77 sample x 4 fields; 0 variant chunks already done, 95 to go. 8 parallel downloads.
+
+[  1/95] chunk   0 Pf3D7_01_v3:  11,783 SNPs,   2889 MB in  110s | total    2.9 GB at 26.2 MB/s | ETA  2.9 h
+[  2/95] chunk   1 Pf3D7_01_v3:  23,317 SNPs,   3218 MB in  128s | total    6.1 GB at 25.6 MB/s | ETA  3.1 h
+[  3/95] chunk   2 Pf3D7_01_v3:   8,447 SNPs,   2634 MB in  106s | total    8.7 GB at 25.4 MB/s | ETA  2.9 h
+[  4/95] chunk   3 Pf3D7_02_v3:  16,723 SNPs,   3387 MB in  136s | total   12.1 GB at 25.3 MB/s | ETA  3.0 h
+[  5/95] chunk   4 Pf3D7_02_v3:  28,968 SNPs,   3514 MB in  142s | total   15.6 GB at 25.1 MB/s | ETA  3.1 h
+[  6/95] chunk   5 Pf3D7_02_v3:  24,488 SNPs,   3207 MB in  135s | total   18.8 GB at 24.9 MB/s | ETA  3.1 h
+[  7/95] chunk   6 Pf3D7_02_v3:   4,493 SNPs,   2439 MB in   99s | total   21.3 GB at 24.9 MB/s | ETA  3.0 h
+[  8/95] chunk   7 Pf3D7_03_v3:  23,411 SNPs,   3226 MB in  123s | total   24.5 GB at 25.0 MB/s | ETA  3.0 h
+[  9/95] chunk   8 Pf3D7_03_v3:  27,091 SNPs,   3420 MB in  131s | total   27.9 GB at 25.2 MB/s | ETA  2.9 h
+[ 10/95] chunk   9 Pf3D7_03_v3:  27,819 SNPs,   3268 MB in  134s | total   31.2 GB at 25.1 MB/s | ETA  2.9 h
+[ 11/95] chunk  10 Pf3D7_03_v3:  16,343 SNPs,   2852 MB in  112s | total   34.1 GB at 25.1 MB/s | ETA  2.9 h
+[ 12/95] chunk  11 Pf3D7_04_v3:   8,778 SNPs,   2898 MB in  107s | total   37.0 GB at 25.3 MB/s | ETA  2.8 h
+[ 13/95] chunk  12 Pf3D7_04_v3:  27,037 SNPs,   3189 MB in  128s | total   40.1 GB at 25.2 MB/s | ETA  2.8 h
+[ 14/95] chunk  13 Pf3D7_04_v3:  18,328 SNPs,   3246 MB in  126s | total   43.4 GB at 25.3 MB/s | ETA  2.8 h
+[ 15/95] chunk  14 Pf3D7_04_v3:  22,817 SNPs,   3113 MB in  128s | total   46.5 GB at 25.2 MB/s | ETA  2.7 h
+[ 16/95] chunk  15 Pf3D7_04_v3:  16,532 SNPs,   3057 MB in  122s | total   49.6 GB at 25.2 MB/s | ETA  2.7 h
+[ 17/95] chunk  16 Pf3D7_05_v3:  22,228 SNPs,   3185 MB in  122s | total   52.7 GB at 25.2 MB/s | ETA  2.7 h
+[ 18/95] chunk  17 Pf3D7_05_v3:  30,113 SNPs,   3506 MB in  134s | total   56.2 GB at 25.3 MB/s | ETA  2.6 h
+[ 19/95] chunk  18 Pf3D7_05_v3:  25,182 SNPs,   3340 MB in  120s | total   59.6 GB at 25.4 MB/s | ETA  2.6 h
+[ 20/95] chunk  19 Pf3D7_05_v3:  28,771 SNPs,   3248 MB in  134s | total   62.8 GB at 25.4 MB/s | ETA  2.6 h
+[ 21/95] chunk  20 Pf3D7_05_v3:  25,380 SNPs,   3354 MB in  119s | total   66.2 GB at 25.5 MB/s | ETA  2.5 h
+[ 22/95] chunk  21 Pf3D7_05_v3, Pf3D7_06_v3:  15,291 SNPs,   3153 MB in  115s | total   69.3 GB at 25.6 MB/s | ETA  2.5 h
+[ 23/95] chunk  22 Pf3D7_06_v3:  28,158 SNPs,   3394 MB in  134s | total   72.7 GB at 25.6 MB/s | ETA  2.5 h
+[ 24/95] chunk  23 Pf3D7_06_v3:  24,179 SNPs,   3178 MB in  129s | total   75.9 GB at 25.5 MB/s | ETA  2.4 h
+[ 25/95] chunk  24 Pf3D7_06_v3:  26,032 SNPs,   3191 MB in  116s | total   79.1 GB at 25.6 MB/s | ETA  2.4 h
+[ 26/95] chunk  25 Pf3D7_06_v3:  27,099 SNPs,   3193 MB in  125s | total   82.3 GB at 25.6 MB/s | ETA  2.4 h
+[ 27/95] chunk  26 Pf3D7_06_v3:   5,084 SNPs,   2387 MB in   98s | total   84.7 GB at 25.6 MB/s | ETA  2.3 h
+[ 28/95] chunk  27 Pf3D7_07_v3:  20,783 SNPs,   3091 MB in  117s | total   87.8 GB at 25.6 MB/s | ETA  2.3 h
+[ 29/95] chunk  28 Pf3D7_07_v3:  24,736 SNPs,   3321 MB in  122s | total   91.1 GB at 25.6 MB/s | ETA  2.2 h
+[ 30/95] chunk  29 Pf3D7_07_v3:   9,881 SNPs,   3097 MB in  114s | total   94.2 GB at 25.7 MB/s | ETA  2.2 h
+[ 31/95] chunk  30 Pf3D7_07_v3:  29,899 SNPs,   3550 MB in  134s | total   97.7 GB at 25.7 MB/s | ETA  2.2 h
+[ 32/95] chunk  31 Pf3D7_07_v3:  28,358 SNPs,   3130 MB in  114s | total  100.9 GB at 25.8 MB/s | ETA  2.1 h
+[ 33/95] chunk  32 Pf3D7_07_v3:  10,234 SNPs,   2705 MB in  102s | total  103.6 GB at 25.8 MB/s | ETA  2.1 h
+[ 34/95] chunk  33 Pf3D7_08_v3:  20,981 SNPs,   3213 MB in  139s | total  106.8 GB at 25.7 MB/s | ETA  2.1 h
+[ 35/95] chunk  34 Pf3D7_08_v3:  19,017 SNPs,   3197 MB in  115s | total  110.0 GB at 25.8 MB/s | ETA  2.0 h
+[ 36/95] chunk  35 Pf3D7_08_v3:  24,767 SNPs,   3323 MB in  125s | total  113.3 GB at 25.8 MB/s | ETA  2.0 h
+[ 37/95] chunk  36 Pf3D7_08_v3:  21,188 SNPs,   3238 MB in  126s | total  116.5 GB at 25.8 MB/s | ETA  2.0 h
+[ 38/95] chunk  37 Pf3D7_08_v3:  29,308 SNPs,   3086 MB in  118s | total  119.6 GB at 25.8 MB/s | ETA  1.9 h
+[ 39/95] chunk  38 Pf3D7_08_v3:   8,895 SNPs,   2898 MB in  115s | total  122.5 GB at 25.8 MB/s | ETA  1.9 h
+[ 40/95] chunk  39 Pf3D7_09_v3:  16,114 SNPs,   3091 MB in  116s | total  125.6 GB at 25.8 MB/s | ETA  1.9 h
+[ 41/95] chunk  40 Pf3D7_09_v3:  27,479 SNPs,   3137 MB in  124s | total  128.8 GB at 25.8 MB/s | ETA  1.8 h
+[ 42/95] chunk  41 Pf3D7_09_v3:  25,064 SNPs,   3206 MB in  129s | total  132.0 GB at 25.8 MB/s | ETA  1.8 h
+[ 43/95] chunk  42 Pf3D7_09_v3:  26,605 SNPs,   3301 MB in  128s | total  135.3 GB at 25.8 MB/s | ETA  1.8 h
+[ 44/95] chunk  43 Pf3D7_09_v3:  24,871 SNPs,   3249 MB in  125s | total  138.5 GB at 25.8 MB/s | ETA  1.7 h
+[ 45/95] chunk  44 Pf3D7_09_v3:  22,873 SNPs,   3305 MB in  132s | total  141.8 GB at 25.7 MB/s | ETA  1.7 h
+[ 46/95] chunk  45 Pf3D7_09_v3, Pf3D7_10_v3:   3,088 SNPs,   2396 MB in   97s | total  144.2 GB at 25.7 MB/s | ETA  1.7 h
+[ 47/95] chunk  46 Pf3D7_10_v3:  24,771 SNPs,   3221 MB in  126s | total  147.4 GB at 25.7 MB/s | ETA  1.6 h
+[ 48/95] chunk  47 Pf3D7_10_v3:  26,203 SNPs,   3277 MB in  125s | total  150.7 GB at 25.7 MB/s | ETA  1.6 h
+[ 49/95] chunk  48 Pf3D7_10_v3:  27,749 SNPs,   3300 MB in  128s | total  154.0 GB at 25.7 MB/s | ETA  1.6 h
+[ 50/95] chunk  49 Pf3D7_10_v3:  28,191 SNPs,   3260 MB in  119s | total  157.3 GB at 25.8 MB/s | ETA  1.5 h
+[ 51/95] chunk  50 Pf3D7_10_v3:  25,134 SNPs,   3328 MB in  120s | total  160.6 GB at 25.8 MB/s | ETA  1.5 h
+[ 52/95] chunk  51 Pf3D7_10_v3:  18,497 SNPs,   3109 MB in  120s | total  163.7 GB at 25.8 MB/s | ETA  1.5 h
+[ 53/95] chunk  53 Pf3D7_11_v3:  23,590 SNPs,   3234 MB in  119s | total  166.9 GB at 25.8 MB/s | ETA  1.4 h
+[ 54/95] chunk  54 Pf3D7_11_v3:  27,364 SNPs,   3444 MB in  133s | total  170.4 GB at 25.8 MB/s | ETA  1.4 h
+[ 55/95] chunk  55 Pf3D7_11_v3:  27,196 SNPs,   3394 MB in  135s | total  173.8 GB at 25.8 MB/s | ETA  1.4 h
+[ 56/95] chunk  56 Pf3D7_11_v3:  24,980 SNPs,   3335 MB in  125s | total  177.1 GB at 25.8 MB/s | ETA  1.3 h
+[ 57/95] chunk  57 Pf3D7_11_v3:  29,995 SNPs,   3307 MB in  123s | total  180.4 GB at 25.8 MB/s | ETA  1.3 h
+[ 58/95] chunk  58 Pf3D7_11_v3:  28,524 SNPs,   3025 MB in  114s | total  183.5 GB at 25.9 MB/s | ETA  1.3 h
+[ 59/95] chunk  59 Pf3D7_11_v3:  24,891 SNPs,   3091 MB in  113s | total  186.5 GB at 25.9 MB/s | ETA  1.2 h
+[ 60/95] chunk  60 Pf3D7_11_v3:  12,945 SNPs,   2896 MB in  116s | total  189.4 GB at 25.9 MB/s | ETA  1.2 h
+[ 61/95] chunk  61 Pf3D7_12_v3:  23,163 SNPs,   3278 MB in  120s | total  192.7 GB at 25.9 MB/s | ETA  1.2 h
+[ 62/95] chunk  62 Pf3D7_12_v3:  29,745 SNPs,   3145 MB in  119s | total  195.9 GB at 25.9 MB/s | ETA  1.1 h
+[ 63/95] chunk  63 Pf3D7_12_v3:  23,477 SNPs,   3313 MB in  125s | total  199.2 GB at 25.9 MB/s | ETA  1.1 h
+[ 64/95] chunk  64 Pf3D7_12_v3:  27,110 SNPs,   3157 MB in  122s | total  202.3 GB at 25.9 MB/s | ETA  1.1 h
+[ 65/95] chunk  65 Pf3D7_12_v3:  25,392 SNPs,   3313 MB in  129s | total  205.6 GB at 25.9 MB/s | ETA  1.0 h
+[ 66/95] chunk  66 Pf3D7_12_v3:  28,353 SNPs,   3285 MB in  123s | total  208.9 GB at 25.9 MB/s | ETA  1.0 h
+[ 67/95] chunk  67 Pf3D7_12_v3:  18,806 SNPs,   3155 MB in  124s | total  212.1 GB at 25.9 MB/s | ETA  1.0 h
+[ 68/95] chunk  68 Pf3D7_12_v3:  23,198 SNPs,   3238 MB in  125s | total  215.3 GB at 25.9 MB/s | ETA  0.9 h
+[ 69/95] chunk  69 Pf3D7_12_v3:  12,215 SNPs,   3000 MB in  114s | total  218.3 GB at 25.9 MB/s | ETA  0.9 h
+[ 70/95] chunk  70 Pf3D7_13_v3:  19,850 SNPs,   3121 MB in  119s | total  221.4 GB at 25.9 MB/s | ETA  0.8 h
+[ 71/95] chunk  71 Pf3D7_13_v3:  29,557 SNPs,   3105 MB in  123s | total  224.5 GB at 25.9 MB/s | ETA  0.8 h
+[ 72/95] chunk  72 Pf3D7_13_v3:  29,497 SNPs,   3192 MB in  126s | total  227.7 GB at 25.9 MB/s | ETA  0.8 h
+[ 73/95] chunk  73 Pf3D7_13_v3:  28,971 SNPs,   3368 MB in  124s | total  231.1 GB at 25.9 MB/s | ETA  0.7 h
+[ 74/95] chunk  74 Pf3D7_13_v3:  28,058 SNPs,   3263 MB in  128s | total  234.4 GB at 25.9 MB/s | ETA  0.7 h
+[ 75/95] chunk  75 Pf3D7_13_v3:  27,839 SNPs,   3537 MB in  136s | total  237.9 GB at 25.9 MB/s | ETA  0.7 h
+[ 76/95] chunk  76 Pf3D7_13_v3:  28,662 SNPs,   3327 MB in  123s | total  241.2 GB at 25.9 MB/s | ETA  0.6 h
+[ 77/95] chunk  77 Pf3D7_13_v3:  27,911 SNPs,   3205 MB in  118s | total  244.4 GB at 25.9 MB/s | ETA  0.6 h
+[ 78/95] chunk  78 Pf3D7_13_v3:  28,604 SNPs,   3194 MB in  121s | total  247.6 GB at 25.9 MB/s | ETA  0.6 h
+[ 79/95] chunk  79 Pf3D7_13_v3:  29,121 SNPs,   3258 MB in  126s | total  250.9 GB at 25.9 MB/s | ETA  0.5 h
+[ 80/95] chunk  80 Pf3D7_13_v3:  27,937 SNPs,   3301 MB in  119s | total  254.2 GB at 26.0 MB/s | ETA  0.5 h
+[ 81/95] chunk  81 Pf3D7_13_v3, Pf3D7_14_v3:   4,195 SNPs,   2865 MB in  106s | total  257.1 GB at 26.0 MB/s | ETA  0.5 h
+[ 82/95] chunk  82 Pf3D7_14_v3:  27,237 SNPs,   3226 MB in  116s | total  260.3 GB at 26.0 MB/s | ETA  0.4 h
+[ 83/95] chunk  83 Pf3D7_14_v3:  26,108 SNPs,   3142 MB in  122s | total  263.4 GB at 26.0 MB/s | ETA  0.4 h
+[ 84/95] chunk  84 Pf3D7_14_v3:  28,610 SNPs,   3194 MB in  124s | total  266.6 GB at 26.0 MB/s | ETA  0.4 h
+[ 85/95] chunk  85 Pf3D7_14_v3:  24,510 SNPs,   3249 MB in  122s | total  269.9 GB at 26.0 MB/s | ETA  0.3 h
+[ 86/95] chunk  86 Pf3D7_14_v3:  27,291 SNPs,   3318 MB in  124s | total  273.2 GB at 26.0 MB/s | ETA  0.3 h
+[ 87/95] chunk  87 Pf3D7_14_v3:  29,450 SNPs,   3202 MB in  124s | total  276.4 GB at 26.0 MB/s | ETA  0.3 h
+[ 88/95] chunk  88 Pf3D7_14_v3:  31,867 SNPs,   3207 MB in  127s | total  279.6 GB at 26.0 MB/s | ETA  0.2 h
+[ 89/95] chunk  89 Pf3D7_14_v3:  28,269 SNPs,   3263 MB in  120s | total  282.9 GB at 26.0 MB/s | ETA  0.2 h
+[ 90/95] chunk  90 Pf3D7_14_v3:  28,805 SNPs,   3170 MB in  120s | total  286.0 GB at 26.0 MB/s | ETA  0.2 h
+[ 91/95] chunk  91 Pf3D7_14_v3:  24,652 SNPs,   3017 MB in  119s | total  289.0 GB at 26.0 MB/s | ETA  0.1 h
+[ 92/95] chunk  92 Pf3D7_14_v3:  30,640 SNPs,   3293 MB in  118s | total  292.3 GB at 26.0 MB/s | ETA  0.1 h
+[ 93/95] chunk  93 Pf3D7_14_v3:  24,954 SNPs,   3089 MB in  118s | total  295.4 GB at 26.0 MB/s | ETA  0.1 h
+[ 94/95] chunk  94 Pf3D7_14_v3:  27,100 SNPs,   3195 MB in  121s | total  298.6 GB at 26.0 MB/s | ETA  0.0 h
+[ 95/95] chunk  95 Pf3D7_14_v3:     809 SNPs,    996 MB in   49s | total  299.6 GB at 26.0 MB/s | ETA  0.0 h
+
+============================================================
+  Done
+============================================================
+Store  : /media/biodataA/pf8/gyadu/interim/pf8_ghana.zarr
+Size   : 20.57 GB on disk
+Fetched: 299.8 GB in 3.20 h
+Steps 3b and 4a will use this store directly; no VCF is needed.
+
+============================================================================================
+  Validation: pf8_ghana.zarr vs Pf8_Ghana_Pf3D7_10_v3.vcf.gz (Pf3D7_10_v3:1200001-1240000)
+============================================================================================
+  reading the VCF region (tabix + scikit-allel)...
+  PASS biallelic SNPs: VCF 3,957, store 3,957
+  GT: 52,651,842 values compared, 0 differ
+  AD: 52,651,842 values compared, 0 differ
+  DP: 26,325,921 values compared, 0 differ
+  GQ: 26,325,921 values compared, 0 differ
+  PASS: store matches the VCF exactly.
+FETCH_EXIT=0
+
+
+  Validation: pf8_ghana.zarr vs Pf8_Ghana_Pf3D7_01_v3.vcf.gz (Pf3D7_01_v3:110001-145000)
+  reading the VCF region (tabix + scikit-allel)...
+  PASS biallelic SNPs: VCF 3,470, store 3,470
+  GT: 46,171,820 values compared, 0 differ
+  AD: 46,171,820 values compared, 0 differ
+  DP: 23,085,910 values compared, 0 differ
+  GQ: 23,085,910 values compared, 0 differ
+  PASS: store matches the VCF exactly.
+EXIT=0
+
+
+  Validation: pf8_ghana.zarr vs Pf8_Ghana_Pf3D7_13_v3.vcf.gz (Pf3D7_13_v3:1000001-1040000)
+  reading the VCF region (tabix + scikit-allel)...
+  PASS biallelic SNPs: VCF 4,378, store 4,378
+  GT: 58,253,668 values compared, 0 differ
+  AD: 58,253,668 values compared, 0 differ
+  DP: 29,126,834 values compared, 0 differ
+  GQ: 29,126,834 values compared, 0 differ
+  PASS: store matches the VCF exactly.
+EXIT=0

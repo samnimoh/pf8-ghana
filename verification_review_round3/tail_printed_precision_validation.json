@@ -1,0 +1,229 @@
+{
+  "generated_utc": "2026-10-11T03:47:56.909751+00:00",
+  "scope": "Displayed mean/SE arithmetic; no scientific pipeline or executable-provenance validation.",
+  "runtime": {
+    "executable": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "version": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "third_party_dependencies": []
+  },
+  "inputs": [
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/results/treemix_treeout_all.txt",
+      "sha256": "94e92b21522f723cab4bb652272a72fd28b333deefed9839ffad62bed22453b8"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/VERIFICATION_NOTES.md",
+      "sha256": "317090e7af1a34aae64f0011aae7b1280a180eed08231eb5b1ae066d83e1ffb5"
+    }
+  ],
+  "checker": {
+    "path": "/Users/samnimoh/Desktop/chromo/verification_review_round3/check_tail_printed_precision.py",
+    "sha256": "fb6aead7692e8a26bd02f86e0a076c4fc68593bfa6fd756a019a67e58858d066"
+  },
+  "new_notes_claim_present": true,
+  "edges": [
+    {
+      "model": 1,
+      "edge": 1,
+      "source_line": 5,
+      "displayed_p": "2.22045e-15",
+      "z_from_displayed_mean_se": 7.842867905575088,
+      "stable_tail": 2.201855843040108e-15,
+      "rounded_cdf_subtraction_tail": 2.220446049250313e-15,
+      "subtraction_at_displayed_p_precision": "2.22045e-15",
+      "matches_displayed_precision_or_zero_sentinel": true,
+      "subtraction_matches_3sf_or_zero_sentinel": true,
+      "sentinel_contains_stable_tail": null
+    },
+    {
+      "model": 2,
+      "edge": 1,
+      "source_line": 8,
+      "displayed_p": "0.000747653",
+      "z_from_displayed_mean_se": 3.1755867171010013,
+      "stable_tail": 0.0007476691038622458,
+      "rounded_cdf_subtraction_tail": 0.0007476691038622585,
+      "subtraction_at_displayed_p_precision": "0.000747669",
+      "matches_displayed_precision_or_zero_sentinel": false,
+      "subtraction_matches_3sf_or_zero_sentinel": true,
+      "sentinel_contains_stable_tail": null
+    },
+    {
+      "model": 2,
+      "edge": 2,
+      "source_line": 9,
+      "displayed_p": "3.33067e-16",
+      "z_from_displayed_mean_se": 8.060345215602217,
+      "stable_tail": 3.8039644839788417e-16,
+      "rounded_cdf_subtraction_tail": 3.3306690738754696e-16,
+      "subtraction_at_displayed_p_precision": "3.33067e-16",
+      "matches_displayed_precision_or_zero_sentinel": true,
+      "subtraction_matches_3sf_or_zero_sentinel": true,
+      "sentinel_contains_stable_tail": null
+    },
+    {
+      "model": 3,
+      "edge": 1,
+      "source_line": 12,
+      "displayed_p": "0.00099053",
+      "z_from_displayed_mean_se": 3.093061031351708,
+      "stable_tail": 0.000990516948221564,
+      "rounded_cdf_subtraction_tail": 0.0009905169482216092,
+      "subtraction_at_displayed_p_precision": "0.00099052",
+      "matches_displayed_precision_or_zero_sentinel": false,
+      "subtraction_matches_3sf_or_zero_sentinel": true,
+      "sentinel_contains_stable_tail": null
+    },
+    {
+      "model": 3,
+      "edge": 2,
+      "source_line": 13,
+      "displayed_p": "<2.22507e-308",
+      "z_from_displayed_mean_se": 10.528790688288398,
+      "stable_tail": 3.1823435628607375e-26,
+      "rounded_cdf_subtraction_tail": 0.0,
+      "subtraction_at_displayed_p_precision": "0",
+      "matches_displayed_precision_or_zero_sentinel": true,
+      "subtraction_matches_3sf_or_zero_sentinel": true,
+      "sentinel_contains_stable_tail": false
+    },
+    {
+      "model": 3,
+      "edge": 3,
+      "source_line": 14,
+      "displayed_p": "0.327622",
+      "z_from_displayed_mean_se": 0.4464888271579721,
+      "stable_tail": 0.3276220907469932,
+      "rounded_cdf_subtraction_tail": 0.3276220907469932,
+      "subtraction_at_displayed_p_precision": "0.327622",
+      "matches_displayed_precision_or_zero_sentinel": true,
+      "subtraction_matches_3sf_or_zero_sentinel": true,
+      "sentinel_contains_stable_tail": null
+    },
+    {
+      "model": 4,
+      "edge": 1,
+      "source_line": 17,
+      "displayed_p": "0.00195576",
+      "z_from_displayed_mean_se": 2.885210861847853,
+      "stable_tail": 0.0019557578887853416,
+      "rounded_cdf_subtraction_tail": 0.0019557578887853255,
+      "subtraction_at_displayed_p_precision": "0.00195576",
+      "matches_displayed_precision_or_zero_sentinel": true,
+      "subtraction_matches_3sf_or_zero_sentinel": true,
+      "sentinel_contains_stable_tail": null
+    },
+    {
+      "model": 4,
+      "edge": 2,
+      "source_line": 18,
+      "displayed_p": "<2.22507e-308",
+      "z_from_displayed_mean_se": 9.326968047581502,
+      "stable_tail": 5.4471345166819186e-21,
+      "rounded_cdf_subtraction_tail": 0.0,
+      "subtraction_at_displayed_p_precision": "0",
+      "matches_displayed_precision_or_zero_sentinel": true,
+      "subtraction_matches_3sf_or_zero_sentinel": true,
+      "sentinel_contains_stable_tail": false
+    },
+    {
+      "model": 4,
+      "edge": 3,
+      "source_line": 19,
+      "displayed_p": "0.324293",
+      "z_from_displayed_mean_se": 0.45572666286428204,
+      "stable_tail": 0.3242932731560455,
+      "rounded_cdf_subtraction_tail": 0.3242932731560455,
+      "subtraction_at_displayed_p_precision": "0.324293",
+      "matches_displayed_precision_or_zero_sentinel": true,
+      "subtraction_matches_3sf_or_zero_sentinel": true,
+      "sentinel_contains_stable_tail": null
+    },
+    {
+      "model": 4,
+      "edge": 4,
+      "source_line": 20,
+      "displayed_p": "0.496124",
+      "z_from_displayed_mean_se": 0.00971511976782365,
+      "stable_tail": 0.4961242889327769,
+      "rounded_cdf_subtraction_tail": 0.4961242889327768,
+      "subtraction_at_displayed_p_precision": "0.496124",
+      "matches_displayed_precision_or_zero_sentinel": true,
+      "subtraction_matches_3sf_or_zero_sentinel": true,
+      "sentinel_contains_stable_tail": null
+    },
+    {
+      "model": 5,
+      "edge": 1,
+      "source_line": 23,
+      "displayed_p": "0.00421239",
+      "z_from_displayed_mean_se": 2.634548640590085,
+      "stable_tail": 0.004212461587886957,
+      "rounded_cdf_subtraction_tail": 0.0042124615878869065,
+      "subtraction_at_displayed_p_precision": "0.00421246",
+      "matches_displayed_precision_or_zero_sentinel": false,
+      "subtraction_matches_3sf_or_zero_sentinel": true,
+      "sentinel_contains_stable_tail": null
+    },
+    {
+      "model": 5,
+      "edge": 2,
+      "source_line": 24,
+      "displayed_p": "4.44089e-16",
+      "z_from_displayed_mean_se": 8.037665643337348,
+      "stable_tail": 4.57830368494863e-16,
+      "rounded_cdf_subtraction_tail": 4.440892098500626e-16,
+      "subtraction_at_displayed_p_precision": "4.44089e-16",
+      "matches_displayed_precision_or_zero_sentinel": true,
+      "subtraction_matches_3sf_or_zero_sentinel": true,
+      "sentinel_contains_stable_tail": null
+    },
+    {
+      "model": 5,
+      "edge": 3,
+      "source_line": 25,
+      "displayed_p": "0.324973",
+      "z_from_displayed_mean_se": 0.45383771112661836,
+      "stable_tail": 0.3249728193734742,
+      "rounded_cdf_subtraction_tail": 0.3249728193734742,
+      "subtraction_at_displayed_p_precision": "0.324973",
+      "matches_displayed_precision_or_zero_sentinel": true,
+      "subtraction_matches_3sf_or_zero_sentinel": true,
+      "sentinel_contains_stable_tail": null
+    },
+    {
+      "model": 5,
+      "edge": 4,
+      "source_line": 26,
+      "displayed_p": "0.497068",
+      "z_from_displayed_mean_se": 0.007350012928699637,
+      "stable_tail": 0.49706779548219765,
+      "rounded_cdf_subtraction_tail": 0.4970677954821976,
+      "subtraction_at_displayed_p_precision": "0.497068",
+      "matches_displayed_precision_or_zero_sentinel": true,
+      "subtraction_matches_3sf_or_zero_sentinel": true,
+      "sentinel_contains_stable_tail": null
+    },
+    {
+      "model": 5,
+      "edge": 5,
+      "source_line": 27,
+      "displayed_p": "0.495202",
+      "z_from_displayed_mean_se": 0.012026629180143647,
+      "stable_tail": 0.4952021847887895,
+      "rounded_cdf_subtraction_tail": 0.4952021847887895,
+      "subtraction_at_displayed_p_precision": "0.495202",
+      "matches_displayed_precision_or_zero_sentinel": true,
+      "subtraction_matches_3sf_or_zero_sentinel": true,
+      "sentinel_contains_stable_tail": null
+    }
+  ],
+  "summary": {
+    "edge_count": 15,
+    "finite_printed_count": 13,
+    "matches_at_displayed_precision_including_zero_sentinels": 12,
+    "finite_matches_at_displayed_precision": 10,
+    "matches_at_3sf_including_zero_sentinels": 15
+  },
+  "interpretation": "Cancellation explains the tiny printed tails and two zero sentinels. Three moderate p-values differ at the full displayed precision when recomputed from displayed means/SEs; rounding of those inputs may explain the residual. All fifteen are numerically compatible to three significant figures under CDF subtraction. This does not prove all-digit or bitwise reproduction or the generating invocation."
+}

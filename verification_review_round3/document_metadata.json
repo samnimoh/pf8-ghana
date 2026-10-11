@@ -1,0 +1,32 @@
+[
+  {
+    "label": "manuscript",
+    "path": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx",
+    "sha256": "36750beee9beabcdd3d242e14ad724a0063ca413955a7f454d1eec43770c1004",
+    "body_words": 92853,
+    "full_xml_words": 112434,
+    "tables": 52,
+    "paragraphs": 962,
+    "tracked_change_elements": 0
+  },
+  {
+    "label": "article",
+    "path": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.docx",
+    "sha256": "d09d14eea677e18ace50088d58e3e044e4edfe2ad21edb971d59b67305d9d66c",
+    "body_words": 8967,
+    "full_xml_words": 9392,
+    "tables": 4,
+    "paragraphs": 173,
+    "tracked_change_elements": 0
+  },
+  {
+    "label": "supplement",
+    "path": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx",
+    "sha256": "ae4939d322da58099afe4df1c921232b07475dd31927ad42da7391e290275078",
+    "body_words": 93110,
+    "full_xml_words": 112691,
+    "tables": 52,
+    "paragraphs": 966,
+    "tracked_change_elements": 0
+  }
+]

@@ -1,0 +1,34 @@
+
+============================================================
+  STEP 7c — TreeMix summaries
+============================================================
+Run status from Step 7b: /media/biodataA/pf8/gyadu/results/treemix/run_status.tsv
+ m  log_likelihood  variance_explained status  identifiable_4pops
+ 0        89.70420             0.87597     ok                True
+ 1        91.02220             0.93456     ok                True
+ 2        91.48490             0.96334     ok                True
+ 3        91.91260             0.99762     ok               False
+ 4        91.93020             0.99762     ok               False
+ 5        91.93030             0.99761     ok               False
+
+Selected m within 0–2 (identifiable): 2  [no m reached 0.998; smallest m within 0.001 of the best variance explained in 0..2 (0.9633)]
+Selected m within 0–5 (full sweep):   3  [no m reached 0.998; smallest m within 0.001 of the best variance explained in 0..5 (0.9976)]
+Selection -> /media/biodataA/pf8/gyadu/results/treemix/model_selection.json
+
+Residual heatmap drawn for m = 2
+Newick tree -> /media/biodataA/pf8/gyadu/results/treemix/treemix_m2.nwk
+Migration edges (weight, jackknife SE, p):
+  0.136947 NA NA NA Guinea_savanna:0.00152423 Decidous_forest:4.56485e-05
+  0.750646 NA NA NA (Coastal_savanna:4.07551e-05,Decidous_forest:4.56485e-05):0.000375804 Guinea_savanna:0.00152423
+
+Residual heatmap drawn for m = 3
+Newick tree -> /media/biodataA/pf8/gyadu/results/treemix/treemix_m3.nwk
+Migration edges (weight, jackknife SE, p):
+  0.0131254 NA NA NA Guinea_savanna:0.0376292 Decidous_forest:0
+  0.91578 NA NA NA Decidous_forest:0 Guinea_savanna:0.0376292
+  0.0693604 NA NA NA Guinea_savanna:0.0376292 Transitional_zone:0
+
+Positive residuals mark population pairs more closely related than the
+tree alone predicts — candidate destinations for an additional edge.
+
+Figures -> /media/biodataA/pf8/gyadu/figures/treemix_*.png

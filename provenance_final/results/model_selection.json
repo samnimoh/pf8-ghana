@@ -1,0 +1,50 @@
+{
+  "rule": "smallest m with variance explained >= 0.998; otherwise the smallest m within 0.001 of the range's best (plateau)",
+  "variance_explained_threshold": 0.998,
+  "variance_explained_definition": "1 - var(observed - fitted) / var(observed), over off-diagonal (between-population) covariances, as TreeMix's get_f()",
+  "n_populations": 4,
+  "m_succeeded": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "m_skipped": [],
+  "identifiable_max_m": 2,
+  "identifiable_range": {
+    "m_range": [
+      0,
+      2
+    ],
+    "m": 2,
+    "basis": "no m reached 0.998; smallest m within 0.001 of the best variance explained in 0..2 (0.9969)",
+    "variance_explained": 0.9969074981183799,
+    "log_likelihood": 92.232,
+    "m_considered": [
+      0,
+      1,
+      2
+    ]
+  },
+  "full_range": {
+    "m_range": [
+      0,
+      5
+    ],
+    "m": 3,
+    "basis": "smallest m with variance explained >= 0.998",
+    "variance_explained": 0.9996639280697674,
+    "log_likelihood": 92.263,
+    "m_considered": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "note": "With 4 populations TreeMix supports at most ~2 identifiable migration edges. m = 0..5 was run as the method specifies; picks with m > 2 should be interpreted with caution."
+}

@@ -1,0 +1,33 @@
+Page 111 of 196
+[Calculated] Every printed edge p-value is reproduced exactly, and the apparent anomalies are an artefact of 
+how the tail was computed rather than of the data. An earlier version of this paragraph said that five of six 
+values reproduced to three significant figures; that was wrong, and the corrected accounting follows. 
+Recomputing every migration-edge p-value in m = 0 to 5 as a one-sided normal tail from the printed jackknife 
+mean and standard error gives fifteen edges, of which thirteen carry a finite printed value and two print “< 
+2.22507 × 10⁻³⁰⁸”. That figure is exactly DBL_MIN, the smallest normal double-precision float, and it appears 
+at m = 3 edge 2 (z = 10.53, stable tail 3.18 × 10⁻²⁶) and again at m = 4 edge 2 (z = 9.33, stable tail 5.45 × 10⁻²¹). 
+Of the thirteen finite values, ten agree with a numerically stable tail to three significant figures. The other 
+three, and both sentinels, are explained — and reproduced to the last printed digit — by computing the 
+upper tail as 1 − Φ(z) in double precision. Immediately below 1 the doubles are spaced 1.1102 × 10⁻¹⁶ apart, 
+so Φ(z) is quantised to multiples of that spacing and the tail recovered by subtraction can only take those 
+values. At z = 7.843, 8.060 and 8.038 the formulation returns exactly 2.220446 × 10⁻¹⁵, 3.330669 × 10⁻¹⁶ and 
+4.440892 × 10⁻¹⁶ — which are the three printed values to every digit printed — against stable tails of 2.1995 × 
+10⁻¹⁵, 3.8147 × 10⁻¹⁶ and 4.5658 × 10⁻¹⁶. Once the true tail falls below half that spacing, Φ(z) rounds to exactly 
+1.0 and the difference is exactly zero; that happens at z = 9.33 and z = 10.53. This is rounding and 
+cancellation, not underflow of the tail: the true tails there are 5.45 × 10⁻²¹ and 3.18 × 10⁻²⁶, both far above 
+the smallest normal double, and the “< 2.22507 × 10⁻³⁰⁸” string is how TreeMix prints a computed zero rather 
+than evidence that any quantity underflowed. A direct complementary-error-function evaluation would avoid 
+the subtraction entirely. The conclusion is accordingly complete rather than partial. All fifteen printed values, 
+the two zeroes included, are reproduced from the printed mean and standard error through that 
+formulation, which a run that had not computed jackknife standard errors could not have produced, 
+resolving a doubt raised by an earlier script snapshot lacking the -se flag. None of it changes a reported 
+result: both sentinels belong to m = 3 and m = 4, neither of which is reported, and the two values the m = 2 
+choice rests on are 7.48 × 10⁻⁴ and a tail of order 10⁻¹⁶ whose exact digits affect no inference.
+6.8 Genome scan for differentiation outliers
+[Observed] Across the 3,916-SNP matrix, XtX ranged from 2.48 to 26.44 with a median of 3.45. Calibration 
+simulated pseudo-observed SNPs under the estimated population covariance matrix, with pi.maf = 0.05 
+truncating the simulated ancestral frequency rather than applying the observed data's MAF filter, so the 
+pseudo-observed set is not MAF-matched (Section 5.6); this gives a 0.999-quantile threshold of 10.840. 
+Nineteen SNPs (0.49 per cent) exceed it.
+Figure 6.8. BayPass XtX genome scan on the final 3,916-SNP matrix. Left: the observed XtX distribution against the simulated 
+neutral (pseudo-observed) distribution, with the calibrated 0.999-quantile threshold at 10.840 (on-plot label "threshold 10.8"). 

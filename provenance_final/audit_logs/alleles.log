@@ -1,0 +1,14 @@
+
+=== row 3745867  pfcrt codon 76  REF=A (len 1)
+   ALT1 = C                len   1  SUPPORTED                  homozygous carriers = 133
+   ALT2 = AACCTATTGGA...   len  55  SKIPPED (length-changing)  homozygous carriers = 0
+   missing=0  mixed=26  homozygous-REF=1741
+
+=== row 3746508  pfcrt codon 271  REF=CAACGTAAGA (len 10)
+   ALT1 = GAACGTAAGA       len  10  SUPPORTED                  homozygous carriers = 138
+   ALT2 = TAACGTAAGA       len  10  SUPPORTED                  homozygous carriers = 0
+   ALT3 = *                len   1  SKIPPED (length-changing)  homozygous carriers = 0
+   ALT4 = C                len   1  SKIPPED (length-changing)  homozygous carriers = 0
+   missing=2  mixed=25  homozygous-REF=1735
+
+fetched 525 MB

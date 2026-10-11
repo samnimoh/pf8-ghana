@@ -1,0 +1,47 @@
+Malaria is endemic throughout Ghana, the entire population is at risk, and the disease remains a leading cause of 
+outpatient attendance, paediatric admission and death [CITATION TO BE SUPPLIED: WHO World Malaria Report]. 
+The national programme relies on artemisinin-based combination therapy for case management, sulfadoxine-
+pyrimethamine for intermittent preventive treatment in pregnancy, and sulfadoxine-pyrimethamine with 
+amodiaquine for seasonal malaria chemoprevention in the north. Each regimen imposes a distinct selective 
+pressure on Plasmodium falciparum, and each is delivered across a country whose transmission ecology is far 
+from uniform.
+Ghana is divided into several agro-ecological zones, four of which are represented in this dataset; these are the 
+zones that organise rainfall, vegetation and vector ecology in West Africa. From south to north these are the 
+coastal savanna, the deciduous forest, the forest-savanna transitional zone and the Guinea savanna (Fig. 1). The 
+coastal strip is comparatively dry; the forest belt receives bimodal rainfall and sustains intense perennial 
+transmission; the transitional zone is a narrow band of mixed woodland; and the Guinea savanna of the north 
+has a single wet season, so transmission there is high but sharply seasonal, which is why chemoprevention is 
+targeted to it. This south-north gradient in seasonality, vector composition and mosquito survival is the natural 
+axis along which Ghanaian parasite populations might be expected to differ, and it is also the axis along which 
+control interventions and their selective pressures are unevenly distributed. The zones are not, however, 
+independent of how Ghana is sampled: the finest spatial unit recorded in the release metadata is the 
+administrative region, seven of which contribute Ghanaian isolates, and zones correspond approximately to 
+groups of regions (Table 1). Zone is in consequence very nearly a relabelling of administrative region, sequencing 
+study and collection period, with three of the four zones dominated by a single sequencing study, so every 
+comparison drawn between zones is confounded by how the samples were gathered.
+Population structure matters for resistance surveillance because surveillance is almost always local while policy 
+is national. A marker frequency is measured in isolates from a handful of sentinel sites and then used to describe 
+the country. The estimate generalises only if parasites are exchanged freely enough between zones that allele 
+frequencies are effectively shared. If, instead, zones are differentiated, a national frequency built from 
+whichever zone happens to have been sequenced most heavily is biased, and a resistance allele rising in one 
+ecological setting can be diluted to invisibility in a pooled national figure. The magnitude of structure therefore 
+sets the spatial resolution at which surveillance has to be designed, and it needs to be quantified with interval 
+estimates rather than asserted, because very low differentiation and no differentiation have different 
+operational consequences. Quantification also requires care in interpretation: an FST value close to zero describes 
+how little of the variance in allele frequencies is partitioned between zones at the variants examined, and it says 
+nothing about variants excluded by the frequency threshold applied.
+What is known about West African P. falciparum structure provides the expectation against which Ghana must 
+be assessed. Genome-wide analyses of parasites sampled across the continent resolve major sub-Saharan 
+subpopulations, with West Africa forming a cluster distinct from Central, East and Southeast African parasites, 
+and with relatively modest differentiation between countries inside the West African cluster (Amambua-Ngwa et 
+al. 2019). Within West Africa, genome-wide scans have identified shared signals of recent selection, 
+concentrated at drug-resistance loci and at antigen-encoding genes, indicating that selective pressures are 
+regionally correlated even where neutral differentiation is slight (Mobegi et al. 2014). The variants used to 
+monitor that pressure are catalogued and tiered by the World Health Organization, which classifies individual 
+variants rather than genes and distinguishes validated from candidate markers (WHO 2025). The implication for 
+a single country is that national structure is likely to be weak, and that weak structure is precisely the regime in 
+which point estimates without uncertainty are least informative.
+The eighth release of the MalariaGEN P. falciparum dataset, Pf8, changes what can be attempted at national 
+scale. It provides uniformly called and quality-controlled genotypes for 33,325 samples at 12,493,205 variants, 
+together with published per-sample resistance genotypes and genotype-distance matrices (MalariaGEN 2025). 
+Of these, 4,905 Ghanaian isolates pass release quality control and can be assigned to an agro-ecological zone, 

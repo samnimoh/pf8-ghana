@@ -1,0 +1,44 @@
+Page 44 of 196
+tier only, which is below candidate. None of the three is a candidate marker in WHO's sense. The list also 
+omitted PF3D7_0629500 (pfaat1), which the thesis proposal names as a panel member and which the 
+compendium likewise does not contain. That omission is why the scan's second-ranked gene surfaced as an 
+anonymous transporter rather than as a hit on a pre-specified candidate.
+[Observed] That omission has not been repaired in code, and the manuscript should not claim it has. 
+scripts/config.py on the server still defines KNOWN_RESISTANCE_LOCI as the original eight entries — pfcrt, 
+pfmdr1, pfdhfr, pfdhps, pfk13, pfmdr2, pfcoronin, pfap2mu — with no PF3D7_0629500, and its modification 
+time precedes the final re-run. The final Stage 9 cross-reference accordingly printed "None recovered" and 
+listed all eight as absent from the outlier set (logs/rerun_5to9.log:44-51), and AAT1 appears in 
+results/outlier_genes.csv with an empty family field. An earlier version of this paragraph stated that pfaat1 
+"has been added to config.KNOWN_RESISTANCE_LOCI and the cross-reference re-run"; that is not what the 
+reported run did.
+[Proposed] Add PF3D7_0629500 to config.KNOWN_RESISTANCE_LOCI and re-run step09_annotate.py, so that 
+the AAT1 hit is flagged by the pipeline rather than identified by hand in Section 6.8. It is a one-line change 
+and it affects no estimate, only the annotation label.
+Three counts that must not be conflated. The Stage 12 retrieval panel is nine genes (Table 3.2), covering 57 codons. 
+Of those 57, 24 are polymorphic in these isolates, in eight of the nine genes — pfcoronin's three codons are all fixed 
+at the reference residue. And config.KNOWN_RESISTANCE_LOCI, the Stage 9 cross-reference list, is a different eight 
+— pfcrt, pfmdr1, pfdhfr, pfdhps, pfk13, pfmdr2, pfcoronin, pfap2mu — which excludes pfaat1. That exclusion is the 
+mechanism by which a real positive was missed, so the counts are named explicitly wherever they appear rather 
+than left to the reader to disentangle.
+Caveat. The cross-reference intersects gene bodies with no flanking window (--flank defaults to 0 at 
+step09_annotate.py:61 and the final run applied none), so an outlier in near-complete linkage with a panel locus 
+but outside its annotated span is not flagged. This is a live limitation, not a defect of the superseded run that has 
+since gone away. The pfap2mu-adjacent SNP is still an outlier in the final run and is still unflagged: 
+results/baypass/outlier_snps.bed lists Pf3D7_12_v3:715,788 at XtX 15.086, ninth of the 19, it is absent from 
+results/outliers_annotated.txt, and PF3D7_1218300 (pfap2mu) still starts at 716,700 — the gap is still exactly 912 
+bp. It is also one of the two outliers falling outside any annotated gene: the 19 outlier SNPs give 17 SNP-gene 
+overlaps across 13 genes (logs/rerun_5to9.log), and the other of the two is the fifth-ranked outlier overall, XtX 20.79 
+at Pf3D7_11_v3:1,054,447, q = 0.005 — which is also one of the two SNPs the quality audit downgrades (Section 
+3.11.1). Naming the live pfap2mu near-miss is stronger evidence for this caveat than the gene-count arithmetic 
+alone. Outlier counts and gene counts are therefore not interchangeable, and the finding is not "19 outliers in 13 
+genes". Neither this stage nor Stage 8 applies LD pruning or clumping, so the per-gene outlier SNP counts in Section 
+6.8 count linked sites separately; Section 3.11 and Section 6.8 state where that matters.
+3.10 Stage 12 — the resistance marker panel, by reconstructed codon
+What and why. Section 3.5.1 establishes that the genome-wide store cannot carry most of the canonical 
+resistance codons. This stage answers the marker question directly instead, on the same 1,900 isolates and 
+the same zone labels, in a parallel retrieval that leaves every existing output untouched. It is not a re-analysis 
+of the genome-wide matrix and its results are not merged into it. It is the second attempt at this question. 
+The first, Stage 10, identified markers by matching SnpEff's ANN_HGVS_p protein-change strings against a 
+hand-written list, and an external critique showed that this could not work; Section 3.10.1 sets out why, and 
+Section 3.10.2 the method that replaces it. Every marker number in this manuscript now comes from 
+step12_codon_panel.py.

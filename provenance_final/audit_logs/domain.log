@@ -1,0 +1,89 @@
+panel positions 171  codons 57
+records in window: 5194504
+records exactly AT panel positions: 125
+
+(1) panel records with a length-changing ALT : 16
+(2) panel records with multi-base REF (MNP)  : 2
+(4) off-anchor records spanning a panel pos  : 19
+(3) codons with ZERO variant records at all 3 positions: 0
+
+rows needing genotype check: 32
+   row 1855608 Pf3D7_04_v3:748135 REF=A ALT=['ATAAATATAAATAAATATATATATATATAGTTTT'] numalt=1 PASS=True codons=['pfdhfr:16']
+   row 1855716 Pf3D7_04_v3:748409 REF=A ALT=['AACAGACGAAGAC'] numalt=1 PASS=False codons=['pfdhfr:108', 'pfdhfr:108']
+   row 1855774 Pf3D7_04_v3:748578 REF=T ALT=['TTGACAAAA', 'C'] numalt=2 PASS=True codons=['pfdhfr:164']
+   row 2560501 Pf3D7_05_v3:958439 REF=T ALT=['*', 'TTTATTATTTCATATAAA'] numalt=2 PASS=True codons=['pfmdr1:184', 'pfmdr1:184']
+   row 3745861 Pf3D7_07_v3:403618 REF=A ALT=['AT'] numalt=1 PASS=True codons=['pfcrt:74', 'pfcrt:74']
+   row 3745862 Pf3D7_07_v3:403619 REF=TGAA ALT=['T'] numalt=1 PASS=True codons=['pfcrt:74', 'pfcrt:74']
+   row 3745867 Pf3D7_07_v3:403625 REF=A ALT=['C', 'AACCTATTGGATATATATATATATATATATATATATATGTATACCCATATGTATT'] numalt=2 PASS=True codons=['pfcrt:76', 'pfcrt:76']
+   row 3745868 Pf3D7_07_v3:403626 REF=A ALT=['ATATGGCATATAAATAATTATTAT'] numalt=1 PASS=True codons=['pfcrt:76', 'pfcrt:76']
+   row 3746508 Pf3D7_07_v3:404836 REF=CAACGTAAGA ALT=['GAACGTAAGA', 'TAACGTAAGA', '*', 'C'] numalt=4 PASS=True codons=['pfcrt:271', 'pfcrt:271']
+   row 4600249 Pf3D7_08_v3:549666 REF=A ALT=['G', '*', 'ATCTTTATATTTGCTTAAAT'] numalt=3 PASS=True codons=['pfdhps:431', 'pfdhps:431']
+   row 4600250 Pf3D7_08_v3:549667 REF=T ALT=['*', 'TCTTTATATTTGCTTAAATTATTTTTCATTATTTCGTCATTTTTTACTATTATATTATTACATTCTA', 'TCATATTTTTTTCCAATTTTATGTTTTTCATAAAGATTGTAAAATCATTAAA'] numalt=3 PASS=True codons=['pfdhps:431', 'pfdhps:431']
+   row 8350639 Pf3D7_12_v3:718432 REF=AGTG ALT=['ACGGTTATAACTGTG', 'A'] numalt=2 PASS=True codons=['pfap2mu:160', 'pfap2mu:160']
+   row 9067307 Pf3D7_12_v3:2092722 REF=A ALT=['T', 'AGAAAAAAAATATAATACAGAATC'] numalt=2 PASS=False codons=['pfcoronin:100']
+   row 10053610 Pf3D7_13_v3:1725370 REF=A ALT=['G', 'AATCTTCATTTTT'] numalt=2 PASS=True codons=['pfk13:543']
+   row 10053611 Pf3D7_13_v3:1725371 REF=TACA ALT=['T', 'CACA'] numalt=2 PASS=True codons=['pfk13:543']
+   row 10053703 Pf3D7_13_v3:1725557 REF=C ALT=['CT'] numalt=1 PASS=True codons=['pfk13:481']
+   row 3746508 Pf3D7_07_v3:404836 REF=CAACGTAAGA ALT=['GAACGTAAGA', 'TAACGTAAGA', '*', 'C'] numalt=4 PASS=True codons=['pfcrt:271', 'pfcrt:271']
+   row 10053611 Pf3D7_13_v3:1725371 REF=TACA ALT=['T', 'CACA'] numalt=2 PASS=True codons=['pfk13:543']
+   row 1855764 Pf3D7_04_v3:748528 REF=AGATCTAATAGTTTTACTTGGGAAATTAAATTACTATAAATGTTTTATTATAGGAGGTTCCGTTGTTTATCAAGAATTTTT ALT=['A', 'TGATCTAATAGTTTTACTTGGGAAATTAAATTACTATAAATGTTTTATTATAGGAGGTTCCGTTGTTTATCAAGAATTTTT', '*'] numalt=3 PASS=True codons=(off-anchor)
+   row 2560359 Pf3D7_05_v3:958128 REF=TAATATTAAAGAACATGAATTTAGGTGATGATATTAATCCTATAATATTATCATTAGTATCTATAGGTTTAGTACAATTTATATTATCAATGATATCAAGTTATTGTATGGATGTAATTACATCAAA ALT=['*', 'GAATATTAAAGAACATGAATTTAGGTGATGATATTAATCCTATAATATTATCATTAGTATCTATAGGTTTAGTACAATTTATATTATCAATGATATCAAGTTATTGTATGGATGTAATTACATCAAA', 'T', 'CAATATTAAAGAACATGAATTTAGGTGATGATATTAATCCTATAATATTATCATTAGTATCTATAGGTTTAGTACAATTTATATTATCAATGATATCAAGTTATTGTATGGATGTAATTACATCAAA'] numalt=4 PASS=True codons=(off-anchor)
+   row 2560443 Pf3D7_05_v3:958320 REF=ATAATAATCCTGGATCTAAATTAAGATCTGATTTAGATTTTTATTTAGAACAAGTGAGTTCAGGAATTGGTACGAAATTTATAACAATTTTTACATATGCCAGTTCCTTTTTAGGTTTATATATTTGGTCAT ALT=['GTAATAATCCTGGATCTAAATTAAGATCTGATTTAGATTTTTATTTAGAACAAGTGAGTTCAGGAATTGGTACGAAATTTATAACAATTTTTACATATGCCAGTTCCTTTTTAGGTTTATATATTTGGTCAT', '*', 'A'] numalt=3 PASS=True codons=(off-anchor)
+   row 3392285 Pf3D7_06_v3:1215032 REF=ACAGTTATGGATAAGGAGAATAAGGAAAAGATTAAGAAATGATTTAATGATCCGAC ALT=['A'] numalt=1 PASS=True codons=(off-anchor)
+   row 3745862 Pf3D7_07_v3:403619 REF=TGAA ALT=['T'] numalt=1 PASS=True codons=['pfcrt:74', 'pfcrt:74']
+   row 3746507 Pf3D7_07_v3:404833 REF=AAACAACGTAAGAATTAATTAGGAAAG ALT=['A'] numalt=1 PASS=True codons=(off-anchor)
+   row 3746508 Pf3D7_07_v3:404836 REF=CAACGTAAGA ALT=['GAACGTAAGA', 'TAACGTAAGA', '*', 'C'] numalt=4 PASS=True codons=['pfcrt:271', 'pfcrt:271']
+   row 4600208 Pf3D7_08_v3:549590 REF=AGGTATTTTTGTTGAACCTAAACGTGCTGTTCAAAGAATGTTTGAAATGATAAATGAAGGTGCTAGTGTTATAGATATAGGTGGAGAATCCTCT ALT=['A', 'GGGTATTTTTGTTGAACCTAAACGTGCTGTTCAAAGAATGTTTGAAATGATAAATGAAGGTGCTAGTGTTATAGATATAGGTGGAGAATCCTCT'] numalt=2 PASS=True codons=(off-anchor)
+   row 4600212 Pf3D7_08_v3:549595 REF=TTTTTGTTGAACCTAAACGTGCTGTTCAAAGAATGTTTGAAATGATAAATGAAGGTGCTAGTGTTATAGATATAGGTGGAGAATCCTCTGGTCC ALT=['*', 'T'] numalt=2 PASS=True codons=(off-anchor)
+   row 4600247 Pf3D7_08_v3:549664 REF=ATATAGGTGGAGAATCCTCTGGT ALT=['*', 'TTATAGGTGGAGAATCCTCTGGT', 'A'] numalt=3 PASS=True codons=(off-anchor)
+   row 4600443 Pf3D7_08_v3:550102 REF=TTGGATTAGGATTTGCGAAGAAACATGATCAATCTATTAAACTCTTAC ALT=['T'] numalt=1 PASS=True codons=(off-anchor)
+   row 4600460 Pf3D7_08_v3:550164 REF=TATGATGAGTATCCACTTTTTATTGGATATTCAAGAAAAAGATTTATTGCCCATTGCATGAATGATCAAAATGTTGTAATAAATACACAACAAAAATTACATGATGAACAACAAAATGAAAATAAAA ALT=['T'] numalt=1 PASS=False codons=(off-anchor)
+   row 8350639 Pf3D7_12_v3:718432 REF=AGTG ALT=['ACGGTTATAACTGTG', 'A'] numalt=2 PASS=True codons=['pfap2mu:160', 'pfap2mu:160']
+   row 9067309 Pf3D7_12_v3:2092726 REF=TGGGAGATACGTCATGAGGATGAGAATGTGAATGAGGTAAAGGA ALT=['CGGGAGATACGTCATGAGGATGAGAATGTGAATGAGGTAAAGGA', 'T'] numalt=2 PASS=True codons=(off-anchor)
+   row 10053613 Pf3D7_13_v3:1725379 REF=ATTCTAC ALT=['A'] numalt=1 PASS=False codons=(off-anchor)
+   row 10053626 Pf3D7_13_v3:1725396 REF=AACACCAC ALT=['A'] numalt=1 PASS=False codons=(off-anchor)
+   row 10053656 Pf3D7_13_v3:1725449 REF=CATCTCTT ALT=['TATCTCTT', 'C'] numalt=2 PASS=True codons=(off-anchor)
+   row 11746021 Pf3D7_14_v3:1956127 REF=AATATATATATAAAGTTAAACCTATAAATAATACACTACCTAATAAACTATTCTTATATTTAAAAATAAATATAATAC ALT=['CATATATATATAAAGTTAAACCTATAAATAATACACTACCTAATAAACTATTCTTATATTTAAAAATAAATATAATAC', 'AATATATATAAAGTTAAACCTATAAATAATACACTACCTAATAAACTATTCTTATATTTAAAAATAAATATAATAC', 'AATATATATATATAAAGTTAAACCTATAAATAATACACTACCTAATAAACTATTCTTATATTTAAAAATAAATATAATAC', 'A'] numalt=4 PASS=True codons=(off-anchor)
+   row 11746045 Pf3D7_14_v3:1956187 REF=TAAAAATAAATATAATACATGTTATTAATCCTTCTA ALT=['*', 'T'] numalt=2 PASS=True codons=(off-anchor)
+
+fetching GT for 32 rows x 76 sample chunks ...
+   row 1855608: homozygous-ALT carriers=0  mixed=0
+   row 1855716: homozygous-ALT carriers=0  mixed=0
+   row 1855764: homozygous-ALT carriers=0  mixed=0
+   row 1855774: homozygous-ALT carriers=0  mixed=0
+   row 2560359: homozygous-ALT carriers=0  mixed=1
+   row 2560443: homozygous-ALT carriers=0  mixed=0
+   row 2560501: homozygous-ALT carriers=0  mixed=0
+   row 3392285: homozygous-ALT carriers=0  mixed=0
+   row 3745861: homozygous-ALT carriers=0  mixed=0
+   row 3745862: homozygous-ALT carriers=0  mixed=0
+   row 3745867: homozygous-ALT carriers=133  mixed=26
+   row 3745868: homozygous-ALT carriers=0  mixed=0
+   row 3746507: homozygous-ALT carriers=0  mixed=0
+   row 3746508: homozygous-ALT carriers=138  mixed=25
+   row 4600208: homozygous-ALT carriers=0  mixed=0
+   row 4600212: homozygous-ALT carriers=0  mixed=0
+   row 4600247: homozygous-ALT carriers=0  mixed=1
+   row 4600249: homozygous-ALT carriers=26  mixed=0
+   row 4600250: homozygous-ALT carriers=0  mixed=0
+   row 4600443: homozygous-ALT carriers=0  mixed=0
+   row 4600460: homozygous-ALT carriers=0  mixed=0
+   row 8350639: homozygous-ALT carriers=0  mixed=0
+   row 9067307: homozygous-ALT carriers=0  mixed=0
+   row 9067309: homozygous-ALT carriers=0  mixed=0
+   row 10053610: homozygous-ALT carriers=0  mixed=0
+   row 10053611: homozygous-ALT carriers=0  mixed=1
+   row 10053613: homozygous-ALT carriers=0  mixed=0
+   row 10053626: homozygous-ALT carriers=0  mixed=0
+   row 10053656: homozygous-ALT carriers=0  mixed=0
+   row 10053703: homozygous-ALT carriers=0  mixed=6
+   row 11746021: homozygous-ALT carriers=0  mixed=1
+   row 11746045: homozygous-ALT carriers=0  mixed=1
+
+ TOTAL homozygous-ALT carriers at unsupported records: 297
+ TOTAL mixed (would be excluded anyway):               62
+
+ => homozygous-ALT carriers at an unsupported record are the ONLY ones that could be
+    silently reported with the reference-derived residue.
+
+fetched 8213 MB

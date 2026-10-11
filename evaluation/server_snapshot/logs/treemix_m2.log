@@ -1,0 +1,104 @@
+
+TreeMix v. 1.13
+$Revision: 231 $
+
+npop:4 nsnp:3359
+Estimating covariance matrix in 67 blocks of size 50
+SEED: 42
+Starting from:
+((Transitional_zone:3.09241e-05,Guinea_savanna:0.000134736):0.000141042,Decidous_forest:0.000141042);
+Adding Coastal_savanna [4/4]
+ln(likelihood): 89.704187 
+(Decidous_forest:0,((Transitional_zone:0,Guinea_savanna:0.000128661):0.000295248,Coastal_savanna:0.000133642):0);
+Set root above Guinea_savanna
+Targeting migration to vicinity of:
+Transitional_zone Coastal_savanna
+Guinea_savanna Decidous_forest
+Guinea_savanna Transitional_zone
+Decidous_forest Coastal_savanna
+
+Transitional_zone Coastal_savanna
+Coastal_savanna Transitional_zone
+Guinea_savanna Decidous_forest
+Transitional_zone Coastal_savanna
+Guinea_savanna Decidous_forest
+Transitional_zone Coastal_savanna
+Guinea_savanna Decidous_forest
+Transitional_zone Coastal_savanna
+Coastal_savanna Transitional_zone
+Trying Coastal_savanna Transitional_zone
+Coastal_savanna:0.000133642 Transitional_zone:0
+1->2 0.26781943 90.483654 89.704187
+2->1 3.8719494e-07 89.704186 90.483654
+p2->1 3.8719494e-07 89.704186 90.483654
+Trying Guinea_savanna Decidous_forest
+Guinea_savanna:6.43306e-05 Decidous_forest:0
+1->2 0.2995432 91.022219 90.483654
+2->1 0.074916042 89.782465 91.022219
+p2->1 0.10046206 89.704187 91.022219
+Trying Transitional_zone Coastal_savanna
+Transitional_zone:0 Coastal_savanna:0.000133642
+Migration added
+Local updates around node 1: 0 ln(lk):91.022219 
+Local updates around node 2: 0 ln(lk):91.022219 
+Updates in migration position: 0 ln(lk):91.022219 
+Switches in migration direction: 0 ln(lk):91.022219 
+ln(likelihood):91.022219 
+Targeting migration to vicinity of:
+Transitional_zone Coastal_savanna
+Guinea_savanna Transitional_zone
+Guinea_savanna Decidous_forest
+Decidous_forest Coastal_savanna
+
+Transitional_zone Coastal_savanna
+Decidous_forest Coastal_savanna
+Coastal_savanna Transitional_zone
+Coastal_savanna Decidous_forest
+Guinea_savanna Transitional_zone
+Guinea_savanna Decidous_forest
+Transitional_zone Coastal_savanna
+Guinea_savanna Transitional_zone
+Guinea_savanna Decidous_forest
+Transitional_zone Guinea_savanna
+Transitional_zone Coastal_savanna
+Guinea_savanna Transitional_zone
+Guinea_savanna Decidous_forest
+Transitional_zone Coastal_savanna
+Decidous_forest Coastal_savanna
+Coastal_savanna Transitional_zone
+Coastal_savanna Decidous_forest
+Trying Coastal_savanna Decidous_forest
+Coastal_savanna:0 Decidous_forest:0.000194528
+p1->2 4.0751289e-05 91.022219 91.022219
+p2->1 0.92669922 91.043187 91.022219
+(Decidous_forest:0,Coastal_savanna:0):0.000632568 Decidous_forest:0
+p1->2 3.6306955e-07 91.022219 91.043187
+Trying Coastal_savanna Transitional_zone
+Coastal_savanna:0 Transitional_zone:0
+1->2 0.052754059 91.061651 91.043187
+2->1 0.030235654 91.049731 91.061651
+p2->1 0.030235654 91.049731 91.061651
+Trying Decidous_forest Coastal_savanna
+Decidous_forest:0.000181722 Coastal_savanna:0
+Trying Guinea_savanna Decidous_forest
+Guinea_savanna:8.2313e-05 Decidous_forest:0.000181722
+2->1 0.0030194302 91.022726 91.061651
+p2->1 0.3970964 91.170681 91.061651
+Trying Guinea_savanna Transitional_zone
+Guinea_savanna:0.000272507 Transitional_zone:0
+1->2 0.12633358 91.053193 91.170681
+2->1 0.3970964 91.170681 91.170681
+p2->1 0.92138368 91.170681 91.170681
+Trying Transitional_zone Coastal_savanna
+Transitional_zone:0 Coastal_savanna:0
+Trying Transitional_zone Guinea_savanna
+Transitional_zone:0 Guinea_savanna:0.000405482
+Migration added
+Local updates around node 1: 0 ln(lk):91.170681 
+Local updates around node 2: 0 ln(lk):91.170681 
+Updates in migration position: 0 ln(lk):91.170681 
+Switches in migration direction: 0 ln(lk):91.170681 
+Flipping migration edge
+ln(likelihood):91.484882 
+Flipping migration edge
+DONE.

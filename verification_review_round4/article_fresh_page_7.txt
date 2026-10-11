@@ -1,0 +1,33 @@
+Zone sizes are strongly unequal. Guinea savanna contributes 1,334 isolates, deciduous forest 337, coastal 
+savanna 204 and the transitional zone 25. Zone is also very nearly a relabelling of administrative region, 
+sequencing study and collection period: three of the four zones are dominated by a single study, and Guinea 
+savanna, which here is effectively Upper East region, supplies 1,334 of 1,900 isolates (70.2%). Seven 
+administrative regions are the finest spatial unit available in the release metadata. Because study membership 
+varies together with collection year, finer geography, recruitment and host biology, holding zone constant does 
+not isolate a technical cause; the comparisons below can demonstrate study-associated heterogeneity but not a 
+sequencing artefact.
+The pooled minor allele frequency cut imposes an ascertainment floor set by the largest zone. At 10% variant 
+missingness or less, a retained site carries at least 1,710 called haploid alleles. A variant private to the 25 
+transitional isolates therefore cannot exceed 25/1,710 = 1.46%, and a variant carried at 40% frequency within 
+coastal savanna reaches only 82/1,710 = 4.80%. Both fall below the 5% cut, so the panel consists of variants 
+common enough to clear a threshold dominated by one zone. No neutral mask was defined, and "neutral" here 
+means genome-wide at the retained common variants rather than at sites shown to be free of selection.
+Zones do not separate in ordination
+Three ordinations of the published Pf8 genotype-distance submatrix for the 1,900 isolates were compared (Fig. 
+2). UMAP achieved a trustworthiness of 0.486 and a Spearman correlation of 0.029 between embedded and 
+original distances (McInnes et al. 2018); t-SNE reached 0.507 and 0.115; PCoA reached 0.495 and 0.322. PCoA 
+preserves global distance structure best, while all three embeddings discard most of it. Silhouette coefficients 
+computed by zone are negative in every case: -0.0156 on the original distances, -0.306 for UMAP, -0.057 for t-
+SNE and -0.112 for PCoA. Isolates are on average closer to members of other zones than to members of their 
+own, in the original distance space as well as in each embedding. Zone-coloured isolates overlap extensively in 
+Fig. 2, and no method recovers zone as a cluster boundary.
+Fig. 2 UMAP, t-SNE and PCoA of the 1,900-isolate genotype-distance submatrix, coloured by agro-ecological zone. No zone forms a 
+distinct cluster under any of the three methods; all silhouette coefficients are negative.
+Differentiation between zones is very low but detectable
+Pairwise Hudson FST (Hudson et al. 1992), computed as a ratio of averages with block-jackknife confidence 
+intervals, is very low throughout (Table 2). The largest value is 0.00232 between coastal savanna and Guinea 
+savanna (95% CI 0.00128-0.00336). Coastal savanna versus transitional and deciduous forest versus transitional 
+both give 0.00158 (CIs 0.00006-0.00309 and 0.00017-0.00298), deciduous forest versus Guinea savanna gives 
+0.00134 (0.00088-0.00180), and coastal savanna versus deciduous forest gives 0.00045 (0.00019-0.00070). Five 
+of the six confidence intervals exclude zero. The single exception is Guinea savanna versus the transitional zone, 
+at 0.00047 with a confidence interval of -0.00083 to 0.00178; that comparison rests on the transitional sample of 

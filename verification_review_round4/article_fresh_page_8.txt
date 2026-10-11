@@ -1,0 +1,38 @@
+n = 25. Differentiation between zones is therefore very low, yet statistically detectable at this sample size for 
+almost every pair.
+Table 2 Pairwise Hudson FST between agro-ecological zones on 3,916 SNPs and 1,900 isolates, with block-jackknife 95% confidence 
+intervals. Five of the six intervals exclude zero.
+Zone pair n n FST 95% CI Excludes 
+zero
+Coastal savanna × Guinea savanna 204 1,334 0.00232 0.00128 – 0.00336 Yes
+Coastal savanna × Transitional zone 204 25 0.00158 0.00006 – 0.00309 Yes
+Deciduous forest × Transitional zone 337 25 0.00158 0.00017 – 0.00298 Yes
+Deciduous forest × Guinea savanna 337 1,334 0.00134 0.00088 – 0.00180 Yes
+Guinea savanna × Transitional zone 1,334 25 0.00047 −0.00083 – 0.00178 No
+Coastal savanna × Deciduous forest 204 337 0.00045 0.00019 – 0.00070 Yes
+The magnitude is stable across the filtering thresholds examined. Across six scenarios built on one shared 
+genotype load - the baseline, Fws >= 0.90, Fws >= 0.80, no Fws filter, MAF >= 0.01 and MAF >= 0.02, spanning 1,900 
+to 4,403 isolates and 3,275 to 10,876 SNPs - the maximum pairwise FST stays between 0.00204 and 0.00255 
+(Table 4).
+Table 4 Threshold sensitivity of the two headline spatial results. The maximum pairwise FST is stable across all six scenarios; the 
+distance effect clears p = 0.05 in only two of them.
+Scenario Isolates SNPs Max FST Mantel r Mantel p p < 0.05
+Baseline (Fws ≥ 0.95, MAF ≥ 0.05) 1,900 3,916 0.00232 0.427 0.0252 Yes
+Fws ≥ 0.90 2,196 3,629 0.00240 0.318 0.0874 No
+Fws ≥ 0.80 2,746 3,496 0.00255 0.256 0.1687 No
+No Fws filter 4,403 3,275 0.00254 0.245 0.1792 No
+MAF ≥ 0.01 1,900 10,876 0.00204 0.432 0.0617 No
+MAF ≥ 0.02 1,900 6,852 0.00217 0.434 0.0467 Yes
+Ancestry inference
+ADMIXTURE was run on 3,385 LD-pruned SNPs with 10-fold cross-validation (Alexander et al. 2009). The cross-
+validation curve is nearly flat: error falls from 0.84384 at K = 1 to a minimum of 0.83925 at K = 2, rises to 0.83953 
+at K = 3, and continues to 0.84488 at K = 8, a total range across K = 1 to 8 of 0.0056. The K = 2 minimum is 
+shallow, and the data give little support for any particular number of ancestral components.
+At K = 2 the minor component differs between zones - 0.092 in deciduous forest, 0.085 in coastal savanna, 0.053 
+in Guinea savanna and 0.042 in the transitional zone (Kruskal-Wallis H = 105.4, p = 1.05 x 10^-22) - but zone 
+explains only 1.9% of its variance (eta-squared = 0.019). The difference is highly significant and quantitatively 
+slight.
+Isolation by distance is not robust
+At the region level, with seven populations, 21 pairs and 9,999 permutations of a one-sided Mantel test (Mantel 
+1967), the correlation between FST and geographic distance is r = 0.4269 with p = 0.0252. Three of the 21 
+pairwise FST values were negative and were floored to zero before testing; without that censoring the same test 

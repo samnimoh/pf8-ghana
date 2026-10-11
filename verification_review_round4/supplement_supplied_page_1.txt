@@ -1,0 +1,17 @@
+Page 1 of 198
+Additional file 1 — Supplementary material for: Population 
+differentiation and antimalarial resistance-marker frequencies in 
+Plasmodium falciparum across the agro-ecological zones of 
+Ghana, 2009–2021
+Full analysis record: methods detail, complete results, robustness checks and correction history
+Author: [author placeholder]
+Affiliation: [placeholder]
+Document date: 10 October 2026
+Analysis period: 6–10 October 2026
+Status: Supplementary material accompanying the main article
+This edition supersedes the 9 October 2026 version. It incorporates the corrections arising from an 
+adversarial audit (61 confirmed findings) and a complete re-run of stages 4–9 on a corrected pipeline. 
+Quantitative claims were re-derived from the final run's output files wherever those outputs survive; the 
+few that are carried over from the corrections document, computed on superseded runs, or of 
+unrecoverable provenance are labelled as such. A record of the defects found and fixed is given in the 
+appendices.

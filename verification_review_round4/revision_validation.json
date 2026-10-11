@@ -1,0 +1,655 @@
+{
+  "generated_utc": "2026-10-11T04:23:45.346774+00:00",
+  "checker": {
+    "path": "/Users/samnimoh/Desktop/chromo/verification_review_round4/check_revision.py",
+    "sha256": "60640854228f3d5ca9adb7ca16b556904175dfc88ee5ad8bbd7c7bb1168b2029"
+  },
+  "runtime": {
+    "executable": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "version": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "platform": "macOS-27.0-arm64-arm-64bit",
+    "third_party_dependencies": []
+  },
+  "input_identities": {
+    "article": {
+      "path": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.docx",
+      "bytes": 1193707,
+      "sha256": "9e951d51e245fd89e9056cf0d590708dcc7a84358db136ccdde6d3ce3648ba91"
+    },
+    "article_markdown": {
+      "path": "/Users/samnimoh/Desktop/chromo/article/article.md",
+      "bytes": 49004,
+      "sha256": "cca89be91d8d2d81d4daff84bafd360fbcd676e16706184ea4657536b82fb5d3"
+    },
+    "canonical_facts": {
+      "path": "/Users/samnimoh/Desktop/chromo/article/CANONICAL_FACTS_FOR_ARTICLE.md",
+      "bytes": 10727,
+      "sha256": "77fc01cd705873cc2701fe639edc614034d5ea06ba6464823da3b7a0a2609a45"
+    },
+    "manuscript": {
+      "path": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx",
+      "bytes": 4043307,
+      "sha256": "6312e2a1c4e2ad27e4cb723cd386384f0cbea6b7a4288551edf78a50bdbf167d"
+    },
+    "supplement": {
+      "path": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx",
+      "bytes": 4044003,
+      "sha256": "21907b6a2478f98927158f57a11bb56a4822dd730c65e331a6ce99af55d017b7"
+    },
+    "notes": {
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/VERIFICATION_NOTES.md",
+      "bytes": 14545,
+      "sha256": "42c9c73082469c492c62f1af3db7a4b4281f4af5e216484a9e6d3c1200cf0fab"
+    },
+    "audit_readme": {
+      "path": "/Users/samnimoh/Desktop/chromo/provenance_final/audit_scripts/README.md",
+      "bytes": 2898,
+      "sha256": "3884721eebd5c1bf84237403ed6966fd1d2cc67f40383596f7fb10d10857f329"
+    },
+    "old_ordination": {
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/results/dimred_comparison.csv",
+      "bytes": 305,
+      "sha256": "70878f53aa97e2ec1631690f1ed1028286a436534e388696f82e8adda79665dd"
+    },
+    "newly_named_ordination": {
+      "path": "/Users/samnimoh/Desktop/chromo/corrected/dimred_comparison_analysisset.csv",
+      "bytes": 305,
+      "sha256": "70878f53aa97e2ec1631690f1ed1028286a436534e388696f82e8adda79665dd"
+    },
+    "corrected_ordination": {
+      "path": "/Users/samnimoh/Desktop/chromo/corrected/dimred_comparison_qcset.csv",
+      "bytes": 298,
+      "sha256": "3d104ce26973ded0659c283be4fc0bf0e9c9eeed45c1ae0544bc60e1d0331499"
+    },
+    "old_ordination_log": {
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/logs/step03_dimred.log",
+      "bytes": 3101,
+      "sha256": "ca8406d4a725e81303538b5742bb20adac009b3da47c0809221d51e8e385ca74"
+    },
+    "analysis_samples": {
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/interim/analysis_samples.csv",
+      "bytes": 520880,
+      "sha256": "fef75e071c5c2697a284e4ff50f6b6a7d36d8ffffac29d68969aece2825fe712"
+    },
+    "pre_Fws_QC": {
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/results/sample_qc_full.csv",
+      "bytes": 1536734,
+      "sha256": "392520ffce849aec0a5d75e5e13644e68aac3ae4433afa3e1330a450d10de43b"
+    },
+    "corrected_figure": {
+      "path": "/Users/samnimoh/Desktop/chromo/corrected/dimred_comparison_zone_qcset.png",
+      "bytes": 794204,
+      "sha256": "f4112599fbad39c81f14fed472843e555d5ae8d2875748d528c458c2e4333397"
+    }
+  },
+  "assertion_meaning": "Passing confirms the recorded fix or remaining finding; not a validity certificate.",
+  "assertions": {
+    "article_ordination_explicitly_claims_1900": true,
+    "all_ten_article_metrics_match_old_4905_csv": true,
+    "no_article_metric_matches_corrected_1900_csv": true,
+    "newly_named_analysisset_csv_is_byte_identical_to_old_csv": true,
+    "saved_old_run_log_explicitly_records_4905_matrix_and_output_path": true,
+    "article_embeds_corrected_cohort_figure_byte_for_byte": true,
+    "table1_header_labels_QC_cohort": true,
+    "table1_caption_explains_QC_analysis_difference": true,
+    "all_four_table1_counts_and_fractions_correct": true,
+    "all_1900_analysis_samples_satisfy_Fws_cut": true,
+    "supplement_table_captions_unique_and_sequential_S1_S52": true,
+    "supplement_figure_captions_unique_and_sequential_S1_S23": true,
+    "supplement_singular_S_references_resolve": true,
+    "supplement_S24_correctly_distinguishes_ten_old_and_corrected_metrics": true,
+    "article_still_advertises_old_44_table_22_figure_ranges": true,
+    "article_q_value_statement_conditional_on_calibration": true,
+    "article_sparse_tests_and_nominal_multiplicity_disclosed": true,
+    "article_mantel_transform_corrected": true,
+    "article_excesshet_difference_corrected": true,
+    "notes_domain_count_and_mixed_call_scope_corrected": true,
+    "main_and_supplement_still_claim_19_off_anchor_and_all_62_excluded": true,
+    "audit_readme_portability_statement_corrected": true,
+    "audit_readme_table_still_says_19_off_anchor": true,
+    "main_and_supplement_still_assert_conservative_final_calibration": true,
+    "main_and_supplement_still_infer_two_directions_of_exchange": true,
+    "main_and_supplement_still_use_free_gene_flow": true,
+    "precision_accounting_now_qualified_in_main_supplement_and_notes": true,
+    "older_notes_precision_claim_and_read_level_heading_still_present": true,
+    "article_archive_Doi_still_placeholder": true,
+    "known_scientific_and_lean_artifacts_in_scope_unchanged": true
+  },
+  "ordination": {
+    "article_paragraph": "Three ordinations of the published Pf8 genotype-distance submatrix for the 1,900 isolates were compared (Fig. 2). UMAP achieved a trustworthiness of 0.486 and a Spearman correlation of 0.029 between embedded and original distances (McInnes et al. 2018); t-SNE reached 0.507 and 0.115; PCoA reached 0.495 and 0.322. PCoA preserves global distance structure best, while all three embeddings discard most of it. Silhouette coefficients computed by zone are negative in every case: -0.0156 on the original distances, -0.306 for UMAP, -0.057 for t-SNE and -0.112 for PCoA. Isolates are on average closer to members of other zones than to members of their own, in the original distance space as well as in each embedding. Zone-coloured isolates overlap extensively in Fig. 2, and no method recovers zone as a cluster boundary.",
+    "reported_precision_comparisons": [
+      {
+        "method": "UMAP",
+        "metric": "trustworthiness",
+        "article_literal": "0.486",
+        "saved_4905": 0.48596103411049263,
+        "saved_1900": 0.4985171678184407,
+        "matches_4905": true,
+        "matches_1900": false
+      },
+      {
+        "method": "UMAP",
+        "metric": "distance_spearman",
+        "article_literal": "0.029",
+        "saved_4905": 0.028746366880950808,
+        "saved_1900": -0.0657032498036622,
+        "matches_4905": true,
+        "matches_1900": false
+      },
+      {
+        "method": "t-SNE",
+        "metric": "trustworthiness",
+        "article_literal": "0.507",
+        "saved_4905": 0.5066828006290386,
+        "saved_1900": 0.5257569591273952,
+        "matches_4905": true,
+        "matches_1900": false
+      },
+      {
+        "method": "t-SNE",
+        "metric": "distance_spearman",
+        "article_literal": "0.115",
+        "saved_4905": 0.1151870388895617,
+        "saved_1900": 0.1963573641918005,
+        "matches_4905": true,
+        "matches_1900": false
+      },
+      {
+        "method": "PCoA",
+        "metric": "trustworthiness",
+        "article_literal": "0.495",
+        "saved_4905": 0.49450506846882625,
+        "saved_1900": 0.5096355191024203,
+        "matches_4905": true,
+        "matches_1900": false
+      },
+      {
+        "method": "PCoA",
+        "metric": "distance_spearman",
+        "article_literal": "0.322",
+        "saved_4905": 0.32240602354526887,
+        "saved_1900": 0.2868299902039836,
+        "matches_4905": true,
+        "matches_1900": false
+      },
+      {
+        "method": "original distances",
+        "metric": "silhouette_by_zone",
+        "article_literal": "-0.0156",
+        "saved_4905": -0.015566886402666569,
+        "saved_1900": -0.01958293654024601,
+        "matches_4905": true,
+        "matches_1900": false
+      },
+      {
+        "method": "UMAP",
+        "metric": "silhouette_by_zone",
+        "article_literal": "-0.306",
+        "saved_4905": -0.30618974566459656,
+        "saved_1900": -0.27732568979263306,
+        "matches_4905": true,
+        "matches_1900": false
+      },
+      {
+        "method": "t-SNE",
+        "metric": "silhouette_by_zone",
+        "article_literal": "-0.057",
+        "saved_4905": -0.056878190487623215,
+        "saved_1900": -0.06284511089324951,
+        "matches_4905": true,
+        "matches_1900": false
+      },
+      {
+        "method": "PCoA",
+        "metric": "silhouette_by_zone",
+        "article_literal": "-0.112",
+        "saved_4905": -0.11156961858322142,
+        "saved_1900": -0.0790918096951143,
+        "matches_4905": true,
+        "matches_1900": false
+      }
+    ],
+    "alias_identity": {
+      "old_ordination": {
+        "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/results/dimred_comparison.csv",
+        "bytes": 305,
+        "sha256": "70878f53aa97e2ec1631690f1ed1028286a436534e388696f82e8adda79665dd"
+      },
+      "newly_named_ordination": {
+        "path": "/Users/samnimoh/Desktop/chromo/corrected/dimred_comparison_analysisset.csv",
+        "bytes": 305,
+        "sha256": "70878f53aa97e2ec1631690f1ed1028286a436534e388696f82e8adda79665dd"
+      },
+      "corrected_ordination": {
+        "path": "/Users/samnimoh/Desktop/chromo/corrected/dimred_comparison_qcset.csv",
+        "bytes": 298,
+        "sha256": "3d104ce26973ded0659c283be4fc0bf0e9c9eeed45c1ae0544bc60e1d0331499"
+      }
+    },
+    "figure_matches": [
+      {
+        "member": "word/media/218857879d6287b87460540cea2d8ec053df7685.png",
+        "sha256": "f4112599fbad39c81f14fed472843e555d5ae8d2875748d528c458c2e4333397"
+      }
+    ],
+    "limits": "Saved log establishes the archived cohort attribution, not authenticated final generating lineage."
+  },
+  "table1": {
+    "caption": "Table 1 Composition of the analysis set, with the sequencing study, administrative region and collection period that accompany each agro-ecological zone. Zone is very nearly a relabelling of region and study: three of the four zones draw on a single administrative region, and one on a single study. The final column is measured on the pre-filter quality-control cohort of 4,905 isolates, not on the analysis set: every analysed isolate satisfies Fws ≥ 0.95 by construction, so its polyclonal fraction is zero. QC-cohort denominators are given in the column.",
+    "following_paragraph": "Zone sizes are strongly unequal. Guinea savanna contributes 1,334 isolates, deciduous forest 337, coastal savanna 204 and the transitional zone 25. Zone is also very nearly a relabelling of administrative region, sequencing study and collection period: three of the four zones are dominated by a single study, and Guinea savanna, which here is effectively Upper East region, supplies 1,334 of 1,900 isolates (70.2%). Seven administrative regions are the finest spatial unit available in the release metadata. Because study membership varies together with collection year, finer geography, recruitment and host biology, holding zone constant does not isolate a technical cause; the comparisons below can demonstrate study-associated heterogeneity but not a sequencing artefact.",
+    "rows": [
+      [
+        "Agro-ecological zone",
+        "Isolates",
+        "Administrative region(s)",
+        "No. studies",
+        "Dominant study (share)",
+        "Collection years",
+        "Polyclonal fraction (QC cohort)"
+      ],
+      [
+        "Guinea savanna",
+        "1,334",
+        "Upper East (1,334)",
+        "6",
+        "1168-PF-GH-AMENGA-ETEGO-SM (74%)",
+        "2009–2019",
+        "0.597 (n = 3,605)"
+      ],
+      [
+        "Deciduous forest",
+        "337",
+        "Ashanti (157), Central (125), Eastern (34), Volta (21)",
+        "5",
+        "1200-PF-GH-MAIGA-SM (47%)",
+        "2013–2021",
+        "0.539 (n = 815)"
+      ],
+      [
+        "Coastal savanna",
+        "204",
+        "Greater Accra (204)",
+        "2",
+        "1241-PF-GH-ANINAGYEI (87%)",
+        "2016–2018",
+        "0.444 (n = 435)"
+      ],
+      [
+        "Transitional zone",
+        "25",
+        "Brong Ahafo (25)",
+        "1",
+        "1083-PF-GH-CONWAY (100%)",
+        "2011–2013",
+        "0.500 (n = 50)"
+      ]
+    ],
+    "cohort_comparisons": [
+      {
+        "zone": "Guinea savanna",
+        "reported_analysis_n": 1334,
+        "actual_analysis_n": 1334,
+        "reported_QC_n": 3605,
+        "actual_QC_n": 3605,
+        "reported_QC_fraction": "0.597",
+        "actual_QC_fraction": 0.5972260748959778,
+        "all_analysis_Fws_at_least_095": true,
+        "counts_correct": true,
+        "fraction_correct_at_printed_precision": true
+      },
+      {
+        "zone": "Deciduous forest",
+        "reported_analysis_n": 337,
+        "actual_analysis_n": 337,
+        "reported_QC_n": 815,
+        "actual_QC_n": 815,
+        "reported_QC_fraction": "0.539",
+        "actual_QC_fraction": 0.5386503067484663,
+        "all_analysis_Fws_at_least_095": true,
+        "counts_correct": true,
+        "fraction_correct_at_printed_precision": true
+      },
+      {
+        "zone": "Coastal savanna",
+        "reported_analysis_n": 204,
+        "actual_analysis_n": 204,
+        "reported_QC_n": 435,
+        "actual_QC_n": 435,
+        "reported_QC_fraction": "0.444",
+        "actual_QC_fraction": 0.4436781609195402,
+        "all_analysis_Fws_at_least_095": true,
+        "counts_correct": true,
+        "fraction_correct_at_printed_precision": true
+      },
+      {
+        "zone": "Transitional zone",
+        "reported_analysis_n": 25,
+        "actual_analysis_n": 25,
+        "reported_QC_n": 50,
+        "actual_QC_n": 50,
+        "reported_QC_fraction": "0.500",
+        "actual_QC_fraction": 0.5,
+        "all_analysis_Fws_at_least_095": true,
+        "counts_correct": true,
+        "fraction_correct_at_printed_precision": true
+      }
+    ]
+  },
+  "supplementary_numbering": {
+    "captions": {
+      "Table": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6",
+        "S7",
+        "S8",
+        "S9",
+        "S10",
+        "S11",
+        "S12",
+        "S13",
+        "S14",
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S19",
+        "S20",
+        "S21",
+        "S22",
+        "S23",
+        "S24",
+        "S25",
+        "S26",
+        "S27",
+        "S28",
+        "S29",
+        "S30",
+        "S31",
+        "S32",
+        "S33",
+        "S34",
+        "S35",
+        "S36",
+        "S37",
+        "S38",
+        "S39",
+        "S40",
+        "S41",
+        "S42",
+        "S43",
+        "S44",
+        "S45",
+        "S46",
+        "S47",
+        "S48",
+        "S49",
+        "S50",
+        "S51",
+        "S52"
+      ],
+      "Figure": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6",
+        "S7",
+        "S8",
+        "S9",
+        "S10",
+        "S11",
+        "S12",
+        "S13",
+        "S14",
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S19",
+        "S20",
+        "S21",
+        "S22",
+        "S23"
+      ]
+    },
+    "singular_references": {
+      "Table": [
+        "S1",
+        "S10",
+        "S11",
+        "S12",
+        "S13",
+        "S14",
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S19",
+        "S2",
+        "S20",
+        "S21",
+        "S22",
+        "S23",
+        "S24",
+        "S25",
+        "S26",
+        "S27",
+        "S28",
+        "S29",
+        "S3",
+        "S30",
+        "S31",
+        "S32",
+        "S33",
+        "S34",
+        "S35",
+        "S36",
+        "S37",
+        "S38",
+        "S39",
+        "S4",
+        "S40",
+        "S41",
+        "S42",
+        "S43",
+        "S44",
+        "S45",
+        "S46",
+        "S47",
+        "S48",
+        "S49",
+        "S5",
+        "S50",
+        "S51",
+        "S52",
+        "S6",
+        "S7",
+        "S8",
+        "S9"
+      ],
+      "Figure": [
+        "S1",
+        "S10",
+        "S11",
+        "S12",
+        "S13",
+        "S14",
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S19",
+        "S2",
+        "S20",
+        "S21",
+        "S22",
+        "S23",
+        "S3",
+        "S4",
+        "S5",
+        "S6",
+        "S7",
+        "S8",
+        "S9"
+      ]
+    },
+    "unresolved_singular_references": {
+      "Table": [],
+      "Figure": []
+    },
+    "scope": "Caption uniqueness/order and existence of singular S references; not an exhaustive semantic mapping of every plural/range reference."
+  },
+  "supplement_analysis_cohort_comparison_table": {
+    "caption": "Table S24. The three ordinations recomputed on the 1,900-isolate analysis set, beside the published 4,905-isolate run (results/dimred_comparison.csv, corrected/dimred_comparison_qcset.csv). Both columns read the same published Pf8 distance matrix; the right-hand column re-slices it to the analysis samples. Settings are identical (trustworthiness at k = 30; silhouette against zone labels). This table is new in this revision and is lettered so that the existing table numbering is unchanged.",
+    "rows": [
+      [
+        "Metric",
+        "4,905 pre-QC (published)",
+        "1,900 analysis set"
+      ],
+      [
+        "Silhouette by zone, original distances",
+        "-0.016",
+        "-0.020"
+      ],
+      [
+        "Silhouette by zone, UMAP",
+        "-0.306",
+        "-0.277"
+      ],
+      [
+        "Silhouette by zone, t-SNE",
+        "-0.057",
+        "-0.063"
+      ],
+      [
+        "Silhouette by zone, PCoA",
+        "-0.112",
+        "-0.079"
+      ],
+      [
+        "Trustworthiness, UMAP",
+        "0.486",
+        "0.499"
+      ],
+      [
+        "Trustworthiness, t-SNE",
+        "0.507",
+        "0.526"
+      ],
+      [
+        "Trustworthiness, PCoA",
+        "0.495",
+        "0.510"
+      ],
+      [
+        "Distance Spearman rho, UMAP",
+        "0.029",
+        "-0.066"
+      ],
+      [
+        "Distance Spearman rho, t-SNE",
+        "0.115",
+        "0.196"
+      ],
+      [
+        "Distance Spearman rho, PCoA",
+        "0.322",
+        "0.287"
+      ]
+    ],
+    "metric_checks": [
+      {
+        "method": "original distances",
+        "metric": "silhouette_by_zone",
+        "printed_4905": "-0.016",
+        "printed_1900": "-0.020",
+        "matches_old": true,
+        "matches_corrected": true
+      },
+      {
+        "method": "UMAP",
+        "metric": "silhouette_by_zone",
+        "printed_4905": "-0.306",
+        "printed_1900": "-0.277",
+        "matches_old": true,
+        "matches_corrected": true
+      },
+      {
+        "method": "t-SNE",
+        "metric": "silhouette_by_zone",
+        "printed_4905": "-0.057",
+        "printed_1900": "-0.063",
+        "matches_old": true,
+        "matches_corrected": true
+      },
+      {
+        "method": "PCoA",
+        "metric": "silhouette_by_zone",
+        "printed_4905": "-0.112",
+        "printed_1900": "-0.079",
+        "matches_old": true,
+        "matches_corrected": true
+      },
+      {
+        "method": "UMAP",
+        "metric": "trustworthiness",
+        "printed_4905": "0.486",
+        "printed_1900": "0.499",
+        "matches_old": true,
+        "matches_corrected": true
+      },
+      {
+        "method": "t-SNE",
+        "metric": "trustworthiness",
+        "printed_4905": "0.507",
+        "printed_1900": "0.526",
+        "matches_old": true,
+        "matches_corrected": true
+      },
+      {
+        "method": "PCoA",
+        "metric": "trustworthiness",
+        "printed_4905": "0.495",
+        "printed_1900": "0.510",
+        "matches_old": true,
+        "matches_corrected": true
+      },
+      {
+        "method": "UMAP",
+        "metric": "distance_spearman",
+        "printed_4905": "0.029",
+        "printed_1900": "-0.066",
+        "matches_old": true,
+        "matches_corrected": true
+      },
+      {
+        "method": "t-SNE",
+        "metric": "distance_spearman",
+        "printed_4905": "0.115",
+        "printed_1900": "0.196",
+        "matches_old": true,
+        "matches_corrected": true
+      },
+      {
+        "method": "PCoA",
+        "metric": "distance_spearman",
+        "printed_4905": "0.322",
+        "printed_1900": "0.287",
+        "matches_old": true,
+        "matches_corrected": true
+      }
+    ]
+  },
+  "known_unchanged_scientific_and_lean_files_checked": 50,
+  "limits": [
+    "No project script, remote audit, biological query or scientific inference was run.",
+    "Existing earlier numerical-check evidence is retained only where inputs are unchanged.",
+    "No claim is made that complete pipeline provenance or implementation proof exists."
+  ]
+}

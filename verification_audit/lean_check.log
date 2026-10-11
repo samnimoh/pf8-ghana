@@ -1,0 +1,87 @@
+[check_provenance.py]
+command: ["/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3", "/Users/samnimoh/Desktop/chromo/verification_audit/check_provenance.py"]
+status: completed; exit_code: 0
+--- stdout ---
+{"output": "/Users/samnimoh/Desktop/chromo/verification_audit/provenance_validation.json", "checks": {"passed": 8, "total": 8}, "manifest_records": 12, "script_files_hashed": 50, "outputs_hashed": 41, "final_raw_provenance": "incomplete"}
+
+--- stderr ---
+
+
+[check_majority_script.py]
+command: ["/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3", "/Users/samnimoh/Desktop/chromo/verification_audit/check_majority_script.py"]
+status: completed; exit_code: 0
+--- stdout ---
+Majority resolver: 1620 cases, passed=True
+
+--- stderr ---
+
+
+[check_marker_outputs.py]
+command: ["/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3", "/Users/samnimoh/Desktop/chromo/verification_audit/check_marker_outputs.py"]
+status: completed; exit_code: 0
+--- stdout ---
+Saved: /Users/samnimoh/Desktop/chromo/verification_audit/marker_validation.json
+Samples: 1900 matched IDs; zone counts match: True
+Aggregate marker/haplotype counts pass: True
+pfdhfr_51_59_108 1446/1876 pass: True
+pfdhfr_quadruple 0/1874 pass: True
+pfcrt_72_76 133/1873 pass: True
+pfdhps_437_540 18/1888 pass: True
+pfdhps_G437 1697/1892 pass: True
+pfcrt_N75E 133/1874 pass: True
+WHO k13 marker coverage complete: True
+Screened k13 marker targets not detected: True
+Canonical all-reference assertion supported: False
+
+--- stderr ---
+
+
+[Lean version]
+command: ["/private/tmp/pf8_review/lean-4.19.0-darwin_aarch64/bin/lean", "--version"]
+status: completed; exit_code: 0
+--- stdout ---
+Lean (version 4.19.0, arm64-apple-darwin23.6.0, commit 6caaee842e94, Release)
+
+--- stderr ---
+
+
+[Lean compile]
+command: ["/private/tmp/pf8_review/lean-4.19.0-darwin_aarch64/bin/lean", "-o", "/Users/samnimoh/Desktop/chromo/verification_audit/Pf8Audit.olean", "/Users/samnimoh/Desktop/chromo/verification_audit/Pf8Audit.lean"]
+status: completed; exit_code: 0
+--- stdout ---
+'Pf8Audit.tie_is_missing' depends on axioms: [propext]
+'Pf8Audit.reference_majority_is_reference' depends on axioms: [propext]
+'Pf8Audit.alternate_majority_is_alternate' depends on axioms: [propext, Quot.sound]
+'Pf8Audit.one_allele_per_called_isolate' depends on axioms: [propext, Quot.sound]
+'Pf8Audit.called_count_is_bounded_by_samples' depends on axioms: [propext, Quot.sound]
+'Pf8Audit.conjunction_cannot_exceed_component' depends on axioms: [propext, Quot.sound]
+'Pf8Audit.same_marginals_do_not_identify_haplotype' does not depend on any axioms
+'Pf8Audit.transitional_private_variant_cannot_pass' depends on axioms: [propext, Quot.sound]
+'Pf8Audit.coast_private_about_40_percent_cannot_pass' depends on axioms: [propext, Quot.sound]
+'Pf8Audit.sample_removal_can_raise_variant_missingness' does not depend on any axioms
+'Pf8Audit.shape_does_not_prove_identifier_alignment' does not depend on any axioms
+'Pf8Audit.ratio_of_sums_is_not_mean_of_ratios' depends on axioms: [propext]
+'Pf8Audit.doubled_counts_change_hudson_correction' depends on axioms: [propext]
+'Pf8Audit.simulated_tail_ratio_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Pf8Audit.expected_false_positive_ratio_arithmetic' depends on axioms: [propext]
+'Pf8Audit.sampled_zero_does_not_force_population_zero' does not depend on any axioms
+
+--- stderr ---
+
+
+[Validation checks]
+{
+  "python_checkers_passed": true,
+  "compiler_exactly_pinned": true,
+  "lean_compile_succeeded": true,
+  "olean_output_exists": true,
+  "source_unchanged": true,
+  "sixteen_source_theorems": true,
+  "sixteen_axiom_print_requests": true,
+  "print_requests_cover_source_theorems": true,
+  "sixteen_compiler_axiom_reports": true,
+  "compiler_reports_cover_source_theorems": true,
+  "only_allowed_standard_axioms": true,
+  "no_forbidden_proof_tokens_outside_comments": true,
+  "no_custom_axiom_declarations_outside_comments": true
+}

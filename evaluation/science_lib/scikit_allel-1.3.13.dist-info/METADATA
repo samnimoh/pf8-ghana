@@ -1,0 +1,76 @@
+Metadata-Version: 2.1
+Name: scikit-allel
+Version: 1.3.13
+Summary: A Python package for exploring and analysing genetic variation data.
+Home-page: https://github.com/cggh/scikit-allel
+Download-URL: http://pypi.python.org/pypi/scikit-allel
+Maintainer: Alistair Miles
+Maintainer-email: alimanfoo@googlemail.com
+License: MIT
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.10
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: dask[array]
+Provides-Extra: full
+Requires-Dist: scipy; extra == "full"
+Requires-Dist: matplotlib; extra == "full"
+Requires-Dist: seaborn; extra == "full"
+Requires-Dist: pandas; extra == "full"
+Requires-Dist: scikit-learn; extra == "full"
+Requires-Dist: h5py; extra == "full"
+Requires-Dist: numexpr; extra == "full"
+Requires-Dist: zarr; extra == "full"
+Requires-Dist: hmmlearn; extra == "full"
+Requires-Dist: protopunica; extra == "full"
+Requires-Dist: nose; extra == "full"
+
+``scikit-allel``
+================
+
+A Python package for exploratory analysis of large scale genetic variation data.
+
+* Documentation: http://scikit-allel.readthedocs.org
+* Source code: https://github.com/cggh/scikit-allel
+* Download: https://pypi.python.org/pypi/scikit-allel
+
+.. image:: https://zenodo.org/badge/7890/cggh/scikit-allel.svg
+   :target: https://zenodo.org/badge/latestdoi/7890/cggh/scikit-allel
+
+.. image:: https://readthedocs.org/projects/scikit-allel/badge/?version=latest
+    :target: http://scikit-allel.readthedocs.io/en/latest/?badge=latest
+
+.. image:: https://travis-ci.org/cggh/scikit-allel.svg?branch=master
+    :target: https://travis-ci.org/cggh/scikit-allel
+
+.. image:: https://ci.appveyor.com/api/projects/status/1fna2yr9uht0u296?svg=true
+    :target: https://ci.appveyor.com/project/alimanfoo/scikit-allel
+
+
+Development status
+******************
+
+Please note that scikit-allel is no longer under active development
+and is now in "maintenance-only" mode. The intended successor
+project is `sgkit <https://github.com/pystatgen/sgkit>`__ (the Statistical
+Genetics Toolkit) which should support all the functionality of sckit-allel,
+but provide better scaling, performance and maintainability.
+Sgkit is not yet at feature parity with scikit-allel and is therefore
+not ready for all applications, but we welcome `contributions
+<https://pystatgen.github.io/sgkit/latest/contributing.html>`__!

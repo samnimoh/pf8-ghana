@@ -1,0 +1,127 @@
+{
+  "generated_utc": "2026-10-11T04:28:34.951047+00:00",
+  "images_inspected": [
+    {
+      "path": "/private/tmp/pf8_review_round6/article/page-1.png",
+      "bytes": 358907,
+      "sha256": "2a90e78c081dc1f5bdee78c47b53ad07831bf9872deb4f24ab237aa3511d710b",
+      "document": "article",
+      "page": 1,
+      "visually_inspected": true
+    },
+    {
+      "path": "/private/tmp/pf8_review_round6/article/page-6.png",
+      "bytes": 354040,
+      "sha256": "ff5b39f0e5ff4bf5736eae9343ba3b252ee8f9be05bd43c2617bfe88a730b18a",
+      "document": "article",
+      "page": 6,
+      "visually_inspected": true
+    },
+    {
+      "path": "/private/tmp/pf8_review_round6/article/page-7.png",
+      "bytes": 483616,
+      "sha256": "7b0bdc464ed9f522eaa6cce5ce6d884527ab7f56feeff0146d0dddc18de3a070",
+      "document": "article",
+      "page": 7,
+      "visually_inspected": true
+    },
+    {
+      "path": "/private/tmp/pf8_review_round6/article/page-9.png",
+      "bytes": 371582,
+      "sha256": "b5f5cff101d16127e703288a16c0d170d00fe3410a5cb0d3329f1a98eac0f78c",
+      "document": "article",
+      "page": 9,
+      "visually_inspected": true
+    },
+    {
+      "path": "/private/tmp/pf8_review_round6/article/page-10.png",
+      "bytes": 350750,
+      "sha256": "bcc7d888ebadba80a963df162d130b59f86472061ff4dda518a05913561fc8cc",
+      "document": "article",
+      "page": 10,
+      "visually_inspected": true
+    },
+    {
+      "path": "/private/tmp/pf8_review_round6/article/page-15.png",
+      "bytes": 366884,
+      "sha256": "431d4a664fc3e01fb728b141ddd71348de4dc5743eda6bb1a58b684c6bb21bb7",
+      "document": "article",
+      "page": 15,
+      "visually_inspected": true
+    },
+    {
+      "path": "/private/tmp/pf8_review_round6/article/page-18.png",
+      "bytes": 99951,
+      "sha256": "8fe5a8f623ef51572a3a36102fbb5bc773b0ff5d913d1a724e15e4b7ff38859e",
+      "document": "article",
+      "page": 18,
+      "visually_inspected": true
+    },
+    {
+      "path": "/private/tmp/pf8_review_round6/manuscript/page-27.png",
+      "bytes": 328935,
+      "sha256": "399132ddab6bce4d25c1e2426d4f9c72d3c2a6ae44418b4d739887bdd3088085",
+      "document": "manuscript",
+      "page": 27,
+      "visually_inspected": true
+    },
+    {
+      "path": "/private/tmp/pf8_review_round6/manuscript/page-44.png",
+      "bytes": 400880,
+      "sha256": "b6e5f9c52d33297f4c3404236d329761524bd9bdf6d6823f575b1bc6286cbf35",
+      "document": "manuscript",
+      "page": 44,
+      "visually_inspected": true
+    },
+    {
+      "path": "/private/tmp/pf8_review_round6/manuscript/page-111.png",
+      "bytes": 322784,
+      "sha256": "58d0a204cefaae72145b968cf5ea3b4d0391756b7a2f8da5f0ef8f711cacaa09",
+      "document": "manuscript",
+      "page": 111,
+      "visually_inspected": true
+    },
+    {
+      "path": "/private/tmp/pf8_review_round6/manuscript/page-142.png",
+      "bytes": 421593,
+      "sha256": "39f929d46cdfcc77f1e338c4a81ec15b192dee27230528020d8083c95abb5461",
+      "document": "manuscript",
+      "page": 142,
+      "visually_inspected": true
+    },
+    {
+      "path": "/private/tmp/pf8_review_round6/supplement/page-1.png",
+      "bytes": 130711,
+      "sha256": "5600b8e51a43ab2048b0efbff294c5e68ccbf7090c3783b729d285abe021e300",
+      "document": "supplement",
+      "page": 1,
+      "visually_inspected": true
+    },
+    {
+      "path": "/private/tmp/pf8_review_round6/supplement/page-2.png",
+      "bytes": 263502,
+      "sha256": "d144549799ed5ca28e7bc88a26b5b9d467c16729bafcdb6e02fe7d300cb99341",
+      "document": "supplement",
+      "page": 2,
+      "visually_inspected": true
+    },
+    {
+      "path": "/private/tmp/pf8_review_round6/supplement/page-110.png",
+      "bytes": 404311,
+      "sha256": "93de576baee5d8c3e262d3b2d18382c5866350c12853a5e91bd038134c0c1912",
+      "document": "supplement",
+      "page": 110,
+      "visually_inspected": true
+    }
+  ],
+  "scope": "Fourteen selected page images; not an all-page certification of the long reports.",
+  "findings": [
+    "Article page 6 visibly supplies the corrected QC header and denominators.",
+    "Article page 7 visibly retains the older numerical ordination narrative beside the corrected cohort figure.",
+    "Article page 10 visibly supplies the conditional q-value interpretation and differentiated ExcessHet statement.",
+    "Article page 15 retains declaration and archive placeholders.",
+    "Supplement page 2 states sequential S1-S52 table and S1-S23 figure ranges.",
+    "Fresh main page 111 contains the narrower full-precision accounting.",
+    "Article page 1 strands the Background heading, and page 9 uses literal scientific-notation text."
+  ]
+}

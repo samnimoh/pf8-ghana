@@ -1,0 +1,767 @@
+[
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      15,
+      15
+    ],
+    "new_paragraph_range": [
+      15,
+      15
+    ],
+    "old": [
+      "Methods. Genotypes were obtained from the Pf8 Zarr store over HTTPS, restricted to Ghanaian samples, sites passing the release filter, biallelic single-nucleotide polymorphisms only (the ingest mask is FILTER_PASS & is_snp & numalt == 1), and the GT, AD, DP and GQ fields. Sample quality control applied a within-host fixation index (Fws) threshold of 0.95, a call-rate floor of 0.80, a heterozygosity outlier rule and clonal pruning; mixed calls were resolved to the majority allele by read depth and allele counts taken as one allele per isolate. Variant missingness is now recomputed after the sample cut rather than before it, which yields 3,916 SNPs across 1,900 isolates (mean missingness 2.95%): Guinea savanna 1,334, deciduous forest 337, coastal savanna 204, transitional zone 25. Analyses comprised three ordinations of the published Pf8 genotype-distance matrix (originally computed on the 4,905 release-QC-pass isolates and now re-run on the 1,900-isolate analysis set, by re-slicing the distance submatrix rather than reusing the cached full-set one), pairwise Hudson FST with a block jackknife, ADMIXTURE at K = 1-8 with cross-validation, Mantel tests of isolation by distance at zone and region level with a leave-one-population-out jackknife, TreeMix with 0-5 migration edges and jackknife edge standard errors, and a BayPass XtX scan calibrated against 100,000 pseudo-observed neutral SNPs with Benjamini-Hochberg q-values. Two further checks were added at final revision and both are reported below: a six-scenario threshold sensitivity analysis that rebuilds the analysis matrix under varied Fws and MAF cuts and recomputes pairwise FST and the region-level Mantel test in each, and a call-quality audit of the 19 XtX outliers against the other 3,897 scanned SNPs on the Pf8 annotation fields (MQ, VQSLOD, QD, FS, SOR, ReadPosRankSum, ExcessHet, InbreedingCoeff, culprit, RegionType). The resistance panel is separate and has been rebuilt from the codon up: 57 codons in nine genes were reconstructed from the CDS and the Pf3D7 reference genome - each codon mapped to its three genomic positions, every variant record at those positions collected regardless of numalt or is_snp, each isolate's alleles applied to the reference codon, and the codon translated - so that what is reported is the full residue spectrum including the reference residue, with Wilson confidence intervals and a four-zone chi-square test per residue. Mixed calls make a codon uncalled rather than being assigned a residue. Within-isolate haplotypes were counted on complete cases only; every call was compared one-for-one against MalariaGEN's published genotypes; and the pfk13 list was taken from the WHO compendium of validated and candidate markers, v1.0 (December 2025), rather than written by hand."
+    ],
+    "new": [
+      "Methods. Genotypes were obtained from the Pf8 Zarr store over HTTPS, restricted to Ghanaian samples, sites passing the release filter, biallelic single-nucleotide polymorphisms only (the ingest mask is FILTER_PASS & is_snp & numalt == 1), and the GT, AD, DP and GQ fields. Sample quality control applied a within-host fixation index (Fws) threshold of 0.95, a call-rate floor of 0.80, a heterozygosity outlier rule and clonal pruning; mixed calls were resolved to the majority allele by read depth and allele counts taken as one allele per isolate. Variant missingness is now recomputed after the sample cut rather than before it, which yields 3,916 SNPs across 1,900 isolates (mean missingness 2.95%): Guinea savanna 1,334, deciduous forest 337, coastal savanna 204, transitional zone 25. Analyses comprised three ordinations of the published Pf8 genotype-distance matrix (originally computed on the 4,905 release-QC-pass isolates and now re-run on the 1,900-isolate analysis set, by re-slicing the distance submatrix rather than reusing the cached full-set one), pairwise Hudson FST with a block jackknife, ADMIXTURE at K = 1-8 with cross-validation, Mantel tests of isolation by distance at zone and region level with a leave-one-population-out jackknife, TreeMix with 0-5 migration edges and jackknife edge standard errors, and a BayPass XtX scan calibrated against 100,000 pseudo-observed neutral SNPs with Benjamini-Hochberg q-values. Two further checks were added at final revision and both are reported below: a six-scenario threshold sensitivity analysis that rebuilds the analysis matrix under varied Fws and MAF cuts and recomputes pairwise FST and the region-level Mantel test in each, and a call-quality audit of the 19 XtX outliers against the other 3,897 scanned SNPs on the Pf8 annotation fields (MQ, VQSLOD, QD, FS, SOR, ReadPosRankSum, ExcessHet, InbreedingCoeff, culprit, RegionType). The resistance panel is separate and has been rebuilt from the codon up: 57 codons in nine genes were reconstructed from the CDS and the Pf3D7 reference genome - each codon mapped to its three genomic positions, every variant record at those positions collected regardless of numalt or is_snp, each isolate's alleles applied to the reference codon, and the codon translated - so that what is reported is the full residue spectrum including the reference residue, with Wilson confidence intervals and a four-zone chi-square test per residue. Mixed calls make a codon uncalled rather than being assigned a residue. Within-isolate haplotypes were counted on complete cases only; calls at the 25 of the 57 panel codons for which MalariaGEN publishes a per-sample genotype were compared one-for-one against it, on isolates both pipelines called; and the pfk13 list was taken from the WHO compendium of validated and candidate markers, v1.0 (December 2025), rather than written by hand."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      18,
+      18
+    ],
+    "new_paragraph_range": [
+      18,
+      18
+    ],
+    "old": [
+      "[Calculated] Principal findings: drug-resistance markers. The previous version's resistance findings were affected by a defect in how markers were identified - the panel matched SnpEff protein-change strings, which can see neither a resistance allele that is itself the reference residue nor a residue that requires two nucleotide changes in one codon - and the panel has been rebuilt by codon reconstruction, which corrects it. Two findings follow directly from the rebuild. pfdhps A437G, wholly absent from the previous panel, stands at 0.897* for G437 (n = 1,892; deciduous forest 0.964, coastal savanna 0.941, Guinea savanna 0.875, transitional zone 0.800; chi-square p = 1.2 x 10 to the -6); the official Pf8 methodology states that the 3D7 sequence translates as a G at 437 and that this is the mutant allele, so the resistance residue is the reference residue and no ALT annotation for it can exist. And the former \"naming discrepancy\" at pfcrt 75 was never a naming matter: N75E requires two SNPs in one codon (403621 A>G, annotated Asn75Asp; 403623 T>A, annotated Asn75Lys), and neither annotation names it. Haplotypes are now counted within isolates on complete cases. The pfdhfr IRN triple mutant is 0.771 (n = 1,876; 95% CI 0.751-0.789) - not the marginal range 0.786-0.908 previously quoted, and, as it must be, below its lowest component on the same complete-case set (51I = 0.788); NRN sits at 0.116 and the fully wild-type NCS at 0.091, so it is not a near-fixed single haplotype, and the quadruple IRNL is 0.000. pfcrt CVIET is 0.071 and is demonstrably a single unit: only CVMNK (0.929) and CVIET occur at codons 72-76, with nothing intermediate. pfdhps GE (437G + 540E) is 0.010. The pfdhfr marginals remain high and lowest in Guinea savanna (S108N 0.908 overall / 0.885 Guinea savanna; C59R 0.886 / 0.864; N51I 0.786 / 0.764; chi-square p = 9.4 x 10 to the -7, 4.8 x 10 to the -5 and 2.4 x 10 to the -4), with the transitional zone (n = 25) at or near the top of all three. The pfk13 panel was rebuilt from the WHO compendium v1.0 (December 2025) and covers all 14 validated markers (F446I, N458Y, C469Y, M476I, Y493H, G533S, R539T, I543T, P553L, R561H, P574L, C580Y, R622I, A675V) and all 6 candidates (E252Q, P441L, C469F, N537I, G538V, V568G); the old list was written from memory, misclassified P441L and C469F as validated when WHO classes them as candidate, and omitted P574L, G533S and R622I. All 23 pfk13 codons carry no screened resistance allele: twenty-two are fixed at the reference residue, and codon 458 is at 0.9995 on a single Asn458Asp call, which is not the validated N458Y, on 1,845 to 1,876 isolates called per codon of 1,900, across a 2009-2021 sampling period - a tested historical negative, not a statement about the present. Validation is now per sample rather than per marginal frequency: 47,012 of 47,012 calls agree with MalariaGEN's published genotypes, 100.0000% across 25 markers*, codon 75 included."
+    ],
+    "new": [
+      "[Calculated] Principal findings: drug-resistance markers. The previous version's resistance findings were affected by a defect in how markers were identified - the panel matched SnpEff protein-change strings, which can see neither a resistance allele that is itself the reference residue nor a residue that requires two nucleotide changes in one codon - and the panel has been rebuilt by codon reconstruction, which corrects it. Two findings follow directly from the rebuild. pfdhps A437G, wholly absent from the previous panel, stands at 0.897 for G437 (n = 1,892; deciduous forest 0.964, coastal savanna 0.941, Guinea savanna 0.875, transitional zone 0.800; chi-square p = 1.2 x 10 to the -6); the official Pf8 methodology states that the 3D7 sequence translates as a G at 437 and that this is the mutant allele, so the resistance residue is the reference residue and no ALT annotation for it can exist. And the former \"naming discrepancy\" at pfcrt 75 was never a naming matter: N75E requires two SNPs in one codon (403621 A>G, annotated Asn75Asp; 403623 T>A, annotated Asn75Lys), and neither annotation names it. Haplotypes are now counted within isolates on complete cases. The pfdhfr IRN triple mutant is 0.771 (n = 1,876; 95% CI 0.751-0.789) - not the marginal range 0.786-0.908 previously quoted, and, as it must be, below its lowest component on the same complete-case set (51I = 0.788); NRN sits at 0.116 and the fully wild-type NCS at 0.091, so it is not a near-fixed single haplotype, and the quadruple IRNL is 0.000. pfcrt CVIET is 0.071 and is demonstrably a single unit: only CVMNK (0.929) and CVIET occur at codons 72-76, with nothing intermediate. pfdhps GE (437G + 540E) is 0.010. The pfdhfr marginals remain high and lowest in Guinea savanna (S108N 0.908 overall / 0.885 Guinea savanna; C59R 0.886 / 0.864; N51I 0.786 / 0.764; chi-square p = 9.4 x 10 to the -7, 4.8 x 10 to the -5 and 2.4 x 10 to the -4), with the transitional zone (n = 25) at or near the top of all three. The pfk13 panel was rebuilt from the WHO compendium v1.0 (December 2025) and covers all 14 validated markers (F446I, N458Y, C469Y, M476I, Y493H, G533S, R539T, I543T, P553L, R561H, P574L, C580Y, R622I, A675V) and all 6 candidates (E252Q, P441L, C469F, N537I, G538V, V568G); the old list was written from memory, misclassified P441L and C469F as validated when WHO classes them as candidate, and omitted P574L, G533S and R622I. All 23 pfk13 codons carry no screened resistance allele: twenty-two are fixed at the reference residue, and codon 458 is at 0.9995 on a single Asn458Asp call, which is not the validated N458Y, on 1,845 to 1,876 isolates called per codon of 1,900, across a 2009-2021 sampling period - a tested historical negative, not a statement about the present. Validation is now per sample rather than per marginal frequency: 47,012 of 47,012 calls agree with MalariaGEN's published genotypes, 100.0000% across 25 markers, codon 75 included."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      20,
+      21
+    ],
+    "new_paragraph_range": [
+      20,
+      21
+    ],
+    "old": [
+      "[Interpreted] Conclusion. At the resolution these data permit, Ghanaian P. falciparum shows no differentiation this design can detect at the retained common variants. That is now the strongest claim this report carries - a statement about measured differentiation, not a demonstration of random mating, for which these data contain no direct evidence. The sensitivity analysis is the reason: the maximum pairwise FST stays within 0.00204-0.00255 across all six threshold scenarios, over 1,900 to 4,403 isolates and 3,275 to 10,876 SNPs, so the headline result is insensitive to both of the cuts that define the dataset. The companion claim does not survive the same treatment. The region-level isolation-by-distance result is significant at the published thresholds and at MAF >= 0.02, but in only 2 of 6 threshold scenarios and 4 of 7 leave-one-region-out replicates, and this report therefore no longer asserts a distance effect, weak or otherwise. What remains of the spatial signal is a single south-to-north contrast, visible in the FST ranking and in the K = 2 minor component, with no robust evidence that genetic distance scales with geographic distance. That near-panmixia is a statement about neutral common-variant structure only: neutral common-variant differentiation between zones is negligible, so a spatially sparse design is adequate for characterising neutral structure, but marker-frequency representativeness is a separate question, and the resistance panel in this analysis shows significant between-zone variation at p < 0.001 at pfdhfr, pfdhps and pfaat1. That threshold is stated because it is a selection: on the four-zone chi-square as reported, several further loci are nominally significant at p < 0.05, among them pfcrt I356T (p = 1.6 x 10 to the -3), pfmdr2 I492V (p = 0.020) and pfmdr1 N86Y (p = 0.029). Low neutral FST therefore does not license an assumption that marker frequencies are spatially representative. The pfk13 result is a genuine tested negative - no screened resistance allele occurs at any of the 23 codons, which cover the complete WHO-validated set of 14 and all 6 candidates: twenty-two are fixed at the reference residue and codon 458 is at 0.9995 on a single Asn458Asp call, which is not the validated N458Y, on 1,845 to 1,876 isolates called per codon - rather than an untested absence; it is also a statement about 2009-2021 and not about current parasite populations. The XtX set remains a ranked candidate list, of which 13 SNPs survive FDR 10% and two adjacent chromosome-11 sites - one of them the fifth-ranked SNP overall - are flagged lower confidence on ExcessHet and InbreedingCoeff grounds. All zone-level results describe a compound variable in which ecology, administrative region, collection period and sequencing study cannot be separated; that is a property of the Pf8 metadata, not of the analysis.",
+      "[Interpreted] Robustness of these conclusions to the corrected re-runs and the final checks. The population-structure readings held on a 16.6% larger SNP panel (3,359 to 3,916 SNPs) with corrected filter ordering, a bitwise-reproducible single-threaded BayPass, seeded permutation tests and full false-discovery accounting: near-panmixia, maximum FST of approximately 0.0023, and a near-flat ADMIXTURE cross-validation curve. Three quantities moved and should not be described as unchanged: the XtX threshold (the manuscript's 8-thread run gave 11.232, the final single-threaded run gives 10.840), the outlier count (15 to 19) and the outlier gene list (11 to 13 genes). One conclusion has since been lost, and it was the report's only positive spatial finding. The threshold sensitivity analysis shows the region-level Mantel result significant in 2 of 6 scenarios, and it also withdraws the earlier claim that the result no longer depends on the censoring of negative FST pairs: of the six scenarios only the baseline clears p < 0.05 both censored and uncensored, the second significant scenario (MAF >= 0.02) giving p = 0.047 censored against p = 0.050 uncensored. Isolation by distance is retained in the report and reported with the scenarios in which it fails, but it is graded not robust, and the previous version's listing of it among the strengthened results is withdrawn. Two strengthenings stand. Near-panmixia is now supported by FST stability across 0.00204-0.00255 over all six scenarios, which is better evidence than any single run could give; and TreeMix decides m = 2 on edge p-values instead of hedging between m = 2 and m = 3. Two further checks changed nothing material. Re-running the three ordinations on the 1,900-isolate analysis set rather than the 4,905 pre-QC isolates leaves the reading intact - silhouette by zone -0.020 against -0.016 on the full set, so removing polyclonal and clonally redundant isolates does not sharpen the structure; trustworthiness 0.499 (UMAP), 0.526 (t-SNE), 0.510 (PCoA), PCoA distance correlation 0.287 against 0.322 - and the call-quality audit clears the outlier set while downgrading two chromosome-11 SNPs. The resistance panel is a different matter and was not confirmed but replaced: an external critique upheld in full showed that the marker identification method was unsound, and the panel was rebuilt from the codon up, changing the pfdhfr triple-mutant figure, adding a locus that had been missing altogether, correcting a residue call, correcting the pfk13 list, and replacing the validation argument. The population analyses are therefore a partial confirmation with two strengthened results, one lost result, two downgraded outlier SNPs and one materially revised candidate list; the resistance results are new."
+    ],
+    "new": [
+      "[Interpreted] Conclusion. At the resolution these data permit, Ghanaian P. falciparum shows very low but statistically detectable differentiation at the retained common variants. Five of the six pairwise estimates have 95% confidence intervals excluding zero; only Guinea savanna against the transitional zone, where n = 25, spans it. Very low is not the same as undetectable, and neither is a demonstration of random mating, for which these data contain no direct evidence. What the sensitivity analysis adds is stability of the magnitude rather than absence of the effect: the maximum pairwise FST stays within 0.00204-0.00255 across all six threshold scenarios, over 1,900 to 4,403 isolates and 3,275 to 10,876 SNPs, so the headline result is insensitive to both of the cuts that define the dataset. The companion claim does not survive the same treatment. The region-level isolation-by-distance result is significant at the published thresholds and at MAF >= 0.02, but in only 2 of 6 threshold scenarios and 4 of 7 leave-one-region-out replicates, and this report therefore no longer asserts a distance effect, weak or otherwise. What remains of the spatial signal is a single south-to-north contrast, visible in the FST ranking and in the K = 2 minor component, with no robust evidence that genetic distance scales with geographic distance. That very low differentiation is a statement about neutral common-variant structure only: neutral common-variant differentiation between zones is negligible, so a spatially sparse design is adequate for characterising neutral structure, but marker-frequency representativeness is a separate question, and the resistance panel in this analysis shows significant between-zone variation at p < 0.001 at pfdhfr, pfdhps and pfaat1. That threshold is stated because it is a selection: on the four-zone chi-square as reported, several further loci are nominally significant at p < 0.05, among them pfcrt I356T (p = 1.6 x 10 to the -3), pfmdr2 I492V (p = 0.020) and pfmdr1 N86Y (p = 0.029). Low neutral FST therefore does not license an assumption that marker frequencies are spatially representative. The pfk13 result is a genuine tested negative - no screened resistance allele occurs at any of the 23 codons, which cover the complete WHO-validated set of 14 and all 6 candidates: twenty-two are fixed at the reference residue and codon 458 is at 0.9995 on a single Asn458Asp call, which is not the validated N458Y, on 1,845 to 1,876 isolates called per codon - rather than an untested absence; it is also a statement about 2009-2021 and not about current parasite populations. The XtX set remains a ranked candidate list, of which 13 SNPs survive FDR 10% and two adjacent chromosome-11 sites - one of them the fifth-ranked SNP overall - are flagged lower confidence on ExcessHet and InbreedingCoeff grounds. All zone-level results describe a compound variable in which ecology, administrative region, collection period and sequencing study cannot be separated; that is a property of the Pf8 metadata, not of the analysis.",
+      "[Interpreted] Robustness of these conclusions to the corrected re-runs and the final checks. The population-structure readings held on a 16.6% larger SNP panel (3,359 to 3,916 SNPs) with corrected filter ordering, a bitwise-reproducible single-threaded BayPass, seeded permutation tests and full false-discovery accounting: near-panmixia, maximum FST of approximately 0.0023, and a near-flat ADMIXTURE cross-validation curve. Three quantities moved and should not be described as unchanged: the XtX threshold (the manuscript's 8-thread run gave 11.232, the final single-threaded run gives 10.840), the outlier count (15 to 19) and the outlier gene list (11 to 13 genes). One conclusion has since been lost, and it was the report's only positive spatial finding. The threshold sensitivity analysis shows the region-level Mantel result significant in 2 of 6 scenarios, and it also withdraws the earlier claim that the result no longer depends on the censoring of negative FST pairs: of the six scenarios only the baseline clears p < 0.05 both censored and uncensored, the second significant scenario (MAF >= 0.02) giving p = 0.047 censored against p = 0.050 uncensored. Isolation by distance is retained in the report and reported with the scenarios in which it fails, but it is graded not robust, and the previous version's listing of it among the strengthened results is withdrawn. Two strengthenings stand. Near-panmixia is now supported by FST stability across 0.00204-0.00255 over all six scenarios, which is better evidence than any single run could give; and TreeMix now carries jackknife edge standard errors, so the m = 2 graph is reported as a selected descriptive model rather than as a settled edge count. Two further checks changed nothing material. Re-running the three ordinations on the 1,900-isolate analysis set rather than the 4,905 pre-QC isolates leaves the reading intact - silhouette by zone -0.020 against -0.016 on the full set, so removing polyclonal and clonally redundant isolates does not sharpen the structure; trustworthiness 0.499 (UMAP), 0.526 (t-SNE), 0.510 (PCoA), PCoA distance correlation 0.287 against 0.322 - and the call-quality audit clears the outlier set while downgrading two chromosome-11 SNPs. The resistance panel is a different matter and was not confirmed but replaced: an external critique upheld in full showed that the marker identification method was unsound, and the panel was rebuilt from the codon up, changing the pfdhfr triple-mutant figure, adding a locus that had been missing altogether, correcting a residue call, correcting the pfk13 list, and replacing the validation argument. The population analyses are therefore a partial confirmation with two strengthened results, one lost result, two downgraded outlier SNPs and one materially revised candidate list; the resistance results are new."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      58,
+      58
+    ],
+    "new_paragraph_range": [
+      58,
+      58
+    ],
+    "old": [
+      "[Interpreted] Questions 1, 3 and 4 are answerable at the resolution these data permit and are answered in Section 6. Question 1 is answered robustly: the low-differentiation reading survives both threshold relaxations, with max FST between 0.00204 and 0.00255 across the six scenarios. Question 2 is answered negatively. The distance effect it tests is significant at the published thresholds but in only 2 of 6 threshold scenarios and 4 of 7 leave-one-region-out replicates, so the honest answer is that these data do not establish isolation by distance; whether that is a statement about Ghanaian parasite demography or about the fragility of a Mantel test on 21 pairs from 7 coordinates cannot be settled here, and both readings are consistent with everything else in the report. Question 5 is answerable only in the weak sense of producing a ranked candidate list: with four populations and 3,916 SNPs the scan has limited power, 3.9 of the 19 SNPs above the quantile threshold are expected to be false positives, only 13 survive FDR 10%, and two - including the fifth-ranked SNP overall - carry ExcessHet and InbreedingCoeff signatures that put them at lower confidence. Question 6 is answered directly, by genotyping rather than by scan, which is why a reference-residue frequency at or near 1.000 at a pfk13 codon is now informative where a non-significant XtX value would not have been - subject to two limits that must travel with the number. It is fixation among called genotypes, 1,845 to 1,876 isolates per codon rather than all 1,900, and it describes isolates collected between 2009 and 2021. The corroborating MalariaGEN kelch13 status exists for only 36 of those isolates, because Pf8 treats any missing call across amino acids 349-726 as undetermined, so it is supporting rather than independent evidence."
+    ],
+    "new": [
+      "[Interpreted] Questions 1, 3 and 4 are answerable at the resolution these data permit and are answered in Section 6. Question 1 is answered robustly: the low-differentiation reading survives both threshold relaxations, with max FST between 0.00204 and 0.00255 across the six scenarios. Question 2 is answered negatively. The distance effect it tests is significant at the published thresholds but in only 2 of 6 threshold scenarios and 4 of 7 leave-one-region-out replicates, so the honest answer is that these data do not establish isolation by distance; whether that is a statement about Ghanaian parasite demography or about the fragility of a Mantel test on 21 pairs from 7 coordinates cannot be settled here, and both readings are consistent with everything else in the report. Question 5 is answerable only in the weak sense of producing a ranked candidate list: with four populations and 3,916 SNPs the scan has limited power, 3.9 of the 19 SNPs above the quantile threshold are expected to be false positives, only 13 survive FDR 10%, and two - including the fifth-ranked SNP overall - carry ExcessHet and InbreedingCoeff signatures that put them at lower confidence. Question 6 is answered directly, by genotyping rather than by scan, which is why a reference-residue frequency at or near 1.000 at a pfk13 codon is now informative where a non-significant XtX value would not have been - subject to two limits that must travel with the number. It is fixation among called genotypes at twenty-two of the 23 codons and 0.9995 at codon 458, on 1,845 to 1,876 isolates per codon rather than all 1,900, and it describes isolates collected between 2009 and 2021. The corroborating MalariaGEN kelch13 status exists for only 36 of those isolates, because Pf8 treats any missing call across amino acids 349-726 as undetermined, so it is supporting rather than independent evidence."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      121,
+      121
+    ],
+    "new_paragraph_range": [
+      121,
+      121
+    ],
+    "old": [
+      "[Interpreted] The practical reading is as follows. Study confounding does not threaten the central negative result, because that result is an absence of differentiation: batch effects, if anything, inflate apparent between-group differences, so a batch-confounded design that still returns FST \u2248 0.002 is reporting an upper bound on true differentiation rather than a false positive. It does threaten any positive between-zone claim \u2014 the maximum-FST pair, the polyclonality gradient, the ADMIXTURE minor-component ordering, and the marker-frequency differences in \u00a76.9 \u2014 because for the pairs concerned there is no study-level control to appeal to. Each of those claims should be read as \"differs between zones, which in these data means between zone, region, period and sequencing batch jointly\"."
+    ],
+    "new": [
+      "[Interpreted] The practical reading is as follows. Study confounding does not threaten the central finding that differentiation is very low, because what that finding supplies is a ceiling on magnitude rather than a positive claim: batch effects, if anything, inflate apparent between-group differences, so a batch-confounded design that still returns FST \u2248 0.002 is reporting an upper bound on true differentiation rather than a false positive. It does threaten any positive between-zone claim \u2014 the maximum-FST pair, the polyclonality gradient, the ADMIXTURE minor-component ordering, and the marker-frequency differences in \u00a76.9 \u2014 because for the pairs concerned there is no study-level control to appeal to. Each of those claims should be read as \"differs between zones, which in these data means between zone, region, period and sequencing batch jointly\"."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      169,
+      169
+    ],
+    "new_paragraph_range": [
+      169,
+      169
+    ],
+    "old": [
+      "[Observed] The cascade, defined once. Stage 10's panel held 44 canonical codon-allele records, covering 41 distinct protein changes, in eight of the nine panel genes (pfcoronin contributed none); 21 were polymorphic in these 1,900 isolates; 6 of the 21 survived the ingest mask \u2014 the in_genomewide_scan field, defined at step10_resistance_panel.py:349 as numalt == 1, i.e. \"would have survived the ingest filter\"; and 3 reached the MAF-filtered scan matrix: pfdhfr C59R, pfdhfr N51I and pfaat1 S258L. The other three that passed the mask \u2014 pfcrt I356T, pfmdr1 D1246Y and pfcrt N326S \u2014 were then cut by MAF \u2265 0.05 at frequencies of 0.016, 0.011 and 0.008. These four numbers (44, 21, 6, 3) carry exactly this meaning wherever they appear in this manuscript, and the Abstract, Table 1.1, Section 6.8.3, Table 6.8 and Section 10.1 use this wording. In particular, the genome-wide scan did test three of the 21 polymorphic canonical codons, and *no pfcrt, pfmdr1, pfdhps or pfk13 codon reached the MAF-filtered scan matrix \u2014 pfdhps because nothing survived the ingest mask, the others because what survived was either too rare (pfcrt I356T, pfcrt N326S and pfmdr1 D1246Y all passed the mask, reached the genome-wide store and were then cut by MAF at 0.016, 0.011 and 0.008) or monomorphic here (six pfk13* codons \u2014 F446I, P441L, Y493H, P553L, R561H, A675V \u2014 passed the mask and were fetched and found invariant). \"Could not test at all\" would be true of the final MAF-filtered scan matrix but false of ascertainment, which is the distinction this paragraph exists to draw, so the stronger wording is not used."
+    ],
+    "new": [
+      "[Observed] The cascade, defined once. Stage 10's panel held 44 canonical codon-allele records, covering 41 distinct protein changes, in eight of the nine panel genes (pfcoronin contributed none); 21 were polymorphic in these 1,900 isolates; 6 of the 21 survived the ingest mask \u2014 the in_genomewide_scan field, defined at step10_resistance_panel.py:349 as numalt == 1, i.e. \"would have survived the ingest filter\"; and 3 reached the MAF-filtered scan matrix: pfdhfr C59R, pfdhfr N51I and pfaat1 S258L. The other three that passed the mask \u2014 pfcrt I356T, pfmdr1 D1246Y and pfcrt N326S \u2014 were then cut by MAF \u2265 0.05 at frequencies of 0.016, 0.011 and 0.008. These four numbers (44, 21, 6, 3) carry exactly this meaning wherever they appear in this manuscript, and the Abstract, Table 1.1, Section 6.8.3, Table 6.8 and Section 10.1 use this wording. In particular, the genome-wide scan did test three of the 21 polymorphic canonical codons, and no pfcrt, pfmdr1, pfdhps or pfk13 codon reached the MAF-filtered scan matrix \u2014 pfdhps because nothing survived the ingest mask, the others because what survived was either too rare (pfcrt I356T, pfcrt N326S and pfmdr1 D1246Y all passed the mask, reached the genome-wide store and were then cut by MAF at 0.016, 0.011 and 0.008) or monomorphic here (six pfk13 codons \u2014 F446I, P441L, Y493H, P553L, R561H, A675V \u2014 passed the mask and were fetched and found invariant). \"Could not test at all\" would be true of the final MAF-filtered scan matrix but false of ascertainment, which is the distinction this paragraph exists to draw, so the stronger wording is not used."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      226,
+      226
+    ],
+    "new_paragraph_range": [
+      226,
+      226
+    ],
+    "old": [
+      "[Observed] The codon panel bypasses the release filter as well as the numalt filter, and that was not previously disclosed. Stage 12 reconstructs codons from every variant record at a panel position, iterating over all ALT alleles without consulting FILTER_PASS. Bypassing numalt == 1 was the deliberate fix that recovered the panel; bypassing FILTER_PASS came with it and was never stated. An audit of all 171 panel positions resolves what it costs. Of the variant records at those positions, 29 fail the release filter, at 29 distinct positions. Among the 1,900 analysis isolates, six non-reference calls are sourced from those 29 records, at three positions, and all three are in pfk13 at WHO-validated marker codons: 1,724,975 (codon 675, A675V) with four carriers, 1,725,315 (codon 561, R561H) with one, and 1,725,339 (codon 553, P553L) with one. None of the six changes a reported residue, for two separable reasons. At codons 561 and 553 every alternative allele at the failing position is synonymous \u2014 the reference codons are CGT and CCG, and the ALTs give CGG, CGC, CGA and CCA, CCT, which still encode Arg and Pro \u2014 so the one homozygous call among the six, isolate SPT19969 at codon 561, correctly counts as Arg561 and the reported 1,864 of 1,864 is right. At codon 675 the alternative is non-synonymous but encodes Pro, not the validated Val, and all four carriers are heterozygous, so the mixed-call rule made the codon uncalled for them. No screened WHO resistance residue is produced by any filter-failing record, and the tested negative therefore stands. One consequence should still travel with the number: those four codon-675 carriers have well-supported minor alleles \u2014 22% to 28% of 173 to 435 reads at GQ 99 \u2014 so codon 675's denominator of 1,845 is the lowest in the panel, and its exclusions are not random with respect to genotype."
+    ],
+    "new": [
+      "[Observed] The codon panel bypasses the release filter as well as the numalt filter, and that was not previously disclosed. Stage 12 reconstructs codons from every variant record at a panel position, iterating over all ALT alleles without consulting FILTER_PASS. Bypassing numalt == 1 was the deliberate fix that recovered the panel; bypassing FILTER_PASS came with it and was never stated. An audit of all 171 panel positions resolves what it costs. Of the variant records at those positions, 29 fail the release filter, at 29 distinct positions. Among the 1,900 analysis isolates, six non-reference calls are sourced from those 29 records, at three positions, and all three are in pfk13 at WHO-validated marker codons: 1,724,975 (codon 675, A675V) with four carriers, 1,725,315 (codon 561, R561H) with one, and 1,725,339 (codon 553, P553L) with one. None of the six changes a reported residue, for two separable reasons. At codons 561 and 553 every alternative allele at the failing position is synonymous \u2014 the reference codons are CGT and CCG, and the ALTs give CGG, CGC, CGA and CCA, CCT, which still encode Arg and Pro \u2014 so the one homozygous call among the six, isolate SPT19969 at codon 561, correctly counts as Arg561 and the reported 1,864 of 1,864 is right. At codon 675 the alternative is non-synonymous but encodes Pro, not the validated Val, and all four carriers are heterozygous, so the mixed-call rule made the codon uncalled for them. No screened WHO resistance residue is produced by any filter-failing record, and the tested negative therefore stands. One consequence should still travel with the number: those four codon-675 carriers have well-supported minor alleles \u2014 22% to 28% of 173 to 435 reads at GQ 99 \u2014 so codon 675's denominator of 1,845 is the lowest of the pfk13 codons (the panel minimum is 1,834, at pfmdr1 1034), and its exclusions are not random with respect to genotype."
+    ]
+  },
+  {
+    "kind": "insert",
+    "old_paragraph_range": [
+      228,
+      227
+    ],
+    "new_paragraph_range": [
+      228,
+      229
+    ],
+    "old": [],
+    "new": [
+      "[Observed] The reconstruction has a bounded input domain, and the bound was not previously stated. A variant record whose ALT differs in length from its REF is skipped by a continue, but the isolate carrying it is not marked uncalled, so in principle it would be reported with the reference-derived residue. Three further limits travel with that one. The spanning-deletion allele is written \u201c*\u201d and has length one, so where REF is a single base it passes the length test rather than failing it, and is substituted into the codon as though it were a nucleotide, yielding the sentinel residue X rather than a silent reference call. An equal-length multi-base record contributes only its first base. And records are retrieved by anchor position, so a record anchored outside the panel whose REF span covers a codon position is never fetched at all. Absence of a variant record is likewise read as the reference base.",
+      "[Observed] Those conditions occur in this panel, and they change nothing in it. Of the 125 variant records sitting exactly at the 171 panel positions, 16 carry at least one length-changing ALT and 2 have a multi-base REF; a further 19 records anchored outside the panel have a REF span covering a panel position. Genotypes were retrieved for all 32 affected records across all 1,900 isolates. Three have any homozygous non-reference carrier: pfcrt codon 76 with 133, pfcrt codon 271 with 138, and pfdhps codon 431 with 26. In every case the carriers sit on a supported, equal-length allele \u2014 codon 76 on ALT1 C, with none on the 55-base insertion; codon 271 on ALT1 GAACGTAAGA, with none on ALT2, none on the spanning deletion and none on the single-base C; codon 431 on ALT1 G, with none on the spanning deletion and none on the 20-base insertion. No isolate anywhere in the panel carries a length-changing allele as a homozygous call, and the 62 mixed calls at these records are removed by the mixed-call rule regardless. The counts reconcile exactly with the reported table: Lys76Thr 133, Gln271Glu 138, Ile431Val 26, and homozygous-reference counts of 1,741 and 1,735 against reported reference-residue counts of 1,741 and 1,735. No residue anywhere in the panel is X, which confirms independently that no spanning-deletion allele was ever substituted. The two multi-base REF records differ from the reference at their first base only, so applying one base loses nothing here. And none of the 57 codons is record-free, so the convention of reading absence as reference never determines a reported residue. The limitation is real and bounds what the implementation may be applied to; on these inputs it moves no published number. What still rests on an assumption is callability: a codon is called when its constituent genotypes are present and unmixed, which is a statement about the genotype array and not an independent measurement of per-isolate coverage."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      230,
+      230
+    ],
+    "new_paragraph_range": [
+      232,
+      232
+    ],
+    "old": [
+      "[Observed] Failure mode (ii): a residue reachable only by two changes within one codon is never annotated. pfcrt codon 75 carries two variant records, 403621 (A>G, annotated Asn75Asp) and 403623 (T>A, annotated Asn75Lys). Asn\u2192Glu requires both. No single annotation names N75E, which is the residue the CVIET haplotype actually carries and the residue MalariaGEN reports; N75E consequently never appeared in Stage 10's panel at all. The previous version of this manuscript described the resulting disagreement with MalariaGEN as a \"naming discrepancy\" in which \"Pf8's SnpEff annotation labels the ALT as Asp while MalariaGEN calls it Glu\", and resolved it by adopting MalariaGEN's nomenclature. That diagnosis was wrong. It was not a naming difference: Stage 10 was reporting the frequency of a residue that does not exist in these isolates, under a method structurally incapable of producing the one that does. *The claim of a naming discrepancy at pfcrt 75 is withdrawn.*"
+    ],
+    "new": [
+      "[Observed] Failure mode (ii): a residue reachable only by two changes within one codon is never annotated. pfcrt codon 75 carries two variant records, 403621 (A>G, annotated Asn75Asp) and 403623 (T>A, annotated Asn75Lys). Asn\u2192Glu requires both. No single annotation names N75E, which is the residue the CVIET haplotype actually carries and the residue MalariaGEN reports; N75E consequently never appeared in Stage 10's panel at all. The previous version of this manuscript described the resulting disagreement with MalariaGEN as a \"naming discrepancy\" in which \"Pf8's SnpEff annotation labels the ALT as Asp while MalariaGEN calls it Glu\", and resolved it by adopting MalariaGEN's nomenclature. That diagnosis was wrong. It was not a naming difference: Stage 10 was reporting the frequency of a residue that does not exist in these isolates, under a method structurally incapable of producing the one that does. The claim of a naming discrepancy at pfcrt 75 is withdrawn."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      237,
+      237
+    ],
+    "new_paragraph_range": [
+      239,
+      239
+    ],
+    "old": [
+      "[Unknown] How many of the 125 variant records used are non-PASS, and whether any ALT allele at a panel position was an indel. The script skips an ALT whose length differs from REF and writes a note when it does; the log reports 24 notes but prints only the first ten, all of which are mixed-call notes, so the remaining fourteen are not on the record. Re-running with the note cap lifted would settle both questions and change no frequency unless an indel ALT is present."
+    ],
+    "new": [
+      "[Unknown] How many of the 125 variant records used are non-PASS, and whether any ALT allele at a panel position was an indel. Both are now answered in Section 3.10 and this entry is retained only to record that they once were not: 29 records fail the release filter, 16 carry a length-changing ALT, and no isolate carries a length-changing allele as a homozygous call. The script skips an ALT whose length differs from REF and writes a note when it does; the log reports 24 notes but prints only the first ten, all of which are mixed-call notes, so the remaining fourteen are not on the record. Re-running with the note cap lifted would settle both questions and change no frequency unless an indel ALT is present."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      249,
+      249
+    ],
+    "new_paragraph_range": [
+      251,
+      251
+    ],
+    "old": [
+      "The *pfk13* negative, stated with its two limits. *22 of the 23 pfk13 codons carry no screened resistance allele in any isolate with a call, twenty-two of them at the reference residue in every called isolate and codon 458 at 0.9995, and the twenty-third, codon 458, carries a single isolate with Asn458Asp \u2014 which is not the validated variant at that codon, N458Y \u2014 giving the reference residue a frequency of 0.9995 over 1,866 called isolates. No validated or candidate artemisinin-resistance residue was observed at any codon. Two limits must travel with that statement. First, the denominator is per codon, 1,845 to 1,876 of 1,900 across the pfk13 codons (1,834 to 1,900 across the panel as a whole), not \"all 1,900 isolates at every codon\"; the earlier formulation \"all 14 validated pfk13 codons at 0.000 in all 1,900 isolates\" is wrong on the codon count, on the denominator and on the panel it was computed from, and is withdrawn. Second, the sampling period is 2009 to 2021*, so this is a historical negative and says nothing about the frequency today. What is now defensible, and was not before, is that the negative covers the complete validated set \u2014 14 validated and 6 candidate variants, 20 in all at 19 distinct codons \u2014 rather than an incomplete list written from memory, with the tiers kept distinct."
+    ],
+    "new": [
+      "The pfk13 negative, stated with its two limits. All 23 pfk13 codons carry no screened resistance allele in any isolate with a call, twenty-two of them at the reference residue in every called isolate and codon 458 at 0.9995, and the twenty-third, codon 458, carries a single isolate with Asn458Asp \u2014 which is not the validated variant at that codon, N458Y \u2014 giving the reference residue a frequency of 0.9995 over 1,866 called isolates. No validated or candidate artemisinin-resistance residue was observed at any codon. Two limits must travel with that statement. First, the denominator is per codon, 1,845 to 1,876 of 1,900 across the pfk13 codons (1,834 to 1,900 across the panel as a whole), not \"all 1,900 isolates at every codon\"; the earlier formulation \"all 14 validated pfk13 codons at 0.000 in all 1,900 isolates\" is wrong on the codon count, on the denominator and on the panel it was computed from, and is withdrawn. Second, the sampling period is 2009 to 2021, so this is a historical negative and says nothing about the frequency today. What is now defensible, and was not before, is that the negative covers the complete validated set \u2014 14 validated and 6 candidate variants, 20 in all at 19 distinct codons \u2014 rather than an incomplete list written from memory, with the tiers kept distinct."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      258,
+      258
+    ],
+    "new_paragraph_range": [
+      260,
+      260
+    ],
+    "old": [
+      "The *kelch13* corroboration is weaker than previously claimed. Pf8 also publishes a kelch13 resistance status, and the previous version leaned on it as independent support for the artemisinin negative. That support must be stated far more weakly. Pf8 assigns the status over the whole 349\u2013726 propeller domain and classifies any missing call in that range as undetermined \u2014 \"Any missing call in amino acids 349-726 \u2192 Missing \u2192 Undetermined\" \u2014 so only 36 isolates carry a complete status. Thirty-six complete statuses are weak corroboration for per-codon calls on roughly 1,860 isolates, and the two are not equivalent evidence. The per-sample concordance above, on 25 markers and 47,012 calls, is the validation that carries weight; the kelch13 status is mentioned for completeness and nothing rests on it."
+    ],
+    "new": [
+      "The kelch13 corroboration is weaker than previously claimed. Pf8 also publishes a kelch13 resistance status, and the previous version leaned on it as independent support for the artemisinin negative. That support must be stated far more weakly. Pf8 assigns the status over the whole 349\u2013726 propeller domain and classifies any missing call in that range as undetermined \u2014 \"Any missing call in amino acids 349-726 \u2192 Missing \u2192 Undetermined\" \u2014 so only 36 isolates carry a complete status. Thirty-six complete statuses are weak corroboration for per-codon calls on roughly 1,860 isolates, and the two are not equivalent evidence. The per-sample concordance above, on 25 markers and 47,012 calls, exercises the same CDS mapping, strand handling and codon arithmetic used throughout the panel, so it is reassuring about the method; but it contains no pfk13 codon at all, so it is not evidence about the artemisinin negative, for which these 36 statuses are the only external corroboration that exists. The kelch13 status is mentioned for completeness and nothing rests on it."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      303,
+      303
+    ],
+    "new_paragraph_range": [
+      305,
+      305
+    ],
+    "old": [
+      "Robustness. The corrected re-run changed the SNP panel by 16.6 per cent, replaced the Mantel significance test, added false-discovery control to the outlier scan and resolved the TreeMix model choice by test rather than by judgement. None of the substantive population-genetic conclusions moved. Pairwise FST remained of order 0.002, the ADMIXTURE cross-validation curve remained nearly flat with a negligible improvement at K = 2 (0.84384 at K = 1 against 0.83925 at K = 2, all eight values on the same 3,385-SNP pruned panel \u2014 0.54 per cent), and near-panmixia continued to hold. That is a robustness result in its own right and is reported as one in Section 6.9. It must not, however, be generalised, and the later threshold sensitivity analysis is why: when the two thresholds that define the dataset were varied rather than the filter order, one conclusion did move, and the isolation-by-distance result lost its support (Section 3.14). The re-run's stability was stability under a correction to how the published thresholds were applied, not stability under a change to the thresholds themselves, and only the second kind of check could have found what the second kind of check found. The marker panel is the third case and should not borrow either reassurance: there, the rebuild changed what is reported, and the honest summary is that four rounds of correction each contained a further defect, every one of them a failure of external correctness that internal consistency checking was never going to catch."
+    ],
+    "new": [
+      "Robustness. The corrected re-run changed the SNP panel by 16.6 per cent, replaced the Mantel significance test, added false-discovery control to the outlier scan and put the TreeMix model choice on a testable footing without settling the edge count, the two selection criteria still disagreeing. None of the substantive population-genetic conclusions moved. Pairwise FST remained of order 0.002, the ADMIXTURE cross-validation curve remained nearly flat with a negligible improvement at K = 2 (0.84384 at K = 1 against 0.83925 at K = 2, all eight values on the same 3,385-SNP pruned panel \u2014 0.54 per cent), and near-panmixia continued to hold. That is a robustness result in its own right and is reported as one in Section 6.9. It must not, however, be generalised, and the later threshold sensitivity analysis is why: when the two thresholds that define the dataset were varied rather than the filter order, one conclusion did move, and the isolation-by-distance result lost its support (Section 3.14). The re-run's stability was stability under a correction to how the published thresholds were applied, not stability under a change to the thresholds themselves, and only the second kind of check could have found what the second kind of check found. The marker panel is the third case and should not borrow either reassurance: there, the rebuild changed what is reported, and the honest summary is that four rounds of correction each contained a further defect, every one of them a failure of external correctness that internal consistency checking was never going to catch."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      308,
+      308
+    ],
+    "new_paragraph_range": [
+      310,
+      310
+    ],
+    "old": [
+      "Table 3.5. The six threshold scenarios, from results/sensitivity_summary.csv. Maximum pairwise FST is the Coastal savanna against Guinea savanna pair in all six. Mantel values are the censored region-level test; the uncensored p-values in the same file are 0.0413, 0.1214, 0.2002, 0.1792, 0.0644 and 0.0502, so no scenario's verdict turns on the censoring. The table is numbered after Table 3.4 so that the existing table numbers do not shift."
+    ],
+    "new": [
+      "Table 3.5. The six threshold scenarios, from results/sensitivity_summary.csv. Maximum pairwise FST is the Coastal savanna against Guinea savanna pair in all six. Mantel values are the censored region-level test; the uncensored p-values in the same file are 0.0413, 0.1214, 0.2002, 0.1792, 0.0644 and 0.0502. One verdict does turn on the censoring: the MAF \u2265 0.02 scenario is significant censored (0.0467) and not significant uncensored (0.0502), so on the uncensored statistic the baseline is the only scenario clearing 0.05. The other five verdicts are unchanged. The table is numbered after Table 3.4 so that the existing table numbers do not shift."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      310,
+      310
+    ],
+    "new_paragraph_range": [
+      312,
+      312
+    ],
+    "old": [
+      "[Observed] The leave-one-region-out jackknife points the same way, and the exact count depends on where the line is drawn. In results/mantel_jackknife_region.csv, 4 of the 7 replicates retain p < 0.05 (dropping Volta, r = 0.519, p = 0.0048; dropping Ashanti, r = 0.561, p = 0.0155) and 4 of 7 fall below p = 0.10 (adding Brong Ahafo, p = 0.0543, and Central, p = 0.0645). The weakest replicate is dropping Upper East: r falls to 0.136 at p = 0.3307, which is the collapse the audit flagged. Four of the seven replicates retain p < 0.05 (dropping Ashanti 0.014, Volta 0.0097, Brong Ahafo 0.0398, Central 0.0427); the same four are the only ones below 0.10, so the count does not depend on which of those two levels is used."
+    ],
+    "new": [
+      "[Observed] The leave-one-region-out jackknife points the same way. In results/mantel_jackknife_region.csv (md5 779b9e379b6640afbbeb39409206ed69), 4 of the 7 replicates retain p < 0.05 \u2014 dropping Volta (r = 0.546, p = 0.0097), Ashanti (r = 0.568, p = 0.014), Brong Ahafo (r = 0.609, p = 0.0398) and Central (r = 0.396, p = 0.0427) \u2014 and the same four are the only four below p = 0.10, so the count does not depend on which of those two levels is used. The replicate the audit flagged is dropping Upper East: r falls to 0.260 at p = 0.218. The three non-significant replicates are dropping Eastern (r = 0.288, p = 0.1355), Upper East (r = 0.260, p = 0.218) and Greater Accra (r = 0.250, p = 0.2324). An earlier version of this paragraph quoted p-values of 0.0048, 0.0155, 0.0543, 0.0645 and 0.3307; those came from the superseded 3,359-SNP run, match no current output file, and are corrected here against the live result."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      361,
+      361
+    ],
+    "new_paragraph_range": [
+      363,
+      363
+    ],
+    "old": [
+      "Honesty note \u2014 the GQ decision is still unvalidated. No direct genotype-concordance check has been run, and the decision therefore rests on indirect evidence throughout. The two specific gaps: (i) the allele-frequency comparison offered in support (0.282 against 0.294) is between two different SNP sets, not the same sites under the two masks, so it does not test whether dropping the GQ rule admits wrong calls \u2014 only that the two surviving sets have similar mean frequencies; (ii) no comparison has been made against an independent truth set, although one exists and was used elsewhere in this project. MalariaGEN publishes its own genotype calls for these same 1,900 isolates, and they were used successfully to cross-validate the resistance-marker panel (21 of 23 markers agreeing within 0.03). The equivalent check here \u2014 per-call concordance between DP-only and DP+GQ masking at a common set of sites, benchmarked against those published calls \u2014 is cheap, is the check the manuscript's own reviewer note asks for first, and has not been done. Until it is, the GQ decision should be read as a power-for-accuracy trade made on plausible but indirect grounds, and the SNP-count gain it produced \u2014 3,359 against 2,143, about 57 per cent, both under the superseded filter order \u2014 should be reported as contingent on it."
+    ],
+    "new": [
+      "Honesty note \u2014 the GQ decision is still unvalidated. No direct genotype-concordance check has been run, and the decision therefore rests on indirect evidence throughout. The two specific gaps: (i) the allele-frequency comparison offered in support (0.282 against 0.294) is between two different SNP sets, not the same sites under the two masks, so it does not test whether dropping the GQ rule admits wrong calls \u2014 only that the two surviving sets have similar mean frequencies; (ii) no comparison has been made against an independent truth set, although one exists and was used elsewhere in this project. MalariaGEN publishes its own genotype calls for these same 1,900 isolates, and they were used successfully to cross-validate the resistance-marker panel (47,012 of 47,012 per-sample calls agreeing, across the 25 of the panel's 57 codons for which MalariaGEN publishes a per-sample genotype). The equivalent check here \u2014 per-call concordance between DP-only and DP+GQ masking at a common set of sites, benchmarked against those published calls \u2014 is cheap, is the check the manuscript's own reviewer note asks for first, and has not been done. Until it is, the GQ decision should be read as a power-for-accuracy trade made on plausible but indirect grounds, and the SNP-count gain it produced \u2014 3,359 against 2,143, about 57 per cent, both under the superseded filter order \u2014 should be reported as contingent on it."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      592,
+      592
+    ],
+    "new_paragraph_range": [
+      594,
+      594
+    ],
+    "old": [
+      "[Calculated] One printed edge p-value is a floating-point artefact, and it is recorded here so that it is not carried forward as a measured quantity. At m = 3 the second edge is reported with jackknife mean 0.829575, standard error 0.0787911 and p < 2.22507 \u00d7 10\u207b\u00b3\u2070\u2078. That p-value is not consistent with its own mean and standard error: z = 0.829575/0.0787911 = 10.53, whose one-sided normal tail is about 3.2 \u00d7 10\u207b\u00b2\u2076, and 2.2250738585072014 \u00d7 10\u207b\u00b3\u2070\u2078 is exactly DBL_MIN, the smallest normal double-precision float. The figure is TreeMix\u2019s underflow sentinel, not a computed tail probability. Recomputing all six edge p-values from the printed means and standard errors reproduces the other five to three significant figures \u2014 at m = 1, z = 7.84 gives 2.20 \u00d7 10\u207b\u00b9\u2075 against the printed 2.22045 \u00d7 10\u207b\u00b9\u2075; at m = 2, z = 3.18 gives 7.48 \u00d7 10\u207b\u2074 against 0.000747653 and z = 8.06 gives 3.80 \u00d7 10\u207b\u00b9\u2076 against 3.33067 \u00d7 10\u207b\u00b9\u2076; at m = 3, z = 3.09 gives 9.91 \u00d7 10\u207b\u2074 against 0.00099053 and z = 0.446 gives 0.328 against 0.327622. Two consequences follow. The reproduction confirms that the final run did compute jackknife standard errors, which an earlier script snapshot lacking the -se flag had put in doubt; and the anomalous value belongs to the rejected m = 3 model, while the two p-values the m = 2 choice rests on are both reproducible, so no reported result depends on it."
+    ],
+    "new": [
+      "[Calculated] Two printed edge p-values are floating-point artefacts, three more are visibly imprecise, and a single mechanism accounts for all five. An earlier version of this paragraph said that five of six values reproduced to three significant figures; that was wrong, and the corrected accounting follows. Recomputing every migration-edge p-value in m = 0 to 5 as a one-sided normal tail from the printed jackknife mean and standard error gives fifteen edges, of which thirteen carry a finite printed value and two print \u201c< 2.22507 \u00d7 10\u207b\u00b3\u2070\u2078\u201d. That figure is exactly DBL_MIN, the smallest normal double-precision float, and it appears at m = 3 edge 2 (z = 10.53, stable tail 3.18 \u00d7 10\u207b\u00b2\u2076) and again at m = 4 edge 2 (z = 9.33, stable tail 5.45 \u00d7 10\u207b\u00b2\u00b9). Of the thirteen finite values, ten reproduce to three significant figures. The three that do not are m = 1 edge 1 (0.8% relative error), m = 2 edge 2 (14.2%) and m = 5 edge 2 (3.1%), and all three sit at z \u2265 7.8. The mechanism is computation of the upper tail as 1 \u2212 \u03a6(z) in double precision: near z = 8 the cumulative probability lies within about one unit in the last place of 1, so the subtraction destroys most of the significand. Evaluating 1 \u2212 fl(\u03a6(8.060)) in float64 returns 3.330669 \u00d7 10\u207b\u00b9\u2076, which is the printed m = 2 value to every digit printed, against a true tail of 3.8147 \u00d7 10\u207b\u00b9\u2076; beyond roughly z = 9.4 the same subtraction underflows to exactly zero, which is what produces the two sentinels. The conclusion is accordingly stronger than any count of matching digits. Every printed value, the sentinels included, is reproduced by a normal tail computed from the printed mean and standard error through that formulation \u2014 in the m = 2 case to the last printed digit \u2014 which a run that had not computed jackknife standard errors could not have produced, resolving a doubt raised by an earlier script snapshot lacking the -se flag. None of it changes a reported result: both sentinels belong to m = 3 and m = 4, neither of which is reported, and the two values the m = 2 choice rests on are 7.48 \u00d7 10\u207b\u2074 and a tail of order 10\u207b\u00b9\u2076 whose exact digits affect no inference."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      617,
+      617
+    ],
+    "new_paragraph_range": [
+      619,
+      619
+    ],
+    "old": [
+      "A stronger claim that the project's own output does not support. The step10 log's editorial comment, and the corrections document that quotes it, state that the numalt clause dropped every canonical codon in pfcrt, pfmdr1 and pfk13. It did not. Sixteen of the 44 canonical records in results/resistance_panel_canonical.csv have numalt == 1 and therefore passed the mask: pfcrt C72S (a CVIET-position codon), pfcrt I356T and N326S, pfmdr1 S1034C, N1042D and D1246Y, pfmdr2 T484I, pfdhfr C59R and N51I, pfaat1 S258L, and six pfk13 codons \u2014 F446I, Y493H, P553L, R561H and A675V, which are WHO-validated, plus *P441L, which is a WHO candidate* and which the previous version of this chapter wrongly listed among the validated set (Section 6.9.8). Ten of those 16 are at frequency 0.000 in this sample, which is why they were invisible in a different and harmless way. The rider is removed from the main text; the narrower statement above is what the output supports."
+    ],
+    "new": [
+      "A stronger claim that the project's own output does not support. The step10 log's editorial comment, and the corrections document that quotes it, state that the numalt clause dropped every canonical codon in pfcrt, pfmdr1 and pfk13. It did not. Sixteen of the 44 canonical records in results/resistance_panel_canonical.csv have numalt == 1 and therefore passed the mask: pfcrt C72S (a CVIET-position codon), pfcrt I356T and N326S, pfmdr1 S1034C, N1042D and D1246Y, pfmdr2 T484I, pfdhfr C59R and N51I, pfaat1 S258L, and six pfk13 codons \u2014 F446I, Y493H, P553L, R561H and A675V, which are WHO-validated, plus P441L, which is a WHO candidate and which the previous version of this chapter wrongly listed among the validated set (Section 6.9.8). Ten of those 16 are at frequency 0.000 in this sample, which is why they were invisible in a different and harmless way. The rider is removed from the main text; the narrower statement above is what the output supports."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      621,
+      621
+    ],
+    "new_paragraph_range": [
+      623,
+      623
+    ],
+    "old": [
+      "[Interpreted] The correct statement of the negative is therefore neither the original claim nor its overcorrection: *the scan tested 3 of the 24 polymorphic canonical codons; it could not test the pfcrt, pfmdr1, pfdhps or pfk13 markers at all. This distinction matters, and it strengthens the section rather than weakening it. The scan's silence on the antifolate markers at pfdhfr is a tested negative \u2014 C59R and N51I were in the matrix and came back at q = 0.43 and q = 0.67, so neither shows excess differentiation beyond the demographic model. Its silence on pfcrt, pfmdr1, pfdhps and pfk13 is an ascertainment artefact* and carries no information whatever. Sections 6.9 and 7.x restate the resistance findings on a panel built without the biallelic restriction and without annotation-string matching, which is the only basis on which any claim about the untested loci can rest."
+    ],
+    "new": [
+      "[Interpreted] The correct statement of the negative is therefore neither the original claim nor its overcorrection: the scan tested 3 of the 24 polymorphic canonical codons; it could not test the pfcrt, pfmdr1, pfdhps or pfk13 markers at all. This distinction matters, and it strengthens the section rather than weakening it. The scan's silence on the antifolate markers at pfdhfr is a tested negative \u2014 C59R and N51I were in the matrix and came back at q = 0.43 and q = 0.67, so neither shows excess differentiation beyond the demographic model. Its silence on pfcrt, pfmdr1, pfdhps and pfk13 is an ascertainment artefact and carries no information whatever. Sections 6.9 and 7.x restate the resistance findings on a panel built without the biallelic restriction and without annotation-string matching, which is the only basis on which any claim about the untested loci can rest."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      636,
+      636
+    ],
+    "new_paragraph_range": [
+      638,
+      638
+    ],
+    "old": [
+      "[Observed] step10 identified markers by matching SnpEff ANN_HGVS_p strings such as \"Ala437Gly\" against a hand-written list. An annotation string describes a change away from the reference, and that has two failure modes. *(i) A resistance allele that is the reference residue can never appear as an ALT change. Where 3D7 itself carries the resistance residue, the only annotation at that codon is the revertant, so a search for the resistance change matches nothing and the codon is reported as if it did not exist. This is exactly what happened at pfdhps 437 (Section 6.9.4). (ii) A residue reachable only by two changes within one codon is never annotated. pfcrt codon 75 spans Pf3D7_07_v3:403,621\u2013403,623 and carries two variant records, 403621 (A>G, annotated `Asn75Asp`) and 403623 (T>A, annotated `Asn75Lys`). Asn\u2192Glu requires both. Neither annotation names N75E, which is the residue the CVIET haplotype actually carries, so no string match could ever return it. The same mechanism accounts for pfk13* 458, where the request was Asn458Tyr and the one variant isolate carries Asp (Section 6.8.3)."
+    ],
+    "new": [
+      "[Observed] step10 identified markers by matching SnpEff ANN_HGVS_p strings such as \"Ala437Gly\" against a hand-written list. An annotation string describes a change away from the reference, and that has two failure modes. (i) A resistance allele that is the reference residue can never appear as an ALT change. Where 3D7 itself carries the resistance residue, the only annotation at that codon is the revertant, so a search for the resistance change matches nothing and the codon is reported as if it did not exist. This is exactly what happened at pfdhps 437 (Section 6.9.4). (ii) A residue reachable only by two changes within one codon is never annotated. pfcrt codon 75 spans Pf3D7_07_v3:403,621\u2013403,623 and carries two variant records, 403621 (A>G, annotated `Asn75Asp`) and 403623 (T>A, annotated `Asn75Lys`). Asn\u2192Glu requires both. Neither annotation names N75E, which is the residue the CVIET haplotype actually carries, so no string match could ever return it. The same mechanism accounts for pfk13 458, where the request was Asn458Tyr and the one variant isolate carries Asp (Section 6.8.3)."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      647,
+      647
+    ],
+    "new_paragraph_range": [
+      649,
+      649
+    ],
+    "old": [
+      "6.9.4 *pfdhps* A437G and the reference-allele trap"
+    ],
+    "new": [
+      "6.9.4 pfdhps A437G and the reference-allele trap"
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      651,
+      652
+    ],
+    "new_paragraph_range": [
+      653,
+      654
+    ],
+    "old": [
+      "[Interpreted] The zone ordering mirrors pfdhfr: highest in the two southern zones, lowest in Guinea savanna and the 25-isolate Transitional zone, and not monotonic in latitude. Substantively, G437 at 0.897 means the first pfdhps step stands *as high as the pfdhfr triple mutant's component marginals \u2014 just below S108N at 0.908, which is the panel's most frequent antifolate residue \u2014 which materially strengthens the antifolate picture in Section 6.9.5 relative to the previous version, where the pfdhps* side appeared to rest on S436A at 0.54 and little else. Methodologically, the lesson generalises beyond this codon: any marker panel that identifies variants by their change-from-reference string will miss every marker for which the reference carries the derived allele, and will do so without raising an error. The only general defence is to reconstruct the codon and report the whole residue spectrum, which is why Table 6.8 lists reference residues explicitly rather than implying them.",
+      "6.9.5 Antifolate resistance: near-fixed *pfdhfr* component marginals, further advanced at *pfdhps* than previously reported, and zone-structured but not latitudinal"
+    ],
+    "new": [
+      "[Interpreted] The zone ordering mirrors pfdhfr: highest in the two southern zones, lowest in Guinea savanna and the 25-isolate Transitional zone, and not monotonic in latitude. Substantively, G437 at 0.897 means the first pfdhps step stands as high as the pfdhfr triple mutant's component marginals \u2014 just below S108N at 0.908, which is the panel's most frequent antifolate residue \u2014 which materially strengthens the antifolate picture in Section 6.9.5 relative to the previous version, where the pfdhps side appeared to rest on S436A at 0.54 and little else. Methodologically, the lesson generalises beyond this codon: any marker panel that identifies variants by their change-from-reference string will miss every marker for which the reference carries the derived allele, and will do so without raising an error. The only general defence is to reconstruct the codon and report the whole residue spectrum, which is why Table 6.8 lists reference residues explicitly rather than implying them.",
+      "6.9.5 Antifolate resistance: near-fixed pfdhfr component marginals, further advanced at pfdhps than previously reported, and zone-structured but not latitudinal"
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      662,
+      662
+    ],
+    "new_paragraph_range": [
+      664,
+      664
+    ],
+    "old": [
+      "[Observed] The six pfcrt codons that carry the CVIET-associated resistance haplotype \u2014 M74I, N75E, K76T, A220S, Q271E and R371I \u2014 now sit within a 0.006 band at 0.070\u20130.076, and the reconstructed CVIET haplotype itself is at 0.071 (133 of 1,873 complete cases). CVIET names the codon 72\u201376 motif, as Table 6.10 states, so only M74I, N75E and K76T are motif codons; A220S, Q271E and R371I are flanking markers of the wider chloroquine-resistance background. They track together zone by zone: 0.054 coastal savanna for five of the six, 0.104 in deciduous forest, 0.062\u20130.069 in Guinea savanna, 0.125 in the 25-isolate Transitional zone. None of the six reaches the corrected heterogeneity threshold: their nominal p-values run 0.026\u20130.119 against the Bonferroni threshold of 0.05/24 = 0.0021, the 24 being the panel codons that carry a between-zone test (Section 6.9.3). The two pfcrt codons off that haplotype behave differently: *I356T is at 0.016 and is the only pfcrt codon with corrected-significant structure (0.029 coastal savanna, 0.036 deciduous forest, 0.009 Guinea savanna, 0.000 Transitional, p = 0.0016 \u2014 higher in the two southern zones, but not ordered by latitude), and N326S is a singleton at 0.001. The denominator matters and is stated rather than left implicit: on the 24 tested codons I356T survives at 0.0016 < 0.0021, whereas correcting across all 57 reconstructed codons (0.05/57 = 0.00088) it would not, and the previous version of this paragraph asserted both outcomes one sentence apart by widening \"none of the six\" to \"no pfcrt* codon\"."
+    ],
+    "new": [
+      "[Observed] The six pfcrt codons that carry the CVIET-associated resistance haplotype \u2014 M74I, N75E, K76T, A220S, Q271E and R371I \u2014 now sit within a 0.006 band at 0.070\u20130.076, and the reconstructed CVIET haplotype itself is at 0.071 (133 of 1,873 complete cases). CVIET names the codon 72\u201376 motif, as Table 6.10 states, so only M74I, N75E and K76T are motif codons; A220S, Q271E and R371I are flanking markers of the wider chloroquine-resistance background. They track together zone by zone: 0.054 coastal savanna for five of the six, 0.104 in deciduous forest, 0.062\u20130.069 in Guinea savanna, 0.125 in the 25-isolate Transitional zone. None of the six reaches the corrected heterogeneity threshold: their nominal p-values run 0.026\u20130.119 against the Bonferroni threshold of 0.05/24 = 0.0021, the 24 being the panel codons that carry a between-zone test (Section 6.9.3). The two pfcrt codons off that haplotype behave differently: I356T is at 0.016 and is the only pfcrt codon with corrected-significant structure (0.029 coastal savanna, 0.036 deciduous forest, 0.009 Guinea savanna, 0.000 Transitional, p = 0.0016 \u2014 higher in the two southern zones, but not ordered by latitude), and N326S is a singleton at 0.001. The denominator matters and is stated rather than left implicit: on the 24 tested codons I356T survives at 0.0016 < 0.0021, whereas correcting across all 57 reconstructed codons (0.05/57 = 0.00088) it would not, and the previous version of this paragraph asserted both outcomes one sentence apart by widening \"none of the six\" to \"no pfcrt codon\"."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      664,
+      665
+    ],
+    "new_paragraph_range": [
+      666,
+      667
+    ],
+    "old": [
+      "6.9.8 No artemisinin resistance: all 14 WHO-validated and all 6 WHO-candidate *pfk13* markers",
+      "[Observed] The pfk13 panel was rebuilt from the WHO molecular-marker compendium v1.0 (December 2025) rather than from memory. It now covers all 14 validated markers \u2014 F446I, N458Y, C469Y, M476I, Y493H, G533S, R539T, I543T, P553L, R561H, P574L, C580Y, R622I, A675V \u2014 and all 6 candidates \u2014 E252Q, P441L, C469F, N537I, G538V, V568G. That is 14 + 6 = 20 variants at 19 distinct codons, because C469Y (validated) and C469F (candidate) are two different changes at the same codon 469; the two WHO tiers are kept distinct throughout and no candidate is anywhere described as validated. Four further pfk13 codons (449, 481, 515, 527) fall outside both lists, which is why the reconstruction covers more codons than the lists contain: *23 pfk13 codons in total, and every one is fixed at the 3D7 reference residue*, with the single exception of codon 458, where one isolate in 1,866 carries Asn458Asp. The validated residue at that codon is Tyr, which is absent."
+    ],
+    "new": [
+      "6.9.8 No artemisinin resistance: all 14 WHO-validated and all 6 WHO-candidate pfk13 markers",
+      "[Observed] The pfk13 panel was rebuilt from the WHO molecular-marker compendium v1.0 (December 2025) rather than from memory. It now covers all 14 validated markers \u2014 F446I, N458Y, C469Y, M476I, Y493H, G533S, R539T, I543T, P553L, R561H, P574L, C580Y, R622I, A675V \u2014 and all 6 candidates \u2014 E252Q, P441L, C469F, N537I, G538V, V568G. That is 14 + 6 = 20 variants at 19 distinct codons, because C469Y (validated) and C469F (candidate) are two different changes at the same codon 469; the two WHO tiers are kept distinct throughout and no candidate is anywhere described as validated. Four further pfk13 codons (449, 481, 515, 527) fall outside both lists, which is why the reconstruction covers more codons than the lists contain: 23 pfk13 codons in total, and every one is fixed at the 3D7 reference residue, with the single exception of codon 458, where one isolate in 1,866 carries Asn458Asp. The validated residue at that codon is Tyr, which is absent."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      668,
+      668
+    ],
+    "new_paragraph_range": [
+      670,
+      670
+    ],
+    "old": [
+      "The *kelch13* corroboration must be stated much more weakly than before. The previous version claimed independent corroboration from MalariaGEN's published kelch13 classification: \"Two methods, one of them not ours, agree.\" That overstates it. Pf8 assigns a kelch13 status over the whole 349\u2013726 propeller domain and classifies any missing call in that interval as undetermined \u2014 the rule is \"Any missing call in amino acids 349-726 \u2192 Missing \u2192 Undetermined\". Only 36 isolates therefore have a complete Pf8 status, against per-codon calls on roughly 1,860 isolates here. Thirty-six complete statuses are weak corroboration for a negative asserted on ~1,860 isolates, and the two should not be presented as equivalent lines of evidence. The weight of this negative rests on the reconstruction in Table 6.11, not on the Pf8 classification."
+    ],
+    "new": [
+      "The kelch13 corroboration must be stated much more weakly than before. The previous version claimed independent corroboration from MalariaGEN's published kelch13 classification: \"Two methods, one of them not ours, agree.\" That overstates it. Pf8 assigns a kelch13 status over the whole 349\u2013726 propeller domain and classifies any missing call in that interval as undetermined \u2014 the rule is \"Any missing call in amino acids 349-726 \u2192 Missing \u2192 Undetermined\". Only 36 isolates therefore have a complete Pf8 status, against per-codon calls on roughly 1,860 isolates here. Thirty-six complete statuses are weak corroboration for a negative asserted on ~1,860 isolates, and the two should not be presented as equivalent lines of evidence. The weight of this negative rests on the reconstruction in Table 6.11, not on the Pf8 classification."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      670,
+      670
+    ],
+    "new_paragraph_range": [
+      672,
+      672
+    ],
+    "old": [
+      "6.9.9 *pfaat1* Ser258Leu and its coastal-to-northern cline"
+    ],
+    "new": [
+      "6.9.9 pfaat1 Ser258Leu and its coastal-to-northern cline"
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      673,
+      674
+    ],
+    "new_paragraph_range": [
+      675,
+      676
+    ],
+    "old": [
+      "[Hypothesized] What, then, maintains 0.82 in coastal savanna? Three candidates, and the panel cannot choose between them. (a) Historical persistence. Chloroquine was withdrawn in Ghana two decades ago and the pfcrt CVIET haplotype has reverted to 0.071 (Section 6.9.7), so standing chloroquine pressure cannot explain a frequency of 0.82; but a potentiating variant with a modest fitness cost can decay slowly and unevenly, and a gradient rather than fixation or loss is the expected intermediate state. *(b) Amodiaquine, as an untested possible driver. Ghana's first-line regimen since 2005 has been artesunate\u2013amodiaquine, which maintains continuous 4-aminoquinoline pressure. The published experiment measured amodiaquine and found the shift sub-threshold, and the authors reject the wider-quinoline reading for their Southeast Asian data; so amodiaquine can be offered here only as a possibility that the functional work does not support and did not test in a West African background \u2014 not as the explanation, which is how the previous version framed it. (c) The documented fitness cost* reported by Amambua-Ngwa et al., which is the condition under which a post-withdrawal equilibrium is a gradient rather than fixation: the allele is retained where exposure is highest and purged where it is not. If (b) or (c) carries the gradient, it is a drug-exposure or treatment-coverage gradient \u2014 higher treatment-seeking and more complete AS-AQ coverage in the south \u2014 rather than anything ecological about agro-ecological zones as such. That is testable with drug-pressure covariates joined at the same spatial resolution, and is not tested here.",
+      "[Observed] Two points of context, both narrower than the previous version's. pfaat1 appears nowhere in the WHO compendium at any tier, so it is not \"the most common validated resistance variant\", which is what the previous version called it and which was a category error (Section 6.9.11). The replacement superlative has to be narrower still, and its exclusion rule stated: at 0.609, S258L is the most common variant in this panel with a published allele-replacement experiment behind it, outside the antifolates. It is not the most common resistance-associated non-antifolate variant, because pfmdr1 Y184F is higher at 0.677* (n = 1,858) and pfmdr2 I492V is close behind at 0.549; Y184F carries no WHO label either, so the tiers cannot be doing the excluding \u2014 what distinguishes S258L is comparable functional-replacement data, which Y184F does not have. And pfaat1 is absent from the eight-locus `config.KNOWN_RESISTANCE_LOCI` panel inherited by this pipeline, which is why it reached second place in the outlier table* of the original manuscript \u2014 behind PTP7 at XtX 26.44, and labelled only as \"amino acid transporter AAT1\" \u2014 while the abstract of the same document announced that no validated resistance locus had been found. It did not head that table, and the earlier phrasing that said it did is corrected here."
+    ],
+    "new": [
+      "[Hypothesized] What, then, maintains 0.82 in coastal savanna? Three candidates, and the panel cannot choose between them. (a) Historical persistence. Chloroquine was withdrawn in Ghana two decades ago and the pfcrt CVIET haplotype has reverted to 0.071 (Section 6.9.7), so standing chloroquine pressure cannot explain a frequency of 0.82; but a potentiating variant with a modest fitness cost can decay slowly and unevenly, and a gradient rather than fixation or loss is the expected intermediate state. (b) Amodiaquine, as an untested possible driver. Ghana's first-line regimen since 2005 has been artesunate\u2013amodiaquine, which maintains continuous 4-aminoquinoline pressure. The published experiment measured amodiaquine and found the shift sub-threshold, and the authors reject the wider-quinoline reading for their Southeast Asian data; so amodiaquine can be offered here only as a possibility that the functional work does not support and did not test in a West African background \u2014 not as the explanation, which is how the previous version framed it. (c) The documented fitness cost reported by Amambua-Ngwa et al., which is the condition under which a post-withdrawal equilibrium is a gradient rather than fixation: the allele is retained where exposure is highest and purged where it is not. If (b) or (c) carries the gradient, it is a drug-exposure or treatment-coverage gradient \u2014 higher treatment-seeking and more complete AS-AQ coverage in the south \u2014 rather than anything ecological about agro-ecological zones as such. That is testable with drug-pressure covariates joined at the same spatial resolution, and is not tested here.",
+      "[Observed] Two points of context, both narrower than the previous version's. pfaat1 appears nowhere in the WHO compendium at any tier, so it is not \"the most common validated resistance variant\", which is what the previous version called it and which was a category error (Section 6.9.11). The replacement superlative has to be narrower still, and its exclusion rule stated: at 0.609, S258L is the most common variant in this panel with a published allele-replacement experiment behind it, outside the antifolates. It is not the most common resistance-associated non-antifolate variant, because pfmdr1 Y184F is higher at 0.677 (n = 1,858) and pfmdr2 I492V is close behind at 0.549; Y184F carries no WHO label either, so the tiers cannot be doing the excluding \u2014 what distinguishes S258L is comparable functional-replacement data, which Y184F does not have. And pfaat1 is absent from the eight-locus `config.KNOWN_RESISTANCE_LOCI` panel inherited by this pipeline, which is why it reached second place in the outlier table of the original manuscript \u2014 behind PTP7 at XtX 26.44, and labelled only as \"amino acid transporter AAT1\" \u2014 while the abstract of the same document announced that no validated resistance locus had been found. It did not head that table, and the earlier phrasing that said it did is corrected here."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      680,
+      680
+    ],
+    "new_paragraph_range": [
+      682,
+      682
+    ],
+    "old": [
+      "[Observed] The WHO compendium classifies variants, not genes, and the previous version repeatedly attached gene-level WHO labels. Three specific corrections follow. (1) There is no validated or candidate lumefantrine marker at all \u2014 verbatim: \"The review did not identify any validated or candidate molecular markers associated with lumefantrine resistance.\" So a label of the form \"pfmdr1, WHO-validated, lumefantrine\" is a category error twice over: it ascribes a tier to a gene, and it ascribes it for a drug that has no classified markers. (2) pfaat1, pfap2mu and pfmdr2 appear nowhere in the compendium at any tier.* They stay in the panel \u2014 pfaat1 for the functional work of Section 6.9.9, pfap2mu and pfmdr2 as loci of standing interest \u2014 but none of them may be described as a WHO-classified marker anywhere in this thesis. (3) pfcoronin is in the compendium at the potential tier only, which is below candidate; all three of its reconstructed codons (G50E, R100K, E107V) are fixed at the reference residue here. Within pfk13, the tiers are per variant and are given in Table 6.11; P441L and C469F are candidates, not validated*, which the previous version got wrong."
+    ],
+    "new": [
+      "[Observed] The WHO compendium classifies variants, not genes, and the previous version repeatedly attached gene-level WHO labels. Three specific corrections follow. (1) There is no validated or candidate lumefantrine marker at all \u2014 verbatim: \"The review did not identify any validated or candidate molecular markers associated with lumefantrine resistance.\" So a label of the form \"pfmdr1, WHO-validated, lumefantrine\" is a category error twice over: it ascribes a tier to a gene, and it ascribes it for a drug that has no classified markers. (2) pfaat1, pfap2mu and pfmdr2 appear nowhere in the compendium at any tier. They stay in the panel \u2014 pfaat1 for the functional work of Section 6.9.9, pfap2mu and pfmdr2 as loci of standing interest \u2014 but none of them may be described as a WHO-classified marker anywhere in this thesis. (3) pfcoronin is in the compendium at the potential tier only, which is below candidate; all three of its reconstructed codons (G50E, R100K, E107V) are fixed at the reference residue here. Within pfk13, the tiers are per variant and are given in Table 6.11; P441L and C469F are candidates, not validated, which the previous version got wrong."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      685,
+      685
+    ],
+    "new_paragraph_range": [
+      687,
+      687
+    ],
+    "old": [
+      "[Interpreted] Taken together, these mean the gradients in Table 6.8 are better supported than their causal attribution to agro-ecology. The frequencies themselves are now as solid as this dataset allows \u2014 every one of 47,012 per-sample calls agrees with an independently produced genotype set (Section 6.9.10), which is a far stronger statement than the marginal agreement previously cited. What the gradient is a gradient in \u2014 drug exposure, sampling study, treatment-seeking, or agro-ecological zone \u2014 this design cannot resolve, and Section 7.x does not claim it can."
+    ],
+    "new": [
+      "[Interpreted] Taken together, these mean the gradients in Table 6.8 are better supported than their causal attribution to agro-ecology. The frequencies themselves are now as solid as this dataset allows \u2014 every one of 47,012 per-sample calls agrees with an independently produced genotype set, across the 25 panel codons MalariaGEN publishes per sample (Section 6.9.10), which is a far stronger statement than the marginal agreement previously cited. What the gradient is a gradient in \u2014 drug exposure, sampling study, treatment-seeking, or agro-ecological zone \u2014 this design cannot resolve, and Section 7.x does not claim it can."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      703,
+      703
+    ],
+    "new_paragraph_range": [
+      705,
+      705
+    ],
+    "old": [
+      "Denominator for the batch numbers in this section. The study-composition and within-zone batch tests quoted below are computed on the 4,905 Pf8-QC-passing isolates \u2014 every one of them carries Pf8's own QC-pass flag, they are the set on which study membership and Fws are defined, and they sit before the Fws and clonality cuts that yield the 1,900 entering the population analyses (Guinea savanna 1,334, deciduous forest 337, coastal savanna 204, transitional zone 25). This single label, *4,905 Pf8-QC-passing (pre-Fws), is used throughout the document; \"pre-QC\" and \"QC-passing\" are not used as alternatives for it, because they invite a reader to think two different denominators are in play. So \"1083-PF-GH-CONWAY is 100 per cent of the transitional zone, 50 of 50\" and \"transitional zone, n = 25\" are both correct and describe different sets. Study nesting within zone is a property of the Pf8 sampling frame and is not altered by the later cuts, but the counts here are not the analysis-set counts, and the zone-pair overlap was not recomputed on the 1,900 set. The same denominator applies to the polyclonality figures in \u00a77.3 and to limitation 2 in \u00a79.1. Note separately that the marker panel in \u00a77.5 carries a third* set of denominators: it is computed on the 1,900 analysed isolates but reports a per-codon called count, 1,834\u20131,900 depending on the codon, because a mixed call leaves a codon uncalled rather than being resolved to a residue."
+    ],
+    "new": [
+      "Denominator for the batch numbers in this section. The study-composition and within-zone batch tests quoted below are computed on the 4,905 Pf8-QC-passing isolates \u2014 every one of them carries Pf8's own QC-pass flag, they are the set on which study membership and Fws are defined, and they sit before the Fws and clonality cuts that yield the 1,900 entering the population analyses (Guinea savanna 1,334, deciduous forest 337, coastal savanna 204, transitional zone 25). This single label, 4,905 Pf8-QC-passing (pre-Fws), is used throughout the document; \"pre-QC\" and \"QC-passing\" are not used as alternatives for it, because they invite a reader to think two different denominators are in play. So \"1083-PF-GH-CONWAY is 100 per cent of the transitional zone, 50 of 50\" and \"transitional zone, n = 25\" are both correct and describe different sets. Study nesting within zone is a property of the Pf8 sampling frame and is not altered by the later cuts, but the counts here are not the analysis-set counts, and the zone-pair overlap was not recomputed on the 1,900 set. The same denominator applies to the polyclonality figures in \u00a77.3 and to limitation 2 in \u00a79.1. Note separately that the marker panel in \u00a77.5 carries a third set of denominators: it is computed on the 1,900 analysed isolates but reports a per-codon called count, 1,834\u20131,900 depending on the codon, because a mixed call leaves a codon uncalled rather than being resolved to a residue."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      734,
+      734
+    ],
+    "new_paragraph_range": [
+      736,
+      736
+    ],
+    "old": [
+      "[Observed] pfdhps G437 is at 0.897 and was missing from the previous draft altogether.* Overall 0.897 on 1,892 called, and by zone 0.964 deciduous forest, 0.941 coastal savanna, 0.875 Guinea savanna, 0.800 transitional zone (\u03c7\u00b2 p = 1.2 \u00d7 10\u207b\u2076) \u2014 the transitional zone again breaking the ordering (\u00a77.2). It is a high frequency but not the highest antifolate residue in the panel: pfdhfr S108N is 0.908. The reason sulfadoxine\u2013pyrimethamine retains utility in chemoprevention is therefore not that the pfdhps background is clean; it is that the downstream codons remain rare. K540E is 0.009 (n = 1,895) and A581G 0.014 (n = 1,890), and the 437G+540E double haplotype, which is what actually marks high-grade sulfadoxine resistance, is 0.010 on 1,888 complete cases. That is the standard West African pattern \u2014 437G near-fixed, 540E rare \u2014 and it is a pattern the previous draft could not see, because it was reporting a pfdhps* panel with its highest-frequency locus deleted."
+    ],
+    "new": [
+      "[Observed] pfdhps G437 is at 0.897 and was missing from the previous draft altogether. Overall 0.897 on 1,892 called, and by zone 0.964 deciduous forest, 0.941 coastal savanna, 0.875 Guinea savanna, 0.800 transitional zone (\u03c7\u00b2 p = 1.2 \u00d7 10\u207b\u2076) \u2014 the transitional zone again breaking the ordering (\u00a77.2). It is a high frequency but not the highest antifolate residue in the panel: pfdhfr S108N is 0.908. The reason sulfadoxine\u2013pyrimethamine retains utility in chemoprevention is therefore not that the pfdhps background is clean; it is that the downstream codons remain rare. K540E is 0.009 (n = 1,895) and A581G 0.014 (n = 1,890), and the 437G+540E double haplotype, which is what actually marks high-grade sulfadoxine resistance, is 0.010 on 1,888 complete cases. That is the standard West African pattern \u2014 437G near-fixed, 540E rare \u2014 and it is a pattern the previous draft could not see, because it was reporting a pfdhps panel with its highest-frequency locus deleted."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      736,
+      739
+    ],
+    "new_paragraph_range": [
+      738,
+      741
+    ],
+    "old": [
+      "[Observed] Artemisinin resistance is absent, on a panel that is now the right panel \u2014 and the negative is historical, not current. The pfk13 list in the previous draft was written from memory. It held 13 distinct protein changes (a duplicated M476I record inflated the apparent count to 14), misclassified P441L and C469F as validated when WHO lists them as candidate, omitted P574L and G533S, and requested R622I without ever retrieving it, so that marker became a silent non-result. The panel now follows the WHO compendium v1.0 (December 2025) and covers all 14 validated markers (F446I, N458Y, C469Y, M476I, Y493H, G533S, R539T, I543T, P553L, R561H, P574L, C580Y, R622I, A675V) and all 6 candidates (E252Q, P441L, C469F, N537I, G538V, V568G). That is 20 variants at 19 distinct codons, because C469Y and C469F share codon 469. The reconstruction covers 23 pfk13 codons in all; the four beyond those 19 are potential-tier or regionally reported codons retained for completeness, and the validated and candidate tiers are kept distinct throughout \u2014 the candidates are not described as validated anywhere in this document. Twenty-two of the 23 codons are monomorphic at the reference residue, and the twenty-third, codon 458, is at 0.999 (1,865 of 1,866 called; one isolate carries Asn458Asp, which is not the validated Asn458Tyr). So the WHO negative stands, but the codon is not strictly fixed and should not be described as such. Two qualifications the critique rightly demanded. The denominator is per codon, 1,845\u20131,876 of 1,900 called \u2014 not \"all 1,900 at every codon\", which the previous draft asserted. And the sampling period is 2009\u20132021, so this is a historical negative about the parasites sequenced, not a statement about Ghana today.",
+      "[Observed] *The kelch13 corroboration is weaker than the previous draft claimed. Pf8 assigns a kelch13 status over the whole 349\u2013726 domain and classifies any missing call in that range as undetermined, so only 36 of 1,900 isolates have a complete status. Within those 36 the commonest change is A578S, which is explicitly not a resistance marker. Thirty-six complete statuses are weak corroboration for per-codon calls on roughly 1,860 isolates, and the two should not be presented as equivalent evidence. The real independent check on this panel is the per-sample concordance in \u00a78, not the kelch13* column.",
+      "[Observed] *The pfaat1 S258L cline is the positive result. Pf3D7_06_v3:1215233 is Ser258Leu, with XtX 24.20 and q = 0.0049 \u2014 the second-highest XtX in the scan, behind PTP7 at 26.44. Its frequency is 0.609 overall on 1,896 called, falling from 0.824 in coastal savanna through 0.735 in deciduous forest to 0.544 in Guinea savanna*, with the transitional zone at 0.640 on 25 isolates (\u03c7\u00b2 p = 1.89 \u00d7 10\u207b\u00b9\u2078). This is the one marker in which the transitional zone sits in its correct latitudinal place (\u00a77.2). The previous draft gave p = 2.03 \u00d7 10\u207b\u00b9\u2078 on an assumed denominator of 1,900; the shift comes from counting only the isolates actually called, and the coastal frequency rounds to 0.824 on either denominator. The manuscript's XtX of 24.44 for this locus is the superseded 8-thread figure and should not be quoted; the final run gives 24.20. The variant-quality check places this SNP in the clean tier: MQ 60.00 at the 100th percentile, VQSLOD 12.09 at the 96.7th, FS 0.00 (\u00a77.2).",
+      "Provenance of the *pfaat1* q-values \u2014 now resolved. The XtX values quoted above are read from the final run's own output (results/baypass/outlier_snps.bed: 24.19825 at Pf3D7_06_v3:1215233 and 16.53525 at 1214350, with PTP7 at Pf3D7_03_v3:96476 = 26.44106 the only higher value). The q = 0.0049 attached to both was previously sourced only to the corrections document's narrative, because results/baypass/xtx_all_snps.csv for the final run was empty. That file has since been found to have been truncated to zero bytes by accident, and it has been regenerated faithfully from the intact BayPass outputs (\u00a79.3). The per-SNP q-values are therefore on disk again: both AAT1 SNPs carry q = 0.00489 in results/outlier_quality_check.csv, so the value and the tie are now reproducible from a primary output rather than from the narrative, and the instruction in the previous draft to regenerate the table before this sentence ships is discharged. The superseded run's table, in which 1214350 carried q = 0.0240 and the two were not tied, remains superseded and should not be quoted."
+    ],
+    "new": [
+      "[Observed] Artemisinin resistance is absent, on a panel that is now the right panel \u2014 and the negative is historical, not current. The pfk13 list in the previous draft was written from memory. It held 13 distinct protein changes (a duplicated M476I record inflated the apparent count to 14), misclassified P441L and C469F as validated when WHO lists them as candidate, omitted P574L and G533S, and requested R622I without ever retrieving it, so that marker became a silent non-result. The panel now follows the WHO compendium v1.0 (December 2025) and covers all 14 validated markers (F446I, N458Y, C469Y, M476I, Y493H, G533S, R539T, I543T, P553L, R561H, P574L, C580Y, R622I, A675V) and all 6 candidates (E252Q, P441L, C469F, N537I, G538V, V568G). That is 20 variants at 19 distinct codons, because C469Y and C469F share codon 469. The reconstruction covers 23 pfk13 codons in all; the four beyond those 19 are potential-tier or regionally reported codons retained for completeness, and the validated and candidate tiers are kept distinct throughout \u2014 the candidates are not described as validated anywhere in this document. Twenty-two of the 23 codons are monomorphic at the reference residue, and the twenty-third, codon 458, is at 0.9995 (1,865 of 1,866 called; one isolate carries Asn458Asp, which is not the validated Asn458Tyr). So the WHO negative stands, but the codon is not strictly fixed and should not be described as such. Two qualifications the critique rightly demanded. The denominator is per codon, 1,845\u20131,876 of 1,900 called \u2014 not \"all 1,900 at every codon\", which the previous draft asserted. And the sampling period is 2009\u20132021, so this is a historical negative about the parasites sequenced, not a statement about Ghana today.",
+      "[Observed] The kelch13 corroboration is weaker than the previous draft claimed. Pf8 assigns a kelch13 status over the whole 349\u2013726 domain and classifies any missing call in that range as undetermined, so only 36 of 1,900 isolates have a complete status. Within those 36 the commonest change is A578S, which is explicitly not a resistance marker. Thirty-six complete statuses are weak corroboration for per-codon calls on roughly 1,860 isolates, and the two should not be presented as equivalent evidence. The real independent check on this panel is the per-sample concordance in \u00a78 \u2014 but it reaches none of the 23 pfk13 codons, so for the artemisinin negative these 36 domain-level statuses remain the only external check there is, rather than the kelch13 column.",
+      "[Observed] The pfaat1 S258L cline is the positive result. Pf3D7_06_v3:1215233 is Ser258Leu, with XtX 24.20 and q = 0.0049 \u2014 the second-highest XtX in the scan, behind PTP7 at 26.44. Its frequency is 0.609 overall on 1,896 called, falling from 0.824 in coastal savanna through 0.735 in deciduous forest to 0.544 in Guinea savanna, with the transitional zone at 0.640 on 25 isolates (\u03c7\u00b2 p = 1.89 \u00d7 10\u207b\u00b9\u2078). This is the one marker in which the transitional zone sits in its correct latitudinal place (\u00a77.2). The previous draft gave p = 2.03 \u00d7 10\u207b\u00b9\u2078 on an assumed denominator of 1,900; the shift comes from counting only the isolates actually called, and the coastal frequency rounds to 0.824 on either denominator. The manuscript's XtX of 24.44 for this locus is the superseded 8-thread figure and should not be quoted; the final run gives 24.20. The variant-quality check places this SNP in the clean tier: MQ 60.00 at the 100th percentile, VQSLOD 12.09 at the 96.7th, FS 0.00 (\u00a77.2).",
+      "Provenance of the pfaat1 q-values \u2014 now resolved. The XtX values quoted above are read from the final run's own output (results/baypass/outlier_snps.bed: 24.19825 at Pf3D7_06_v3:1215233 and 16.53525 at 1214350, with PTP7 at Pf3D7_03_v3:96476 = 26.44106 the only higher value). The q = 0.0049 attached to both was previously sourced only to the corrections document's narrative, because results/baypass/xtx_all_snps.csv for the final run was empty. That file has since been found to have been truncated to zero bytes by accident, and it has been regenerated faithfully from the intact BayPass outputs (\u00a79.3). The per-SNP q-values are therefore on disk again: both AAT1 SNPs carry q = 0.00489 in results/outlier_quality_check.csv, so the value and the tie are now reproducible from a primary output rather than from the narrative, and the instruction in the previous draft to regenerate the table before this sentence ships is discharged. The superseded run's table, in which 1214350 carried q = 0.0240 and the two were not tied, remains superseded and should not be quoted."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      742,
+      742
+    ],
+    "new_paragraph_range": [
+      744,
+      744
+    ],
+    "old": [
+      "[Interpreted] And the effect itself is modest and conditional. S258L raised chloroquine IC50 1.5-fold, in a single chloroquine-resistant Southeast Asian line (NHP4026), with epistasis between S258L and F313S and an explicit caveat that the effect depends on pfcrt background. The much-cited rise from 0 per cent to 97 per cent is Gambian, 1984\u20132014; the paper says nothing about Ghana. The accurate description is therefore: pfaat1 S258L is a variant with a *demonstrated but modest, epistasis- and background-dependent effect that potentiates chloroquine resistance \u2014 not a validated resistance determinant, and not a marker of any current drug. One detail of this sample sharpens the caveat: pfaat1 F313S, the epistatic partner, is absent* \u2014 codon 313 is at the reference residue in all 1,900 isolates \u2014 so the interaction the experiment demonstrated cannot be operating in these parasites at all."
+    ],
+    "new": [
+      "[Interpreted] And the effect itself is modest and conditional. S258L raised chloroquine IC50 1.5-fold, in a single chloroquine-resistant Southeast Asian line (NHP4026), with epistasis between S258L and F313S and an explicit caveat that the effect depends on pfcrt background. The much-cited rise from 0 per cent to 97 per cent is Gambian, 1984\u20132014; the paper says nothing about Ghana. The accurate description is therefore: pfaat1 S258L is a variant with a demonstrated but modest, epistasis- and background-dependent effect that potentiates chloroquine resistance \u2014 not a validated resistance determinant, and not a marker of any current drug. One detail of this sample sharpens the caveat: pfaat1 F313S, the epistatic partner, is absent \u2014 codon 313 is at the reference residue in all 1,900 isolates \u2014 so the interaction the experiment demonstrated cannot be operating in these parasites at all."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      746,
+      746
+    ],
+    "new_paragraph_range": [
+      748,
+      748
+    ],
+    "old": [
+      "[Observed] WHO labels attach to variants, not genes, and the previous draft's gene-level labels must go. The compendium classifies individual variants. It contains no validated or candidate lumefantrine marker at all \u2014 verbatim: \"The review did not identify any validated or candidate molecular markers associated with lumefantrine resistance.\" The label \"pfmdr1, WHO-validated, lumefantrine\" used in the previous draft is therefore a category error twice over. Further: pfaat1, pfap2mu and pfmdr2 appear nowhere in the compendium at any tier.* They are retained in the panel because they are scientifically interesting \u2014 pfaat1 S258L in particular is this analysis's strongest marker signal \u2014 but they must never be described as WHO-classified. pfcoronin is in the compendium at the potential* tier only, and all three of its panel codons are monomorphic at the reference residue here."
+    ],
+    "new": [
+      "[Observed] WHO labels attach to variants, not genes, and the previous draft's gene-level labels must go. The compendium classifies individual variants. It contains no validated or candidate lumefantrine marker at all \u2014 verbatim: \"The review did not identify any validated or candidate molecular markers associated with lumefantrine resistance.\" The label \"pfmdr1, WHO-validated, lumefantrine\" used in the previous draft is therefore a category error twice over. Further: pfaat1, pfap2mu and pfmdr2 appear nowhere in the compendium at any tier. They are retained in the panel because they are scientifically interesting \u2014 pfaat1 S258L in particular is this analysis's strongest marker signal \u2014 but they must never be described as WHO-classified. pfcoronin is in the compendium at the potential tier only, and all three of its panel codons are monomorphic at the reference residue here."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      773,
+      773
+    ],
+    "new_paragraph_range": [
+      775,
+      775
+    ],
+    "old": [
+      "*Stratify the polyclonality and Fws comparisons by sequencing study* wherever a zone pair shares one, and report the within-study contrasts separately from the between-study ones (\u00a77.2, \u00a79.1 limitation 2)."
+    ],
+    "new": [
+      "Stratify the polyclonality and Fws comparisons by sequencing study wherever a zone pair shares one, and report the within-study contrasts separately from the between-study ones (\u00a77.2, \u00a79.1 limitation 2)."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      789,
+      789
+    ],
+    "new_paragraph_range": [
+      791,
+      791
+    ],
+    "old": [
+      "[Observed] What has been fixed since the previous draft. Four defects that made the pipeline unreproducible or silently wrong have been corrected. (i) BayPass was non-deterministic across threads despite its fixed seed: the 8-thread manuscript run and an 8-thread re-run of the same command gave different thresholds and different outlier counts. It now runs single-threaded and is bitwise stable; the earlier multi-threaded outputs are archived rather than overwritten, and the three surviving threshold values are labelled in the note to Table 8.1. (ii) The Mantel test's silent flooring of negative FST values to zero is now disclosed, the affected pairs are named in the output JSON, and both censored and uncensored statistics are reported \u2014 which is how it became visible that the uncensored statistic clears p < 0.05 in only one of the six threshold scenarios (Table 8.3). (iii) The \"skip if output exists\" guards in stages 5b, 7b and 8b did not check whether the input had changed, so when the SNP panel grew from 3,359 to 3,916 the ADMIXTURE and TreeMix stages reused the previous day's results and reported success. Only stage 8 caught it, because it asserts that its position table and the BayPass output have matching row counts. All three guards now require the output to be newer than its input. (iv) The marker panel no longer identifies codons by annotation string. step12_codon_panel.py reconstructs each codon from the CDS and reference genome and emits the full residue spectrum including the reference residue, with a per-codon called count; it is validated call by call against MalariaGEN's published genotypes (47,012 of 47,012 agree) and its pfk13 list is taken from the WHO compendium v1.0 rather than written by hand. Defects (iii) and (iv) are the most dangerous kind: both produced no error and well-formed output, and in both cases wrong numbers would have been reported as though they were right."
+    ],
+    "new": [
+      "[Observed] What has been fixed since the previous draft. Four defects that made the pipeline unreproducible or silently wrong have been corrected. (i) BayPass was non-deterministic across threads despite its fixed seed: the 8-thread manuscript run and an 8-thread re-run of the same command gave different thresholds and different outlier counts. It now runs single-threaded and is bitwise stable; the earlier multi-threaded outputs are archived rather than overwritten, and the three surviving threshold values are labelled in the note to Table 8.1. (ii) The Mantel test's silent flooring of negative FST values to zero is now disclosed, the affected pairs are named in the output JSON, and both censored and uncensored statistics are reported \u2014 which is how it became visible that the uncensored statistic clears p < 0.05 in only one of the six threshold scenarios (Table 8.3). (iii) The \"skip if output exists\" guards in stages 5b, 7b and 8b did not check whether the input had changed, so when the SNP panel grew from 3,359 to 3,916 the ADMIXTURE and TreeMix stages reused the previous day's results and reported success. Only stage 8 caught it, because it asserts that its position table and the BayPass output have matching row counts. All three guards now require the output to be newer than its input. (iv) The marker panel no longer identifies codons by annotation string. step12_codon_panel.py reconstructs each codon from the CDS and reference genome and emits the full residue spectrum including the reference residue, with a per-codon called count; it is validated call by call against MalariaGEN's published genotypes at the 25 of its 57 codons MalariaGEN publishes per sample (47,012 of 47,012 agree), leaving 32 codons, every pfk13 codon among them, with no independent per-sample check and its pfk13 list is taken from the WHO compendium v1.0 rather than written by hand. Defects (iii) and (iv) are the most dangerous kind: both produced no error and well-formed output, and in both cases wrong numbers would have been reported as though they were right."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      809,
+      809
+    ],
+    "new_paragraph_range": [
+      811,
+      811
+    ],
+    "old": [
+      "[Calculated] The panel as it now stands. step12_codon_panel.py maps each requested codon to its three genomic positions through the CDS, collects every variant record at those positions regardless of numalt or is_snp, applies each isolate's alleles to the reference codon read from the genome, and translates. It reports the full residue spectrum at every codon, the reference residue included, so a resistance allele cannot hide in the reference and a residue requiring two changes in one codon cannot be missed; a mixed call makes a codon uncalled rather than being assigned a residue. The panel covers 57 codons across all nine panel genes \u2014 171 genomic positions, 125 variant records, every codon carrying at least one record \u2014 in the same 1,900 isolates. Of the 57 codons, 24 are polymorphic and 33 are fixed at the reference residue. Two statements from the previous version are retired by this: that pfcoronin \"contributed no canonical codon\" (it contributes three, G50, R100 and E107, all fixed at the reference residue), and the \"44 canonical codon-allele records\" count, which was a count of annotation records and not of codons. The scan-side ascertainment cascade is unaffected and is stated once here: of the panel's 171 genomic positions only four ever reached the MAF-filtered scan matrix \u2014 pfdhfr Cys59Arg (XtX 9.11, q = 0.43), pfdhfr Asn51Ile (XtX 8.15, q = 0.67), pfaat1 Ser258Leu (XtX 24.20, q = 0.0049) and, fourth, Pf3D7_07_v3:403623, the second of pfcrt codon 75's two variant positions (BayPass MRK 1406, M_XtX 4.18, XtXst 6.21 against the threshold 10.840; M_P 0.914, so MAF 0.086 cleared the 0.05 cut). The previous count of three was carried over from step10's annotation-matched panel, which held 403621 but never 403623 at all \u2014 a residual instance of the very two-SNP-codon failure mode the rebuild was written to fix. Three more passed the ingest mask and were then cut by MAF >= 0.05: pfcrt Ile356Thr at 0.016, pfmdr1 Asp1246Tyr at 0.011 and pfcrt Asn326Ser at 0.0005 \u2014 the last of which the previous version reported as 0.008, which was also wrong. The distinction worth drawing explicitly therefore survives, with its scope corrected: the scan's silence *at pfdhfr 51 and 59 and at pfcrt 75 is a tested negative, because those were the codons in the matrix and all three came back firmly null, whereas its silence on pfmdr1, pfdhps and pfk13 is an ascertainment artefact, because it contributes no scanned codon position and never tested them at all. pfcrt does not belong on the artefact side: codon 75 was tested. Nor can \"the antifolate codons\" stand as a blanket term here \u2014 only two of the five pfdhfr codons reached the matrix, none of the six pfdhps codons did, and pfdhps* is itself an antifolate target."
+    ],
+    "new": [
+      "[Calculated] The panel as it now stands. step12_codon_panel.py maps each requested codon to its three genomic positions through the CDS, collects every variant record at those positions regardless of numalt or is_snp, applies each isolate's alleles to the reference codon read from the genome, and translates. It reports the full residue spectrum at every codon, the reference residue included, so a resistance allele cannot hide in the reference and a residue requiring two changes in one codon cannot be missed; a mixed call makes a codon uncalled rather than being assigned a residue. The panel covers 57 codons across all nine panel genes \u2014 171 genomic positions, 125 variant records, every codon carrying at least one record \u2014 in the same 1,900 isolates. Of the 57 codons, 24 are polymorphic and 33 are fixed at the reference residue. Two statements from the previous version are retired by this: that pfcoronin \"contributed no canonical codon\" (it contributes three, G50, R100 and E107, all fixed at the reference residue), and the \"44 canonical codon-allele records\" count, which was a count of annotation records and not of codons. The scan-side ascertainment cascade is unaffected and is stated once here: of the panel's 171 genomic positions only four ever reached the MAF-filtered scan matrix \u2014 pfdhfr Cys59Arg (XtX 9.11, q = 0.43), pfdhfr Asn51Ile (XtX 8.15, q = 0.67), pfaat1 Ser258Leu (XtX 24.20, q = 0.0049) and, fourth, Pf3D7_07_v3:403623, the second of pfcrt codon 75's two variant positions (BayPass MRK 1406, M_XtX 4.18, XtXst 6.21 against the threshold 10.840; M_P 0.914, so MAF 0.086 cleared the 0.05 cut). The previous count of three was carried over from step10's annotation-matched panel, which held 403621 but never 403623 at all \u2014 a residual instance of the very two-SNP-codon failure mode the rebuild was written to fix. Three more passed the ingest mask and were then cut by MAF >= 0.05: pfcrt Ile356Thr at 0.016, pfmdr1 Asp1246Tyr at 0.011 and pfcrt Asn326Ser at 0.0005 \u2014 the last of which the previous version reported as 0.008, which was also wrong. The distinction worth drawing explicitly therefore survives, with its scope corrected: the scan's silence at pfdhfr 51 and 59 and at pfcrt 75 is a tested negative, because those were the codons in the matrix and all three came back firmly null, whereas its silence on pfmdr1, pfdhps and pfk13 is an ascertainment artefact, because it contributes no scanned codon position and never tested them at all. pfcrt does not belong on the artefact side: codon 75 was tested. Nor can \"the antifolate codons\" stand as a blanket term here \u2014 only two of the five pfdhfr codons reached the matrix, none of the six pfdhps codons did, and pfdhps is itself an antifolate target."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      811,
+      813
+    ],
+    "new_paragraph_range": [
+      813,
+      815
+    ],
+    "old": [
+      "[Calculated] *Positive finding one: pfdhps Gly437 is at high frequency and is zone-structured \u2014 and was wholly absent from the previous panel. The resistance residue at this codon is the 3D7 reference residue, which is why string-matching never saw it. Reconstructed, G437 sits at 0.897 overall (n = 1,892): 0.964 in deciduous forest (95% CI 0.939\u20130.980), 0.941 in coastal savanna (0.900\u20130.966), 0.875 in Guinea savanna (0.856\u20130.892) and 0.800 in the transitional zone (0.609\u20130.911), with chi-square p* = 1.2 x 10-6. The revertant residue A437 is correspondingly at 0.103. This is the single largest substantive addition to the resistance results, and the previous version of this section reported nothing at this locus at all.",
+      "[Calculated] *Positive finding two: the pfdhfr triple mutant is at 0.771, not near fixation, and the previous figure was not a haplotype frequency. The previous version gave the triple mutant as \"0.786\u20130.908\", which is the range of its three marginal codon frequencies and is not a co-occurrence statement. Counted within isolates on the 1,876 called at all three codons, the IRN haplotype (N51I+C59R+S108N) is 0.771 (95% CI 0.751\u20130.789). As it must, it falls below the smallest of its components on the same complete-case set (51I 0.788; 59R 0.887; 108N 0.908). It is also not a single near-fixed haplotype: NRN sits at 0.116, the fully wild-type NCS at 0.091, ICN at 0.018 and NCN at 0.004. By zone, IRN is 0.867 in coastal savanna (n = 203), 0.788 in deciduous forest (n = 330), 0.750 in Guinea savanna (n = 1,318) and 0.880 in the transitional zone (n = 25). The quadruple IRNL is 0.000 (n = 1,874; CI 0.000\u20130.002), with I164L absent from every called isolate. The marginal codon frequencies are 0.786 for Asn51Ile (n = 1,891), 0.886 for Cys59Arg (n = 1,888) and 0.908 for Ser108Asn (n = 1,889); all three differ across the four zones (chi-square p = 2.4 x 10<sup>-4</sup>, 4.8 x 10<sup>-5</sup> and 9.4 x 10<sup>-7</sup>) and all three are lowest in Guinea savanna. No directional contrast was tested and none should be claimed: those are four-zone heterogeneity tests, and for both Cys59Arg and Ser108Asn the highest frequency is the transitional zone at 1.000 on n = 25. pfdhps Lys540Glu (0.009) and Ala581Gly (0.014) remain rare, and the pfdhps 437+540 double GE is 0.010 (n = 1,888)* against GK 0.887 and AK 0.103 \u2014 so the sulfadoxine-resistance picture is a high-frequency single substitution, not a high-frequency double.",
+      "[Calculated] *Positive finding three: pfaat1 Ser258Leu forms a coastal-to-northern cline. The variant at Pf3D7_06_v3:1215233 is a missense change of moderate predicted impact. Its frequency runs 0.824 in coastal savanna, 0.735 in deciduous forest, 0.640 in the transitional zone and 0.544 in Guinea savanna, against 0.609 overall (n = 1,896; chi-square p = 1.9 x 10<sup>-18</sup>). It is independently the second-ranked outlier in the genome-wide scan at XtX 24.20, q = 0.0049. The original manuscript carried this locus as an anonymous amino acid transporter in a table while simultaneously reporting that no validated resistance locus had been found. One further reading from the new panel bears directly on how much weight the functional literature can carry here: the second pfaat1 codon in the panel, Phe313, is fixed at the reference residue in all 1,900 isolates* \u2014 so F313S, the variant with which S258L shows epistasis in the published experiment, is absent from this sample entirely."
+    ],
+    "new": [
+      "[Calculated] Positive finding one: pfdhps Gly437 is at high frequency and is zone-structured \u2014 and was wholly absent from the previous panel. The resistance residue at this codon is the 3D7 reference residue, which is why string-matching never saw it. Reconstructed, G437 sits at 0.897 overall (n = 1,892): 0.964 in deciduous forest (95% CI 0.939\u20130.980), 0.941 in coastal savanna (0.900\u20130.966), 0.875 in Guinea savanna (0.856\u20130.892) and 0.800 in the transitional zone (0.609\u20130.911), with chi-square p = 1.2 x 10-6. The revertant residue A437 is correspondingly at 0.103. This is the single largest substantive addition to the resistance results, and the previous version of this section reported nothing at this locus at all.",
+      "[Calculated] Positive finding two: the pfdhfr triple mutant is at 0.771, not near fixation, and the previous figure was not a haplotype frequency. The previous version gave the triple mutant as \"0.786\u20130.908\", which is the range of its three marginal codon frequencies and is not a co-occurrence statement. Counted within isolates on the 1,876 called at all three codons, the IRN haplotype (N51I+C59R+S108N) is 0.771 (95% CI 0.751\u20130.789). As it must, it falls below the smallest of its components on the same complete-case set (51I 0.788; 59R 0.887; 108N 0.908). It is also not a single near-fixed haplotype: NRN sits at 0.116, the fully wild-type NCS at 0.091, ICN at 0.018 and NCN at 0.004. By zone, IRN is 0.867 in coastal savanna (n = 203), 0.788 in deciduous forest (n = 330), 0.750 in Guinea savanna (n = 1,318) and 0.880 in the transitional zone (n = 25). The quadruple IRNL is 0.000 (n = 1,874; CI 0.000\u20130.002), with I164L absent from every called isolate. The marginal codon frequencies are 0.786 for Asn51Ile (n = 1,891), 0.886 for Cys59Arg (n = 1,888) and 0.908 for Ser108Asn (n = 1,889); all three differ across the four zones (chi-square p = 2.4 x 10<sup>-4</sup>, 4.8 x 10<sup>-5</sup> and 9.4 x 10<sup>-7</sup>) and all three are lowest in Guinea savanna. No directional contrast was tested and none should be claimed: those are four-zone heterogeneity tests, and for both Cys59Arg and Ser108Asn the highest frequency is the transitional zone at 1.000 on n = 25. pfdhps Lys540Glu (0.009) and Ala581Gly (0.014) remain rare, and the pfdhps 437+540 double GE is 0.010 (n = 1,888) against GK 0.887 and AK 0.103 \u2014 so the sulfadoxine-resistance picture is a high-frequency single substitution, not a high-frequency double.",
+      "[Calculated] Positive finding three: pfaat1 Ser258Leu forms a coastal-to-northern cline. The variant at Pf3D7_06_v3:1215233 is a missense change of moderate predicted impact. Its frequency runs 0.824 in coastal savanna, 0.735 in deciduous forest, 0.640 in the transitional zone and 0.544 in Guinea savanna, against 0.609 overall (n = 1,896; chi-square p = 1.9 x 10<sup>-18</sup>). It is independently the second-ranked outlier in the genome-wide scan at XtX 24.20, q = 0.0049. The original manuscript carried this locus as an anonymous amino acid transporter in a table while simultaneously reporting that no validated resistance locus had been found. One further reading from the new panel bears directly on how much weight the functional literature can carry here: the second pfaat1 codon in the panel, Phe313, is fixed at the reference residue in all 1,900 isolates \u2014 so F313S, the variant with which S258L shows epistasis in the published experiment, is absent from this sample entirely."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      818,
+      818
+    ],
+    "new_paragraph_range": [
+      820,
+      820
+    ],
+    "old": [
+      "WHO tiers apply to variants, not to genes. The compendium classifies individual variants. Three consequences for this panel. First, it contains no validated or candidate lumefantrine marker at all \u2014 verbatim: \"The review did not identify any validated or candidate molecular markers associated with lumefantrine resistance.\" A label such as \"pfmdr1, WHO-validated, lumefantrine\" is a category error twice over and does not appear in this revision. Second, pfaat1, pfap2mu and pfmdr2 appear nowhere in the compendium at any tier.* They are retained in the panel because they are scientifically interesting, and S258L is the strongest candidate the scan produced, but none of the three may be described as a WHO-classified marker. Third, pfcoronin is in the compendium at the potential tier only; its three panel codons are fixed at the reference residue here. In this sample pfmdr2 Ile492Val runs at 0.549 and pfap2mu* Ser160Asn at 0.096, and neither carries any WHO standing."
+    ],
+    "new": [
+      "WHO tiers apply to variants, not to genes. The compendium classifies individual variants. Three consequences for this panel. First, it contains no validated or candidate lumefantrine marker at all \u2014 verbatim: \"The review did not identify any validated or candidate molecular markers associated with lumefantrine resistance.\" A label such as \"pfmdr1, WHO-validated, lumefantrine\" is a category error twice over and does not appear in this revision. Second, pfaat1, pfap2mu and pfmdr2 appear nowhere in the compendium at any tier. They are retained in the panel because they are scientifically interesting, and S258L is the strongest candidate the scan produced, but none of the three may be described as a WHO-classified marker. Third, pfcoronin is in the compendium at the potential tier only; its three panel codons are fixed at the reference residue here. In this sample pfmdr2 Ile492Val runs at 0.549 and pfap2mu Ser160Asn at 0.096, and neither carries any WHO standing."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      820,
+      820
+    ],
+    "new_paragraph_range": [
+      822,
+      822
+    ],
+    "old": [
+      "[Interpreted] *What the artemisinin negative is now worth, and what the kelch13 cross-check is worth. The result is a tested negative across the complete WHO-validated set rather than an untested absence, and that is the change that matters. Calling it the most policy-relevant result the analysis produces remains an assessment and not a finding, and three qualifications now attach to it. Surveillance for artemisinin resistance was not among the manuscript's stated objectives. The sampling period is 2009\u20132021. And the corroboration from MalariaGEN's own `kelch13` calls is much weaker than the previous version implied: Pf8 assigns a status over the whole 349\u2013726 domain and classifies any missing call in that range as undetermined, so only 36 isolates have a complete published status* \u2014 under 2 per cent of the sample \u2014 which is weak corroboration for per-codon calls on roughly 1,860 isolates. The two must not be presented as equivalent evidence. Among those 36, the commonest observed change is Ala578Ser, which is explicitly non-resistance."
+    ],
+    "new": [
+      "[Interpreted] What the artemisinin negative is now worth, and what the kelch13 cross-check is worth. The result is a tested negative across the complete WHO-validated set rather than an untested absence, and that is the change that matters. Calling it the most policy-relevant result the analysis produces remains an assessment and not a finding, and three qualifications now attach to it. Surveillance for artemisinin resistance was not among the manuscript's stated objectives. The sampling period is 2009\u20132021. And the corroboration from MalariaGEN's own `kelch13` calls is much weaker than the previous version implied: Pf8 assigns a status over the whole 349\u2013726 domain and classifies any missing call in that range as undetermined, so only 36 isolates have a complete published status \u2014 under 2 per cent of the sample \u2014 which is weak corroboration for per-codon calls on roughly 1,860 isolates. The two must not be presented as equivalent evidence. Among those 36, the commonest observed change is Ala578Ser, which is explicitly non-resistance."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      844,
+      844
+    ],
+    "new_paragraph_range": [
+      846,
+      846
+    ],
+    "old": [
+      "*Corroborate the pfk13 and pfaat1 calls against something other than this pipeline. The per-sample concordance check covers 25 markers in five genes and is perfect on 47,012 calls, but it cannot reach the 32 codons MalariaGEN does not publish, and the kelch13 domain status gives a complete call for only 36 isolates. Options are a direct read of the Pf8 VCF at the 23 pfk13 codons by an independent route, or comparison against a published Ghanaian pfk13* survey over the same years. This matters because the artemisinin negative is the result most likely to be quoted."
+    ],
+    "new": [
+      "Corroborate the pfk13 and pfaat1 calls against something other than this pipeline. The per-sample concordance check covers 25 markers in five genes and is perfect on 47,012 calls, but it cannot reach the 32 codons MalariaGEN does not publish, and the kelch13 domain status gives a complete call for only 36 isolates. Options are a direct read of the Pf8 VCF at the 23 pfk13 codons by an independent route, or comparison against a published Ghanaian pfk13 survey over the same years. This matters because the artemisinin negative is the result most likely to be quoted."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      847,
+      847
+    ],
+    "new_paragraph_range": [
+      849,
+      849
+    ],
+    "old": [
+      "Analyse Fws by zone and year as a transmission-intensity phenotype in its own right, with study as a covariate, since the between-study variation within a single zone is of the same order as the between-zone variation: the *polyclonal fraction (F<sub>ws</sub> < 0.95) spans 0.430 to 0.578 across the four testable studies in deciduous forest. Those two numbers are fractions of isolates below the monoclonality cut, not F*ws values, and Section 10.1 labels them that way; the two statements must agree."
+    ],
+    "new": [
+      "Analyse Fws by zone and year as a transmission-intensity phenotype in its own right, with study as a covariate, since the between-study variation within a single zone is of the same order as the between-zone variation: the polyclonal fraction (F<sub>ws</sub> < 0.95) spans 0.430 to 0.578 across the four testable studies in deciduous forest. Those two numbers are fractions of isolates below the monoclonality cut, not Fws values, and Section 10.1 labels them that way; the two statements must agree."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      908,
+      908
+    ],
+    "new_paragraph_range": [
+      910,
+      910
+    ],
+    "old": [
+      "[Observed] Unchanged from the previous version except for the entry counts, which the audit found to be internally inconsistent (26 claimed in the opening sentence, 30 entries listed, subtotals summing to 27). The counts should be recomputed against the final reference list before circulation; no total is asserted here. Three entries change in this revision. *Amambua-Ngwa et al. (2023, Nature Microbiology) is cited in Sections 6.8 and 10.1 for the pfaat1 S258L functional work, now read correctly: a 1.5-fold chloroquine IC50 rise in a single chloroquine-resistant Southeast Asian line (NHP4026), with epistasis between S258L and F313S and an explicit pfcrt-background caveat; amodiaquine, lumefantrine, mefloquine and quinine were all measured and the shifts were sub-threshold; the authors conclude chloroquine was the primary selective force and reject the other-quinoline hypothesis; and the 0% to 97% longitudinal rise is Gambian, 1984\u20132014, with nothing said about Ghana. The previous version's claim that amodiaquine was untested is withdrawn. The WHO compendium of molecular markers of antimalarial drug resistance, v1.0 (December 2025), is added as the authority for the pfk13 panel and for every tier label in it; it classifies variants and not genes, contains no validated or candidate lumefantrine marker, and contains no entry at any tier for pfaat1, pfap2mu or pfmdr2. The official Pf8 methodology document is added as the authority for the reference-allele direction at pfdhps* 437, quoted in Section 10.1 and in Appendix F."
+    ],
+    "new": [
+      "[Observed] Unchanged from the previous version except for the entry counts, which the audit found to be internally inconsistent (26 claimed in the opening sentence, 30 entries listed, subtotals summing to 27). The counts should be recomputed against the final reference list before circulation; no total is asserted here. Three entries change in this revision. Amambua-Ngwa et al. (2023, Nature Microbiology) is cited in Sections 6.8 and 10.1 for the pfaat1 S258L functional work, now read correctly: a 1.5-fold chloroquine IC50 rise in a single chloroquine-resistant Southeast Asian line (NHP4026), with epistasis between S258L and F313S and an explicit pfcrt-background caveat; amodiaquine, lumefantrine, mefloquine and quinine were all measured and the shifts were sub-threshold; the authors conclude chloroquine was the primary selective force and reject the other-quinoline hypothesis; and the 0% to 97% longitudinal rise is Gambian, 1984\u20132014, with nothing said about Ghana. The previous version's claim that amodiaquine was untested is withdrawn. The WHO compendium of molecular markers of antimalarial drug resistance, v1.0 (December 2025), is added as the authority for the pfk13 panel and for every tier label in it; it classifies variants and not genes, contains no validated or candidate lumefantrine marker, and contains no entry at any tier for pfaat1, pfap2mu or pfmdr2. The official Pf8 methodology document is added as the authority for the reference-allele direction at pfdhps 437, quoted in Section 10.1 and in Appendix F."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      939,
+      939
+    ],
+    "new_paragraph_range": [
+      941,
+      941
+    ],
+    "old": [
+      "On *pfcrt* codon 75 \u2014 not a naming discrepancy. The previous version reported that Pf8's SnpEff annotation labels the ALT at pfcrt codon 75 as Asp while MalariaGEN calls it Glu, described this as the one marker-naming discrepancy among 23, and credited MalariaGEN with being right on the biology. The diagnosis was wrong. Codon 75 carries two variants \u2014 403621 (A>G, annotated Asn75Asp) and 403623 (T>A, annotated Asn75Lys) \u2014 and Asn\u2192Glu requires both, so no single-variant annotation can name N75E at all. The appearance of a discrepancy was created entirely by identifying markers from annotation strings. Reconstructed from the codon, residue 75 is *Glu at 0.071 (n = 1,874)*, exactly matching the other CVIET component residues, and it agrees with MalariaGEN on every one of the 1,874 jointly called isolates. There is no discrepancy to follow a convention about: there is one residue, Glu, and it is ours and MalariaGEN's alike."
+    ],
+    "new": [
+      "On pfcrt codon 75 \u2014 not a naming discrepancy. The previous version reported that Pf8's SnpEff annotation labels the ALT at pfcrt codon 75 as Asp while MalariaGEN calls it Glu, described this as the one marker-naming discrepancy among 23, and credited MalariaGEN with being right on the biology. The diagnosis was wrong. Codon 75 carries two variants \u2014 403621 (A>G, annotated Asn75Asp) and 403623 (T>A, annotated Asn75Lys) \u2014 and Asn\u2192Glu requires both, so no single-variant annotation can name N75E at all. The appearance of a discrepancy was created entirely by identifying markers from annotation strings. Reconstructed from the codon, residue 75 is Glu at 0.071 (n = 1,874), exactly matching the other CVIET component residues, and it agrees with MalariaGEN on every one of the 1,874 jointly called isolates. There is no discrepancy to follow a convention about: there is one residue, Glu, and it is ours and MalariaGEN's alike."
+    ]
+  }
+]

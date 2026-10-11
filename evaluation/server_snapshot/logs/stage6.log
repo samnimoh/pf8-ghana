@@ -1,0 +1,62 @@
+
+[1;34m######## STAGE 6 — Mantel (zone) ########[0m
+
+===============================================================
+  STEP 6 — Mantel test for isolation by distance (zone level)
+===============================================================
+Zone locations (sample-weighted) and the regions behind them:
+  Coastal savanna        5.822N    0.066E  (Greater Accra 204)
+  Decidous forest        6.332N   -1.140E  (Ashanti 157, Central 125, Eastern 34, Volta 21)
+  Guinea savanna        10.778N   -0.821E  (Upper East 1334)
+  Transitional zone      7.706N   -1.658E  (Brong Ahafo 25)
+
+Populations: 4   pairwise comparisons: 6
+Geographic distances: 145–557 km
+
+============================================================
+  Result
+============================================================
+  Mantel r  = 0.5776
+  p         = 0.0900  (999 permutations, one-sided)
+  n         = 4 populations, 6 pairs
+
+  Distinct orderings available: 24
+  Finest attainable p-value:    0.0417
+
+  The permutation distribution is coarse at this k. A null result
+  here is weak evidence against IBD, not evidence for panmixia.
+  Pf8 resolves coordinates to admin level 1, so per-sample distance
+  is unavailable; --level region is the finer grain you can claim.
+
+Figure -> /media/biodataA/pf8/gyadu/figures/mantel_ibd_zone.png
+Result -> /media/biodataA/pf8/gyadu/results/mantel_result_zone.json
+
+[1;34m######## STAGE 6 — Mantel (region) ########[0m
+
+=================================================================
+  STEP 6 — Mantel test for isolation by distance (region level)
+=================================================================
+Regions with n >= 10: 7
+  Ashanti                  n = 157
+  Brong Ahafo              n = 25
+  Central                  n = 125
+  Eastern                  n = 34
+  Greater Accra            n = 204
+  Upper East               n = 1334
+  Volta                    n = 21
+
+Populations: 7   pairwise comparisons: 21
+Geographic distances: 87–578 km
+
+============================================================
+  Result
+============================================================
+  Mantel r  = 0.4000
+  p         = 0.0290  (999 permutations, one-sided)
+  n         = 7 populations, 21 pairs
+
+  Distinct orderings available: 5,040
+  Finest attainable p-value:    0.0010
+
+Figure -> /media/biodataA/pf8/gyadu/figures/mantel_ibd_region.png
+Result -> /media/biodataA/pf8/gyadu/results/mantel_result_region.json

@@ -1,0 +1,47 @@
+Mantel, N. (1967). The detection of disease clustering and a generalized regression approach. Cancer Research, 27(2, Part 1), 
+209–220.
+McInnes, L., Healy, J., & Melville, J. (2018). UMAP: Uniform manifold approximation and projection for dimension reduction 
+[Preprint]. arXiv. https://doi.org/10.48550/arXiv.1802.03426
+McKinney, W. (2010). Data structures for statistical computing in Python. In Proceedings of the 9th Python in Science 
+Conference (pp. 56–61). SciPy. https://doi.org/10.25080/Majora-92bf1922-00a
+Miles, A., Iqbal, Z., Vauterin, P., Pearson, R., Campino, S., Theron, M., Gould, K., Mead, D., Drury, E., O'Brien, J., Ruano Rubio, 
+V., MacInnis, B., Mwangi, J., Samarakoon, U., Ranford-Cartwright, L., Ferdig, M., Hayton, K., Su, X.-Z., Wellems, T., … 
+Kwiatkowski, D. (2016). Indels, structural variation, and recombination drive genomic diversity in Plasmodium 
+falciparum. Genome Research, 26(9), 1288–1299. https://doi.org/10.1101/gr.203711.115
+Miles, A., Rodrigues, M. F., Ralph, P., Kelleher, J., Schelker, M., Pisupati, R., Rae, S., & Millar, T. (2024). cggh/scikit-allel 
+(Version 1.3.13) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.13772087
+Mobegi, V. A., Duffy, C. W., Amambua-Ngwa, A., Loua, K. M., Laman, E., Nwakanma, D. C., MacInnis, B., Aspeling-Jones, H., 
+Murray, L., Clark, T. G., Kwiatkowski, D. P., & Conway, D. J. (2014). Genome-wide analysis of selection on the malaria 
+parasite Plasmodium falciparum in West African populations of differing infection endemicity. Molecular Biology and 
+Evolution, 31(6), 1490–1499. https://doi.org/10.1093/molbev/msu106
+Otto, T. D., Böhme, U., Sanders, M. J., Reid, A. J., Bruske, E. I., Duffy, C. W., Bull, P. C., Pearson, R. D., Abdi, A. I., Dimonte, S., 
+Stewart, L. B., Campino, S., Kekre, M., Hamilton, W. L., Claessens, A., Volkman, S. K., Ndiaye, D., Amambua-Ngwa, A., 
+Diakite, M., … Berriman, M. (2018). Long read assemblies of geographically dispersed Plasmodium falciparum isolates 
+reveal highly structured subtelomeres. Wellcome Open Research, 3, Article 52. 
+https://doi.org/10.12688/wellcomeopenres.14571.1
+Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., Blondel, M., Prettenhofer, P., Weiss, R., 
+Dubourg, V., Vanderplas, J., Passos, A., Cournapeau, D., Brucher, M., Perrot, M., & Duchesnay, É. (2011). Scikit-learn: 
+Machine learning in Python. Journal of Machine Learning Research, 12, 2825–2830. 
+https://www.jmlr.org/papers/v12/pedregosa11a.html
+Pickrell, J. K., & Pritchard, J. K. (2012). Inference of population splits and mixtures from genome-wide allele frequency data. 
+PLoS Genetics, 8(11), Article e1002967. https://doi.org/10.1371/journal.pgen.1002967
+Purcell, S., Neale, B., Todd-Brown, K., Thomas, L., Ferreira, M. A. R., Bender, D., Maller, J., Sklar, P., de Bakker, P. I. W., Daly, 
+M. J., & Sham, P. C. (2007). PLINK: A tool set for whole-genome association and population-based linkage analyses. The 
+American Journal of Human Genetics, 81(3), 559–575. https://doi.org/10.1086/519795
+Quinlan, A. R., & Hall, I. M. (2010). BEDTools: A flexible suite of utilities for comparing genomic features. Bioinformatics, 
+26(6), 841–842. https://doi.org/10.1093/bioinformatics/btq033
+Rousseeuw, P. J. (1987). Silhouettes: A graphical aid to the interpretation and validation of cluster analysis. Journal of 
+Computational and Applied Mathematics, 20, 53–65. https://doi.org/10.1016/0377-0427(87)90125-7
+Rousset, F. (1997). Genetic differentiation and estimation of gene flow from F-statistics under isolation by distance. Genetics, 
+145(4), 1219–1228. https://doi.org/10.1093/genetics/145.4.1219
+van der Maaten, L., & Hinton, G. (2008). Visualizing data using t-SNE. Journal of Machine Learning Research, 9, 2579–2605. 
+https://www.jmlr.org/papers/v9/vandermaaten08a.html
+Venna, J., & Kaski, S. (2001). Neighborhood preservation in nonlinear projection methods: An experimental study. In G. 
+Dorffner, H. Bischof, & K. Hornik (Eds.), Artificial neural networks — ICANN 2001 (Lecture Notes in Computer Science, 
+Vol. 2130, pp. 485–491). Springer. https://doi.org/10.1007/3-540-44668-0_68
+Virtanen, P., Gommers, R., Oliphant, T. E., Haberland, M., Reddy, T., Cournapeau, D., Burovski, E., Peterson, P., Weckesser, 
+W., Bright, J., van der Walt, S. J., Brett, M., Wilson, J., Millman, K. J., Mayorov, N., Nelson, A. R. J., Jones, E., Kern, R., 
+Larson, E., … SciPy 1.0 Contributors. (2020). SciPy 1.0: Fundamental algorithms for scientific computing in Python. 
+Nature Methods, 17(3), 261–272. https://doi.org/10.1038/s41592-019-0686-2
+Weir, B. S., & Cockerham, C. C. (1984). Estimating F-statistics for the analysis of population structure. Evolution, 38(6), 1358–
+1370. https://doi.org/10.1111/j.1558-5646.1984.tb05657.x

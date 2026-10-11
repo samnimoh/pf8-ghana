@@ -1,0 +1,41 @@
+A spatial gradient was not supported. The Mantel correlation between genetic and geographic distance was 
+significant in only two of six threshold scenarios, and omitting single regions left it significant in four of seven; 
+isolation by distance is therefore not reported here as a result.
+Resistance-marker frequencies, by contrast, vary geographically. pfaat1 S258L runs from 0.824 in coastal 
+savanna to 0.544 in Guinea savanna, and the pfdhfr IRN triple haplotype stands at 0.880 in the 25-isolate 
+transitional zone and 0.867 in coastal savanna against 0.750 in Guinea savanna (Table 3). Across 23 pfk13 codons 
+covering every WHO-validated and candidate variant, twenty-two are fixed at the reference residue and codon 
+458 stands at 0.9995; no WHO-screened artemisinin resistance allele was observed in material collected 
+between 2009 and 2021.
+For surveillance, these data support treating marker frequencies, rather than population structure, as the 
+subnationally informative quantity, within the limits of a panel in which Guinea savanna supplies 1,334 of 1,900 
+isolates and zone is very nearly a relabelling of administrative region, sequencing study and collection period.
+Declarations
+Ethics approval and consent to participate This work is a secondary analysis of a published open-access dataset 
+(MalariaGEN 2025) and involved no new human samples or participant recruitment; ethical approval and 
+participant consent were obtained by the original contributing studies.
+Availability of data and materials The Pf8 variant release is openly available from MalariaGEN (MalariaGEN 
+2025), and the analysis scripts and derived outputs are provided in the supplementary material. The archived 
+snapshots do not capture the exact final command invocations, so the pipeline is inspectable but not fully re-
+executable end to end. The narrative analysis record accompanies this article as Additional file 1. The analysis 
+scripts, the derived output tables, the empirical audit scripts with their captured logs and the provenance notes 
+form a separate archive that is not embedded in that file; it should be deposited and cited with stable access 
+information before submission [REPOSITORY DOI TO BE SUPPLIED].
+Competing interests None declared.
+Funding [FUNDING STATEMENT TO BE SUPPLIED]
+Authors' contributions [AUTHOR CONTRIBUTIONS TO BE SUPPLIED]
+Acknowledgements We thank MalariaGEN and the contributing studies whose collections and sequencing 
+underlie the Pf8 release. The licence and accession information for the Ghana agro-ecological zone layer shown 
+in Fig. 1 could not be established.
+References
+Alexander, D. H., & Lange, K. (2011). Enhancements to the ADMIXTURE algorithm for individual ancestry estimation. BMC 
+Bioinformatics, 12, Article 246. https://doi.org/10.1186/1471-2105-12-246
+Alexander, D. H., Novembre, J., & Lange, K. (2009). Fast model-based estimation of ancestry in unrelated individuals. 
+Genome Research, 19(9), 1655–1664. https://doi.org/10.1101/gr.094052.109
+Amambua-Ngwa, A., Amenga-Etego, L., Kamau, E., Amato, R., Ghansah, A., Golassa, L., Randrianarivelojosia, M., Ishengoma, 
+D., Apinjoh, T., Maïga-Ascofaré, O., Andagalu, B., Yavo, W., Bouyou-Akotet, M., Kolapo, O., Mane, K., Worwui, A., 
+Jeffries, D., Simpson, V., D'Alessandro, U., … Djimde, A. A. (2019). Major subpopulations of Plasmodium falciparum in 
+sub-Saharan Africa. Science, 365(6455), 813–816. https://doi.org/10.1126/science.aav5427
+Amambua-Ngwa, A., Button-Simons, K. A., Li, X., Kumar, S., Brenneman, K. V., Ferrari, M., Checkley, L. A., Haile, M. T., Shoue, 
+D. A., McDew-White, M., Tindall, S. M., Reyes, A., Delgado, E., Dalhoff, H., Larbalestier, J. K., Amato, R., Pearson, R. D., 
+Taylor, A. B., Nosten, F. H., … Anderson, T. J. C. (2023). Chloroquine resistance evolution in Plasmodium falciparum is 

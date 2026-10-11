@@ -1,0 +1,43 @@
+gradient in any case. A centroid is a coarse stand-in for the locations of isolates collected across a whole 
+administrative region, and the 21 pairwise distances derived from seven points are strongly non-independent. 
+Isolation by distance is therefore not reported here as a supported result.
+Resistance markers vary geographically where neutral structure does not
+The two findings sit in tension only if neutral differentiation is taken as a proxy for the spatial behaviour of every 
+locus. It is not. Marker frequencies do differ among zones: pfaat1 S258L stands at 0.609 overall (n = 1,896, p = 
+1.89 x 10^-18), and pfdhps G437 at 0.897 overall (n = 1,892, p = 1.17 x 10^-6), ranging from 0.964 in deciduous 
+forest to 0.800 in the transitional zone (Table 3). Genome-wide FST averages drift and gene flow over thousands 
+of retained variants; selection acts on single loci, and the pressures that drive resistance markers — treatment 
+policy, drug deployment history, treatment-seeking behaviour, transmission intensity — vary at sub-national 
+scale. A locus under local selection can therefore move much further and much faster than the genome-wide 
+average, and a very low genome-wide estimate places no constraint on how far apart marker frequencies can 
+be.
+The surveillance implication must be drawn carefully. A very low neutral FST licenses a claim only about the 
+magnitude of neutral structure: at the retained common variants, among-zone differentiation is very low, 
+though five of the six intervals exclude zero. It does not license treating any single zone's marker frequency as a 
+national estimate, nor does it justify sparse geographic sampling for resistance surveillance. A further caution 
+applies to the zone contrasts themselves: because zone, administrative region, sequencing study and collection 
+period vary together (Table 1), a significant difference among zones in marker frequency is also a difference 
+among studies and years.
+The pfaat1 cline
+S258L shows the steepest geographic gradient in the panel, running from 0.824 in coastal savanna to 0.544 in 
+Guinea savanna (Table 3), and pfaat1 (PF3D7_0629500) was the second-ranked outlier gene in the BayPass XtX 
+scan, with a maximum XtX of 24.20 against a calibrated 0.999-quantile threshold of 10.840 (Fig. 3; Gautier 2015). 
+Of the 19 outliers, 13 fall at q <= 0.10 under Benjamini-Hochberg correction (Benjamini and Hochberg 1995).
+The functional literature on this substitution is more specific than the cline alone would suggest. Amambua-
+Ngwa et al. (2023) reported an effect of S258L that was real but modest, dependent on epistasis and on genetic 
+background, and directional in one place: they found that it potentiates chloroquine resistance. Amodiaquine, 
+lumefantrine, mefloquine and quinine were all measured in that work and the shifts reported were sub-
+threshold; the authors concluded that chloroquine was the primary selective force acting on the locus.
+A contemporary drug explanation for the Ghanaian cline is therefore a hypothesis to be tested, not an inference 
+that follows from an outlier statistic, and several alternatives have to be excluded first. The zones differ in 
+dominant sequencing study and in collection years, so the cline is confounded with study and with period; the 
+gradient may record historical rather than current chloroquine exposure; the administrative region is the finest 
+spatial unit available, so the apparent zone gradient may track where sampling happened rather than ecology; 
+and the codon may be a passenger on linked selected variation rather than the target. An XtX value above the 
+threshold identifies a locus whose frequencies differ among populations by more than the calibrated null 
+permits; it does not name the selective agent, and the pseudo-observed set used for calibration is not matched 
+on minor allele frequency to the observed panel.
+The artemisinin negative
+Twenty-three pfk13 codons were screened, covering all 14 WHO-validated and all 6 candidate variants, which 
+occupy 19 distinct codons, together with 4 potential-tier codons (WHO 2025). Twenty-two of the 23 are fixed at 
+the reference residue, and codon 458 stands at 0.9995: one isolate of 1,866 carries Asn458Asp, which is not the 

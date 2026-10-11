@@ -1,0 +1,42 @@
+validated allele at that codon, since WHO validates N458Y. No WHO-screened artemisinin resistance allele was 
+observed, with per-codon denominators of 1,845 to 1,876.
+This is a tested negative rather than an untested absence: the codons were reconstructed from coding sequence 
+and read out across isolates collected between 2009 and 2021. Two limits bound what it is worth. It is fixation 
+among called genotypes, not among sequenced parasites; where a panel position carries no variant record the 
+reference base is read for every isolate regardless of coverage, so the negative rests on a callability assumption, 
+and no pfk13 codon has an external per-sample check. And it says nothing about the present. Collection ended 
+in 2021, and the pace at which validated alleles have risen elsewhere in Africa means a negative from that 
+period is a historical baseline for comparison with current genotyping, not current reassurance.
+Limitations
+Zone is close to a relabelling of administrative region, sequencing study and collection period. Three of the four 
+zones are dominated by a single study, and Guinea savanna, almost entirely Upper East, supplies 1,334 of 1,900 
+isolates (70.2%). Holding zone constant does not isolate a technical cause, because study varies together with 
+collection year, finer geography, recruitment and host biology; the within-zone tests therefore demonstrate 
+study-associated heterogeneity, not a demonstrated sequencing artefact.
+The pooled minor-allele-frequency filter imposes an ascertainment floor. With variant missingness capped at 
+10%, a retained site has at least 1,710 called haploid alleles, so a variant private to the 25 transitional isolates 
+cannot exceed 25/1,710 = 1.46%, and a variant at 40% frequency in coastal savanna reaches only 82/1,710 = 
+4.80%. Both fall below the 5% cut. The analysed panel is thus variants common enough to clear a threshold set 
+largely by one zone.
+The Fws >= 0.95 filter selects infections of low within-host complexity and so changes the target population. It 
+does not act evenly across zones: the polyclonal fraction in the QC set was 0.4437 in coastal savanna, 0.5387 in 
+deciduous forest, 0.5972 in Guinea savanna and 0.5000 in the transitional zone, and is not monotone with 
+latitude.
+No neutral mask was defined. Throughout, "neutral" means genome-wide at the retained common variants, not 
+at sites shown to be free of selection.
+The marker panel depends on a callability assumption. Of the 171 panel positions, 46 carry no variant record, so 
+the reference base is read there for every isolate irrespective of coverage; per codon, 21 have a record at all 
+three positions, 26 at two and 10 at only one, and no per-isolate depth field is consulted. Related to this, 32 of 
+the 57 panel codons, every pfk13 codon among them, have no external per-sample check; for the 25 codons 
+where MalariaGEN publishes per-sample genotypes, all 47,012 of 47,012 calls agree (MalariaGEN 2025), but that 
+concordance does not extend to the remainder.
+Finally, the transitional zone contributes 25 isolates. It accounts for the one FST interval spanning zero and the 
+widest intervals in Table 2, and its marker frequencies in Table 3 rest on at most 25 calls.
+Conclusions
+Among 1,900 Ghanaian P. falciparum isolates genotyped at 3,916 common SNPs, differentiation between agro-
+ecological zones is very low but statistically detectable: pairwise Hudson FST reaches 0.00232, and five of six 
+block-jackknife confidence intervals exclude zero, the exception being the Guinea savanna-transitional pair, 
+which rests on 25 isolates (Table 2). Maximum FST remained within 0.00204-0.00255 across six combinations of 
+within-host complexity and minor allele frequency thresholds (Table 4), so the signal is a property of the 
+retained common variants rather than of one threshold choice. Ordination recovered no zone structure, every 
+silhouette coefficient being negative (Fig. 2).

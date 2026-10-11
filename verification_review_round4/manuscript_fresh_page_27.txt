@@ -1,0 +1,55 @@
+Page 27 of 197
+[Interpreted] The direction of the gradient is therefore reproduced within the two zone pairs that share a 
+study, which is a useful descriptive check. It does not establish that the gradient is not a batch artefact: 
+within-zone comparisons hold zone constant while study still varies together with collection year, finer 
+geography, recruitment and host biology. The gradient is not separable from batch for the two pairs that 
+carry the largest differences.
+[Interpreted] The practical reading is as follows. Study confounding does not threaten the central finding that 
+the observed differentiation is very low, but neither does that finding bound the true differentiation: batch 
+effects can move an observed between-group contrast in either direction — through cohort composition, 
+calling differences and differential missingness — so a batch-confounded design that still returns FST ≈ 0.002 
+is reporting a low observed value whose relation to the true value is not established, not an upper bound on 
+it. It does threaten any positive between-zone claim — the maximum-FST pair, the polyclonality gradient, the 
+ADMIXTURE minor-component ordering, and the marker-frequency differences in §6.9 — because for the 
+pairs concerned there is no study-level control to appeal to. Each of those claims should be read as "differs 
+between zones, which in these data means between zone, region, period and sequencing batch jointly".
+What would resolve it. Nothing available within Pf8. Separating study from zone requires either isolates from the 
+same study in both the coastal savanna and the Guinea savanna, or a replication cohort sequenced under one 
+protocol across the gradient. Statistical adjustment is not an option: with four of six pairs at zero overlap, a study 
+term and a zone term are not jointly identifiable. This is listed as design limitation 7 in §9.2 and is the one limitation 
+on that list that new sequencing, rather than reanalysis, would have to fix.
+2.7 Variable summary
+Variable Source Type Notes
+Sample Pf8 manifest string Isolate identifier; the join key throughout.
+Country Pf8 manifest string Filtered to "Ghana" at Step 1.
+QC pass Pf8 manifest boolean-like The release's own flag. Parsed permissively 
+(true/t/yes/y/1/pass) by config5.coerce_bool.
+Study Pf8 manifest string Named partner sequencing study. Eleven values in Ghana, in 
+both the 4,905-isolate QC-passing set and the 1,900-isolate 
+analysis set; nested within zone (§2.6).
+Admin level 1 Pf8 manifest string Region. Seven values in Ghana.
+Admin level 1 
+latitude / longitude
+Pf8 manifest float Region centroid. Seven distinct pairs for all 4,905 isolates.
+Year Pf8 manifest float Collection year, 2009–2021.
+pf8_row derived, Step 
+1
+int Row index into the 33,325 × 33,325 distance matrix. Captured 
+once so the submatrix slice can never be mis-indexed.
+zone derived, Step 
+2
+string Agro-ecological zone from the spatial join against 
+5 hanaAEZ.5 eojson (§2.1.1). Four values in the analysis set. The 
+stored value is the layer's own string, including "Decidous 
+forest"; prose and table labels in this work use "Deciduous 
+forest" (§2.1.1).
+call_rate, het_rate, 
+Fws
+derived, Step 
+3b
+float Per-isolate QC statistics from a 50,000-SNP panel. Differ 
+significantly between studies within zone for call rate in two 
+zones and for Fws in the deciduous forest (Table 2.6).
+qc_pass (pipeline) derived, Step 
+3b
+boolean Distinct from the Pf8 flag; this is the pipeline's own composite.

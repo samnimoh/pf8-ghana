@@ -1,0 +1,12 @@
+gene_id,gene_name,product,n_outlier_snps,max_xtx,family
+PF3D7_0301700,PTP7,EMP1 trafficking protein PTP7,1,26.47654196,
+PF3D7_0629500,AAT1,amino acid transporter AAT1,2,24.43605575,
+PF3D7_0824400,NT2,nucleoside transporter 2,1,21.9686495,
+PF3D7_0424700,FIKK4.2,serine/threonine protein kinase%2C FIKK family,1,21.52243033,
+PF3D7_0501200,PIESP2,parasite-infected erythrocyte surface protein,1,18.02134195,
+PF3D7_1126900,SNRPF,small nuclear ribonucleoprotein F%2C putative,1,14.00832725,
+PF3D7_0935500,GEXP22,Plasmodium exported protein%2C unknown function,1,12.30783605,
+PF3D7_0215100,,RING zinc finger protein%2C putative,1,12.17779002,
+PF3D7_0824200,,conserved Plasmodium protein%2C unknown function,1,12.06888025,
+PF3D7_0831400,,Plasmodium exported protein%2C unknown function,2,12.04308364,
+PF3D7_0215300,ACS8,acyl-CoA synthetase,1,11.90054972,

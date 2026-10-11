@@ -1,0 +1,468 @@
+Population differentiation and antimalarial resistance-marker frequencies in Plasmodium falciparum across the agro-ecological zones of Ghana, 2009-2021
+[AUTHOR NAMES AND AFFILIATIONS TO BE SUPPLIED]
+Abstract
+Background Ghana carries a high malaria burden across agro-ecological zones that differ in rainfall, vegetation and transmission intensity. Whether these zones hold genetically distinguishable Plasmodium falciparum populations, and how antimalarial resistance markers are distributed among them, bears on how national genomic surveillance is stratified.
+Methods Ghanaian isolates in the MalariaGEN Pf8 release (MalariaGEN 2025) were filtered to well-called infections of low within-host complexity (Fws >= 0.95, call rate >= 0.80, clonal pruning), with variant missingness recomputed after the sample cut. The analysis set comprised 1,900 isolates at 3,916 SNPs (minor allele frequency >= 0.05; mean missingness 2.95%), collected between 2009 and 2021 and assigned to four zones. Pairwise Hudson FST was estimated as a ratio of averages with block-jackknife intervals (Hudson et al. 1992), alongside UMAP, t-SNE and PCoA ordination (McInnes et al. 2018), ADMIXTURE (Alexander et al. 2009), TreeMix (Pickrell and Pritchard 2012), a BayPass XtX scan (Gautier 2015) and Mantel tests of isolation by distance (Mantel 1967). Fifty-seven codons in nine resistance-associated genes were reconstructed from coding sequence; headline spatial results were repeated across six filtering scenarios.
+Results Differentiation among zones was very low but statistically detectable: the maximum pairwise Hudson FST was 0.00232 (95% CI 0.00128-0.00336, coastal versus Guinea savanna), and five of six intervals excluded zero. The maximum remained within 0.00204-0.00255 across the six scenarios (Additional file 1, Table S13). Ordination silhouette coefficients were negative for every method. Isolation by distance was not robust, reaching significance in only two of six scenarios and four of seven leave-one-region-out replicates. The XtX scan returned 19 outliers above a calibrated threshold of 10.840. The pfdhfr IRN triple haplotype stood at 0.771, the pfdhps G437 resistance residue at 0.897 and the pfcrt CVIET haplotype at 0.071, while pfaat1 S258L fell from 0.824 in coastal savanna to 0.544 in Guinea savanna, the steepest geographical cline in the panel. No WHO-screened pfk13 artemisinin resistance allele was observed: 22 of 23 screened codons were fixed at the reference residue and codon 458 stood at 0.9995 (WHO 2025).
+Conclusions Ghanaian P. falciparum shows very low, though statistically detectable, differentiation between agro-ecological zones at common variants, and the zones do not separate in ordination. Zone is very nearly a relabelling of administrative region, sequencing study and collection period, and Guinea savanna alone supplies 1,334 of 1,900 isolates (70.2%), so geographical and technical contributions cannot be separated; the panel is in any case restricted to variants common enough to clear a threshold dominated by that one zone. Zone is therefore not a usable stratum for spatial inference in these data. The resistance frequencies are historical, describing collections made between 2009 and 2021.
+Keywords
+Plasmodium falciparum; Ghana; Population differentiation; Antimalarial drug resistance; pfaat1; Genomic surveillance
+Background
+Malaria is endemic throughout Ghana, the entire population is at risk, and the disease remains a leading cause of outpatient attendance, paediatric admission and death [CITATION TO BE SUPPLIED: WHO World Malaria Report]. The national programme relies on artemisinin-based combination therapy for case management, sulfadoxine-pyrimethamine for intermittent preventive treatment in pregnancy, and sulfadoxine-pyrimethamine with amodiaquine for seasonal malaria chemoprevention in the north. Each regimen imposes a distinct selective pressure on Plasmodium falciparum, and each is delivered across a country whose transmission ecology is far from uniform.
+Ghana is divided into several agro-ecological zones, four of which are represented in this dataset; these are the zones that organise rainfall, vegetation and vector ecology in West Africa. From south to north these are the coastal savanna, the deciduous forest, the forest-savanna transitional zone and the Guinea savanna (Fig. 1). The coastal strip is comparatively dry; the forest belt receives bimodal rainfall and sustains intense perennial transmission; the transitional zone is a narrow band of mixed woodland; and the Guinea savanna of the north has a single wet season, so transmission there is high but sharply seasonal, which is why chemoprevention is targeted to it. This south-north gradient in seasonality, vector composition and mosquito survival is the natural axis along which Ghanaian parasite populations might be expected to differ, and it is also the axis along which control interventions and their selective pressures are unevenly distributed. The zones are not, however, independent of how Ghana is sampled: the finest spatial unit recorded in the release metadata is the administrative region, seven of which contribute Ghanaian isolates, and zones correspond approximately to groups of regions (Table 1). Zone is in consequence very nearly a relabelling of administrative region, sequencing study and collection period, with three of the four zones dominated by a single sequencing study, so every comparison drawn between zones is confounded by how the samples were gathered.
+Population structure matters for resistance surveillance because surveillance is almost always local while policy is national. A marker frequency is measured in isolates from a handful of sentinel sites and then used to describe the country. The estimate generalises only if parasites are exchanged freely enough between zones that allele frequencies are effectively shared. If, instead, zones are differentiated, a national frequency built from whichever zone happens to have been sequenced most heavily is biased, and a resistance allele rising in one ecological setting can be diluted to invisibility in a pooled national figure. The magnitude of structure therefore sets the spatial resolution at which surveillance has to be designed, and it needs to be quantified with interval estimates rather than asserted, because very low differentiation and no differentiation have different operational consequences. Quantification also requires care in interpretation: an FST value close to zero describes how little of the variance in allele frequencies is partitioned between zones at the variants examined, and it says nothing about variants excluded by the frequency threshold applied.
+What is known about West African P. falciparum structure provides the expectation against which Ghana must be assessed. Genome-wide analyses of parasites sampled across the continent resolve major sub-Saharan subpopulations, with West Africa forming a cluster distinct from Central, East and Southeast African parasites, and with relatively modest differentiation between countries inside the West African cluster (Amambua-Ngwa et al. 2019). Within West Africa, genome-wide scans have identified shared signals of recent selection, concentrated at drug-resistance loci and at antigen-encoding genes, indicating that selective pressures are regionally correlated even where neutral differentiation is slight (Mobegi et al. 2014). The variants used to monitor that pressure are catalogued and tiered by the World Health Organization, which classifies individual variants rather than genes and distinguishes validated from candidate markers (WHO 2025). The implication for a single country is that national structure is likely to be weak, and that weak structure is precisely the regime in which point estimates without uncertainty are least informative.
+The eighth release of the MalariaGEN P. falciparum dataset, Pf8, changes what can be attempted at national scale. It provides uniformly called and quality-controlled genotypes for 33,325 samples at 12,493,205 variants, together with published per-sample resistance genotypes and genotype-distance matrices (MalariaGEN 2025). Of these, 4,905 Ghanaian isolates pass release quality control and can be assigned to an agro-ecological zone, collected between 2009 and 2021 and distributed across all four zones; 1,900 of them enter the analysis set used here. Ghanaian isolates have contributed to continental analyses, but Ghana has not been treated as the unit of analysis in Pf8: zone-level differentiation has not been estimated with confidence intervals, the relationship between differentiation and geographic separation has not been tested with the available spatial resolution, and a codon-level resistance panel reconstructed directly from coding sequence, rather than from annotation strings, has not been reported for the country. Direct codon reconstruction matters because the resistance residue at some positions is the 3D7 reference residue, and because the current WHO compendium of molecular markers classifies variants rather than genes, so a gene-level summary cannot be mapped onto the validated, candidate and potential tiers (WHO 2025).
+This study addresses three questions. First, how differentiated are Ghana's agro-ecological zones at common variants, measured as pairwise Hudson FST with block-jackknife confidence intervals and examined alongside ordination of the published genotype distances (Fig. 2, Table 2)? Second, does differentiation scale with geographic distance between populations, and is any such relationship robust to the thresholds and spatial units used to define the analysis set (Table 4)? Third, what are the frequencies, in isolates collected between 2009 and 2021, of validated, candidate and potential resistance markers across the nine genes pfk13, pfdhfr, pfdhps, pfcrt, pfmdr1, pfmdr2, pfaat1, pfcoronin and pfap2mu, and do those frequencies vary between zones (Table 3)? A genome-wide scan for differentiation outliers is used to place the resistance loci in the context of the strongest zone-associated signals in the panel (Fig. 3).
+Methods
+Data source and sample selection
+Genotypes were taken from MalariaGEN Pf8 (MalariaGEN 2025), a release of 33,325 samples and 12,493,205 variants, accessed through the public Zarr store. Variants were admitted on ingest under the mask `FILTER_PASS & is_snp & numalt == 1`, and the GT, AD, DP and GQ fields were read at the retained sites, restricting the panel to biallelic SNPs that pass the release filter.
+Each Ghanaian isolate was assigned to an agro-ecological zone by a spatial join of its reported collection location to the Ghana agro-ecological zone layer (Fig. 1), giving four zones: coastal savanna, deciduous forest, transitional and Guinea savanna. In total 4,905 Ghanaian isolates passed Pf8 release QC and were assignable to a zone, with collection years spanning 2009-2021.
+Sample QC was applied as a cascade: within-host fixation index Fws >= 0.95, sample call rate >= 0.80, a heterozygosity outlier rule, and clonal pruning of near-identical genotypes. Mixed calls in the genome-wide matrix were resolved to the majority allele by read depth, giving one haploid allele per isolate.
+Variant and sample filtering were ordered in two passes so that variant missingness is computed on the samples actually retained. A provisional pass on the pre-cut sample set retained 1,634,808 variants; 117 high-missingness samples were then dropped; recomputing missingness on the 1,900 retained isolates gave 1,807,331 variants at 10% missingness or less, of which 3,916 reached minor allele frequency >= 0.05. The analysis set is therefore 1,900 isolates by 3,916 SNPs, with mean variant missingness 2.95%. Its composition is Guinea savanna 1,334, deciduous forest 337, coastal savanna 204 and transitional 25 isolates, set out with region, dominant sequencing study and collection years in Table 1.
+Because the Fws cut sets both the size and the zone composition of the isolate set, and the MAF cut sets the size of the SNP panel, the headline spatial results were recomputed under six threshold scenarios - the baseline, Fws >= 0.90, Fws >= 0.80, no Fws filter, MAF >= 0.01 and MAF >= 0.02 - loaded through one shared routine, so scenarios differ only in the thresholds (Table 4).
+Population structure
+Ordination used the published Pf8 genotype-distance submatrix restricted to the 1,900 analysis isolates, so all three embeddings act on identical input distances. Three two-dimensional embeddings were computed and coloured by zone: UMAP (McInnes et al. 2018), t-SNE and PCoA (Fig. 2). They were compared on trustworthiness, which penalises false near neighbours in the embedding; the Spearman correlation between original and embedded pairwise distances, which measures global rather than local preservation; and the silhouette coefficient with zone as the label, computed on the original distances as well to give a reference value independent of any embedding.
+Pairwise differentiation between zones was estimated with the Hudson FST estimator (Hudson et al. 1992), formed as a ratio of averages across SNPs rather than as an average of per-SNP ratios. Confidence intervals at 95% came from a block jackknife over contiguous blocks of SNPs (Table 2).
+Ancestry proportions were estimated with ADMIXTURE 1.3 (Alexander et al. 2009) for K = 1-8 with 10-fold cross-validation, on 3,385 LD-pruned SNPs obtained from the analysis set with PLINK. Cross-validation error was compared across K, and the minor-component proportion at the selected K was compared across zones with a Kruskal-Wallis test and an eta-squared effect size.
+Isolation by distance
+Isolation by distance was tested with the Mantel test (Mantel 1967), correlating linearised differentiation, FST/(1 − FST), with the logarithm of great-circle distance between population centroids. Tests were run at two spatial levels: four zone populations giving six pairs, and seven administrative regions, the finest spatial unit in the release metadata, giving 21 pairs. Each used 9,999 permutations of population labels, a one-sided alternative of positive association, and random seed 42.
+At region level, three of the 21 pairs returned a negative point estimate of FST, and these were floored to zero for the primary test. Because flooring compresses exactly the pairs closest to zero, the test was also run on uncensored estimates and both are reported. No flooring was needed at zone level. Dependence on individual populations was assessed by a leave-one-population-out jackknife, dropping each region in turn and recomputing the test on the remaining six.
+Population graph
+Relationships among the four zone populations were summarised with TreeMix (Pickrell and Pritchard 2012), fitted with 0 to 5 migration edges and with standard errors estimated by jackknife using the `-se` option. Variance explained was recorded at each edge count, with the weight, standard error and p-value of each edge.
+Four populations cannot identify more than about two edges: the covariance matrix has few independent entries while free parameters grow with each edge, so additional edges absorb noise. The reported edge count is accordingly a model choice, not an estimate of the number of historical admixture events, and the two selection criteria disagree: taking the smallest graph explaining 0.998 of the variance selects three edges over the full 0-5 sweep, whereas two edges follow only after the sweep is capped at two on identifiability grounds.
+Genome scan
+Candidate loci under spatially varying selection were identified with the core model of BayPass 2.4 (Gautier 2015), run on the 1,900 by 3,916 matrix with isolates grouped by zone, yielding an XtX differentiation statistic per SNP (Fig. 3). The threshold was calibrated against 100,000 pseudo-observed SNPs simulated under the population covariance matrix estimated from the real data, and set at the 0.999 quantile of their XtX distribution, 10.840. The pseudo-observed set is not MAF-matched to the observed panel: the simulation truncates the simulated ancestral allele frequency and does not reimpose the observed minor allele frequency filter, so the calibration distribution is not frequency-matched to the data it calibrates.
+Nineteen SNPs exceeded 10.840. Under the assumed null the expected number exceeding a 0.999 quantile in a panel of this size is 3.916, and the ratio 3.916/19 is reported as an expected-null-exceedance ratio rather than as a measured false-discovery rate. Benjamini-Hochberg q-values (Benjamini and Hochberg 1995) were computed from the XtX p-values as a second, multiplicity-aware ranking. Outlier positions were intersected with the PlasmoDB-71 annotation using bedtools, and SNPs carrying ExcessHet or InbreedingCoeff anomalies were flagged as lower confidence.
+Resistance-marker panel
+A panel of 57 codons across nine genes - pfk13, pfcrt, pfdhfr, pfdhps, pfmdr1, pfmdr2, pfaat1, pfcoronin and pfap2mu - was genotyped directly. Marker tiers follow the WHO compendium of molecular markers v1.0 of December 2025 (WHO 2025), which classifies variants rather than genes and contains no validated or candidate lumefantrine marker.
+Each codon was reconstructed rather than read from a variant annotation string: the three coding positions were located in the 3D7 reference CDS, each reference base was substituted with the isolate's called allele wherever a variant record exists there, and the codon was translated. Reconstruction is necessary because two classes of marker are invisible to string matching - a resistance residue that is itself the reference residue, as at pfdhps 437, where glycine is the 3D7 residue and no record names a G437 mutation, and a residue needing two base changes within one codon, as at pfcrt N75E, which no single-variant annotation names.
+A mixed call at any of a codon's three positions made that codon uncalled for that isolate, so every denominator is the number of isolates called at that codon. Callability is uneven: of the 171 panel positions, 46 carry no variant record, so the reference base is read there for every isolate irrespective of coverage, and 21 codons have a record at all three positions, 26 at two and 10 at one.
+Residue frequencies were computed overall and by zone as the proportion of called isolates carrying the resistance-associated residue, with 95% Wilson intervals, which behave correctly at the near-fixed and near-absent frequencies dominating this panel (Table 3). Heterogeneity across zones was tested per residue with a four-zone Pearson chi-square test. For rare residues several expected cell counts fall below five, so those particular tests are asymptotically unreliable and are reported as exploratory; no correction was applied across the many residues tested, so individual p-values near 0.05 should be read as nominal. Panel genotypes were checked against MalariaGEN's published per-sample calls, which cover 25 of the 57 panel codons; 47,012 of 47,012 overlapping calls agreed. The other 32 codons, every pfk13 codon among them, have no external per-sample check.
+Software
+Pf8 was read from the public Zarr store with zarr and scikit-allel. PLINK 1.9 and 2.0 handled format conversion and LD pruning, ADMIXTURE 1.3 ancestry estimation, TreeMix with `-se` the population graph, BayPass 2.4 the XtX scan, and bedtools intersection against the PlasmoDB-71 annotation. NumPy, SciPy, pandas, scikit-learn and matplotlib were used for the remaining computation and the figures.
+Full methods detail, the complete set of results, every robustness check that was run, the limitations register and a record of the defects found and corrected during the analysis are given in Additional file 1, where all display items are numbered Figure S1–S22 and Table S1–S44.
+Results
+The analysis set
+Of the 33,325 samples and 12,493,205 variants in MalariaGEN Pf8, 4,905 Ghanaian isolates passed release QC and could be assigned to an agro-ecological zone (MalariaGEN 2025). Sample filtering on Fws >= 0.95, a call rate of at least 0.80, a heterozygosity outlier rule and clonal pruning was applied, and variant missingness was then recomputed on the retained samples in a second pass: 1,634,808 variants passed provisionally, 117 high-missingness samples were dropped, 1,807,331 variants stood at 10% missingness or less on the 1,900 isolates retained, and 3,916 of these reached a minor allele frequency of 0.05 or more. The analysis set is therefore 1,900 isolates genotyped at 3,916 SNPs, with mean variant missingness of 2.95%, assembled from collections spanning 2009-2021 (Table 1, Fig. 1).
+
+Fig. 1 Sampling locations on the Ghana agro-ecological zone layer. Each point is one administrative-region centroid; colour gives the agro-ecological zone to which isolates from that region were assigned.
+Table 1 Composition of the analysis set, with the sequencing study, administrative region and collection period that accompany each agro-ecological zone. Zone is very nearly a relabelling of region and study: three of the four zones draw on a single administrative region, and one on a single study. The final column is measured on the pre-filter quality-control cohort of 4,905 isolates, not on the analysis set: every analysed isolate satisfies Fws ≥ 0.95 by construction, so its polyclonal fraction is zero. QC-cohort denominators are given in the column.
+Agro-ecological zone
+Isolates
+Administrative region(s)
+No. studies
+Dominant study (share)
+Collection years
+Polyclonal fraction (QC cohort)
+Guinea savanna
+1,334
+Upper East (1,334)
+6
+1168-PF-GH-AMENGA-ETEGO-SM (74%)
+2009–2019
+0.597 (n = 3,605)
+Deciduous forest
+337
+Ashanti (157), Central (125), Eastern (34), Volta (21)
+5
+1200-PF-GH-MAIGA-SM (47%)
+2013–2021
+0.539 (n = 815)
+Coastal savanna
+204
+Greater Accra (204)
+2
+1241-PF-GH-ANINAGYEI (87%)
+2016–2018
+0.444 (n = 435)
+Transitional zone
+25
+Brong Ahafo (25)
+1
+1083-PF-GH-CONWAY (100%)
+2011–2013
+0.500 (n = 50)
+
+Zone sizes are strongly unequal. Guinea savanna contributes 1,334 isolates, deciduous forest 337, coastal savanna 204 and the transitional zone 25. Zone is also very nearly a relabelling of administrative region, sequencing study and collection period: three of the four zones are dominated by a single study, and Guinea savanna, which here is effectively Upper East region, supplies 1,334 of 1,900 isolates (70.2%). Seven administrative regions are the finest spatial unit available in the release metadata. Because study membership varies together with collection year, finer geography, recruitment and host biology, holding zone constant does not isolate a technical cause; the comparisons below can demonstrate study-associated heterogeneity but not a sequencing artefact.
+The pooled minor allele frequency cut imposes an ascertainment floor set by the largest zone. At 10% variant missingness or less, a retained site carries at least 1,710 called haploid alleles. A variant private to the 25 transitional isolates therefore cannot exceed 25/1,710 = 1.46%, and a variant carried at 40% frequency within coastal savanna reaches only 82/1,710 = 4.80%. Both fall below the 5% cut, so the panel consists of variants common enough to clear a threshold dominated by one zone. No neutral mask was defined, and "neutral" here means genome-wide at the retained common variants rather than at sites shown to be free of selection.
+Zones do not separate in ordination
+Three ordinations of the published Pf8 genotype-distance submatrix for the 1,900 isolates were compared (Fig. 2). UMAP achieved a trustworthiness of 0.486 and a Spearman correlation of 0.029 between embedded and original distances (McInnes et al. 2018); t-SNE reached 0.507 and 0.115; PCoA reached 0.495 and 0.322. PCoA preserves global distance structure best, while all three embeddings discard most of it. Silhouette coefficients computed by zone are negative in every case: -0.0156 on the original distances, -0.306 for UMAP, -0.057 for t-SNE and -0.112 for PCoA. Isolates are on average closer to members of other zones than to members of their own, in the original distance space as well as in each embedding. Zone-coloured isolates overlap extensively in Fig. 2, and no method recovers zone as a cluster boundary.
+
+Fig. 2 UMAP, t-SNE and PCoA of the 1,900-isolate genotype-distance submatrix, coloured by agro-ecological zone. No zone forms a distinct cluster under any of the three methods; all silhouette coefficients are negative.
+Differentiation between zones is very low but detectable
+Pairwise Hudson FST (Hudson et al. 1992), computed as a ratio of averages with block-jackknife confidence intervals, is very low throughout (Table 2). The largest value is 0.00232 between coastal savanna and Guinea savanna (95% CI 0.00128-0.00336). Coastal savanna versus transitional and deciduous forest versus transitional both give 0.00158 (CIs 0.00006-0.00309 and 0.00017-0.00298), deciduous forest versus Guinea savanna gives 0.00134 (0.00088-0.00180), and coastal savanna versus deciduous forest gives 0.00045 (0.00019-0.00070). Five of the six confidence intervals exclude zero. The single exception is Guinea savanna versus the transitional zone, at 0.00047 with a confidence interval of -0.00083 to 0.00178; that comparison rests on the transitional sample of n = 25. Differentiation between zones is therefore very low, yet statistically detectable at this sample size for almost every pair.
+Table 2 Pairwise Hudson FST between agro-ecological zones on 3,916 SNPs and 1,900 isolates, with block-jackknife 95% confidence intervals. Five of the six intervals exclude zero.
+Zone pair
+n
+n
+FST
+95% CI
+Excludes zero
+Coastal savanna × Guinea savanna
+204
+1,334
+0.00232
+0.00128 – 0.00336
+Yes
+Coastal savanna × Transitional zone
+204
+25
+0.00158
+0.00006 – 0.00309
+Yes
+Deciduous forest × Transitional zone
+337
+25
+0.00158
+0.00017 – 0.00298
+Yes
+Deciduous forest × Guinea savanna
+337
+1,334
+0.00134
+0.00088 – 0.00180
+Yes
+Guinea savanna × Transitional zone
+1,334
+25
+0.00047
+−0.00083 – 0.00178
+No
+Coastal savanna × Deciduous forest
+204
+337
+0.00045
+0.00019 – 0.00070
+Yes
+
+The magnitude is stable across the filtering thresholds examined. Across six scenarios built on one shared genotype load - the baseline, Fws >= 0.90, Fws >= 0.80, no Fws filter, MAF >= 0.01 and MAF >= 0.02, spanning 1,900 to 4,403 isolates and 3,275 to 10,876 SNPs - the maximum pairwise FST stays between 0.00204 and 0.00255 (Table 4).
+Table 4 Threshold sensitivity of the two headline spatial results. The maximum pairwise FST is stable across all six scenarios; the distance effect clears p = 0.05 in only two of them.
+Scenario
+Isolates
+SNPs
+Max FST
+Mantel r
+Mantel p
+p < 0.05
+Baseline (Fws ≥ 0.95, MAF ≥ 0.05)
+1,900
+3,916
+0.00232
+0.427
+0.0252
+Yes
+Fws ≥ 0.90
+2,196
+3,629
+0.00240
+0.318
+0.0874
+No
+Fws ≥ 0.80
+2,746
+3,496
+0.00255
+0.256
+0.1687
+No
+No Fws filter
+4,403
+3,275
+0.00254
+0.245
+0.1792
+No
+MAF ≥ 0.01
+1,900
+10,876
+0.00204
+0.432
+0.0617
+No
+MAF ≥ 0.02
+1,900
+6,852
+0.00217
+0.434
+0.0467
+Yes
+
+Ancestry inference
+ADMIXTURE was run on 3,385 LD-pruned SNPs with 10-fold cross-validation (Alexander et al. 2009). The cross-validation curve is nearly flat: error falls from 0.84384 at K = 1 to a minimum of 0.83925 at K = 2, rises to 0.83953 at K = 3, and continues to 0.84488 at K = 8, a total range across K = 1 to 8 of 0.0056. The K = 2 minimum is shallow, and the data give little support for any particular number of ancestral components.
+At K = 2 the minor component differs between zones - 0.092 in deciduous forest, 0.085 in coastal savanna, 0.053 in Guinea savanna and 0.042 in the transitional zone (Kruskal-Wallis H = 105.4, p = 1.05 x 10^-22) - but zone explains only 1.9% of its variance (eta-squared = 0.019). The difference is highly significant and quantitatively slight.
+Isolation by distance is not robust
+At the region level, with seven populations, 21 pairs and 9,999 permutations of a one-sided Mantel test (Mantel 1967), the correlation between FST and geographic distance is r = 0.4269 with p = 0.0252. Three of the 21 pairwise FST values were negative and were floored to zero before testing; without that censoring the same test gives r = 0.4138 and p = 0.0413. At the zone level, with four populations and six pairs and no flooring, the test is not significant: r = 0.4709, p = 0.1218.
+The region-level signal is not stable. Mantel significance is reached in only 2 of the 6 threshold scenarios (Table 4). Leave-one-region-out replication is significant in 4 of 7 replicates - dropping Volta p = 0.0097, Ashanti 0.014, Brong Ahafo 0.0398 and Central 0.0427 - and not significant on dropping Eastern (0.1355), Upper East (0.218) or Greater Accra (0.2324). Isolation by distance is not robust in these data and is not reported here as a supported result.
+Population graph
+TreeMix was fitted to the four zones with jackknife standard errors (Pickrell and Pritchard 2012). Variance explained rises from 0.8970 at m = 0 to 0.9405 at m = 1 and 0.9969 at m = 2, then changes little across m = 3 to 5 (0.99966, 0.99958, 0.99959). The two-edge graph is presented as a selected descriptive model of the observed covariance structure, not as a count of historical migration events. Its two edges have weights 0.152 (SE 0.048, p = 7.5 x 10^-4) and 0.805 (SE 0.100, p = 3.3 x 10^-16). The third edge added at m = 3 has weight 0.065 (SE 0.147, p = 0.33) and is indistinguishable from zero.
+The two selection criteria disagree. Applied across the full m = 0 to 5 sweep, the 0.998 variance rule picks m = 3; m = 2 follows only after the range is capped at two edges on identifiability grounds. Four populations cannot identify more than about two edges, and that limitation applies to the data available here.
+Genome scan for differentiation outliers
+The genome scan was run on the 3,916-SNP matrix with the four agro-ecological zones as populations. XtX differentiation statistics were calibrated against 100,000 pseudo-observed SNPs, which placed the 0.999 quantile at 10.840 (Gautier 2015). Nineteen of the 3,916 SNPs in the matrix exceeded that threshold, 0.49% of the panel (Fig. 3). The pseudo-observed set is not matched to the observed minor-allele-frequency spectrum: the simulation truncates the simulated ancestral frequency and does not reapply the MAF filter used to assemble the analysis matrix, so the threshold is not calibrated against the frequency spectrum of the matrix that was scanned.
+
+Fig. 3 BayPass XtX genome scan on the 3,916-SNP matrix. Left: the observed XtX distribution against the pseudo-observed neutral distribution, with the calibrated 0.999-quantile threshold at 10.840. Right: XtX along the genome.
+Under the assumed null, 3.916 SNPs are expected above the 0.999 quantile. The ratio of that expectation to the observed count, 3.916/19 = 20.6%, is an expected-null exceedance ratio: it states how much of the outlier tail the calibration model would itself generate, and it is not a measured false-discovery rate. Benjamini-Hochberg q-values computed on the same statistics (Benjamini and Hochberg 1995) retained eight SNPs at q <= 0.01, ten at q <= 0.05, 13 at q <= 0.10 and 17 at q <= 0.20. Thirteen of the 19 outliers therefore have Benjamini-Hochberg q-values at or below 0.10 against the pseudo-observed null, conditional on that null being adequately calibrated.
+Ranked by the maximum XtX attained within each gene, the leading signals were PTP7 (PF3D7_0301700, XtX = 26.44), AAT1 (PF3D7_0629500, 24.20), FIKK4.2 (PF3D7_0424700, 22.02), ACS8 (PF3D7_0215300, 22.00), NT2 (PF3D7_0824400, 20.46), PIESP2 (PF3D7_0501200, 18.50) and SNRPF (PF3D7_1126900, 13.98). Two of the 19 outliers are adjacent sites on chromosome 11, at Pf3D7_11_v3:1,054,078 and 1,054,447, 369 bp apart, and both carry low InbreedingCoeff values in the release annotation (0.147 and 0.193, the 8th and 13th percentiles of the panel); the first also carries the only non-zero ExcessHet value among all 3,916 SNPs (69.59), while ExcessHet is zero at the second. They are flagged as lower confidence and are not interpreted as differentiation signals here.
+Antifolate markers
+All three components of the antifolate triple were common in pfdhfr: N51I at 0.786 (n = 1,891), C59R at 0.886 (n = 1,888) and S108N at 0.908 (n = 1,889), each varying in frequency among zones (p = 2.43 x 10^-4, 4.80 x 10^-5 and 9.40 x 10^-7, respectively). I164L was absent, codon 164 being fixed at the reference Ile. Read as a haplotype on complete cases, the IRN triple stood at 0.771 (n = 1,876; 95% CI 0.751-0.789). Zone estimates were 0.880 in the transitional zone (n = 25), 0.867 in coastal savanna (n = 203), 0.788 in deciduous forest (n = 330) and 0.750 in Guinea savanna (n = 1,318). The IRNL quadruple, which adds I164L, occurred in 0 of 1,874 complete cases.
+In pfdhps, the resistance-associated residue at codon 437 is glycine, and glycine is also the 3D7 reference residue at that position. G437 stood at 0.897 (n = 1,892; p = 1.17 x 10^-6 among zones), highest in deciduous forest (0.964) and coastal savanna (0.941) and lower in Guinea savanna (0.875) and the transitional zone (0.800). Because the resistance residue is the reference residue, the site generates no variant call against 3D7, and matching on annotation strings does not recover it; reconstructing the codon from the coding sequence does. S436A was at 0.541 and A613S at 0.108, while K540E (0.0095) and A581G (0.0138) were rare. The A437G+K540E double haplotype was at 0.0095, matching the frequency of K540E alone. Marker frequencies overall and by zone are given in Table 3.
+Table 3 Resistance-marker frequencies overall and by agro-ecological zone. Denominators are isolates called at that codon or, for haplotypes, isolates called at every constituent codon. The chi-square column tests heterogeneity across the four zones.
+Marker
+Overall
+n
+Coastal savanna
+Deciduous forest
+Guinea savanna
+Transitional
+χ² p
+pfdhfr N51I
+0.786
+1,891
+—
+—
+—
+—
+2.43 × 10⁻⁴
+pfdhfr C59R
+0.886
+1,888
+—
+—
+—
+—
+4.80 × 10⁻⁵
+pfdhfr S108N
+0.908
+1,889
+—
+—
+—
+—
+9.40 × 10⁻⁷
+pfdhfr I164L
+0.000
+1,898
+—
+—
+—
+—
+—
+pfdhfr IRN triple
+0.771
+1,876
+0.867
+0.788
+0.750
+0.880
+—
+pfdhfr IRNL quadruple
+0.000
+1,874
+0.000
+0.000
+0.000
+0.000
+—
+pfdhps G437
+0.897
+1,892
+0.941
+0.964
+0.875
+0.800
+1.17 × 10⁻⁶
+pfdhps S436A
+0.541
+1,884
+—
+—
+—
+—
+1.61 × 10⁻³
+pfdhps K540E
+0.0095
+1,895
+—
+—
+—
+—
+0.661
+pfdhps A581G
+0.0138
+1,890
+—
+—
+—
+—
+8.02 × 10⁻⁴
+pfdhps A613S
+0.108
+1,884
+—
+—
+—
+—
+0.113
+pfdhps GE double
+0.0095
+1,888
+0.005
+0.006
+0.011
+0.000
+—
+pfcrt K76T
+0.071
+1,874
+—
+—
+—
+—
+0.037
+pfcrt CVIET haplotype
+0.071
+1,873
+0.054
+0.104
+0.064
+0.125
+—
+pfmdr1 N86Y
+0.088
+1,887
+—
+—
+—
+—
+0.029
+pfmdr1 Y184F
+0.677
+1,858
+—
+—
+—
+—
+0.364
+pfmdr1 D1246Y
+0.011
+1,866
+—
+—
+—
+—
+0.262
+pfmdr2 I492V
+0.549
+1,885
+—
+—
+—
+—
+0.020
+pfaat1 S258L
+0.609
+1,896
+0.824
+—
+0.544
+—
+1.89 × 10⁻¹⁸
+pfk13 (23 codons)
+0.000
+1,845–1,876
+0.000
+0.000
+0.000
+0.000
+—
+
+Chloroquine-era markers
+pfcrt was scored as a single unit across the codon 72-76 core rather than variant by variant. Only two haplotypes occurred: CVMNK at 0.929 and CVIET at 0.071 (n = 1,873). K76T, the diagnostic substitution carried by CVIET, was at 0.071 on its own denominator (n = 1,874), and CVIET ran from 0.125 in the transitional zone and 0.104 in deciduous forest to 0.064 in Guinea savanna and 0.054 in coastal savanna. Position 75 shows why the unit matters: Asn75Glu requires two base changes within a single codon, so no single-variant annotation names it, whereas reading the core as a haplotype resolves it. In pfmdr1, Y184F was the common variant at 0.677 (n = 1,858), N86Y was at 0.088 (n = 1,887; p = 0.029 among zones) and D1246Y was at 0.011. pfmdr2 I492V was at 0.549 (n = 1,885).
+A geographic cline at pfaat1
+pfaat1 S258L was at 0.609 overall (n = 1,896; p = 1.89 x 10^-18 among zones) and ran from 0.824 in coastal savanna to 0.544 in Guinea savanna. This is the steepest geographic cline in the marker panel. The same locus is the second-ranked gene in the XtX scan, AAT1 (PF3D7_0629500) reaching 24.20, so a candidate-marker frequency gradient and a genome-wide differentiation scan conducted on separate matrices converge on one gene. F313S was absent: codon 313 was fixed at the reference Phe in all 1,900 isolates.
+No artemisinin resistance marker was observed
+Twenty-three pfk13 codons were screened, a set covering all 14 WHO-validated and all six candidate artemisinin partial-resistance variants, which together occupy 19 distinct codons, plus four codons of potential-tier variants (WHO 2025). Twenty-two of the 23 codons were fixed at the reference residue. The exception was codon 458, at 0.9995: one isolate of the 1,866 called there carried Asn458Asp, which is not the validated allele at that codon, WHO validating Asn458Tyr. Per-codon denominators ranged from 1,845 to 1,876. No WHO-screened artemisinin resistance allele was observed in the analysis set. Those denominators make this a screening result rather than a gap in the panel, subject to one callability qualification: of the 171 panel positions, 46 carry no variant record, so the reference base is read there for every isolate regardless of coverage, and no per-isolate depth field is consulted. The result is also historical, describing Ghanaian isolates collected between 2009 and 2021.
+Within-host complexity
+Within-host complexity was summarised on the 4,905-isolate QC set, using the same Fws cut that defines the analysis set. The fraction of infections classified as polyclonal (Fws < 0.95) was 0.5972 in Guinea savanna, 0.5387 in deciduous forest, 0.5000 in the transitional zone and 0.4437 in coastal savanna. The ordering is not monotone with latitude: the transitional zone, which lies between the deciduous forest and Guinea savanna zones, falls below both.
+Validation
+The reconstructed genotypes were compared against MalariaGEN's published per-sample resistance genotypes (MalariaGEN 2025). All 47,012 of 47,012 comparable calls agreed. That comparison covers 25 of the 57 panel codons, namely those for which MalariaGEN publishes a per-sample genotype; the remaining 32 have no external per-sample check. Every pfk13 codon falls in the unchecked set, so the artemisinin result rests on the codon reconstruction itself and on its concordance at the other genes, not on a direct external comparison at pfk13.
+Discussion
+Interpreting very low differentiation
+The largest pairwise Hudson FST among Ghana's agro-ecological zones was 0.00232, between coastal savanna and Guinea savanna, with a block-jackknife 95% confidence interval of 0.00128 to 0.00336 (Table 2; Hudson et al. 1992). This number carries a narrow meaning: it measures differentiation among the four sampled groups at the 3,916 common variants retained after filtering, as a ratio of averages over those variants. Five of the six intervals exclude zero, so the differentiation is very low and nevertheless statistically detectable; only the Guinea savanna to transitional comparison (0.00047, interval -0.00083 to 0.00178), which involves the 25-isolate transitional zone, spans zero.
+Three things follow less readily than is often assumed. First, a very low FST is not evidence of random mating: low among-group variance in allele frequencies is compatible with a wide range of demographic histories, and the mating system is not identified by it. Second, the estimate is not an upper bound on true differentiation. The confidence intervals quantify sampling error around the estimate for this panel in these groups; they say nothing about the distance between that estimate and whatever structure exists at variants the analysis never saw. Third, the result is silent about the variants the minor-allele-frequency filter removed. A MAF >= 0.05 threshold applied to the pooled sample discards exactly the rare and geographically restricted alleles that carry recent and local structure, so the panel reports on common variation and only on common variation.
+The three structure analyses do not independently confirm one another. The ordinations (Fig. 2; McInnes et al. 2018), the pairwise FST estimates (Table 2) and the ADMIXTURE decomposition (Alexander et al. 2009) are different projections of the same 1,900 isolates: the ordinations of the published Pf8 genotype-distance submatrix, the FST estimates of the 3,916 retained common variants, and the decomposition of 3,385 LD-pruned SNPs. All three point the same way: every silhouette coefficient by zone is negative (UMAP -0.306, t-SNE -0.057, PCoA -0.112, original distances -0.0156), the cross-validation curve across K = 1 to 8 spans only 0.0056 with a shallow minimum at K = 2, and the K = 2 minor component explains eta-squared = 0.019, or 1.9% of variance, among zones. That concordance is coherence within one dataset, not replication across datasets.
+Why the spatial signal does not survive
+At the published thresholds, the Mantel test on regional FST against geographic distance returned r = 0.427, p = 0.0252 over 21 pairs from seven administrative regions (Mantel 1967). The correlation does not hold away from those thresholds. Across the six sensitivity scenarios sharing one genotype load (Table 4), it is significant in two of six: the baseline and MAF >= 0.02 (r = 0.434, p = 0.0467). Relaxing the within-host complexity filter to Fws >= 0.90 gives p = 0.0874, Fws >= 0.80 gives p = 0.1687, and removing the filter altogether gives p = 0.1792; MAF >= 0.01 gives p = 0.0617. The maximum FST is stable at 0.00204 to 0.00255 across all six, so the instability is specific to the distance correlation, not to the differentiation estimate underlying it. Aggregating to zones rather than regions also removes significance (r = 0.4709, p = 0.1218).
+The correlation is equally sensitive to which regions are included. Leaving out one region at a time, it remains significant in four of seven analyses and fails in three: dropping Eastern (p = 0.1355), Upper East (p = 0.218) or Greater Accra (p = 0.2324) is enough to remove it. Seven regional centroids are a weak design for a distance gradient in any case. A centroid is a coarse stand-in for the locations of isolates collected across a whole administrative region, and the 21 pairwise distances derived from seven points are strongly non-independent. Isolation by distance is therefore not reported here as a supported result.
+Resistance markers vary geographically where neutral structure does not
+The two findings sit in tension only if neutral differentiation is taken as a proxy for the spatial behaviour of every locus. It is not. Marker frequencies do differ among zones: pfaat1 S258L stands at 0.609 overall (n = 1,896, p = 1.89 x 10^-18), and pfdhps G437 at 0.897 overall (n = 1,892, p = 1.17 x 10^-6), ranging from 0.964 in deciduous forest to 0.800 in the transitional zone (Table 3). Genome-wide FST averages drift and gene flow over thousands of retained variants; selection acts on single loci, and the pressures that drive resistance markers — treatment policy, drug deployment history, treatment-seeking behaviour, transmission intensity — vary at sub-national scale. A locus under local selection can therefore move much further and much faster than the genome-wide average, and a very low genome-wide estimate places no constraint on how far apart marker frequencies can be.
+The surveillance implication must be drawn carefully. A very low neutral FST licenses a claim only about the magnitude of neutral structure: at the retained common variants, among-zone differentiation is very low, though five of the six intervals exclude zero. It does not license treating any single zone's marker frequency as a national estimate, nor does it justify sparse geographic sampling for resistance surveillance. A further caution applies to the zone contrasts themselves: because zone, administrative region, sequencing study and collection period vary together (Table 1), a significant difference among zones in marker frequency is also a difference among studies and years.
+The pfaat1 cline
+S258L shows the steepest geographic gradient in the panel, running from 0.824 in coastal savanna to 0.544 in Guinea savanna (Table 3), and pfaat1 (PF3D7_0629500) was the second-ranked outlier gene in the BayPass XtX scan, with a maximum XtX of 24.20 against a calibrated 0.999-quantile threshold of 10.840 (Fig. 3; Gautier 2015). Of the 19 outliers, 13 fall at q <= 0.10 under Benjamini-Hochberg correction (Benjamini and Hochberg 1995).
+The functional literature on this substitution is more specific than the cline alone would suggest. Amambua-Ngwa et al. (2023) reported an effect of S258L that was real but modest, dependent on epistasis and on genetic background, and directional in one place: they found that it potentiates chloroquine resistance. Amodiaquine, lumefantrine, mefloquine and quinine were all measured in that work and the shifts reported were sub-threshold; the authors concluded that chloroquine was the primary selective force acting on the locus.
+A contemporary drug explanation for the Ghanaian cline is therefore a hypothesis to be tested, not an inference that follows from an outlier statistic, and several alternatives have to be excluded first. The zones differ in dominant sequencing study and in collection years, so the cline is confounded with study and with period; the gradient may record historical rather than current chloroquine exposure; the administrative region is the finest spatial unit available, so the apparent zone gradient may track where sampling happened rather than ecology; and the codon may be a passenger on linked selected variation rather than the target. An XtX value above the threshold identifies a locus whose frequencies differ among populations by more than the calibrated null permits; it does not name the selective agent, and the pseudo-observed set used for calibration is not matched on minor allele frequency to the observed panel.
+The artemisinin negative
+Twenty-three pfk13 codons were screened, covering all 14 WHO-validated and all 6 candidate variants, which occupy 19 distinct codons, together with 4 potential-tier codons (WHO 2025). Twenty-two of the 23 are fixed at the reference residue, and codon 458 stands at 0.9995: one isolate of 1,866 carries Asn458Asp, which is not the validated allele at that codon, since WHO validates N458Y. No WHO-screened artemisinin resistance allele was observed, with per-codon denominators of 1,845 to 1,876.
+This is a tested negative rather than an untested absence: the codons were reconstructed from coding sequence and read out across isolates collected between 2009 and 2021. Two limits bound what it is worth. It is fixation among called genotypes, not among sequenced parasites; where a panel position carries no variant record the reference base is read for every isolate regardless of coverage, so the negative rests on a callability assumption, and no pfk13 codon has an external per-sample check. And it says nothing about the present. Collection ended in 2021, and the pace at which validated alleles have risen elsewhere in Africa means a negative from that period is a historical baseline for comparison with current genotyping, not current reassurance.
+Limitations
+Zone is close to a relabelling of administrative region, sequencing study and collection period. Three of the four zones are dominated by a single study, and Guinea savanna, almost entirely Upper East, supplies 1,334 of 1,900 isolates (70.2%). Holding zone constant does not isolate a technical cause, because study varies together with collection year, finer geography, recruitment and host biology; the within-zone tests therefore demonstrate study-associated heterogeneity, not a demonstrated sequencing artefact.
+The pooled minor-allele-frequency filter imposes an ascertainment floor. With variant missingness capped at 10%, a retained site has at least 1,710 called haploid alleles, so a variant private to the 25 transitional isolates cannot exceed 25/1,710 = 1.46%, and a variant at 40% frequency in coastal savanna reaches only 82/1,710 = 4.80%. Both fall below the 5% cut. The analysed panel is thus variants common enough to clear a threshold set largely by one zone.
+The Fws >= 0.95 filter selects infections of low within-host complexity and so changes the target population. It does not act evenly across zones: the polyclonal fraction in the QC set was 0.4437 in coastal savanna, 0.5387 in deciduous forest, 0.5972 in Guinea savanna and 0.5000 in the transitional zone, and is not monotone with latitude.
+No neutral mask was defined. Throughout, "neutral" means genome-wide at the retained common variants, not at sites shown to be free of selection.
+The marker panel depends on a callability assumption. Of the 171 panel positions, 46 carry no variant record, so the reference base is read there for every isolate irrespective of coverage; per codon, 21 have a record at all three positions, 26 at two and 10 at only one, and no per-isolate depth field is consulted. Related to this, 32 of the 57 panel codons, every pfk13 codon among them, have no external per-sample check; for the 25 codons where MalariaGEN publishes per-sample genotypes, all 47,012 of 47,012 calls agree (MalariaGEN 2025), but that concordance does not extend to the remainder.
+Finally, the transitional zone contributes 25 isolates. It accounts for the one FST interval spanning zero and the widest intervals in Table 2, and its marker frequencies in Table 3 rest on at most 25 calls.
+Conclusions
+Among 1,900 Ghanaian P. falciparum isolates genotyped at 3,916 common SNPs, differentiation between agro-ecological zones is very low but statistically detectable: pairwise Hudson FST reaches 0.00232, and five of six block-jackknife confidence intervals exclude zero, the exception being the Guinea savanna-transitional pair, which rests on 25 isolates (Table 2). Maximum FST remained within 0.00204-0.00255 across six combinations of within-host complexity and minor allele frequency thresholds (Table 4), so the signal is a property of the retained common variants rather than of one threshold choice. Ordination recovered no zone structure, every silhouette coefficient being negative (Fig. 2).
+A spatial gradient was not supported. The Mantel correlation between genetic and geographic distance was significant in only two of six threshold scenarios, and omitting single regions left it significant in four of seven; isolation by distance is therefore not reported here as a result.
+Resistance-marker frequencies, by contrast, vary geographically. pfaat1 S258L runs from 0.824 in coastal savanna to 0.544 in Guinea savanna, and the pfdhfr IRN triple haplotype stands at 0.880 in the 25-isolate transitional zone and 0.867 in coastal savanna against 0.750 in Guinea savanna (Table 3). Across 23 pfk13 codons covering every WHO-validated and candidate variant, twenty-two are fixed at the reference residue and codon 458 stands at 0.9995; no WHO-screened artemisinin resistance allele was observed in material collected between 2009 and 2021.
+For surveillance, these data support treating marker frequencies, rather than population structure, as the subnationally informative quantity, within the limits of a panel in which Guinea savanna supplies 1,334 of 1,900 isolates and zone is very nearly a relabelling of administrative region, sequencing study and collection period.
+Declarations
+Ethics approval and consent to participate This work is a secondary analysis of a published open-access dataset (MalariaGEN 2025) and involved no new human samples or participant recruitment; ethical approval and participant consent were obtained by the original contributing studies.
+Availability of data and materials The Pf8 variant release is openly available from MalariaGEN (MalariaGEN 2025), and the analysis scripts and derived outputs are provided in the supplementary material. The archived snapshots do not capture the exact final command invocations, so the pipeline is inspectable but not fully re-executable end to end. The narrative analysis record accompanies this article as Additional file 1. The analysis scripts, the derived output tables, the empirical audit scripts with their captured logs and the provenance notes form a separate archive that is not embedded in that file; it should be deposited and cited with stable access information before submission [REPOSITORY DOI TO BE SUPPLIED].
+Competing interests None declared.
+Funding [FUNDING STATEMENT TO BE SUPPLIED]
+Authors' contributions [AUTHOR CONTRIBUTIONS TO BE SUPPLIED]
+Acknowledgements We thank MalariaGEN and the contributing studies whose collections and sequencing underlie the Pf8 release. The licence and accession information for the Ghana agro-ecological zone layer shown in Fig. 1 could not be established.
+References
+Alexander, D. H., & Lange, K. (2011). Enhancements to the ADMIXTURE algorithm for individual ancestry estimation. BMC Bioinformatics, 12, Article 246. https://doi.org/10.1186/1471-2105-12-246
+Alexander, D. H., Novembre, J., & Lange, K. (2009). Fast model-based estimation of ancestry in unrelated individuals. Genome Research, 19(9), 1655–1664. https://doi.org/10.1101/gr.094052.109
+Amambua-Ngwa, A., Amenga-Etego, L., Kamau, E., Amato, R., Ghansah, A., Golassa, L., Randrianarivelojosia, M., Ishengoma, D., Apinjoh, T., Maïga-Ascofaré, O., Andagalu, B., Yavo, W., Bouyou-Akotet, M., Kolapo, O., Mane, K., Worwui, A., Jeffries, D., Simpson, V., D'Alessandro, U., … Djimde, A. A. (2019). Major subpopulations of Plasmodium falciparum in sub-Saharan Africa. Science, 365(6455), 813–816. https://doi.org/10.1126/science.aav5427
+Amambua-Ngwa, A., Button-Simons, K. A., Li, X., Kumar, S., Brenneman, K. V., Ferrari, M., Checkley, L. A., Haile, M. T., Shoue, D. A., McDew-White, M., Tindall, S. M., Reyes, A., Delgado, E., Dalhoff, H., Larbalestier, J. K., Amato, R., Pearson, R. D., Taylor, A. B., Nosten, F. H., … Anderson, T. J. C. (2023). Chloroquine resistance evolution in Plasmodium falciparum is mediated by the putative amino acid transporter AAT1. Nature Microbiology, 8(7), 1213–1226. https://doi.org/10.1038/s41564-023-01377-z
+Amos, B., Aurrecoechea, C., Barba, M., Barreto, A., Basenko, E. Y., Bażant, W., Belnap, R., Blevins, A. S., Böhme, U., Brestelli, J., Brunk, B. P., Caddick, M., Callan, D., Campbell, L., Christensen, M. B., Christophides, G. K., Crouch, K., Davis, K., DeBarry, J., … Zheng, J. (2022). VEuPathDB: The eukaryotic pathogen, vector and host bioinformatics resource center. Nucleic Acids Research, 50(D1), D898–D911. https://doi.org/10.1093/nar/gkab929
+Benjamini, Y., & Hochberg, Y. (1995). Controlling the false discovery rate: A practical and powerful approach to multiple testing. Journal of the Royal Statistical Society. Series B (Methodological), 57(1), 289–300. https://doi.org/10.1111/j.2517-6161.1995.tb02031.x
+Bhatia, G., Patterson, N., Sankararaman, S., & Price, A. L. (2013). Estimating and interpreting FST: The impact of rare variants. Genome Research, 23(9), 1514–1521. https://doi.org/10.1101/gr.154831.113
+Chang, C. C., Chow, C. C., Tellier, L. C. A. M., Vattikuti, S., Purcell, S. M., & Lee, J. J. (2015). Second-generation PLINK: Rising to the challenge of larger and richer datasets. GigaScience, 4, Article 7. https://doi.org/10.1186/s13742-015-0047-8
+Cingolani, P., Platts, A., Wang, L. L., Coon, M., Nguyen, T., Wang, L., Land, S. J., Lu, X., & Ruden, D. M. (2012). A program for annotating and predicting the effects of single nucleotide polymorphisms, SnpEff: SNPs in the genome of Drosophila melanogaster strain w1118; iso-2; iso-3. Fly, 6(2), 80–92. https://doi.org/10.4161/fly.19695
+Danecek, P., Bonfield, J. K., Liddle, J., Marshall, J., Ohan, V., Pollard, M. O., Whitwham, A., Keane, T., McCarthy, S. A., Davies, R. M., & Li, H. (2021). Twelve years of SAMtools and BCFtools. GigaScience, 10(2), Article giab008. https://doi.org/10.1093/gigascience/giab008
+Gautier, M. (2015). Genome-wide scan for adaptive divergence and association with population-specific covariates. Genetics, 201(4), 1555–1579. https://doi.org/10.1534/genetics.115.181453
+Gower, J. C. (1966). Some distance properties of latent root and vector methods used in multivariate analysis. Biometrika, 53(3–4), 325–338. https://doi.org/10.1093/biomet/53.3-4.325
+Günther, T., & Coop, G. (2013). Robust identification of local adaptation from allele frequencies. Genetics, 195(1), 205–220. https://doi.org/10.1534/genetics.113.152462
+Harris, C. R., Millman, K. J., van der Walt, S. J., Gommers, R., Virtanen, P., Cournapeau, D., Wieser, E., Taylor, J., Berg, S., Smith, N. J., Kern, R., Picus, M., Hoyer, S., van Kerkwijk, M. H., Brett, M., Haldane, A., del Río, J. F., Wiebe, M., Peterson, P., … Oliphant, T. E. (2020). Array programming with NumPy. Nature, 585(7825), 357–362. https://doi.org/10.1038/s41586-020-2649-2
+Hudson, R. R., Slatkin, M., & Maddison, W. P. (1992). Estimation of levels of gene flow from DNA sequence data. Genetics, 132(2), 583–589. https://doi.org/10.1093/genetics/132.2.583
+Hunter, J. D. (2007). Matplotlib: A 2D graphics environment. Computing in Science & Engineering, 9(3), 90–95. https://doi.org/10.1109/MCSE.2007.55
+Kruskal, W. H., & Wallis, W. A. (1952). Use of ranks in one-criterion variance analysis. Journal of the American Statistical Association, 47(260), 583–621. https://doi.org/10.1080/01621459.1952.10483441
+Malaria Genomic Epidemiology Network (MalariaGEN). (2025). Pf8: An open dataset of Plasmodium falciparum genome variation in 33,325 worldwide samples. Wellcome Open Research, 10, Article 325. https://doi.org/10.12688/wellcomeopenres.24031.1
+MalariaGEN. (2023). Pf7: An open dataset of Plasmodium falciparum genome variation in 20,000 worldwide samples. Wellcome Open Research, 8, Article 22. https://doi.org/10.12688/wellcomeopenres.18681.1
+MalariaGEN. (2025). Supplementary data to: Pf8: An open dataset of Plasmodium falciparum genome variation in 33,325 worldwide samples [Supplementary methods]. figshare. https://doi.org/10.6084/m9.figshare.29153447
+Manske, M., Miotto, O., Campino, S., Auburn, S., Almagro-Garcia, J., Maslen, G., O'Brien, J., Djimde, A., Doumbo, O., Zongo, I., Ouedraogo, J.-B., Michon, P., Mueller, I., Siba, P., Nzila, A., Borrmann, S., Kiara, S. M., Marsh, K., Jiang, H., … Kwiatkowski, D. P. (2012). Analysis of Plasmodium falciparum diversity in natural infections by deep sequencing. Nature, 487(7407), 375–379. https://doi.org/10.1038/nature11174
+Mantel, N. (1967). The detection of disease clustering and a generalized regression approach. Cancer Research, 27(2, Part 1), 209–220.
+McInnes, L., Healy, J., & Melville, J. (2018). UMAP: Uniform manifold approximation and projection for dimension reduction [Preprint]. arXiv. https://doi.org/10.48550/arXiv.1802.03426
+McKinney, W. (2010). Data structures for statistical computing in Python. In Proceedings of the 9th Python in Science Conference (pp. 56–61). SciPy. https://doi.org/10.25080/Majora-92bf1922-00a
+Miles, A., Iqbal, Z., Vauterin, P., Pearson, R., Campino, S., Theron, M., Gould, K., Mead, D., Drury, E., O'Brien, J., Ruano Rubio, V., MacInnis, B., Mwangi, J., Samarakoon, U., Ranford-Cartwright, L., Ferdig, M., Hayton, K., Su, X.-Z., Wellems, T., … Kwiatkowski, D. (2016). Indels, structural variation, and recombination drive genomic diversity in Plasmodium falciparum. Genome Research, 26(9), 1288–1299. https://doi.org/10.1101/gr.203711.115
+Miles, A., Rodrigues, M. F., Ralph, P., Kelleher, J., Schelker, M., Pisupati, R., Rae, S., & Millar, T. (2024). cggh/scikit-allel (Version 1.3.13) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.13772087
+Mobegi, V. A., Duffy, C. W., Amambua-Ngwa, A., Loua, K. M., Laman, E., Nwakanma, D. C., MacInnis, B., Aspeling-Jones, H., Murray, L., Clark, T. G., Kwiatkowski, D. P., & Conway, D. J. (2014). Genome-wide analysis of selection on the malaria parasite Plasmodium falciparum in West African populations of differing infection endemicity. Molecular Biology and Evolution, 31(6), 1490–1499. https://doi.org/10.1093/molbev/msu106
+Otto, T. D., Böhme, U., Sanders, M. J., Reid, A. J., Bruske, E. I., Duffy, C. W., Bull, P. C., Pearson, R. D., Abdi, A. I., Dimonte, S., Stewart, L. B., Campino, S., Kekre, M., Hamilton, W. L., Claessens, A., Volkman, S. K., Ndiaye, D., Amambua-Ngwa, A., Diakite, M., … Berriman, M. (2018). Long read assemblies of geographically dispersed Plasmodium falciparum isolates reveal highly structured subtelomeres. Wellcome Open Research, 3, Article 52. https://doi.org/10.12688/wellcomeopenres.14571.1
+Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., Blondel, M., Prettenhofer, P., Weiss, R., Dubourg, V., Vanderplas, J., Passos, A., Cournapeau, D., Brucher, M., Perrot, M., & Duchesnay, É. (2011). Scikit-learn: Machine learning in Python. Journal of Machine Learning Research, 12, 2825–2830. https://www.jmlr.org/papers/v12/pedregosa11a.html
+Pickrell, J. K., & Pritchard, J. K. (2012). Inference of population splits and mixtures from genome-wide allele frequency data. PLoS Genetics, 8(11), Article e1002967. https://doi.org/10.1371/journal.pgen.1002967
+Purcell, S., Neale, B., Todd-Brown, K., Thomas, L., Ferreira, M. A. R., Bender, D., Maller, J., Sklar, P., de Bakker, P. I. W., Daly, M. J., & Sham, P. C. (2007). PLINK: A tool set for whole-genome association and population-based linkage analyses. The American Journal of Human Genetics, 81(3), 559–575. https://doi.org/10.1086/519795
+Quinlan, A. R., & Hall, I. M. (2010). BEDTools: A flexible suite of utilities for comparing genomic features. Bioinformatics, 26(6), 841–842. https://doi.org/10.1093/bioinformatics/btq033
+Rousseeuw, P. J. (1987). Silhouettes: A graphical aid to the interpretation and validation of cluster analysis. Journal of Computational and Applied Mathematics, 20, 53–65. https://doi.org/10.1016/0377-0427(87)90125-7
+Rousset, F. (1997). Genetic differentiation and estimation of gene flow from F-statistics under isolation by distance. Genetics, 145(4), 1219–1228. https://doi.org/10.1093/genetics/145.4.1219
+van der Maaten, L., & Hinton, G. (2008). Visualizing data using t-SNE. Journal of Machine Learning Research, 9, 2579–2605. https://www.jmlr.org/papers/v9/vandermaaten08a.html
+Venna, J., & Kaski, S. (2001). Neighborhood preservation in nonlinear projection methods: An experimental study. In G. Dorffner, H. Bischof, & K. Hornik (Eds.), Artificial neural networks — ICANN 2001 (Lecture Notes in Computer Science, Vol. 2130, pp. 485–491). Springer. https://doi.org/10.1007/3-540-44668-0_68
+Virtanen, P., Gommers, R., Oliphant, T. E., Haberland, M., Reddy, T., Cournapeau, D., Burovski, E., Peterson, P., Weckesser, W., Bright, J., van der Walt, S. J., Brett, M., Wilson, J., Millman, K. J., Mayorov, N., Nelson, A. R. J., Jones, E., Kern, R., Larson, E., … SciPy 1.0 Contributors. (2020). SciPy 1.0: Fundamental algorithms for scientific computing in Python. Nature Methods, 17(3), 261–272. https://doi.org/10.1038/s41592-019-0686-2
+Weir, B. S., & Cockerham, C. C. (1984). Estimating F-statistics for the analysis of population structure. Evolution, 38(6), 1358–1370. https://doi.org/10.1111/j.1558-5646.1984.tb05657.x
+Wilson, E. B. (1927). Probable inference, the law of succession, and statistical inference. Journal of the American Statistical Association, 22(158), 209–212. https://doi.org/10.1080/01621459.1927.10502953
+World Health Organization. (2025, December 10). Compendium of molecular markers for antimalarial drug resistance (Version 1.0). https://www.who.int/tools/compendium-of-molecular-markers-for-antimalarial-drug-resistance
+World Health Organization. (2025, December 10). Methods and thresholds used in the compendium of molecular markers for antimalarial drug resistance. https://www.who.int/publications/m/item/methods-and-thresholds-used-in-the-compendium-of-molecular-markers-for-antimalarial-drug-resistance
+Yeaman, S., & Whitlock, M. C. (2011). The genetic architecture of adaptation under migration–selection balance. Evolution, 65(7), 1897–1911. https://doi.org/10.1111/j.1558-5646.2011.01269.x

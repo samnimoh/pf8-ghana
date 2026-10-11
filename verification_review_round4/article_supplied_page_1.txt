@@ -1,0 +1,39 @@
+Population differentiation and antimalarial resistance-marker frequencies in 
+Plasmodium falciparum across the agro-ecological zones of Ghana, 2009-
+2021
+[AUTHOR NAMES AND AFFILIATIONS TO BE SUPPLIED]
+Abstract
+Background Ghana carries a high malaria burden across agro-ecological zones that differ in rainfall, vegetation 
+and transmission intensity. Whether these zones hold genetically distinguishable Plasmodium falciparum 
+populations, and how antimalarial resistance markers are distributed among them, bears on how national 
+genomic surveillance is stratified.
+Methods Ghanaian isolates in the MalariaGEN Pf8 release (MalariaGEN 2025) were filtered to well-called 
+infections of low within-host complexity (Fws >= 0.95, call rate >= 0.80, clonal pruning), with variant missingness 
+recomputed after the sample cut. The analysis set comprised 1,900 isolates at 3,916 SNPs (minor allele 
+frequency >= 0.05; mean missingness 2.95%), collected between 2009 and 2021 and assigned to four zones. 
+Pairwise Hudson FST was estimated as a ratio of averages with block-jackknife intervals (Hudson et al. 1992), 
+alongside UMAP, t-SNE and PCoA ordination (McInnes et al. 2018), ADMIXTURE (Alexander et al. 2009), TreeMix 
+(Pickrell and Pritchard 2012), a BayPass XtX scan (Gautier 2015) and Mantel tests of isolation by distance (Mantel 
+1967). Fifty-seven codons in nine resistance-associated genes were reconstructed from coding sequence; 
+headline spatial results were repeated across six filtering scenarios.
+Results Differentiation among zones was very low but statistically detectable: the maximum pairwise Hudson FST 
+was 0.00232 (95% CI 0.00128-0.00336, coastal versus Guinea savanna), and five of six intervals excluded zero. 
+The maximum remained within 0.00204-0.00255 across the six scenarios (Additional file 1, Table S13). 
+Ordination silhouette coefficients were negative for every method. Isolation by distance was not robust, 
+reaching significance in only two of six scenarios and four of seven leave-one-region-out replicates. The XtX scan 
+returned 19 outliers above a calibrated threshold of 10.840. The pfdhfr IRN triple haplotype stood at 0.771, the 
+pfdhps G437 resistance residue at 0.897 and the pfcrt CVIET haplotype at 0.071, while pfaat1 S258L fell from 
+0.824 in coastal savanna to 0.544 in Guinea savanna, the steepest geographical cline in the panel. No WHO-
+screened pfk13 artemisinin resistance allele was observed: 22 of 23 screened codons were fixed at the reference 
+residue and codon 458 stood at 0.9995 (WHO 2025).
+Conclusions Ghanaian P. falciparum shows very low, though statistically detectable, differentiation between 
+agro-ecological zones at common variants, and the zones do not separate in ordination. Zone is very nearly a 
+relabelling of administrative region, sequencing study and collection period, and Guinea savanna alone supplies 
+1,334 of 1,900 isolates (70.2%), so geographical and technical contributions cannot be separated; the panel is in 
+any case restricted to variants common enough to clear a threshold dominated by that one zone. Zone is 
+therefore not a usable stratum for spatial inference in these data. The resistance frequencies are historical, 
+describing collections made between 2009 and 2021.
+Keywords
+Plasmodium falciparum; Ghana; Population differentiation; Antimalarial drug resistance; pfaat1; Genomic 
+surveillance
+Background

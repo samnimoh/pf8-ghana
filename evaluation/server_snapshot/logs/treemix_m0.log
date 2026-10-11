@@ -1,0 +1,14 @@
+
+TreeMix v. 1.13
+$Revision: 231 $
+
+npop:4 nsnp:3359
+Estimating covariance matrix in 67 blocks of size 50
+SEED: 42
+Starting from:
+((Transitional_zone:3.09241e-05,Guinea_savanna:0.000134736):0.000141042,Decidous_forest:0.000141042);
+Adding Coastal_savanna [4/4]
+ln(likelihood): 89.704187 
+(Decidous_forest:0,((Transitional_zone:0,Guinea_savanna:0.000128661):0.000295248,Coastal_savanna:0.000133642):0);
+Set root above Guinea_savanna
+DONE.

@@ -1,0 +1,42 @@
+collected between 2009 and 2021 and distributed across all four zones; 1,900 of them enter the analysis set 
+used here. Ghanaian isolates have contributed to continental analyses, but Ghana has not been treated as the 
+unit of analysis in Pf8: zone-level differentiation has not been estimated with confidence intervals, the 
+relationship between differentiation and geographic separation has not been tested with the available spatial 
+resolution, and a codon-level resistance panel reconstructed directly from coding sequence, rather than from 
+annotation strings, has not been reported for the country. Direct codon reconstruction matters because the 
+resistance residue at some positions is the 3D7 reference residue, and because the current WHO compendium of 
+molecular markers classifies variants rather than genes, so a gene-level summary cannot be mapped onto the 
+validated, candidate and potential tiers (WHO 2025).
+This study addresses three questions. First, how differentiated are Ghana's agro-ecological zones at common 
+variants, measured as pairwise Hudson FST with block-jackknife confidence intervals and examined alongside 
+ordination of the published genotype distances (Fig. 2, Table 2)? Second, does differentiation scale with 
+geographic distance between populations, and is any such relationship robust to the thresholds and spatial units 
+used to define the analysis set (Table 4)? Third, what are the frequencies, in isolates collected between 2009 and 
+2021, of validated, candidate and potential resistance markers across the nine genes pfk13, pfdhfr, pfdhps, pfcrt, 
+pfmdr1, pfmdr2, pfaat1, pfcoronin and pfap2mu, and do those frequencies vary between zones (Table 3)? A 
+genome-wide scan for differentiation outliers is used to place the resistance loci in the context of the strongest 
+zone-associated signals in the panel (Fig. 3).
+Methods
+Data source and sample selection
+Genotypes were taken from MalariaGEN Pf8 (MalariaGEN 2025), a release of 33,325 samples and 12,493,205 
+variants, accessed through the public Zarr store. Variants were admitted on ingest under the mask `FILTER_PASS 
+& is_snp & numalt == 1`, and the GT, AD, DP and GQ fields were read at the retained sites, restricting the panel 
+to biallelic SNPs that pass the release filter.
+Each Ghanaian isolate was assigned to an agro-ecological zone by a spatial join of its reported collection location 
+to the Ghana agro-ecological zone layer (Fig. 1), giving four zones: coastal savanna, deciduous forest, transitional 
+and Guinea savanna. In total 4,905 Ghanaian isolates passed Pf8 release QC and were assignable to a zone, with 
+collection years spanning 2009-2021.
+Sample QC was applied as a cascade: within-host fixation index Fws >= 0.95, sample call rate >= 0.80, a 
+heterozygosity outlier rule, and clonal pruning of near-identical genotypes. Mixed calls in the genome-wide 
+matrix were resolved to the majority allele by read depth, giving one haploid allele per isolate.
+Variant and sample filtering were ordered in two passes so that variant missingness is computed on the samples 
+actually retained. A provisional pass on the pre-cut sample set retained 1,634,808 variants; 117 high-missingness 
+samples were then dropped; recomputing missingness on the 1,900 retained isolates gave 1,807,331 variants at 
+10% missingness or less, of which 3,916 reached minor allele frequency >= 0.05. The analysis set is therefore 
+1,900 isolates by 3,916 SNPs, with mean variant missingness 2.95%. Its composition is Guinea savanna 1,334, 
+deciduous forest 337, coastal savanna 204 and transitional 25 isolates, set out with region, dominant sequencing 
+study and collection years in Table 1.
+Because the Fws cut sets both the size and the zone composition of the isolate set, and the MAF cut sets the size 
+of the SNP panel, the headline spatial results were recomputed under six threshold scenarios - the baseline, Fws 
+>= 0.90, Fws >= 0.80, no Fws filter, MAF >= 0.01 and MAF >= 0.02 - loaded through one shared routine, so 
+scenarios differ only in the thresholds (Table 4).

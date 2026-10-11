@@ -1,0 +1,48 @@
+values computed on the same statistics (Benjamini and Hochberg 1995) retained eight SNPs at q <= 0.01, ten at q 
+<= 0.05, 13 at q <= 0.10 and 17 at q <= 0.20. Thirteen of the 19 outliers therefore have Benjamini-Hochberg q-
+values at or below 0.10 against the pseudo-observed null, conditional on that null being adequately calibrated.
+Ranked by the maximum XtX attained within each gene, the leading signals were PTP7 (PF3D7_0301700, XtX = 
+26.44), AAT1 (PF3D7_0629500, 24.20), FIKK4.2 (PF3D7_0424700, 22.02), ACS8 (PF3D7_0215300, 22.00), NT2 
+(PF3D7_0824400, 20.46), PIESP2 (PF3D7_0501200, 18.50) and SNRPF (PF3D7_1126900, 13.98). Two of the 19 
+outliers are adjacent sites on chromosome 11, at Pf3D7_11_v3:1,054,078 and 1,054,447, 369 bp apart, and both 
+carry low InbreedingCoeff values in the release annotation (0.147 and 0.193, the 8th and 13th percentiles of the 
+panel); the first also carries the only non-zero ExcessHet value among all 3,916 SNPs (69.59), while ExcessHet is 
+zero at the second. They are flagged as lower confidence and are not interpreted as differentiation signals here.
+Antifolate markers
+All three components of the antifolate triple were common in pfdhfr: N51I at 0.786 (n = 1,891), C59R at 0.886 (n 
+= 1,888) and S108N at 0.908 (n = 1,889), each varying in frequency among zones (p = 2.43 x 10^-4, 4.80 x 10^-5 
+and 9.40 x 10^-7, respectively). I164L was absent, codon 164 being fixed at the reference Ile. Read as a 
+haplotype on complete cases, the IRN triple stood at 0.771 (n = 1,876; 95% CI 0.751-0.789). Zone estimates were 
+0.880 in the transitional zone (n = 25), 0.867 in coastal savanna (n = 203), 0.788 in deciduous forest (n = 330) and 
+0.750 in Guinea savanna (n = 1,318). The IRNL quadruple, which adds I164L, occurred in 0 of 1,874 complete 
+cases.
+In pfdhps, the resistance-associated residue at codon 437 is glycine, and glycine is also the 3D7 reference residue 
+at that position. G437 stood at 0.897 (n = 1,892; p = 1.17 x 10^-6 among zones), highest in deciduous forest 
+(0.964) and coastal savanna (0.941) and lower in Guinea savanna (0.875) and the transitional zone (0.800). 
+Because the resistance residue is the reference residue, the site generates no variant call against 3D7, and 
+matching on annotation strings does not recover it; reconstructing the codon from the coding sequence does. 
+S436A was at 0.541 and A613S at 0.108, while K540E (0.0095) and A581G (0.0138) were rare. The A437G+K540E 
+double haplotype was at 0.0095, matching the frequency of K540E alone. Marker frequencies overall and by 
+zone are given in Table 3.
+Table 3 Resistance-marker frequencies overall and by agro-ecological zone. Denominators are isolates called at that codon or, for 
+haplotypes, isolates called at every constituent codon. The chi-square column tests heterogeneity across the four zones.
+Marker Overall n Coastal 
+savanna
+Deciduous 
+forest
+Guinea 
+savanna
+Transitional χ² p
+pfdhfr N51I 0.786 1,891 — — — — 2.43 × 10⁻⁴
+pfdhfr C59R 0.886 1,888 — — — — 4.80 × 10⁻⁵
+pfdhfr S108N 0.908 1,889 — — — — 9.40 × 10⁻⁷
+pfdhfr I164L 0.000 1,898 — — — — —
+pfdhfr IRN triple 0.771 1,876 0.867 0.788 0.750 0.880 —
+pfdhfr IRNL quadruple 0.000 1,874 0.000 0.000 0.000 0.000 —
+pfdhps G437 0.897 1,892 0.941 0.964 0.875 0.800 1.17 × 10⁻⁶
+pfdhps S436A 0.541 1,884 — — — — 1.61 × 10⁻³
+pfdhps K540E 0.0095 1,895 — — — — 0.661
+pfdhps A581G 0.0138 1,890 — — — — 8.02 × 10⁻⁴
+pfdhps A613S 0.108 1,884 — — — — 0.113
+pfdhps GE double 0.0095 1,888 0.005 0.006 0.011 0.000 —
+pfcrt K76T 0.071 1,874 — — — — 0.037

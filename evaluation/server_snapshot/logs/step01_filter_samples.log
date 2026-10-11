@@ -1,0 +1,36 @@
+
+============================================================
+  STEP 1 — Pf8 manifest -> Ghana subset
+============================================================
+Global manifest: 33,325 samples, 17 columns
+Ghana subset: 6,653 samples
+QC filter: 6,653 -> 4,905 (1748 dropped)
+
+Samples per collection year:
+Year
+2009.0     120
+2010.0     168
+2011.0     102
+2012.0      87
+2013.0     247
+2014.0     480
+2015.0     372
+2016.0     307
+2017.0     698
+2018.0    1864
+2019.0     219
+2020.0     226
+2021.0      15
+
+Samples per admin level 1 region:
+Admin level 1
+Upper East       3605
+Greater Accra     435
+Ashanti           391
+Central           309
+Eastern            74
+Brong Ahafo        50
+Volta              41
+
+Wrote 4,905 rows -> /media/biodataA/pf8/gyadu/interim/ghana_samples.csv
+pf8_row range: 2301 .. 29498

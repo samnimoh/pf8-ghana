@@ -1,0 +1,249 @@
+{
+  "generated_utc": "2026-10-11T04:23:16.559807+00:00",
+  "runtime": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+  "comparisons": [
+    {
+      "label": "article",
+      "docx": {
+        "path": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.docx",
+        "bytes": 1193707,
+        "sha256": "9e951d51e245fd89e9056cf0d590708dcc7a84358db136ccdde6d3ce3648ba91"
+      },
+      "supplied_pdf": {
+        "path": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.pdf",
+        "bytes": 710062,
+        "sha256": "9bdc30086d67501ed9330517a7eb986c6c6bd0f9f9d7554efed529f66afb476d"
+      },
+      "fresh_pdf": {
+        "path": "/private/tmp/pf8_review_round6/article/Pf8_Ghana_article.pdf",
+        "bytes": 706899,
+        "sha256": "e4c62f0d8755dec50e683fb68115501f913ee1931d433f235bec31ba092c98ac"
+      },
+      "supplied_pages": 18,
+      "fresh_pages": 18,
+      "page_comparisons": [
+        {
+          "page": 1,
+          "matches_after_whitespace_and_footer_normalization": true,
+          "supplied_text_sha256": "beb64e1423b56475a3d6c1543fd735f826e75ad494e222bfd909014e088d0635",
+          "fresh_text_sha256": "beb64e1423b56475a3d6c1543fd735f826e75ad494e222bfd909014e088d0635"
+        },
+        {
+          "page": 2,
+          "matches_after_whitespace_and_footer_normalization": true,
+          "supplied_text_sha256": "0368cb85a20afa09f6972195dce6b58f8ff9dfac69e0d8dd16416f141111ea2a",
+          "fresh_text_sha256": "0368cb85a20afa09f6972195dce6b58f8ff9dfac69e0d8dd16416f141111ea2a"
+        },
+        {
+          "page": 3,
+          "matches_after_whitespace_and_footer_normalization": true,
+          "supplied_text_sha256": "a706ce43ef8f8ba1916289d897c9943a65bac786201a400f02aea936a57b4558",
+          "fresh_text_sha256": "a706ce43ef8f8ba1916289d897c9943a65bac786201a400f02aea936a57b4558"
+        },
+        {
+          "page": 4,
+          "matches_after_whitespace_and_footer_normalization": true,
+          "supplied_text_sha256": "0a513e843c37998f6ebb8eb5bc86cdefdf47101e2b87be37c45f3e4b087223ae",
+          "fresh_text_sha256": "0a513e843c37998f6ebb8eb5bc86cdefdf47101e2b87be37c45f3e4b087223ae"
+        },
+        {
+          "page": 5,
+          "matches_after_whitespace_and_footer_normalization": true,
+          "supplied_text_sha256": "ce8b585250e5532e49b41495e9cc59ef25e5c7427f82063e4685e984690351cc",
+          "fresh_text_sha256": "ce8b585250e5532e49b41495e9cc59ef25e5c7427f82063e4685e984690351cc"
+        },
+        {
+          "page": 6,
+          "matches_after_whitespace_and_footer_normalization": true,
+          "supplied_text_sha256": "d50432d9bc9eaf995a5235b89bc56abfef9c8dea62a08f6570aa481dfd62df1d",
+          "fresh_text_sha256": "d50432d9bc9eaf995a5235b89bc56abfef9c8dea62a08f6570aa481dfd62df1d"
+        },
+        {
+          "page": 7,
+          "matches_after_whitespace_and_footer_normalization": true,
+          "supplied_text_sha256": "92750ad6e467ef8534cf31dd2745a120bf944ffe3942c8b1eaf30040d2534b69",
+          "fresh_text_sha256": "92750ad6e467ef8534cf31dd2745a120bf944ffe3942c8b1eaf30040d2534b69"
+        },
+        {
+          "page": 8,
+          "matches_after_whitespace_and_footer_normalization": true,
+          "supplied_text_sha256": "ea7146cfa2007ccce4e015223b5b9caf87702dac6fdd4ed06a361d6bdd6e3f56",
+          "fresh_text_sha256": "ea7146cfa2007ccce4e015223b5b9caf87702dac6fdd4ed06a361d6bdd6e3f56"
+        },
+        {
+          "page": 9,
+          "matches_after_whitespace_and_footer_normalization": true,
+          "supplied_text_sha256": "f1bbd09d61cd5ae0fd213181aa4185a535cc738982993ecd62461c5c85380a53",
+          "fresh_text_sha256": "f1bbd09d61cd5ae0fd213181aa4185a535cc738982993ecd62461c5c85380a53"
+        },
+        {
+          "page": 10,
+          "matches_after_whitespace_and_footer_normalization": true,
+          "supplied_text_sha256": "74123a7d4c3a82f8269c8346d3c37971724b434186b5917dd562934fc627f14c",
+          "fresh_text_sha256": "74123a7d4c3a82f8269c8346d3c37971724b434186b5917dd562934fc627f14c"
+        },
+        {
+          "page": 11,
+          "matches_after_whitespace_and_footer_normalization": true,
+          "supplied_text_sha256": "be4cb2e9ff12dc23f3761a72289c602569474c0684ae51d485a245e6a21612e8",
+          "fresh_text_sha256": "be4cb2e9ff12dc23f3761a72289c602569474c0684ae51d485a245e6a21612e8"
+        },
+        {
+          "page": 12,
+          "matches_after_whitespace_and_footer_normalization": true,
+          "supplied_text_sha256": "f454fc13101d4aa71c3feb8f3ea319e5185bafebc824158cf014dd086aec7c94",
+          "fresh_text_sha256": "f454fc13101d4aa71c3feb8f3ea319e5185bafebc824158cf014dd086aec7c94"
+        },
+        {
+          "page": 13,
+          "matches_after_whitespace_and_footer_normalization": true,
+          "supplied_text_sha256": "2ffdda62c7cb06cfe56c00cea9256f6794a5db447d0e35b29ebb8042d0fd1fc6",
+          "fresh_text_sha256": "2ffdda62c7cb06cfe56c00cea9256f6794a5db447d0e35b29ebb8042d0fd1fc6"
+        },
+        {
+          "page": 14,
+          "matches_after_whitespace_and_footer_normalization": true,
+          "supplied_text_sha256": "33b804334a7c64ac720122a87868b788546cf5f951ee2222d225c9e48665465c",
+          "fresh_text_sha256": "33b804334a7c64ac720122a87868b788546cf5f951ee2222d225c9e48665465c"
+        },
+        {
+          "page": 15,
+          "matches_after_whitespace_and_footer_normalization": true,
+          "supplied_text_sha256": "47200cedb2bc749add65a38b04329b0491bb53acf5a3ee2056a849a3bf16f6e8",
+          "fresh_text_sha256": "47200cedb2bc749add65a38b04329b0491bb53acf5a3ee2056a849a3bf16f6e8"
+        },
+        {
+          "page": 16,
+          "matches_after_whitespace_and_footer_normalization": true,
+          "supplied_text_sha256": "b92b0ae0a43ec2d326748a92a25aac92b3c0a7df1d6536269679a52ffb96168d",
+          "fresh_text_sha256": "b92b0ae0a43ec2d326748a92a25aac92b3c0a7df1d6536269679a52ffb96168d"
+        },
+        {
+          "page": 17,
+          "matches_after_whitespace_and_footer_normalization": true,
+          "supplied_text_sha256": "b1920d4a640bc82e04ca274a2a50d37078111d875981f6e5c5fb44ec9b567f0d",
+          "fresh_text_sha256": "b1920d4a640bc82e04ca274a2a50d37078111d875981f6e5c5fb44ec9b567f0d"
+        },
+        {
+          "page": 18,
+          "matches_after_whitespace_and_footer_normalization": true,
+          "supplied_text_sha256": "934f6886d545a773c18221b03b76f8cea405eadfaba59089842485bae46f7db3",
+          "fresh_text_sha256": "934f6886d545a773c18221b03b76f8cea405eadfaba59089842485bae46f7db3"
+        }
+      ],
+      "rasterized_pages": [
+        1,
+        6,
+        7,
+        9,
+        10,
+        15,
+        18
+      ]
+    },
+    {
+      "label": "manuscript",
+      "docx": {
+        "path": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx",
+        "bytes": 4043307,
+        "sha256": "6312e2a1c4e2ad27e4cb723cd386384f0cbea6b7a4288551edf78a50bdbf167d"
+      },
+      "supplied_pdf": {
+        "path": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.pdf",
+        "bytes": 5164457,
+        "sha256": "cbcca580ea3cfa25df6d4e6a6c00f3fa3be65d902fe3569f459d52f3590adaa5"
+      },
+      "fresh_pdf": {
+        "path": "/private/tmp/pf8_review_round6/manuscript/Pf8_Ghana_manuscript_REVISED.pdf",
+        "bytes": 5117146,
+        "sha256": "a9faebe60128fe42123a5be10e21140da6a510f67982e19dcaef6e4ba2bf1fa8"
+      },
+      "supplied_pages": 196,
+      "fresh_pages": 197,
+      "page_comparisons": [
+        {
+          "page": 27,
+          "matches_after_whitespace_and_footer_normalization": false,
+          "supplied_text_sha256": "836854d0e3ecda7367832070721e0a2cc14f5715480b6a57548249aeb079f1cc",
+          "fresh_text_sha256": "b2a0c7e96ebdc7b58bf59812af5cb5e76c472b119f9e8573f4c303dda1f37acf"
+        },
+        {
+          "page": 44,
+          "matches_after_whitespace_and_footer_normalization": true,
+          "supplied_text_sha256": "c65e2603c3b78689715e13d7de58c75955c9d2af6700adb0f479bd8b8bb69229",
+          "fresh_text_sha256": "66b3a239451620e15ce57bf230ba5ca35187f9acf738c52f5834ca6d87a98a61"
+        },
+        {
+          "page": 111,
+          "matches_after_whitespace_and_footer_normalization": false,
+          "supplied_text_sha256": "985a856215a8f1ac894402d686d124875c4c01c9b64425f879e7f0b301bb5168",
+          "fresh_text_sha256": "ca3c481a3c1fa7a32377d96bd1eec420a1c859903a5915573b852a9da3ca41bd"
+        },
+        {
+          "page": 142,
+          "matches_after_whitespace_and_footer_normalization": false,
+          "supplied_text_sha256": "624d04ac706ee24564a8eaf520359c0a257e207bc436c4d15990d4e4b512f29b",
+          "fresh_text_sha256": "91fb12346e0c8d88658b20338ced5401f96cd171217e1b4237459c5bd3d16b34"
+        }
+      ],
+      "rasterized_pages": [
+        27,
+        44,
+        111,
+        142
+      ],
+      "stale_pdf_evidence": {
+        "supplied_page111_claims_exact_reproduction": true,
+        "fresh_page111_qualifies_twelve_at_full_precision": true,
+        "text_excerpt_supplied": "Page 111 of 196\n[Calculated] Every printed edge p-value is reproduced exactly, and the apparent anomalies are an artefact of \nhow the tail was computed rather than of the data. An earlier version of this paragraph said that five of six \nvalues reproduced to three significant figures; that was wrong, and the corrected accounting follows. \nRecomputing every migration-edge p-value in m = 0 to 5 as a one-sided normal tail from the printed jackknife \nmean and standard error gives fifteen edges, of which thirteen carry a finite printed value and two print “< \n2.22507 × 10⁻³⁰⁸”. That figure is exactly DBL_MIN, the smallest normal double-precision float, and it appears \nat m = 3 edge 2 (z = 10.53, s",
+        "text_excerpt_fresh": "Page 111 of 197\n[Calculated] Every printed edge p-value is accounted for by how the tail was computed, and the apparent \nanomalies are an artefact of that computation rather than of the data. An earlier version of this paragraph \nsaid that five of six values reproduced to three significant figures; that was wrong, and the corrected \naccounting follows. Recomputing every migration-edge p-value in m = 0 to 5 as a one-sided normal tail from \nthe printed jackknife mean and standard error gives fifteen edges, of which thirteen carry a finite printed \nvalue and two print “< 2.22507 × 10⁻³⁰⁸”. That figure is exactly DBL_MIN, the smallest normal double-\nprecision float, and it appears at m = 3 edge "
+      }
+    },
+    {
+      "label": "supplement",
+      "docx": {
+        "path": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx",
+        "bytes": 4044003,
+        "sha256": "21907b6a2478f98927158f57a11bb56a4822dd730c65e331a6ce99af55d017b7"
+      },
+      "supplied_pdf": {
+        "path": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.pdf",
+        "bytes": 5167261,
+        "sha256": "94f7836abeae171a458aab2b8f0c40a6644604998d81890405bd11c4ffcff37e"
+      },
+      "fresh_pdf": {
+        "path": "/private/tmp/pf8_review_round6/supplement/Additional_file_1.pdf",
+        "bytes": 5120153,
+        "sha256": "4145c512ce8c5e4364cadd9f8a888d2499fcdf88282412358c6eb580bf72d951"
+      },
+      "supplied_pages": 198,
+      "fresh_pages": 198,
+      "page_comparisons": [
+        {
+          "page": 1,
+          "matches_after_whitespace_and_footer_normalization": true,
+          "supplied_text_sha256": "65d048ce8ac0bf6c7996d3746e4973b35b7be53ea0444d61519b879f34690042",
+          "fresh_text_sha256": "65d048ce8ac0bf6c7996d3746e4973b35b7be53ea0444d61519b879f34690042"
+        },
+        {
+          "page": 2,
+          "matches_after_whitespace_and_footer_normalization": true,
+          "supplied_text_sha256": "0fe5ea1576dd54deb44f90800553cacc2b666b88df9a572a793b115b7893f945",
+          "fresh_text_sha256": "0fe5ea1576dd54deb44f90800553cacc2b666b88df9a572a793b115b7893f945"
+        },
+        {
+          "page": 110,
+          "matches_after_whitespace_and_footer_normalization": true,
+          "supplied_text_sha256": "8f327cf52cbe297e6d8a5dc2d54a999a738cf6519b5b20a1ffb91d8414e0a1e0",
+          "fresh_text_sha256": "8f327cf52cbe297e6d8a5dc2d54a999a738cf6519b5b20a1ffb91d8414e0a1e0"
+        }
+      ],
+      "rasterized_pages": [
+        1,
+        2,
+        110
+      ]
+    }
+  ],
+  "visual_inspection_scope": "Selected pages recorded separately; not an all-page certification of the long documents."
+}

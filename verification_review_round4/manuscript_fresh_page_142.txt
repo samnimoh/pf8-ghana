@@ -1,0 +1,44 @@
+Page 142 of 197
+Figure 7.3. TreeMix variance explained against the number of migration edges on the corrected 3,916-SNP matrix: 0.8970 at m = 
+0, 0.9405 at m = 1, 0.9969 at m = 2, 0.9997 at m = 3. The gain past m = 2 is not supported by the edge standard errors (third 
+edge p = 0.33), and m ≥ 3 is not identifiable with four populations.
+7.4 Practical significance
+[Interpreted] What the neutral result licenses. Neutral common-variant differentiation between zones is 
+negligible — maximum pairwise FST 0.00232, with one of six confidence intervals spanning zero (Guinea 
+savanna vs transitional zone, [−0.00083, 0.00178]), and the maximum staying within 0.00204–0.00255 across 
+six threshold scenarios (Table 8.3) — so a spatially sparse design is adequate for characterising neutral 
+structure. Marker-frequency representativeness is a separate question, and the rebuilt resistance panel 
+shows significant between-zone variation at six of the nine panel genes, including pfdhfr, pfdhps and pfaat1 
+(the others being pfcrt, pfmdr1 and pfmdr2). If the question is whether a handful of sites will give a 
+representative picture of the neutral genomic background, these data answer yes; if the question is whether 
+those sites will give a representative picture of resistance-marker frequencies, these data answer no.
+[Interpreted] What it does not license, and what the previous draft got wrong. The previous draft went 
+further and concluded that "sentinel surveillance at a small number of sites is an adequate design for 
+detecting emergence — the samples do not need to be spatially comprehensive to be representative". That 
+claim is withdrawn. It is unsupported by anything measured here, and it is contradicted by the mechanism 
+this project's own literature review sets out: selection builds connectivity that neutral demography does not, 
+so a selected haplotype can sweep across a region while the neutral background stays homogeneous — and, 
+symmetrically, resistance-allele trajectories can remain site-specific even under neutral panmixia. Sentinel 
+surveillance measures marker frequencies, not neutral structure. Low genome-wide neutral FST says nothing 
+about whether marker frequencies at one site represent the country.
+[Observed] The resistance panel settles the question empirically, and the answer is no. Marker frequencies 
+do differ by zone. pfaat1 S258L spans about 28 percentage points from coast to far north (0.824 to 0.544, χ² p 
+= 1.89 × 10⁻¹⁸, n = 1,896 called). pfdhps G437 — the allele that was missing from the panel altogether in the 
+previous draft — runs 0.964 in deciduous forest and 0.941 on the coast against 0.875 in Guinea savanna and 
+0.800 in the transitional zone (χ² p = 1.2 × 10⁻⁶, n = 1,892). The pfdhfr codons are heterogeneous across the 
+four zones (S108N χ² p = 9.4 × 10⁻⁷; C59R 4.8 × 10⁻⁵; N51I 2.4 × 10⁻⁴) and the IRN triple-mutant haplotype 
+itself runs 0.750 in Guinea savanna, 0.788 in deciduous forest, 0.867 on the coast and 0.880 in the 
+transitional zone on 25 isolates. These are all four-zone heterogeneity tests; no directional south-versus-
+Guinea contrast was run, and the transitional zone's values rest on 25 isolates (§7.2). A sentinel site on the 
+coast and a sentinel site in Upper East would report materially different resistance-marker profiles from the 
+same panmictic parasite population. The operational implication is the reverse of the previous draft's: neutral 
+structure can be characterised sparsely; marker frequencies cannot. A surveillance design intended to track 
+resistance needs to span the gradient, and this analysis is evidence for rather than against that requirement.
+[Calculated] Robustness of the readings above to the corrected panel. The conclusions in this section were 
+reached on a neutral panel that grew from 3,359 to 3,916 SNPs (+16.6 per cent) once the filter order was 
+corrected, with stages 4 to 9 re-run on the larger matrix. The substantive readings held — near-panmixia, 
+maximum pairwise FST of about 0.0023, and a near-flat cross-validation curve. One reading did not hold, 
+though it failed a later check rather than this one: isolation by distance, described in earlier drafts as a weak, 
+leverage-dependent but real distance effect, is significant in only 2 of 6 threshold scenarios and is now 
+reported as not robust (§8, Table 8.3). Within the corrected run it had in fact improved — the Mantel result 
+no longer depends on the undisclosed censoring, and significant jackknife replicates went 2 of 7 to 4 of 7 — 

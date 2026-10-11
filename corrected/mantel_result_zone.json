@@ -1,0 +1,20 @@
+{
+  "level": "zone",
+  "method": "pearson",
+  "populations": [
+    "Coastal savanna",
+    "Decidous forest",
+    "Guinea savanna",
+    "Transitional zone"
+  ],
+  "n_populations": 4,
+  "n_pairs": 6,
+  "permutations": 9999,
+  "mantel_r": 0.47089367436137985,
+  "p_value": 0.1218,
+  "seed": 42,
+  "n_negative_fst_pairs_floored": 0,
+  "negative_pairs": [],
+  "mantel_r_uncensored": 0.47089367436137985,
+  "p_value_uncensored": 0.1218
+}

@@ -1,0 +1,46 @@
+mediated by the putative amino acid transporter AAT1. Nature Microbiology, 8(7), 1213–1226. 
+https://doi.org/10.1038/s41564-023-01377-z
+Amos, B., Aurrecoechea, C., Barba, M., Barreto, A., Basenko, E. Y., Bażant, W., Belnap, R., Blevins, A. S., Böhme, U., Brestelli, 
+J., Brunk, B. P., Caddick, M., Callan, D., Campbell, L., Christensen, M. B., Christophides, G. K., Crouch, K., Davis, K., 
+DeBarry, J., … Zheng, J. (2022). VEuPathDB: The eukaryotic pathogen, vector and host bioinformatics resource center. 
+Nucleic Acids Research, 50(D1), D898–D911. https://doi.org/10.1093/nar/gkab929
+Benjamini, Y., & Hochberg, Y. (1995). Controlling the false discovery rate: A practical and powerful approach to multiple 
+testing. Journal of the Royal Statistical Society. Series B (Methodological), 57(1), 289–300. 
+https://doi.org/10.1111/j.2517-6161.1995.tb02031.x
+Bhatia, G., Patterson, N., Sankararaman, S., & Price, A. L. (2013). Estimating and interpreting FST: The impact of rare variants. 
+Genome Research, 23(9), 1514–1521. https://doi.org/10.1101/gr.154831.113
+Chang, C. C., Chow, C. C., Tellier, L. C. A. M., Vattikuti, S., Purcell, S. M., & Lee, J. J. (2015). Second-generation PLINK: Rising to 
+the challenge of larger and richer datasets. GigaScience, 4, Article 7. https://doi.org/10.1186/s13742-015-0047-8
+Cingolani, P., Platts, A., Wang, L. L., Coon, M., Nguyen, T., Wang, L., Land, S. J., Lu, X., & Ruden, D. M. (2012). A program for 
+annotating and predicting the effects of single nucleotide polymorphisms, SnpEff: SNPs in the genome of Drosophila 
+melanogaster strain w1118; iso-2; iso-3. Fly, 6(2), 80–92. https://doi.org/10.4161/fly.19695
+Danecek, P., Bonfield, J. K., Liddle, J., Marshall, J., Ohan, V., Pollard, M. O., Whitwham, A., Keane, T., McCarthy, S. A., Davies, 
+R. M., & Li, H. (2021). Twelve years of SAMtools and BCFtools. GigaScience, 10(2), Article giab008. 
+https://doi.org/10.1093/gigascience/giab008
+Gautier, M. (2015). Genome-wide scan for adaptive divergence and association with population-specific covariates. 
+Genetics, 201(4), 1555–1579. https://doi.org/10.1534/genetics.115.181453
+Gower, J. C. (1966). Some distance properties of latent root and vector methods used in multivariate analysis. Biometrika, 
+53(3–4), 325–338. https://doi.org/10.1093/biomet/53.3-4.325
+Günther, T., & Coop, G. (2013). Robust identification of local adaptation from allele frequencies. Genetics, 195(1), 205–220. 
+https://doi.org/10.1534/genetics.113.152462
+Harris, C. R., Millman, K. J., van der Walt, S. J., Gommers, R., Virtanen, P., Cournapeau, D., Wieser, E., Taylor, J., Berg, S., 
+Smith, N. J., Kern, R., Picus, M., Hoyer, S., van Kerkwijk, M. H., Brett, M., Haldane, A., del Río, J. F., Wiebe, M., Peterson, 
+P., … Oliphant, T. E. (2020). Array programming with NumPy. Nature, 585(7825), 357–362. 
+https://doi.org/10.1038/s41586-020-2649-2
+Hudson, R. R., Slatkin, M., & Maddison, W. P. (1992). Estimation of levels of gene flow from DNA sequence data. Genetics, 
+132(2), 583–589. https://doi.org/10.1093/genetics/132.2.583
+Hunter, J. D. (2007). Matplotlib: A 2D graphics environment. Computing in Science & Engineering, 9(3), 90–95. 
+https://doi.org/10.1109/MCSE.2007.55
+Kruskal, W. H., & Wallis, W. A. (1952). Use of ranks in one-criterion variance analysis. Journal of the American Statistical 
+Association, 47(260), 583–621. https://doi.org/10.1080/01621459.1952.10483441
+Malaria Genomic Epidemiology Network (MalariaGEN). (2025). Pf8: An open dataset of Plasmodium falciparum genome 
+variation in 33,325 worldwide samples. Wellcome Open Research, 10, Article 325. 
+https://doi.org/10.12688/wellcomeopenres.24031.1
+MalariaGEN. (2023). Pf7: An open dataset of Plasmodium falciparum genome variation in 20,000 worldwide samples. 
+Wellcome Open Research, 8, Article 22. https://doi.org/10.12688/wellcomeopenres.18681.1
+MalariaGEN. (2025). Supplementary data to: Pf8: An open dataset of Plasmodium falciparum genome variation in 33,325 
+worldwide samples [Supplementary methods]. figshare. https://doi.org/10.6084/m9.figshare.29153447
+Manske, M., Miotto, O., Campino, S., Auburn, S., Almagro-Garcia, J., Maslen, G., O'Brien, J., Djimde, A., Doumbo, O., Zongo, 
+I., Ouedraogo, J.-B., Michon, P., Mueller, I., Siba, P., Nzila, A., Borrmann, S., Kiara, S. M., Marsh, K., Jiang, H., … 
+Kwiatkowski, D. P. (2012). Analysis of Plasmodium falciparum diversity in natural infections by deep sequencing. 
+Nature, 487(7407), 375–379. https://doi.org/10.1038/nature11174

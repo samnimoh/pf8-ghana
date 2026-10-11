@@ -1,0 +1,154 @@
+[
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      48,
+      48
+    ],
+    "new_paragraph_range": [
+      48,
+      48
+    ],
+    "old": [
+      "[Interpreted] Partial mitigation, reported in fairness. Both zone pairs that do share a study reproduce the direction of the overall polyclonality difference; within 1083-PF-GH-CONWAY, Guinea savanna is more polyclonal than the transitional zone (0.532 versus 0.500 - that is 25 of 47 against 25 of 50, computed on the 4,905 release-QC-pass isolates, since on the 1,900-isolate analysis set the polyclonal fraction is identically zero by construction), matching the overall ordering. That margin is three isolates wide in the denominator, the numerator being 25 in both arms, and should not be read as more than a direction. The zone ordering of polyclonality is therefore not purely a batch artefact. It is simply not separable from batch for the pairs that carry the largest differences."
+    ],
+    "new": [
+      "[Interpreted] Partial mitigation, reported in fairness. Both zone pairs that do share a study reproduce the direction of the overall polyclonality difference; within 1083-PF-GH-CONWAY, Guinea savanna is more polyclonal than the transitional zone (0.532 versus 0.500 - that is 25 of 47 against 25 of 50, computed on the 4,905 release-QC-pass isolates, since on the 1,900-isolate analysis set the polyclonal fraction is identically zero by construction), matching the overall ordering. That margin is three isolates wide in the denominator, the numerator being 25 in both arms, and should not be read as more than a direction. The zone ordering of polyclonality is therefore reproduced within the one zone pair that shares a study, which is a descriptive check and not a test of cause: holding zone constant still leaves collection year, finer geography, recruitment and host biology varying alongside study. The ordering is not separable from batch for the pairs that carry the largest differences."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      120,
+      120
+    ],
+    "new_paragraph_range": [
+      120,
+      120
+    ],
+    "old": [
+      "[Interpreted] The transmission-intensity gradient is therefore not purely a batch artefact. It is simply not separable from batch for the two pairs that carry the largest differences."
+    ],
+    "new": [
+      "[Interpreted] The direction of the gradient is therefore reproduced within the two zone pairs that share a study, which is a useful descriptive check. It does not establish that the gradient is not a batch artefact: within-zone comparisons hold zone constant while study still varies together with collection year, finer geography, recruitment and host biology. The gradient is not separable from batch for the two pairs that carry the largest differences."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      557,
+      560
+    ],
+    "new_paragraph_range": [
+      557,
+      557
+    ],
+    "old": [
+      "3 of 21 pairs have negative FST and are floored to zero:",
+      "    Ashanti - Volta:          -0.001037",
+      "    Eastern - Greater Accra:  -0.000203",
+      "    Greater Accra - Volta:    -0.000142"
+    ],
+    "new": [
+      "3 of 21 pairs have negative FST and are floored to zero:\n    Ashanti - Volta:          -0.001037\n    Eastern - Greater Accra:  -0.000203\n    Greater Accra - Volta:    -0.000142"
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      594,
+      594
+    ],
+    "new_paragraph_range": [
+      591,
+      591
+    ],
+    "old": [
+      "[Calculated] Every printed edge p-value is reproduced exactly, and the apparent anomalies are an artefact of how the tail was computed rather than of the data. An earlier version of this paragraph said that five of six values reproduced to three significant figures; that was wrong, and the corrected accounting follows. Recomputing every migration-edge p-value in m = 0 to 5 as a one-sided normal tail from the printed jackknife mean and standard error gives fifteen edges, of which thirteen carry a finite printed value and two print “< 2.22507 × 10⁻³⁰⁸”. That figure is exactly DBL_MIN, the smallest normal double-precision float, and it appears at m = 3 edge 2 (z = 10.53, stable tail 3.18 × 10⁻²⁶) and again at m = 4 edge 2 (z = 9.33, stable tail 5.45 × 10⁻²¹). Of the thirteen finite values, ten agree with a numerically stable tail to three significant figures. The other three, and both sentinels, are explained — and reproduced to the last printed digit — by computing the upper tail as 1 − Φ(z) in double precision. Immediately below 1 the doubles are spaced 1.1102 × 10⁻¹⁶ apart, so Φ(z) is quantised to multiples of that spacing and the tail recovered by subtraction can only take those values. At z = 7.843, 8.060 and 8.038 the formulation returns exactly 2.220446 × 10⁻¹⁵, 3.330669 × 10⁻¹⁶ and 4.440892 × 10⁻¹⁶ — which are the three printed values to every digit printed — against stable tails of 2.1995 × 10⁻¹⁵, 3.8147 × 10⁻¹⁶ and 4.5658 × 10⁻¹⁶. Once the true tail falls below half that spacing, Φ(z) rounds to exactly 1.0 and the difference is exactly zero; that happens at z = 9.33 and z = 10.53. This is rounding and cancellation, not underflow of the tail: the true tails there are 5.45 × 10⁻²¹ and 3.18 × 10⁻²⁶, both far above the smallest normal double, and the “< 2.22507 × 10⁻³⁰⁸” string is how TreeMix prints a computed zero rather than evidence that any quantity underflowed. A direct complementary-error-function evaluation would avoid the subtraction entirely. The conclusion is accordingly complete rather than partial. All fifteen printed values, the two zeroes included, are reproduced from the printed mean and standard error through that formulation, which a run that had not computed jackknife standard errors could not have produced, resolving a doubt raised by an earlier script snapshot lacking the -se flag. None of it changes a reported result: both sentinels belong to m = 3 and m = 4, neither of which is reported, and the two values the m = 2 choice rests on are 7.48 × 10⁻⁴ and a tail of order 10⁻¹⁶ whose exact digits affect no inference."
+    ],
+    "new": [
+      "[Calculated] Every printed edge p-value is accounted for by how the tail was computed, and the apparent anomalies are an artefact of that computation rather than of the data. An earlier version of this paragraph said that five of six values reproduced to three significant figures; that was wrong, and the corrected accounting follows. Recomputing every migration-edge p-value in m = 0 to 5 as a one-sided normal tail from the printed jackknife mean and standard error gives fifteen edges, of which thirteen carry a finite printed value and two print “< 2.22507 × 10⁻³⁰⁸”. That figure is exactly DBL_MIN, the smallest normal double-precision float, and it appears at m = 3 edge 2 (z = 10.53, stable tail 3.18 × 10⁻²⁶) and again at m = 4 edge 2 (z = 9.33, stable tail 5.45 × 10⁻²¹). Of the thirteen finite values, ten agree with a numerically stable tail to three significant figures. The other three, and both sentinels, are explained — and reproduced to the last printed digit — by computing the upper tail as 1 − Φ(z) in double precision. Immediately below 1 the doubles are spaced 1.1102 × 10⁻¹⁶ apart, so Φ(z) is quantised to multiples of that spacing and the tail recovered by subtraction can only take those values. At z = 7.843, 8.060 and 8.038 the formulation returns exactly 2.220446 × 10⁻¹⁵, 3.330669 × 10⁻¹⁶ and 4.440892 × 10⁻¹⁶ — which are the three printed values to every digit printed — against stable tails of 2.1995 × 10⁻¹⁵, 3.8147 × 10⁻¹⁶ and 4.5658 × 10⁻¹⁶. Once the true tail falls below half that spacing, Φ(z) rounds to exactly 1.0 and the difference is exactly zero; that happens at z = 9.33 and z = 10.53. This is rounding and cancellation, not underflow of the tail: the true tails there are 5.45 × 10⁻²¹ and 3.18 × 10⁻²⁶, both far above the smallest normal double, and the “< 2.22507 × 10⁻³⁰⁸” string is how TreeMix prints a computed zero rather than evidence that any quantity underflowed. A direct complementary-error-function evaluation would avoid the subtraction entirely. The accounting is therefore as follows. All fifteen outcomes reproduce to three significant figures under that formulation, and twelve of them — ten finite values and both zeroes — reproduce at their full displayed precision. The remaining three are moderate p-values rather than extreme tails: at m = 2 edge 1, for instance, the formulation returns 0.000747669 against a printed 0.000747653, a residual consistent with the printed mean and standard error being themselves rounded. Compatibility on this scale is strong evidence that the run computed jackknife standard errors, resolving a doubt raised by an earlier script snapshot lacking the -se flag. None of it changes a reported result: both sentinels belong to m = 3 and m = 4, neither of which is reported, and the two values the m = 2 choice rests on are 7.48 × 10⁻⁴ and a tail of order 10⁻¹⁶ whose exact digits affect no inference."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      729,
+      729
+    ],
+    "new_paragraph_range": [
+      726,
+      726
+    ],
+    "old": [
+      "[Interpreted] The containment corollary, correctly scoped. Because there is no detectable neutral barrier, there is no demographic barrier for a geographically targeted containment intervention to exploit, and an allele that establishes anywhere in Ghana has an unobstructed demographic route to the rest of the country. That remains a reasonable reading, and it is now the better supported for the absence of a robust distance effect: there is not even a weak isolation-by-distance gradient left to qualify it. It does not follow that spread will be uniform in rate or that a single site will see it first; the pfaat1, pfdhps and pfdhfr zone differences show that selection and drug pressure impose their own geography on top of free gene flow."
+    ],
+    "new": [
+      "[Interpreted] The containment corollary, correctly scoped. Because no neutral barrier is detectable at the retained common variants, this analysis supplies no evidence of a barrier for a geographically targeted containment intervention to exploit. That is an absence of evidence at the resolution these data permit, not a demonstration that parasite exchange across Ghana is unobstructed: a low differentiation estimate does not measure connectivity, and the study, geography and year confounding is not removed by it. That remains a reasonable reading, and it is now the better supported for the absence of a robust distance effect: there is not even a weak isolation-by-distance gradient left to qualify it. It does not follow that spread will be uniform in rate or that a single site will see it first; the pfaat1, pfdhps and pfdhfr zone differences show that selection and drug pressure impose their own geography on top of free gene flow."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      913,
+      918
+    ],
+    "new_paragraph_range": [
+      910,
+      910
+    ],
+    "old": [
+      "source /home/tools/anaconda3/etc/profile.d/conda.sh && conda activate spatial",
+      "cd /media/biodataA/pf8/gyadu/scripts",
+      "python check_env.py              # verifies packages and external binaries",
+      "bash run_all.sh --list           # lists the stages",
+      "bash run_all.sh                  # full pipeline, stages 1-9",
+      "bash run_all.sh --from 4 --parallel   # stages 5-8 concurrently after stage 4"
+    ],
+    "new": [
+      "source /home/tools/anaconda3/etc/profile.d/conda.sh && conda activate spatial\ncd /media/biodataA/pf8/gyadu/scripts\npython check_env.py              # verifies packages and external binaries\nbash run_all.sh --list           # lists the stages\nbash run_all.sh                  # full pipeline, stages 1-9\nbash run_all.sh --from 4 --parallel   # stages 5-8 concurrently after stage 4"
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      920,
+      926
+    ],
+    "new_paragraph_range": [
+      912,
+      912
+    ],
+    "old": [
+      "python step12_codon_panel.py          # resistance markers by reconstructed codon",
+      "python step11_batch_confounding.py    # study x zone confounding",
+      "python step13_sensitivity.py          # Fws and MAF threshold sensitivity, 6 scenarios",
+      "# Stage 3 on the 1,900-isolate analysis set; outputs take the suffix, originals are untouched:",
+      "python step03_umap.py --samples <analysis sample list> --suffix _qcset",
+      "# superseded, retained only to re-demonstrate the annotation-matching defect:",
+      "# python step10_resistance_panel.py"
+    ],
+    "new": [
+      "python step12_codon_panel.py          # resistance markers by reconstructed codon\npython step11_batch_confounding.py    # study x zone confounding\npython step13_sensitivity.py          # Fws and MAF threshold sensitivity, 6 scenarios\n\n# Stage 3 on the 1,900-isolate analysis set; outputs take the suffix, originals are untouched:\npython step03_umap.py --samples <analysis sample list> --suffix _qcset\n\n# superseded, retained only to re-demonstrate the annotation-matching defect:\n# python step10_resistance_panel.py"
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      930,
+      932
+    ],
+    "new_paragraph_range": [
+      916,
+      916
+    ],
+    "old": [
+      "python step03a_fetch_callset_zarr.py --validate-only \\",
+      "--validate-vcf ../data/Pf8_Ghana_Pf3D7_10_v3.vcf.gz \\",
+      "--validate-region Pf3D7_10_v3:400001-440000"
+    ],
+    "new": [
+      "python step03a_fetch_callset_zarr.py --validate-only \\\n--validate-vcf ../data/Pf8_Ghana_Pf3D7_10_v3.vcf.gz \\\n--validate-region Pf3D7_10_v3:400001-440000"
+    ]
+  }
+]

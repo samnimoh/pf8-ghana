@@ -1,0 +1,1219 @@
+[
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      1,
+      2
+    ],
+    "new_paragraph_range": [
+      1,
+      2
+    ],
+    "old": [
+      "Additional file 1 — Supplementary material for: Population structure and antimalarial resistance markers in Plasmodium falciparum across Ghana's agro-ecological zones",
+      "Full analysis record, methods detail, robustness checks and correction history"
+    ],
+    "new": [
+      "Additional file 1 — Supplementary material for: Population differentiation and antimalarial resistance-marker frequencies in Plasmodium falciparum across the agro-ecological zones of Ghana, 2009–2021",
+      "Full analysis record: methods detail, complete results, robustness checks and correction history"
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      9,
+      12
+    ],
+    "new_paragraph_range": [
+      9,
+      12
+    ],
+    "old": [
+      "What this document is. This document is the complete analysis record behind the main article. It carries the full methods detail, every robustness check that was run, the limitations register, and the record of defects found and corrected during the analysis. It is supplied so that any number in the article can be traced to the output that produced it, and so that the corrections made along the way are on the record rather than invisible.",
+      "Numbering. All display items have been renumbered sequentially in the order they appear here: the 22 figures are Figure S1 to Figure S22 and the 44 tables are Table S1 to Table S44. The original section numbering is unchanged, so cross-references of the form “Section 6.9” still resolve within this document. Two figures and two tables were originally placed out of numeric sequence to avoid disturbing earlier numbering; the sequential S-numbering removes that artefact.",
+      "References. Section 11 is the reference list. Every entry in it was checked against a primary source — the publisher’s deposit, the journal’s record, the archive record or the issuing organisation’s page — rather than against a citation aggregator.",
+      "Where to look. Sections 3 and 5 give the methods and the analytical decisions in full; Section 6 the complete results; Section 8 the robustness checks, including the six-scenario threshold sensitivity analysis; Section 9 the limitations register; and Section 12 the appendices, which include the software environment, the output inventory, the reproduction instructions and the audit and correction record."
+    ],
+    "new": [
+      "What this document is. This document is the complete analysis record behind the main article: the full methods detail, every robustness check that was run, the limitations register, and the record of defects found and corrected during the analysis. It is supplied so that any number in the article can be traced to the output that produced it, and so that the corrections made along the way are on the record rather than invisible.",
+      "Numbering. Display items are numbered sequentially in the order they appear: Figure S1 to Figure S23 and Table S1 to Table S52. Every caption carries its own number. In the working report from which this document derives, 6 labels had each been used for more than one display item and three carried letter suffixes, so a cross-reference could be ambiguous; the numbering here removes that, and each cross-reference was bound to the nearest caption carrying its original label. Section numbering is unchanged, so references of the form “Section 6.9” still resolve within this document.",
+      "References. Section 11 is the reference list. Every entry was checked against a primary source — the publisher’s deposit, the journal’s record, the archive record or the issuing organisation’s page — rather than against a citation aggregator.",
+      "Where to look. Sections 3 and 5 give the methods and analytical decisions in full; Section 6 the complete results; Section 8 the robustness checks, including the six-scenario threshold sensitivity analysis; Section 9 the limitations register; and Section 12 the appendices."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      52,
+      52
+    ],
+    "new_paragraph_range": [
+      52,
+      52
+    ],
+    "old": [
+      "[Interpreted] Partial mitigation, reported in fairness. Both zone pairs that do share a study reproduce the direction of the overall polyclonality difference; within 1083-PF-GH-CONWAY, Guinea savanna is more polyclonal than the transitional zone (0.532 versus 0.500 - that is 25 of 47 against 25 of 50, computed on the 4,905 release-QC-pass isolates, since on the 1,900-isolate analysis set the polyclonal fraction is identically zero by construction), matching the overall ordering. That margin is three isolates wide in the denominator, the numerator being 25 in both arms, and should not be read as more than a direction. The zone ordering of polyclonality is therefore not purely a batch artefact. It is simply not separable from batch for the pairs that carry the largest differences."
+    ],
+    "new": [
+      "[Interpreted] Partial mitigation, reported in fairness. Both zone pairs that do share a study reproduce the direction of the overall polyclonality difference; within 1083-PF-GH-CONWAY, Guinea savanna is more polyclonal than the transitional zone (0.532 versus 0.500 - that is 25 of 47 against 25 of 50, computed on the 4,905 release-QC-pass isolates, since on the 1,900-isolate analysis set the polyclonal fraction is identically zero by construction), matching the overall ordering. That margin is three isolates wide in the denominator, the numerator being 25 in both arms, and should not be read as more than a direction. The zone ordering of polyclonality is therefore reproduced within the one zone pair that shares a study, which is a descriptive check and not a test of cause: holding zone constant still leaves collection year, finer geography, recruitment and host biology varying alongside study. The ordering is not separable from batch for the pairs that carry the largest differences."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      124,
+      124
+    ],
+    "new_paragraph_range": [
+      124,
+      124
+    ],
+    "old": [
+      "[Interpreted] The transmission-intensity gradient is therefore not purely a batch artefact. It is simply not separable from batch for the two pairs that carry the largest differences."
+    ],
+    "new": [
+      "[Interpreted] The direction of the gradient is therefore reproduced within the two zone pairs that share a study, which is a useful descriptive check. It does not establish that the gradient is not a batch artefact: within-zone comparisons hold zone constant while study still varies together with collection year, finer geography, recruitment and host biology. The gradient is not separable from batch for the two pairs that carry the largest differences."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      173,
+      173
+    ],
+    "new_paragraph_range": [
+      173,
+      173
+    ],
+    "old": [
+      "[Observed] The cascade, defined once. Stage 10's panel held 44 canonical codon-allele records, covering 41 distinct protein changes, in eight of the nine panel genes (pfcoronin contributed none); 21 were polymorphic in these 1,900 isolates; 6 of the 21 survived the ingest mask — the in_genomewide_scan field, defined at step10_resistance_panel.py:349 as numalt == 1, i.e. \"would have survived the ingest filter\"; and 3 reached the MAF-filtered scan matrix: pfdhfr C59R, pfdhfr N51I and pfaat1 S258L. The other three that passed the mask — pfcrt I356T, pfmdr1 D1246Y and pfcrt N326S — were then cut by MAF ≥ 0.05 at frequencies of 0.016, 0.011 and 0.008. These four numbers (44, 21, 6, 3) carry exactly this meaning wherever they appear in this manuscript, and the Abstract, Table S1, Section 6.8.3, Table S27 and Section 10.1 use this wording. In particular, the genome-wide scan did test three of the 21 polymorphic canonical codons, and no pfcrt, pfmdr1, pfdhps or pfk13 codon reached the MAF-filtered scan matrix — pfdhps because nothing survived the ingest mask, the others because what survived was either too rare (pfcrt I356T, pfcrt N326S and pfmdr1 D1246Y all passed the mask, reached the genome-wide store and were then cut by MAF at 0.016, 0.011 and 0.008) or monomorphic here (six pfk13 codons — F446I, P441L, Y493H, P553L, R561H, A675V — passed the mask and were fetched and found invariant). \"Could not test at all\" would be true of the final MAF-filtered scan matrix but false of ascertainment, which is the distinction this paragraph exists to draw, so the stronger wording is not used."
+    ],
+    "new": [
+      "[Observed] The cascade, defined once. Stage 10's panel held 44 canonical codon-allele records, covering 41 distinct protein changes, in eight of the nine panel genes (pfcoronin contributed none); 21 were polymorphic in these 1,900 isolates; 6 of the 21 survived the ingest mask — the in_genomewide_scan field, defined at step10_resistance_panel.py:349 as numalt == 1, i.e. \"would have survived the ingest filter\"; and 3 reached the MAF-filtered scan matrix: pfdhfr C59R, pfdhfr N51I and pfaat1 S258L. The other three that passed the mask — pfcrt I356T, pfmdr1 D1246Y and pfcrt N326S — were then cut by MAF ≥ 0.05 at frequencies of 0.016, 0.011 and 0.008. These four numbers (44, 21, 6, 3) carry exactly this meaning wherever they appear in this manuscript, and the Abstract, Table S1, Section 6.8.3, Table S29 and Section 10.1 use this wording. In particular, the genome-wide scan did test three of the 21 polymorphic canonical codons, and no pfcrt, pfmdr1, pfdhps or pfk13 codon reached the MAF-filtered scan matrix — pfdhps because nothing survived the ingest mask, the others because what survived was either too rare (pfcrt I356T, pfcrt N326S and pfmdr1 D1246Y all passed the mask, reached the genome-wide store and were then cut by MAF at 0.016, 0.011 and 0.008) or monomorphic here (six pfk13 codons — F446I, P441L, Y493H, P553L, R561H, A675V — passed the mask and were fetched and found invariant). \"Could not test at all\" would be true of the final MAF-filtered scan matrix but false of ascertainment, which is the distinction this paragraph exists to draw, so the stronger wording is not used."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      539,
+      540
+    ],
+    "new_paragraph_range": [
+      539,
+      540
+    ],
+    "old": [
+      "Figure S10. UMAP, t-SNE and PCoA of the same 4,905 x 4,905 Ghanaian distance matrix, coloured by agro-ecological zone. Point counts per zone are in the legend. PCoA axes carry their variance proportions; UMAP and t-SNE axes are in arbitrary units and inter-cluster distances in those two panels carry no quantitative meaning. Note that this is the pre-QC sample of 4,905 isolates; Figure S10a is the same three methods on the 1,900 analysed elsewhere. Generated by scripts/step03_umap.py.",
+      "Table S23. Quantitative comparison of the three ordinations on the 4,905 pre-QC isolates (results/dimred_comparison.csv). Trustworthiness is computed with k = 30 neighbours; the Spearman correlation uses a 2,000-isolate random subset; silhouette is computed against zone labels, where values near zero indicate overlapping groups and negative values indicate that isolates sit closer to other zones than to their own. Table S23a gives the same statistics on the 1,900-isolate analysis set."
+    ],
+    "new": [
+      "Figure S10. UMAP, t-SNE and PCoA of the same 4,905 x 4,905 Ghanaian distance matrix, coloured by agro-ecological zone. Point counts per zone are in the legend. PCoA axes carry their variance proportions; UMAP and t-SNE axes are in arbitrary units and inter-cluster distances in those two panels carry no quantitative meaning. Note that this is the pre-QC sample of 4,905 isolates; Figure S11 is the same three methods on the 1,900 analysed elsewhere. Generated by scripts/step03_umap.py.",
+      "Table S23. Quantitative comparison of the three ordinations on the 4,905 pre-QC isolates (results/dimred_comparison.csv). Trustworthiness is computed with k = 30 neighbours; the Spearman correlation uses a 2,000-isolate random subset; silhouette is computed against zone labels, where values near zero indicate overlapping groups and negative values indicate that isolates sit closer to other zones than to their own. Table S24 gives the same statistics on the 1,900-isolate analysis set."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      544,
+      547
+    ],
+    "new_paragraph_range": [
+      544,
+      547
+    ],
+    "old": [
+      "Table S23a. The three ordinations recomputed on the 1,900-isolate analysis set, beside the published 4,905-isolate run (results/dimred_comparison.csv, corrected/dimred_comparison_qcset.csv). Both columns read the same published Pf8 distance matrix; the right-hand column re-slices it to the analysis samples. Settings are identical (trustworthiness at k = 30; silhouette against zone labels). This table is new in this revision and is lettered so that the existing table numbering is unchanged.",
+      "Figure S10a. UMAP, t-SNE and PCoA of the 1,900 x 1,900 submatrix of the same Pf8 distance matrix — the analysis set used in Sections 6.1 and 6.4 to 6.7 — coloured by agro-ecological zone, with point counts per zone in the legend. Compare Figure S10, which is the same three methods on the 4,905 pre-QC isolates. PCoA axes carry 1.1 and 0.9 per cent of positive-eigenvalue variation; UMAP and t-SNE axes are in arbitrary units and inter-cluster distances in those two panels carry no quantitative meaning. The legend retains the misspelt source-layer label \"Decidous forest\" (Section 2.1.1). Generated by scripts/step03_umap.py with --samples interim/analysis_samples.csv and --suffix _qcset.",
+      "[Interpreted] Removing the polyclonal and clonally redundant isolates does not sharpen the structure. The silhouette by zone becomes slightly more negative, -0.020 against -0.016, which is the opposite of what would be seen if zone signal had been diluted by mixed infections. The small rises in trustworthiness are not evidence of better-resolved structure either: trustworthiness is computed on a sample 61 per cent smaller, where fewer isolates compete for each neighbour rank, and all six values still sit near 0.5. The one movement with a plain reading is the fall in the PCoA distance correlation, 0.322 to 0.287: the best-performing embedding reconstructs the distances slightly less well on the filtered set. A tight detached clump also remains in both the UMAP and the t-SNE panels of Figure S10a after the filters, so the 77 clonally redundant isolates and the polyclonal infections do not account for the clumping noted above; what does is still not established. The substantive gain here is one of reporting rather than of result: the ordinations can now be read on the same 1,900 isolates as the rest of Section 6, and on that sample they say what they said before.",
+      "Not an independent confirmation. The ordinations read a different input from Sections 6.4 to 6.7 — the published Pf8 mean genotype distance matrix, not the 3,916-SNP panel built here — so their agreement with those sections remains weak corroboration rather than a replication, and that is unchanged by the re-run. The sample objection, however, is now answered. The published run is computed over isolates that include the polyclonal and clonally redundant infections the rest of the analysis excludes, and polyclonality itself varies by zone (Section 6.2); restricting to the 1,900 analysis-set isolates removes that difference, and the near-zero silhouette survives it (Table S23a)."
+    ],
+    "new": [
+      "Table S24. The three ordinations recomputed on the 1,900-isolate analysis set, beside the published 4,905-isolate run (results/dimred_comparison.csv, corrected/dimred_comparison_qcset.csv). Both columns read the same published Pf8 distance matrix; the right-hand column re-slices it to the analysis samples. Settings are identical (trustworthiness at k = 30; silhouette against zone labels). This table is new in this revision and is lettered so that the existing table numbering is unchanged.",
+      "Figure S11. UMAP, t-SNE and PCoA of the 1,900 x 1,900 submatrix of the same Pf8 distance matrix — the analysis set used in Sections 6.1 and 6.4 to 6.7 — coloured by agro-ecological zone, with point counts per zone in the legend. Compare Figure S10, which is the same three methods on the 4,905 pre-QC isolates. PCoA axes carry 1.1 and 0.9 per cent of positive-eigenvalue variation; UMAP and t-SNE axes are in arbitrary units and inter-cluster distances in those two panels carry no quantitative meaning. The legend retains the misspelt source-layer label \"Decidous forest\" (Section 2.1.1). Generated by scripts/step03_umap.py with --samples interim/analysis_samples.csv and --suffix _qcset.",
+      "[Interpreted] Removing the polyclonal and clonally redundant isolates does not sharpen the structure. The silhouette by zone becomes slightly more negative, -0.020 against -0.016, which is the opposite of what would be seen if zone signal had been diluted by mixed infections. The small rises in trustworthiness are not evidence of better-resolved structure either: trustworthiness is computed on a sample 61 per cent smaller, where fewer isolates compete for each neighbour rank, and all six values still sit near 0.5. The one movement with a plain reading is the fall in the PCoA distance correlation, 0.322 to 0.287: the best-performing embedding reconstructs the distances slightly less well on the filtered set. A tight detached clump also remains in both the UMAP and the t-SNE panels of Figure S11 after the filters, so the 77 clonally redundant isolates and the polyclonal infections do not account for the clumping noted above; what does is still not established. The substantive gain here is one of reporting rather than of result: the ordinations can now be read on the same 1,900 isolates as the rest of Section 6, and on that sample they say what they said before.",
+      "Not an independent confirmation. The ordinations read a different input from Sections 6.4 to 6.7 — the published Pf8 mean genotype distance matrix, not the 3,916-SNP panel built here — so their agreement with those sections remains weak corroboration rather than a replication, and that is unchanged by the re-run. The sample objection, however, is now answered. The published run is computed over isolates that include the polyclonal and clonally redundant infections the rest of the analysis excludes, and polyclonality itself varies by zone (Section 6.2); restricting to the 1,900 analysis-set isolates removes that difference, and the near-zero silhouette survives it (Table S24)."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      550,
+      551
+    ],
+    "new_paragraph_range": [
+      550,
+      551
+    ],
+    "old": [
+      "Figure S11. Pairwise Hudson FST between agro-ecological zones (3,916 SNPs, 1,900 isolates). Note the colour-bar scale: the maximum value is 0.0023. Generated by scripts/step04b_fst.py.",
+      "Table S24. Pairwise Hudson FST, ordered by magnitude (results/fst_pairwise.csv). Standard errors are from a block jackknife. Great-circle distances between zone centroids are from results/geographic_distance_km_zone.csv. One of the six confidence intervals spans zero: Guinea savanna against the transitional zone. The small-sample caveat for the transitional zone rests on its n = 25 and its wide standard errors, not on its confidence intervals, two of which now exclude zero."
+    ],
+    "new": [
+      "Figure S12. Pairwise Hudson FST between agro-ecological zones (3,916 SNPs, 1,900 isolates). Note the colour-bar scale: the maximum value is 0.0023. Generated by scripts/step04b_fst.py.",
+      "Table S25. Pairwise Hudson FST, ordered by magnitude (results/fst_pairwise.csv). Standard errors are from a block jackknife. Great-circle distances between zone centroids are from results/geographic_distance_km_zone.csv. One of the six confidence intervals spans zero: Guinea savanna against the transitional zone. The small-sample caveat for the transitional zone rests on its n = 25 and its wide standard errors, not on its confidence intervals, two of which now exclude zero."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      561,
+      565
+    ],
+    "new_paragraph_range": [
+      561,
+      562
+    ],
+    "old": [
+      "3 of 21 pairs have negative FST and are floored to zero:",
+      "    Ashanti - Volta:          -0.001037",
+      "    Eastern - Greater Accra:  -0.000203",
+      "    Greater Accra - Volta:    -0.000142",
+      "Table S25. The region-level Mantel test with and without the flooring of three negative pairwise FST values (results/mantel_result_region.json). At zone level no pair is negative, so the two versions coincide at r = 0.4709, p = 0.1218."
+    ],
+    "new": [
+      "3 of 21 pairs have negative FST and are floored to zero:\n    Ashanti - Volta:          -0.001037\n    Eastern - Greater Accra:  -0.000203\n    Greater Accra - Volta:    -0.000142",
+      "Table S26. The region-level Mantel test with and without the flooring of three negative pairwise FST values (results/mantel_result_region.json). At zone level no pair is negative, so the two versions coincide at r = 0.4709, p = 0.1218."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      567,
+      567
+    ],
+    "new_paragraph_range": [
+      564,
+      564
+    ],
+    "old": [
+      "Figure S12. Isolation by distance at administrative-region level: linearised differentiation FST/(1 - FST) against log great-circle distance, 21 region pairs, with the least-squares line. Mantel r = 0.427, p = 0.025 (9,999 permutations, one-sided, seed 42). The three points lying exactly on zero (Ashanti-Volta, Eastern-Greater Accra, Greater Accra-Volta) are the censored negative FST pairs listed above, plotted at their floored value. This is the baseline scenario only; Table S26a shows that the fitted relationship is not significant under four of the six threshold choices. Generated by scripts/step06_mantel.py."
+    ],
+    "new": [
+      "Figure S13. Isolation by distance at administrative-region level: linearised differentiation FST/(1 - FST) against log great-circle distance, 21 region pairs, with the least-squares line. Mantel r = 0.427, p = 0.025 (9,999 permutations, one-sided, seed 42). The three points lying exactly on zero (Ashanti-Volta, Eastern-Greater Accra, Greater Accra-Volta) are the censored negative FST pairs listed above, plotted at their floored value. This is the baseline scenario only; Table S28 shows that the fitted relationship is not significant under four of the six threshold choices. Generated by scripts/step06_mantel.py."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      569,
+      569
+    ],
+    "new_paragraph_range": [
+      566,
+      566
+    ],
+    "old": [
+      "Table S26. Leave-one-region-out Mantel jackknife (results/mantel_jackknife_region.csv). The result is significant in 4 of the 7 replicates. At zone level the equivalent jackknife is significant in 0 of 4 replicates. This jackknife varies which populations enter the test; Table S26a varies the thresholds that decide which isolates and which sites exist at all."
+    ],
+    "new": [
+      "Table S27. Leave-one-region-out Mantel jackknife (results/mantel_jackknife_region.csv). The result is significant in 4 of the 7 replicates. At zone level the equivalent jackknife is significant in 0 of 4 replicates. This jackknife varies which populations enter the test; Table S28 varies the thresholds that decide which isolates and which sites exist at all."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      572,
+      574
+    ],
+    "new_paragraph_range": [
+      569,
+      571
+    ],
+    "old": [
+      "Table S26a. Threshold sensitivity of the region-level Mantel test and of maximum pairwise FST (results/sensitivity_summary.csv, scripts/step13_sensitivity.py). Only the named threshold differs from the baseline in each row. \"p (as run)\" floors negative pairwise FST to zero, as step06_mantel.py does; \"p (uncensored)\" retains them, following Table S25. Negative pairs floored, in row order: 3, 4, 3, 0, 4, 4. All tests are one-sided over 9,999 permutations at seed 42. This table is new in this revision and is lettered so that the existing table numbering is unchanged.",
+      "[Observed] The region-level Mantel test is significant in 2 of the 6 scenarios. It holds at the published thresholds (p = 0.0252) and marginally at MAF >= 0.02 (p = 0.0467). It fails at every relaxation of the Fws cut — p = 0.0874 at 0.90, 0.1687 at 0.80, 0.1792 with no monoclonality filter at all — and at MAF >= 0.01 (p = 0.0617). On the uncensored test, which Table S25 reports beside the floored one as standing practice, only the baseline clears 0.05: the MAF >= 0.02 scenario moves to p = 0.0502. The correlation itself does not simply weaken with every change — it is 0.432 and 0.434 in the two MAF scenarios, slightly above the baseline 0.427 — so what the relaxations mainly do is remove the permutation significance, not reverse the sign of the relationship.",
+      "Isolation by distance is withdrawn as a supported result. Two checks now bear on this test, they vary different things, and they agree. The leave-one-region-out jackknife (Table S26) finds it significant in 4 of 7 replicates, with significance collapsing whenever the region defining either end of the distance range is dropped — Upper East at the long end, Greater Accra or Eastern at the short end. The threshold sensitivity (Table S26a) finds it significant in 2 of 6 scenarios, and the relaxation that most directly tests the filter doing the most work — removing the Fws cut, which more than doubles the isolate count to 4,403 — moves p from 0.0252 to 0.1792. The honest statement is that the isolation-by-distance result holds at the published thresholds and almost nowhere else. The original manuscript's \"weak but detectable\" distance effect, retained through every earlier revision of this section including the one that reported the jackknife improving from 2 of 7 to 4 of 7, cannot be retained now, and the grading of this result in Sections 1, 7 and 10 as supported or moderately supported must change with it. This is the only positive spatial finding in the analysis and it is the one that did not survive the two checks the audit identified as most needed. It is reported here in full rather than deleted — the point estimate at the published thresholds is unchanged and a reader is entitled to it — but it should not be cited as evidence of distance-limited gene flow in Ghana."
+    ],
+    "new": [
+      "Table S28. Threshold sensitivity of the region-level Mantel test and of maximum pairwise FST (results/sensitivity_summary.csv, scripts/step13_sensitivity.py). Only the named threshold differs from the baseline in each row. \"p (as run)\" floors negative pairwise FST to zero, as step06_mantel.py does; \"p (uncensored)\" retains them, following Table S26. Negative pairs floored, in row order: 3, 4, 3, 0, 4, 4. All tests are one-sided over 9,999 permutations at seed 42. This table is new in this revision and is lettered so that the existing table numbering is unchanged.",
+      "[Observed] The region-level Mantel test is significant in 2 of the 6 scenarios. It holds at the published thresholds (p = 0.0252) and marginally at MAF >= 0.02 (p = 0.0467). It fails at every relaxation of the Fws cut — p = 0.0874 at 0.90, 0.1687 at 0.80, 0.1792 with no monoclonality filter at all — and at MAF >= 0.01 (p = 0.0617). On the uncensored test, which Table S26 reports beside the floored one as standing practice, only the baseline clears 0.05: the MAF >= 0.02 scenario moves to p = 0.0502. The correlation itself does not simply weaken with every change — it is 0.432 and 0.434 in the two MAF scenarios, slightly above the baseline 0.427 — so what the relaxations mainly do is remove the permutation significance, not reverse the sign of the relationship.",
+      "Isolation by distance is withdrawn as a supported result. Two checks now bear on this test, they vary different things, and they agree. The leave-one-region-out jackknife (Table S27) finds it significant in 4 of 7 replicates, with significance collapsing whenever the region defining either end of the distance range is dropped — Upper East at the long end, Greater Accra or Eastern at the short end. The threshold sensitivity (Table S28) finds it significant in 2 of 6 scenarios, and the relaxation that most directly tests the filter doing the most work — removing the Fws cut, which more than doubles the isolate count to 4,403 — moves p from 0.0252 to 0.1792. The honest statement is that the isolation-by-distance result holds at the published thresholds and almost nowhere else. The original manuscript's \"weak but detectable\" distance effect, retained through every earlier revision of this section including the one that reported the jackknife improving from 2 of 7 to 4 of 7, cannot be retained now, and the grading of this result in Sections 1, 7 and 10 as supported or moderately supported must change with it. This is the only positive spatial finding in the analysis and it is the one that did not survive the two checks the audit identified as most needed. It is reported here in full rather than deleted — the point estimate at the published thresholds is unchanged and a reader is entitled to it — but it should not be cited as evidence of distance-limited gene flow in Ghana."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      576,
+      576
+    ],
+    "new_paragraph_range": [
+      573,
+      573
+    ],
+    "old": [
+      "[Interpreted] Three further qualifications apply to the Mantel tests themselves. First, the zone-level test has the larger correlation but the larger p-value, which is a power effect rather than a contradiction: with four populations only 4! = 24 distinct orderings exist, so the finest attainable p-value is 1/24 = 0.042 and significance requires essentially the single best permutation. The region-level test, with 5,040 orderings, is the better powered of the two and is the one reported above. Second, the zone-level p-value is reported as a Monte Carlo estimate from 9,999 permutations when the exact value is enumerable over all 24 orderings; this remains outstanding and the estimate should be replaced by the exact figure. Third, several of the 21 region pairs rest on small samples (Volta 21 isolates, Brong Ahafo 25, Eastern 34), and the scatter in Figure S12 is correspondingly wide."
+    ],
+    "new": [
+      "[Interpreted] Three further qualifications apply to the Mantel tests themselves. First, the zone-level test has the larger correlation but the larger p-value, which is a power effect rather than a contradiction: with four populations only 4! = 24 distinct orderings exist, so the finest attainable p-value is 1/24 = 0.042 and significance requires essentially the single best permutation. The region-level test, with 5,040 orderings, is the better powered of the two and is the one reported above. Second, the zone-level p-value is reported as a Monte Carlo estimate from 9,999 permutations when the exact value is enumerable over all 24 orderings; this remains outstanding and the estimate should be replaced by the exact figure. Third, several of the 21 region pairs rest on small samples (Volta 21 isolates, Brong Ahafo 25, Eastern 34), and the scatter in Figure S13 is correspondingly wide."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      580,
+      581
+    ],
+    "new_paragraph_range": [
+      577,
+      578
+    ],
+    "old": [
+      "Table S27. ADMIXTURE 10-fold cross-validation error, K = 1-8 (logs/admixture_K*.out). Lower is better. K = 1 is not part of the supplied sweep and was added so the improvement from admitting structure at all could be measured. The total range across K = 1-8 is 0.00563, 0.67 per cent of the error value; the improvement from K = 1 to K = 2 is 0.00459, 0.54 per cent.",
+      "Figure S13. ADMIXTURE cross-validation error against K. Two warnings about reading this plot. The y-axis is autoscaled over a range of 0.0056, so the apparent steepness is an artefact of the axis limits: the full range across all K is 0.67 per cent of the error value. And K = 1 is not plotted, because the sweep in config.py runs K = 2-8 and the K = 1 reference was run separately; it would sit at 0.84384, between the K = 6 and K = 7 points. Read Table S27 rather than the curve. Generated by scripts/step05c_plot_admixture.py."
+    ],
+    "new": [
+      "Table S29. ADMIXTURE 10-fold cross-validation error, K = 1-8 (logs/admixture_K*.out). Lower is better. K = 1 is not part of the supplied sweep and was added so the improvement from admitting structure at all could be measured. The total range across K = 1-8 is 0.00563, 0.67 per cent of the error value; the improvement from K = 1 to K = 2 is 0.00459, 0.54 per cent.",
+      "Figure S14. ADMIXTURE cross-validation error against K. Two warnings about reading this plot. The y-axis is autoscaled over a range of 0.0056, so the apparent steepness is an artefact of the axis limits: the full range across all K is 0.67 per cent of the error value. And K = 1 is not plotted, because the sweep in config.py runs K = 2-8 and the K = 1 reference was run separately; it would sit at 0.84384, between the K = 6 and K = 7 points. Read Table S29 rather than the curve. Generated by scripts/step05c_plot_admixture.py."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      584,
+      585
+    ],
+    "new_paragraph_range": [
+      581,
+      582
+    ],
+    "old": [
+      "Table S28. K = 2 minor-component ancestry by zone (results/admixture/Q_K2.csv). Kruskal-Wallis across all four zones: H = 105.4, p = 1.05 x 10⁻²². Effect size: eta-squared 0.019 from the one-way ANOVA, rank-based epsilon-squared 0.054.",
+      "Figure S14. ADMIXTURE ancestry proportions, K = 1-8, with isolates ordered by zone (n = 1,900). Each vertical bar is one isolate. No K produces components that correspond to zone boundaries as discrete blocks; the significant between-zone difference reported in Table S28 is a shift of about four percentage points in the mean of the minor component and is not visible at this scale. Generated by scripts/step05c_plot_admixture.py."
+    ],
+    "new": [
+      "Table S30. K = 2 minor-component ancestry by zone (results/admixture/Q_K2.csv). Kruskal-Wallis across all four zones: H = 105.4, p = 1.05 x 10⁻²². Effect size: eta-squared 0.019 from the one-way ANOVA, rank-based epsilon-squared 0.054.",
+      "Figure S15. ADMIXTURE ancestry proportions, K = 1-8, with isolates ordered by zone (n = 1,900). Each vertical bar is one isolate. No K produces components that correspond to zone boundaries as discrete blocks; the significant between-zone difference reported in Table S30 is a shift of about four percentage points in the mean of the minor component and is not visible at this scale. Generated by scripts/step05c_plot_admixture.py."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      587,
+      587
+    ],
+    "new_paragraph_range": [
+      584,
+      584
+    ],
+    "old": [
+      "[Interpreted] The correction works in the analysis's favour. The ordering of zone means, south high and north low, is the same ordering as the pairwise FST ranking in Table S24 and the same direction as the region-level Mantel in Section 6.5. Unlike the Mantel it is not driven by a single population and it has not been shown to depend on the filtering thresholds, and unlike the FST comparisons it has been shown to survive adjustment for collection year. With isolation by distance withdrawn (Section 6.5), it is now the only directional south-north signal in the analysis that rests on more than one contrast, and the original text discarded it."
+    ],
+    "new": [
+      "[Interpreted] The correction works in the analysis's favour. The ordering of zone means, south high and north low, is the same ordering as the pairwise FST ranking in Table S25 and the same direction as the region-level Mantel in Section 6.5. Unlike the Mantel it is not driven by a single population and it has not been shown to depend on the filtering thresholds, and unlike the FST comparisons it has been shown to survive adjustment for collection year. With isolation by distance withdrawn (Section 6.5), it is now the only directional south-north signal in the analysis that rests on more than one contrast, and the original text discarded it."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      591,
+      591
+    ],
+    "new_paragraph_range": [
+      588,
+      588
+    ],
+    "old": [
+      "Table S29. TreeMix fit against number of migration edges (results/treemix/model_comparison.csv). Variance explained is computed over the six off-diagonal between-population covariances, matching TreeMix's own definition. All six models converged. These are the final-run values; the manuscript's 0.876 at m = 0 and 0.935 at m = 1 came from the superseded run and should not be quoted."
+    ],
+    "new": [
+      "Table S31. TreeMix fit against number of migration edges (results/treemix/model_comparison.csv). Variance explained is computed over the six off-diagonal between-population covariances, matching TreeMix's own definition. All six models converged. These are the final-run values; the manuscript's 0.876 at m = 0 and 0.935 at m = 1 came from the superseded run and should not be quoted."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      593,
+      593
+    ],
+    "new_paragraph_range": [
+      590,
+      590
+    ],
+    "old": [
+      "Table S30. Migration-edge weights, block-jackknife standard errors and p-values (results/treemix/treemix_m*.treeout.gz). The third edge admitted at m = 3 is indistinguishable from zero: its standard error is more than twice its weight."
+    ],
+    "new": [
+      "Table S32. Migration-edge weights, block-jackknife standard errors and p-values (results/treemix/treemix_m*.treeout.gz). The third edge admitted at m = 3 is indistinguishable from zero: its standard error is more than twice its weight."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      596,
+      596
+    ],
+    "new_paragraph_range": [
+      593,
+      593
+    ],
+    "old": [
+      "Figure S15. TreeMix model fit against migration edges. Left: variance explained, with the 0.998 reference line dotted and the m <= 2 region shaded as the range four populations can identify. Right: log likelihood, which rises monotonically with m by construction and therefore cannot by itself select a model. The diamond marking m = 3 as the selection across the full sweep is the plateau rule's choice and remains that criterion's preference; the edge p-values in Table S30 support m = 2 instead, so the two criteria disagree and m = 2 is a stated model choice rather than a superseding result. Generated by scripts/step07c_plot_treemix.py."
+    ],
+    "new": [
+      "Figure S16. TreeMix model fit against migration edges. Left: variance explained, with the 0.998 reference line dotted and the m <= 2 region shaded as the range four populations can identify. Right: log likelihood, which rises monotonically with m by construction and therefore cannot by itself select a model. The diamond marking m = 3 as the selection across the full sweep is the plateau rule's choice and remains that criterion's preference; the edge p-values in Table S32 support m = 2 instead, so the two criteria disagree and m = 2 is a stated model choice rather than a superseding result. Generated by scripts/step07c_plot_treemix.py."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      598,
+      598
+    ],
+    "new_paragraph_range": [
+      595,
+      595
+    ],
+    "old": [
+      "[Calculated] Every printed edge p-value is reproduced exactly, and the apparent anomalies are an artefact of how the tail was computed rather than of the data. An earlier version of this paragraph said that five of six values reproduced to three significant figures; that was wrong, and the corrected accounting follows. Recomputing every migration-edge p-value in m = 0 to 5 as a one-sided normal tail from the printed jackknife mean and standard error gives fifteen edges, of which thirteen carry a finite printed value and two print “< 2.22507 × 10⁻³⁰⁸”. That figure is exactly DBL_MIN, the smallest normal double-precision float, and it appears at m = 3 edge 2 (z = 10.53, stable tail 3.18 × 10⁻²⁶) and again at m = 4 edge 2 (z = 9.33, stable tail 5.45 × 10⁻²¹). Of the thirteen finite values, ten agree with a numerically stable tail to three significant figures. The other three, and both sentinels, are explained — and reproduced to the last printed digit — by computing the upper tail as 1 − Φ(z) in double precision. Immediately below 1 the doubles are spaced 1.1102 × 10⁻¹⁶ apart, so Φ(z) is quantised to multiples of that spacing and the tail recovered by subtraction can only take those values. At z = 7.843, 8.060 and 8.038 the formulation returns exactly 2.220446 × 10⁻¹⁵, 3.330669 × 10⁻¹⁶ and 4.440892 × 10⁻¹⁶ — which are the three printed values to every digit printed — against stable tails of 2.1995 × 10⁻¹⁵, 3.8147 × 10⁻¹⁶ and 4.5658 × 10⁻¹⁶. Once the true tail falls below half that spacing, Φ(z) rounds to exactly 1.0 and the difference is exactly zero; that happens at z = 9.33 and z = 10.53. This is rounding and cancellation, not underflow of the tail: the true tails there are 5.45 × 10⁻²¹ and 3.18 × 10⁻²⁶, both far above the smallest normal double, and the “< 2.22507 × 10⁻³⁰⁸” string is how TreeMix prints a computed zero rather than evidence that any quantity underflowed. A direct complementary-error-function evaluation would avoid the subtraction entirely. The conclusion is accordingly complete rather than partial. All fifteen printed values, the two zeroes included, are reproduced from the printed mean and standard error through that formulation, which a run that had not computed jackknife standard errors could not have produced, resolving a doubt raised by an earlier script snapshot lacking the -se flag. None of it changes a reported result: both sentinels belong to m = 3 and m = 4, neither of which is reported, and the two values the m = 2 choice rests on are 7.48 × 10⁻⁴ and a tail of order 10⁻¹⁶ whose exact digits affect no inference."
+    ],
+    "new": [
+      "[Calculated] Every printed edge p-value is accounted for by how the tail was computed, and the apparent anomalies are an artefact of that computation rather than of the data. An earlier version of this paragraph said that five of six values reproduced to three significant figures; that was wrong, and the corrected accounting follows. Recomputing every migration-edge p-value in m = 0 to 5 as a one-sided normal tail from the printed jackknife mean and standard error gives fifteen edges, of which thirteen carry a finite printed value and two print “< 2.22507 × 10⁻³⁰⁸”. That figure is exactly DBL_MIN, the smallest normal double-precision float, and it appears at m = 3 edge 2 (z = 10.53, stable tail 3.18 × 10⁻²⁶) and again at m = 4 edge 2 (z = 9.33, stable tail 5.45 × 10⁻²¹). Of the thirteen finite values, ten agree with a numerically stable tail to three significant figures. The other three, and both sentinels, are explained — and reproduced to the last printed digit — by computing the upper tail as 1 − Φ(z) in double precision. Immediately below 1 the doubles are spaced 1.1102 × 10⁻¹⁶ apart, so Φ(z) is quantised to multiples of that spacing and the tail recovered by subtraction can only take those values. At z = 7.843, 8.060 and 8.038 the formulation returns exactly 2.220446 × 10⁻¹⁵, 3.330669 × 10⁻¹⁶ and 4.440892 × 10⁻¹⁶ — which are the three printed values to every digit printed — against stable tails of 2.1995 × 10⁻¹⁵, 3.8147 × 10⁻¹⁶ and 4.5658 × 10⁻¹⁶. Once the true tail falls below half that spacing, Φ(z) rounds to exactly 1.0 and the difference is exactly zero; that happens at z = 9.33 and z = 10.53. This is rounding and cancellation, not underflow of the tail: the true tails there are 5.45 × 10⁻²¹ and 3.18 × 10⁻²⁶, both far above the smallest normal double, and the “< 2.22507 × 10⁻³⁰⁸” string is how TreeMix prints a computed zero rather than evidence that any quantity underflowed. A direct complementary-error-function evaluation would avoid the subtraction entirely. The accounting is therefore as follows. All fifteen outcomes reproduce to three significant figures under that formulation, and twelve of them — ten finite values and both zeroes — reproduce at their full displayed precision. The remaining three are moderate p-values rather than extreme tails: at m = 2 edge 1, for instance, the formulation returns 0.000747669 against a printed 0.000747653, a residual consistent with the printed mean and standard error being themselves rounded. Compatibility on this scale is strong evidence that the run computed jackknife standard errors, resolving a doubt raised by an earlier script snapshot lacking the -se flag. None of it changes a reported result: both sentinels belong to m = 3 and m = 4, neither of which is reported, and the two values the m = 2 choice rests on are 7.48 × 10⁻⁴ and a tail of order 10⁻¹⁶ whose exact digits affect no inference."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      601,
+      601
+    ],
+    "new_paragraph_range": [
+      598,
+      598
+    ],
+    "old": [
+      "Figure S16. BayPass XtX genome scan on the final 3,916-SNP matrix. Left: the observed XtX distribution against the simulated neutral (pseudo-observed) distribution, with the calibrated 0.999-quantile threshold at 10.840 (on-plot label \"threshold 10.8\"). Right: XtX by genomic position, alternating shading by chromosome, with the threshold marked. Regenerated by scripts/step08c_calibrate_xtx.py as figures/baypass_xtx.png."
+    ],
+    "new": [
+      "Figure S17. BayPass XtX genome scan on the final 3,916-SNP matrix. Left: the observed XtX distribution against the simulated neutral (pseudo-observed) distribution, with the calibrated 0.999-quantile threshold at 10.840 (on-plot label \"threshold 10.8\"). Right: XtX by genomic position, alternating shading by chromosome, with the threshold marked. Regenerated by scripts/step08c_calibrate_xtx.py as figures/baypass_xtx.png."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      609,
+      610
+    ],
+    "new_paragraph_range": [
+      606,
+      607
+    ],
+    "old": [
+      "Table S26. Genes intersecting XtX outlier SNPs, ordered by maximum XtX (results/outlier_genes.csv, results/outliers_annotated.txt). Seventeen of the 19 outlier SNPs fall in these 13 genes; the remaining two are intergenic and are given in the main text below, not in this table — both survive FDR 10 per cent and one of them is the fifth-strongest SNP in the whole scan, so this gene-centric view is incomplete by construction. Min q is the smallest Benjamini–Hochberg q-value among that gene's outlier SNPs, rounded to three decimal places (the eight SNPs tied at the top of the null all carry q = 0.0049). Nine of the 13 genes retain at least one SNP at q ≤ 0.10; the four below the break in evidence — PF3D7_0215100, REX2, PF3D7_0824200 and PF3D7_0221200 — do not, and should be read as ranked candidates only. The SNRPF row carries a further caveat of a different kind: its single outlier SNP, Pf3D7_11_v3:1,054,078, is downgraded to lower confidence by the call-quality audit of Section 6.8.4, so if that downgrade is right the nine FDR-surviving genes are eight and this table has 12 rows, not 13. Annotation from PlasmoDB-71 via bedtools.",
+      "[Observed] The two outliers that Table S26 cannot show. Two of the 19 outlier SNPs fall outside any annotated protein-coding gene, and both survive FDR correction, so the gene-organised table omits 2 of the 13 FDR-surviving SNPs. Pf3D7_11_v3:1,054,447 has XtX 20.79 and q = 0.0049 — the fifth-highest XtX in the entire scan, ahead of nine of the 13 tabulated genes, only four of which have a maximum XtX above it (PTP7 26.44, AAT1 24.20, FIKK4.2 22.02, ACS8 22.00). It lies 59 bp beyond the 5′ boundary of SNRPF (PF3D7_1126900, 1,052,969–1,054,388, minus strand) and 369 bp from the SNRPF outlier at 1,054,078. This same SNP is one of the two that the call-quality audit downgrades to lower confidence (Section 6.8.4), which bears directly on how much weight this paragraph can carry: the fifth-strongest signal in the scan is also the one with the weakest call support among the 19. Pf3D7_12_v3:715,788 has XtX 15.09 and q = 0.017, overlaps no annotated protein-coding gene in the bedtools intersect, and is graded clean on every quality field examined."
+    ],
+    "new": [
+      "Table S33. Genes intersecting XtX outlier SNPs, ordered by maximum XtX (results/outlier_genes.csv, results/outliers_annotated.txt). Seventeen of the 19 outlier SNPs fall in these 13 genes; the remaining two are intergenic and are given in the main text below, not in this table — both survive FDR 10 per cent and one of them is the fifth-strongest SNP in the whole scan, so this gene-centric view is incomplete by construction. Min q is the smallest Benjamini–Hochberg q-value among that gene's outlier SNPs, rounded to three decimal places (the eight SNPs tied at the top of the null all carry q = 0.0049). Nine of the 13 genes retain at least one SNP at q ≤ 0.10; the four below the break in evidence — PF3D7_0215100, REX2, PF3D7_0824200 and PF3D7_0221200 — do not, and should be read as ranked candidates only. The SNRPF row carries a further caveat of a different kind: its single outlier SNP, Pf3D7_11_v3:1,054,078, is downgraded to lower confidence by the call-quality audit of Section 6.8.4, so if that downgrade is right the nine FDR-surviving genes are eight and this table has 12 rows, not 13. Annotation from PlasmoDB-71 via bedtools.",
+      "[Observed] The two outliers that Table S33 cannot show. Two of the 19 outlier SNPs fall outside any annotated protein-coding gene, and both survive FDR correction, so the gene-organised table omits 2 of the 13 FDR-surviving SNPs. Pf3D7_11_v3:1,054,447 has XtX 20.79 and q = 0.0049 — the fifth-highest XtX in the entire scan, ahead of nine of the 13 tabulated genes, only four of which have a maximum XtX above it (PTP7 26.44, AAT1 24.20, FIKK4.2 22.02, ACS8 22.00). It lies 59 bp beyond the 5′ boundary of SNRPF (PF3D7_1126900, 1,052,969–1,054,388, minus strand) and 369 bp from the SNRPF outlier at 1,054,078. This same SNP is one of the two that the call-quality audit downgrades to lower confidence (Section 6.8.4), which bears directly on how much weight this paragraph can carry: the fifth-strongest signal in the scan is also the one with the weakest call support among the 19. Pf3D7_12_v3:715,788 has XtX 15.09 and q = 0.017, overlaps no annotated protein-coding gene in the bedtools intersect, and is graded clean on every quality field examined."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      631,
+      631
+    ],
+    "new_paragraph_range": [
+      628,
+      628
+    ],
+    "old": [
+      "[Interpreted] The obvious objection to a 0.49 per cent tail — that it is a tail of badly called sites rather than of differentiated ones — is therefore answered, and answered in the direction that favours the scan: the 19 are better-supported calls than the panel they were drawn from. This is not evidence of selection and must not be read as any; what it removes is one specific alternative explanation, which is all a quality audit can do. Of the 19, 15 are graded clean on every field examined, two carry a lower-grade \"watch\" annotation and two are flagged (Table S26a)."
+    ],
+    "new": [
+      "[Interpreted] The obvious objection to a 0.49 per cent tail — that it is a tail of badly called sites rather than of differentiated ones — is therefore answered, and answered in the direction that favours the scan: the 19 are better-supported calls than the panel they were drawn from. This is not evidence of selection and must not be read as any; what it removes is one specific alternative explanation, which is all a quality audit can do. Of the 19, 15 are graded clean on every field examined, two carry a lower-grade \"watch\" annotation and two are flagged (Table S34)."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      634,
+      634
+    ],
+    "new_paragraph_range": [
+      631,
+      631
+    ],
+    "old": [
+      "Table S26a. The four outlier SNPs that the call-quality audit did not grade clean, with the fields that produced the grade (results/outlier_quality_check.csv). Bracketed figures are percentiles within the 3,916-SNP scanned panel. The other 15 outliers are clean on every field examined. MQ runs 59.95–60.00 across these four and FS is 0.00 at three of them (0.596 at Pf3D7_11_v3:1,054,447), so none of the four shows a mapping or strand-bias signal: the two flagged SNPs are flagged on heterozygosity-related fields, not on mapping ones, which is what makes collapsed paralogy rather than mismapping the candidate mechanism. ExcessHet is 0.00 at 3,915 of the 3,916 scanned SNPs. The two \"watch\" SNPs are recorded for completeness and are not downgraded."
+    ],
+    "new": [
+      "Table S34. The four outlier SNPs that the call-quality audit did not grade clean, with the fields that produced the grade (results/outlier_quality_check.csv). Bracketed figures are percentiles within the 3,916-SNP scanned panel. The other 15 outliers are clean on every field examined. MQ runs 59.95–60.00 across these four and FS is 0.00 at three of them (0.596 at Pf3D7_11_v3:1,054,447), so none of the four shows a mapping or strand-bias signal: the two flagged SNPs are flagged on heterozygosity-related fields, not on mapping ones, which is what makes collapsed paralogy rather than mismapping the candidate mechanism. ExcessHet is 0.00 at 3,915 of the 3,916 scanned SNPs. The two \"watch\" SNPs are recorded for completeness and are not downgraded."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      636,
+      636
+    ],
+    "new_paragraph_range": [
+      633,
+      633
+    ],
+    "old": [
+      "[Interpreted] This matters more than a two-SNP correction usually would, and the reason should be stated plainly: Pf3D7_11_v3:1,054,447 is the fifth-ranked SNP in the entire scan. It stands ahead of nine of the 13 genes in Table S26, it is one of the 13 SNPs that survive FDR 10 per cent, and it carries the same q = 0.0049 as pfaat1 S258L and PTP7. The downgrade is therefore not a tidying of the bottom of the ranking but a withdrawal of confidence near the top of it. Its neighbour 1,054,078 is the SNRPF outlier and also FDR-surviving, at q = 0.031, so SNRPF is the one gene in Table S26 whose entire support is a downgraded SNP. If the paralogy reading is right, the FDR-surviving set is 11 SNPs rather than 13, the independent-signal ceiling falls from 14 to 13 (the two were already counted as one locus on proximity grounds), and the gene list is 12 genes rather than 13, of which eight rather than nine retain FDR-surviving support. If it is wrong, nothing changes. The honest position until the depth check is run is that the status of the scan's fifth-strongest signal is unresolved, and the two affected results — the intergenic pair and SNRPF — should not be built on."
+    ],
+    "new": [
+      "[Interpreted] This matters more than a two-SNP correction usually would, and the reason should be stated plainly: Pf3D7_11_v3:1,054,447 is the fifth-ranked SNP in the entire scan. It stands ahead of nine of the 13 genes in Table S33, it is one of the 13 SNPs that survive FDR 10 per cent, and it carries the same q = 0.0049 as pfaat1 S258L and PTP7. The downgrade is therefore not a tidying of the bottom of the ranking but a withdrawal of confidence near the top of it. Its neighbour 1,054,078 is the SNRPF outlier and also FDR-surviving, at q = 0.031, so SNRPF is the one gene in Table S33 whose entire support is a downgraded SNP. If the paralogy reading is right, the FDR-surviving set is 11 SNPs rather than 13, the independent-signal ceiling falls from 14 to 13 (the two were already counted as one locus on proximity grounds), and the gene list is 12 genes rather than 13, of which eight rather than nine retain FDR-surviving support. If it is wrong, nothing changes. The honest position until the depth check is run is that the status of the scan's fifth-strongest signal is unresolved, and the two affected results — the intergenic pair and SNRPF — should not be built on."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      650,
+      650
+    ],
+    "new_paragraph_range": [
+      647,
+      647
+    ],
+    "old": [
+      "Table S27. Full residue spectrum of the 24 polymorphic codons, by agro-ecological zone, with Wilson 95 per cent confidence intervals (results/codon_panel_residues.csv). Rows are codon–residue pairs; † marks the 3D7 reference residue, which is reported explicitly because at pfdhps 437 the reference residue is the resistance allele (Section 6.9.4) and because at seven of the 24 codons the non-reference residue is the majority one: pfdhfr 51 (Ile 0.786), pfdhfr 59 (Arg 0.886), pfdhfr 108 (Asn 0.908), pfdhps 436 (Ala 0.541), pfmdr1 184 (Phe 0.677), pfmdr2 492 (Val 0.549) and pfaat1 258 (Leu 0.609). Residues within a codon are ordered by overall frequency; the 33 codons fixed at the reference residue are omitted — the 22 pfk13 ones are listed in Table S30, and the remaining 11 (pfcrt 72 and 73, pfmdr1 1034 and 1042, pfdhfr 16 and 164, pfmdr2 484, pfcoronin 50, 100 and 107, and pfaat1 313) appear only in the source file. Overall denominators are per codon and run 1,858–1,900 of 1,900 isolates across the 24 codons shown; the panel-wide range of 1,834–1,900 quoted in Section 6.9.2 includes fixed codons omitted here, its lower bound being pfmdr1 1034. χ² p tests heterogeneity of that residue against all other residues at the same codon across the four zones, so a codon with four residues yields four tests whose p-values differ — pfdhps 436 is the only such codon. Zone column headings are spelled correctly here for display; the source geospatial layer and the source columns of codon_panel_residues.csv read Decidous_forest and Transitional_zone, and the spatial join keys on that source spelling (see Methods)."
+    ],
+    "new": [
+      "Table S35. Full residue spectrum of the 24 polymorphic codons, by agro-ecological zone, with Wilson 95 per cent confidence intervals (results/codon_panel_residues.csv). Rows are codon–residue pairs; † marks the 3D7 reference residue, which is reported explicitly because at pfdhps 437 the reference residue is the resistance allele (Section 6.9.4) and because at seven of the 24 codons the non-reference residue is the majority one: pfdhfr 51 (Ile 0.786), pfdhfr 59 (Arg 0.886), pfdhfr 108 (Asn 0.908), pfdhps 436 (Ala 0.541), pfmdr1 184 (Phe 0.677), pfmdr2 492 (Val 0.549) and pfaat1 258 (Leu 0.609). Residues within a codon are ordered by overall frequency; the 33 codons fixed at the reference residue are omitted — the 22 pfk13 ones are listed in Table S38, and the remaining 11 (pfcrt 72 and 73, pfmdr1 1034 and 1042, pfdhfr 16 and 164, pfmdr2 484, pfcoronin 50, 100 and 107, and pfaat1 313) appear only in the source file. Overall denominators are per codon and run 1,858–1,900 of 1,900 isolates across the 24 codons shown; the panel-wide range of 1,834–1,900 quoted in Section 6.9.2 includes fixed codons omitted here, its lower bound being pfmdr1 1034. χ² p tests heterogeneity of that residue against all other residues at the same codon across the four zones, so a codon with four residues yields four tests whose p-values differ — pfdhps 436 is the only such codon. Zone column headings are spelled correctly here for display; the source geospatial layer and the source columns of codon_panel_residues.csv read Decidous_forest and Transitional_zone, and the spatial join keys on that source spelling (see Methods)."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      656,
+      657
+    ],
+    "new_paragraph_range": [
+      653,
+      654
+    ],
+    "old": [
+      "Table S28. pfdhps G437 frequency by agro-ecological zone, with Wilson 95 per cent confidence intervals (results/codon_panel_residues.csv). G is the 3D7 reference residue and the resistance allele; the complementary residue is the revertant A437, whose frequencies are the arithmetic complements shown in Table S27. χ² = 30.34 on 3 df, p = 1.2 × 10⁻⁶.",
+      "[Interpreted] The zone ordering mirrors pfdhfr: highest in the two southern zones, lowest in Guinea savanna and the 25-isolate Transitional zone, and not monotonic in latitude. Substantively, G437 at 0.897 means the first pfdhps step stands as high as the pfdhfr triple mutant's component marginals — just below S108N at 0.908, which is the panel's most frequent antifolate residue — which materially strengthens the antifolate picture in Section 6.9.5 relative to the previous version, where the pfdhps side appeared to rest on S436A at 0.54 and little else. Methodologically, the lesson generalises beyond this codon: any marker panel that identifies variants by their change-from-reference string will miss every marker for which the reference carries the derived allele, and will do so without raising an error. The only general defence is to reconstruct the codon and report the whole residue spectrum, which is why Table S27 lists reference residues explicitly rather than implying them."
+    ],
+    "new": [
+      "Table S36. pfdhps G437 frequency by agro-ecological zone, with Wilson 95 per cent confidence intervals (results/codon_panel_residues.csv). G is the 3D7 reference residue and the resistance allele; the complementary residue is the revertant A437, whose frequencies are the arithmetic complements shown in Table S35. χ² = 30.34 on 3 df, p = 1.2 × 10⁻⁶.",
+      "[Interpreted] The zone ordering mirrors pfdhfr: highest in the two southern zones, lowest in Guinea savanna and the 25-isolate Transitional zone, and not monotonic in latitude. Substantively, G437 at 0.897 means the first pfdhps step stands as high as the pfdhfr triple mutant's component marginals — just below S108N at 0.908, which is the panel's most frequent antifolate residue — which materially strengthens the antifolate picture in Section 6.9.5 relative to the previous version, where the pfdhps side appeared to rest on S436A at 0.54 and little else. Methodologically, the lesson generalises beyond this codon: any marker panel that identifies variants by their change-from-reference string will miss every marker for which the reference carries the derived allele, and will do so without raising an error. The only general defence is to reconstruct the codon and report the whole residue spectrum, which is why Table S35 lists reference residues explicitly rather than implying them."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      659,
+      659
+    ],
+    "new_paragraph_range": [
+      656,
+      656
+    ],
+    "old": [
+      "[Observed] The three pfdhfr components stand at 0.786 (N51I), 0.886 (C59R) and 0.908 (S108N) overall. Of the three, only S108N is the runner-up to pfaat1 for zone structure (χ² p = 9.4e-7 against 1.9e-18); the claim that all three are, after pfaat1, the most strongly zone-structured codons in the panel was true of the old 21-codon panel and is not true of the rebuilt one. Ranking the 24 tested codons by χ² p puts three pfdhps codons between S108N and the other two pfdhfr components — 437 at 1.2e-6 (the value this section prints in Table S28), 436 at 4.5e-5 and 431 at 1.8e-4 — against C59R at 4.8e-5 and N51I at 2.4e-4. The defensible statement is that S108N is second only to pfaat1 S258L, and that C59R and N51I are among the most strongly zone-structured codons alongside pfdhps 437, 436 and 431. All three pfdhfr components are higher in the two southern zones than in Guinea savanna: S108N 0.971 coastal savanna and 0.958 deciduous forest against 0.885; C59R 0.946 and 0.928 against 0.864; N51I 0.892 and 0.802 against 0.764. This is not a monotonic south-to-north cline. The Transitional zone is the second-most-northern of the four and carries the panel's highest pfdhfr values — 1.000 for S108N and C59R, 0.880 for N51I — so an ordering by latitude breaks there. What the data support is a contrast between the southern zones and Guinea savanna, with the 25-isolate Transitional zone unresolved. I164L, the fourth-step codon, is fixed at the reference residue Ile. On the pfdhps side, G437 is at 0.897 (Section 6.9.4), 436 carries Ala at 0.541 against the reference Ser at 0.446 with minor Phe (0.007) and Tyr (0.005) residues, A613S sits at 0.108, and the high-grade additions remain rare: I431V 0.014, A581G 0.014, K540E 0.009."
+    ],
+    "new": [
+      "[Observed] The three pfdhfr components stand at 0.786 (N51I), 0.886 (C59R) and 0.908 (S108N) overall. Of the three, only S108N is the runner-up to pfaat1 for zone structure (χ² p = 9.4e-7 against 1.9e-18); the claim that all three are, after pfaat1, the most strongly zone-structured codons in the panel was true of the old 21-codon panel and is not true of the rebuilt one. Ranking the 24 tested codons by χ² p puts three pfdhps codons between S108N and the other two pfdhfr components — 437 at 1.2e-6 (the value this section prints in Table S36), 436 at 4.5e-5 and 431 at 1.8e-4 — against C59R at 4.8e-5 and N51I at 2.4e-4. The defensible statement is that S108N is second only to pfaat1 S258L, and that C59R and N51I are among the most strongly zone-structured codons alongside pfdhps 437, 436 and 431. All three pfdhfr components are higher in the two southern zones than in Guinea savanna: S108N 0.971 coastal savanna and 0.958 deciduous forest against 0.885; C59R 0.946 and 0.928 against 0.864; N51I 0.892 and 0.802 against 0.764. This is not a monotonic south-to-north cline. The Transitional zone is the second-most-northern of the four and carries the panel's highest pfdhfr values — 1.000 for S108N and C59R, 0.880 for N51I — so an ordering by latitude breaks there. What the data support is a contrast between the southern zones and Guinea savanna, with the 25-isolate Transitional zone unresolved. I164L, the fourth-step codon, is fixed at the reference residue Ile. On the pfdhps side, G437 is at 0.897 (Section 6.9.4), 436 carries Ala at 0.541 against the reference Ser at 0.446 with minor Phe (0.007) and Tyr (0.005) residues, A613S sits at 0.108, and the high-grade additions remain rare: I431V 0.014, A581G 0.014, K540E 0.009."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      663,
+      663
+    ],
+    "new_paragraph_range": [
+      660,
+      660
+    ],
+    "old": [
+      "Table S29. Within-isolate haplotype frequencies on complete cases, with Wilson 95 per cent confidence intervals (results/codon_panel_haplotypes.csv). \"Complete cases\" are isolates with a called residue at every constituent codon; the denominator therefore differs between haplotypes and is smaller than 1,900. Overall figures are pooled across zones."
+    ],
+    "new": [
+      "Table S37. Within-isolate haplotype frequencies on complete cases, with Wilson 95 per cent confidence intervals (results/codon_panel_haplotypes.csv). \"Complete cases\" are isolates with a called residue at every constituent codon; the denominator therefore differs between haplotypes and is smaller than 1,900. Overall figures are pooled across zones."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      668,
+      668
+    ],
+    "new_paragraph_range": [
+      665,
+      665
+    ],
+    "old": [
+      "[Observed] The six pfcrt codons that carry the CVIET-associated resistance haplotype — M74I, N75E, K76T, A220S, Q271E and R371I — now sit within a 0.006 band at 0.070–0.076, and the reconstructed CVIET haplotype itself is at 0.071 (133 of 1,873 complete cases). CVIET names the codon 72–76 motif, as Table S29 states, so only M74I, N75E and K76T are motif codons; A220S, Q271E and R371I are flanking markers of the wider chloroquine-resistance background. They track together zone by zone: 0.054 coastal savanna for five of the six, 0.104 in deciduous forest, 0.062–0.069 in Guinea savanna, 0.125 in the 25-isolate Transitional zone. None of the six reaches the corrected heterogeneity threshold: their nominal p-values run 0.026–0.119 against the Bonferroni threshold of 0.05/24 = 0.0021, the 24 being the panel codons that carry a between-zone test (Section 6.9.3). The two pfcrt codons off that haplotype behave differently: I356T is at 0.016 and is the only pfcrt codon with corrected-significant structure (0.029 coastal savanna, 0.036 deciduous forest, 0.009 Guinea savanna, 0.000 Transitional, p = 0.0016 — higher in the two southern zones, but not ordered by latitude), and N326S is a singleton at 0.001. The denominator matters and is stated rather than left implicit: on the 24 tested codons I356T survives at 0.0016 < 0.0021, whereas correcting across all 57 reconstructed codons (0.05/57 = 0.00088) it would not, and the previous version of this paragraph asserted both outcomes one sentence apart by widening \"none of the six\" to \"no pfcrt codon\"."
+    ],
+    "new": [
+      "[Observed] The six pfcrt codons that carry the CVIET-associated resistance haplotype — M74I, N75E, K76T, A220S, Q271E and R371I — now sit within a 0.006 band at 0.070–0.076, and the reconstructed CVIET haplotype itself is at 0.071 (133 of 1,873 complete cases). CVIET names the codon 72–76 motif, as Table S37 states, so only M74I, N75E and K76T are motif codons; A220S, Q271E and R371I are flanking markers of the wider chloroquine-resistance background. They track together zone by zone: 0.054 coastal savanna for five of the six, 0.104 in deciduous forest, 0.062–0.069 in Guinea savanna, 0.125 in the 25-isolate Transitional zone. None of the six reaches the corrected heterogeneity threshold: their nominal p-values run 0.026–0.119 against the Bonferroni threshold of 0.05/24 = 0.0021, the 24 being the panel codons that carry a between-zone test (Section 6.9.3). The two pfcrt codons off that haplotype behave differently: I356T is at 0.016 and is the only pfcrt codon with corrected-significant structure (0.029 coastal savanna, 0.036 deciduous forest, 0.009 Guinea savanna, 0.000 Transitional, p = 0.0016 — higher in the two southern zones, but not ordered by latitude), and N326S is a singleton at 0.001. The denominator matters and is stated rather than left implicit: on the 24 tested codons I356T survives at 0.0016 < 0.0021, whereas correcting across all 57 reconstructed codons (0.05/57 = 0.00088) it would not, and the previous version of this paragraph asserted both outcomes one sentence apart by widening \"none of the six\" to \"no pfcrt codon\"."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      672,
+      672
+    ],
+    "new_paragraph_range": [
+      669,
+      669
+    ],
+    "old": [
+      "Table S30. All 23 reconstructed pfk13 codons with their WHO v1.0 (December 2025) classification (results/codon_panel_residues.csv). Validated markers are shown in bold; codon 469 carries one validated change (C469Y) and one candidate change (C469F), which is why 20 variants occupy 19 codons. P441L and C469F are candidates, not validated — the previous version of this chapter listed both among the validated set, which was a misclassification. \"Zero upper bound\" is the Wilson 95 per cent upper limit on a count of zero at that codon's own denominator. It therefore does not apply at codon 458, the one codon where the count is not zero; that cell gives the Wilson upper limit on the one variant actually observed (0.0030) instead, and should not be read as a ceiling of 0.0021."
+    ],
+    "new": [
+      "Table S38. All 23 reconstructed pfk13 codons with their WHO v1.0 (December 2025) classification (results/codon_panel_residues.csv). Validated markers are shown in bold; codon 469 carries one validated change (C469Y) and one candidate change (C469F), which is why 20 variants occupy 19 codons. P441L and C469F are candidates, not validated — the previous version of this chapter listed both among the validated set, which was a misclassification. \"Zero upper bound\" is the Wilson 95 per cent upper limit on a count of zero at that codon's own denominator. It therefore does not apply at codon 458, the one codon where the count is not zero; that cell gives the Wilson upper limit on the one variant actually observed (0.0030) instead, and should not be read as a ceiling of 0.0021."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      674,
+      674
+    ],
+    "new_paragraph_range": [
+      671,
+      671
+    ],
+    "old": [
+      "The kelch13 corroboration must be stated much more weakly than before. The previous version claimed independent corroboration from MalariaGEN's published kelch13 classification: \"Two methods, one of them not ours, agree.\" That overstates it. Pf8 assigns a kelch13 status over the whole 349–726 propeller domain and classifies any missing call in that interval as undetermined — the rule is \"Any missing call in amino acids 349-726 → Missing → Undetermined\". Only 36 isolates therefore have a complete Pf8 status, against per-codon calls on roughly 1,860 isolates here. Thirty-six complete statuses are weak corroboration for a negative asserted on ~1,860 isolates, and the two should not be presented as equivalent lines of evidence. The weight of this negative rests on the reconstruction in Table S30, not on the Pf8 classification."
+    ],
+    "new": [
+      "The kelch13 corroboration must be stated much more weakly than before. The previous version claimed independent corroboration from MalariaGEN's published kelch13 classification: \"Two methods, one of them not ours, agree.\" That overstates it. Pf8 assigns a kelch13 status over the whole 349–726 propeller domain and classifies any missing call in that interval as undetermined — the rule is \"Any missing call in amino acids 349-726 → Missing → Undetermined\". Only 36 isolates therefore have a complete Pf8 status, against per-codon calls on roughly 1,860 isolates here. Thirty-six complete statuses are weak corroboration for a negative asserted on ~1,860 isolates, and the two should not be presented as equivalent lines of evidence. The weight of this negative rests on the reconstruction in Table S38, not on the Pf8 classification."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      683,
+      683
+    ],
+    "new_paragraph_range": [
+      680,
+      680
+    ],
+    "old": [
+      "Table S31. Per-sample concordance with MalariaGEN's published genotypes (results/codon_panel_concordance.csv). \"Calls compared\" counts isolates called by both pipelines at that marker. The MalariaGEN column name carries the reference residue in brackets, which is how dhps_437[G] encodes the fact described in Section 6.9.4. No marker recorded a single disagreement."
+    ],
+    "new": [
+      "Table S39. Per-sample concordance with MalariaGEN's published genotypes (results/codon_panel_concordance.csv). \"Calls compared\" counts isolates called by both pipelines at that marker. The MalariaGEN column name carries the reference residue in brackets, which is how dhps_437[G] encodes the fact described in Section 6.9.4. No marker recorded a single disagreement."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      686,
+      686
+    ],
+    "new_paragraph_range": [
+      683,
+      683
+    ],
+    "old": [
+      "[Observed] The WHO compendium classifies variants, not genes, and the previous version repeatedly attached gene-level WHO labels. Three specific corrections follow. (1) There is no validated or candidate lumefantrine marker at all — verbatim: \"The review did not identify any validated or candidate molecular markers associated with lumefantrine resistance.\" So a label of the form \"pfmdr1, WHO-validated, lumefantrine\" is a category error twice over: it ascribes a tier to a gene, and it ascribes it for a drug that has no classified markers. (2) pfaat1, pfap2mu and pfmdr2 appear nowhere in the compendium at any tier. They stay in the panel — pfaat1 for the functional work of Section 6.9.9, pfap2mu and pfmdr2 as loci of standing interest — but none of them may be described as a WHO-classified marker anywhere in this thesis. (3) pfcoronin is in the compendium at the potential tier only, which is below candidate; all three of its reconstructed codons (G50E, R100K, E107V) are fixed at the reference residue here. Within pfk13, the tiers are per variant and are given in Table S30; P441L and C469F are candidates, not validated, which the previous version got wrong."
+    ],
+    "new": [
+      "[Observed] The WHO compendium classifies variants, not genes, and the previous version repeatedly attached gene-level WHO labels. Three specific corrections follow. (1) There is no validated or candidate lumefantrine marker at all — verbatim: \"The review did not identify any validated or candidate molecular markers associated with lumefantrine resistance.\" So a label of the form \"pfmdr1, WHO-validated, lumefantrine\" is a category error twice over: it ascribes a tier to a gene, and it ascribes it for a drug that has no classified markers. (2) pfaat1, pfap2mu and pfmdr2 appear nowhere in the compendium at any tier. They stay in the panel — pfaat1 for the functional work of Section 6.9.9, pfap2mu and pfmdr2 as loci of standing interest — but none of them may be described as a WHO-classified marker anywhere in this thesis. (3) pfcoronin is in the compendium at the potential tier only, which is below candidate; all three of its reconstructed codons (G50E, R100K, E107V) are fixed at the reference residue here. Within pfk13, the tiers are per variant and are given in Table S38; P441L and C469F are candidates, not validated, which the previous version got wrong."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      688,
+      689
+    ],
+    "new_paragraph_range": [
+      685,
+      686
+    ],
+    "old": [
+      "[Observed] The zone contrasts in Table S27 inherit every design limitation of the FST analysis, including the one the original manuscript did not list. Zone is confounded with sequencing study. The confounding analysis is computed on the 4,905 QC-passing isolates, not on the 1,900-isolate analysis set, because study membership is a property of the full QC-passing cohort: those 4,905 come from 11 sequencing studies, of which Guinea savanna draws on six (n = 3,605), deciduous forest on five (n = 815, of which four, n = 811, are large enough to enter the within-zone test — the fifth is a 4-isolate study), coastal savanna on two (n = 435) and the Transitional zone on a single study (1083-PF-GH-CONWAY, n = 50); 435 + 815 + 3,605 + 50 = 4,905. Four of the six zone pairs share no partner study at all, among them coastal savanna against Guinea savanna, which is the pair carrying both the maximum FST and every marker contrast reported above. Study-associated heterogeneity within these data is demonstrable rather than hypothetical — holding zone constant, call rate differs between studies within Guinea savanna at p = 2.8e-197 (Kruskal–Wallis, 6 studies, n = 3,605) and within deciduous forest at p = 7.7e-88 (4 studies, n = 811); because collection year, finer geography and recruitment also differ between studies inside a zone, this is heterogeneity associated with study rather than a demonstrated technical cause. A zone difference in marker frequency and a study difference in marker frequency are not separable here for the pairs that carry the largest effects.",
+      "[Observed] Three further design constraints. The Transitional zone contributes 25 isolates from one sequencing study, so its column in Table S27 is indicative only and its 1.000 and 0.000 entries should not be read as fixation or absence; the χ² tests retain it because excluding it would discard a zone, but no finding above depends on it. Monoclonal-fraction differences between zones mean the majority-allele ploidy rule resolves mixed infections at different rates in different zones, which could bias frequency estimates in the same direction as a real cline. And the agro-ecological zone layer itself has no citable published source (Methods), so \"zone\" is a reproducible label on this specific GeoJSON rather than an authoritative classification."
+    ],
+    "new": [
+      "[Observed] The zone contrasts in Table S35 inherit every design limitation of the FST analysis, including the one the original manuscript did not list. Zone is confounded with sequencing study. The confounding analysis is computed on the 4,905 QC-passing isolates, not on the 1,900-isolate analysis set, because study membership is a property of the full QC-passing cohort: those 4,905 come from 11 sequencing studies, of which Guinea savanna draws on six (n = 3,605), deciduous forest on five (n = 815, of which four, n = 811, are large enough to enter the within-zone test — the fifth is a 4-isolate study), coastal savanna on two (n = 435) and the Transitional zone on a single study (1083-PF-GH-CONWAY, n = 50); 435 + 815 + 3,605 + 50 = 4,905. Four of the six zone pairs share no partner study at all, among them coastal savanna against Guinea savanna, which is the pair carrying both the maximum FST and every marker contrast reported above. Study-associated heterogeneity within these data is demonstrable rather than hypothetical — holding zone constant, call rate differs between studies within Guinea savanna at p = 2.8e-197 (Kruskal–Wallis, 6 studies, n = 3,605) and within deciduous forest at p = 7.7e-88 (4 studies, n = 811); because collection year, finer geography and recruitment also differ between studies inside a zone, this is heterogeneity associated with study rather than a demonstrated technical cause. A zone difference in marker frequency and a study difference in marker frequency are not separable here for the pairs that carry the largest effects.",
+      "[Observed] Three further design constraints. The Transitional zone contributes 25 isolates from one sequencing study, so its column in Table S35 is indicative only and its 1.000 and 0.000 entries should not be read as fixation or absence; the χ² tests retain it because excluding it would discard a zone, but no finding above depends on it. Monoclonal-fraction differences between zones mean the majority-allele ploidy rule resolves mixed infections at different rates in different zones, which could bias frequency estimates in the same direction as a real cline. And the agro-ecological zone layer itself has no citable published source (Methods), so \"zone\" is a reproducible label on this specific GeoJSON rather than an authoritative classification."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      691,
+      691
+    ],
+    "new_paragraph_range": [
+      688,
+      688
+    ],
+    "old": [
+      "[Interpreted] Taken together, these mean the gradients in Table S27 are better supported than their causal attribution to agro-ecology. The frequencies themselves are now as solid as this dataset allows — every one of 47,012 per-sample calls agrees with an independently produced genotype set, across the 25 panel codons MalariaGEN publishes per sample (Section 6.9.10), which is a far stronger statement than the marginal agreement previously cited. What the gradient is a gradient in — drug exposure, sampling study, treatment-seeking, or agro-ecological zone — this design cannot resolve, and Section 7.x does not claim it can."
+    ],
+    "new": [
+      "[Interpreted] Taken together, these mean the gradients in Table S35 are better supported than their causal attribution to agro-ecology. The frequencies themselves are now as solid as this dataset allows — every one of 47,012 per-sample calls agrees with an independently produced genotype set, across the 25 panel codons MalariaGEN publishes per sample (Section 6.9.10), which is a far stronger statement than the marginal agreement previously cited. What the gradient is a gradient in — drug exposure, sampling study, treatment-seeking, or agro-ecological zone — this design cannot resolve, and Section 7.x does not claim it can."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      697,
+      701
+    ],
+    "new_paragraph_range": [
+      694,
+      698
+    ],
+    "old": [
+      "[Interpreted] The evidence for negligible differentiation is strong, but it is neither five independent lines nor a test of random mating. FST, ADMIXTURE and TreeMix are three summaries of one genotype matrix: all three are computed from the same per-zone allele counts, and at this level of differentiation a four-population covariance matrix and the pairwise FST matrix are near-deterministic functions of each other. Only the ordinations use a different input — MalariaGEN's published Pf8 genotype-distance matrix — and they are now computed on the same 1,900 isolates as everything else, because stage 3 has been re-run on the analysis set (silhouette by zone −0.020; Table S36 row 21, Figure S20). The agreement between rows 1, 3 and 4 of Table S32 is therefore substantially arithmetic, not corroborative. What this revision adds is robustness rather than independence: the FST summary has been recomputed under six combinations of the two thresholds that define the dataset, and the maximum pairwise value moves only between 0.00204 and 0.00255 (row 5 of Table S32; Table S35). Those six scenarios are not independent lines either — they are the same pipeline on overlapping data — but they establish that the headline does not depend on the analyst's threshold choices, which is a different and more useful thing. The region-level Mantel test does not share that robustness, and it has to be given up. It is a fourth summary of the same matrix, computed from region-level FST, so it was never independent of the others; and it is significant in only 2 of 6 threshold scenarios and 4 of 7 leave-one-region-out replicates, so it cannot be cited as a converging line at all (Table S33, row 1). It was the one result here carrying a positive structure claim, and losing it is a real loss rather than a tidying-up. Described accurately, what remains is: three summaries of one 3,916-SNP genotype matrix (ADMIXTURE on 3,385 LD-pruned sites of it), plus three ordinations of an independently published distance matrix on the same 1,900 isolates, all pointing the same way, and insensitive to both thresholds that define the dataset. The negative half of the result is better supported than it was. The positive half is gone.",
+      "Table S32. Convergent evidence for low differentiation between zones. Rows 1, 3 and 4 are three summaries of the same per-population allele frequencies and are not statistically independent of one another; only row 2 uses a different input (MalariaGEN's published genotype-distance matrix), and it is now computed on the same 1,900 isolates rather than on a larger sample. Row 5 is not an independent line but a sensitivity analysis on row 1. The region-level Mantel test, a fourth summary of the same matrix, was discussed alongside these rows in the previous draft; it is significant in only 2 of 6 threshold scenarios and is no longer counted as converging evidence (Table S33, row 1). See the text.",
+      "[Interpreted] Two further results point the other way — toward weak but real structure — and a third, the region-level Mantel test, pointed that way at the published thresholds and does not survive varying them. The previous draft either listed these inside the convergence table, where they do not belong, or reported them as negatives when they are not. The Mantel row is now a different kind of problem: it is retained in Table S33 with its sensitivity attached, because the result should be reported honestly rather than deleted, but it is graded not robust and nothing in this document may lean on it.",
+      "Table S33. Candidate evidence of weak structure. These results are not convergent with Table S32 and should not be counted as though they were; row 1 is itself computed from the same genotype matrix as Table S32, and after the threshold-sensitivity analysis it is reported as not robust rather than as weak-but-real. Rows 3 and 4 are the only two entries here that still carry a positive structure claim. Row 4 is computed from the rebuilt codon-reconstruction panel (§7.5) and replaces the superseded annotation-string panel entirely.",
+      "Figure S17. Isolation by distance at region level on the corrected 3,916-SNP matrix: pairwise FST against great-circle distance for 21 pairs from 7 administrative regions. Censored fit r = 0.427, p = 0.025 (9,999 seeded permutations); uncensored r = 0.414, p = 0.041. Three pairs with negative FST were floored to zero and are named in the output JSON. This figure shows the relationship at the published thresholds only. Under four of the six threshold scenarios in Table S35 the same test is not significant, so the figure must not be read as a robust distance effect."
+    ],
+    "new": [
+      "[Interpreted] The evidence for negligible differentiation is strong, but it is neither five independent lines nor a test of random mating. FST, ADMIXTURE and TreeMix are three summaries of one genotype matrix: all three are computed from the same per-zone allele counts, and at this level of differentiation a four-population covariance matrix and the pairwise FST matrix are near-deterministic functions of each other. Only the ordinations use a different input — MalariaGEN's published Pf8 genotype-distance matrix — and they are now computed on the same 1,900 isolates as everything else, because stage 3 has been re-run on the analysis set (silhouette by zone −0.020; Table S43 row 21, Figure S21). The agreement between rows 1, 3 and 4 of Table S40 is therefore substantially arithmetic, not corroborative. What this revision adds is robustness rather than independence: the FST summary has been recomputed under six combinations of the two thresholds that define the dataset, and the maximum pairwise value moves only between 0.00204 and 0.00255 (row 5 of Table S40; Table S44). Those six scenarios are not independent lines either — they are the same pipeline on overlapping data — but they establish that the headline does not depend on the analyst's threshold choices, which is a different and more useful thing. The region-level Mantel test does not share that robustness, and it has to be given up. It is a fourth summary of the same matrix, computed from region-level FST, so it was never independent of the others; and it is significant in only 2 of 6 threshold scenarios and 4 of 7 leave-one-region-out replicates, so it cannot be cited as a converging line at all (Table S41, row 1). It was the one result here carrying a positive structure claim, and losing it is a real loss rather than a tidying-up. Described accurately, what remains is: three summaries of one 3,916-SNP genotype matrix (ADMIXTURE on 3,385 LD-pruned sites of it), plus three ordinations of an independently published distance matrix on the same 1,900 isolates, all pointing the same way, and insensitive to both thresholds that define the dataset. The negative half of the result is better supported than it was. The positive half is gone.",
+      "Table S40. Convergent evidence for low differentiation between zones. Rows 1, 3 and 4 are three summaries of the same per-population allele frequencies and are not statistically independent of one another; only row 2 uses a different input (MalariaGEN's published genotype-distance matrix), and it is now computed on the same 1,900 isolates rather than on a larger sample. Row 5 is not an independent line but a sensitivity analysis on row 1. The region-level Mantel test, a fourth summary of the same matrix, was discussed alongside these rows in the previous draft; it is significant in only 2 of 6 threshold scenarios and is no longer counted as converging evidence (Table S41, row 1). See the text.",
+      "[Interpreted] Two further results point the other way — toward weak but real structure — and a third, the region-level Mantel test, pointed that way at the published thresholds and does not survive varying them. The previous draft either listed these inside the convergence table, where they do not belong, or reported them as negatives when they are not. The Mantel row is now a different kind of problem: it is retained in Table S41 with its sensitivity attached, because the result should be reported honestly rather than deleted, but it is graded not robust and nothing in this document may lean on it.",
+      "Table S41. Candidate evidence of weak structure. These results are not convergent with Table S40 and should not be counted as though they were; row 1 is itself computed from the same genotype matrix as Table S40, and after the threshold-sensitivity analysis it is reported as not robust rather than as weak-but-real. Rows 3 and 4 are the only two entries here that still carry a positive structure claim. Row 4 is computed from the rebuilt codon-reconstruction panel (§7.5) and replaces the superseded annotation-string panel entirely.",
+      "Figure S18. Isolation by distance at region level on the corrected 3,916-SNP matrix: pairwise FST against great-circle distance for 21 pairs from 7 administrative regions. Censored fit r = 0.427, p = 0.025 (9,999 seeded permutations); uncensored r = 0.414, p = 0.041. Three pairs with negative FST were floored to zero and are named in the output JSON. This figure shows the relationship at the published thresholds only. Under four of the six threshold scenarios in Table S44 the same test is not significant, so the figure must not be read as a robust distance effect."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      704,
+      705
+    ],
+    "new_paragraph_range": [
+      701,
+      702
+    ],
+    "old": [
+      "Caveat. A proportion-of-variance figure for the zone effect on minor-component ancestry (of order 2 per cent) was computed during the audit, but on the superseded 3,359-SNP ADMIXTURE output and with no named statistic attached. It has not been recomputed on the final 3,916-SNP run and is therefore not quoted here as a result. [Unknown] — the only effect size the final run supports is whatever is derived from H = 105.4 on 1,900 isolates, and no such statistic was computed and recorded. The Kruskal–Wallis statistic and the per-zone means in Table S33 are from the final run.",
+      "Figure S18. Pairwise Hudson FST between the four ecological zones on the corrected 3,916-SNP matrix. Every value is at or below 0.00232; the Guinea savanna–transitional pair (0.00047) is the one whose confidence interval spans zero."
+    ],
+    "new": [
+      "Caveat. A proportion-of-variance figure for the zone effect on minor-component ancestry (of order 2 per cent) was computed during the audit, but on the superseded 3,359-SNP ADMIXTURE output and with no named statistic attached. It has not been recomputed on the final 3,916-SNP run and is therefore not quoted here as a result. [Unknown] — the only effect size the final run supports is whatever is derived from H = 105.4 on 1,900 isolates, and no such statistic was computed and recorded. The Kruskal–Wallis statistic and the per-zone means in Table S41 are from the final run.",
+      "Figure S19. Pairwise Hudson FST between the four ecological zones on the corrected 3,916-SNP matrix. Every value is at or below 0.00232; the Guinea savanna–transitional pair (0.00047) is the one whose confidence interval spans zero."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      722,
+      722
+    ],
+    "new_paragraph_range": [
+      719,
+      719
+    ],
+    "old": [
+      "[Observed] The common-variant ceiling — what was measured. The whole Ghanaian sample yields 3,916 SNPs at MAF ≥ 5 per cent after the corrected filter order, out of 1,807,331 sites that pass variant missingness — a reduction of 99.78 per cent at the MAF step alone. A diagnostic projection put the genome-wide ceiling at roughly 5,500 common sites, which would make the analysed panel about 71 per cent of what is available; that projection (and the related 4,832 figure) was computed under a depth-only mask on the superseded 3,359-SNP panel and should be read as a pre-re-run estimate, not a measured quantity. What is now measured is the MAF floor's effect downstream: lowering it to 1 per cent yields 10,876 SNPs on the same 1,900 isolates, and lowering it to 2 per cent yields 6,852 (Table S35)."
+    ],
+    "new": [
+      "[Observed] The common-variant ceiling — what was measured. The whole Ghanaian sample yields 3,916 SNPs at MAF ≥ 5 per cent after the corrected filter order, out of 1,807,331 sites that pass variant missingness — a reduction of 99.78 per cent at the MAF step alone. A diagnostic projection put the genome-wide ceiling at roughly 5,500 common sites, which would make the analysed panel about 71 per cent of what is available; that projection (and the related 4,832 figure) was computed under a depth-only mask on the superseded 3,359-SNP panel and should be read as a pre-re-run estimate, not a measured quantity. What is now measured is the MAF floor's effect downstream: lowering it to 1 per cent yields 10,876 SNPs on the same 1,900 isolates, and lowering it to 2 per cent yields 6,852 (Table S44)."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      725,
+      725
+    ],
+    "new_paragraph_range": [
+      722,
+      722
+    ],
+    "old": [
+      "[Hypothesized] If polyclonality tracks transmission intensity and transmission intensity tracks ecological zone, then Fws is itself a candidate zone-level phenotype worth analysing in its own right rather than used only as a QC filter. That analysis has not been performed, and any version of it would have to be stratified by sequencing study and run on a stated denominator. The threshold-sensitivity analysis bears on it indirectly and in a direction worth recording: relaxing the Fws cut raises maximum pairwise FST slightly rather than lowering it — 0.00232 at Fws ≥ 0.95 against 0.00255 at Fws ≥ 0.80 and 0.00254 with no cut at all (Table S35) — so the polyclonal isolates the filter removes were not masking between-zone differentiation."
+    ],
+    "new": [
+      "[Hypothesized] If polyclonality tracks transmission intensity and transmission intensity tracks ecological zone, then Fws is itself a candidate zone-level phenotype worth analysing in its own right rather than used only as a QC filter. That analysis has not been performed, and any version of it would have to be stratified by sequencing study and run on a stated denominator. The threshold-sensitivity analysis bears on it indirectly and in a direction worth recording: relaxing the Fws cut raises maximum pairwise FST slightly rather than lowering it — 0.00232 at Fws ≥ 0.95 against 0.00255 at Fws ≥ 0.80 and 0.00254 with no cut at all (Table S44) — so the polyclonal isolates the filter removes were not masking between-zone differentiation."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      727,
+      727
+    ],
+    "new_paragraph_range": [
+      724,
+      724
+    ],
+    "old": [
+      "Figure S19. TreeMix variance explained against the number of migration edges on the corrected 3,916-SNP matrix: 0.8970 at m = 0, 0.9405 at m = 1, 0.9969 at m = 2, 0.9997 at m = 3. The gain past m = 2 is not supported by the edge standard errors (third edge p = 0.33), and m ≥ 3 is not identifiable with four populations."
+    ],
+    "new": [
+      "Figure S20. TreeMix variance explained against the number of migration edges on the corrected 3,916-SNP matrix: 0.8970 at m = 0, 0.9405 at m = 1, 0.9969 at m = 2, 0.9997 at m = 3. The gain past m = 2 is not supported by the edge standard errors (third edge p = 0.33), and m ≥ 3 is not identifiable with four populations."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      729,
+      729
+    ],
+    "new_paragraph_range": [
+      726,
+      726
+    ],
+    "old": [
+      "[Interpreted] What the neutral result licenses. Neutral common-variant differentiation between zones is negligible — maximum pairwise FST 0.00232, with one of six confidence intervals spanning zero (Guinea savanna vs transitional zone, [−0.00083, 0.00178]), and the maximum staying within 0.00204–0.00255 across six threshold scenarios (Table S35) — so a spatially sparse design is adequate for characterising neutral structure. Marker-frequency representativeness is a separate question, and the rebuilt resistance panel shows significant between-zone variation at six of the nine panel genes, including pfdhfr, pfdhps and pfaat1 (the others being pfcrt, pfmdr1 and pfmdr2). If the question is whether a handful of sites will give a representative picture of the neutral genomic background, these data answer yes; if the question is whether those sites will give a representative picture of resistance-marker frequencies, these data answer no."
+    ],
+    "new": [
+      "[Interpreted] What the neutral result licenses. Neutral common-variant differentiation between zones is negligible — maximum pairwise FST 0.00232, with one of six confidence intervals spanning zero (Guinea savanna vs transitional zone, [−0.00083, 0.00178]), and the maximum staying within 0.00204–0.00255 across six threshold scenarios (Table S44) — so a spatially sparse design is adequate for characterising neutral structure. Marker-frequency representativeness is a separate question, and the rebuilt resistance panel shows significant between-zone variation at six of the nine panel genes, including pfdhfr, pfdhps and pfaat1 (the others being pfcrt, pfmdr1 and pfmdr2). If the question is whether a handful of sites will give a representative picture of the neutral genomic background, these data answer yes; if the question is whether those sites will give a representative picture of resistance-marker frequencies, these data answer no."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      732,
+      733
+    ],
+    "new_paragraph_range": [
+      729,
+      730
+    ],
+    "old": [
+      "[Calculated] Robustness of the readings above to the corrected panel. The conclusions in this section were reached on a neutral panel that grew from 3,359 to 3,916 SNPs (+16.6 per cent) once the filter order was corrected, with stages 4 to 9 re-run on the larger matrix. The substantive readings held — near-panmixia, maximum pairwise FST of about 0.0023, and a near-flat cross-validation curve. One reading did not hold, though it failed a later check rather than this one: isolation by distance, described in earlier drafts as a weak, leverage-dependent but real distance effect, is significant in only 2 of 6 threshold scenarios and is now reported as not robust (§8, Table S35). Within the corrected run it had in fact improved — the Mantel result no longer depends on the undisclosed censoring, and significant jackknife replicates went 2 of 7 to 4 of 7 — which is a useful reminder that a result can be made more reproducible and still not be true. One result gained inferential support: TreeMix now reports m = 2 as a selected descriptive model on edge p-values instead of hedging, though the variance-explained criterion across the full sweep still prefers m = 3. The BayPass threshold, outlier count and gene list all moved (11.232 to 10.840; 15 to 19 outliers; 11 to 13 genes). The marker panel is a different matter: it was not re-run but rebuilt, by a new script that reconstructs codons rather than matching annotation strings, and several of its conclusions did change (§7.5, §8). This wording is used identically in §6 and in §8; details and the full comparison are in Table S34.",
+      "[Interpreted] The containment corollary, correctly scoped. Because there is no detectable neutral barrier, there is no demographic barrier for a geographically targeted containment intervention to exploit, and an allele that establishes anywhere in Ghana has an unobstructed demographic route to the rest of the country. That remains a reasonable reading, and it is now the better supported for the absence of a robust distance effect: there is not even a weak isolation-by-distance gradient left to qualify it. It does not follow that spread will be uniform in rate or that a single site will see it first; the pfaat1, pfdhps and pfdhfr zone differences show that selection and drug pressure impose their own geography on top of free gene flow."
+    ],
+    "new": [
+      "[Calculated] Robustness of the readings above to the corrected panel. The conclusions in this section were reached on a neutral panel that grew from 3,359 to 3,916 SNPs (+16.6 per cent) once the filter order was corrected, with stages 4 to 9 re-run on the larger matrix. The substantive readings held — near-panmixia, maximum pairwise FST of about 0.0023, and a near-flat cross-validation curve. One reading did not hold, though it failed a later check rather than this one: isolation by distance, described in earlier drafts as a weak, leverage-dependent but real distance effect, is significant in only 2 of 6 threshold scenarios and is now reported as not robust (§8, Table S44). Within the corrected run it had in fact improved — the Mantel result no longer depends on the undisclosed censoring, and significant jackknife replicates went 2 of 7 to 4 of 7 — which is a useful reminder that a result can be made more reproducible and still not be true. One result gained inferential support: TreeMix now reports m = 2 as a selected descriptive model on edge p-values instead of hedging, though the variance-explained criterion across the full sweep still prefers m = 3. The BayPass threshold, outlier count and gene list all moved (11.232 to 10.840; 15 to 19 outliers; 11 to 13 genes). The marker panel is a different matter: it was not re-run but rebuilt, by a new script that reconstructs codons rather than matching annotation strings, and several of its conclusions did change (§7.5, §8). This wording is used identically in §6 and in §8; details and the full comparison are in Table S42.",
+      "[Interpreted] The containment corollary, correctly scoped. Because no neutral barrier is detectable at the retained common variants, this analysis supplies no evidence of a barrier for a geographically targeted containment intervention to exploit. That is an absence of evidence at the resolution these data permit, not a demonstration that parasite exchange across Ghana is unobstructed: a low differentiation estimate does not measure connectivity, and the study, geography and year confounding is not removed by it. That remains a reasonable reading, and it is now the better supported for the absence of a robust distance effect: there is not even a weak isolation-by-distance gradient left to qualify it. It does not follow that spread will be uniform in rate or that a single site will see it first; the pfaat1, pfdhps and pfdhfr zone differences show that selection and drug pressure impose their own geography on top of free gene flow."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      757,
+      758
+    ],
+    "new_paragraph_range": [
+      754,
+      755
+    ],
+    "old": [
+      "[Calculated] The four outstanding checks have now been run. Three confirmed robustness; one overturned a conclusion. (i) Threshold sensitivity. scripts/step13_sensitivity.py rebuilds the analysis matrix under six combinations of the two thresholds that define the dataset — the Fws monoclonality cut, which discards 57 per cent of isolates and does so unevenly by zone, and the MAF floor, which discards 99.8 per cent of sites — and recomputes pairwise FST and the region-level Mantel test for each (Table S35). Near-panmixia is insensitive to both: maximum pairwise FST moves only between 0.00204 and 0.00255, a total spread of 0.0005, over sample sizes from 1,900 to 4,403 and SNP counts from 3,275 to 10,876. That is the strongest evidence for the headline conclusion in the whole analysis. Isolation by distance is not: the Mantel test is significant in 2 of 6 scenarios, failing at every relaxation of the Fws cut and at MAF ≥ 0.01, and holding only at the published thresholds and marginally at MAF ≥ 0.02. Taken with the leave-one-region-out jackknife, which already showed 4 of 7 and collapse when Upper East is dropped, the finding must now be reported as not robust. It was the manuscript's only positive spatial finding, and it did not survive the two checks the audit itself identified as most needed. That is the overturned conclusion, and it is a loss rather than a refinement. (ii) Outlier variant quality. The 19 XtX outliers are better-supported calls than the rest of the panel, not worse, and the exported-protein artefact worry is closed; two adjacent chromosome-11 SNPs are downgraded for an unrelated and still-unverified reason (§7.2 and its note). (iii) Stage 3 re-run on the 1,900-isolate analysis set. The ordination conclusion is unchanged, the silhouette becomes slightly more negative, and the figures now describe the same sample as every other result (Figure S20). (iv) GeoJSON provenance remains open and cannot be closed analytically; it requires a written enquiry to the likely custodian (§9.3). Two secondary observations from (i) are worth recording in their own right: relaxing Fws slightly raises FST (0.00232 to 0.00255), so the polyclonal isolates the filter removes were not masking differentiation; and tripling the SNP count via MAF ≥ 0.01 lowers it (0.00204), as expected if rarer variants are less differentiated between zones.",
+      "Table S34. The conclusions against the corrected pipeline. Original-run values are from the superseded manuscript and the corrections record and are given only as before/after comparisons; corrected-run values are read from the final run's own outputs. Where a quantity moved, the row says so. The Mantel region row records a conclusion that this correction strengthened and a later check overturned; the grading that governs is the one in Table S35. The last two rows concern the marker panel, which was rebuilt rather than re-run; the SNP-count columns do not apply to them."
+    ],
+    "new": [
+      "[Calculated] The four outstanding checks have now been run. Three confirmed robustness; one overturned a conclusion. (i) Threshold sensitivity. scripts/step13_sensitivity.py rebuilds the analysis matrix under six combinations of the two thresholds that define the dataset — the Fws monoclonality cut, which discards 57 per cent of isolates and does so unevenly by zone, and the MAF floor, which discards 99.8 per cent of sites — and recomputes pairwise FST and the region-level Mantel test for each (Table S44). Near-panmixia is insensitive to both: maximum pairwise FST moves only between 0.00204 and 0.00255, a total spread of 0.0005, over sample sizes from 1,900 to 4,403 and SNP counts from 3,275 to 10,876. That is the strongest evidence for the headline conclusion in the whole analysis. Isolation by distance is not: the Mantel test is significant in 2 of 6 scenarios, failing at every relaxation of the Fws cut and at MAF ≥ 0.01, and holding only at the published thresholds and marginally at MAF ≥ 0.02. Taken with the leave-one-region-out jackknife, which already showed 4 of 7 and collapse when Upper East is dropped, the finding must now be reported as not robust. It was the manuscript's only positive spatial finding, and it did not survive the two checks the audit itself identified as most needed. That is the overturned conclusion, and it is a loss rather than a refinement. (ii) Outlier variant quality. The 19 XtX outliers are better-supported calls than the rest of the panel, not worse, and the exported-protein artefact worry is closed; two adjacent chromosome-11 SNPs are downgraded for an unrelated and still-unverified reason (§7.2 and its note). (iii) Stage 3 re-run on the 1,900-isolate analysis set. The ordination conclusion is unchanged, the silhouette becomes slightly more negative, and the figures now describe the same sample as every other result (Figure S21). (iv) GeoJSON provenance remains open and cannot be closed analytically; it requires a written enquiry to the likely custodian (§9.3). Two secondary observations from (i) are worth recording in their own right: relaxing Fws slightly raises FST (0.00232 to 0.00255), so the polyclonal isolates the filter removes were not masking differentiation; and tripling the SNP count via MAF ≥ 0.01 lowers it (0.00204), as expected if rarer variants are less differentiated between zones.",
+      "Table S42. The conclusions against the corrected pipeline. Original-run values are from the superseded manuscript and the corrections record and are given only as before/after comparisons; corrected-run values are read from the final run's own outputs. Where a quantity moved, the row says so. The Mantel region row records a conclusion that this correction strengthened and a later check overturned; the grading that governs is the one in Table S44. The last two rows concern the marker panel, which was rebuilt rather than re-run; the SNP-count columns do not apply to them."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      763,
+      765
+    ],
+    "new_paragraph_range": [
+      760,
+      762
+    ],
+    "old": [
+      "Table S36. Robustness checks performed. Bold rows are new since the original analysis. Four rows on the marker panel were new to the previous revision — the rebuild, the per-sample concordance, the within-isolate haplotypes and the pfk13/WHO check (rows 15 to 18) — with a fifth (the numalt re-fetch, row 14) carried forward but recorded as insufficient. Rows 19 to 21 are new to this revision; row 19 is the only check in the table that overturned a conclusion, and row 12 is graded by it.",
+      "Table S35. Threshold sensitivity. Both thresholds that define the analysis dataset were varied and pairwise FST and the region-level Mantel test recomputed from scratch under each scenario (scripts/step13_sensitivity.py; sensitivity_summary.csv, sensitivity_fst.csv). Maximum FST is the Coastal savanna–Guinea savanna pair in all six scenarios. Mantel statistics are the censored versions, with negative FST pairs floored to zero, on 9,999 seeded permutations; on the uncensored statistic only the baseline scenario clears p < 0.05 at all (baseline 0.041, MAF ≥ 0.02 0.050, the rest 0.064–0.200). The six scenarios are not independent analyses — they share data and a pipeline — but they test the analyst's threshold choices, which no other check in this document does. Near-panmixia survives; isolation by distance does not.",
+      "Figure S20. The three ordinations re-run on the 1,900-isolate analysis set and coloured by ecological zone, from MalariaGEN's published Pf8 genotype-distance matrix re-sliced to those isolates. Silhouette by zone is −0.020 on the raw distances, against −0.016 on the 4,905 Pf8-QC-passing isolates that the published figures describe: removing the polyclonal and clonally redundant isolates makes the zone separation slightly worse, not better. Trustworthiness is 0.499 (UMAP), 0.526 (t-SNE) and 0.510 (PCoA), each marginally higher than on the full set, while the PCoA distance correlation falls from 0.322 to 0.287. The conclusion of §6.3 is unchanged and the ordinations now describe the same sample as every other result in the document."
+    ],
+    "new": [
+      "Table S43. Robustness checks performed. Bold rows are new since the original analysis. Four rows on the marker panel were new to the previous revision — the rebuild, the per-sample concordance, the within-isolate haplotypes and the pfk13/WHO check (rows 15 to 18) — with a fifth (the numalt re-fetch, row 14) carried forward but recorded as insufficient. Rows 19 to 21 are new to this revision; row 19 is the only check in the table that overturned a conclusion, and row 12 is graded by it.",
+      "Table S44. Threshold sensitivity. Both thresholds that define the analysis dataset were varied and pairwise FST and the region-level Mantel test recomputed from scratch under each scenario (scripts/step13_sensitivity.py; sensitivity_summary.csv, sensitivity_fst.csv). Maximum FST is the Coastal savanna–Guinea savanna pair in all six scenarios. Mantel statistics are the censored versions, with negative FST pairs floored to zero, on 9,999 seeded permutations; on the uncensored statistic only the baseline scenario clears p < 0.05 at all (baseline 0.041, MAF ≥ 0.02 0.050, the rest 0.064–0.200). The six scenarios are not independent analyses — they share data and a pipeline — but they test the analyst's threshold choices, which no other check in this document does. Near-panmixia survives; isolation by distance does not.",
+      "Figure S21. The three ordinations re-run on the 1,900-isolate analysis set and coloured by ecological zone, from MalariaGEN's published Pf8 genotype-distance matrix re-sliced to those isolates. Silhouette by zone is −0.020 on the raw distances, against −0.016 on the 4,905 Pf8-QC-passing isolates that the published figures describe: removing the polyclonal and clonally redundant isolates makes the zone separation slightly worse, not better. Trustworthiness is 0.499 (UMAP), 0.526 (t-SNE) and 0.510 (PCoA), each marginally higher than on the full set, while the PCoA distance correlation falls from 0.322 to 0.287. The conclusion of §6.3 is unchanged and the ordinations now describe the same sample as every other result in the document."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      768,
+      768
+    ],
+    "new_paragraph_range": [
+      765,
+      765
+    ],
+    "old": [
+      "[Proposed] Three items listed here in the previous draft have since been run and have moved to Table S36 — the Fws sensitivity analysis, the MAF sensitivity analysis (now rows 19, jointly) and the stage 3 re-run on the analysis set (row 21). None of the following has been run. They are listed in order of expected value. The first two are the most important of what remains, and the second matters more than it did: a spatial result that holds at one threshold combination and almost nowhere else is exactly what an unresolved temporal confound can produce."
+    ],
+    "new": [
+      "[Proposed] Three items listed here in the previous draft have since been run and have moved to Table S43 — the Fws sensitivity analysis, the MAF sensitivity analysis (now rows 19, jointly) and the stage 3 re-run on the analysis set (row 21). None of the following has been run. They are listed in order of expected value. The first two are the most important of what remains, and the second matters more than it did: a spatial result that holds at one threshold combination and almost nowhere else is exactly what an unresolved temporal confound can produce."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      772,
+      773
+    ],
+    "new_paragraph_range": [
+      769,
+      770
+    ],
+    "old": [
+      "Permutation test for the outlier set. Compare the functional composition of the 13 outlier genes against random gene sets matched for length and SNP density, to test whether the apparent enrichment for exported and host-interaction proteins exceeds chance. The variant-quality check (Table S36 row 20) establishes that those genes' SNPs are well-called, not that the enrichment is real; the two questions are separate. The re-run added exactly two genes, both exported proteins — REX2 (PF3D7_0936000, ring-exported protein 2) and PF3D7_0221200, a Plasmodium exported protein of unknown function (hyp15) — taking the list from 11 to 13, which strengthens the pattern but does not test it; the two intergenic outliers are outside any such test by construction.",
+      "Recompute the zone-pair study overlap and the polyclonality figures on the 1,900-isolate analysis set. They are currently computed on the 4,905 Pf8-QC-passing isolates (§7.2 note). The nesting of study within zone is a property of the sampling frame and will not reverse, but the quoted percentages would then match the denominators used everywhere else. The stage 3 re-run (Table S36 row 21) shows this kind of re-slicing is now cheap, which weakens the excuse for leaving it undone."
+    ],
+    "new": [
+      "Permutation test for the outlier set. Compare the functional composition of the 13 outlier genes against random gene sets matched for length and SNP density, to test whether the apparent enrichment for exported and host-interaction proteins exceeds chance. The variant-quality check (Table S43 row 20) establishes that those genes' SNPs are well-called, not that the enrichment is real; the two questions are separate. The re-run added exactly two genes, both exported proteins — REX2 (PF3D7_0936000, ring-exported protein 2) and PF3D7_0221200, a Plasmodium exported protein of unknown function (hyp15) — taking the list from 11 to 13, which strengthens the pattern but does not test it; the two intergenic outliers are outside any such test by construction.",
+      "Recompute the zone-pair study overlap and the polyclonality figures on the 1,900-isolate analysis set. They are currently computed on the 4,905 Pf8-QC-passing isolates (§7.2 note). The nesting of study within zone is a property of the sampling frame and will not reverse, but the quoted percentages would then match the denominators used everywhere else. The stage 3 re-run (Table S43 row 21) shows this kind of re-slicing is now cheap, which weakens the excuse for leaving it undone."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      781,
+      781
+    ],
+    "new_paragraph_range": [
+      778,
+      778
+    ],
+    "old": [
+      "Figure S21. ADMIXTURE cross-validation error from K = 2 to K = 8 on the corrected 3,916-SNP matrix (3,385 LD-pruned sites); the sweep that produced the plot was run over K = 2–8, so K = 1 is not a plotted point and is quoted from the log instead. The curve is near-flat: K = 2 is the minimum at 0.83925 against 0.84384 at K = 1 (from logs/admixture_K1.out, on the same 3,385-SNP panel), an improvement of 0.54 per cent, and the plotted K = 2–8 range is 0.0056 (0.67 per cent). The curve has essentially the same shape on a 16.6 per cent larger SNP panel, which is part of the robustness result reported in §8."
+    ],
+    "new": [
+      "Figure S22. ADMIXTURE cross-validation error from K = 2 to K = 8 on the corrected 3,916-SNP matrix (3,385 LD-pruned sites); the sweep that produced the plot was run over K = 2–8, so K = 1 is not a plotted point and is quoted from the log instead. The curve is near-flat: K = 2 is the minimum at 0.83925 against 0.84384 at K = 1 (from logs/admixture_K1.out, on the same 3,385-SNP panel), an improvement of 0.54 per cent, and the plotted K = 2–8 range is 0.0056 (0.67 per cent). The curve has essentially the same shape on a 16.6 per cent larger SNP panel, which is part of the robustness result reported in §8."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      784,
+      785
+    ],
+    "new_paragraph_range": [
+      781,
+      782
+    ],
+    "old": [
+      "Table S37. Limitations ranked by how much they constrain the conclusions. Bold entries are new; items 8 and 9 were new to the previous revision and concern the marker panel. Item 15 is new to this revision; items 3, 5, 6, 7, 10, 11 and 13 are updated by the four checks reported in §8, and item 13 is now resolved.",
+      "[Interpreted] What the threshold-sensitivity analysis does and does not change in this list. It strengthens the headline and removes a finding, and the two should be stated together. Near-panmixia no longer rests on a single pass through a single dataset: maximum pairwise FST stays within 0.00204–0.00255 across six combinations of the two thresholds that define the analysis set, over sample sizes from 1,900 to 4,403 and SNP counts from 3,275 to 10,876 (Table S35). Limitations 5, 6 and 7 — panel size, the transitional zone's 25 isolates and the Fws exclusion — therefore constrain the precision of that conclusion without threatening it, which is a stronger position than the previous draft could claim. Isolation by distance is in the opposite position. Significant in 2 of 6 threshold scenarios and 4 of 7 leave-one-region-out replicates, it is not a result this analysis can claim, and limitations 3 and 11 are its explanation rather than caveats on it: 21 pairs derived from 7 administrative centroids, with 70 per cent of the isolates at one of them, cannot support a distance effect that survives perturbation of the dataset that produced it. The manuscript's only positive spatial finding has been lost. No reanalysis of these data will recover it; recovering it would need isolates with recorded collection coordinates (§9.2), and that is a design change rather than an analytical one."
+    ],
+    "new": [
+      "Table S45. Limitations ranked by how much they constrain the conclusions. Bold entries are new; items 8 and 9 were new to the previous revision and concern the marker panel. Item 15 is new to this revision; items 3, 5, 6, 7, 10, 11 and 13 are updated by the four checks reported in §8, and item 13 is now resolved.",
+      "[Interpreted] What the threshold-sensitivity analysis does and does not change in this list. It strengthens the headline and removes a finding, and the two should be stated together. Near-panmixia no longer rests on a single pass through a single dataset: maximum pairwise FST stays within 0.00204–0.00255 across six combinations of the two thresholds that define the analysis set, over sample sizes from 1,900 to 4,403 and SNP counts from 3,275 to 10,876 (Table S44). Limitations 5, 6 and 7 — panel size, the transitional zone's 25 isolates and the Fws exclusion — therefore constrain the precision of that conclusion without threatening it, which is a stronger position than the previous draft could claim. Isolation by distance is in the opposite position. Significant in 2 of 6 threshold scenarios and 4 of 7 leave-one-region-out replicates, it is not a result this analysis can claim, and limitations 3 and 11 are its explanation rather than caveats on it: 21 pairs derived from 7 administrative centroids, with 70 per cent of the isolates at one of them, cannot support a distance effect that survives perturbation of the dataset that produced it. The manuscript's only positive spatial finding has been lost. No reanalysis of these data will recover it; recovering it would need isolates with recorded collection coordinates (§9.2), and that is a design change rather than an analytical one."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      787,
+      787
+    ],
+    "new_paragraph_range": [
+      784,
+      784
+    ],
+    "old": [
+      "[Interpreted] Limitations 1, 2 and 3 are not analytical shortcomings that better methods would overcome. They are properties of the Pf8 metadata and of how Pf8 was assembled. No reanalysis of these data can produce a zone effect separable from a region effect, because for three of the four zones there is only one region in each; and no reanalysis can separate the Coastal–Guinea savanna contrast from a sequencing-study contrast, because no study contributed isolates to both. This should be stated plainly in any write-up rather than managed with hedging language, and it bears directly on how the thesis's objectives can be framed. Limitation 3 has now produced a concrete casualty rather than a theoretical one: the isolation-by-distance result it constrains did not survive threshold variation (§9.1, Table S35)."
+    ],
+    "new": [
+      "[Interpreted] Limitations 1, 2 and 3 are not analytical shortcomings that better methods would overcome. They are properties of the Pf8 metadata and of how Pf8 was assembled. No reanalysis of these data can produce a zone effect separable from a region effect, because for three of the four zones there is only one region in each; and no reanalysis can separate the Coastal–Guinea savanna contrast from a sequencing-study contrast, because no study contributed isolates to both. This should be stated plainly in any write-up rather than managed with hedging language, and it bears directly on how the thesis's objectives can be framed. Limitation 3 has now produced a concrete casualty rather than a theoretical one: the isolation-by-distance result it constrains did not survive threshold variation (§9.1, Table S44)."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      793,
+      793
+    ],
+    "new_paragraph_range": [
+      790,
+      790
+    ],
+    "old": [
+      "[Observed] What is reproducible. Most of the analysis's inputs are retrievable from public data sources, though not from a single one; that availability does not by itself establish that the pipeline as archived regenerates the reported results. All inputs except the zone polygon layer, the PlasmoDB 3D7 annotation and the Pf8 sample manifest are retrievable from https://pf8-release.cog.sanger.ac.uk — specifically the Zarr callset, the SNP-only VCFs, the reference FASTA and Pf8_drug_resistance_marker_genotypes.tsv. The annotation comes from PlasmoDB (config.PLASMODB_GFF = PlasmoDB-71_Pfalciparum3D7.gff), and it is the file the rebuilt marker panel depends on, since step12_codon_panel.py builds its CDS map from it; the manifest comes from malariagen.net (config.SAMPLE_MANIFEST = data/Pf8_samples.txt). Under Route A the core-regions BED (pf_core_regions.bed) must also be supplied by the user, as data/README.md states. Random seeds are fixed (config.RANDOM_SEED = 42; ADMIXTURE -s 42; TreeMix -seed 42; BayPass -seed 42), and the Mantel permutation test is now seeded as well (seed 42, 9,999 permutations), so both of its p-values are reproducible — previously neither was. The sensitivity analysis inherits those seeds and rebuilds each scenario's matrix from the same stored genotype array, so all six scenarios in Table S35 are reproducible from one script. Stage 3a is resumable and verifies its own output, and step03_umap.py now takes --samples and --suffix so an ordination can be recomputed on any subset without disturbing the published outputs. The marker panel is deterministic by construction: step12_codon_panel.py reads the CDS, the reference genome and the genotypes and involves no sampling. The stage sequence is driven by the following command, though the exact commands and script revisions used for the reported run are not archived:"
+    ],
+    "new": [
+      "[Observed] What is reproducible. Most of the analysis's inputs are retrievable from public data sources, though not from a single one; that availability does not by itself establish that the pipeline as archived regenerates the reported results. All inputs except the zone polygon layer, the PlasmoDB 3D7 annotation and the Pf8 sample manifest are retrievable from https://pf8-release.cog.sanger.ac.uk — specifically the Zarr callset, the SNP-only VCFs, the reference FASTA and Pf8_drug_resistance_marker_genotypes.tsv. The annotation comes from PlasmoDB (config.PLASMODB_GFF = PlasmoDB-71_Pfalciparum3D7.gff), and it is the file the rebuilt marker panel depends on, since step12_codon_panel.py builds its CDS map from it; the manifest comes from malariagen.net (config.SAMPLE_MANIFEST = data/Pf8_samples.txt). Under Route A the core-regions BED (pf_core_regions.bed) must also be supplied by the user, as data/README.md states. Random seeds are fixed (config.RANDOM_SEED = 42; ADMIXTURE -s 42; TreeMix -seed 42; BayPass -seed 42), and the Mantel permutation test is now seeded as well (seed 42, 9,999 permutations), so both of its p-values are reproducible — previously neither was. The sensitivity analysis inherits those seeds and rebuilds each scenario's matrix from the same stored genotype array, so all six scenarios in Table S44 are reproducible from one script. Stage 3a is resumable and verifies its own output, and step03_umap.py now takes --samples and --suffix so an ordination can be recomputed on any subset without disturbing the published outputs. The marker panel is deterministic by construction: step12_codon_panel.py reads the CDS, the reference genome and the genotypes and involves no sampling. The stage sequence is driven by the following command, though the exact commands and script revisions used for the reported run are not archived:"
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      795,
+      795
+    ],
+    "new_paragraph_range": [
+      792,
+      792
+    ],
+    "old": [
+      "[Observed] What has been fixed since the previous draft. Four defects that made the pipeline unreproducible or silently wrong have been corrected. (i) BayPass was non-deterministic across threads despite its fixed seed: the 8-thread manuscript run and an 8-thread re-run of the same command gave different thresholds and different outlier counts. It now runs single-threaded and is bitwise stable; the earlier multi-threaded outputs are archived rather than overwritten, and the three surviving threshold values are labelled in the note to Table S34. (ii) The Mantel test's silent flooring of negative FST values to zero is now disclosed, the affected pairs are named in the output JSON, and both censored and uncensored statistics are reported — which is how it became visible that the uncensored statistic clears p < 0.05 in only one of the six threshold scenarios (Table S35). (iii) The \"skip if output exists\" guards in stages 5b, 7b and 8b did not check whether the input had changed, so when the SNP panel grew from 3,359 to 3,916 the ADMIXTURE and TreeMix stages reused the previous day's results and reported success. Only stage 8 caught it, because it asserts that its position table and the BayPass output have matching row counts. All three guards now require the output to be newer than its input. (iv) The marker panel no longer identifies codons by annotation string. step12_codon_panel.py reconstructs each codon from the CDS and reference genome and emits the full residue spectrum including the reference residue, with a per-codon called count; it is validated call by call against MalariaGEN's published genotypes at the 25 of its 57 codons MalariaGEN publishes per sample (47,012 of 47,012 agree), leaving 32 codons, every pfk13 codon among them, with no independent per-sample check and its pfk13 list is taken from the WHO compendium v1.0 rather than written by hand. Defects (iii) and (iv) are the most dangerous kind: both produced no error and well-formed output, and in both cases wrong numbers would have been reported as though they were right."
+    ],
+    "new": [
+      "[Observed] What has been fixed since the previous draft. Four defects that made the pipeline unreproducible or silently wrong have been corrected. (i) BayPass was non-deterministic across threads despite its fixed seed: the 8-thread manuscript run and an 8-thread re-run of the same command gave different thresholds and different outlier counts. It now runs single-threaded and is bitwise stable; the earlier multi-threaded outputs are archived rather than overwritten, and the three surviving threshold values are labelled in the note to Table S42. (ii) The Mantel test's silent flooring of negative FST values to zero is now disclosed, the affected pairs are named in the output JSON, and both censored and uncensored statistics are reported — which is how it became visible that the uncensored statistic clears p < 0.05 in only one of the six threshold scenarios (Table S44). (iii) The \"skip if output exists\" guards in stages 5b, 7b and 8b did not check whether the input had changed, so when the SNP panel grew from 3,359 to 3,916 the ADMIXTURE and TreeMix stages reused the previous day's results and reported success. Only stage 8 caught it, because it asserts that its position table and the BayPass output have matching row counts. All three guards now require the output to be newer than its input. (iv) The marker panel no longer identifies codons by annotation string. step12_codon_panel.py reconstructs each codon from the CDS and reference genome and emits the full residue spectrum including the reference residue, with a per-codon called count; it is validated call by call against MalariaGEN's published genotypes at the 25 of its 57 codons MalariaGEN publishes per sample (47,012 of 47,012 agree), leaving 32 codons, every pfk13 codon among them, with no independent per-sample check and its pfk13 list is taken from the WHO compendium v1.0 rather than written by hand. Defects (iii) and (iv) are the most dangerous kind: both produced no error and well-formed output, and in both cases wrong numbers would have been reported as though they were right."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      804,
+      804
+    ],
+    "new_paragraph_range": [
+      801,
+      801
+    ],
+    "old": [
+      "Table S38. Threshold sensitivity of the two headline spatial results, from results/sensitivity_summary.csv (scripts/step13_sensitivity.py, 10 October 2026). The baseline row reproduces the published configuration exactly. Mantel r and p are the censored values, with negative FST pairs floored to zero, over 21 administrative-region pairs; the uncensored values are in the same file and change no conclusion (baseline p = 0.0413, and no relaxed scenario reaches 0.05 uncensored either). FST varies by less than 0.0005 across the six scenarios while the Mantel test crosses the 0.05 line four times, which is the whole of the difference between the two results' standing. This table is new in this revision; the research-questions table that carried the number 10.1 in previous versions is renumbered Table S39, and the one internal cross-reference to it, in Appendix F, is renumbered with it."
+    ],
+    "new": [
+      "Table S46. Threshold sensitivity of the two headline spatial results, from results/sensitivity_summary.csv (scripts/step13_sensitivity.py, 10 October 2026). The baseline row reproduces the published configuration exactly. Mantel r and p are the censored values, with negative FST pairs floored to zero, over 21 administrative-region pairs; the uncensored values are in the same file and change no conclusion (baseline p = 0.0413, and no relaxed scenario reaches 0.05 uncensored either). FST varies by less than 0.0005 across the six scenarios while the Mantel test crosses the 0.05 line four times, which is the whole of the difference between the two results' standing. This table is new in this revision; the research-questions table that carried the number 10.1 in previous versions is renumbered Table S47, and the one internal cross-reference to it, in Appendix F, is renumbered with it."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      810,
+      810
+    ],
+    "new_paragraph_range": [
+      807,
+      807
+    ],
+    "old": [
+      "Figure S22. UMAP, t-SNE and PCoA of the 1,900 × 1,900 analysis-set distance submatrix, coloured by agro-ecological zone: the same three ordinations as Figure S10, but on the 1,900 isolates analysed everywhere else rather than the 4,905 that pass sample-level QC. Silhouette by zone on the raw distances is −0.020, against −0.016 on the larger set. PCoA axes carry their variance proportions; UMAP and t-SNE axes are in arbitrary units and inter-cluster distances in those two panels carry no quantitative meaning. Generated by scripts/step03_umap.py with --samples and --suffix _qcset; the published Figure S10 and its underlying files are deliberately unchanged."
+    ],
+    "new": [
+      "Figure S23. UMAP, t-SNE and PCoA of the 1,900 × 1,900 analysis-set distance submatrix, coloured by agro-ecological zone: the same three ordinations as Figure S10, but on the 1,900 isolates analysed everywhere else rather than the 4,905 that pass sample-level QC. Silhouette by zone on the raw distances is −0.020, against −0.016 on the larger set. PCoA axes carry their variance proportions; UMAP and t-SNE axes are in arbitrary units and inter-cluster distances in those two panels carry no quantitative meaning. Generated by scripts/step03_umap.py with --samples and --suffix _qcset; the published Figure S10 and its underlying files are deliberately unchanged."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      833,
+      833
+    ],
+    "new_paragraph_range": [
+      830,
+      830
+    ],
+    "old": [
+      "Table S39. Research questions and the answers the current evidence supports. This table carried the number 10.1 in previous versions and is renumbered because the threshold-sensitivity table in Section 10.1 is now Table S38; the one internal cross-reference, in Appendix F, Table S44, is renumbered with it. The distance row is the only answer the robustness round of 10 October 2026 changed, and it changed downwards, from \"Moderate\" to not robust. The final row replaces the clause \"No validated resistance locus among them\", which the original table carried, and also replaces the first corrected version of that row, whose triple-mutant range, pfk13 denominator and pfk13 variant classification were all wrong."
+    ],
+    "new": [
+      "Table S47. Research questions and the answers the current evidence supports. This table carried the number 10.1 in previous versions and is renumbered because the threshold-sensitivity table in Section 10.1 is now Table S46; the one internal cross-reference, in Appendix F, Table S52, is renumbered with it. The distance row is the only answer the robustness round of 10 October 2026 changed, and it changed downwards, from \"Moderate\" to not robust. The final row replaces the clause \"No validated resistance locus among them\", which the original table carried, and also replaces the first corrected version of that row, whose triple-mutant range, pfk13 denominator and pfk13 variant classification were all wrong."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      836,
+      836
+    ],
+    "new_paragraph_range": [
+      833,
+      833
+    ],
+    "old": [
+      "Whether the conclusions are stable under alternative Fws and MAF thresholds is no longer unresolved. It was tested on 10 October 2026 (scripts/step13_sensitivity.py, Table S38) and answered in both directions: near-panmixia is stable, with max FST ranging only 0.00204–0.00255 over six scenarios, and isolation by distance is not, being significant in two of the six. The item is retained in this list only to record that it was the open question whose answer cost the manuscript a finding, and that the finding it cost was the spatial one."
+    ],
+    "new": [
+      "Whether the conclusions are stable under alternative Fws and MAF thresholds is no longer unresolved. It was tested on 10 October 2026 (scripts/step13_sensitivity.py, Table S46) and answered in both directions: near-panmixia is stable, with max FST ranging only 0.00204–0.00255 over six scenarios, and isolation by distance is not, being significant in two of the six. The item is retained in this list only to record that it was the open question whose answer cost the manuscript a finding, and that the finding it cost was the spatial one."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      846,
+      846
+    ],
+    "new_paragraph_range": [
+      843,
+      843
+    ],
+    "old": [
+      "[Proposed] The resistance-marker work that headed this list two revisions ago is done, and done twice: the first rebuild was itself defective and has been replaced by step12_codon_panel.py, whose outputs are the basis of every resistance number in this revision. Four further items the previous version carried are also now done, and they are struck from the list rather than restated. The Fws and MAF sensitivity analyses were run, and they overturned the isolation-by-distance result rather than defending it (Section 10.1, Table S38). Mapping quality and the other callset annotations were checked at all 19 outlier positions, clearing the exported-protein objection and flagging two chromosome-11 sites. Stage 3 was re-run on the 1,900-isolate analysis set (Figure S22). And results/baypass/xtx_all_snps.csv, which the previous version's item 6 asked to be restored, was restored and the restoration verified by md5 against three unchanged downstream outputs (Appendix F, Table S43, row 13). What follows is what is left, ordered by expected value per unit of effort. Only the first two are cheap, and the second of them is not an analysis at all."
+    ],
+    "new": [
+      "[Proposed] The resistance-marker work that headed this list two revisions ago is done, and done twice: the first rebuild was itself defective and has been replaced by step12_codon_panel.py, whose outputs are the basis of every resistance number in this revision. Four further items the previous version carried are also now done, and they are struck from the list rather than restated. The Fws and MAF sensitivity analyses were run, and they overturned the isolation-by-distance result rather than defending it (Section 10.1, Table S46). Mapping quality and the other callset annotations were checked at all 19 outlier positions, clearing the exported-protein objection and flagging two chromosome-11 sites. Stage 3 was re-run on the 1,900-isolate analysis set (Figure S23). And results/baypass/xtx_all_snps.csv, which the previous version's item 6 asked to be restored, was restored and the restoration verified by md5 against three unchanged downstream outputs (Appendix F, Table S51, row 13). What follows is what is left, ordered by expected value per unit of effort. Only the first two are cheap, and the second of them is not an analysis at all."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      851,
+      851
+    ],
+    "new_paragraph_range": [
+      848,
+      848
+    ],
+    "old": [
+      "Test isolation by distance properly, or stop reporting it as a finding. The region-level Mantel test on 21 pairs is at the limit of what Pf8's Ghanaian metadata supports, and it fails at four of the six threshold settings tried. Re-running it will not help. Two routes would: district- or site-level coordinates wherever the metadata carries them, which raises both the number of populations and the number of pairs; and a continuous-space method that does not require populations to be defined at all. Either is a new analysis rather than a robustness check, and neither is cheap. Until one is done the manuscript should carry near-panmixia as its spatial result and isolation by distance only as a non-robust observation, which is how Section 10.1 and Table S39 now report it."
+    ],
+    "new": [
+      "Test isolation by distance properly, or stop reporting it as a finding. The region-level Mantel test on 21 pairs is at the limit of what Pf8's Ghanaian metadata supports, and it fails at four of the six threshold settings tried. Re-running it will not help. Two routes would: district- or site-level coordinates wherever the metadata carries them, which raises both the number of populations and the number of pairs; and a continuous-space method that does not require populations to be defined at all. Either is a new analysis rather than a robustness check, and neither is cheap. Until one is done the manuscript should carry near-panmixia as its spatial result and isolation by distance only as a non-robust observation, which is how Section 10.1 and Table S47 now report it."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      902,
+      902
+    ],
+    "new_paragraph_range": [
+      899,
+      899
+    ],
+    "old": [
+      "Table S40. Software versions, re-confirmed from the live environment on 10 October 2026. No version changed between the original run, the corrected run or the codon-panel run; step12_codon_panel.py adds no dependency the pipeline did not already use. Its only import outside the rows above is requests, which step03a_fetch_callset_zarr.py and step10_resistance_panel.py already required and which is not itself listed here. The same holds for step13_sensitivity.py and for the --samples/--suffix re-run of step03_umap.py: both recompute with the packages already listed — scikit-allel for Hudson FST and the block jackknife, scikit-bio for the Mantel test, scikit-learn for the ordination metrics — and neither adds a dependency."
+    ],
+    "new": [
+      "Table S48. Software versions, re-confirmed from the live environment on 10 October 2026. No version changed between the original run, the corrected run or the codon-panel run; step12_codon_panel.py adds no dependency the pipeline did not already use. Its only import outside the rows above is requests, which step03a_fetch_callset_zarr.py and step10_resistance_panel.py already required and which is not itself listed here. The same holds for step13_sensitivity.py and for the --samples/--suffix re-run of step03_umap.py: both recompute with the packages already listed — scikit-allel for Hudson FST and the block jackknife, scikit-bio for the Mantel test, scikit-learn for the ordination metrics — and neither adds a dependency."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      907,
+      907
+    ],
+    "new_paragraph_range": [
+      904,
+      904
+    ],
+    "old": [
+      "Table S41. Configuration values in force for the corrected run and the codon-panel run. Three rows are marked \"Correction after audit\" and three \"Correction after the external critique\"; MAX_MISSING kept its value but moved in the cascade; three rows had the wrong file in the \"Set in\" column and are corrected here. RANDOM_SEED, MIN_SAMPLE_CALL_RATE and MIN_GENOTYPE_DP were dropped from the previous version of this table in error and are restored, as is CLONAL_THRESHOLD's correct value and MIN_FWS's citation. A twenty-eighth row is added in this revision for the grid over which step13_sensitivity.py varied MIN_FWS and MIN_MAF; it records a range rather than a value in force and is marked as such."
+    ],
+    "new": [
+      "Table S49. Configuration values in force for the corrected run and the codon-panel run. Three rows are marked \"Correction after audit\" and three \"Correction after the external critique\"; MAX_MISSING kept its value but moved in the cascade; three rows had the wrong file in the \"Set in\" column and are corrected here. RANDOM_SEED, MIN_SAMPLE_CALL_RATE and MIN_GENOTYPE_DP were dropped from the previous version of this table in error and are restored, as is CLONAL_THRESHOLD's correct value and MIN_FWS's citation. A twenty-eighth row is added in this revision for the grid over which step13_sensitivity.py varied MIN_FWS and MIN_MAF; it records a range rather than a value in force and is marked as such."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      909,
+      909
+    ],
+    "new_paragraph_range": [
+      906,
+      906
+    ],
+    "old": [
+      "[Observed] Session decisions versus inherited defaults. Of the 28 rows above, 27 are values in force and the twenty-eighth records the sensitivity grid rather than a setting. Of the 27, five are session decisions taken during this analysis and carry no external justification — CLONAL_THRESHOLD, MIN_GENOTYPE_GQ, TREEMIX_BLOCK_SIZE, BayPass NVAL and the codon panel's mixed-call policy — and two more, TSNE_PERPLEXITY and PCOA_N_AXES, are additions rather than judgements. Three are corrections forced by the internal audit (TreeMix SE, BayPass NTHREADS, the XtX q-value thresholds) and three by the external critique (the GENES list, the HAPLOTYPES definitions and the codon-panel ALT restriction), and all six are marked as such — six in total, not the seven stated in the previous version, whose count did not match the marks actually carried in the table; MAX_MISSING is unchanged in value but changed position in the filtering cascade, which is why the SNP count moved. The remainder are pipeline defaults or thesis-workflow specifications. The rows that most affect reported numbers are MIN_GENOTYPE_GQ, which governs the size of the SNP panel; BayPass NTHREADS, which governs whether the outlier scan is reproducible at all; and the codon panel's GENES list, which governs whether a marker exists in the manuscript or not — a point made the hard way, since pfdhps 437 was missing from the previous version because of how markers were identified rather than because of any threshold. Two of those rows have since been varied rather than merely justified: MIN_FWS and MIN_MAF were both relaxed in the sensitivity round, and the outcome is in Table S38 — near-panmixia unaffected, isolation by distance not surviving. MIN_GENOTYPE_GQ, which the paragraph above names as the largest discretionary choice in the pipeline, has still not been varied, and it governs the size of the SNP panel that every one of those six scenarios was drawn from."
+    ],
+    "new": [
+      "[Observed] Session decisions versus inherited defaults. Of the 28 rows above, 27 are values in force and the twenty-eighth records the sensitivity grid rather than a setting. Of the 27, five are session decisions taken during this analysis and carry no external justification — CLONAL_THRESHOLD, MIN_GENOTYPE_GQ, TREEMIX_BLOCK_SIZE, BayPass NVAL and the codon panel's mixed-call policy — and two more, TSNE_PERPLEXITY and PCOA_N_AXES, are additions rather than judgements. Three are corrections forced by the internal audit (TreeMix SE, BayPass NTHREADS, the XtX q-value thresholds) and three by the external critique (the GENES list, the HAPLOTYPES definitions and the codon-panel ALT restriction), and all six are marked as such — six in total, not the seven stated in the previous version, whose count did not match the marks actually carried in the table; MAX_MISSING is unchanged in value but changed position in the filtering cascade, which is why the SNP count moved. The remainder are pipeline defaults or thesis-workflow specifications. The rows that most affect reported numbers are MIN_GENOTYPE_GQ, which governs the size of the SNP panel; BayPass NTHREADS, which governs whether the outlier scan is reproducible at all; and the codon panel's GENES list, which governs whether a marker exists in the manuscript or not — a point made the hard way, since pfdhps 437 was missing from the previous version because of how markers were identified rather than because of any threshold. Two of those rows have since been varied rather than merely justified: MIN_FWS and MIN_MAF were both relaxed in the sensitivity round, and the outcome is in Table S46 — near-panmixia unaffected, isolation by distance not surviving. MIN_GENOTYPE_GQ, which the paragraph above names as the largest discretionary choice in the pipeline, has still not been varied, and it governs the size of the SNP panel that every one of those six scenarios was drawn from."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      912,
+      912
+    ],
+    "new_paragraph_range": [
+      909,
+      909
+    ],
+    "old": [
+      "Table S42. Principal outputs, relative to /media/biodataA/pf8/gyadu. Nine paths are marked \"New\" in this revision — the three codon_panel files and logs/step12_codon_panel.log from the external-critique round, plus the two sensitivity files, outlier_quality_check.csv, dimred_comparison_qcset.csv and figures/dimred_comparison_zone_qcset.png from the robustness round — and two are marked SUPERSEDED. Six further paths were new at the previous revision and are no longer flagged. One row changed status rather than contents: results/baypass/xtx_all_snps.csv was zero bytes when the previous version went out and has since been regenerated and checked for consistency with the retained downstream outputs."
+    ],
+    "new": [
+      "Table S50. Principal outputs, relative to /media/biodataA/pf8/gyadu. Nine paths are marked \"New\" in this revision — the three codon_panel files and logs/step12_codon_panel.log from the external-critique round, plus the two sensitivity files, outlier_quality_check.csv, dimred_comparison_qcset.csv and figures/dimred_comparison_zone_qcset.png from the robustness round — and two are marked SUPERSEDED. Six further paths were new at the previous revision and are no longer flagged. One row changed status rather than contents: results/baypass/xtx_all_snps.csv was zero bytes when the previous version went out and has since been regenerated and checked for consistency with the retained downstream outputs."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      917,
+      922
+    ],
+    "new_paragraph_range": [
+      914,
+      914
+    ],
+    "old": [
+      "source /home/tools/anaconda3/etc/profile.d/conda.sh && conda activate spatial",
+      "cd /media/biodataA/pf8/gyadu/scripts",
+      "python check_env.py              # verifies packages and external binaries",
+      "bash run_all.sh --list           # lists the stages",
+      "bash run_all.sh                  # full pipeline, stages 1-9",
+      "bash run_all.sh --from 4 --parallel   # stages 5-8 concurrently after stage 4"
+    ],
+    "new": [
+      "source /home/tools/anaconda3/etc/profile.d/conda.sh && conda activate spatial\ncd /media/biodataA/pf8/gyadu/scripts\npython check_env.py              # verifies packages and external binaries\nbash run_all.sh --list           # lists the stages\nbash run_all.sh                  # full pipeline, stages 1-9\nbash run_all.sh --from 4 --parallel   # stages 5-8 concurrently after stage 4"
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      924,
+      930
+    ],
+    "new_paragraph_range": [
+      916,
+      916
+    ],
+    "old": [
+      "python step12_codon_panel.py          # resistance markers by reconstructed codon",
+      "python step11_batch_confounding.py    # study x zone confounding",
+      "python step13_sensitivity.py          # Fws and MAF threshold sensitivity, 6 scenarios",
+      "# Stage 3 on the 1,900-isolate analysis set; outputs take the suffix, originals are untouched:",
+      "python step03_umap.py --samples <analysis sample list> --suffix _qcset",
+      "# superseded, retained only to re-demonstrate the annotation-matching defect:",
+      "# python step10_resistance_panel.py"
+    ],
+    "new": [
+      "python step12_codon_panel.py          # resistance markers by reconstructed codon\npython step11_batch_confounding.py    # study x zone confounding\npython step13_sensitivity.py          # Fws and MAF threshold sensitivity, 6 scenarios\n\n# Stage 3 on the 1,900-isolate analysis set; outputs take the suffix, originals are untouched:\npython step03_umap.py --samples <analysis sample list> --suffix _qcset\n\n# superseded, retained only to re-demonstrate the annotation-matching defect:\n# python step10_resistance_panel.py"
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      934,
+      936
+    ],
+    "new_paragraph_range": [
+      920,
+      920
+    ],
+    "old": [
+      "python step03a_fetch_callset_zarr.py --validate-only \\",
+      "--validate-vcf ../data/Pf8_Ghana_Pf3D7_10_v3.vcf.gz \\",
+      "--validate-region Pf3D7_10_v3:400001-440000"
+    ],
+    "new": [
+      "python step03a_fetch_callset_zarr.py --validate-only \\\n--validate-vcf ../data/Pf8_Ghana_Pf3D7_10_v3.vcf.gz \\\n--validate-region Pf3D7_10_v3:400001-440000"
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      939,
+      939
+    ],
+    "new_paragraph_range": [
+      923,
+      923
+    ],
+    "old": [
+      "[Observed] Reproducibility caveat. The zone polygon layer (data/ghanaAEZ.geojson) still has no citable provenance, so Stage 2 cannot be reproduced from public sources alone. The file has been identified with certainty — it is byte-for-byte identical to ArcGIS Online item 0776dae5c5314102bd03fdaab8df0356, md5 96b1a7f4da62d6f0153826f41af96152 on both sides — but that item's licenseInfo and accessInformation are both null and its owner is an anonymous personal account, so it is an unattributed re-host rather than an origin. It must not be attributed to any named institution. Cite it as accessed, record the checksum for identity, cite the underlying classification separately (the scheme is a hybrid: MoFA/FAO savanna and coastal names with a Hall & Swaine-lineage evergreen split), and state the provenance gap as a limitation. This remains a publication blocker. Three further gaps are unchanged or newly noted: the project is not under version control, so the exact script state at run time is recoverable only from the files on disk; t-SNE and the ADMIXTURE runs have not been verified to be bitwise reproducible across thread counts, although BayPass now is; and the results/baypass/xtx_all_snps.csv gap is narrowed — the file was found truncated to zero bytes, has been regenerated from the raw BayPass summaries, and the regeneration is consistent with three unchanged downstream outputs by md5, which does not establish row-for-row identity with the lost table (Appendix F, Table S43, row 13) — but the incident itself belongs in this list, because nothing under results/ is write-protected and the project is not under version control, so a stray redirect into an output file is undetectable except by looking for it. A fifth, added in this revision: the codon panel's pfk13 codon list is transcribed from the WHO compendium into step12_codon_panel.py by hand, which is exactly the kind of step that produced defect 10 below, so a successor should re-check the list against the compendium rather than against the previous script."
+    ],
+    "new": [
+      "[Observed] Reproducibility caveat. The zone polygon layer (data/ghanaAEZ.geojson) still has no citable provenance, so Stage 2 cannot be reproduced from public sources alone. The file has been identified with certainty — it is byte-for-byte identical to ArcGIS Online item 0776dae5c5314102bd03fdaab8df0356, md5 96b1a7f4da62d6f0153826f41af96152 on both sides — but that item's licenseInfo and accessInformation are both null and its owner is an anonymous personal account, so it is an unattributed re-host rather than an origin. It must not be attributed to any named institution. Cite it as accessed, record the checksum for identity, cite the underlying classification separately (the scheme is a hybrid: MoFA/FAO savanna and coastal names with a Hall & Swaine-lineage evergreen split), and state the provenance gap as a limitation. This remains a publication blocker. Three further gaps are unchanged or newly noted: the project is not under version control, so the exact script state at run time is recoverable only from the files on disk; t-SNE and the ADMIXTURE runs have not been verified to be bitwise reproducible across thread counts, although BayPass now is; and the results/baypass/xtx_all_snps.csv gap is narrowed — the file was found truncated to zero bytes, has been regenerated from the raw BayPass summaries, and the regeneration is consistent with three unchanged downstream outputs by md5, which does not establish row-for-row identity with the lost table (Appendix F, Table S51, row 13) — but the incident itself belongs in this list, because nothing under results/ is write-protected and the project is not under version control, so a stray redirect into an output file is undetectable except by looking for it. A fifth, added in this revision: the codon panel's pfk13 codon list is transcribed from the WHO compendium into step12_codon_panel.py by hand, which is exactly the kind of step that produced defect 10 below, so a successor should re-check the list against the compendium rather than against the previous script."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      941,
+      944
+    ],
+    "new_paragraph_range": [
+      925,
+      928
+    ],
+    "old": [
+      "[Observed] This appendix exists for traceability, and it now records three rounds. Round one, 9–10 October 2026: an adversarial multi-agent audit. Eight reviewers working across separate dimensions raised 110 findings, each of which was then put to three independent verifiers prompted to refute it and defaulting to refuted where they could not substantiate the claim. A finding counts as confirmed only where at least two of three verifiers failed to refute it after checking the code, data or outputs themselves. Sixty-one findings were confirmed — 14 high severity, 31 medium, 16 low — with 19 disputed and 21 refuted. Thirty verifications in the reproducibility dimension were lost to a rate limit and are recorded as unverified rather than confirmed. Seven confirmed defects required code changes; stages 4 to 9 were re-run on 10 October 2026 with all seven in place. Round two, 10 October 2026: an external critique of the corrected manuscript. It raised five points. All five were upheld and four were defects in the analysis code, not in the prose — in the resistance panel that round one had introduced to fix its own largest finding. The panel was rebuilt as scripts/step12_codon_panel.py and every resistance number in this revision was read from that script's outputs. This is the fourth consecutive round in which a correction contained its own defect, and the pattern is consistent: each layer was checked for internal consistency against our own outputs, and what escaped was external correctness — whether the marker list matched an authoritative source, whether the annotation direction matched the reference genome, whether a co-occurrence claim had co-occurrence data behind it. The verification architecture was built to catch stale numbers, and it did. It was not built to ask whether the inputs were the right ones. Round three, 10 October 2026: the four outstanding robustness checks. This round was not an audit of the manuscript but the execution of four items that Section 10.4 carried as outstanding, and it is recorded here because one of them overturned a conclusion instead of confirming it. The Fws and MAF sensitivity analysis (scripts/step13_sensitivity.py) withdrew isolation by distance as a supported result — significant in two of six threshold scenarios — and, from the same six runs, made near-panmixia the best-evidenced conclusion in the manuscript. The outlier quality check cleared the exported-protein artefact concern and downgraded two chromosome-11 SNPs on an ExcessHet and InbreedingCoeff signal. Stage 3 was re-run on the analysis set. The GeoJSON provenance cannot be closed analytically and remains open. Round three found no defect in the prose and none in the analysis code; what it found was that a published result depended on the thresholds that produced it. Two integrity incidents occurred during the round and are registered as rows 13 and 14 of Table S43 rather than left in the logs.",
+      "Table S43. Confirmed defects that required code changes: eight from the internal audit (the eighth found by the re-run itself), four from the external critique, and two integrity incidents from the robustness round of 10 October 2026. All fourteen are fixed. Defects 1-8 were re-run on 10 October 2026; defects 9-12 are fixed in step12_codon_panel.py, whose outputs supersede step10's. Rows 13 and 14 are operational rather than analytical: neither changed a reported number, and they are registered here rather than left in the logs because a defect register that records only the defects that changed a number is not a defect register.",
+      "Table S44. Confirmed defects corrected in the text rather than in code, from both rounds. No re-run was needed for any of them with one exception, which is noted rather than hidden: the pfcrt codon 75 entry's correction comes from the panel rebuild recorded as defect 9 of Table S43 and did require a re-run; it is repeated here because the wording it replaces was prose. The four entries shown in bold were raised by the external critique, whose five points are otherwise recorded as defects 9-12 of Table S43; on the critique's own four-code/one-prose split only the pfaat1 interpretation and the gene-level WHO tier labels are text-only, so the bold marks here should not be read as four further text-only defects.",
+      "[Observed] Confirmed and not yet acted on. Three items have come off this list since the previous version, all in the robustness round of 10 October 2026: the Fws and MAF sensitivity analyses, now reported in Section 10.1 and Table S38; the mapping-quality check at the outlier positions, now in Section 10.1 and results/outlier_quality_check.csv; and the re-run of Stage 3 on the analysis set, now Figure S22. What remains: the functional-enrichment permutation test for the outlier gene set; the temporal control at a single collection year; the robustness join against an authoritative six-zone Ghana layer; the recomputation of the zone-pair study overlap on the 1,900-isolate set; independent corroboration of the 32 panel codons MalariaGEN does not publish per sample; and, added by the robustness round, a read-level depth check at Pf3D7_11_v3:1054078 and Pf3D7_11_v3:1054447, without which two of the 19 outliers stay qualified. These are carried in Sections 8.2, 10.3 and 10.4 rather than here. Four items that the corrections document listed as outstanding — the filter order, the TreeMix run without -se, the study/batch confounding and the absence of FDR accounting — were subsequently fixed and are reported as results in Sections 4.2.6, 6.1, 6.7, 2.6, 6.2, 7.2 and 6.8; any defect register that still lists them as open is out of date. Two high-severity findings — that the canonical markers were excluded at ingest, and that the top AAT1 outlier is S258L — were confirmed by the audit but not independently re-verified before the server went off-LAN; both have since been re-derived directly from Pf8 by the codon panel. The previous version's cross-validation claim for that panel, \"21 of 23 shared markers agree within 0.03\", is withdrawn and replaced: per-sample comparison against MalariaGEN's published genotypes now gives 47,012 of 47,012 calls in agreement across 25 markers, which is a stronger result obtained by a stricter test, and which also exposed the codon-75 error that the weaker test had hidden."
+    ],
+    "new": [
+      "[Observed] This appendix exists for traceability, and it now records three rounds. Round one, 9–10 October 2026: an adversarial multi-agent audit. Eight reviewers working across separate dimensions raised 110 findings, each of which was then put to three independent verifiers prompted to refute it and defaulting to refuted where they could not substantiate the claim. A finding counts as confirmed only where at least two of three verifiers failed to refute it after checking the code, data or outputs themselves. Sixty-one findings were confirmed — 14 high severity, 31 medium, 16 low — with 19 disputed and 21 refuted. Thirty verifications in the reproducibility dimension were lost to a rate limit and are recorded as unverified rather than confirmed. Seven confirmed defects required code changes; stages 4 to 9 were re-run on 10 October 2026 with all seven in place. Round two, 10 October 2026: an external critique of the corrected manuscript. It raised five points. All five were upheld and four were defects in the analysis code, not in the prose — in the resistance panel that round one had introduced to fix its own largest finding. The panel was rebuilt as scripts/step12_codon_panel.py and every resistance number in this revision was read from that script's outputs. This is the fourth consecutive round in which a correction contained its own defect, and the pattern is consistent: each layer was checked for internal consistency against our own outputs, and what escaped was external correctness — whether the marker list matched an authoritative source, whether the annotation direction matched the reference genome, whether a co-occurrence claim had co-occurrence data behind it. The verification architecture was built to catch stale numbers, and it did. It was not built to ask whether the inputs were the right ones. Round three, 10 October 2026: the four outstanding robustness checks. This round was not an audit of the manuscript but the execution of four items that Section 10.4 carried as outstanding, and it is recorded here because one of them overturned a conclusion instead of confirming it. The Fws and MAF sensitivity analysis (scripts/step13_sensitivity.py) withdrew isolation by distance as a supported result — significant in two of six threshold scenarios — and, from the same six runs, made near-panmixia the best-evidenced conclusion in the manuscript. The outlier quality check cleared the exported-protein artefact concern and downgraded two chromosome-11 SNPs on an ExcessHet and InbreedingCoeff signal. Stage 3 was re-run on the analysis set. The GeoJSON provenance cannot be closed analytically and remains open. Round three found no defect in the prose and none in the analysis code; what it found was that a published result depended on the thresholds that produced it. Two integrity incidents occurred during the round and are registered as rows 13 and 14 of Table S51 rather than left in the logs.",
+      "Table S51. Confirmed defects that required code changes: eight from the internal audit (the eighth found by the re-run itself), four from the external critique, and two integrity incidents from the robustness round of 10 October 2026. All fourteen are fixed. Defects 1-8 were re-run on 10 October 2026; defects 9-12 are fixed in step12_codon_panel.py, whose outputs supersede step10's. Rows 13 and 14 are operational rather than analytical: neither changed a reported number, and they are registered here rather than left in the logs because a defect register that records only the defects that changed a number is not a defect register.",
+      "Table S52. Confirmed defects corrected in the text rather than in code, from both rounds. No re-run was needed for any of them with one exception, which is noted rather than hidden: the pfcrt codon 75 entry's correction comes from the panel rebuild recorded as defect 9 of Table S51 and did require a re-run; it is repeated here because the wording it replaces was prose. The four entries shown in bold were raised by the external critique, whose five points are otherwise recorded as defects 9-12 of Table S51; on the critique's own four-code/one-prose split only the pfaat1 interpretation and the gene-level WHO tier labels are text-only, so the bold marks here should not be read as four further text-only defects.",
+      "[Observed] Confirmed and not yet acted on. Three items have come off this list since the previous version, all in the robustness round of 10 October 2026: the Fws and MAF sensitivity analyses, now reported in Section 10.1 and Table S46; the mapping-quality check at the outlier positions, now in Section 10.1 and results/outlier_quality_check.csv; and the re-run of Stage 3 on the analysis set, now Figure S23. What remains: the functional-enrichment permutation test for the outlier gene set; the temporal control at a single collection year; the robustness join against an authoritative six-zone Ghana layer; the recomputation of the zone-pair study overlap on the 1,900-isolate set; independent corroboration of the 32 panel codons MalariaGEN does not publish per sample; and, added by the robustness round, a read-level depth check at Pf3D7_11_v3:1054078 and Pf3D7_11_v3:1054447, without which two of the 19 outliers stay qualified. These are carried in Sections 8.2, 10.3 and 10.4 rather than here. Four items that the corrections document listed as outstanding — the filter order, the TreeMix run without -se, the study/batch confounding and the absence of FDR accounting — were subsequently fixed and are reported as results in Sections 4.2.6, 6.1, 6.7, 2.6, 6.2, 7.2 and 6.8; any defect register that still lists them as open is out of date. Two high-severity findings — that the canonical markers were excluded at ingest, and that the top AAT1 outlier is S258L — were confirmed by the audit but not independently re-verified before the server went off-LAN; both have since been re-derived directly from Pf8 by the codon panel. The previous version's cross-validation claim for that panel, \"21 of 23 shared markers agree within 0.03\", is withdrawn and replaced: per-sample comparison against MalariaGEN's published genotypes now gives 47,012 of 47,012 calls in agreement across 25 markers, which is a stronger result obtained by a stricter test, and which also exposed the codon-75 error that the weaker test had hidden."
+    ]
+  }
+]

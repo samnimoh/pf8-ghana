@@ -1,0 +1,29 @@
+{
+  "source": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.docx",
+  "source_sha256": "d09d14eea677e18ace50088d58e3e044e4edfe2ad21edb971d59b67305d9d66c",
+  "media": [
+    {
+      "docx_member": "word/media/218857879d6287b87460540cea2d8ec053df7685.png",
+      "sha256": "f4112599fbad39c81f14fed472843e555d5ae8d2875748d528c458c2e4333397",
+      "matching_local_files": [
+        "/Users/samnimoh/Desktop/chromo/corrected/dimred_comparison_zone_qcset.png",
+        "/Users/samnimoh/Desktop/chromo/proof_of_work/dimred_comparison_zone_qcset.png"
+      ]
+    },
+    {
+      "docx_member": "word/media/93b6764f7192ce47a8c3257fe6d80a68d84833ff.png",
+      "sha256": "32cb1af0047ef04a810c0b37032bd2b1409fd30e95681d77dfbb989768227455",
+      "matching_local_files": [
+        "/Users/samnimoh/Desktop/chromo/pf8_proof/ghana_samples_aez_map.png"
+      ]
+    },
+    {
+      "docx_member": "word/media/c8eab09bbe813dc6fe1001e38fae01b5b7482cd0.png",
+      "sha256": "364bea28437bd6e319955478e94b6c0830757d726af6333fd2226a60748d83a9",
+      "matching_local_files": [
+        "/Users/samnimoh/Desktop/chromo/proof_of_work/baypass_xtx.png"
+      ]
+    }
+  ],
+  "scope": "Byte identity of embedded figures with local image files; does not prove generating provenance."
+}

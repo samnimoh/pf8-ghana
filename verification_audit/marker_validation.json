@@ -1,0 +1,495 @@
+{
+  "aggregate_count_checks_pass": true,
+  "generated_utc": "2026-10-10T16:01:17.858125+00:00",
+  "haplotypes": {
+    "pfcrt_72_76": {
+      "corrected_count": 133,
+      "corrected_n_complete": 1873,
+      "count": 133,
+      "frequency": 0.07100907634810465,
+      "method": "published complete 72-76 motif",
+      "n_complete": 1873,
+      "pass": true,
+      "published_columns": [
+        "crt_72-76[CVMNK]"
+      ],
+      "residue_string_spectrum": {
+        "CVIET": 133,
+        "CVMNK": 1740
+      },
+      "target": "CVIET",
+      "zones": {
+        "Coastal savanna": {
+          "corrected_count": 11,
+          "corrected_n_complete": 204,
+          "count": 11,
+          "n_complete": 204,
+          "pass": true
+        },
+        "Decidous forest": {
+          "corrected_count": 35,
+          "corrected_n_complete": 335,
+          "count": 35,
+          "n_complete": 335,
+          "pass": true
+        },
+        "Guinea savanna": {
+          "corrected_count": 84,
+          "corrected_n_complete": 1310,
+          "count": 84,
+          "n_complete": 1310,
+          "pass": true
+        },
+        "Transitional zone": {
+          "corrected_count": 3,
+          "corrected_n_complete": 24,
+          "count": 3,
+          "n_complete": 24,
+          "pass": true
+        }
+      }
+    },
+    "pfdhfr_51_59_108": {
+      "corrected_count": 1446,
+      "corrected_n_complete": 1876,
+      "count": 1446,
+      "frequency": 0.7707889125799574,
+      "method": "conjunction of unambiguous published residue strings",
+      "n_complete": 1876,
+      "pass": true,
+      "published_columns": [
+        "dhfr_51[N]",
+        "dhfr_59[C]",
+        "dhfr_108[S]"
+      ],
+      "residue_string_spectrum": {
+        "ICN": 33,
+        "IRN": 1446,
+        "NCN": 8,
+        "NCS": 171,
+        "NRN": 217,
+        "NRS": 1
+      },
+      "target": "IRN",
+      "zones": {
+        "Coastal savanna": {
+          "corrected_count": 176,
+          "corrected_n_complete": 203,
+          "count": 176,
+          "n_complete": 203,
+          "pass": true
+        },
+        "Decidous forest": {
+          "corrected_count": 260,
+          "corrected_n_complete": 330,
+          "count": 260,
+          "n_complete": 330,
+          "pass": true
+        },
+        "Guinea savanna": {
+          "corrected_count": 988,
+          "corrected_n_complete": 1318,
+          "count": 988,
+          "n_complete": 1318,
+          "pass": true
+        },
+        "Transitional zone": {
+          "corrected_count": 22,
+          "corrected_n_complete": 25,
+          "count": 22,
+          "n_complete": 25,
+          "pass": true
+        }
+      }
+    },
+    "pfdhfr_quadruple": {
+      "corrected_count": 0,
+      "corrected_n_complete": 1874,
+      "count": 0,
+      "frequency": 0.0,
+      "method": "conjunction of unambiguous published residue strings",
+      "n_complete": 1874,
+      "pass": true,
+      "published_columns": [
+        "dhfr_51[N]",
+        "dhfr_59[C]",
+        "dhfr_108[S]",
+        "dhfr_164[I]"
+      ],
+      "residue_string_spectrum": {
+        "ICNI": 33,
+        "IRNI": 1444,
+        "NCNI": 8,
+        "NCSI": 171,
+        "NRNI": 217,
+        "NRSI": 1
+      },
+      "target": "IRNL",
+      "zones": {
+        "Coastal savanna": {
+          "corrected_count": 0,
+          "corrected_n_complete": 203,
+          "count": 0,
+          "n_complete": 203,
+          "pass": true
+        },
+        "Decidous forest": {
+          "corrected_count": 0,
+          "corrected_n_complete": 329,
+          "count": 0,
+          "n_complete": 329,
+          "pass": true
+        },
+        "Guinea savanna": {
+          "corrected_count": 0,
+          "corrected_n_complete": 1317,
+          "count": 0,
+          "n_complete": 1317,
+          "pass": true
+        },
+        "Transitional zone": {
+          "corrected_count": 0,
+          "corrected_n_complete": 25,
+          "count": 0,
+          "n_complete": 25,
+          "pass": true
+        }
+      }
+    },
+    "pfdhps_437_540": {
+      "corrected_count": 18,
+      "corrected_n_complete": 1888,
+      "count": 18,
+      "frequency": 0.009533898305084746,
+      "method": "conjunction of unambiguous published residue strings",
+      "n_complete": 1888,
+      "pass": true,
+      "published_columns": [
+        "dhps_437[G]",
+        "dhps_540[K]"
+      ],
+      "residue_string_spectrum": {
+        "AK": 195,
+        "GE": 18,
+        "GK": 1675
+      },
+      "target": "GE",
+      "zones": {
+        "Coastal savanna": {
+          "corrected_count": 1,
+          "corrected_n_complete": 203,
+          "count": 1,
+          "n_complete": 203,
+          "pass": true
+        },
+        "Decidous forest": {
+          "corrected_count": 2,
+          "corrected_n_complete": 336,
+          "count": 2,
+          "n_complete": 336,
+          "pass": true
+        },
+        "Guinea savanna": {
+          "corrected_count": 15,
+          "corrected_n_complete": 1324,
+          "count": 15,
+          "n_complete": 1324,
+          "pass": true
+        },
+        "Transitional zone": {
+          "corrected_count": 0,
+          "corrected_n_complete": 25,
+          "count": 0,
+          "n_complete": 25,
+          "pass": true
+        }
+      }
+    }
+  },
+  "input_artifacts": {
+    "analysis_samples": {
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/interim/analysis_samples.csv",
+      "sha256": "fef75e071c5c2697a284e4ff50f6b6a7d36d8ffffac29d68969aece2825fe712"
+    },
+    "canonical_facts": {
+      "path": "/Users/samnimoh/Desktop/chromo/corrected/CANONICAL_FACTS.txt",
+      "sha256": "41d7523eb2a61da9d2da5104521c91e495d028fce07f4e0f839a0497baad4843"
+    },
+    "corrected_concordance": {
+      "path": "/Users/samnimoh/Desktop/chromo/corrected/codon_panel_concordance.csv",
+      "sha256": "92cb9fe822a4dfb6d4d4f55a3ae7a9740256708fca22a326b168322f511b2189"
+    },
+    "corrected_haplotypes": {
+      "path": "/Users/samnimoh/Desktop/chromo/corrected/codon_panel_haplotypes.csv",
+      "sha256": "65662e0433d803c63d797b4218c41d108f3143885ce6fde54df62d274035ccbc"
+    },
+    "corrected_residues": {
+      "path": "/Users/samnimoh/Desktop/chromo/corrected/codon_panel_residues.csv",
+      "sha256": "f98f5ce21ff31138eef35f8035c9b4ebf8d1ae76997c34a2d07c5ed97af3e970"
+    },
+    "published_calls": {
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/inputs/Pf8_drug_resistance_marker_genotypes.tsv",
+      "sha256": "866450e8b32a5f6433f813932565579512cc5e0424b999d6769818988840e4ed"
+    }
+  },
+  "k13": {
+    "all_reference_claim_supported": false,
+    "canonical_facts_asserts_all_reference": true,
+    "complete_validated_and_candidate_coverage": true,
+    "dated_reference_list": "WHO compendium v1.0, December 2025",
+    "distinct_codons": 23,
+    "factual_inconsistency": "CANONICAL_FACTS.txt:80 says all pfk13 residues are reference, but codon_panel_residues.csv:55 reports one N458D call among 1866 called. N458D is not N458Y and does not contradict the screened-marker negative.",
+    "marker_tiers": {
+      "candidate": {
+        "C469F": {
+          "codon_covered": true,
+          "n_called": 1863,
+          "target_count": 0
+        },
+        "E252Q": {
+          "codon_covered": true,
+          "n_called": 1876,
+          "target_count": 0
+        },
+        "G538V": {
+          "codon_covered": true,
+          "n_called": 1863,
+          "target_count": 0
+        },
+        "N537I": {
+          "codon_covered": true,
+          "n_called": 1868,
+          "target_count": 0
+        },
+        "P441L": {
+          "codon_covered": true,
+          "n_called": 1860,
+          "target_count": 0
+        },
+        "V568G": {
+          "codon_covered": true,
+          "n_called": 1866,
+          "target_count": 0
+        }
+      },
+      "validated": {
+        "A675V": {
+          "codon_covered": true,
+          "n_called": 1845,
+          "target_count": 0
+        },
+        "C469Y": {
+          "codon_covered": true,
+          "n_called": 1863,
+          "target_count": 0
+        },
+        "C580Y": {
+          "codon_covered": true,
+          "n_called": 1863,
+          "target_count": 0
+        },
+        "F446I": {
+          "codon_covered": true,
+          "n_called": 1863,
+          "target_count": 0
+        },
+        "G533S": {
+          "codon_covered": true,
+          "n_called": 1863,
+          "target_count": 0
+        },
+        "I543T": {
+          "codon_covered": true,
+          "n_called": 1861,
+          "target_count": 0
+        },
+        "M476I": {
+          "codon_covered": true,
+          "n_called": 1867,
+          "target_count": 0
+        },
+        "N458Y": {
+          "codon_covered": true,
+          "n_called": 1866,
+          "target_count": 0
+        },
+        "P553L": {
+          "codon_covered": true,
+          "n_called": 1859,
+          "target_count": 0
+        },
+        "P574L": {
+          "codon_covered": true,
+          "n_called": 1861,
+          "target_count": 0
+        },
+        "R539T": {
+          "codon_covered": true,
+          "n_called": 1861,
+          "target_count": 0
+        },
+        "R561H": {
+          "codon_covered": true,
+          "n_called": 1864,
+          "target_count": 0
+        },
+        "R622I": {
+          "codon_covered": true,
+          "n_called": 1862,
+          "target_count": 0
+        },
+        "Y493H": {
+          "codon_covered": true,
+          "n_called": 1857,
+          "target_count": 0
+        }
+      }
+    },
+    "nonreference_residue_calls": [
+      {
+        "codon": 458,
+        "count": 1,
+        "label": "Asn458Asp",
+        "n_called": 1866,
+        "residue": "D"
+      }
+    ],
+    "residue_table_codons": [
+      252,
+      441,
+      446,
+      449,
+      458,
+      469,
+      476,
+      481,
+      493,
+      515,
+      527,
+      533,
+      537,
+      538,
+      539,
+      543,
+      553,
+      561,
+      568,
+      574,
+      580,
+      622,
+      675
+    ],
+    "screened_resistance_marker_targets_not_detected": true,
+    "source_checked_date": "2026-10-10",
+    "source_url": "https://cdn.who.int/media/docs/default-source/malaria/drug-resistance/compendium-molecular-markers-summary-tables.pdf?sfvrsn=e40fca23_9"
+  },
+  "limitations": [
+    "step10_resistance_panel.py, step11_batch_confounding.py and step12_codon_panel.py are absent locally.",
+    "The 47012/47012 concordance assertion cannot be independently recomputed without per-isolate reconstructed calls.",
+    "Published calls provide no per-codon k13 or pfaat1 comparison; k13 checks are saved-output coverage checks only.",
+    "Input sample identities come from evaluation/server_snapshot; there is no locally saved corrected genotype callset."
+  ],
+  "markers": {
+    "pfcrt_N75E": {
+      "corrected_count": 133,
+      "corrected_n_called": 1874,
+      "count": 133,
+      "frequency": 0.07097118463180363,
+      "n_called": 1874,
+      "pass": true,
+      "published_column": "crt_75[N]",
+      "target_residue": "E",
+      "zones": {
+        "Coastal savanna": {
+          "corrected_count": 11,
+          "corrected_n_called": 204,
+          "count": 11,
+          "n_called": 204,
+          "pass": true
+        },
+        "Decidous forest": {
+          "corrected_count": 35,
+          "corrected_n_called": 336,
+          "count": 35,
+          "n_called": 336,
+          "pass": true
+        },
+        "Guinea savanna": {
+          "corrected_count": 84,
+          "corrected_n_called": 1310,
+          "count": 84,
+          "n_called": 1310,
+          "pass": true
+        },
+        "Transitional zone": {
+          "corrected_count": 3,
+          "corrected_n_called": 24,
+          "count": 3,
+          "n_called": 24,
+          "pass": true
+        }
+      }
+    },
+    "pfdhps_G437": {
+      "corrected_count": 1697,
+      "corrected_n_called": 1892,
+      "count": 1697,
+      "frequency": 0.8969344608879493,
+      "n_called": 1892,
+      "pass": true,
+      "published_column": "dhps_437[G]",
+      "target_residue": "G",
+      "zones": {
+        "Coastal savanna": {
+          "corrected_count": 191,
+          "corrected_n_called": 203,
+          "count": 191,
+          "n_called": 203,
+          "pass": true
+        },
+        "Decidous forest": {
+          "corrected_count": 325,
+          "corrected_n_called": 337,
+          "count": 325,
+          "n_called": 337,
+          "pass": true
+        },
+        "Guinea savanna": {
+          "corrected_count": 1161,
+          "corrected_n_called": 1327,
+          "count": 1161,
+          "n_called": 1327,
+          "pass": true
+        },
+        "Transitional zone": {
+          "corrected_count": 20,
+          "corrected_n_called": 25,
+          "count": 20,
+          "n_called": 25,
+          "pass": true
+        }
+      }
+    }
+  },
+  "samples": {
+    "analysis_rows": 1900,
+    "expected_zone_counts": {
+      "Coastal savanna": 204,
+      "Decidous forest": 337,
+      "Guinea savanna": 1334,
+      "Transitional zone": 25
+    },
+    "matched_published_rows": 1900,
+    "missing_ids": [],
+    "pass": true,
+    "unique_analysis_ids": 1900,
+    "unique_matched_published_ids": 1900,
+    "zone_counts": {
+      "Coastal savanna": 204,
+      "Decidous forest": 337,
+      "Guinea savanna": 1334,
+      "Transitional zone": 25
+    }
+  },
+  "scope": "Recompute aggregates from saved published protein-residue calls for the saved 1900 analysis IDs. No DNA/codon reconstruction, new genotypes, sequencing validation, or missing-pipeline rerun."
+}

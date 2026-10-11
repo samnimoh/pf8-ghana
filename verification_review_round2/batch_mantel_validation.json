@@ -1,0 +1,520 @@
+{
+  "generated_utc": "2026-10-10T21:39:10.605760+00:00",
+  "checker": "/Users/samnimoh/Desktop/chromo/verification_review_round2/check_batch_and_mantel.py",
+  "checker_sha256": "7327f61a1fe33af703325eb978a94fd8516e6e0f99c263ee1f69770407150971",
+  "runtime": {
+    "executable": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "resolved_executable": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+    "python_version": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "platform": "macOS-27.0-arm64-arm-64bit",
+    "libraries": {
+      "csv": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/csv.py",
+      "math": "builtin",
+      "json": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/__init__.py"
+    },
+    "third_party_dependencies": []
+  },
+  "method": {
+    "Kruskal": "pooled average ranks and tie-corrected H",
+    "p_value": "asymptotic chi-square survival; odd df 1/3/5, erfc plus upper-gamma recurrence",
+    "minimum_group_size": 20,
+    "Fws_threshold": 0.95,
+    "cross_snapshot_field_tolerance": {
+      "relative": 0,
+      "absolute": 1e-15
+    },
+    "comparison_tolerances": {
+      "p_values": {
+        "relative": 1e-10,
+        "absolute": 0
+      },
+      "H_counts_and_fractions": {
+        "relative": 1e-10,
+        "absolute": 1e-15
+      }
+    }
+  },
+  "inputs": {
+    "qc": {
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/results/sample_qc_full.csv",
+      "bytes": 1536734,
+      "rows": 4905,
+      "sha256": "392520ffce849aec0a5d75e5e13644e68aac3ae4433afa3e1330a450d10de43b",
+      "md5": "3a67049990dd02972367837d7e081744"
+    },
+    "qc_release": {
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/results/qc_with_release_fws.csv",
+      "bytes": 1619140,
+      "rows": 4905,
+      "sha256": "e3834e62e53d9f3e79d54dc866718564aa9f278362ed192f8280013ad67c4f81",
+      "md5": "e3fc30f5fb90d68fc38eedb680bdfa94"
+    },
+    "analysis": {
+      "path": "/Users/samnimoh/Desktop/chromo/evaluation/server_snapshot/interim/analysis_samples.csv",
+      "bytes": 520880,
+      "rows": 1900,
+      "sha256": "fef75e071c5c2697a284e4ff50f6b6a7d36d8ffffac29d68969aece2825fe712",
+      "md5": "7bbedf92b6575c9ff652dad2ac761644"
+    },
+    "batch_tests": {
+      "path": "/Users/samnimoh/Desktop/chromo/corrected/batch_within_zone_tests.csv",
+      "bytes": 494,
+      "rows": 3,
+      "sha256": "7001841cebea7bb62cb1f0e3786e952e34ae3d77124f9a9c649f2950b947d1e6",
+      "md5": "fb4d74be2e99c1f62484d62faaedb9a5"
+    },
+    "study_zone": {
+      "path": "/Users/samnimoh/Desktop/chromo/corrected/batch_study_by_zone.csv",
+      "bytes": 481,
+      "rows": 11,
+      "sha256": "06a3ead5cdecab03fea9e4cb68727b8f07cc1eeeec0bba901f88fbc280d94811",
+      "md5": "d8b2863abd410ea0883d1f703786f3c8"
+    },
+    "mantel": {
+      "path": "/Users/samnimoh/Desktop/chromo/corrected/mantel_jackknife_region.csv",
+      "bytes": 302,
+      "rows": 7,
+      "sha256": "710250332da3a942f2b9ea3c0bb8afc4ac0b51180ed99bbdf8513f4facc0f2c7",
+      "md5": "779b9e379b6640afbbeb39409206ed69"
+    }
+  },
+  "checks": {
+    "local_QC_4905_no_missing_Fws": true,
+    "local_analysis_1900_no_missing_Fws": true,
+    "release_join_shared_fields_agree": true,
+    "analysis_sample_Fws_values_agree": true,
+    "all_local_batch_statistics_match": true,
+    "study_zone_counts_match": true,
+    "revised_Mantel_values_match": true
+  },
+  "missingness": {
+    "qc": {
+      "Fws": 0,
+      "call_rate": 0
+    },
+    "qc_release": {
+      "Fws": 0,
+      "call_rate": 0
+    },
+    "analysis": {
+      "Fws": 0,
+      "call_rate": 0
+    }
+  },
+  "Fws_cross_snapshot_roundoff": {
+    "release_join": {
+      "nonidentical_float_values": 1197,
+      "maximum_absolute_difference": 1.1102230246251565e-16,
+      "interpretation": "CSV decimal serialization differs at machine-roundoff scale."
+    },
+    "analysis": {
+      "nonidentical_float_values": 870,
+      "maximum_absolute_difference": 1.1102230246251565e-16,
+      "interpretation": "CSV decimal serialization differs at machine-roundoff scale."
+    }
+  },
+  "analysis_zone_counts": {
+    "Guinea savanna": 1334,
+    "Transitional zone": 25,
+    "Decidous forest": 337,
+    "Coastal savanna": 204
+  },
+  "zone_polyclonality": {
+    "Coastal savanna": {
+      "n_isolates": 435,
+      "n_Fws_observed": 435,
+      "n_polyclonal": 193,
+      "fraction": 0.4436781609195402
+    },
+    "Decidous forest": {
+      "n_isolates": 815,
+      "n_Fws_observed": 815,
+      "n_polyclonal": 439,
+      "fraction": 0.5386503067484663
+    },
+    "Guinea savanna": {
+      "n_isolates": 3605,
+      "n_Fws_observed": 3605,
+      "n_polyclonal": 2153,
+      "fraction": 0.5972260748959778
+    },
+    "Transitional zone": {
+      "n_isolates": 50,
+      "n_Fws_observed": 50,
+      "n_polyclonal": 25,
+      "fraction": 0.5
+    }
+  },
+  "batch_results": [
+    {
+      "zone": "Coastal savanna",
+      "studies": [
+        "1183-PF-GH-AWANDARE-SM",
+        "1241-PF-GH-ANINAGYEI"
+      ],
+      "Fws": {
+        "H": 0.7766398786238824,
+        "p_value": 0.3781707583430409,
+        "df": 1,
+        "n_observed": 435,
+        "tie_correction": 1.0,
+        "group_sizes": [
+          48,
+          387
+        ]
+      },
+      "call_rate": {
+        "H": 3.179952183384339,
+        "p_value": 0.07454691131006894,
+        "df": 1,
+        "n_observed": 435,
+        "tie_correction": 0.9999935854167366,
+        "group_sizes": [
+          48,
+          387
+        ]
+      },
+      "comparisons": {
+        "n_studies": {
+          "recomputed": 2,
+          "saved": 2.0,
+          "absolute_difference": 0.0,
+          "matches": true,
+          "tolerance": {
+            "relative": 1e-10,
+            "absolute": 1e-15
+          }
+        },
+        "n_isolates": {
+          "recomputed": 435,
+          "saved": 435.0,
+          "absolute_difference": 0.0,
+          "matches": true,
+          "tolerance": {
+            "relative": 1e-10,
+            "absolute": 1e-15
+          }
+        },
+        "fws_kruskal_H": {
+          "recomputed": 0.7766398786238824,
+          "saved": 0.7766398786238824,
+          "absolute_difference": 0.0,
+          "matches": true,
+          "tolerance": {
+            "relative": 1e-10,
+            "absolute": 1e-15
+          }
+        },
+        "fws_p": {
+          "recomputed": 0.3781707583430409,
+          "saved": 0.3781707583430409,
+          "absolute_difference": 0.0,
+          "matches": true,
+          "tolerance": {
+            "relative": 1e-10,
+            "absolute": 0
+          }
+        },
+        "polyclonal_min": {
+          "recomputed": 0.4375,
+          "saved": 0.4375,
+          "absolute_difference": 0.0,
+          "matches": true,
+          "tolerance": {
+            "relative": 1e-10,
+            "absolute": 1e-15
+          }
+        },
+        "polyclonal_max": {
+          "recomputed": 0.4444444444444444,
+          "saved": 0.4444444444444444,
+          "absolute_difference": 0.0,
+          "matches": true,
+          "tolerance": {
+            "relative": 1e-10,
+            "absolute": 1e-15
+          }
+        },
+        "callrate_kruskal_H": {
+          "recomputed": 3.179952183384339,
+          "saved": 3.179952183384339,
+          "absolute_difference": 0.0,
+          "matches": true,
+          "tolerance": {
+            "relative": 1e-10,
+            "absolute": 1e-15
+          }
+        },
+        "callrate_p": {
+          "recomputed": 0.07454691131006894,
+          "saved": 0.07454691131006895,
+          "absolute_difference": 1.3877787807814457e-17,
+          "matches": true,
+          "tolerance": {
+            "relative": 1e-10,
+            "absolute": 0
+          }
+        }
+      }
+    },
+    {
+      "zone": "Decidous forest",
+      "studies": [
+        "1096-PF-GH-GHANSAH",
+        "1183-PF-GH-AWANDARE-SM",
+        "1200-PF-GH-MAIGA-SM",
+        "1241-PF-GH-ANINAGYEI"
+      ],
+      "Fws": {
+        "H": 14.938550811664404,
+        "p_value": 0.0018699216380647543,
+        "df": 3,
+        "n_observed": 811,
+        "tie_correction": 0.9999999887516363,
+        "group_sizes": [
+          100,
+          41,
+          391,
+          279
+        ]
+      },
+      "call_rate": {
+        "H": 406.730273610677,
+        "p_value": 7.714369645252227e-88,
+        "df": 3,
+        "n_observed": 811,
+        "tie_correction": 0.9999501809974194,
+        "group_sizes": [
+          100,
+          41,
+          391,
+          279
+        ]
+      },
+      "comparisons": {
+        "n_studies": {
+          "recomputed": 4,
+          "saved": 4.0,
+          "absolute_difference": 0.0,
+          "matches": true,
+          "tolerance": {
+            "relative": 1e-10,
+            "absolute": 1e-15
+          }
+        },
+        "n_isolates": {
+          "recomputed": 811,
+          "saved": 811.0,
+          "absolute_difference": 0.0,
+          "matches": true,
+          "tolerance": {
+            "relative": 1e-10,
+            "absolute": 1e-15
+          }
+        },
+        "fws_kruskal_H": {
+          "recomputed": 14.938550811664404,
+          "saved": 14.938550811664404,
+          "absolute_difference": 0.0,
+          "matches": true,
+          "tolerance": {
+            "relative": 1e-10,
+            "absolute": 1e-15
+          }
+        },
+        "fws_p": {
+          "recomputed": 0.0018699216380647543,
+          "saved": 0.0018699216380647535,
+          "absolute_difference": 8.673617379884035e-19,
+          "matches": true,
+          "tolerance": {
+            "relative": 1e-10,
+            "absolute": 0
+          }
+        },
+        "polyclonal_min": {
+          "recomputed": 0.43,
+          "saved": 0.43,
+          "absolute_difference": 0.0,
+          "matches": true,
+          "tolerance": {
+            "relative": 1e-10,
+            "absolute": 1e-15
+          }
+        },
+        "polyclonal_max": {
+          "recomputed": 0.578005115089514,
+          "saved": 0.578005115089514,
+          "absolute_difference": 0.0,
+          "matches": true,
+          "tolerance": {
+            "relative": 1e-10,
+            "absolute": 1e-15
+          }
+        },
+        "callrate_kruskal_H": {
+          "recomputed": 406.730273610677,
+          "saved": 406.730273610677,
+          "absolute_difference": 0.0,
+          "matches": true,
+          "tolerance": {
+            "relative": 1e-10,
+            "absolute": 1e-15
+          }
+        },
+        "callrate_p": {
+          "recomputed": 7.714369645252227e-88,
+          "saved": 7.714369645252259e-88,
+          "absolute_difference": 3.2369760104673803e-102,
+          "matches": true,
+          "tolerance": {
+            "relative": 1e-10,
+            "absolute": 0
+          }
+        }
+      }
+    },
+    {
+      "zone": "Guinea savanna",
+      "studies": [
+        "1017-PF-GH-AMENGA-ETEGO",
+        "1083-PF-GH-CONWAY",
+        "1094-PF-GH-AMENGA-ETEGO",
+        "1151-PF-GH-AMENGA-ETEGO",
+        "1168-PF-GH-AMENGA-ETEGO-SM",
+        "1294-PF-GH-AMENGA-ETEGO-SM"
+      ],
+      "Fws": {
+        "H": 9.16528547189766,
+        "p_value": 0.10265032761547149,
+        "df": 5,
+        "n_observed": 3605,
+        "tie_correction": 0.9999999788690306,
+        "group_sizes": [
+          384,
+          47,
+          241,
+          79,
+          2678,
+          176
+        ]
+      },
+      "call_rate": {
+        "H": 922.996633683018,
+        "p_value": 2.8045125256596183e-197,
+        "df": 5,
+        "n_observed": 3605,
+        "tie_correction": 0.9999914351698748,
+        "group_sizes": [
+          384,
+          47,
+          241,
+          79,
+          2678,
+          176
+        ]
+      },
+      "comparisons": {
+        "n_studies": {
+          "recomputed": 6,
+          "saved": 6.0,
+          "absolute_difference": 0.0,
+          "matches": true,
+          "tolerance": {
+            "relative": 1e-10,
+            "absolute": 1e-15
+          }
+        },
+        "n_isolates": {
+          "recomputed": 3605,
+          "saved": 3605.0,
+          "absolute_difference": 0.0,
+          "matches": true,
+          "tolerance": {
+            "relative": 1e-10,
+            "absolute": 1e-15
+          }
+        },
+        "fws_kruskal_H": {
+          "recomputed": 9.16528547189766,
+          "saved": 9.16528547189766,
+          "absolute_difference": 0.0,
+          "matches": true,
+          "tolerance": {
+            "relative": 1e-10,
+            "absolute": 1e-15
+          }
+        },
+        "fws_p": {
+          "recomputed": 0.10265032761547149,
+          "saved": 0.10265032761547163,
+          "absolute_difference": 1.3877787807814457e-16,
+          "matches": true,
+          "tolerance": {
+            "relative": 1e-10,
+            "absolute": 0
+          }
+        },
+        "polyclonal_min": {
+          "recomputed": 0.5319148936170213,
+          "saved": 0.5319148936170213,
+          "absolute_difference": 0.0,
+          "matches": true,
+          "tolerance": {
+            "relative": 1e-10,
+            "absolute": 1e-15
+          }
+        },
+        "polyclonal_max": {
+          "recomputed": 0.6818181818181818,
+          "saved": 0.6818181818181818,
+          "absolute_difference": 0.0,
+          "matches": true,
+          "tolerance": {
+            "relative": 1e-10,
+            "absolute": 1e-15
+          }
+        },
+        "callrate_kruskal_H": {
+          "recomputed": 922.996633683018,
+          "saved": 922.9966336830162,
+          "absolute_difference": 1.8189894035458565e-12,
+          "matches": true,
+          "tolerance": {
+            "relative": 1e-10,
+            "absolute": 1e-15
+          }
+        },
+        "callrate_p": {
+          "recomputed": 2.8045125256596183e-197,
+          "saved": 2.8045125256622525e-197,
+          "absolute_difference": 2.634200001547731e-209,
+          "matches": true,
+          "tolerance": {
+            "relative": 1e-10,
+            "absolute": 0
+          }
+        }
+      }
+    }
+  ],
+  "mantel_p_values": {
+    "Ashanti": 0.014,
+    "Brong Ahafo": 0.0398,
+    "Central": 0.0427,
+    "Eastern": 0.1355,
+    "Greater Accra": 0.2324,
+    "Upper East": 0.218,
+    "Volta": 0.0097
+  },
+  "mantel_counts": {
+    "p_lt_0_05": 4,
+    "p_lt_0_10": 4
+  },
+  "interpretation": "The missing-Fws denominator defect is dormant for these complete local snapshots; this is not a repair of the code.",
+  "limits": [
+    "Remote final input byte identity is unavailable and not established.",
+    "Input/output arithmetic does not identify study differences as technical batch effects.",
+    "No scientific pipeline, installation, or network call was run."
+  ]
+}

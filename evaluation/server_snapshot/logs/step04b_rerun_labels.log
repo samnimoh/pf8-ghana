@@ -1,0 +1,36 @@
+
+============================================================
+  STEP 4b — pairwise Hudson FST
+============================================================
+3,359 SNPs x 1,900 samples
+
+Zones analysed (4):
+  Coastal savanna              n = 204
+  Decidous forest              n = 337
+  Guinea savanna               n = 1334
+  Transitional zone            n = 25
+
+Allele counts cached -> /media/biodataA/pf8/gyadu/interim/allele_counts_by_zone.npz
+Zone ordering fixed -> /media/biodataA/pf8/gyadu/interim/zone_order.txt
+
+============================================================
+  Pairwise estimates
+============================================================
+  Coastal savanna        vs Decidous forest         Fst =  0.0005  (SE 0.0001)
+  Coastal savanna        vs Guinea savanna          Fst =  0.0024  (SE 0.0005)
+  Coastal savanna        vs Transitional zone       Fst =  0.0012  (SE 0.0008)
+  Decidous forest        vs Guinea savanna          Fst =  0.0013  (SE 0.0003)
+  Decidous forest        vs Transitional zone       Fst =  0.0012  (SE 0.0008)
+  Guinea savanna         vs Transitional zone       Fst =  0.0003  (SE 0.0007)
+
+============================================================
+  Output
+============================================================
+  /media/biodataA/pf8/gyadu/results/fst_matrix.npy
+  /media/biodataA/pf8/gyadu/results/fst_matrix.csv
+  /media/biodataA/pf8/gyadu/results/fst_pairwise.csv
+  /media/biodataA/pf8/gyadu/figures/fst_heatmap.png
+
+Maximum pairwise Fst: 0.0024
+Within-country Fst for P. falciparum sits below 0.05 routinely. Read
+the ranking of pairs, not whether any value clears a threshold.

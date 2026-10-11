@@ -1,0 +1,18 @@
+scanning POS chunks for the codon-458 positions ...
+variant rows: {10053730: 1725624, 10053731: 1725626}
+  row 10053730 pos 1725624 REF=A ALT=['T'] PASS=False numalt=1
+  row 10053731 pos 1725626 REF=T ALT=['A', 'C'] PASS=True numalt=2
+
+isolates matched: 1900 of 1900
+sample chunks to fetch: 76
+  fetched 260 MB
+
+row 10053730 pos 1725624: non-reference carriers among our isolates = 0, missing = 33
+
+row 10053731 pos 1725626: non-reference carriers among our isolates = 1, missing = 32
+   carrier PF0106-C  GT=[2, 2]
+     AD: [0, 0, 40, -1, -1, -1, -1]
+     DP: 40
+     GQ: 99
+
+total fetched 299 MB

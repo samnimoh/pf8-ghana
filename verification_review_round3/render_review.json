@@ -1,0 +1,374 @@
+{
+  "generated_utc": "2026-10-11T03:51:18.350963+00:00",
+  "scope": "Fresh DOCX conversion; all article page texts and selected long-report/supplement page texts compared with supplied PDFs. Representative PNG inspection recorded separately; no claim of inspection of every page.",
+  "runtime": {
+    "python": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "pypdf_version": "6.10.0",
+    "compiler": "Bundled LibreOffice through documents/render_docx.py",
+    "rasterizer": "Bundled Poppler"
+  },
+  "documents": [
+    {
+      "label": "article",
+      "source_docx": {
+        "path": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.docx",
+        "bytes": 1193105,
+        "sha256": "d09d14eea677e18ace50088d58e3e044e4edfe2ad21edb971d59b67305d9d66c"
+      },
+      "supplied_pdf": {
+        "path": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.pdf",
+        "bytes": 708142,
+        "sha256": "65db7a4bdcb4a195077d077000a3b7178df3fe03e29e47d65484c9a36748f61d"
+      },
+      "fresh_pdf": {
+        "path": "/private/tmp/pf8_review_round5/article/Pf8_Ghana_article.pdf",
+        "bytes": 705030,
+        "sha256": "3a58311289dd99a8a9ab3fb401db5ee0a0c598db3249cf8cda66f55bea327997"
+      },
+      "supplied_page_count": 18,
+      "fresh_page_count": 18,
+      "selected_page_comparisons": [
+        {
+          "page": 1,
+          "exists_in_both": true,
+          "normalized_text_equal": true,
+          "supplied_characters": 3353,
+          "fresh_characters": 3353
+        },
+        {
+          "page": 2,
+          "exists_in_both": true,
+          "normalized_text_equal": true,
+          "supplied_characters": 5105,
+          "fresh_characters": 5105
+        },
+        {
+          "page": 3,
+          "exists_in_both": true,
+          "normalized_text_equal": true,
+          "supplied_characters": 3986,
+          "fresh_characters": 3986
+        },
+        {
+          "page": 4,
+          "exists_in_both": true,
+          "normalized_text_equal": true,
+          "supplied_characters": 3930,
+          "fresh_characters": 3930
+        },
+        {
+          "page": 5,
+          "exists_in_both": true,
+          "normalized_text_equal": true,
+          "supplied_characters": 3741,
+          "fresh_characters": 3741
+        },
+        {
+          "page": 6,
+          "exists_in_both": true,
+          "normalized_text_equal": true,
+          "supplied_characters": 2039,
+          "fresh_characters": 2039
+        },
+        {
+          "page": 7,
+          "exists_in_both": true,
+          "normalized_text_equal": true,
+          "supplied_characters": 3051,
+          "fresh_characters": 3051
+        },
+        {
+          "page": 8,
+          "exists_in_both": true,
+          "normalized_text_equal": true,
+          "supplied_characters": 3012,
+          "fresh_characters": 3012
+        },
+        {
+          "page": 9,
+          "exists_in_both": true,
+          "normalized_text_equal": true,
+          "supplied_characters": 2799,
+          "fresh_characters": 2799
+        },
+        {
+          "page": 10,
+          "exists_in_both": true,
+          "normalized_text_equal": true,
+          "supplied_characters": 3086,
+          "fresh_characters": 3086
+        },
+        {
+          "page": 11,
+          "exists_in_both": true,
+          "normalized_text_equal": true,
+          "supplied_characters": 3515,
+          "fresh_characters": 3515
+        },
+        {
+          "page": 12,
+          "exists_in_both": true,
+          "normalized_text_equal": true,
+          "supplied_characters": 4338,
+          "fresh_characters": 4338
+        },
+        {
+          "page": 13,
+          "exists_in_both": true,
+          "normalized_text_equal": true,
+          "supplied_characters": 4379,
+          "fresh_characters": 4379
+        },
+        {
+          "page": 14,
+          "exists_in_both": true,
+          "normalized_text_equal": true,
+          "supplied_characters": 3951,
+          "fresh_characters": 3951
+        },
+        {
+          "page": 15,
+          "exists_in_both": true,
+          "normalized_text_equal": true,
+          "supplied_characters": 3717,
+          "fresh_characters": 3717
+        },
+        {
+          "page": 16,
+          "exists_in_both": true,
+          "normalized_text_equal": true,
+          "supplied_characters": 4394,
+          "fresh_characters": 4394
+        },
+        {
+          "page": 17,
+          "exists_in_both": true,
+          "normalized_text_equal": true,
+          "supplied_characters": 4713,
+          "fresh_characters": 4713
+        },
+        {
+          "page": 18,
+          "exists_in_both": true,
+          "normalized_text_equal": true,
+          "supplied_characters": 190,
+          "fresh_characters": 190
+        }
+      ]
+    },
+    {
+      "label": "manuscript",
+      "source_docx": {
+        "path": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx",
+        "bytes": 4043022,
+        "sha256": "36750beee9beabcdd3d242e14ad724a0063ca413955a7f454d1eec43770c1004"
+      },
+      "supplied_pdf": {
+        "path": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.pdf",
+        "bytes": 5164457,
+        "sha256": "cbcca580ea3cfa25df6d4e6a6c00f3fa3be65d902fe3569f459d52f3590adaa5"
+      },
+      "fresh_pdf": {
+        "path": "/private/tmp/pf8_review_round5/manuscript/Pf8_Ghana_manuscript_REVISED.pdf",
+        "bytes": 5117827,
+        "sha256": "f734923c58b00505662fa99098da6abf963c5a2f98b3fc711c2334c3935fd72d"
+      },
+      "supplied_page_count": 196,
+      "fresh_page_count": 196,
+      "selected_page_comparisons": [
+        {
+          "page": 1,
+          "exists_in_both": true,
+          "normalized_text_equal": true,
+          "supplied_characters": 878,
+          "fresh_characters": 878
+        },
+        {
+          "page": 2,
+          "exists_in_both": true,
+          "normalized_text_equal": true,
+          "supplied_characters": 6345,
+          "fresh_characters": 6345
+        },
+        {
+          "page": 31,
+          "exists_in_both": true,
+          "normalized_text_equal": true,
+          "supplied_characters": 3502,
+          "fresh_characters": 3502
+        },
+        {
+          "page": 95,
+          "exists_in_both": true,
+          "normalized_text_equal": true,
+          "supplied_characters": 3852,
+          "fresh_characters": 3852
+        },
+        {
+          "page": 111,
+          "exists_in_both": true,
+          "normalized_text_equal": true,
+          "supplied_characters": 3380,
+          "fresh_characters": 3380
+        },
+        {
+          "page": 116,
+          "exists_in_both": true,
+          "normalized_text_equal": true,
+          "supplied_characters": 4539,
+          "fresh_characters": 4539
+        },
+        {
+          "page": 143,
+          "exists_in_both": true,
+          "normalized_text_equal": true,
+          "supplied_characters": 4390,
+          "fresh_characters": 4389
+        },
+        {
+          "page": 176,
+          "exists_in_both": true,
+          "normalized_text_equal": true,
+          "supplied_characters": 3967,
+          "fresh_characters": 3967
+        },
+        {
+          "page": 196,
+          "exists_in_both": true,
+          "normalized_text_equal": true,
+          "supplied_characters": 1849,
+          "fresh_characters": 1849
+        }
+      ]
+    },
+    {
+      "label": "supplement",
+      "source_docx": {
+        "path": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx",
+        "bytes": 4043725,
+        "sha256": "ae4939d322da58099afe4df1c921232b07475dd31927ad42da7391e290275078"
+      },
+      "supplied_pdf": {
+        "path": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.pdf",
+        "bytes": 5169429,
+        "sha256": "bdfd3e909635690d3c2b29fcee88c033d4c2da25dcaf0436a6316bd17dda8701"
+      },
+      "fresh_pdf": {
+        "path": "/private/tmp/pf8_review_round5/supplement/Additional_file_1.pdf",
+        "bytes": 5122401,
+        "sha256": "e30c61e0eedfebffc0e15149978e15c4434908ad008329d6e367eff2ddc9a3de"
+      },
+      "supplied_page_count": 198,
+      "fresh_page_count": 198,
+      "selected_page_comparisons": [
+        {
+          "page": 1,
+          "exists_in_both": true,
+          "normalized_text_equal": true,
+          "supplied_characters": 966,
+          "fresh_characters": 966
+        },
+        {
+          "page": 2,
+          "exists_in_both": true,
+          "normalized_text_equal": true,
+          "supplied_characters": 5106,
+          "fresh_characters": 5106
+        },
+        {
+          "page": 96,
+          "exists_in_both": true,
+          "normalized_text_equal": true,
+          "supplied_characters": 3852,
+          "fresh_characters": 3852
+        },
+        {
+          "page": 105,
+          "exists_in_both": true,
+          "normalized_text_equal": true,
+          "supplied_characters": 4756,
+          "fresh_characters": 4756
+        },
+        {
+          "page": 112,
+          "exists_in_both": true,
+          "normalized_text_equal": true,
+          "supplied_characters": 3380,
+          "fresh_characters": 3380
+        },
+        {
+          "page": 120,
+          "exists_in_both": true,
+          "normalized_text_equal": true,
+          "supplied_characters": 4505,
+          "fresh_characters": 4505
+        },
+        {
+          "page": 144,
+          "exists_in_both": true,
+          "normalized_text_equal": true,
+          "supplied_characters": 4376,
+          "fresh_characters": 4376
+        },
+        {
+          "page": 177,
+          "exists_in_both": true,
+          "normalized_text_equal": true,
+          "supplied_characters": 4251,
+          "fresh_characters": 4250
+        },
+        {
+          "page": 197,
+          "exists_in_both": true,
+          "normalized_text_equal": true,
+          "supplied_characters": 4777,
+          "fresh_characters": 4777
+        }
+      ]
+    }
+  ],
+  "full_rasterization": {
+    "article": "completed, 18 pages",
+    "manuscript": "completed, 196 pages",
+    "supplement": "Fresh PDF conversion completed; full rasterization interrupted, representative pages rasterized separately."
+  },
+  "visual_inspection": {
+    "article_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "manuscript_pages": [
+      111
+    ],
+    "supplement_pages": [
+      1,
+      113
+    ],
+    "scope": "All article page PNGs; representative long-document pages. No certification of every long-document page.",
+    "findings": [
+      "Missing author byline/affiliations and declaration placeholders",
+      "Table 2 heading split across pages 7\u20138",
+      "Last row of Table 3 isolated on page 11",
+      "Background heading stranded at bottom of article page 1",
+      "Table 4 displayed before Table 3",
+      "Literal scientific-notation exponents in prose",
+      "Supplement author/affiliation placeholders"
+    ]
+  }
+}

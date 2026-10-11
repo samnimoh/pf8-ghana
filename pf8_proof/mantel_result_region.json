@@ -1,0 +1,18 @@
+{
+  "level": "region",
+  "method": "pearson",
+  "populations": [
+    "Ashanti",
+    "Brong Ahafo",
+    "Central",
+    "Eastern",
+    "Greater Accra",
+    "Upper East",
+    "Volta"
+  ],
+  "n_populations": 7,
+  "n_pairs": 21,
+  "permutations": 999,
+  "mantel_r": 0.3999585258224424,
+  "p_value": 0.029
+}

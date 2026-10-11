@@ -1,0 +1,49 @@
+Matplotlib is building the font cache; this may take a moment.
+
+============================================================
+  STEP 2 — samples -> agro-ecological zones
+============================================================
+AEZ layer: 8 polygons, CRS = EPSG:4326
+Zones present: ['Coastal savanna', 'Decidous forest', 'Guinea savanna', 'Moist evergreen', 'Sudan savanna', 'Transitional zone', 'Waterbody - Volta lake', 'Wet evergreen']
+
+============================================================
+  Join audit
+============================================================
+Counts per zone (NaN shown deliberately):
+Name
+Guinea savanna       3605
+Decidous forest       815
+Coastal savanna       435
+Transitional zone      50
+
+Rows implicated in duplicate matches: 0
+
+Unmatched samples: 0
+
+============================================================
+  STEP 2b — map the join
+============================================================
+Map -> /media/biodataA/pf8/gyadu/figures/ghana_samples_aez_map.png
+Assignments -> /media/biodataA/pf8/gyadu/interim/ghana_samples_with_aez.csv  (4,905 samples)
+
+============================================================
+  Coordinate resolution check
+============================================================
+4,905 samples occupy 7 distinct coordinate pairs.
+Pf8 geolocates to admin level 1, so isolates from one region share a
+single point. Zone assignment tolerates this; individual-level
+geographic distance does not. Step 6 is constrained accordingly.
+
+Region x zone (regions spanning two zones need manual review):
+zone           Coastal savanna  Decidous forest  Guinea savanna  Transitional zone
+Admin level 1                                                                     
+Ashanti                      0              391               0                  0
+Brong Ahafo                  0                0               0                 50
+Central                      0              309               0                  0
+Eastern                      0               74               0                  0
+Greater Accra              435                0               0                  0
+Upper East                   0                0            3605                  0
+Volta                        0               41               0                  0
+
+Check Brong-Ahafo (forest/transition) and Volta (coastal/Guinea
+savanna) against the map before treating the assignment as settled.

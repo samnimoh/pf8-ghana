@@ -1,0 +1,43 @@
+Page 142 of 196
+which is a useful reminder that a result can be made more reproducible and still not be true. One result 
+gained inferential support: TreeMix now reports m = 2 as a selected descriptive model on edge p-values 
+instead of hedging, though the variance-explained criterion across the full sweep still prefers m = 3. The 
+BayPass threshold, outlier count and gene list all moved (11.232 to 10.840; 15 to 19 outliers; 11 to 13 genes). 
+The marker panel is a different matter: it was not re-run but rebuilt, by a new script that reconstructs codons 
+rather than matching annotation strings, and several of its conclusions did change (§7.5, §8). This wording is 
+used identically in §6 and in §8; details and the full comparison are in Table 8.1.
+[Interpreted] The containment corollary, correctly scoped. Because there is no detectable neutral barrier, 
+there is no demographic barrier for a geographically targeted containment intervention to exploit, and an 
+allele that establishes anywhere in Ghana has an unobstructed demographic route to the rest of the country. 
+That remains a reasonable reading, and it is now the better supported for the absence of a robust distance 
+effect: there is not even a weak isolation-by-distance gradient left to qualify it. It does not follow that spread 
+will be uniform in rate or that a single site will see it first; the pfaat1, pfdhps and pfdhfr zone differences 
+show that selection and drug pressure impose their own geography on top of free gene flow.
+Caveat on that inference. The argument from low FST to free gene flow runs from an absence of detectable 
+structure to an assertion about process. Low FST is equally consistent with recent common ancestry and with a large 
+effective population size holding drift down. Distinguishing "currently well connected" from "recently separated but 
+not yet differentiated" requires demographic inference these analyses have not attempted (§8.2).
+[Proposed] The unqualified surveillance claim must be removed wherever it is restated. There is no section 
+titled "plain-language summary" in this manuscript; the nearest equivalents are the Abstract's concluding 
+sentence, which reproduced the claim without even the caveat above, and the positive-findings list in §10.1. 
+Both must carry the qualified form given in the first paragraph of this section — neutral structure sparsely 
+characterisable, marker-frequency representativeness a separate and unanswered question — and not the 
+unqualified one. This is the clearest case in the document of a conclusion that the corrected resistance panel 
+reverses, so the three locations must not disagree. The same applies to isolation by distance: any statement 
+of it in the Abstract or in §10.1 must now carry the 2-of-6 grading, not a "weak but real" one.
+7.5 The rebuilt resistance panel
+[Observed] The panel in the previous draft was the wrong panel, and this section is a replacement rather 
+than a revision. An external critique raised five points about it; all five were upheld, and four were defects in 
+code. The panel is now produced by step12_codon_panel.py, which maps each requested codon to its three 
+genomic positions through the CDS, collects every variant record at those positions regardless of numalt or 
+is_snp, applies each isolate's alleles to the reference codon and translates the result. It reports the full residue 
+spectrum including the reference residue. The panel covers 57 codons across nine genes on the 1,900 
+analysed isolates, of which 24 are polymorphic and 33 monomorphic; a mixed call makes a codon uncalled 
+rather than being resolved to a residue, so the denominator is per codon, 1,834–1,900 called, and is stated 
+with every frequency below. Six of the nine genes sit on the plus strand (pfap2mu, pfcoronin, pfcrt, pfdhfr, 
+pfdhps, pfmdr1) and three on the minus strand (pfaat1, pfk13, pfmdr2), which is the direction the 
+reconstruction has to get right. Every number in this section comes from that run; nothing from the previous 
+panel is carried forward.
+[Observed] Why the old panel failed. It identified markers by matching SnpEff ANN_HGVS_p strings against a 
+hand-written list. Two failure modes, both realised. (i) A resistance allele that is itself the reference residue 
+can never appear as an ALT change. The official Pf8 methodology says so in terms: "3D7 sequence translates 

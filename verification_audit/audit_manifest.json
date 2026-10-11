@@ -1,0 +1,95 @@
+{
+  "generated_utc": "2026-10-10T16:02:48.205319+00:00",
+  "scope": "Identity of delivered local audit artifacts and the verification environment; not complete generating provenance for the final research pipeline.",
+  "python": {
+    "version": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "executable": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3"
+  },
+  "platform": "macOS-27.0-arm64-arm-64bit",
+  "numpy_version": "2.3.5",
+  "lean": {
+    "version": "Lean (version 4.19.0, arm64-apple-darwin23.6.0, commit 6caaee842e94, Release)",
+    "executable_identity": {
+      "path": "/private/tmp/pf8_review/lean-4.19.0-darwin_aarch64/bin/lean",
+      "bytes": 49968,
+      "sha256": "5c1fe58db7d10b1cd0ddff1a1cbc49db2396fff9c6c983cc3b49f1c5c1ae241b"
+    },
+    "release_url": "https://github.com/leanprover/lean4/releases/tag/v4.19.0",
+    "archive_url": "https://github.com/leanprover/lean4/releases/download/v4.19.0/lean-4.19.0-darwin_aarch64.tar.zst",
+    "archive_identity": {
+      "path": "/private/tmp/pf8_review/lean-4.19.0-darwin_aarch64.tar.zst",
+      "bytes": 329275227,
+      "sha256": "94d4246fd90a152a4819419498d3e45c941a31638a57a0a8e32561494ab6cea7"
+    },
+    "archive_hash_scope": "Locally measured checksum; no upstream expected SHA256 was provided in the release metadata."
+  },
+  "verification_status": "passed",
+  "artifact_hashes": [
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_audit/AUDIT_REPORT.md",
+      "bytes": 18675,
+      "sha256": "98f650205edfd471afb75b5a0a87b328a32146abfa2d42b2aab575a89083f162"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_audit/Pf8Audit.lean",
+      "bytes": 7373,
+      "sha256": "ac6f192ae32b9876deacf54a937b295a0b490edf5d945fcafeb1344c7d845253"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_audit/Pf8Audit.olean",
+      "bytes": 277608,
+      "sha256": "6083bc123af86e4889aaf66c69f4de165717ec35e3afb35b54517fb8fbc01c82"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_audit/check_majority_script.py",
+      "bytes": 3963,
+      "sha256": "498208608fb5cfbd885acc36b78c02fa4fa576b2e635db84aba28f69048cefe2"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_audit/check_marker_outputs.py",
+      "bytes": 12313,
+      "sha256": "3427d1001bf4d69120c4794cfd6c5f2cf83298a7171e1a78b4b7830b4d47347e"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_audit/check_provenance.py",
+      "bytes": 14740,
+      "sha256": "e1521563cc61e2b32a567a0968224dd7b4708e28e55c7a9b64fe2e6037071ab8"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_audit/lean-toolchain",
+      "bytes": 25,
+      "sha256": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_audit/lean_check.log",
+      "bytes": 4027,
+      "sha256": "a57f965fbf9736adddb5eeaa51d079beb4ac76f5da1fe5ea8163085c45cf663d"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_audit/lean_validation.json",
+      "bytes": 12260,
+      "sha256": "8f3ec31140fb8c06b092ff8619dd5f6ddb396203bdefce195ba1a0c45e2ff4bc"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_audit/majority_validation.json",
+      "bytes": 1166,
+      "sha256": "9365a7730fcf78f13017a954c80702825778294e59bc3e93b1fcbf53b115528c"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_audit/marker_validation.json",
+      "bytes": 13486,
+      "sha256": "5afb3c07cb1b773950c25f1146689b13e90b9e31bc69e6fd59eda7a40e1f5093"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_audit/provenance_validation.json",
+      "bytes": 54841,
+      "sha256": "e7fb017e2c6a5c200925a558ff519bc75c4ea58afdf9fa5253d04273b897452e"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_audit/run_verification.py",
+      "bytes": 11196,
+      "sha256": "8f09f09c5abb4c06a0fbe0f96c0c5b7a178ece53d34944996196df69b4e83c5a"
+    }
+  ],
+  "manifest_excludes_itself": true
+}

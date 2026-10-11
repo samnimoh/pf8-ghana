@@ -1,0 +1,218 @@
+
+============================================================
+  STEP 12 — resistance markers by reconstructed codon
+============================================================
+Isolates: 1,900   zones: Coastal savanna, Decidous forest, Guinea savanna, Transitional zone
+Reference contigs loaded: 8
+Codons to reconstruct: 57  (genomic positions: 171)
+Fetching variant metadata ...
+  211 MB
+Variant records at those positions: 125 (positions with >=1 record: 125/171)
+Fetching GT: 125 sites x 1900 isolates (9 x 76 chunks)
+  2.53 GB total
+
+============================================================
+  Codon reconstruction
+============================================================
+
+============================================================
+  Residue spectrum at each requested codon
+============================================================
+Every residue observed is listed, the reference residue included, so a
+resistance allele that is the reference cannot be invisible.
+
+gene       codon  ref  residue REF?       n  overall    Coastal  Decidou   Guinea  Transit   chi2 p
+---------------------------------------------------------------------------------------------------
+pfcrt         72  C    C       yes     1900    1.000      1.000    1.000    1.000    1.000   
+pfcrt         73  V    V       yes     1899    1.000      1.000    1.000    1.000    1.000   
+pfcrt         74  M    M       yes     1873    0.929      0.946    0.896    0.936    0.875   3.5e-02
+pfcrt         74  M    I               1873    0.071      0.054    0.104    0.064    0.125   3.5e-02
+pfcrt         75  N    N       yes     1874    0.929      0.946    0.896    0.936    0.875   3.7e-02
+pfcrt         75  N    E               1874    0.071      0.054    0.104    0.064    0.125   3.7e-02
+pfcrt         76  K    K       yes     1874    0.929      0.946    0.896    0.936    0.875   3.7e-02
+pfcrt         76  K    T               1874    0.071      0.054    0.104    0.064    0.125   3.7e-02
+pfcrt        220  A    A       yes     1869    0.930      0.946    0.896    0.938    0.875   2.6e-02
+pfcrt        220  A    S               1869    0.070      0.054    0.104    0.062    0.125   2.6e-02
+pfcrt        271  Q    Q       yes     1873    0.926      0.946    0.896    0.932    0.875   6.3e-02
+pfcrt        271  Q    E               1873    0.074      0.054    0.104    0.068    0.125   6.3e-02
+pfcrt        326  N    N       yes     1874    0.999      1.000    1.000    0.999    1.000   9.3e-01
+pfcrt        356  I    I       yes     1900    0.984      0.971    0.964    0.991    1.000   1.6e-03
+pfcrt        356  I    T               1900    0.016      0.029    0.036    0.009    0.000   1.6e-03
+pfcrt        371  R    R       yes     1873    0.924      0.931    0.896    0.931    0.875   1.2e-01
+pfcrt        371  R    I               1873    0.076      0.069    0.104    0.069    0.125   1.2e-01
+pfmdr1        86  N    N       yes     1887    0.912      0.965    0.919    0.903    0.880   2.9e-02
+pfmdr1        86  N    Y               1887    0.088      0.035    0.081    0.097    0.120   2.9e-02
+pfmdr1       184  Y    F               1858    0.677      0.660    0.651    0.683    0.800   3.6e-01
+pfmdr1       184  Y    Y       yes     1858    0.323      0.340    0.349    0.317    0.200   3.6e-01
+pfmdr1      1034  S    S       yes     1834    1.000      1.000    1.000    1.000    1.000   
+pfmdr1      1042  N    N       yes     1851    1.000      1.000    1.000    1.000    1.000   
+pfmdr1      1246  D    D       yes     1866    0.989      0.980    0.994    0.989    0.960   2.6e-01
+pfmdr1      1246  D    Y               1866    0.011      0.020    0.006    0.011    0.040   2.6e-01
+pfdhfr        16  A    A       yes     1896    1.000      1.000    1.000    1.000    1.000   
+pfdhfr        51  N    I               1891    0.786      0.892    0.802    0.764    0.880   2.4e-04  **
+pfdhfr        51  N    N       yes     1891    0.214      0.108    0.198    0.236    0.120   2.4e-04  **
+pfdhfr        59  C    R               1888    0.886      0.946    0.928    0.864    1.000   4.8e-05  **
+pfdhfr        59  C    C       yes     1888    0.114      0.054    0.072    0.136    0.000   4.8e-05  **
+pfdhfr       108  S    N               1889    0.908      0.971    0.958    0.885    1.000   9.4e-07  **
+pfdhfr       108  S    S       yes     1889    0.092      0.029    0.042    0.115    0.000   9.4e-07  **
+pfdhfr       164  I    I       yes     1898    1.000      1.000    1.000    1.000    1.000   
+pfdhps       431  I    I       yes     1895    0.986      0.966    0.970    0.994    0.960   1.8e-04  **
+pfdhps       431  I    V               1895    0.014      0.034    0.030    0.006    0.040   1.8e-04  **
+pfdhps       436  S    A               1884    0.541      0.475    0.491    0.558    0.800   1.6e-03
+pfdhps       436  S    S       yes     1884    0.446      0.520    0.509    0.426    0.120   4.5e-05  **
+pfdhps       436  S    F               1884    0.007      0.005    0.000    0.009    0.040   8.1e-02
+pfdhps       436  S    Y               1884    0.005      0.000    0.000    0.007    0.040   2.8e-02
+pfdhps       437  G    G       yes     1892    0.897      0.941    0.964    0.875    0.800   1.2e-06  **
+pfdhps       437  G    A               1892    0.103      0.059    0.036    0.125    0.200   1.2e-06  **
+pfdhps       540  K    K       yes     1895    0.991      0.995    0.994    0.989    1.000   6.6e-01
+pfdhps       540  K    E               1895    0.009      0.005    0.006    0.011    0.000   6.6e-01
+pfdhps       581  A    A       yes     1890    0.986      0.965    0.973    0.993    0.960   8.0e-04  **
+pfdhps       581  A    G               1890    0.014      0.035    0.027    0.007    0.040   8.0e-04  **
+pfdhps       613  A    A       yes     1884    0.892      0.892    0.928    0.884    0.840   1.1e-01
+pfdhps       613  A    S               1884    0.108      0.108    0.072    0.116    0.160   1.1e-01
+pfk13        252  E    E       yes     1876    1.000      1.000    1.000    1.000    1.000   
+pfk13        441  P    P       yes     1860    1.000      1.000    1.000    1.000    1.000   
+pfk13        446  F    F       yes     1863    1.000      1.000    1.000    1.000    1.000   
+pfk13        449  G    G       yes     1862    1.000      1.000    1.000    1.000    1.000   
+pfk13        458  N    N       yes     1866    0.999      1.000    1.000    0.999    1.000   9.4e-01
+pfk13        469  C    C       yes     1863    1.000      1.000    1.000    1.000    1.000   
+pfk13        476  M    M       yes     1867    1.000      1.000    1.000    1.000    1.000   
+pfk13        481  A    A       yes     1856    1.000      1.000    1.000    1.000    1.000   
+pfk13        493  Y    Y       yes     1857    1.000      1.000    1.000    1.000    1.000   
+pfk13        515  R    R       yes     1860    1.000      1.000    1.000    1.000    1.000   
+pfk13        527  P    P       yes     1862    1.000      1.000    1.000    1.000    1.000   
+pfk13        533  G    G       yes     1863    1.000      1.000    1.000    1.000    1.000   
+pfk13        537  N    N       yes     1868    1.000      1.000    1.000    1.000    1.000   
+pfk13        538  G    G       yes     1863    1.000      1.000    1.000    1.000    1.000   
+pfk13        539  R    R       yes     1861    1.000      1.000    1.000    1.000    1.000   
+pfk13        543  I    I       yes     1861    1.000      1.000    1.000    1.000    1.000   
+pfk13        553  P    P       yes     1859    1.000      1.000    1.000    1.000    1.000   
+pfk13        561  R    R       yes     1864    1.000      1.000    1.000    1.000    1.000   
+pfk13        568  V    V       yes     1866    1.000      1.000    1.000    1.000    1.000   
+pfk13        574  P    P       yes     1861    1.000      1.000    1.000    1.000    1.000   
+pfk13        580  C    C       yes     1863    1.000      1.000    1.000    1.000    1.000   
+pfk13        622  R    R       yes     1862    1.000      1.000    1.000    1.000    1.000   
+pfk13        675  A    A       yes     1845    1.000      1.000    1.000    1.000    1.000   
+pfmdr2       484  T    T       yes     1899    1.000      1.000    1.000    1.000    1.000   
+pfmdr2       492  I    V               1885    0.549      0.460    0.548    0.559    0.720   2.0e-02
+pfmdr2       492  I    I       yes     1885    0.451      0.540    0.452    0.441    0.280   2.0e-02
+pfcoronin     50  G    G       yes     1899    1.000      1.000    1.000    1.000    1.000   
+pfcoronin    100  R    R       yes     1900    1.000      1.000    1.000    1.000    1.000   
+pfcoronin    107  E    E       yes     1900    1.000      1.000    1.000    1.000    1.000   
+pfap2mu      160  S    S       yes     1898    0.904      0.922    0.929    0.894    0.920   2.0e-01
+pfap2mu      160  S    N               1898    0.096      0.078    0.071    0.106    0.080   2.0e-01
+pfaat1       258  S    L               1896    0.609      0.824    0.735    0.544    0.640   1.9e-18  **
+pfaat1       258  S    S       yes     1896    0.391      0.176    0.265    0.456    0.360   1.9e-18  **
+pfaat1       313  F    F       yes     1900    1.000      1.000    1.000    1.000    1.000   
+
+============================================================
+  Codons with no variant record in Pf8
+============================================================
+  (none)
+
+============================================================
+  Within-isolate haplotypes (complete cases only)
+============================================================
+Marginal frequencies cannot show co-occurrence. Each haplotype below is
+counted only among isolates called at EVERY constituent codon.
+
+  triple mutant (N51I+C59R+S108N)
+    complete cases: 1,876 of 1,900 isolates (98.7% callable at all 3 codons)
+    target haplotype IRN: 1,446  freq 0.771 [0.751-0.789]
+    component freqs on the SAME complete-case set: 51I 0.788, 59R 0.887, 108N 0.908
+    minimum component = 0.788  (the haplotype cannot exceed this)
+    commonest haplotypes: IRN 0.771, NRN 0.116, NCS 0.091, ICN 0.018, NCN 0.004
+      Coastal savanna      n=  203  IRN 0.867 [0.813-0.907]
+      Decidous forest      n=  330  IRN 0.788 [0.741-0.829]
+      Guinea savanna       n= 1318  IRN 0.750 [0.726-0.772]
+      Transitional zone    n=   25  IRN 0.880 [0.700-0.958]
+
+  quadruple (adds I164L)
+    complete cases: 1,874 of 1,900 isolates (98.6% callable at all 4 codons)
+    target haplotype IRNL: 0  freq 0.000 [0.000-0.002]
+    component freqs on the SAME complete-case set: 51I 0.788, 59R 0.887, 108N 0.908, 164L 0.000
+    minimum component = 0.000  (the haplotype cannot exceed this)
+    commonest haplotypes: IRNI 0.771, NRNI 0.116, NCSI 0.091, ICNI 0.018, NCNI 0.004
+      Coastal savanna      n=  203  IRNL 0.000 [0.000-0.019]
+      Decidous forest      n=  329  IRNL 0.000 [0.000-0.012]
+      Guinea savanna       n= 1317  IRNL 0.000 [0.000-0.003]
+      Transitional zone    n=   25  IRNL 0.000 [0.000-0.133]
+
+  CVIET core motif
+    complete cases: 1,873 of 1,900 isolates (98.6% callable at all 5 codons)
+    target haplotype CVIET: 133  freq 0.071 [0.060-0.084]
+    component freqs on the SAME complete-case set: 72C 1.000, 73V 1.000, 74I 0.071, 75E 0.071, 76T 0.071
+    minimum component = 0.071  (the haplotype cannot exceed this)
+    commonest haplotypes: CVMNK 0.929, CVIET 0.071
+      Coastal savanna      n=  204  CVIET 0.054 [0.030-0.094]
+      Decidous forest      n=  335  CVIET 0.104 [0.076-0.142]
+      Guinea savanna       n= 1310  CVIET 0.064 [0.052-0.079]
+      Transitional zone    n=   24  CVIET 0.125 [0.043-0.310]
+
+  double (A437G+K540E)
+    complete cases: 1,888 of 1,900 isolates (99.4% callable at all 2 codons)
+    target haplotype GE: 18  freq 0.010 [0.006-0.015]
+    component freqs on the SAME complete-case set: 437G 0.897, 540E 0.010
+    minimum component = 0.010  (the haplotype cannot exceed this)
+    commonest haplotypes: GK 0.887, AK 0.103, GE 0.010
+      Coastal savanna      n=  203  GE 0.005 [0.001-0.027]
+      Decidous forest      n=  336  GE 0.006 [0.002-0.021]
+      Guinea savanna       n= 1324  GE 0.011 [0.007-0.019]
+      Transitional zone    n=   25  GE 0.000 [0.000-0.133]
+
+
+============================================================
+  Per-sample concordance with MalariaGEN's published calls
+============================================================
+Agreement of marginal frequencies does not show that two pipelines called
+the same isolates the same way. This compares call by call, on the set of
+isolates where both pipelines made a call.
+
+marker           both called   agree  disagree  concordance  disagreements
+--------------------------------------------------------------------------------------
+pfcrt 72                1900    1900         0       1.0000  
+pfcrt 74                1873    1873         0       1.0000  
+pfcrt 75                1874    1874         0       1.0000  
+pfcrt 76                1874    1874         0       1.0000  
+pfcrt 220               1869    1869         0       1.0000  
+pfcrt 271               1873    1873         0       1.0000  
+pfcrt 326               1874    1874         0       1.0000  
+pfcrt 356               1900    1900         0       1.0000  
+pfcrt 371               1873    1873         0       1.0000  
+pfmdr1 86               1887    1887         0       1.0000  
+pfmdr1 184              1858    1858         0       1.0000  
+pfmdr1 1034             1834    1834         0       1.0000  
+pfmdr1 1042             1851    1851         0       1.0000  
+pfmdr1 1246             1866    1866         0       1.0000  
+pfdhfr 16               1896    1896         0       1.0000  
+pfdhfr 51               1891    1891         0       1.0000  
+pfdhfr 59               1888    1888         0       1.0000  
+pfdhfr 108              1889    1889         0       1.0000  
+pfdhfr 164              1898    1898         0       1.0000  
+pfdhps 436              1884    1884         0       1.0000  
+pfdhps 437              1892    1892         0       1.0000  
+pfdhps 540              1895    1895         0       1.0000  
+pfdhps 581              1890    1890         0       1.0000  
+pfdhps 613              1884    1884         0       1.0000  
+pfmdr2 484              1899    1899         0       1.0000  
+
+  Overall: 47,012/47,012 calls agree (100.0000%) across 25 markers
+  -> /media/biodataA/pf8/gyadu/results/codon_panel_concordance.csv
+
+============================================================
+  Output
+============================================================
+  /media/biodataA/pf8/gyadu/results/codon_panel_residues.csv
+  /media/biodataA/pf8/gyadu/results/codon_panel_haplotypes.csv
+
+24 note(s):
+  pfaat1 codon 258: 3 mixed call(s) -> codon uncalled
+  pfap2mu codon 160: 2 mixed call(s) -> codon uncalled
+  pfcrt codon 220: 25 mixed call(s) -> codon uncalled
+  pfcrt codon 271: 25 mixed call(s) -> codon uncalled
+  pfcrt codon 326: 24 mixed call(s) -> codon uncalled
+  pfcrt codon 371: 25 mixed call(s) -> codon uncalled
+  pfcrt codon 73: 1 mixed call(s) -> codon uncalled
+  pfcrt codon 74: 27 mixed call(s) -> codon uncalled
+  pfcrt codon 75: 52 mixed call(s) -> codon uncalled
+  pfcrt codon 76: 26 mixed call(s) -> codon uncalled

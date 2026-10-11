@@ -1,0 +1,27 @@
+records: {10053441: 1724975, 10053589: 1725315, 10053597: 1725339}
+
+=== pos 1724975  codon 675 (A675V)  PASS=False numalt=1 REF=C ALT=['G']
+   PF0184-C: GT=[0,1]  MIXED (het) -> codon uncalled by step12
+      AD=[135, 38, -1, -1, -1, -1, -1]  DP=173  GQ=99
+      ALT1 = G  (minus-strand codon base C)
+   PF0185-C: GT=[0,1]  MIXED (het) -> codon uncalled by step12
+      AD=[158, 60, -1, -1, -1, -1, -1]  DP=218  GQ=99
+      ALT1 = G  (minus-strand codon base C)
+   PF0260-C: GT=[0,1]  MIXED (het) -> codon uncalled by step12
+      AD=[309, 120, -1, -1, -1, -1, -1]  DP=429  GQ=99
+      ALT1 = G  (minus-strand codon base C)
+   PF0269-C: GT=[0,1]  MIXED (het) -> codon uncalled by step12
+      AD=[312, 123, -1, -1, -1, -1, -1]  DP=435  GQ=99
+      ALT1 = G  (minus-strand codon base C)
+
+=== pos 1725315  codon 561 (R561H)  PASS=False numalt=3 REF=A ALT=['C', 'G', 'T']
+   SPT19969: GT=[2,2]  HOMOZYGOUS ALT
+      AD=[0, 0, 6, 0, -1, -1, -1]  DP=6  GQ=18
+      ALT2 = G  (minus-strand codon base C)
+
+=== pos 1725339  codon 553 (P553L)  PASS=False numalt=2 REF=C ALT=['T', 'A']
+   SPT22485: GT=[0,1]  MIXED (het) -> codon uncalled by step12
+      AD=[18, 3, 0, -1, -1, -1, -1]  DP=21  GQ=39
+      ALT1 = T  (minus-strand codon base A)
+
+fetched 981 MB

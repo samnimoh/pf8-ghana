@@ -1,0 +1,140 @@
+[
+  {
+    "kind": "insert",
+    "old_paragraph_range": [
+      2,
+      1
+    ],
+    "new_paragraph_range": [
+      2,
+      2
+    ],
+    "old": [],
+    "new": [
+      "[AUTHOR NAMES AND AFFILIATIONS TO BE SUPPLIED]"
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      10,
+      11
+    ],
+    "new_paragraph_range": [
+      11,
+      12
+    ],
+    "old": [
+      "Malaria is endemic throughout Ghana, the entire population is at risk, and the disease remains a leading cause of outpatient attendance, paediatric admission and death (WHO 2025). The national programme relies on artemisinin-based combination therapy for case management, sulfadoxine-pyrimethamine for intermittent preventive treatment in pregnancy, and sulfadoxine-pyrimethamine with amodiaquine for seasonal malaria chemoprevention in the north. Each regimen imposes a distinct selective pressure on Plasmodium falciparum, and each is delivered across a country whose transmission ecology is far from uniform.",
+      "Ghana spans four of the agro-ecological zones that organise rainfall, vegetation and vector ecology in West Africa. From south to north these are the coastal savanna, the deciduous forest, the forest-savanna transitional zone and the Guinea savanna (Fig. 1). The coastal strip is comparatively dry; the forest belt receives bimodal rainfall and sustains intense perennial transmission; the transitional zone is a narrow band of mixed woodland; and the Guinea savanna of the north has a single wet season, so transmission there is high but sharply seasonal, which is why chemoprevention is targeted to it. This south-north gradient in seasonality, vector composition and mosquito survival is the natural axis along which Ghanaian parasite populations might be expected to differ, and it is also the axis along which control interventions and their selective pressures are unevenly distributed. The zones are not, however, independent of how Ghana is sampled: the finest spatial unit recorded in the release metadata is the administrative region, seven of which contribute Ghanaian isolates, and zones correspond approximately to groups of regions (Table 1). Zone is in consequence very nearly a relabelling of administrative region, sequencing study and collection period, with three of the four zones dominated by a single sequencing study, so every comparison drawn between zones is confounded by how the samples were gathered."
+    ],
+    "new": [
+      "Malaria is endemic throughout Ghana, the entire population is at risk, and the disease remains a leading cause of outpatient attendance, paediatric admission and death [CITATION TO BE SUPPLIED: WHO World Malaria Report]. The national programme relies on artemisinin-based combination therapy for case management, sulfadoxine-pyrimethamine for intermittent preventive treatment in pregnancy, and sulfadoxine-pyrimethamine with amodiaquine for seasonal malaria chemoprevention in the north. Each regimen imposes a distinct selective pressure on Plasmodium falciparum, and each is delivered across a country whose transmission ecology is far from uniform.",
+      "Ghana is divided into several agro-ecological zones, four of which are represented in this dataset; these are the zones that organise rainfall, vegetation and vector ecology in West Africa. From south to north these are the coastal savanna, the deciduous forest, the forest-savanna transitional zone and the Guinea savanna (Fig. 1). The coastal strip is comparatively dry; the forest belt receives bimodal rainfall and sustains intense perennial transmission; the transitional zone is a narrow band of mixed woodland; and the Guinea savanna of the north has a single wet season, so transmission there is high but sharply seasonal, which is why chemoprevention is targeted to it. This south-north gradient in seasonality, vector composition and mosquito survival is the natural axis along which Ghanaian parasite populations might be expected to differ, and it is also the axis along which control interventions and their selective pressures are unevenly distributed. The zones are not, however, independent of how Ghana is sampled: the finest spatial unit recorded in the release metadata is the administrative region, seven of which contribute Ghanaian isolates, and zones correspond approximately to groups of regions (Table 1). Zone is in consequence very nearly a relabelling of administrative region, sequencing study and collection period, with three of the four zones dominated by a single sequencing study, so every comparison drawn between zones is confounded by how the samples were gathered."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      13,
+      13
+    ],
+    "new_paragraph_range": [
+      14,
+      14
+    ],
+    "old": [
+      "What is known about West African P. falciparum structure provides the expectation against which Ghana must be assessed. Genome-wide analyses of parasites sampled across the continent resolve major sub-Saharan subpopulations, with West Africa forming a cluster distinct from Central, East and Southeast African parasites, and with relatively modest differentiation between countries inside the West African cluster (Amambua-Ngwa et al. 2019). Within West Africa, genome-wide scans have identified shared signals of recent selection, concentrated at drug-resistance loci and at antigen-encoding genes, indicating that selective pressures are regionally correlated even where neutral differentiation is slight (Mobegi et al. 2014). Continental molecular surveillance has since tracked the frequencies of pfdhfr, pfdhps, pfcrt, pfmdr1 and pfk13 variants across many African countries and has shown that sulfadoxine-pyrimethamine resistance markers are near fixation in parts of West Africa while chloroquine resistance markers have declined following policy change (Amambua-Ngwa et al. 2023). The implication for a single country is that national structure is likely to be weak, and that weak structure is precisely the regime in which point estimates without uncertainty are least informative."
+    ],
+    "new": [
+      "What is known about West African P. falciparum structure provides the expectation against which Ghana must be assessed. Genome-wide analyses of parasites sampled across the continent resolve major sub-Saharan subpopulations, with West Africa forming a cluster distinct from Central, East and Southeast African parasites, and with relatively modest differentiation between countries inside the West African cluster (Amambua-Ngwa et al. 2019). Within West Africa, genome-wide scans have identified shared signals of recent selection, concentrated at drug-resistance loci and at antigen-encoding genes, indicating that selective pressures are regionally correlated even where neutral differentiation is slight (Mobegi et al. 2014). The variants used to monitor that pressure are catalogued and tiered by the World Health Organization, which classifies individual variants rather than genes and distinguishes validated from candidate markers (WHO 2025). The implication for a single country is that national structure is likely to be weak, and that weak structure is precisely the regime in which point estimates without uncertainty are least informative."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      28,
+      28
+    ],
+    "new_paragraph_range": [
+      29,
+      29
+    ],
+    "old": [
+      "Isolation by distance was tested with the Mantel test (Mantel 1967), correlating pairwise Hudson FST with great-circle distance between population centroids. Tests were run at two spatial levels: four zone populations giving six pairs, and seven administrative regions, the finest spatial unit in the release metadata, giving 21 pairs. Each used 9,999 permutations of population labels, a one-sided alternative of positive association, and random seed 42."
+    ],
+    "new": [
+      "Isolation by distance was tested with the Mantel test (Mantel 1967), correlating linearised differentiation, FST/(1 − FST), with the logarithm of great-circle distance between population centroids. Tests were run at two spatial levels: four zone populations giving six pairs, and seven administrative regions, the finest spatial unit in the release metadata, giving 21 pairs. Each used 9,999 permutations of population labels, a one-sided alternative of positive association, and random seed 42."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      40,
+      40
+    ],
+    "new_paragraph_range": [
+      41,
+      41
+    ],
+    "old": [
+      "Residue frequencies were computed overall and by zone as the proportion of called isolates carrying the resistance-associated residue, with 95% Wilson intervals, which behave correctly at the near-fixed and near-absent frequencies dominating this panel (Table 3). Heterogeneity across zones was tested per residue with a four-zone chi-square test. Panel genotypes were checked against MalariaGEN's published per-sample calls, which cover 25 of the 57 panel codons; 47,012 of 47,012 overlapping calls agreed. The other 32 codons, every pfk13 codon among them, have no external per-sample check."
+    ],
+    "new": [
+      "Residue frequencies were computed overall and by zone as the proportion of called isolates carrying the resistance-associated residue, with 95% Wilson intervals, which behave correctly at the near-fixed and near-absent frequencies dominating this panel (Table 3). Heterogeneity across zones was tested per residue with a four-zone Pearson chi-square test. For rare residues several expected cell counts fall below five, so those particular tests are asymptotically unreliable and are reported as exploratory; no correction was applied across the many residues tested, so individual p-values near 0.05 should be read as nominal. Panel genotypes were checked against MalariaGEN's published per-sample calls, which cover 25 of the 57 panel codons; 47,012 of 47,012 overlapping calls agreed. The other 32 codons, every pfk13 codon among them, have no external per-sample check."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      48,
+      48
+    ],
+    "new_paragraph_range": [
+      49,
+      49
+    ],
+    "old": [
+      "Table 1 Composition of the analysis set, with the sequencing study, administrative region and collection period that accompany each agro-ecological zone. Zone is very nearly a relabelling of region and study: three of the four zones draw on a single administrative region, and one on a single study."
+    ],
+    "new": [
+      "Table 1 Composition of the analysis set, with the sequencing study, administrative region and collection period that accompany each agro-ecological zone. Zone is very nearly a relabelling of region and study: three of the four zones draw on a single administrative region, and one on a single study. The final column is measured on the pre-filter quality-control cohort of 4,905 isolates, not on the analysis set: every analysed isolate satisfies Fws ≥ 0.95 by construction, so its polyclonal fraction is zero. QC-cohort denominators are given in the column."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      71,
+      72
+    ],
+    "new_paragraph_range": [
+      72,
+      73
+    ],
+    "old": [
+      "Under the assumed null, 3.916 SNPs are expected above the 0.999 quantile. The ratio of that expectation to the observed count, 3.916/19 = 20.6%, is an expected-null exceedance ratio: it states how much of the outlier tail the calibration model would itself generate, and it is not a measured false-discovery rate. Benjamini-Hochberg q-values computed on the same statistics (Benjamini and Hochberg 1995) retained eight SNPs at q <= 0.01, ten at q <= 0.05, 13 at q <= 0.10 and 17 at q <= 0.20. Thirteen of the 19 outliers therefore survive control of the false-discovery rate at 10%.",
+      "Ranked by the maximum XtX attained within each gene, the leading signals were PTP7 (PF3D7_0301700, XtX = 26.44), AAT1 (PF3D7_0629500, 24.20), FIKK4.2 (PF3D7_0424700, 22.02), ACS8 (PF3D7_0215300, 22.00), NT2 (PF3D7_0824400, 20.46), PIESP2 (PF3D7_0501200, 18.50) and SNRPF (PF3D7_1126900, 13.98). Two of the 19 outliers are adjacent sites on chromosome 11, at Pf3D7_11_v3:1,054,078 and 1,054,447, 369 bp apart, and both carry ExcessHet and InbreedingCoeff anomalies in the release annotation. They are flagged as lower confidence and are not interpreted as differentiation signals here."
+    ],
+    "new": [
+      "Under the assumed null, 3.916 SNPs are expected above the 0.999 quantile. The ratio of that expectation to the observed count, 3.916/19 = 20.6%, is an expected-null exceedance ratio: it states how much of the outlier tail the calibration model would itself generate, and it is not a measured false-discovery rate. Benjamini-Hochberg q-values computed on the same statistics (Benjamini and Hochberg 1995) retained eight SNPs at q <= 0.01, ten at q <= 0.05, 13 at q <= 0.10 and 17 at q <= 0.20. Thirteen of the 19 outliers therefore have Benjamini-Hochberg q-values at or below 0.10 against the pseudo-observed null, conditional on that null being adequately calibrated.",
+      "Ranked by the maximum XtX attained within each gene, the leading signals were PTP7 (PF3D7_0301700, XtX = 26.44), AAT1 (PF3D7_0629500, 24.20), FIKK4.2 (PF3D7_0424700, 22.02), ACS8 (PF3D7_0215300, 22.00), NT2 (PF3D7_0824400, 20.46), PIESP2 (PF3D7_0501200, 18.50) and SNRPF (PF3D7_1126900, 13.98). Two of the 19 outliers are adjacent sites on chromosome 11, at Pf3D7_11_v3:1,054,078 and 1,054,447, 369 bp apart, and both carry low InbreedingCoeff values in the release annotation (0.147 and 0.193, the 8th and 13th percentiles of the panel); the first also carries the only non-zero ExcessHet value among all 3,916 SNPs (69.59), while ExcessHet is zero at the second. They are flagged as lower confidence and are not interpreted as differentiation signals here."
+    ]
+  },
+  {
+    "kind": "replace",
+    "old_paragraph_range": [
+      119,
+      119
+    ],
+    "new_paragraph_range": [
+      120,
+      120
+    ],
+    "old": [
+      "Availability of data and materials The Pf8 variant release is openly available from MalariaGEN (MalariaGEN 2025), and the analysis scripts and derived outputs are provided in the supplementary material. The archived snapshots do not capture the exact final command invocations, so the pipeline is inspectable but not fully re-executable end to end. The analysis record, including the scripts, the derived output tables and the provenance notes, accompanies this article as Additional file 1."
+    ],
+    "new": [
+      "Availability of data and materials The Pf8 variant release is openly available from MalariaGEN (MalariaGEN 2025), and the analysis scripts and derived outputs are provided in the supplementary material. The archived snapshots do not capture the exact final command invocations, so the pipeline is inspectable but not fully re-executable end to end. The narrative analysis record accompanies this article as Additional file 1. The analysis scripts, the derived output tables, the empirical audit scripts with their captured logs and the provenance notes form a separate archive that is not embedded in that file; it should be deposited and cited with stable access information before submission [REPOSITORY DOI TO BE SUPPLIED]."
+    ]
+  }
+]

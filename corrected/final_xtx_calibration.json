@@ -1,0 +1,27 @@
+{
+  "threshold": 10.839767826730082,
+  "method": "POD quantile 0.999",
+  "n_snps": 3916,
+  "n_outliers": 19,
+  "outlier_fraction": 0.004851889683350358,
+  "expected_false_positives": 3.916,
+  "empirical_fdr_at_threshold": 0.20610526315789474,
+  "n_by_qvalue": [
+    {
+      "q_threshold": 0.01,
+      "n_snps": 8
+    },
+    {
+      "q_threshold": 0.05,
+      "n_snps": 10
+    },
+    {
+      "q_threshold": 0.1,
+      "n_snps": 13
+    },
+    {
+      "q_threshold": 0.2,
+      "n_snps": 17
+    }
+  ]
+}

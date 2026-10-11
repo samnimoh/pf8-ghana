@@ -1,0 +1,43 @@
+The reconstructed genotypes were compared against MalariaGEN's published per-sample resistance genotypes 
+(MalariaGEN 2025). All 47,012 of 47,012 comparable calls agreed. That comparison covers 25 of the 57 panel 
+codons, namely those for which MalariaGEN publishes a per-sample genotype; the remaining 32 have no 
+external per-sample check. Every pfk13 codon falls in the unchecked set, so the artemisinin result rests on the 
+codon reconstruction itself and on its concordance at the other genes, not on a direct external comparison at 
+pfk13.
+Discussion
+Interpreting very low differentiation
+The largest pairwise Hudson FST among Ghana's agro-ecological zones was 0.00232, between coastal savanna 
+and Guinea savanna, with a block-jackknife 95% confidence interval of 0.00128 to 0.00336 (Table 2; Hudson et 
+al. 1992). This number carries a narrow meaning: it measures differentiation among the four sampled groups at 
+the 3,916 common variants retained after filtering, as a ratio of averages over those variants. Five of the six 
+intervals exclude zero, so the differentiation is very low and nevertheless statistically detectable; only the Guinea 
+savanna to transitional comparison (0.00047, interval -0.00083 to 0.00178), which involves the 25-isolate 
+transitional zone, spans zero.
+Three things follow less readily than is often assumed. First, a very low FST is not evidence of random mating: low 
+among-group variance in allele frequencies is compatible with a wide range of demographic histories, and the 
+mating system is not identified by it. Second, the estimate is not an upper bound on true differentiation. The 
+confidence intervals quantify sampling error around the estimate for this panel in these groups; they say nothing 
+about the distance between that estimate and whatever structure exists at variants the analysis never saw. 
+Third, the result is silent about the variants the minor-allele-frequency filter removed. A MAF >= 0.05 threshold 
+applied to the pooled sample discards exactly the rare and geographically restricted alleles that carry recent and 
+local structure, so the panel reports on common variation and only on common variation.
+The three structure analyses do not independently confirm one another. The ordinations (Fig. 2; McInnes et al. 
+2018), the pairwise FST estimates (Table 2) and the ADMIXTURE decomposition (Alexander et al. 2009) are 
+different projections of the same 1,900 isolates: the ordinations of the published Pf8 genotype-distance 
+submatrix, the FST estimates of the 3,916 retained common variants, and the decomposition of 3,385 LD-pruned 
+SNPs. All three point the same way: every silhouette coefficient by zone is negative (UMAP -0.306, t-SNE -0.057, 
+PCoA -0.112, original distances -0.0156), the cross-validation curve across K = 1 to 8 spans only 0.0056 with a 
+shallow minimum at K = 2, and the K = 2 minor component explains eta-squared = 0.019, or 1.9% of variance, 
+among zones. That concordance is coherence within one dataset, not replication across datasets.
+Why the spatial signal does not survive
+At the published thresholds, the Mantel test on regional FST against geographic distance returned r = 0.427, p = 
+0.0252 over 21 pairs from seven administrative regions (Mantel 1967). The correlation does not hold away from 
+those thresholds. Across the six sensitivity scenarios sharing one genotype load (Table 4), it is significant in two 
+of six: the baseline and MAF >= 0.02 (r = 0.434, p = 0.0467). Relaxing the within-host complexity filter to Fws >= 
+0.90 gives p = 0.0874, Fws >= 0.80 gives p = 0.1687, and removing the filter altogether gives p = 0.1792; MAF >= 
+0.01 gives p = 0.0617. The maximum FST is stable at 0.00204 to 0.00255 across all six, so the instability is specific 
+to the distance correlation, not to the differentiation estimate underlying it. Aggregating to zones rather than 
+regions also removes significance (r = 0.4709, p = 0.1218).
+The correlation is equally sensitive to which regions are included. Leaving out one region at a time, it remains 
+significant in four of seven analyses and fails in three: dropping Eastern (p = 0.1355), Upper East (p = 0.218) or 
+Greater Accra (p = 0.2324) is enough to remove it. Seven regional centroids are a weak design for a distance 

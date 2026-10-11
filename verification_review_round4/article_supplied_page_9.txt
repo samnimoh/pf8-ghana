@@ -1,0 +1,30 @@
+gives r = 0.4138 and p = 0.0413. At the zone level, with four populations and six pairs and no flooring, the test is 
+not significant: r = 0.4709, p = 0.1218.
+The region-level signal is not stable. Mantel significance is reached in only 2 of the 6 threshold scenarios (Table 
+4). Leave-one-region-out replication is significant in 4 of 7 replicates - dropping Volta p = 0.0097, Ashanti 0.014, 
+Brong Ahafo 0.0398 and Central 0.0427 - and not significant on dropping Eastern (0.1355), Upper East (0.218) or 
+Greater Accra (0.2324). Isolation by distance is not robust in these data and is not reported here as a supported 
+result.
+Population graph
+TreeMix was fitted to the four zones with jackknife standard errors (Pickrell and Pritchard 2012). Variance 
+explained rises from 0.8970 at m = 0 to 0.9405 at m = 1 and 0.9969 at m = 2, then changes little across m = 3 to 5 
+(0.99966, 0.99958, 0.99959). The two-edge graph is presented as a selected descriptive model of the observed 
+covariance structure, not as a count of historical migration events. Its two edges have weights 0.152 (SE 0.048, p 
+= 7.5 x 10^-4) and 0.805 (SE 0.100, p = 3.3 x 10^-16). The third edge added at m = 3 has weight 0.065 (SE 0.147, p 
+= 0.33) and is indistinguishable from zero.
+The two selection criteria disagree. Applied across the full m = 0 to 5 sweep, the 0.998 variance rule picks m = 3; 
+m = 2 follows only after the range is capped at two edges on identifiability grounds. Four populations cannot 
+identify more than about two edges, and that limitation applies to the data available here.
+Genome scan for differentiation outliers
+The genome scan was run on the 3,916-SNP matrix with the four agro-ecological zones as populations. XtX 
+differentiation statistics were calibrated against 100,000 pseudo-observed SNPs, which placed the 0.999 quantile 
+at 10.840 (Gautier 2015). Nineteen of the 3,916 SNPs in the matrix exceeded that threshold, 0.49% of the panel 
+(Fig. 3). The pseudo-observed set is not matched to the observed minor-allele-frequency spectrum: the 
+simulation truncates the simulated ancestral frequency and does not reapply the MAF filter used to assemble 
+the analysis matrix, so the threshold is not calibrated against the frequency spectrum of the matrix that was 
+scanned.
+Fig. 3 BayPass XtX genome scan on the 3,916-SNP matrix. Left: the observed XtX distribution against the pseudo-observed neutral 
+distribution, with the calibrated 0.999-quantile threshold at 10.840. Right: XtX along the genome.
+Under the assumed null, 3.916 SNPs are expected above the 0.999 quantile. The ratio of that expectation to the 
+observed count, 3.916/19 = 20.6%, is an expected-null exceedance ratio: it states how much of the outlier tail 
+the calibration model would itself generate, and it is not a measured false-discovery rate. Benjamini-Hochberg q-

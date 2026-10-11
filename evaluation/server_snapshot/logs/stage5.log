@@ -1,0 +1,76 @@
+
+[1;34m######## STAGE 5 — Export PLINK ########[0m
+
+============================================================
+  STEP 5a — genotypes -> PLINK .tped/.tfam
+============================================================
+3,359 SNPs x 1,900 samples, ploidy 2
+Chromosome codes 1..14 -> /media/biodataA/pf8/gyadu/interim/ghana_snps_chrom_codes.tsv
+TFAM -> /media/biodataA/pf8/gyadu/interim/ghana_snps.tfam
+Writing TPED (this is the slow part)...
+  3,359/3,359
+TPED -> /media/biodataA/pf8/gyadu/interim/ghana_snps.tped
+TPED size: 26 MB — PLINK converts it to .bed next, after which the text version can be deleted.
+
+Next: bash step05b_admixture.sh
+
+[1;34m######## STAGE 5 — ADMIXTURE sweep ########[0m
+
+[1m==> Text PLINK -> binary[0m
+3359 variants loaded from .bim file.
+1900 people (0 males, 0 females, 1900 ambiguous) loaded from .fam.
+3359 variants and 1900 people pass filters and QC.
+
+[1m==> LD pruning (window 50, step 10, r2 0.2)[0m
+SNPs: 3359 -> 2923 after pruning
+
+[1m==> ADMIXTURE sweep K = 2..8[0m
+  7 K value(s) at a time, 4 threads each
+  K=2 started
+  K=3 started
+  K=4 started
+  K=5 started
+  K=6 started
+  K=7 started
+  K=8 started
+CV error (K=2): 0.83736
+CV error (K=3): 0.83787
+CV error (K=4): 0.83874
+CV error (K=5): 0.84012
+CV error (K=6): 0.84128
+CV error (K=7): 0.84234
+CV error (K=8): 0.84316
+
+[1m==> Cross-validation summary[0m
+CV error (K=2): 0.83736
+CV error (K=3): 0.83787
+CV error (K=4): 0.83874
+CV error (K=5): 0.84012
+CV error (K=6): 0.84128
+CV error (K=7): 0.84234
+CV error (K=8): 0.84316
+
+The minimising K is a guide, not a verdict. Where the curve flattens across
+several values, report the flat range and the biology that motivates your
+choice rather than the nominal minimum.
+
+Next: python step05c_plot_admixture.py
+
+[1;34m######## STAGE 5 — Plot ADMIXTURE ########[0m
+
+============================================================
+  STEP 5c — ADMIXTURE results
+============================================================
+CV error by K:
+  K=2: 0.83736  <-- minimum
+  K=3: 0.83787
+  K=4: 0.83874
+  K=5: 0.84012
+  K=6: 0.84128
+  K=7: 0.84234
+  K=8: 0.84316
+Sample ordering: zone, year
+
+Figures -> /media/biodataA/pf8/gyadu/figures/admixture_cv.png
+           /media/biodataA/pf8/gyadu/figures/admixture_barplots.png
+Q matrices -> /media/biodataA/pf8/gyadu/results/admixture/Q_K*.csv

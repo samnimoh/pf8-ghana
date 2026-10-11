@@ -1,0 +1,46 @@
+The analysis set
+Of the 33,325 samples and 12,493,205 variants in MalariaGEN Pf8, 4,905 Ghanaian isolates passed release QC 
+and could be assigned to an agro-ecological zone (MalariaGEN 2025). Sample filtering on Fws >= 0.95, a call rate 
+of at least 0.80, a heterozygosity outlier rule and clonal pruning was applied, and variant missingness was then 
+recomputed on the retained samples in a second pass: 1,634,808 variants passed provisionally, 117 high-
+missingness samples were dropped, 1,807,331 variants stood at 10% missingness or less on the 1,900 isolates 
+retained, and 3,916 of these reached a minor allele frequency of 0.05 or more. The analysis set is therefore 
+1,900 isolates genotyped at 3,916 SNPs, with mean variant missingness of 2.95%, assembled from collections 
+spanning 2009-2021 (Table 1, Fig. 1).
+Fig. 1 Sampling locations on the Ghana agro-ecological zone layer. Each point is one administrative-region centroid; colour gives the 
+agro-ecological zone to which isolates from that region were assigned.
+Table 1 Composition of the analysis set, with the sequencing study, administrative region and collection period that accompany 
+each agro-ecological zone. Zone is very nearly a relabelling of region and study: three of the four zones draw on a single 
+administrative region, and one on a single study. The final column is measured on the pre-filter quality-control cohort of 4,905 
+isolates, not on the analysis set: every analysed isolate satisfies Fws ≥ 0.95 by construction, so its polyclonal fraction is zero. QC-
+cohort denominators are given in the column.
+Agro-ecological 
+zone
+Isolate
+s
+Administrative region(s) No. 
+studi
+es
+Dominant study (share) Collection 
+years
+Polyclonal 
+fraction (QC 
+cohort)
+Guinea savanna 1,334 Upper East (1,334) 6 1168-PF-GH-AMENGA-
+ETEGO-SM (74%)
+2009–2019 0.597 (n = 
+3,605)
+Deciduous forest 337 Ashanti (157), Central (125), 
+Eastern (34), Volta (21)
+5 1200-PF-GH-MAIGA-SM 
+(47%)
+2013–2021 0.539 (n = 
+815)
+Coastal savanna 204 Greater Accra (204) 2 1241-PF-GH-ANINAGYEI 
+(87%)
+2016–2018 0.444 (n = 
+435)
+Transitional zone 25 Brong Ahafo (25) 1 1083-PF-GH-CONWAY 
+(100%)
+2011–2013 0.500 (n = 
+50)

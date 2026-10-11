@@ -1,0 +1,9 @@
+Wilson, E. B. (1927). Probable inference, the law of succession, and statistical inference. Journal of the American Statistical 
+Association, 22(158), 209–212. https://doi.org/10.1080/01621459.1927.10502953
+World Health Organization. (2025, December 10). Compendium of molecular markers for antimalarial drug resistance 
+(Version 1.0). https://www.who.int/tools/compendium-of-molecular-markers-for-antimalarial-drug-resistance
+World Health Organization. (2025, December 10). Methods and thresholds used in the compendium of molecular markers for 
+antimalarial drug resistance. https://www.who.int/publications/m/item/methods-and-thresholds-used-in-the-
+compendium-of-molecular-markers-for-antimalarial-drug-resistance
+Yeaman, S., & Whitlock, M. C. (2011). The genetic architecture of adaptation under migration–selection balance. Evolution, 
+65(7), 1897–1911. https://doi.org/10.1111/j.1558-5646.2011.01269.x
