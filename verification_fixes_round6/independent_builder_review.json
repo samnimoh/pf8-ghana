@@ -1,0 +1,333 @@
+{
+  "scope": "Independent scratch-package checks; no source tool, DOCX or scientific files modified.",
+  "builder_sha256": "bce7940669c3722ab835f8b2325c1772b91f2075e437aaea3f18219e674a0bc5",
+  "builder_hash_unchanged": true,
+  "other_agent_test_count": 24,
+  "other_agent_all_passed": true,
+  "scratch": "/private/tmp/pf8_independent_builder_y_k8o2p4",
+  "tests": [
+    {
+      "name": "normal",
+      "returncode": 0,
+      "expected_returncode": 0,
+      "stdout": "document.xml well-formed\nwrote /private/tmp/pf8_independent_builder_y_k8o2p4/normal/good.docx  1.19 MB\n",
+      "stderr": "",
+      "original_destination_preserved": false,
+      "destination_exists": true,
+      "source_template_exists": true,
+      "temporary_archive_exists": false,
+      "cwd": "/private/tmp/pf8_independent_builder_y_k8o2p4/normal",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "matches_expected_outcome": true,
+      "zip_crc_error": null
+    },
+    {
+      "name": "missing_transitive_part",
+      "returncode": 1,
+      "expected_returncode": 1,
+      "stdout": "document.xml well-formed\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 374, in <module>\n    validate_package(zf)\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 149, in validate_package\n    raise ValueError(f\"missing relationship target: {name} {rid} -> {target}\")\nValueError: missing relationship target: word/_rels/fontTable.xml.rels rIdIndependent -> fonts/absent.odttf\n",
+      "original_destination_preserved": true,
+      "destination_exists": true,
+      "source_template_exists": true,
+      "temporary_archive_exists": false,
+      "cwd": "/private/tmp/pf8_independent_builder_y_k8o2p4/missing_transitive_part",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "matches_expected_outcome": true
+    },
+    {
+      "name": "relative_parent_target",
+      "returncode": 0,
+      "expected_returncode": 0,
+      "stdout": "document.xml well-formed\nwrote /private/tmp/pf8_independent_builder_y_k8o2p4/relative_parent_target/good.docx  1.19 MB\n",
+      "stderr": "",
+      "original_destination_preserved": false,
+      "destination_exists": true,
+      "source_template_exists": true,
+      "temporary_archive_exists": false,
+      "cwd": "/private/tmp/pf8_independent_builder_y_k8o2p4/relative_parent_target",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "matches_expected_outcome": true,
+      "zip_crc_error": null
+    },
+    {
+      "name": "root_absolute_target",
+      "returncode": 0,
+      "expected_returncode": 0,
+      "stdout": "document.xml well-formed\nwrote /private/tmp/pf8_independent_builder_y_k8o2p4/root_absolute_target/good.docx  1.19 MB\n",
+      "stderr": "",
+      "original_destination_preserved": false,
+      "destination_exists": true,
+      "source_template_exists": true,
+      "temporary_archive_exists": false,
+      "cwd": "/private/tmp/pf8_independent_builder_y_k8o2p4/root_absolute_target",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "matches_expected_outcome": true,
+      "zip_crc_error": null
+    },
+    {
+      "name": "invalid_internal_absolute_uri",
+      "returncode": 1,
+      "expected_returncode": 1,
+      "stdout": "document.xml well-formed\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 374, in <module>\n    validate_package(zf)\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 145, in validate_package\n    raise ValueError(f\"invalid internal relationship target in {name}: {target}\")\nValueError: invalid internal relationship target in word/_rels/fontTable.xml.rels: https://example.invalid/f.odttf\n",
+      "original_destination_preserved": true,
+      "destination_exists": true,
+      "source_template_exists": true,
+      "temporary_archive_exists": false,
+      "cwd": "/private/tmp/pf8_independent_builder_y_k8o2p4/invalid_internal_absolute_uri",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "matches_expected_outcome": true
+    },
+    {
+      "name": "root_escape",
+      "returncode": 1,
+      "expected_returncode": 1,
+      "stdout": "document.xml well-formed\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 374, in <module>\n    validate_package(zf)\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 149, in validate_package\n    raise ValueError(f\"missing relationship target: {name} {rid} -> {target}\")\nValueError: missing relationship target: word/_rels/fontTable.xml.rels rIdIndependent -> ../../external.odttf\n",
+      "original_destination_preserved": true,
+      "destination_exists": true,
+      "source_template_exists": true,
+      "temporary_archive_exists": false,
+      "cwd": "/private/tmp/pf8_independent_builder_y_k8o2p4/root_escape",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "matches_expected_outcome": true
+    },
+    {
+      "name": "invalid_mode",
+      "returncode": 1,
+      "expected_returncode": 1,
+      "stdout": "document.xml well-formed\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 374, in <module>\n    validate_package(zf)\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 142, in validate_package\n    raise ValueError(f\"invalid relationship target mode in {name}: {mode}\")\nValueError: invalid relationship target mode in word/_rels/fontTable.xml.rels: invalid\n",
+      "original_destination_preserved": true,
+      "destination_exists": true,
+      "source_template_exists": true,
+      "temporary_archive_exists": false,
+      "cwd": "/private/tmp/pf8_independent_builder_y_k8o2p4/invalid_mode",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "matches_expected_outcome": true
+    },
+    {
+      "name": "encoded_root_separator",
+      "returncode": 0,
+      "expected_returncode": 1,
+      "stdout": "document.xml well-formed\nwrote /private/tmp/pf8_independent_builder_y_k8o2p4/encoded_root_separator/good.docx  1.19 MB\n",
+      "stderr": "",
+      "original_destination_preserved": false,
+      "destination_exists": true,
+      "source_template_exists": true,
+      "temporary_archive_exists": false,
+      "cwd": "/private/tmp/pf8_independent_builder_y_k8o2p4/encoded_root_separator",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "matches_expected_outcome": false,
+      "zip_crc_error": null
+    },
+    {
+      "name": "duplicate_office_document",
+      "returncode": 0,
+      "expected_returncode": 1,
+      "stdout": "document.xml well-formed\nwrote /private/tmp/pf8_independent_builder_y_k8o2p4/duplicate_office_document/good.docx  1.19 MB\n",
+      "stderr": "",
+      "original_destination_preserved": false,
+      "destination_exists": true,
+      "source_template_exists": true,
+      "temporary_archive_exists": false,
+      "cwd": "/private/tmp/pf8_independent_builder_y_k8o2p4/duplicate_office_document",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "matches_expected_outcome": false,
+      "zip_crc_error": null
+    },
+    {
+      "name": "source_output_workdir_alias",
+      "returncode": 1,
+      "expected_returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 334, in <module>\n    shutil.copytree(SRC, OUT)\n  File \"/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/shutil.py\", line 598, in copytree\n    with os.scandir(src) as itr:\n         ^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/private/tmp/pf8_independent_builder_y_k8o2p4/source_output_workdir_alias/article_pkg'\n",
+      "original_destination_preserved": true,
+      "destination_exists": true,
+      "source_template_exists": false,
+      "temporary_archive_exists": false,
+      "cwd": "/private/tmp/pf8_independent_builder_y_k8o2p4/source_output_workdir_alias",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "matches_expected_outcome": true
+    },
+    {
+      "name": "destination_inside_output_workdir",
+      "returncode": 1,
+      "expected_returncode": 1,
+      "stdout": "document.xml well-formed\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 374, in <module>\n    validate_package(zf)\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 107, in validate_package\n    raise ValueError(f\"package part has no content type: {name}\")\nValueError: package part has no content type: good.docx.tmp-build\n",
+      "original_destination_preserved": false,
+      "destination_exists": false,
+      "source_template_exists": true,
+      "temporary_archive_exists": false,
+      "cwd": "/private/tmp/pf8_independent_builder_y_k8o2p4/destination_inside_output_workdir",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "matches_expected_outcome": false
+    },
+    {
+      "name": "untyped_font_part",
+      "returncode": 1,
+      "expected_returncode": 1,
+      "stdout": "document.xml well-formed\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 374, in <module>\n    validate_package(zf)\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 107, in validate_package\n    raise ValueError(f\"package part has no content type: {name}\")\nValueError: package part has no content type: word/fonts/extra font.odttf\n",
+      "original_destination_preserved": true,
+      "destination_exists": true,
+      "source_template_exists": true,
+      "temporary_archive_exists": false,
+      "cwd": "/private/tmp/pf8_independent_builder_y_k8o2p4/untyped_font_part",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "matches_expected_outcome": true
+    },
+    {
+      "name": "invalid_png_payload",
+      "returncode": 0,
+      "expected_returncode": 1,
+      "stdout": "document.xml well-formed\nwrote /private/tmp/pf8_independent_builder_y_k8o2p4/invalid_png_payload/good.docx  0.43 MB\n",
+      "stderr": "",
+      "original_destination_preserved": false,
+      "destination_exists": true,
+      "source_template_exists": true,
+      "temporary_archive_exists": false,
+      "cwd": "/private/tmp/pf8_independent_builder_y_k8o2p4/invalid_png_payload",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "matches_expected_outcome": false,
+      "zip_crc_error": null
+    },
+    {
+      "name": "interrupted_write",
+      "returncode": -2,
+      "expected_returncode": -2,
+      "stdout": "document.xml well-formed\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/private/tmp/pf8_independent_builder_y_k8o2p4/independent_builder_faults.py\", line 20, in <module>\n    runpy.run_path(sys.argv[2],run_name='__main__')\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 368, in <module>\n    zf.write(full, os.path.relpath(full, OUT))\n  File \"/private/tmp/pf8_independent_builder_y_k8o2p4/independent_builder_faults.py\", line 8, in failing\n    if count[0]==4: raise KeyboardInterrupt('independent interrupted archive write')\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyboardInterrupt: independent interrupted archive write\n",
+      "original_destination_preserved": true,
+      "destination_exists": true,
+      "source_template_exists": true,
+      "temporary_archive_exists": false,
+      "cwd": "/private/tmp/pf8_independent_builder_y_k8o2p4/interrupted_write",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/private/tmp/pf8_independent_builder_y_k8o2p4/independent_builder_faults.py",
+        "keyboard_interrupt_write",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "matches_expected_outcome": true
+    },
+    {
+      "name": "archive_close_failure",
+      "returncode": 1,
+      "expected_returncode": 1,
+      "stdout": "document.xml well-formed\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/private/tmp/pf8_independent_builder_y_k8o2p4/independent_builder_faults.py\", line 20, in <module>\n    runpy.run_path(sys.argv[2],run_name='__main__')\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 364, in <module>\n    with zipfile.ZipFile(_tmp, \"w\", zipfile.ZIP_DEFLATED) as zf:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/zipfile/__init__.py\", line 1414, in __exit__\n    self.close()\n  File \"/private/tmp/pf8_independent_builder_y_k8o2p4/independent_builder_faults.py\", line 17, in failing\n    raise OSError('independent archive close failure')\nOSError: independent archive close failure\n",
+      "original_destination_preserved": true,
+      "destination_exists": true,
+      "source_template_exists": true,
+      "temporary_archive_exists": false,
+      "cwd": "/private/tmp/pf8_independent_builder_y_k8o2p4/archive_close_failure",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/private/tmp/pf8_independent_builder_y_k8o2p4/independent_builder_faults.py",
+        "close_failure",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "matches_expected_outcome": true
+    }
+  ],
+  "unmet_adversarial_expectations": [
+    "encoded_root_separator",
+    "duplicate_office_document",
+    "destination_inside_output_workdir",
+    "invalid_png_payload"
+  ],
+  "findings": [
+    {
+      "priority": "P1",
+      "name": "source_output_workdir_alias",
+      "status": "confirmed, pre-existing",
+      "reason": "Source template at cwd/article_pkg is deleted before copytree; reproduced source deletion in scratch."
+    },
+    {
+      "priority": "P1",
+      "name": "destination_inside_output_workdir",
+      "status": "confirmed, pre-existing",
+      "reason": "Existing destination under cwd/article_pkg is deleted before archive creation; a subsequent validation error leaves it absent."
+    },
+    {
+      "priority": "P2",
+      "name": "duplicate_office_document",
+      "status": "confirmed validation gap",
+      "reason": "Two root officeDocument relationships are accepted, including a first relationship to styles.xml.",
+      "source": "https://learn.microsoft.com/en-us/archive/msdn-magazine/2007/february/office-space-building-office-open-xml-files"
+    },
+    {
+      "name": "encoded_root_separator",
+      "status": "observed URI normalization edge; consumer behavior not tested",
+      "reason": "Percent-encoded path separator is decoded into the normal document path and accepted."
+    },
+    {
+      "name": "invalid_png_payload",
+      "status": "scope gap",
+      "reason": "Existence, nonzero size and image/png type do not establish valid PNG payload. A nonempty arbitrary payload is accepted; image decoding was not part of the reviewed original missing-asset requirement."
+    }
+  ],
+  "source_template_deletion_reproduced": true,
+  "limitations": [
+    "This is graph and packaging validation, not OOXML schema or full image/font-content validation.",
+    "No consumer rendering or scientific execution was performed.",
+    "The findings refer to the recorded builder SHA before follow-up fixes; root and owner have been notified."
+  ]
+}

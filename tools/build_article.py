@@ -1,4 +1,7 @@
-import re, os, sys, shutil, zipfile, html
+import re, os, sys, shutil, zipfile, html, posixpath
+from urllib.parse import unquote, urlsplit
+from xml.etree import ElementTree as ET
+from pathlib import Path
 
 SRC  = os.environ.get("ARTICLE_TEMPLATE", "supp")   # unzipped docx supplying styles/theme/fonts/media
 OUT  = "article_pkg"
@@ -6,6 +9,54 @@ MD   = os.environ["ARTICLE_MD"]
 DOCX = os.environ["ARTICLE_DOCX"]
 REFS = os.environ.get("ARTICLE_REFS",
     os.path.join(os.path.dirname(os.path.abspath(__file__)), "references_apa.txt"))
+_tmp = DOCX + ".tmp-build"
+
+
+def inside(path, parent):
+    return path == parent or parent in path.parents
+
+
+def aliases(first, second):
+    return first.resolve() == second.resolve() or (
+        first.exists() and second.exists() and os.path.samefile(first, second))
+
+
+def aliases_file_in(path, directory):
+    if not path.is_file() or not directory.is_dir():
+        return False
+    inode = os.stat(path)
+    for folder, _, filenames in os.walk(directory):
+        for filename in filenames:
+            candidate = os.stat(os.path.join(folder, filename))
+            if (inode.st_dev, inode.st_ino) == (candidate.st_dev, candidate.st_ino):
+                return True
+    return False
+
+
+# The work directory is disposable. Check both lexical and resolved paths before
+# its removal: a symlink can otherwise hide a source/destination within it.
+_work_path = Path(os.path.abspath(OUT))
+_work_real = _work_path.resolve()
+_source_real = Path(SRC).resolve()
+if inside(_source_real, _work_real) or inside(_work_real, _source_real):
+    sys.exit("unsafe build paths: ARTICLE_TEMPLATE overlaps the article_pkg work package")
+if _work_path.is_symlink():
+    sys.exit("unsafe build paths: article_pkg work package is a symlink")
+for _name, _value in (("ARTICLE_DOCX", DOCX), ("temporary archive", _tmp),
+                       ("ARTICLE_MD", MD), ("ARTICLE_REFS", REFS)):
+    _path = Path(os.path.abspath(_value))
+    if (inside(_path, _work_path) or inside(_path.resolve(), _work_real)
+            or aliases_file_in(_path, _work_real)):
+        sys.exit(f"unsafe build paths: {_name} is inside or aliases the article_pkg work package")
+for _name, _value in (("ARTICLE_DOCX", DOCX), ("temporary archive", _tmp)):
+    _path = Path(_value)
+    if inside(_path.resolve(), _source_real) or aliases_file_in(_path, _source_real):
+        sys.exit(f"unsafe build paths: {_name} is inside or aliases the ARTICLE_TEMPLATE")
+    for _input_name, _input_value in (("ARTICLE_MD", MD), ("ARTICLE_REFS", REFS)):
+        if aliases(_path, Path(_input_value)):
+            sys.exit(f"unsafe build paths: {_name} aliases {_input_name}")
+if aliases(Path(_tmp), Path(DOCX)):
+    sys.exit("unsafe build paths: temporary archive aliases ARTICLE_DOCX")
 
 for _p, _what in ((SRC, "ARTICLE_TEMPLATE (an unzipped .docx supplying styles/theme/fonts/media)"),
                   (MD,  "ARTICLE_MD"), (REFS, "ARTICLE_REFS / tools/references_apa.txt")):
@@ -17,6 +68,151 @@ IMG = {  # our figure number -> (source media file, width_emu, height_emu)
  2: ("218857879d6287b87460540cea2d8ec053df7685.png", 5943600, 2250440),
  3: ("c8eab09bbe813dc6fe1001e38fae01b5b7482cd0.png", 5943600, 2600000),
 }
+REL_NS = "http://schemas.openxmlformats.org/package/2006/relationships"
+DOC_REL_NS = "http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+CT_NS = "http://schemas.openxmlformats.org/package/2006/content-types"
+DOCUMENT_RELS = [
+    ("rId1", "styles", "styles.xml"),
+    ("rId5", "settings", "settings.xml"),
+    ("rId7", "theme", "theme/theme1.xml"),
+    ("rId18", "fontTable", "fontTable.xml"),
+    ("rId8", "image", "media/" + IMG[1][0]),
+    ("rId10", "image", "media/" + IMG[2][0]),
+    ("rId12", "image", "media/" + IMG[3][0]),
+]
+REQUIRED_SOURCE_PARTS = ["[Content_Types].xml", "_rels/.rels"] + [
+    "word/" + target for _, _, target in DOCUMENT_RELS
+]
+REQUIRED_CONTENT_TYPES = {
+    "word/document.xml": "application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml",
+    "word/styles.xml": "application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml",
+    "word/settings.xml": "application/vnd.openxmlformats-officedocument.wordprocessingml.settings+xml",
+    "word/theme/theme1.xml": "application/vnd.openxmlformats-officedocument.theme+xml",
+    "word/fontTable.xml": "application/vnd.openxmlformats-officedocument.wordprocessingml.fontTable+xml",
+    **{"word/media/" + image[0]: "image/png" for image in IMG.values()},
+}
+
+# Check named assets before changing the working package. The input directory's
+# existence alone does not establish that it can supply the article's parts.
+for _part in REQUIRED_SOURCE_PARTS:
+    _path = os.path.join(SRC, _part)
+    if not os.path.isfile(_path) or os.path.getsize(_path) == 0:
+        sys.exit(f"missing or empty ARTICLE_TEMPLATE part: {_part} -> {_path}")
+    if _part.endswith((".xml", ".rels")):
+        try:
+            ET.parse(_path)
+        except ET.ParseError as exc:
+            sys.exit(f"invalid ARTICLE_TEMPLATE XML: {_part}: {exc}")
+
+
+def validate_package(archive):
+    """Check the final OPC graph, XML and type declarations before replacement.
+
+    CRC checks cannot detect a relationship pointing to a missing package part.
+    This checks all retained relationships, including font and metadata parts,
+    and also verifies relationship IDs referenced by the XML that owns them.
+    """
+    entries = [n for n in archive.namelist() if not n.endswith("/")]
+    names = set(entries)
+    if len(names) != len(entries):
+        raise ValueError("article package contains duplicate part names")
+    required = set(REQUIRED_SOURCE_PARTS) | {"word/document.xml", "word/_rels/document.xml.rels"}
+    absent = sorted(required - names)
+    if absent:
+        raise ValueError("article package is missing required parts: " + ", ".join(absent))
+    trees = {}
+    for name in names:
+        if name.endswith((".xml", ".rels")):
+            try:
+                trees[name] = ET.fromstring(archive.read(name))
+            except ET.ParseError as exc:
+                raise ValueError(f"invalid package XML: {name}: {exc}") from exc
+
+    ct = trees["[Content_Types].xml"]
+    if ct.tag != "{" + CT_NS + "}Types":
+        raise ValueError("invalid content-types root")
+    defaults, overrides = {}, {}
+    for item in ct:
+        mime = item.get("ContentType", "")
+        if not mime:
+            raise ValueError("empty package content type")
+        if item.tag == "{" + CT_NS + "}Default":
+            extension = item.get("Extension", "").lower()
+            if not extension or extension in defaults:
+                raise ValueError("missing or duplicate content-type extension")
+            defaults[extension] = mime
+        elif item.tag == "{" + CT_NS + "}Override":
+            part = unquote(item.get("PartName", ""))
+            if not part.startswith("/") or part[1:] not in names:
+                raise ValueError(f"content-type override refers to absent part: {part}")
+            if part[1:] in overrides:
+                raise ValueError(f"duplicate content-type override: {part}")
+            overrides[part[1:]] = mime
+        else:
+            raise ValueError("invalid content-type declaration")
+    for name in names - {"[Content_Types].xml"}:
+        mime = overrides.get(name, defaults.get(name.rsplit(".", 1)[-1].lower()))
+        if not mime:
+            raise ValueError(f"package part has no content type: {name}")
+        expected = REQUIRED_CONTENT_TYPES.get(name)
+        if name.endswith(".rels"):
+            expected = "application/vnd.openxmlformats-package.relationships+xml"
+        if expected and mime != expected:
+            raise ValueError(f"incorrect content type for {name}: {mime}")
+
+    relationship_ids = {}
+    package_document = False
+    office_documents = 0
+    for name in sorted(n for n in names if n.endswith(".rels")):
+        if name == "_rels/.rels":
+            owner, base = None, ""
+        else:
+            parent, filename = posixpath.split(name)
+            if posixpath.basename(parent) != "_rels":
+                raise ValueError(f"invalid relationship part path: {name}")
+            base = posixpath.dirname(parent)
+            owner = posixpath.join(base, filename[:-5])
+            if owner not in names:
+                raise ValueError(f"orphan relationship part: {name} (owner {owner} is absent)")
+        tree = trees[name]
+        if tree.tag != "{" + REL_NS + "}Relationships":
+            raise ValueError(f"invalid relationships root: {name}")
+        ids = set()
+        for rel in tree:
+            rid, kind, target = (rel.get(key, "") for key in ("Id", "Type", "Target"))
+            if rel.tag != "{" + REL_NS + "}Relationship" or not rid or not kind or not target:
+                raise ValueError(f"invalid relationship in {name}")
+            if rid in ids:
+                raise ValueError(f"duplicate relationship ID in {name}: {rid}")
+            ids.add(rid)
+            mode = rel.get("TargetMode", "Internal")
+            if owner is None and kind == DOC_REL_NS + "/officeDocument":
+                office_documents += 1
+            if mode == "External":
+                continue
+            if mode != "Internal":
+                raise ValueError(f"invalid relationship target mode in {name}: {mode}")
+            uri = urlsplit(target)
+            if uri.scheme or uri.netloc or uri.query:
+                raise ValueError(f"invalid internal relationship target in {name}: {target}")
+            path = unquote(uri.path)
+            resolved = posixpath.normpath(path.lstrip("/") if path.startswith("/") else posixpath.join(base, path))
+            if resolved.startswith("../") or resolved not in names:
+                raise ValueError(f"missing relationship target: {name} {rid} -> {target}")
+            if owner is None and kind == DOC_REL_NS + "/officeDocument" and resolved == "word/document.xml":
+                package_document = True
+        relationship_ids[owner] = ids
+    if office_documents != 1 or not package_document:
+        raise ValueError("package root does not reference word/document.xml as its exactly one office document")
+    for name, tree in trees.items():
+        if name.endswith(".rels") or name == "[Content_Types].xml":
+            continue
+        for element in tree.iter():
+            for key, value in element.attrib.items():
+                if key in {"{" + DOC_REL_NS + "}" + suffix for suffix in ("id", "embed", "link")}:
+                    if value not in relationship_ids.get(name, set()):
+                        raise ValueError(f"unresolved relationship ID in {name}: {value}")
+
 FIGCAP = {
  1: "Sampling locations on the Ghana agro-ecological zone layer. Each point is one administrative-region centroid; colour gives the agro-ecological zone to which isolates from that region were assigned.",
  2: "UMAP, t-SNE and PCoA of the 1,900-isolate genotype-distance submatrix, coloured by agro-ecological zone. No zone forms a distinct cluster under any of the three methods; all silhouette coefficients are negative.",
@@ -192,30 +388,29 @@ for f in os.listdir(f"{OUT}/word/media"):
     if f not in [v[0] for v in IMG.values()]: os.remove(f"{OUT}/word/media/{f}")
 open(f"{OUT}/word/document.xml","w",encoding="utf-8").write(DOC)
 rels=('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n'
- '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">'
- '<Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/>'
- '<Relationship Id="rId5" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/settings" Target="settings.xml"/>'
- '<Relationship Id="rId7" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme" Target="theme/theme1.xml"/>'
- '<Relationship Id="rId18" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/fontTable" Target="fontTable.xml"/>'
- f'<Relationship Id="rId8" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image" Target="media/{IMG[1][0]}"/>'
- f'<Relationship Id="rId10" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image" Target="media/{IMG[2][0]}"/>'
- f'<Relationship Id="rId12" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image" Target="media/{IMG[3][0]}"/>'
- '</Relationships>')
+      f'<Relationships xmlns="{REL_NS}">' + ''.join(
+          f'<Relationship Id="{rid}" Type="{DOC_REL_NS}/{kind}" Target="{target}"/>'
+          for rid, kind, target in DOCUMENT_RELS) + '</Relationships>')
 open(f"{OUT}/word/_rels/document.xml.rels","w",encoding="utf-8").write(rels)
 for junk in ("footnotes.xml","endnotes.xml","numbering.xml","footer1.xml"):
     p=f"{OUT}/word/{junk}"
     if os.path.exists(p): os.remove(p)
-ct=open(f"{OUT}/[Content_Types].xml",encoding="utf-8").read()
-for junk in ("footnotes","endnotes","numbering","footer1"):
-    ct=re.sub(rf'<Override PartName="/word/{junk}\.xml"[^/]*/>','',ct)
-open(f"{OUT}/[Content_Types].xml","w",encoding="utf-8").write(ct)
+    p=f"{OUT}/word/_rels/{junk}.rels"
+    if os.path.exists(p): os.remove(p)
+ct_path = f"{OUT}/[Content_Types].xml"
+ct_tree = ET.parse(ct_path)
+discarded = {"/word/" + part for part in ("footnotes.xml", "endnotes.xml", "numbering.xml", "footer1.xml")}
+for declaration in list(ct_tree.getroot()):
+    if declaration.tag == "{" + CT_NS + "}Override" and declaration.get("PartName") in discarded:
+        ct_tree.getroot().remove(declaration)
+ET.register_namespace("", CT_NS)
+ct_tree.write(ct_path, encoding="utf-8", xml_declaration=True)
 
 import xml.dom.minidom as mdom
 mdom.parse(f"{OUT}/word/document.xml")
 print("document.xml well-formed")
 # Build to a sibling temp file and swap it in only once it is complete, so a
 # failure part-way through can never destroy an existing deliverable.
-_tmp = DOCX + ".tmp-build"
 try:
     with zipfile.ZipFile(_tmp, "w", zipfile.ZIP_DEFLATED) as zf:
         for root, _, files in os.walk(OUT):
@@ -224,8 +419,10 @@ try:
                 zf.write(full, os.path.relpath(full, OUT))
     with open(_tmp, "rb") as fh:
         os.fsync(fh.fileno())
-    if zipfile.ZipFile(_tmp).testzip() is not None:
-        raise RuntimeError("archive failed its own integrity check")
+    with zipfile.ZipFile(_tmp) as zf:
+        if zf.testzip() is not None:
+            raise RuntimeError("archive failed its own integrity check")
+        validate_package(zf)
     os.replace(_tmp, DOCX)                      # atomic on the same filesystem
 except BaseException:
     if os.path.exists(_tmp): os.remove(_tmp)    # leave any existing DOCX untouched

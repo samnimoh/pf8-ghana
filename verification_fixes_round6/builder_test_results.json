@@ -1,0 +1,3731 @@
+{
+  "scope": "Scratch document packages only; no scientific code executed or deliverable written.",
+  "python": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+  "scratch_directory": "/private/tmp/pf8_builder_fixes_mdt0v6af",
+  "builder_sha256_before": "384d6c65172c5bd0714329e76a1404e3eb6fdb099d38931a5b416611fad5997c",
+  "builder_sha256_after": "384d6c65172c5bd0714329e76a1404e3eb6fdb099d38931a5b416611fad5997c",
+  "template_docx_sha256_at_start": "e954fe87a94a40fd954f3eb5b74638d6892ce79fcd23a3be364c169bb0fd948d",
+  "article_docx_sha256_at_start": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+  "test_driver_sha256": "678548bc28b2354ded2401ae5cb260c15793de4bc5331c0b9714107073154b77",
+  "results": [
+    {
+      "name": "normal_from_unrelated_directory",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/normal_from_unrelated_directory",
+      "returncode": 0,
+      "stdout": "document.xml well-formed\nwrote /private/tmp/pf8_builder_fixes_mdt0v6af/normal_from_unrelated_directory/article.docx  1.19 MB\n",
+      "stderr": "",
+      "destination_preserved": false,
+      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "after_sha256": "83a433e2076617b7b4e1913fb2a279d5cd9ec2ea8924df97eb969929b093a835",
+      "temporary_archive_exists": false,
+      "zip_crc_error": null,
+      "exact_current_document_xml_match": true,
+      "removed_part_relationships_absent": true,
+      "passed": true
+    },
+    {
+      "name": "missing_figure_1",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/missing_figure_1",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "missing or empty ARTICLE_TEMPLATE part: word/media/93b6764f7192ce47a8c3257fe6d80a68d84833ff.png -> /private/tmp/pf8_builder_fixes_mdt0v6af/missing_figure_1/template/word/media/93b6764f7192ce47a8c3257fe6d80a68d84833ff.png\n",
+      "destination_preserved": true,
+      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "temporary_archive_exists": false,
+      "expected_diagnostic": "word/media/93b6764f7192ce47a8c3257fe6d80a68d84833ff.png",
+      "passed": true
+    },
+    {
+      "name": "missing_figure_2",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/missing_figure_2",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "missing or empty ARTICLE_TEMPLATE part: word/media/218857879d6287b87460540cea2d8ec053df7685.png -> /private/tmp/pf8_builder_fixes_mdt0v6af/missing_figure_2/template/word/media/218857879d6287b87460540cea2d8ec053df7685.png\n",
+      "destination_preserved": true,
+      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "temporary_archive_exists": false,
+      "expected_diagnostic": "word/media/218857879d6287b87460540cea2d8ec053df7685.png",
+      "passed": true
+    },
+    {
+      "name": "missing_figure_3",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/missing_figure_3",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "missing or empty ARTICLE_TEMPLATE part: word/media/c8eab09bbe813dc6fe1001e38fae01b5b7482cd0.png -> /private/tmp/pf8_builder_fixes_mdt0v6af/missing_figure_3/template/word/media/c8eab09bbe813dc6fe1001e38fae01b5b7482cd0.png\n",
+      "destination_preserved": true,
+      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "temporary_archive_exists": false,
+      "expected_diagnostic": "word/media/c8eab09bbe813dc6fe1001e38fae01b5b7482cd0.png",
+      "passed": true
+    },
+    {
+      "name": "missing_word_styles.xml",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/missing_word_styles.xml",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "missing or empty ARTICLE_TEMPLATE part: word/styles.xml -> /private/tmp/pf8_builder_fixes_mdt0v6af/missing_word_styles.xml/template/word/styles.xml\n",
+      "destination_preserved": true,
+      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "temporary_archive_exists": false,
+      "expected_diagnostic": "word/styles.xml",
+      "passed": true
+    },
+    {
+      "name": "missing_word_settings.xml",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/missing_word_settings.xml",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "missing or empty ARTICLE_TEMPLATE part: word/settings.xml -> /private/tmp/pf8_builder_fixes_mdt0v6af/missing_word_settings.xml/template/word/settings.xml\n",
+      "destination_preserved": true,
+      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "temporary_archive_exists": false,
+      "expected_diagnostic": "word/settings.xml",
+      "passed": true
+    },
+    {
+      "name": "missing_word_theme_theme1.xml",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/missing_word_theme_theme1.xml",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "missing or empty ARTICLE_TEMPLATE part: word/theme/theme1.xml -> /private/tmp/pf8_builder_fixes_mdt0v6af/missing_word_theme_theme1.xml/template/word/theme/theme1.xml\n",
+      "destination_preserved": true,
+      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "temporary_archive_exists": false,
+      "expected_diagnostic": "word/theme/theme1.xml",
+      "passed": true
+    },
+    {
+      "name": "missing_word_fontTable.xml",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/missing_word_fontTable.xml",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "missing or empty ARTICLE_TEMPLATE part: word/fontTable.xml -> /private/tmp/pf8_builder_fixes_mdt0v6af/missing_word_fontTable.xml/template/word/fontTable.xml\n",
+      "destination_preserved": true,
+      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "temporary_archive_exists": false,
+      "expected_diagnostic": "word/fontTable.xml",
+      "passed": true
+    },
+    {
+      "name": "missing_Content_Types.xml",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/missing_Content_Types.xml",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "missing or empty ARTICLE_TEMPLATE part: [Content_Types].xml -> /private/tmp/pf8_builder_fixes_mdt0v6af/missing_Content_Types.xml/template/[Content_Types].xml\n",
+      "destination_preserved": true,
+      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "temporary_archive_exists": false,
+      "expected_diagnostic": "[Content_Types].xml",
+      "passed": true
+    },
+    {
+      "name": "missing__rels_.rels",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/missing__rels_.rels",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "missing or empty ARTICLE_TEMPLATE part: _rels/.rels -> /private/tmp/pf8_builder_fixes_mdt0v6af/missing__rels_.rels/template/_rels/.rels\n",
+      "destination_preserved": true,
+      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "temporary_archive_exists": false,
+      "expected_diagnostic": "_rels/.rels",
+      "passed": true
+    },
+    {
+      "name": "empty_figure",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/empty_figure",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "missing or empty ARTICLE_TEMPLATE part: word/media/218857879d6287b87460540cea2d8ec053df7685.png -> /private/tmp/pf8_builder_fixes_mdt0v6af/empty_figure/template/word/media/218857879d6287b87460540cea2d8ec053df7685.png\n",
+      "destination_preserved": true,
+      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "temporary_archive_exists": false,
+      "expected_diagnostic": "missing or empty ARTICLE_TEMPLATE part",
+      "passed": true
+    },
+    {
+      "name": "malformed_styles",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/malformed_styles",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "invalid ARTICLE_TEMPLATE XML: word/styles.xml: no element found: line 1, column 8\n",
+      "destination_preserved": true,
+      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "temporary_archive_exists": false,
+      "expected_diagnostic": "invalid ARTICLE_TEMPLATE XML: word/styles.xml",
+      "passed": true
+    },
+    {
+      "name": "missing_root_metadata_dependency",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/missing_root_metadata_dependency",
+      "returncode": 1,
+      "stdout": "document.xml well-formed\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 425, in <module>\n    validate_package(zf)\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 147, in validate_package\n    raise ValueError(f\"content-type override refers to absent part: {part}\")\nValueError: content-type override refers to absent part: /docProps/core.xml\n",
+      "destination_preserved": true,
+      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "temporary_archive_exists": false,
+      "expected_diagnostic": "absent part: /docProps/core.xml",
+      "passed": true
+    },
+    {
+      "name": "incorrect_style_content_type",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/incorrect_style_content_type",
+      "returncode": 1,
+      "stdout": "document.xml well-formed\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 425, in <module>\n    validate_package(zf)\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 161, in validate_package\n    raise ValueError(f\"incorrect content type for {name}: {mime}\")\nValueError: incorrect content type for word/styles.xml: application/xml\n",
+      "destination_preserved": true,
+      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "temporary_archive_exists": false,
+      "expected_diagnostic": "incorrect content type for word/styles.xml",
+      "passed": true
+    },
+    {
+      "name": "missing_transitive_font_dependency",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/missing_transitive_font_dependency",
+      "returncode": 1,
+      "stdout": "document.xml well-formed\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 425, in <module>\n    validate_package(zf)\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 201, in validate_package\n    raise ValueError(f\"missing relationship target: {name} {rid} -> {target}\")\nValueError: missing relationship target: word/_rels/fontTable.xml.rels rIdExtra -> fonts/missing.odttf\n",
+      "destination_preserved": true,
+      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "temporary_archive_exists": false,
+      "expected_diagnostic": "missing relationship target: word/_rels/fontTable.xml.rels rIdExtra",
+      "passed": true
+    },
+    {
+      "name": "orphan_retained_relationship",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/orphan_retained_relationship",
+      "returncode": 1,
+      "stdout": "document.xml well-formed\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 425, in <module>\n    validate_package(zf)\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 176, in validate_package\n    raise ValueError(f\"orphan relationship part: {name} (owner {owner} is absent)\")\nValueError: orphan relationship part: word/_rels/absent.xml.rels (owner word/absent.xml is absent)\n",
+      "destination_preserved": true,
+      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "temporary_archive_exists": false,
+      "expected_diagnostic": "orphan relationship part",
+      "passed": true
+    },
+    {
+      "name": "unresolved_relationship_id",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/unresolved_relationship_id",
+      "returncode": 1,
+      "stdout": "document.xml well-formed\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 425, in <module>\n    validate_package(zf)\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 214, in validate_package\n    raise ValueError(f\"unresolved relationship ID in {name}: {value}\")\nValueError: unresolved relationship ID in word/fontTable.xml: rIdMissing\n",
+      "destination_preserved": true,
+      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "temporary_archive_exists": false,
+      "expected_diagnostic": "unresolved relationship ID in word/fontTable.xml: rIdMissing",
+      "passed": true
+    },
+    {
+      "name": "incorrect_root_document",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/incorrect_root_document",
+      "returncode": 1,
+      "stdout": "document.xml well-formed\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 425, in <module>\n    validate_package(zf)\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 206, in validate_package\n    raise ValueError(\"package root does not reference word/document.xml as its exactly one office document\")\nValueError: package root does not reference word/document.xml as its exactly one office document\n",
+      "destination_preserved": true,
+      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "temporary_archive_exists": false,
+      "expected_diagnostic": "package root does not reference word/document.xml",
+      "passed": true
+    },
+    {
+      "name": "duplicate_root_office_document",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/duplicate_root_office_document",
+      "returncode": 1,
+      "stdout": "document.xml well-formed\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 425, in <module>\n    validate_package(zf)\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 206, in validate_package\n    raise ValueError(\"package root does not reference word/document.xml as its exactly one office document\")\nValueError: package root does not reference word/document.xml as its exactly one office document\n",
+      "destination_preserved": true,
+      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "temporary_archive_exists": false,
+      "expected_diagnostic": "exactly one office document",
+      "passed": true
+    },
+    {
+      "name": "external_relationship_not_local_part",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/external_relationship_not_local_part",
+      "returncode": 0,
+      "stdout": "document.xml well-formed\nwrote /private/tmp/pf8_builder_fixes_mdt0v6af/external_relationship_not_local_part/article.docx  1.19 MB\n",
+      "stderr": "",
+      "destination_preserved": false,
+      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "after_sha256": "f51f1db75c4f644c3878eb56c4785f32c67f7c6390d22a4a49b031b02d54fd73",
+      "temporary_archive_exists": false,
+      "zip_crc_error": null,
+      "exact_current_document_xml_match": true,
+      "removed_part_relationships_absent": true,
+      "passed": true
+    },
+    {
+      "name": "failure_archive_write",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/private/tmp/pf8_builder_fixes_mdt0v6af/builder_fault_driver.py",
+        "archive_write",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/failure_archive_write",
+      "returncode": 1,
+      "stdout": "document.xml well-formed\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/private/tmp/pf8_builder_fixes_mdt0v6af/builder_fault_driver.py\", line 25, in <module>\n    runpy.run_path(sys.argv[2],run_name=\"__main__\")\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 419, in <module>\n    zf.write(full, os.path.relpath(full, OUT))\n  File \"/private/tmp/pf8_builder_fixes_mdt0v6af/builder_fault_driver.py\", line 8, in fail\n    if n[0]==5: raise OSError(\"synthetic fifth archive write failure\")\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nOSError: synthetic fifth archive write failure\n",
+      "destination_preserved": true,
+      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "temporary_archive_exists": false,
+      "expected_diagnostic": "synthetic fifth archive write failure",
+      "passed": true
+    },
+    {
+      "name": "failure_integrity_check",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/private/tmp/pf8_builder_fixes_mdt0v6af/builder_fault_driver.py",
+        "integrity_check",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/failure_integrity_check",
+      "returncode": 1,
+      "stdout": "document.xml well-formed\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/private/tmp/pf8_builder_fixes_mdt0v6af/builder_fault_driver.py\", line 25, in <module>\n    runpy.run_path(sys.argv[2],run_name=\"__main__\")\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 424, in <module>\n    raise RuntimeError(\"archive failed its own integrity check\")\nRuntimeError: archive failed its own integrity check\n",
+      "destination_preserved": true,
+      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "temporary_archive_exists": false,
+      "expected_diagnostic": "archive failed its own integrity check",
+      "passed": true
+    },
+    {
+      "name": "failure_fsync",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/private/tmp/pf8_builder_fixes_mdt0v6af/builder_fault_driver.py",
+        "fsync",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/failure_fsync",
+      "returncode": 1,
+      "stdout": "document.xml well-formed\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/private/tmp/pf8_builder_fixes_mdt0v6af/builder_fault_driver.py\", line 25, in <module>\n    runpy.run_path(sys.argv[2],run_name=\"__main__\")\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 421, in <module>\n    os.fsync(fh.fileno())\n  File \"/private/tmp/pf8_builder_fixes_mdt0v6af/builder_fault_driver.py\", line 14, in fail\n    def fail(*a,**kw): raise OSError(\"synthetic fsync failure\")\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nOSError: synthetic fsync failure\n",
+      "destination_preserved": true,
+      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "temporary_archive_exists": false,
+      "expected_diagnostic": "synthetic fsync failure",
+      "passed": true
+    },
+    {
+      "name": "failure_replace",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/private/tmp/pf8_builder_fixes_mdt0v6af/builder_fault_driver.py",
+        "replace",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/failure_replace",
+      "returncode": 1,
+      "stdout": "document.xml well-formed\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/private/tmp/pf8_builder_fixes_mdt0v6af/builder_fault_driver.py\", line 25, in <module>\n    runpy.run_path(sys.argv[2],run_name=\"__main__\")\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 426, in <module>\n    os.replace(_tmp, DOCX)                      # atomic on the same filesystem\n    ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/tmp/pf8_builder_fixes_mdt0v6af/builder_fault_driver.py\", line 17, in fail\n    def fail(*a,**kw): raise OSError(\"synthetic atomic replacement failure\")\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nOSError: synthetic atomic replacement failure\n",
+      "destination_preserved": true,
+      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "temporary_archive_exists": false,
+      "expected_diagnostic": "synthetic atomic replacement failure",
+      "passed": true
+    },
+    {
+      "name": "failure_semantic_missing_image",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/private/tmp/pf8_builder_fixes_mdt0v6af/builder_fault_driver.py",
+        "semantic_missing_image",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/failure_semantic_missing_image",
+      "returncode": 1,
+      "stdout": "document.xml well-formed\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/private/tmp/pf8_builder_fixes_mdt0v6af/builder_fault_driver.py\", line 25, in <module>\n    runpy.run_path(sys.argv[2],run_name=\"__main__\")\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 425, in <module>\n    validate_package(zf)\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 122, in validate_package\n    raise ValueError(\"article package is missing required parts: \" + \", \".join(absent))\nValueError: article package is missing required parts: word/media/218857879d6287b87460540cea2d8ec053df7685.png\n",
+      "destination_preserved": true,
+      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "temporary_archive_exists": false,
+      "expected_diagnostic": "article package is missing required parts",
+      "passed": true
+    },
+    {
+      "name": "collision_source_equals_work",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/collision_source_equals_work",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "unsafe build paths: ARTICLE_TEMPLATE overlaps the article_pkg work package\n",
+      "expected_diagnostic": "unsafe build paths",
+      "destination_preserved": true,
+      "template_and_all_fixture_bytes_preserved": true,
+      "fixture_identities_before": {
+        "article.docx": {
+          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+        },
+        "article_pkg": {
+          "directory": true
+        },
+        "article_pkg/[Content_Types].xml": {
+          "sha256": "441ca5a936418c64142008e642d20155f7a857c429fc909737284cf224460834"
+        },
+        "article_pkg/_rels": {
+          "directory": true
+        },
+        "article_pkg/_rels/.rels": {
+          "sha256": "641d22a23aa9eb550103a7a01471eaeda5e84c69413e6e03e7fd290b4811a756"
+        },
+        "article_pkg/docProps": {
+          "directory": true
+        },
+        "article_pkg/docProps/app.xml": {
+          "sha256": "579eba9a8d602575736c3880cf5b529aabbadee0e8cc0e4df8573db0ceadbd4b"
+        },
+        "article_pkg/docProps/core.xml": {
+          "sha256": "cc0115a2176f8142574618b84d2eb8f233c1f02351f7fc1543a9156dae2b271b"
+        },
+        "article_pkg/docProps/custom.xml": {
+          "sha256": "8ec73cc7ce297e42cc652a1d1884d4ffb18ffa0ba7a6502a36f8da90d1be61a1"
+        },
+        "article_pkg/word": {
+          "directory": true
+        },
+        "article_pkg/word/_rels": {
+          "directory": true
+        },
+        "article_pkg/word/_rels/document.xml.rels": {
+          "sha256": "d1c0d14a8d339e5e6e19c4ecb5196ec574e62bbd6208bbf96775d3aef26f3984"
+        },
+        "article_pkg/word/_rels/endnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "article_pkg/word/_rels/fontTable.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "article_pkg/word/_rels/footer1.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "article_pkg/word/_rels/footnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "article_pkg/word/document.xml": {
+          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+        },
+        "article_pkg/word/endnotes.xml": {
+          "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
+        },
+        "article_pkg/word/fontTable.xml": {
+          "sha256": "a746dbb577ec5d68983d659707c0750ca89d40b9d3316e31af331d5e1c736bad"
+        },
+        "article_pkg/word/footer1.xml": {
+          "sha256": "691071e722f9d8999798d89799fcd70754f1a82a66f36f0d83522ff5a12f3503"
+        },
+        "article_pkg/word/footnotes.xml": {
+          "sha256": "774ce254f01cde1079d43e81a0db30ac82b3b2bae875b07c4fe28403ba30b6a9"
+        },
+        "article_pkg/word/media": {
+          "directory": true
+        },
+        "article_pkg/word/media/1bbb3a0274906de3b6a25a0c0fb799d364b43eab.png": {
+          "sha256": "ddb8947a7e0fa93d69f626e296979c2333003e00ce2c42909ec43d2cfb8194dc"
+        },
+        "article_pkg/word/media/218857879d6287b87460540cea2d8ec053df7685.png": {
+          "sha256": "f4112599fbad39c81f14fed472843e555d5ae8d2875748d528c458c2e4333397"
+        },
+        "article_pkg/word/media/22b7a6ebcdf0e660764270218b32d59f125252b1.png": {
+          "sha256": "1ec9f0952161ecb7b08a93ccb6dfb91fc7f18934416ea1e3ebdeb4e458c7963e"
+        },
+        "article_pkg/word/media/3688abd88a9bb5c823383c5a24db9fb1a27fb11b.png": {
+          "sha256": "ff04cd57304558ddccade4f5918fea3b9157457eebaae6f5fbba1fcac0ae7a72"
+        },
+        "article_pkg/word/media/4259b930987b521684a9d5fdcb8c85a5e0699888.png": {
+          "sha256": "694c9cf59254cb01290debb3886d878216b387119037cd6516384be73bc622e9"
+        },
+        "article_pkg/word/media/51407415158921d9b2cdff831b1c0b6eb56efef1.png": {
+          "sha256": "46bb410860cd643cad30196f3e74a5b1b007b1d67550ea8781ebd9cf76406d4b"
+        },
+        "article_pkg/word/media/93b6764f7192ce47a8c3257fe6d80a68d84833ff.png": {
+          "sha256": "32cb1af0047ef04a810c0b37032bd2b1409fd30e95681d77dfbb989768227455"
+        },
+        "article_pkg/word/media/aac1111da8b496d20aec0126921d924d0169b14c.png": {
+          "sha256": "bb9ae020e31c8c9196b778fb4b8b7c972326e97234fa9425b1d1abbfe6145e25"
+        },
+        "article_pkg/word/media/c8eab09bbe813dc6fe1001e38fae01b5b7482cd0.png": {
+          "sha256": "364bea28437bd6e319955478e94b6c0830757d726af6333fd2226a60748d83a9"
+        },
+        "article_pkg/word/media/ef2a28216bc4f5f75b2374f0c9b8a5946ff37628.png": {
+          "sha256": "e0cb0d3d8ddd28b2577dd153861afd388ec073821a07ca14e3e6fa1436ede533"
+        },
+        "article_pkg/word/numbering.xml": {
+          "sha256": "aa734605fd720f5165a205574027c26e0a1be12992cb5fb339544d737576209f"
+        },
+        "article_pkg/word/settings.xml": {
+          "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
+        },
+        "article_pkg/word/styles.xml": {
+          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+        },
+        "article_pkg/word/theme": {
+          "directory": true
+        },
+        "article_pkg/word/theme/theme1.xml": {
+          "sha256": "14d6fc4b249d866d8ab97f1ee68e6601c3feedc56857db791418573bf378f6de"
+        }
+      },
+      "fixture_identities_after": {
+        "article.docx": {
+          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+        },
+        "article_pkg": {
+          "directory": true
+        },
+        "article_pkg/[Content_Types].xml": {
+          "sha256": "441ca5a936418c64142008e642d20155f7a857c429fc909737284cf224460834"
+        },
+        "article_pkg/_rels": {
+          "directory": true
+        },
+        "article_pkg/_rels/.rels": {
+          "sha256": "641d22a23aa9eb550103a7a01471eaeda5e84c69413e6e03e7fd290b4811a756"
+        },
+        "article_pkg/docProps": {
+          "directory": true
+        },
+        "article_pkg/docProps/app.xml": {
+          "sha256": "579eba9a8d602575736c3880cf5b529aabbadee0e8cc0e4df8573db0ceadbd4b"
+        },
+        "article_pkg/docProps/core.xml": {
+          "sha256": "cc0115a2176f8142574618b84d2eb8f233c1f02351f7fc1543a9156dae2b271b"
+        },
+        "article_pkg/docProps/custom.xml": {
+          "sha256": "8ec73cc7ce297e42cc652a1d1884d4ffb18ffa0ba7a6502a36f8da90d1be61a1"
+        },
+        "article_pkg/word": {
+          "directory": true
+        },
+        "article_pkg/word/_rels": {
+          "directory": true
+        },
+        "article_pkg/word/_rels/document.xml.rels": {
+          "sha256": "d1c0d14a8d339e5e6e19c4ecb5196ec574e62bbd6208bbf96775d3aef26f3984"
+        },
+        "article_pkg/word/_rels/endnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "article_pkg/word/_rels/fontTable.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "article_pkg/word/_rels/footer1.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "article_pkg/word/_rels/footnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "article_pkg/word/document.xml": {
+          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+        },
+        "article_pkg/word/endnotes.xml": {
+          "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
+        },
+        "article_pkg/word/fontTable.xml": {
+          "sha256": "a746dbb577ec5d68983d659707c0750ca89d40b9d3316e31af331d5e1c736bad"
+        },
+        "article_pkg/word/footer1.xml": {
+          "sha256": "691071e722f9d8999798d89799fcd70754f1a82a66f36f0d83522ff5a12f3503"
+        },
+        "article_pkg/word/footnotes.xml": {
+          "sha256": "774ce254f01cde1079d43e81a0db30ac82b3b2bae875b07c4fe28403ba30b6a9"
+        },
+        "article_pkg/word/media": {
+          "directory": true
+        },
+        "article_pkg/word/media/1bbb3a0274906de3b6a25a0c0fb799d364b43eab.png": {
+          "sha256": "ddb8947a7e0fa93d69f626e296979c2333003e00ce2c42909ec43d2cfb8194dc"
+        },
+        "article_pkg/word/media/218857879d6287b87460540cea2d8ec053df7685.png": {
+          "sha256": "f4112599fbad39c81f14fed472843e555d5ae8d2875748d528c458c2e4333397"
+        },
+        "article_pkg/word/media/22b7a6ebcdf0e660764270218b32d59f125252b1.png": {
+          "sha256": "1ec9f0952161ecb7b08a93ccb6dfb91fc7f18934416ea1e3ebdeb4e458c7963e"
+        },
+        "article_pkg/word/media/3688abd88a9bb5c823383c5a24db9fb1a27fb11b.png": {
+          "sha256": "ff04cd57304558ddccade4f5918fea3b9157457eebaae6f5fbba1fcac0ae7a72"
+        },
+        "article_pkg/word/media/4259b930987b521684a9d5fdcb8c85a5e0699888.png": {
+          "sha256": "694c9cf59254cb01290debb3886d878216b387119037cd6516384be73bc622e9"
+        },
+        "article_pkg/word/media/51407415158921d9b2cdff831b1c0b6eb56efef1.png": {
+          "sha256": "46bb410860cd643cad30196f3e74a5b1b007b1d67550ea8781ebd9cf76406d4b"
+        },
+        "article_pkg/word/media/93b6764f7192ce47a8c3257fe6d80a68d84833ff.png": {
+          "sha256": "32cb1af0047ef04a810c0b37032bd2b1409fd30e95681d77dfbb989768227455"
+        },
+        "article_pkg/word/media/aac1111da8b496d20aec0126921d924d0169b14c.png": {
+          "sha256": "bb9ae020e31c8c9196b778fb4b8b7c972326e97234fa9425b1d1abbfe6145e25"
+        },
+        "article_pkg/word/media/c8eab09bbe813dc6fe1001e38fae01b5b7482cd0.png": {
+          "sha256": "364bea28437bd6e319955478e94b6c0830757d726af6333fd2226a60748d83a9"
+        },
+        "article_pkg/word/media/ef2a28216bc4f5f75b2374f0c9b8a5946ff37628.png": {
+          "sha256": "e0cb0d3d8ddd28b2577dd153861afd388ec073821a07ca14e3e6fa1436ede533"
+        },
+        "article_pkg/word/numbering.xml": {
+          "sha256": "aa734605fd720f5165a205574027c26e0a1be12992cb5fb339544d737576209f"
+        },
+        "article_pkg/word/settings.xml": {
+          "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
+        },
+        "article_pkg/word/styles.xml": {
+          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+        },
+        "article_pkg/word/theme": {
+          "directory": true
+        },
+        "article_pkg/word/theme/theme1.xml": {
+          "sha256": "14d6fc4b249d866d8ab97f1ee68e6601c3feedc56857db791418573bf378f6de"
+        }
+      },
+      "passed": true
+    },
+    {
+      "name": "collision_source_inside_work",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/collision_source_inside_work",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "unsafe build paths: ARTICLE_TEMPLATE overlaps the article_pkg work package\n",
+      "expected_diagnostic": "unsafe build paths",
+      "destination_preserved": true,
+      "template_and_all_fixture_bytes_preserved": true,
+      "fixture_identities_before": {
+        "article.docx": {
+          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+        },
+        "article_pkg": {
+          "directory": true
+        },
+        "article_pkg/nested_template": {
+          "directory": true
+        },
+        "article_pkg/nested_template/[Content_Types].xml": {
+          "sha256": "441ca5a936418c64142008e642d20155f7a857c429fc909737284cf224460834"
+        },
+        "article_pkg/nested_template/_rels": {
+          "directory": true
+        },
+        "article_pkg/nested_template/_rels/.rels": {
+          "sha256": "641d22a23aa9eb550103a7a01471eaeda5e84c69413e6e03e7fd290b4811a756"
+        },
+        "article_pkg/nested_template/docProps": {
+          "directory": true
+        },
+        "article_pkg/nested_template/docProps/app.xml": {
+          "sha256": "579eba9a8d602575736c3880cf5b529aabbadee0e8cc0e4df8573db0ceadbd4b"
+        },
+        "article_pkg/nested_template/docProps/core.xml": {
+          "sha256": "cc0115a2176f8142574618b84d2eb8f233c1f02351f7fc1543a9156dae2b271b"
+        },
+        "article_pkg/nested_template/docProps/custom.xml": {
+          "sha256": "8ec73cc7ce297e42cc652a1d1884d4ffb18ffa0ba7a6502a36f8da90d1be61a1"
+        },
+        "article_pkg/nested_template/word": {
+          "directory": true
+        },
+        "article_pkg/nested_template/word/_rels": {
+          "directory": true
+        },
+        "article_pkg/nested_template/word/_rels/document.xml.rels": {
+          "sha256": "d1c0d14a8d339e5e6e19c4ecb5196ec574e62bbd6208bbf96775d3aef26f3984"
+        },
+        "article_pkg/nested_template/word/_rels/endnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "article_pkg/nested_template/word/_rels/fontTable.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "article_pkg/nested_template/word/_rels/footer1.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "article_pkg/nested_template/word/_rels/footnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "article_pkg/nested_template/word/document.xml": {
+          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+        },
+        "article_pkg/nested_template/word/endnotes.xml": {
+          "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
+        },
+        "article_pkg/nested_template/word/fontTable.xml": {
+          "sha256": "a746dbb577ec5d68983d659707c0750ca89d40b9d3316e31af331d5e1c736bad"
+        },
+        "article_pkg/nested_template/word/footer1.xml": {
+          "sha256": "691071e722f9d8999798d89799fcd70754f1a82a66f36f0d83522ff5a12f3503"
+        },
+        "article_pkg/nested_template/word/footnotes.xml": {
+          "sha256": "774ce254f01cde1079d43e81a0db30ac82b3b2bae875b07c4fe28403ba30b6a9"
+        },
+        "article_pkg/nested_template/word/media": {
+          "directory": true
+        },
+        "article_pkg/nested_template/word/media/1bbb3a0274906de3b6a25a0c0fb799d364b43eab.png": {
+          "sha256": "ddb8947a7e0fa93d69f626e296979c2333003e00ce2c42909ec43d2cfb8194dc"
+        },
+        "article_pkg/nested_template/word/media/218857879d6287b87460540cea2d8ec053df7685.png": {
+          "sha256": "f4112599fbad39c81f14fed472843e555d5ae8d2875748d528c458c2e4333397"
+        },
+        "article_pkg/nested_template/word/media/22b7a6ebcdf0e660764270218b32d59f125252b1.png": {
+          "sha256": "1ec9f0952161ecb7b08a93ccb6dfb91fc7f18934416ea1e3ebdeb4e458c7963e"
+        },
+        "article_pkg/nested_template/word/media/3688abd88a9bb5c823383c5a24db9fb1a27fb11b.png": {
+          "sha256": "ff04cd57304558ddccade4f5918fea3b9157457eebaae6f5fbba1fcac0ae7a72"
+        },
+        "article_pkg/nested_template/word/media/4259b930987b521684a9d5fdcb8c85a5e0699888.png": {
+          "sha256": "694c9cf59254cb01290debb3886d878216b387119037cd6516384be73bc622e9"
+        },
+        "article_pkg/nested_template/word/media/51407415158921d9b2cdff831b1c0b6eb56efef1.png": {
+          "sha256": "46bb410860cd643cad30196f3e74a5b1b007b1d67550ea8781ebd9cf76406d4b"
+        },
+        "article_pkg/nested_template/word/media/93b6764f7192ce47a8c3257fe6d80a68d84833ff.png": {
+          "sha256": "32cb1af0047ef04a810c0b37032bd2b1409fd30e95681d77dfbb989768227455"
+        },
+        "article_pkg/nested_template/word/media/aac1111da8b496d20aec0126921d924d0169b14c.png": {
+          "sha256": "bb9ae020e31c8c9196b778fb4b8b7c972326e97234fa9425b1d1abbfe6145e25"
+        },
+        "article_pkg/nested_template/word/media/c8eab09bbe813dc6fe1001e38fae01b5b7482cd0.png": {
+          "sha256": "364bea28437bd6e319955478e94b6c0830757d726af6333fd2226a60748d83a9"
+        },
+        "article_pkg/nested_template/word/media/ef2a28216bc4f5f75b2374f0c9b8a5946ff37628.png": {
+          "sha256": "e0cb0d3d8ddd28b2577dd153861afd388ec073821a07ca14e3e6fa1436ede533"
+        },
+        "article_pkg/nested_template/word/numbering.xml": {
+          "sha256": "aa734605fd720f5165a205574027c26e0a1be12992cb5fb339544d737576209f"
+        },
+        "article_pkg/nested_template/word/settings.xml": {
+          "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
+        },
+        "article_pkg/nested_template/word/styles.xml": {
+          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+        },
+        "article_pkg/nested_template/word/theme": {
+          "directory": true
+        },
+        "article_pkg/nested_template/word/theme/theme1.xml": {
+          "sha256": "14d6fc4b249d866d8ab97f1ee68e6601c3feedc56857db791418573bf378f6de"
+        }
+      },
+      "fixture_identities_after": {
+        "article.docx": {
+          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+        },
+        "article_pkg": {
+          "directory": true
+        },
+        "article_pkg/nested_template": {
+          "directory": true
+        },
+        "article_pkg/nested_template/[Content_Types].xml": {
+          "sha256": "441ca5a936418c64142008e642d20155f7a857c429fc909737284cf224460834"
+        },
+        "article_pkg/nested_template/_rels": {
+          "directory": true
+        },
+        "article_pkg/nested_template/_rels/.rels": {
+          "sha256": "641d22a23aa9eb550103a7a01471eaeda5e84c69413e6e03e7fd290b4811a756"
+        },
+        "article_pkg/nested_template/docProps": {
+          "directory": true
+        },
+        "article_pkg/nested_template/docProps/app.xml": {
+          "sha256": "579eba9a8d602575736c3880cf5b529aabbadee0e8cc0e4df8573db0ceadbd4b"
+        },
+        "article_pkg/nested_template/docProps/core.xml": {
+          "sha256": "cc0115a2176f8142574618b84d2eb8f233c1f02351f7fc1543a9156dae2b271b"
+        },
+        "article_pkg/nested_template/docProps/custom.xml": {
+          "sha256": "8ec73cc7ce297e42cc652a1d1884d4ffb18ffa0ba7a6502a36f8da90d1be61a1"
+        },
+        "article_pkg/nested_template/word": {
+          "directory": true
+        },
+        "article_pkg/nested_template/word/_rels": {
+          "directory": true
+        },
+        "article_pkg/nested_template/word/_rels/document.xml.rels": {
+          "sha256": "d1c0d14a8d339e5e6e19c4ecb5196ec574e62bbd6208bbf96775d3aef26f3984"
+        },
+        "article_pkg/nested_template/word/_rels/endnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "article_pkg/nested_template/word/_rels/fontTable.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "article_pkg/nested_template/word/_rels/footer1.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "article_pkg/nested_template/word/_rels/footnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "article_pkg/nested_template/word/document.xml": {
+          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+        },
+        "article_pkg/nested_template/word/endnotes.xml": {
+          "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
+        },
+        "article_pkg/nested_template/word/fontTable.xml": {
+          "sha256": "a746dbb577ec5d68983d659707c0750ca89d40b9d3316e31af331d5e1c736bad"
+        },
+        "article_pkg/nested_template/word/footer1.xml": {
+          "sha256": "691071e722f9d8999798d89799fcd70754f1a82a66f36f0d83522ff5a12f3503"
+        },
+        "article_pkg/nested_template/word/footnotes.xml": {
+          "sha256": "774ce254f01cde1079d43e81a0db30ac82b3b2bae875b07c4fe28403ba30b6a9"
+        },
+        "article_pkg/nested_template/word/media": {
+          "directory": true
+        },
+        "article_pkg/nested_template/word/media/1bbb3a0274906de3b6a25a0c0fb799d364b43eab.png": {
+          "sha256": "ddb8947a7e0fa93d69f626e296979c2333003e00ce2c42909ec43d2cfb8194dc"
+        },
+        "article_pkg/nested_template/word/media/218857879d6287b87460540cea2d8ec053df7685.png": {
+          "sha256": "f4112599fbad39c81f14fed472843e555d5ae8d2875748d528c458c2e4333397"
+        },
+        "article_pkg/nested_template/word/media/22b7a6ebcdf0e660764270218b32d59f125252b1.png": {
+          "sha256": "1ec9f0952161ecb7b08a93ccb6dfb91fc7f18934416ea1e3ebdeb4e458c7963e"
+        },
+        "article_pkg/nested_template/word/media/3688abd88a9bb5c823383c5a24db9fb1a27fb11b.png": {
+          "sha256": "ff04cd57304558ddccade4f5918fea3b9157457eebaae6f5fbba1fcac0ae7a72"
+        },
+        "article_pkg/nested_template/word/media/4259b930987b521684a9d5fdcb8c85a5e0699888.png": {
+          "sha256": "694c9cf59254cb01290debb3886d878216b387119037cd6516384be73bc622e9"
+        },
+        "article_pkg/nested_template/word/media/51407415158921d9b2cdff831b1c0b6eb56efef1.png": {
+          "sha256": "46bb410860cd643cad30196f3e74a5b1b007b1d67550ea8781ebd9cf76406d4b"
+        },
+        "article_pkg/nested_template/word/media/93b6764f7192ce47a8c3257fe6d80a68d84833ff.png": {
+          "sha256": "32cb1af0047ef04a810c0b37032bd2b1409fd30e95681d77dfbb989768227455"
+        },
+        "article_pkg/nested_template/word/media/aac1111da8b496d20aec0126921d924d0169b14c.png": {
+          "sha256": "bb9ae020e31c8c9196b778fb4b8b7c972326e97234fa9425b1d1abbfe6145e25"
+        },
+        "article_pkg/nested_template/word/media/c8eab09bbe813dc6fe1001e38fae01b5b7482cd0.png": {
+          "sha256": "364bea28437bd6e319955478e94b6c0830757d726af6333fd2226a60748d83a9"
+        },
+        "article_pkg/nested_template/word/media/ef2a28216bc4f5f75b2374f0c9b8a5946ff37628.png": {
+          "sha256": "e0cb0d3d8ddd28b2577dd153861afd388ec073821a07ca14e3e6fa1436ede533"
+        },
+        "article_pkg/nested_template/word/numbering.xml": {
+          "sha256": "aa734605fd720f5165a205574027c26e0a1be12992cb5fb339544d737576209f"
+        },
+        "article_pkg/nested_template/word/settings.xml": {
+          "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
+        },
+        "article_pkg/nested_template/word/styles.xml": {
+          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+        },
+        "article_pkg/nested_template/word/theme": {
+          "directory": true
+        },
+        "article_pkg/nested_template/word/theme/theme1.xml": {
+          "sha256": "14d6fc4b249d866d8ab97f1ee68e6601c3feedc56857db791418573bf378f6de"
+        }
+      },
+      "passed": true
+    },
+    {
+      "name": "collision_source_contains_work",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/collision_source_contains_work/template",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "unsafe build paths: ARTICLE_TEMPLATE overlaps the article_pkg work package\n",
+      "expected_diagnostic": "unsafe build paths",
+      "destination_preserved": true,
+      "template_and_all_fixture_bytes_preserved": true,
+      "fixture_identities_before": {
+        "article.docx": {
+          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+        },
+        "template": {
+          "directory": true
+        },
+        "template/[Content_Types].xml": {
+          "sha256": "441ca5a936418c64142008e642d20155f7a857c429fc909737284cf224460834"
+        },
+        "template/_rels": {
+          "directory": true
+        },
+        "template/_rels/.rels": {
+          "sha256": "641d22a23aa9eb550103a7a01471eaeda5e84c69413e6e03e7fd290b4811a756"
+        },
+        "template/article_pkg": {
+          "directory": true
+        },
+        "template/article_pkg/sentinel": {
+          "sha256": "4b5f29e78cadd99792e2e8bcfe54b7615e30ccea0eef4a04791da6f3c2a83192"
+        },
+        "template/docProps": {
+          "directory": true
+        },
+        "template/docProps/app.xml": {
+          "sha256": "579eba9a8d602575736c3880cf5b529aabbadee0e8cc0e4df8573db0ceadbd4b"
+        },
+        "template/docProps/core.xml": {
+          "sha256": "cc0115a2176f8142574618b84d2eb8f233c1f02351f7fc1543a9156dae2b271b"
+        },
+        "template/docProps/custom.xml": {
+          "sha256": "8ec73cc7ce297e42cc652a1d1884d4ffb18ffa0ba7a6502a36f8da90d1be61a1"
+        },
+        "template/word": {
+          "directory": true
+        },
+        "template/word/_rels": {
+          "directory": true
+        },
+        "template/word/_rels/document.xml.rels": {
+          "sha256": "d1c0d14a8d339e5e6e19c4ecb5196ec574e62bbd6208bbf96775d3aef26f3984"
+        },
+        "template/word/_rels/endnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/fontTable.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/footer1.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/footnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/document.xml": {
+          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+        },
+        "template/word/endnotes.xml": {
+          "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
+        },
+        "template/word/fontTable.xml": {
+          "sha256": "a746dbb577ec5d68983d659707c0750ca89d40b9d3316e31af331d5e1c736bad"
+        },
+        "template/word/footer1.xml": {
+          "sha256": "691071e722f9d8999798d89799fcd70754f1a82a66f36f0d83522ff5a12f3503"
+        },
+        "template/word/footnotes.xml": {
+          "sha256": "774ce254f01cde1079d43e81a0db30ac82b3b2bae875b07c4fe28403ba30b6a9"
+        },
+        "template/word/media": {
+          "directory": true
+        },
+        "template/word/media/1bbb3a0274906de3b6a25a0c0fb799d364b43eab.png": {
+          "sha256": "ddb8947a7e0fa93d69f626e296979c2333003e00ce2c42909ec43d2cfb8194dc"
+        },
+        "template/word/media/218857879d6287b87460540cea2d8ec053df7685.png": {
+          "sha256": "f4112599fbad39c81f14fed472843e555d5ae8d2875748d528c458c2e4333397"
+        },
+        "template/word/media/22b7a6ebcdf0e660764270218b32d59f125252b1.png": {
+          "sha256": "1ec9f0952161ecb7b08a93ccb6dfb91fc7f18934416ea1e3ebdeb4e458c7963e"
+        },
+        "template/word/media/3688abd88a9bb5c823383c5a24db9fb1a27fb11b.png": {
+          "sha256": "ff04cd57304558ddccade4f5918fea3b9157457eebaae6f5fbba1fcac0ae7a72"
+        },
+        "template/word/media/4259b930987b521684a9d5fdcb8c85a5e0699888.png": {
+          "sha256": "694c9cf59254cb01290debb3886d878216b387119037cd6516384be73bc622e9"
+        },
+        "template/word/media/51407415158921d9b2cdff831b1c0b6eb56efef1.png": {
+          "sha256": "46bb410860cd643cad30196f3e74a5b1b007b1d67550ea8781ebd9cf76406d4b"
+        },
+        "template/word/media/93b6764f7192ce47a8c3257fe6d80a68d84833ff.png": {
+          "sha256": "32cb1af0047ef04a810c0b37032bd2b1409fd30e95681d77dfbb989768227455"
+        },
+        "template/word/media/aac1111da8b496d20aec0126921d924d0169b14c.png": {
+          "sha256": "bb9ae020e31c8c9196b778fb4b8b7c972326e97234fa9425b1d1abbfe6145e25"
+        },
+        "template/word/media/c8eab09bbe813dc6fe1001e38fae01b5b7482cd0.png": {
+          "sha256": "364bea28437bd6e319955478e94b6c0830757d726af6333fd2226a60748d83a9"
+        },
+        "template/word/media/ef2a28216bc4f5f75b2374f0c9b8a5946ff37628.png": {
+          "sha256": "e0cb0d3d8ddd28b2577dd153861afd388ec073821a07ca14e3e6fa1436ede533"
+        },
+        "template/word/numbering.xml": {
+          "sha256": "aa734605fd720f5165a205574027c26e0a1be12992cb5fb339544d737576209f"
+        },
+        "template/word/settings.xml": {
+          "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
+        },
+        "template/word/styles.xml": {
+          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+        },
+        "template/word/theme": {
+          "directory": true
+        },
+        "template/word/theme/theme1.xml": {
+          "sha256": "14d6fc4b249d866d8ab97f1ee68e6601c3feedc56857db791418573bf378f6de"
+        }
+      },
+      "fixture_identities_after": {
+        "article.docx": {
+          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+        },
+        "template": {
+          "directory": true
+        },
+        "template/[Content_Types].xml": {
+          "sha256": "441ca5a936418c64142008e642d20155f7a857c429fc909737284cf224460834"
+        },
+        "template/_rels": {
+          "directory": true
+        },
+        "template/_rels/.rels": {
+          "sha256": "641d22a23aa9eb550103a7a01471eaeda5e84c69413e6e03e7fd290b4811a756"
+        },
+        "template/article_pkg": {
+          "directory": true
+        },
+        "template/article_pkg/sentinel": {
+          "sha256": "4b5f29e78cadd99792e2e8bcfe54b7615e30ccea0eef4a04791da6f3c2a83192"
+        },
+        "template/docProps": {
+          "directory": true
+        },
+        "template/docProps/app.xml": {
+          "sha256": "579eba9a8d602575736c3880cf5b529aabbadee0e8cc0e4df8573db0ceadbd4b"
+        },
+        "template/docProps/core.xml": {
+          "sha256": "cc0115a2176f8142574618b84d2eb8f233c1f02351f7fc1543a9156dae2b271b"
+        },
+        "template/docProps/custom.xml": {
+          "sha256": "8ec73cc7ce297e42cc652a1d1884d4ffb18ffa0ba7a6502a36f8da90d1be61a1"
+        },
+        "template/word": {
+          "directory": true
+        },
+        "template/word/_rels": {
+          "directory": true
+        },
+        "template/word/_rels/document.xml.rels": {
+          "sha256": "d1c0d14a8d339e5e6e19c4ecb5196ec574e62bbd6208bbf96775d3aef26f3984"
+        },
+        "template/word/_rels/endnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/fontTable.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/footer1.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/footnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/document.xml": {
+          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+        },
+        "template/word/endnotes.xml": {
+          "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
+        },
+        "template/word/fontTable.xml": {
+          "sha256": "a746dbb577ec5d68983d659707c0750ca89d40b9d3316e31af331d5e1c736bad"
+        },
+        "template/word/footer1.xml": {
+          "sha256": "691071e722f9d8999798d89799fcd70754f1a82a66f36f0d83522ff5a12f3503"
+        },
+        "template/word/footnotes.xml": {
+          "sha256": "774ce254f01cde1079d43e81a0db30ac82b3b2bae875b07c4fe28403ba30b6a9"
+        },
+        "template/word/media": {
+          "directory": true
+        },
+        "template/word/media/1bbb3a0274906de3b6a25a0c0fb799d364b43eab.png": {
+          "sha256": "ddb8947a7e0fa93d69f626e296979c2333003e00ce2c42909ec43d2cfb8194dc"
+        },
+        "template/word/media/218857879d6287b87460540cea2d8ec053df7685.png": {
+          "sha256": "f4112599fbad39c81f14fed472843e555d5ae8d2875748d528c458c2e4333397"
+        },
+        "template/word/media/22b7a6ebcdf0e660764270218b32d59f125252b1.png": {
+          "sha256": "1ec9f0952161ecb7b08a93ccb6dfb91fc7f18934416ea1e3ebdeb4e458c7963e"
+        },
+        "template/word/media/3688abd88a9bb5c823383c5a24db9fb1a27fb11b.png": {
+          "sha256": "ff04cd57304558ddccade4f5918fea3b9157457eebaae6f5fbba1fcac0ae7a72"
+        },
+        "template/word/media/4259b930987b521684a9d5fdcb8c85a5e0699888.png": {
+          "sha256": "694c9cf59254cb01290debb3886d878216b387119037cd6516384be73bc622e9"
+        },
+        "template/word/media/51407415158921d9b2cdff831b1c0b6eb56efef1.png": {
+          "sha256": "46bb410860cd643cad30196f3e74a5b1b007b1d67550ea8781ebd9cf76406d4b"
+        },
+        "template/word/media/93b6764f7192ce47a8c3257fe6d80a68d84833ff.png": {
+          "sha256": "32cb1af0047ef04a810c0b37032bd2b1409fd30e95681d77dfbb989768227455"
+        },
+        "template/word/media/aac1111da8b496d20aec0126921d924d0169b14c.png": {
+          "sha256": "bb9ae020e31c8c9196b778fb4b8b7c972326e97234fa9425b1d1abbfe6145e25"
+        },
+        "template/word/media/c8eab09bbe813dc6fe1001e38fae01b5b7482cd0.png": {
+          "sha256": "364bea28437bd6e319955478e94b6c0830757d726af6333fd2226a60748d83a9"
+        },
+        "template/word/media/ef2a28216bc4f5f75b2374f0c9b8a5946ff37628.png": {
+          "sha256": "e0cb0d3d8ddd28b2577dd153861afd388ec073821a07ca14e3e6fa1436ede533"
+        },
+        "template/word/numbering.xml": {
+          "sha256": "aa734605fd720f5165a205574027c26e0a1be12992cb5fb339544d737576209f"
+        },
+        "template/word/settings.xml": {
+          "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
+        },
+        "template/word/styles.xml": {
+          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+        },
+        "template/word/theme": {
+          "directory": true
+        },
+        "template/word/theme/theme1.xml": {
+          "sha256": "14d6fc4b249d866d8ab97f1ee68e6601c3feedc56857db791418573bf378f6de"
+        }
+      },
+      "passed": true
+    },
+    {
+      "name": "collision_source_symlink_to_work",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/collision_source_symlink_to_work",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "unsafe build paths: ARTICLE_TEMPLATE overlaps the article_pkg work package\n",
+      "expected_diagnostic": "unsafe build paths",
+      "destination_preserved": true,
+      "template_and_all_fixture_bytes_preserved": true,
+      "fixture_identities_before": {
+        "article.docx": {
+          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+        },
+        "article_pkg": {
+          "directory": true
+        },
+        "article_pkg/[Content_Types].xml": {
+          "sha256": "441ca5a936418c64142008e642d20155f7a857c429fc909737284cf224460834"
+        },
+        "article_pkg/_rels": {
+          "directory": true
+        },
+        "article_pkg/_rels/.rels": {
+          "sha256": "641d22a23aa9eb550103a7a01471eaeda5e84c69413e6e03e7fd290b4811a756"
+        },
+        "article_pkg/docProps": {
+          "directory": true
+        },
+        "article_pkg/docProps/app.xml": {
+          "sha256": "579eba9a8d602575736c3880cf5b529aabbadee0e8cc0e4df8573db0ceadbd4b"
+        },
+        "article_pkg/docProps/core.xml": {
+          "sha256": "cc0115a2176f8142574618b84d2eb8f233c1f02351f7fc1543a9156dae2b271b"
+        },
+        "article_pkg/docProps/custom.xml": {
+          "sha256": "8ec73cc7ce297e42cc652a1d1884d4ffb18ffa0ba7a6502a36f8da90d1be61a1"
+        },
+        "article_pkg/word": {
+          "directory": true
+        },
+        "article_pkg/word/_rels": {
+          "directory": true
+        },
+        "article_pkg/word/_rels/document.xml.rels": {
+          "sha256": "d1c0d14a8d339e5e6e19c4ecb5196ec574e62bbd6208bbf96775d3aef26f3984"
+        },
+        "article_pkg/word/_rels/endnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "article_pkg/word/_rels/fontTable.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "article_pkg/word/_rels/footer1.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "article_pkg/word/_rels/footnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "article_pkg/word/document.xml": {
+          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+        },
+        "article_pkg/word/endnotes.xml": {
+          "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
+        },
+        "article_pkg/word/fontTable.xml": {
+          "sha256": "a746dbb577ec5d68983d659707c0750ca89d40b9d3316e31af331d5e1c736bad"
+        },
+        "article_pkg/word/footer1.xml": {
+          "sha256": "691071e722f9d8999798d89799fcd70754f1a82a66f36f0d83522ff5a12f3503"
+        },
+        "article_pkg/word/footnotes.xml": {
+          "sha256": "774ce254f01cde1079d43e81a0db30ac82b3b2bae875b07c4fe28403ba30b6a9"
+        },
+        "article_pkg/word/media": {
+          "directory": true
+        },
+        "article_pkg/word/media/1bbb3a0274906de3b6a25a0c0fb799d364b43eab.png": {
+          "sha256": "ddb8947a7e0fa93d69f626e296979c2333003e00ce2c42909ec43d2cfb8194dc"
+        },
+        "article_pkg/word/media/218857879d6287b87460540cea2d8ec053df7685.png": {
+          "sha256": "f4112599fbad39c81f14fed472843e555d5ae8d2875748d528c458c2e4333397"
+        },
+        "article_pkg/word/media/22b7a6ebcdf0e660764270218b32d59f125252b1.png": {
+          "sha256": "1ec9f0952161ecb7b08a93ccb6dfb91fc7f18934416ea1e3ebdeb4e458c7963e"
+        },
+        "article_pkg/word/media/3688abd88a9bb5c823383c5a24db9fb1a27fb11b.png": {
+          "sha256": "ff04cd57304558ddccade4f5918fea3b9157457eebaae6f5fbba1fcac0ae7a72"
+        },
+        "article_pkg/word/media/4259b930987b521684a9d5fdcb8c85a5e0699888.png": {
+          "sha256": "694c9cf59254cb01290debb3886d878216b387119037cd6516384be73bc622e9"
+        },
+        "article_pkg/word/media/51407415158921d9b2cdff831b1c0b6eb56efef1.png": {
+          "sha256": "46bb410860cd643cad30196f3e74a5b1b007b1d67550ea8781ebd9cf76406d4b"
+        },
+        "article_pkg/word/media/93b6764f7192ce47a8c3257fe6d80a68d84833ff.png": {
+          "sha256": "32cb1af0047ef04a810c0b37032bd2b1409fd30e95681d77dfbb989768227455"
+        },
+        "article_pkg/word/media/aac1111da8b496d20aec0126921d924d0169b14c.png": {
+          "sha256": "bb9ae020e31c8c9196b778fb4b8b7c972326e97234fa9425b1d1abbfe6145e25"
+        },
+        "article_pkg/word/media/c8eab09bbe813dc6fe1001e38fae01b5b7482cd0.png": {
+          "sha256": "364bea28437bd6e319955478e94b6c0830757d726af6333fd2226a60748d83a9"
+        },
+        "article_pkg/word/media/ef2a28216bc4f5f75b2374f0c9b8a5946ff37628.png": {
+          "sha256": "e0cb0d3d8ddd28b2577dd153861afd388ec073821a07ca14e3e6fa1436ede533"
+        },
+        "article_pkg/word/numbering.xml": {
+          "sha256": "aa734605fd720f5165a205574027c26e0a1be12992cb5fb339544d737576209f"
+        },
+        "article_pkg/word/settings.xml": {
+          "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
+        },
+        "article_pkg/word/styles.xml": {
+          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+        },
+        "article_pkg/word/theme": {
+          "directory": true
+        },
+        "article_pkg/word/theme/theme1.xml": {
+          "sha256": "14d6fc4b249d866d8ab97f1ee68e6601c3feedc56857db791418573bf378f6de"
+        },
+        "source_alias": {
+          "symlink": "/private/tmp/pf8_builder_fixes_mdt0v6af/collision_source_symlink_to_work/article_pkg"
+        }
+      },
+      "fixture_identities_after": {
+        "article.docx": {
+          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+        },
+        "article_pkg": {
+          "directory": true
+        },
+        "article_pkg/[Content_Types].xml": {
+          "sha256": "441ca5a936418c64142008e642d20155f7a857c429fc909737284cf224460834"
+        },
+        "article_pkg/_rels": {
+          "directory": true
+        },
+        "article_pkg/_rels/.rels": {
+          "sha256": "641d22a23aa9eb550103a7a01471eaeda5e84c69413e6e03e7fd290b4811a756"
+        },
+        "article_pkg/docProps": {
+          "directory": true
+        },
+        "article_pkg/docProps/app.xml": {
+          "sha256": "579eba9a8d602575736c3880cf5b529aabbadee0e8cc0e4df8573db0ceadbd4b"
+        },
+        "article_pkg/docProps/core.xml": {
+          "sha256": "cc0115a2176f8142574618b84d2eb8f233c1f02351f7fc1543a9156dae2b271b"
+        },
+        "article_pkg/docProps/custom.xml": {
+          "sha256": "8ec73cc7ce297e42cc652a1d1884d4ffb18ffa0ba7a6502a36f8da90d1be61a1"
+        },
+        "article_pkg/word": {
+          "directory": true
+        },
+        "article_pkg/word/_rels": {
+          "directory": true
+        },
+        "article_pkg/word/_rels/document.xml.rels": {
+          "sha256": "d1c0d14a8d339e5e6e19c4ecb5196ec574e62bbd6208bbf96775d3aef26f3984"
+        },
+        "article_pkg/word/_rels/endnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "article_pkg/word/_rels/fontTable.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "article_pkg/word/_rels/footer1.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "article_pkg/word/_rels/footnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "article_pkg/word/document.xml": {
+          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+        },
+        "article_pkg/word/endnotes.xml": {
+          "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
+        },
+        "article_pkg/word/fontTable.xml": {
+          "sha256": "a746dbb577ec5d68983d659707c0750ca89d40b9d3316e31af331d5e1c736bad"
+        },
+        "article_pkg/word/footer1.xml": {
+          "sha256": "691071e722f9d8999798d89799fcd70754f1a82a66f36f0d83522ff5a12f3503"
+        },
+        "article_pkg/word/footnotes.xml": {
+          "sha256": "774ce254f01cde1079d43e81a0db30ac82b3b2bae875b07c4fe28403ba30b6a9"
+        },
+        "article_pkg/word/media": {
+          "directory": true
+        },
+        "article_pkg/word/media/1bbb3a0274906de3b6a25a0c0fb799d364b43eab.png": {
+          "sha256": "ddb8947a7e0fa93d69f626e296979c2333003e00ce2c42909ec43d2cfb8194dc"
+        },
+        "article_pkg/word/media/218857879d6287b87460540cea2d8ec053df7685.png": {
+          "sha256": "f4112599fbad39c81f14fed472843e555d5ae8d2875748d528c458c2e4333397"
+        },
+        "article_pkg/word/media/22b7a6ebcdf0e660764270218b32d59f125252b1.png": {
+          "sha256": "1ec9f0952161ecb7b08a93ccb6dfb91fc7f18934416ea1e3ebdeb4e458c7963e"
+        },
+        "article_pkg/word/media/3688abd88a9bb5c823383c5a24db9fb1a27fb11b.png": {
+          "sha256": "ff04cd57304558ddccade4f5918fea3b9157457eebaae6f5fbba1fcac0ae7a72"
+        },
+        "article_pkg/word/media/4259b930987b521684a9d5fdcb8c85a5e0699888.png": {
+          "sha256": "694c9cf59254cb01290debb3886d878216b387119037cd6516384be73bc622e9"
+        },
+        "article_pkg/word/media/51407415158921d9b2cdff831b1c0b6eb56efef1.png": {
+          "sha256": "46bb410860cd643cad30196f3e74a5b1b007b1d67550ea8781ebd9cf76406d4b"
+        },
+        "article_pkg/word/media/93b6764f7192ce47a8c3257fe6d80a68d84833ff.png": {
+          "sha256": "32cb1af0047ef04a810c0b37032bd2b1409fd30e95681d77dfbb989768227455"
+        },
+        "article_pkg/word/media/aac1111da8b496d20aec0126921d924d0169b14c.png": {
+          "sha256": "bb9ae020e31c8c9196b778fb4b8b7c972326e97234fa9425b1d1abbfe6145e25"
+        },
+        "article_pkg/word/media/c8eab09bbe813dc6fe1001e38fae01b5b7482cd0.png": {
+          "sha256": "364bea28437bd6e319955478e94b6c0830757d726af6333fd2226a60748d83a9"
+        },
+        "article_pkg/word/media/ef2a28216bc4f5f75b2374f0c9b8a5946ff37628.png": {
+          "sha256": "e0cb0d3d8ddd28b2577dd153861afd388ec073821a07ca14e3e6fa1436ede533"
+        },
+        "article_pkg/word/numbering.xml": {
+          "sha256": "aa734605fd720f5165a205574027c26e0a1be12992cb5fb339544d737576209f"
+        },
+        "article_pkg/word/settings.xml": {
+          "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
+        },
+        "article_pkg/word/styles.xml": {
+          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+        },
+        "article_pkg/word/theme": {
+          "directory": true
+        },
+        "article_pkg/word/theme/theme1.xml": {
+          "sha256": "14d6fc4b249d866d8ab97f1ee68e6601c3feedc56857db791418573bf378f6de"
+        },
+        "source_alias": {
+          "symlink": "/private/tmp/pf8_builder_fixes_mdt0v6af/collision_source_symlink_to_work/article_pkg"
+        }
+      },
+      "passed": true
+    },
+    {
+      "name": "collision_work_symlink_to_source",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/collision_work_symlink_to_source",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "unsafe build paths: ARTICLE_TEMPLATE overlaps the article_pkg work package\n",
+      "expected_diagnostic": "unsafe build paths",
+      "destination_preserved": true,
+      "template_and_all_fixture_bytes_preserved": true,
+      "fixture_identities_before": {
+        "article.docx": {
+          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+        },
+        "article_pkg": {
+          "symlink": "/private/tmp/pf8_builder_fixes_mdt0v6af/collision_work_symlink_to_source/template"
+        },
+        "template": {
+          "directory": true
+        },
+        "template/[Content_Types].xml": {
+          "sha256": "441ca5a936418c64142008e642d20155f7a857c429fc909737284cf224460834"
+        },
+        "template/_rels": {
+          "directory": true
+        },
+        "template/_rels/.rels": {
+          "sha256": "641d22a23aa9eb550103a7a01471eaeda5e84c69413e6e03e7fd290b4811a756"
+        },
+        "template/docProps": {
+          "directory": true
+        },
+        "template/docProps/app.xml": {
+          "sha256": "579eba9a8d602575736c3880cf5b529aabbadee0e8cc0e4df8573db0ceadbd4b"
+        },
+        "template/docProps/core.xml": {
+          "sha256": "cc0115a2176f8142574618b84d2eb8f233c1f02351f7fc1543a9156dae2b271b"
+        },
+        "template/docProps/custom.xml": {
+          "sha256": "8ec73cc7ce297e42cc652a1d1884d4ffb18ffa0ba7a6502a36f8da90d1be61a1"
+        },
+        "template/word": {
+          "directory": true
+        },
+        "template/word/_rels": {
+          "directory": true
+        },
+        "template/word/_rels/document.xml.rels": {
+          "sha256": "d1c0d14a8d339e5e6e19c4ecb5196ec574e62bbd6208bbf96775d3aef26f3984"
+        },
+        "template/word/_rels/endnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/fontTable.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/footer1.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/footnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/document.xml": {
+          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+        },
+        "template/word/endnotes.xml": {
+          "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
+        },
+        "template/word/fontTable.xml": {
+          "sha256": "a746dbb577ec5d68983d659707c0750ca89d40b9d3316e31af331d5e1c736bad"
+        },
+        "template/word/footer1.xml": {
+          "sha256": "691071e722f9d8999798d89799fcd70754f1a82a66f36f0d83522ff5a12f3503"
+        },
+        "template/word/footnotes.xml": {
+          "sha256": "774ce254f01cde1079d43e81a0db30ac82b3b2bae875b07c4fe28403ba30b6a9"
+        },
+        "template/word/media": {
+          "directory": true
+        },
+        "template/word/media/1bbb3a0274906de3b6a25a0c0fb799d364b43eab.png": {
+          "sha256": "ddb8947a7e0fa93d69f626e296979c2333003e00ce2c42909ec43d2cfb8194dc"
+        },
+        "template/word/media/218857879d6287b87460540cea2d8ec053df7685.png": {
+          "sha256": "f4112599fbad39c81f14fed472843e555d5ae8d2875748d528c458c2e4333397"
+        },
+        "template/word/media/22b7a6ebcdf0e660764270218b32d59f125252b1.png": {
+          "sha256": "1ec9f0952161ecb7b08a93ccb6dfb91fc7f18934416ea1e3ebdeb4e458c7963e"
+        },
+        "template/word/media/3688abd88a9bb5c823383c5a24db9fb1a27fb11b.png": {
+          "sha256": "ff04cd57304558ddccade4f5918fea3b9157457eebaae6f5fbba1fcac0ae7a72"
+        },
+        "template/word/media/4259b930987b521684a9d5fdcb8c85a5e0699888.png": {
+          "sha256": "694c9cf59254cb01290debb3886d878216b387119037cd6516384be73bc622e9"
+        },
+        "template/word/media/51407415158921d9b2cdff831b1c0b6eb56efef1.png": {
+          "sha256": "46bb410860cd643cad30196f3e74a5b1b007b1d67550ea8781ebd9cf76406d4b"
+        },
+        "template/word/media/93b6764f7192ce47a8c3257fe6d80a68d84833ff.png": {
+          "sha256": "32cb1af0047ef04a810c0b37032bd2b1409fd30e95681d77dfbb989768227455"
+        },
+        "template/word/media/aac1111da8b496d20aec0126921d924d0169b14c.png": {
+          "sha256": "bb9ae020e31c8c9196b778fb4b8b7c972326e97234fa9425b1d1abbfe6145e25"
+        },
+        "template/word/media/c8eab09bbe813dc6fe1001e38fae01b5b7482cd0.png": {
+          "sha256": "364bea28437bd6e319955478e94b6c0830757d726af6333fd2226a60748d83a9"
+        },
+        "template/word/media/ef2a28216bc4f5f75b2374f0c9b8a5946ff37628.png": {
+          "sha256": "e0cb0d3d8ddd28b2577dd153861afd388ec073821a07ca14e3e6fa1436ede533"
+        },
+        "template/word/numbering.xml": {
+          "sha256": "aa734605fd720f5165a205574027c26e0a1be12992cb5fb339544d737576209f"
+        },
+        "template/word/settings.xml": {
+          "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
+        },
+        "template/word/styles.xml": {
+          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+        },
+        "template/word/theme": {
+          "directory": true
+        },
+        "template/word/theme/theme1.xml": {
+          "sha256": "14d6fc4b249d866d8ab97f1ee68e6601c3feedc56857db791418573bf378f6de"
+        }
+      },
+      "fixture_identities_after": {
+        "article.docx": {
+          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+        },
+        "article_pkg": {
+          "symlink": "/private/tmp/pf8_builder_fixes_mdt0v6af/collision_work_symlink_to_source/template"
+        },
+        "template": {
+          "directory": true
+        },
+        "template/[Content_Types].xml": {
+          "sha256": "441ca5a936418c64142008e642d20155f7a857c429fc909737284cf224460834"
+        },
+        "template/_rels": {
+          "directory": true
+        },
+        "template/_rels/.rels": {
+          "sha256": "641d22a23aa9eb550103a7a01471eaeda5e84c69413e6e03e7fd290b4811a756"
+        },
+        "template/docProps": {
+          "directory": true
+        },
+        "template/docProps/app.xml": {
+          "sha256": "579eba9a8d602575736c3880cf5b529aabbadee0e8cc0e4df8573db0ceadbd4b"
+        },
+        "template/docProps/core.xml": {
+          "sha256": "cc0115a2176f8142574618b84d2eb8f233c1f02351f7fc1543a9156dae2b271b"
+        },
+        "template/docProps/custom.xml": {
+          "sha256": "8ec73cc7ce297e42cc652a1d1884d4ffb18ffa0ba7a6502a36f8da90d1be61a1"
+        },
+        "template/word": {
+          "directory": true
+        },
+        "template/word/_rels": {
+          "directory": true
+        },
+        "template/word/_rels/document.xml.rels": {
+          "sha256": "d1c0d14a8d339e5e6e19c4ecb5196ec574e62bbd6208bbf96775d3aef26f3984"
+        },
+        "template/word/_rels/endnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/fontTable.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/footer1.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/footnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/document.xml": {
+          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+        },
+        "template/word/endnotes.xml": {
+          "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
+        },
+        "template/word/fontTable.xml": {
+          "sha256": "a746dbb577ec5d68983d659707c0750ca89d40b9d3316e31af331d5e1c736bad"
+        },
+        "template/word/footer1.xml": {
+          "sha256": "691071e722f9d8999798d89799fcd70754f1a82a66f36f0d83522ff5a12f3503"
+        },
+        "template/word/footnotes.xml": {
+          "sha256": "774ce254f01cde1079d43e81a0db30ac82b3b2bae875b07c4fe28403ba30b6a9"
+        },
+        "template/word/media": {
+          "directory": true
+        },
+        "template/word/media/1bbb3a0274906de3b6a25a0c0fb799d364b43eab.png": {
+          "sha256": "ddb8947a7e0fa93d69f626e296979c2333003e00ce2c42909ec43d2cfb8194dc"
+        },
+        "template/word/media/218857879d6287b87460540cea2d8ec053df7685.png": {
+          "sha256": "f4112599fbad39c81f14fed472843e555d5ae8d2875748d528c458c2e4333397"
+        },
+        "template/word/media/22b7a6ebcdf0e660764270218b32d59f125252b1.png": {
+          "sha256": "1ec9f0952161ecb7b08a93ccb6dfb91fc7f18934416ea1e3ebdeb4e458c7963e"
+        },
+        "template/word/media/3688abd88a9bb5c823383c5a24db9fb1a27fb11b.png": {
+          "sha256": "ff04cd57304558ddccade4f5918fea3b9157457eebaae6f5fbba1fcac0ae7a72"
+        },
+        "template/word/media/4259b930987b521684a9d5fdcb8c85a5e0699888.png": {
+          "sha256": "694c9cf59254cb01290debb3886d878216b387119037cd6516384be73bc622e9"
+        },
+        "template/word/media/51407415158921d9b2cdff831b1c0b6eb56efef1.png": {
+          "sha256": "46bb410860cd643cad30196f3e74a5b1b007b1d67550ea8781ebd9cf76406d4b"
+        },
+        "template/word/media/93b6764f7192ce47a8c3257fe6d80a68d84833ff.png": {
+          "sha256": "32cb1af0047ef04a810c0b37032bd2b1409fd30e95681d77dfbb989768227455"
+        },
+        "template/word/media/aac1111da8b496d20aec0126921d924d0169b14c.png": {
+          "sha256": "bb9ae020e31c8c9196b778fb4b8b7c972326e97234fa9425b1d1abbfe6145e25"
+        },
+        "template/word/media/c8eab09bbe813dc6fe1001e38fae01b5b7482cd0.png": {
+          "sha256": "364bea28437bd6e319955478e94b6c0830757d726af6333fd2226a60748d83a9"
+        },
+        "template/word/media/ef2a28216bc4f5f75b2374f0c9b8a5946ff37628.png": {
+          "sha256": "e0cb0d3d8ddd28b2577dd153861afd388ec073821a07ca14e3e6fa1436ede533"
+        },
+        "template/word/numbering.xml": {
+          "sha256": "aa734605fd720f5165a205574027c26e0a1be12992cb5fb339544d737576209f"
+        },
+        "template/word/settings.xml": {
+          "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
+        },
+        "template/word/styles.xml": {
+          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+        },
+        "template/word/theme": {
+          "directory": true
+        },
+        "template/word/theme/theme1.xml": {
+          "sha256": "14d6fc4b249d866d8ab97f1ee68e6601c3feedc56857db791418573bf378f6de"
+        }
+      },
+      "passed": true
+    },
+    {
+      "name": "collision_destination_inside_work",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/collision_destination_inside_work",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "unsafe build paths: ARTICLE_DOCX is inside or aliases the article_pkg work package\n",
+      "expected_diagnostic": "unsafe build paths",
+      "destination_preserved": true,
+      "template_and_all_fixture_bytes_preserved": true,
+      "fixture_identities_before": {
+        "article_pkg": {
+          "directory": true
+        },
+        "article_pkg/article.docx": {
+          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+        },
+        "template": {
+          "directory": true
+        },
+        "template/[Content_Types].xml": {
+          "sha256": "441ca5a936418c64142008e642d20155f7a857c429fc909737284cf224460834"
+        },
+        "template/_rels": {
+          "directory": true
+        },
+        "template/_rels/.rels": {
+          "sha256": "641d22a23aa9eb550103a7a01471eaeda5e84c69413e6e03e7fd290b4811a756"
+        },
+        "template/docProps": {
+          "directory": true
+        },
+        "template/docProps/app.xml": {
+          "sha256": "579eba9a8d602575736c3880cf5b529aabbadee0e8cc0e4df8573db0ceadbd4b"
+        },
+        "template/docProps/core.xml": {
+          "sha256": "cc0115a2176f8142574618b84d2eb8f233c1f02351f7fc1543a9156dae2b271b"
+        },
+        "template/docProps/custom.xml": {
+          "sha256": "8ec73cc7ce297e42cc652a1d1884d4ffb18ffa0ba7a6502a36f8da90d1be61a1"
+        },
+        "template/word": {
+          "directory": true
+        },
+        "template/word/_rels": {
+          "directory": true
+        },
+        "template/word/_rels/document.xml.rels": {
+          "sha256": "d1c0d14a8d339e5e6e19c4ecb5196ec574e62bbd6208bbf96775d3aef26f3984"
+        },
+        "template/word/_rels/endnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/fontTable.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/footer1.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/footnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/document.xml": {
+          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+        },
+        "template/word/endnotes.xml": {
+          "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
+        },
+        "template/word/fontTable.xml": {
+          "sha256": "a746dbb577ec5d68983d659707c0750ca89d40b9d3316e31af331d5e1c736bad"
+        },
+        "template/word/footer1.xml": {
+          "sha256": "691071e722f9d8999798d89799fcd70754f1a82a66f36f0d83522ff5a12f3503"
+        },
+        "template/word/footnotes.xml": {
+          "sha256": "774ce254f01cde1079d43e81a0db30ac82b3b2bae875b07c4fe28403ba30b6a9"
+        },
+        "template/word/media": {
+          "directory": true
+        },
+        "template/word/media/1bbb3a0274906de3b6a25a0c0fb799d364b43eab.png": {
+          "sha256": "ddb8947a7e0fa93d69f626e296979c2333003e00ce2c42909ec43d2cfb8194dc"
+        },
+        "template/word/media/218857879d6287b87460540cea2d8ec053df7685.png": {
+          "sha256": "f4112599fbad39c81f14fed472843e555d5ae8d2875748d528c458c2e4333397"
+        },
+        "template/word/media/22b7a6ebcdf0e660764270218b32d59f125252b1.png": {
+          "sha256": "1ec9f0952161ecb7b08a93ccb6dfb91fc7f18934416ea1e3ebdeb4e458c7963e"
+        },
+        "template/word/media/3688abd88a9bb5c823383c5a24db9fb1a27fb11b.png": {
+          "sha256": "ff04cd57304558ddccade4f5918fea3b9157457eebaae6f5fbba1fcac0ae7a72"
+        },
+        "template/word/media/4259b930987b521684a9d5fdcb8c85a5e0699888.png": {
+          "sha256": "694c9cf59254cb01290debb3886d878216b387119037cd6516384be73bc622e9"
+        },
+        "template/word/media/51407415158921d9b2cdff831b1c0b6eb56efef1.png": {
+          "sha256": "46bb410860cd643cad30196f3e74a5b1b007b1d67550ea8781ebd9cf76406d4b"
+        },
+        "template/word/media/93b6764f7192ce47a8c3257fe6d80a68d84833ff.png": {
+          "sha256": "32cb1af0047ef04a810c0b37032bd2b1409fd30e95681d77dfbb989768227455"
+        },
+        "template/word/media/aac1111da8b496d20aec0126921d924d0169b14c.png": {
+          "sha256": "bb9ae020e31c8c9196b778fb4b8b7c972326e97234fa9425b1d1abbfe6145e25"
+        },
+        "template/word/media/c8eab09bbe813dc6fe1001e38fae01b5b7482cd0.png": {
+          "sha256": "364bea28437bd6e319955478e94b6c0830757d726af6333fd2226a60748d83a9"
+        },
+        "template/word/media/ef2a28216bc4f5f75b2374f0c9b8a5946ff37628.png": {
+          "sha256": "e0cb0d3d8ddd28b2577dd153861afd388ec073821a07ca14e3e6fa1436ede533"
+        },
+        "template/word/numbering.xml": {
+          "sha256": "aa734605fd720f5165a205574027c26e0a1be12992cb5fb339544d737576209f"
+        },
+        "template/word/settings.xml": {
+          "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
+        },
+        "template/word/styles.xml": {
+          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+        },
+        "template/word/theme": {
+          "directory": true
+        },
+        "template/word/theme/theme1.xml": {
+          "sha256": "14d6fc4b249d866d8ab97f1ee68e6601c3feedc56857db791418573bf378f6de"
+        }
+      },
+      "fixture_identities_after": {
+        "article_pkg": {
+          "directory": true
+        },
+        "article_pkg/article.docx": {
+          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+        },
+        "template": {
+          "directory": true
+        },
+        "template/[Content_Types].xml": {
+          "sha256": "441ca5a936418c64142008e642d20155f7a857c429fc909737284cf224460834"
+        },
+        "template/_rels": {
+          "directory": true
+        },
+        "template/_rels/.rels": {
+          "sha256": "641d22a23aa9eb550103a7a01471eaeda5e84c69413e6e03e7fd290b4811a756"
+        },
+        "template/docProps": {
+          "directory": true
+        },
+        "template/docProps/app.xml": {
+          "sha256": "579eba9a8d602575736c3880cf5b529aabbadee0e8cc0e4df8573db0ceadbd4b"
+        },
+        "template/docProps/core.xml": {
+          "sha256": "cc0115a2176f8142574618b84d2eb8f233c1f02351f7fc1543a9156dae2b271b"
+        },
+        "template/docProps/custom.xml": {
+          "sha256": "8ec73cc7ce297e42cc652a1d1884d4ffb18ffa0ba7a6502a36f8da90d1be61a1"
+        },
+        "template/word": {
+          "directory": true
+        },
+        "template/word/_rels": {
+          "directory": true
+        },
+        "template/word/_rels/document.xml.rels": {
+          "sha256": "d1c0d14a8d339e5e6e19c4ecb5196ec574e62bbd6208bbf96775d3aef26f3984"
+        },
+        "template/word/_rels/endnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/fontTable.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/footer1.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/footnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/document.xml": {
+          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+        },
+        "template/word/endnotes.xml": {
+          "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
+        },
+        "template/word/fontTable.xml": {
+          "sha256": "a746dbb577ec5d68983d659707c0750ca89d40b9d3316e31af331d5e1c736bad"
+        },
+        "template/word/footer1.xml": {
+          "sha256": "691071e722f9d8999798d89799fcd70754f1a82a66f36f0d83522ff5a12f3503"
+        },
+        "template/word/footnotes.xml": {
+          "sha256": "774ce254f01cde1079d43e81a0db30ac82b3b2bae875b07c4fe28403ba30b6a9"
+        },
+        "template/word/media": {
+          "directory": true
+        },
+        "template/word/media/1bbb3a0274906de3b6a25a0c0fb799d364b43eab.png": {
+          "sha256": "ddb8947a7e0fa93d69f626e296979c2333003e00ce2c42909ec43d2cfb8194dc"
+        },
+        "template/word/media/218857879d6287b87460540cea2d8ec053df7685.png": {
+          "sha256": "f4112599fbad39c81f14fed472843e555d5ae8d2875748d528c458c2e4333397"
+        },
+        "template/word/media/22b7a6ebcdf0e660764270218b32d59f125252b1.png": {
+          "sha256": "1ec9f0952161ecb7b08a93ccb6dfb91fc7f18934416ea1e3ebdeb4e458c7963e"
+        },
+        "template/word/media/3688abd88a9bb5c823383c5a24db9fb1a27fb11b.png": {
+          "sha256": "ff04cd57304558ddccade4f5918fea3b9157457eebaae6f5fbba1fcac0ae7a72"
+        },
+        "template/word/media/4259b930987b521684a9d5fdcb8c85a5e0699888.png": {
+          "sha256": "694c9cf59254cb01290debb3886d878216b387119037cd6516384be73bc622e9"
+        },
+        "template/word/media/51407415158921d9b2cdff831b1c0b6eb56efef1.png": {
+          "sha256": "46bb410860cd643cad30196f3e74a5b1b007b1d67550ea8781ebd9cf76406d4b"
+        },
+        "template/word/media/93b6764f7192ce47a8c3257fe6d80a68d84833ff.png": {
+          "sha256": "32cb1af0047ef04a810c0b37032bd2b1409fd30e95681d77dfbb989768227455"
+        },
+        "template/word/media/aac1111da8b496d20aec0126921d924d0169b14c.png": {
+          "sha256": "bb9ae020e31c8c9196b778fb4b8b7c972326e97234fa9425b1d1abbfe6145e25"
+        },
+        "template/word/media/c8eab09bbe813dc6fe1001e38fae01b5b7482cd0.png": {
+          "sha256": "364bea28437bd6e319955478e94b6c0830757d726af6333fd2226a60748d83a9"
+        },
+        "template/word/media/ef2a28216bc4f5f75b2374f0c9b8a5946ff37628.png": {
+          "sha256": "e0cb0d3d8ddd28b2577dd153861afd388ec073821a07ca14e3e6fa1436ede533"
+        },
+        "template/word/numbering.xml": {
+          "sha256": "aa734605fd720f5165a205574027c26e0a1be12992cb5fb339544d737576209f"
+        },
+        "template/word/settings.xml": {
+          "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
+        },
+        "template/word/styles.xml": {
+          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+        },
+        "template/word/theme": {
+          "directory": true
+        },
+        "template/word/theme/theme1.xml": {
+          "sha256": "14d6fc4b249d866d8ab97f1ee68e6601c3feedc56857db791418573bf378f6de"
+        }
+      },
+      "passed": true
+    },
+    {
+      "name": "collision_destination_lexically_inside_work",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/collision_destination_lexically_inside_work",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "unsafe build paths: ARTICLE_DOCX is inside or aliases the article_pkg work package\n",
+      "expected_diagnostic": "unsafe build paths",
+      "destination_preserved": true,
+      "template_and_all_fixture_bytes_preserved": true,
+      "fixture_identities_before": {
+        "article.docx": {
+          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+        },
+        "article_pkg": {
+          "directory": true
+        },
+        "article_pkg/alias.docx": {
+          "symlink": "/private/tmp/pf8_builder_fixes_mdt0v6af/collision_destination_lexically_inside_work/article.docx"
+        },
+        "template": {
+          "directory": true
+        },
+        "template/[Content_Types].xml": {
+          "sha256": "441ca5a936418c64142008e642d20155f7a857c429fc909737284cf224460834"
+        },
+        "template/_rels": {
+          "directory": true
+        },
+        "template/_rels/.rels": {
+          "sha256": "641d22a23aa9eb550103a7a01471eaeda5e84c69413e6e03e7fd290b4811a756"
+        },
+        "template/docProps": {
+          "directory": true
+        },
+        "template/docProps/app.xml": {
+          "sha256": "579eba9a8d602575736c3880cf5b529aabbadee0e8cc0e4df8573db0ceadbd4b"
+        },
+        "template/docProps/core.xml": {
+          "sha256": "cc0115a2176f8142574618b84d2eb8f233c1f02351f7fc1543a9156dae2b271b"
+        },
+        "template/docProps/custom.xml": {
+          "sha256": "8ec73cc7ce297e42cc652a1d1884d4ffb18ffa0ba7a6502a36f8da90d1be61a1"
+        },
+        "template/word": {
+          "directory": true
+        },
+        "template/word/_rels": {
+          "directory": true
+        },
+        "template/word/_rels/document.xml.rels": {
+          "sha256": "d1c0d14a8d339e5e6e19c4ecb5196ec574e62bbd6208bbf96775d3aef26f3984"
+        },
+        "template/word/_rels/endnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/fontTable.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/footer1.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/footnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/document.xml": {
+          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+        },
+        "template/word/endnotes.xml": {
+          "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
+        },
+        "template/word/fontTable.xml": {
+          "sha256": "a746dbb577ec5d68983d659707c0750ca89d40b9d3316e31af331d5e1c736bad"
+        },
+        "template/word/footer1.xml": {
+          "sha256": "691071e722f9d8999798d89799fcd70754f1a82a66f36f0d83522ff5a12f3503"
+        },
+        "template/word/footnotes.xml": {
+          "sha256": "774ce254f01cde1079d43e81a0db30ac82b3b2bae875b07c4fe28403ba30b6a9"
+        },
+        "template/word/media": {
+          "directory": true
+        },
+        "template/word/media/1bbb3a0274906de3b6a25a0c0fb799d364b43eab.png": {
+          "sha256": "ddb8947a7e0fa93d69f626e296979c2333003e00ce2c42909ec43d2cfb8194dc"
+        },
+        "template/word/media/218857879d6287b87460540cea2d8ec053df7685.png": {
+          "sha256": "f4112599fbad39c81f14fed472843e555d5ae8d2875748d528c458c2e4333397"
+        },
+        "template/word/media/22b7a6ebcdf0e660764270218b32d59f125252b1.png": {
+          "sha256": "1ec9f0952161ecb7b08a93ccb6dfb91fc7f18934416ea1e3ebdeb4e458c7963e"
+        },
+        "template/word/media/3688abd88a9bb5c823383c5a24db9fb1a27fb11b.png": {
+          "sha256": "ff04cd57304558ddccade4f5918fea3b9157457eebaae6f5fbba1fcac0ae7a72"
+        },
+        "template/word/media/4259b930987b521684a9d5fdcb8c85a5e0699888.png": {
+          "sha256": "694c9cf59254cb01290debb3886d878216b387119037cd6516384be73bc622e9"
+        },
+        "template/word/media/51407415158921d9b2cdff831b1c0b6eb56efef1.png": {
+          "sha256": "46bb410860cd643cad30196f3e74a5b1b007b1d67550ea8781ebd9cf76406d4b"
+        },
+        "template/word/media/93b6764f7192ce47a8c3257fe6d80a68d84833ff.png": {
+          "sha256": "32cb1af0047ef04a810c0b37032bd2b1409fd30e95681d77dfbb989768227455"
+        },
+        "template/word/media/aac1111da8b496d20aec0126921d924d0169b14c.png": {
+          "sha256": "bb9ae020e31c8c9196b778fb4b8b7c972326e97234fa9425b1d1abbfe6145e25"
+        },
+        "template/word/media/c8eab09bbe813dc6fe1001e38fae01b5b7482cd0.png": {
+          "sha256": "364bea28437bd6e319955478e94b6c0830757d726af6333fd2226a60748d83a9"
+        },
+        "template/word/media/ef2a28216bc4f5f75b2374f0c9b8a5946ff37628.png": {
+          "sha256": "e0cb0d3d8ddd28b2577dd153861afd388ec073821a07ca14e3e6fa1436ede533"
+        },
+        "template/word/numbering.xml": {
+          "sha256": "aa734605fd720f5165a205574027c26e0a1be12992cb5fb339544d737576209f"
+        },
+        "template/word/settings.xml": {
+          "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
+        },
+        "template/word/styles.xml": {
+          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+        },
+        "template/word/theme": {
+          "directory": true
+        },
+        "template/word/theme/theme1.xml": {
+          "sha256": "14d6fc4b249d866d8ab97f1ee68e6601c3feedc56857db791418573bf378f6de"
+        }
+      },
+      "fixture_identities_after": {
+        "article.docx": {
+          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+        },
+        "article_pkg": {
+          "directory": true
+        },
+        "article_pkg/alias.docx": {
+          "symlink": "/private/tmp/pf8_builder_fixes_mdt0v6af/collision_destination_lexically_inside_work/article.docx"
+        },
+        "template": {
+          "directory": true
+        },
+        "template/[Content_Types].xml": {
+          "sha256": "441ca5a936418c64142008e642d20155f7a857c429fc909737284cf224460834"
+        },
+        "template/_rels": {
+          "directory": true
+        },
+        "template/_rels/.rels": {
+          "sha256": "641d22a23aa9eb550103a7a01471eaeda5e84c69413e6e03e7fd290b4811a756"
+        },
+        "template/docProps": {
+          "directory": true
+        },
+        "template/docProps/app.xml": {
+          "sha256": "579eba9a8d602575736c3880cf5b529aabbadee0e8cc0e4df8573db0ceadbd4b"
+        },
+        "template/docProps/core.xml": {
+          "sha256": "cc0115a2176f8142574618b84d2eb8f233c1f02351f7fc1543a9156dae2b271b"
+        },
+        "template/docProps/custom.xml": {
+          "sha256": "8ec73cc7ce297e42cc652a1d1884d4ffb18ffa0ba7a6502a36f8da90d1be61a1"
+        },
+        "template/word": {
+          "directory": true
+        },
+        "template/word/_rels": {
+          "directory": true
+        },
+        "template/word/_rels/document.xml.rels": {
+          "sha256": "d1c0d14a8d339e5e6e19c4ecb5196ec574e62bbd6208bbf96775d3aef26f3984"
+        },
+        "template/word/_rels/endnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/fontTable.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/footer1.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/footnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/document.xml": {
+          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+        },
+        "template/word/endnotes.xml": {
+          "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
+        },
+        "template/word/fontTable.xml": {
+          "sha256": "a746dbb577ec5d68983d659707c0750ca89d40b9d3316e31af331d5e1c736bad"
+        },
+        "template/word/footer1.xml": {
+          "sha256": "691071e722f9d8999798d89799fcd70754f1a82a66f36f0d83522ff5a12f3503"
+        },
+        "template/word/footnotes.xml": {
+          "sha256": "774ce254f01cde1079d43e81a0db30ac82b3b2bae875b07c4fe28403ba30b6a9"
+        },
+        "template/word/media": {
+          "directory": true
+        },
+        "template/word/media/1bbb3a0274906de3b6a25a0c0fb799d364b43eab.png": {
+          "sha256": "ddb8947a7e0fa93d69f626e296979c2333003e00ce2c42909ec43d2cfb8194dc"
+        },
+        "template/word/media/218857879d6287b87460540cea2d8ec053df7685.png": {
+          "sha256": "f4112599fbad39c81f14fed472843e555d5ae8d2875748d528c458c2e4333397"
+        },
+        "template/word/media/22b7a6ebcdf0e660764270218b32d59f125252b1.png": {
+          "sha256": "1ec9f0952161ecb7b08a93ccb6dfb91fc7f18934416ea1e3ebdeb4e458c7963e"
+        },
+        "template/word/media/3688abd88a9bb5c823383c5a24db9fb1a27fb11b.png": {
+          "sha256": "ff04cd57304558ddccade4f5918fea3b9157457eebaae6f5fbba1fcac0ae7a72"
+        },
+        "template/word/media/4259b930987b521684a9d5fdcb8c85a5e0699888.png": {
+          "sha256": "694c9cf59254cb01290debb3886d878216b387119037cd6516384be73bc622e9"
+        },
+        "template/word/media/51407415158921d9b2cdff831b1c0b6eb56efef1.png": {
+          "sha256": "46bb410860cd643cad30196f3e74a5b1b007b1d67550ea8781ebd9cf76406d4b"
+        },
+        "template/word/media/93b6764f7192ce47a8c3257fe6d80a68d84833ff.png": {
+          "sha256": "32cb1af0047ef04a810c0b37032bd2b1409fd30e95681d77dfbb989768227455"
+        },
+        "template/word/media/aac1111da8b496d20aec0126921d924d0169b14c.png": {
+          "sha256": "bb9ae020e31c8c9196b778fb4b8b7c972326e97234fa9425b1d1abbfe6145e25"
+        },
+        "template/word/media/c8eab09bbe813dc6fe1001e38fae01b5b7482cd0.png": {
+          "sha256": "364bea28437bd6e319955478e94b6c0830757d726af6333fd2226a60748d83a9"
+        },
+        "template/word/media/ef2a28216bc4f5f75b2374f0c9b8a5946ff37628.png": {
+          "sha256": "e0cb0d3d8ddd28b2577dd153861afd388ec073821a07ca14e3e6fa1436ede533"
+        },
+        "template/word/numbering.xml": {
+          "sha256": "aa734605fd720f5165a205574027c26e0a1be12992cb5fb339544d737576209f"
+        },
+        "template/word/settings.xml": {
+          "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
+        },
+        "template/word/styles.xml": {
+          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+        },
+        "template/word/theme": {
+          "directory": true
+        },
+        "template/word/theme/theme1.xml": {
+          "sha256": "14d6fc4b249d866d8ab97f1ee68e6601c3feedc56857db791418573bf378f6de"
+        }
+      },
+      "passed": true
+    },
+    {
+      "name": "collision_destination_resolves_inside_work",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/collision_destination_resolves_inside_work",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "unsafe build paths: ARTICLE_DOCX is inside or aliases the article_pkg work package\n",
+      "expected_diagnostic": "unsafe build paths",
+      "destination_preserved": true,
+      "template_and_all_fixture_bytes_preserved": true,
+      "fixture_identities_before": {
+        "article.docx": {
+          "symlink": "/private/tmp/pf8_builder_fixes_mdt0v6af/collision_destination_resolves_inside_work/article_pkg/article.docx"
+        },
+        "article_pkg": {
+          "directory": true
+        },
+        "article_pkg/article.docx": {
+          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+        },
+        "template": {
+          "directory": true
+        },
+        "template/[Content_Types].xml": {
+          "sha256": "441ca5a936418c64142008e642d20155f7a857c429fc909737284cf224460834"
+        },
+        "template/_rels": {
+          "directory": true
+        },
+        "template/_rels/.rels": {
+          "sha256": "641d22a23aa9eb550103a7a01471eaeda5e84c69413e6e03e7fd290b4811a756"
+        },
+        "template/docProps": {
+          "directory": true
+        },
+        "template/docProps/app.xml": {
+          "sha256": "579eba9a8d602575736c3880cf5b529aabbadee0e8cc0e4df8573db0ceadbd4b"
+        },
+        "template/docProps/core.xml": {
+          "sha256": "cc0115a2176f8142574618b84d2eb8f233c1f02351f7fc1543a9156dae2b271b"
+        },
+        "template/docProps/custom.xml": {
+          "sha256": "8ec73cc7ce297e42cc652a1d1884d4ffb18ffa0ba7a6502a36f8da90d1be61a1"
+        },
+        "template/word": {
+          "directory": true
+        },
+        "template/word/_rels": {
+          "directory": true
+        },
+        "template/word/_rels/document.xml.rels": {
+          "sha256": "d1c0d14a8d339e5e6e19c4ecb5196ec574e62bbd6208bbf96775d3aef26f3984"
+        },
+        "template/word/_rels/endnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/fontTable.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/footer1.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/footnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/document.xml": {
+          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+        },
+        "template/word/endnotes.xml": {
+          "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
+        },
+        "template/word/fontTable.xml": {
+          "sha256": "a746dbb577ec5d68983d659707c0750ca89d40b9d3316e31af331d5e1c736bad"
+        },
+        "template/word/footer1.xml": {
+          "sha256": "691071e722f9d8999798d89799fcd70754f1a82a66f36f0d83522ff5a12f3503"
+        },
+        "template/word/footnotes.xml": {
+          "sha256": "774ce254f01cde1079d43e81a0db30ac82b3b2bae875b07c4fe28403ba30b6a9"
+        },
+        "template/word/media": {
+          "directory": true
+        },
+        "template/word/media/1bbb3a0274906de3b6a25a0c0fb799d364b43eab.png": {
+          "sha256": "ddb8947a7e0fa93d69f626e296979c2333003e00ce2c42909ec43d2cfb8194dc"
+        },
+        "template/word/media/218857879d6287b87460540cea2d8ec053df7685.png": {
+          "sha256": "f4112599fbad39c81f14fed472843e555d5ae8d2875748d528c458c2e4333397"
+        },
+        "template/word/media/22b7a6ebcdf0e660764270218b32d59f125252b1.png": {
+          "sha256": "1ec9f0952161ecb7b08a93ccb6dfb91fc7f18934416ea1e3ebdeb4e458c7963e"
+        },
+        "template/word/media/3688abd88a9bb5c823383c5a24db9fb1a27fb11b.png": {
+          "sha256": "ff04cd57304558ddccade4f5918fea3b9157457eebaae6f5fbba1fcac0ae7a72"
+        },
+        "template/word/media/4259b930987b521684a9d5fdcb8c85a5e0699888.png": {
+          "sha256": "694c9cf59254cb01290debb3886d878216b387119037cd6516384be73bc622e9"
+        },
+        "template/word/media/51407415158921d9b2cdff831b1c0b6eb56efef1.png": {
+          "sha256": "46bb410860cd643cad30196f3e74a5b1b007b1d67550ea8781ebd9cf76406d4b"
+        },
+        "template/word/media/93b6764f7192ce47a8c3257fe6d80a68d84833ff.png": {
+          "sha256": "32cb1af0047ef04a810c0b37032bd2b1409fd30e95681d77dfbb989768227455"
+        },
+        "template/word/media/aac1111da8b496d20aec0126921d924d0169b14c.png": {
+          "sha256": "bb9ae020e31c8c9196b778fb4b8b7c972326e97234fa9425b1d1abbfe6145e25"
+        },
+        "template/word/media/c8eab09bbe813dc6fe1001e38fae01b5b7482cd0.png": {
+          "sha256": "364bea28437bd6e319955478e94b6c0830757d726af6333fd2226a60748d83a9"
+        },
+        "template/word/media/ef2a28216bc4f5f75b2374f0c9b8a5946ff37628.png": {
+          "sha256": "e0cb0d3d8ddd28b2577dd153861afd388ec073821a07ca14e3e6fa1436ede533"
+        },
+        "template/word/numbering.xml": {
+          "sha256": "aa734605fd720f5165a205574027c26e0a1be12992cb5fb339544d737576209f"
+        },
+        "template/word/settings.xml": {
+          "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
+        },
+        "template/word/styles.xml": {
+          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+        },
+        "template/word/theme": {
+          "directory": true
+        },
+        "template/word/theme/theme1.xml": {
+          "sha256": "14d6fc4b249d866d8ab97f1ee68e6601c3feedc56857db791418573bf378f6de"
+        }
+      },
+      "fixture_identities_after": {
+        "article.docx": {
+          "symlink": "/private/tmp/pf8_builder_fixes_mdt0v6af/collision_destination_resolves_inside_work/article_pkg/article.docx"
+        },
+        "article_pkg": {
+          "directory": true
+        },
+        "article_pkg/article.docx": {
+          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+        },
+        "template": {
+          "directory": true
+        },
+        "template/[Content_Types].xml": {
+          "sha256": "441ca5a936418c64142008e642d20155f7a857c429fc909737284cf224460834"
+        },
+        "template/_rels": {
+          "directory": true
+        },
+        "template/_rels/.rels": {
+          "sha256": "641d22a23aa9eb550103a7a01471eaeda5e84c69413e6e03e7fd290b4811a756"
+        },
+        "template/docProps": {
+          "directory": true
+        },
+        "template/docProps/app.xml": {
+          "sha256": "579eba9a8d602575736c3880cf5b529aabbadee0e8cc0e4df8573db0ceadbd4b"
+        },
+        "template/docProps/core.xml": {
+          "sha256": "cc0115a2176f8142574618b84d2eb8f233c1f02351f7fc1543a9156dae2b271b"
+        },
+        "template/docProps/custom.xml": {
+          "sha256": "8ec73cc7ce297e42cc652a1d1884d4ffb18ffa0ba7a6502a36f8da90d1be61a1"
+        },
+        "template/word": {
+          "directory": true
+        },
+        "template/word/_rels": {
+          "directory": true
+        },
+        "template/word/_rels/document.xml.rels": {
+          "sha256": "d1c0d14a8d339e5e6e19c4ecb5196ec574e62bbd6208bbf96775d3aef26f3984"
+        },
+        "template/word/_rels/endnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/fontTable.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/footer1.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/footnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/document.xml": {
+          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+        },
+        "template/word/endnotes.xml": {
+          "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
+        },
+        "template/word/fontTable.xml": {
+          "sha256": "a746dbb577ec5d68983d659707c0750ca89d40b9d3316e31af331d5e1c736bad"
+        },
+        "template/word/footer1.xml": {
+          "sha256": "691071e722f9d8999798d89799fcd70754f1a82a66f36f0d83522ff5a12f3503"
+        },
+        "template/word/footnotes.xml": {
+          "sha256": "774ce254f01cde1079d43e81a0db30ac82b3b2bae875b07c4fe28403ba30b6a9"
+        },
+        "template/word/media": {
+          "directory": true
+        },
+        "template/word/media/1bbb3a0274906de3b6a25a0c0fb799d364b43eab.png": {
+          "sha256": "ddb8947a7e0fa93d69f626e296979c2333003e00ce2c42909ec43d2cfb8194dc"
+        },
+        "template/word/media/218857879d6287b87460540cea2d8ec053df7685.png": {
+          "sha256": "f4112599fbad39c81f14fed472843e555d5ae8d2875748d528c458c2e4333397"
+        },
+        "template/word/media/22b7a6ebcdf0e660764270218b32d59f125252b1.png": {
+          "sha256": "1ec9f0952161ecb7b08a93ccb6dfb91fc7f18934416ea1e3ebdeb4e458c7963e"
+        },
+        "template/word/media/3688abd88a9bb5c823383c5a24db9fb1a27fb11b.png": {
+          "sha256": "ff04cd57304558ddccade4f5918fea3b9157457eebaae6f5fbba1fcac0ae7a72"
+        },
+        "template/word/media/4259b930987b521684a9d5fdcb8c85a5e0699888.png": {
+          "sha256": "694c9cf59254cb01290debb3886d878216b387119037cd6516384be73bc622e9"
+        },
+        "template/word/media/51407415158921d9b2cdff831b1c0b6eb56efef1.png": {
+          "sha256": "46bb410860cd643cad30196f3e74a5b1b007b1d67550ea8781ebd9cf76406d4b"
+        },
+        "template/word/media/93b6764f7192ce47a8c3257fe6d80a68d84833ff.png": {
+          "sha256": "32cb1af0047ef04a810c0b37032bd2b1409fd30e95681d77dfbb989768227455"
+        },
+        "template/word/media/aac1111da8b496d20aec0126921d924d0169b14c.png": {
+          "sha256": "bb9ae020e31c8c9196b778fb4b8b7c972326e97234fa9425b1d1abbfe6145e25"
+        },
+        "template/word/media/c8eab09bbe813dc6fe1001e38fae01b5b7482cd0.png": {
+          "sha256": "364bea28437bd6e319955478e94b6c0830757d726af6333fd2226a60748d83a9"
+        },
+        "template/word/media/ef2a28216bc4f5f75b2374f0c9b8a5946ff37628.png": {
+          "sha256": "e0cb0d3d8ddd28b2577dd153861afd388ec073821a07ca14e3e6fa1436ede533"
+        },
+        "template/word/numbering.xml": {
+          "sha256": "aa734605fd720f5165a205574027c26e0a1be12992cb5fb339544d737576209f"
+        },
+        "template/word/settings.xml": {
+          "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
+        },
+        "template/word/styles.xml": {
+          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+        },
+        "template/word/theme": {
+          "directory": true
+        },
+        "template/word/theme/theme1.xml": {
+          "sha256": "14d6fc4b249d866d8ab97f1ee68e6601c3feedc56857db791418573bf378f6de"
+        }
+      },
+      "passed": true
+    },
+    {
+      "name": "collision_temporary_resolves_inside_work",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/collision_temporary_resolves_inside_work",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "unsafe build paths: temporary archive is inside or aliases the article_pkg work package\n",
+      "expected_diagnostic": "unsafe build paths",
+      "destination_preserved": true,
+      "template_and_all_fixture_bytes_preserved": true,
+      "fixture_identities_before": {
+        "article.docx": {
+          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+        },
+        "article.docx.tmp-build": {
+          "symlink": "/private/tmp/pf8_builder_fixes_mdt0v6af/collision_temporary_resolves_inside_work/article_pkg/keep.bin"
+        },
+        "article_pkg": {
+          "directory": true
+        },
+        "article_pkg/keep.bin": {
+          "sha256": "20424898982b5156e9c5ac7d2c9add1c2876350584eed14c53af77a3d9628d11"
+        },
+        "template": {
+          "directory": true
+        },
+        "template/[Content_Types].xml": {
+          "sha256": "441ca5a936418c64142008e642d20155f7a857c429fc909737284cf224460834"
+        },
+        "template/_rels": {
+          "directory": true
+        },
+        "template/_rels/.rels": {
+          "sha256": "641d22a23aa9eb550103a7a01471eaeda5e84c69413e6e03e7fd290b4811a756"
+        },
+        "template/docProps": {
+          "directory": true
+        },
+        "template/docProps/app.xml": {
+          "sha256": "579eba9a8d602575736c3880cf5b529aabbadee0e8cc0e4df8573db0ceadbd4b"
+        },
+        "template/docProps/core.xml": {
+          "sha256": "cc0115a2176f8142574618b84d2eb8f233c1f02351f7fc1543a9156dae2b271b"
+        },
+        "template/docProps/custom.xml": {
+          "sha256": "8ec73cc7ce297e42cc652a1d1884d4ffb18ffa0ba7a6502a36f8da90d1be61a1"
+        },
+        "template/word": {
+          "directory": true
+        },
+        "template/word/_rels": {
+          "directory": true
+        },
+        "template/word/_rels/document.xml.rels": {
+          "sha256": "d1c0d14a8d339e5e6e19c4ecb5196ec574e62bbd6208bbf96775d3aef26f3984"
+        },
+        "template/word/_rels/endnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/fontTable.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/footer1.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/footnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/document.xml": {
+          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+        },
+        "template/word/endnotes.xml": {
+          "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
+        },
+        "template/word/fontTable.xml": {
+          "sha256": "a746dbb577ec5d68983d659707c0750ca89d40b9d3316e31af331d5e1c736bad"
+        },
+        "template/word/footer1.xml": {
+          "sha256": "691071e722f9d8999798d89799fcd70754f1a82a66f36f0d83522ff5a12f3503"
+        },
+        "template/word/footnotes.xml": {
+          "sha256": "774ce254f01cde1079d43e81a0db30ac82b3b2bae875b07c4fe28403ba30b6a9"
+        },
+        "template/word/media": {
+          "directory": true
+        },
+        "template/word/media/1bbb3a0274906de3b6a25a0c0fb799d364b43eab.png": {
+          "sha256": "ddb8947a7e0fa93d69f626e296979c2333003e00ce2c42909ec43d2cfb8194dc"
+        },
+        "template/word/media/218857879d6287b87460540cea2d8ec053df7685.png": {
+          "sha256": "f4112599fbad39c81f14fed472843e555d5ae8d2875748d528c458c2e4333397"
+        },
+        "template/word/media/22b7a6ebcdf0e660764270218b32d59f125252b1.png": {
+          "sha256": "1ec9f0952161ecb7b08a93ccb6dfb91fc7f18934416ea1e3ebdeb4e458c7963e"
+        },
+        "template/word/media/3688abd88a9bb5c823383c5a24db9fb1a27fb11b.png": {
+          "sha256": "ff04cd57304558ddccade4f5918fea3b9157457eebaae6f5fbba1fcac0ae7a72"
+        },
+        "template/word/media/4259b930987b521684a9d5fdcb8c85a5e0699888.png": {
+          "sha256": "694c9cf59254cb01290debb3886d878216b387119037cd6516384be73bc622e9"
+        },
+        "template/word/media/51407415158921d9b2cdff831b1c0b6eb56efef1.png": {
+          "sha256": "46bb410860cd643cad30196f3e74a5b1b007b1d67550ea8781ebd9cf76406d4b"
+        },
+        "template/word/media/93b6764f7192ce47a8c3257fe6d80a68d84833ff.png": {
+          "sha256": "32cb1af0047ef04a810c0b37032bd2b1409fd30e95681d77dfbb989768227455"
+        },
+        "template/word/media/aac1111da8b496d20aec0126921d924d0169b14c.png": {
+          "sha256": "bb9ae020e31c8c9196b778fb4b8b7c972326e97234fa9425b1d1abbfe6145e25"
+        },
+        "template/word/media/c8eab09bbe813dc6fe1001e38fae01b5b7482cd0.png": {
+          "sha256": "364bea28437bd6e319955478e94b6c0830757d726af6333fd2226a60748d83a9"
+        },
+        "template/word/media/ef2a28216bc4f5f75b2374f0c9b8a5946ff37628.png": {
+          "sha256": "e0cb0d3d8ddd28b2577dd153861afd388ec073821a07ca14e3e6fa1436ede533"
+        },
+        "template/word/numbering.xml": {
+          "sha256": "aa734605fd720f5165a205574027c26e0a1be12992cb5fb339544d737576209f"
+        },
+        "template/word/settings.xml": {
+          "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
+        },
+        "template/word/styles.xml": {
+          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+        },
+        "template/word/theme": {
+          "directory": true
+        },
+        "template/word/theme/theme1.xml": {
+          "sha256": "14d6fc4b249d866d8ab97f1ee68e6601c3feedc56857db791418573bf378f6de"
+        }
+      },
+      "fixture_identities_after": {
+        "article.docx": {
+          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+        },
+        "article.docx.tmp-build": {
+          "symlink": "/private/tmp/pf8_builder_fixes_mdt0v6af/collision_temporary_resolves_inside_work/article_pkg/keep.bin"
+        },
+        "article_pkg": {
+          "directory": true
+        },
+        "article_pkg/keep.bin": {
+          "sha256": "20424898982b5156e9c5ac7d2c9add1c2876350584eed14c53af77a3d9628d11"
+        },
+        "template": {
+          "directory": true
+        },
+        "template/[Content_Types].xml": {
+          "sha256": "441ca5a936418c64142008e642d20155f7a857c429fc909737284cf224460834"
+        },
+        "template/_rels": {
+          "directory": true
+        },
+        "template/_rels/.rels": {
+          "sha256": "641d22a23aa9eb550103a7a01471eaeda5e84c69413e6e03e7fd290b4811a756"
+        },
+        "template/docProps": {
+          "directory": true
+        },
+        "template/docProps/app.xml": {
+          "sha256": "579eba9a8d602575736c3880cf5b529aabbadee0e8cc0e4df8573db0ceadbd4b"
+        },
+        "template/docProps/core.xml": {
+          "sha256": "cc0115a2176f8142574618b84d2eb8f233c1f02351f7fc1543a9156dae2b271b"
+        },
+        "template/docProps/custom.xml": {
+          "sha256": "8ec73cc7ce297e42cc652a1d1884d4ffb18ffa0ba7a6502a36f8da90d1be61a1"
+        },
+        "template/word": {
+          "directory": true
+        },
+        "template/word/_rels": {
+          "directory": true
+        },
+        "template/word/_rels/document.xml.rels": {
+          "sha256": "d1c0d14a8d339e5e6e19c4ecb5196ec574e62bbd6208bbf96775d3aef26f3984"
+        },
+        "template/word/_rels/endnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/fontTable.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/footer1.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/footnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/document.xml": {
+          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+        },
+        "template/word/endnotes.xml": {
+          "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
+        },
+        "template/word/fontTable.xml": {
+          "sha256": "a746dbb577ec5d68983d659707c0750ca89d40b9d3316e31af331d5e1c736bad"
+        },
+        "template/word/footer1.xml": {
+          "sha256": "691071e722f9d8999798d89799fcd70754f1a82a66f36f0d83522ff5a12f3503"
+        },
+        "template/word/footnotes.xml": {
+          "sha256": "774ce254f01cde1079d43e81a0db30ac82b3b2bae875b07c4fe28403ba30b6a9"
+        },
+        "template/word/media": {
+          "directory": true
+        },
+        "template/word/media/1bbb3a0274906de3b6a25a0c0fb799d364b43eab.png": {
+          "sha256": "ddb8947a7e0fa93d69f626e296979c2333003e00ce2c42909ec43d2cfb8194dc"
+        },
+        "template/word/media/218857879d6287b87460540cea2d8ec053df7685.png": {
+          "sha256": "f4112599fbad39c81f14fed472843e555d5ae8d2875748d528c458c2e4333397"
+        },
+        "template/word/media/22b7a6ebcdf0e660764270218b32d59f125252b1.png": {
+          "sha256": "1ec9f0952161ecb7b08a93ccb6dfb91fc7f18934416ea1e3ebdeb4e458c7963e"
+        },
+        "template/word/media/3688abd88a9bb5c823383c5a24db9fb1a27fb11b.png": {
+          "sha256": "ff04cd57304558ddccade4f5918fea3b9157457eebaae6f5fbba1fcac0ae7a72"
+        },
+        "template/word/media/4259b930987b521684a9d5fdcb8c85a5e0699888.png": {
+          "sha256": "694c9cf59254cb01290debb3886d878216b387119037cd6516384be73bc622e9"
+        },
+        "template/word/media/51407415158921d9b2cdff831b1c0b6eb56efef1.png": {
+          "sha256": "46bb410860cd643cad30196f3e74a5b1b007b1d67550ea8781ebd9cf76406d4b"
+        },
+        "template/word/media/93b6764f7192ce47a8c3257fe6d80a68d84833ff.png": {
+          "sha256": "32cb1af0047ef04a810c0b37032bd2b1409fd30e95681d77dfbb989768227455"
+        },
+        "template/word/media/aac1111da8b496d20aec0126921d924d0169b14c.png": {
+          "sha256": "bb9ae020e31c8c9196b778fb4b8b7c972326e97234fa9425b1d1abbfe6145e25"
+        },
+        "template/word/media/c8eab09bbe813dc6fe1001e38fae01b5b7482cd0.png": {
+          "sha256": "364bea28437bd6e319955478e94b6c0830757d726af6333fd2226a60748d83a9"
+        },
+        "template/word/media/ef2a28216bc4f5f75b2374f0c9b8a5946ff37628.png": {
+          "sha256": "e0cb0d3d8ddd28b2577dd153861afd388ec073821a07ca14e3e6fa1436ede533"
+        },
+        "template/word/numbering.xml": {
+          "sha256": "aa734605fd720f5165a205574027c26e0a1be12992cb5fb339544d737576209f"
+        },
+        "template/word/settings.xml": {
+          "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
+        },
+        "template/word/styles.xml": {
+          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+        },
+        "template/word/theme": {
+          "directory": true
+        },
+        "template/word/theme/theme1.xml": {
+          "sha256": "14d6fc4b249d866d8ab97f1ee68e6601c3feedc56857db791418573bf378f6de"
+        }
+      },
+      "passed": true
+    },
+    {
+      "name": "collision_destination_hardlink_in_work",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/collision_destination_hardlink_in_work",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "unsafe build paths: ARTICLE_DOCX is inside or aliases the article_pkg work package\n",
+      "expected_diagnostic": "unsafe build paths",
+      "destination_preserved": true,
+      "template_and_all_fixture_bytes_preserved": true,
+      "fixture_identities_before": {
+        "article.docx": {
+          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+        },
+        "article_pkg": {
+          "directory": true
+        },
+        "article_pkg/old_article.docx": {
+          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+        },
+        "template": {
+          "directory": true
+        },
+        "template/[Content_Types].xml": {
+          "sha256": "441ca5a936418c64142008e642d20155f7a857c429fc909737284cf224460834"
+        },
+        "template/_rels": {
+          "directory": true
+        },
+        "template/_rels/.rels": {
+          "sha256": "641d22a23aa9eb550103a7a01471eaeda5e84c69413e6e03e7fd290b4811a756"
+        },
+        "template/docProps": {
+          "directory": true
+        },
+        "template/docProps/app.xml": {
+          "sha256": "579eba9a8d602575736c3880cf5b529aabbadee0e8cc0e4df8573db0ceadbd4b"
+        },
+        "template/docProps/core.xml": {
+          "sha256": "cc0115a2176f8142574618b84d2eb8f233c1f02351f7fc1543a9156dae2b271b"
+        },
+        "template/docProps/custom.xml": {
+          "sha256": "8ec73cc7ce297e42cc652a1d1884d4ffb18ffa0ba7a6502a36f8da90d1be61a1"
+        },
+        "template/word": {
+          "directory": true
+        },
+        "template/word/_rels": {
+          "directory": true
+        },
+        "template/word/_rels/document.xml.rels": {
+          "sha256": "d1c0d14a8d339e5e6e19c4ecb5196ec574e62bbd6208bbf96775d3aef26f3984"
+        },
+        "template/word/_rels/endnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/fontTable.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/footer1.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/footnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/document.xml": {
+          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+        },
+        "template/word/endnotes.xml": {
+          "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
+        },
+        "template/word/fontTable.xml": {
+          "sha256": "a746dbb577ec5d68983d659707c0750ca89d40b9d3316e31af331d5e1c736bad"
+        },
+        "template/word/footer1.xml": {
+          "sha256": "691071e722f9d8999798d89799fcd70754f1a82a66f36f0d83522ff5a12f3503"
+        },
+        "template/word/footnotes.xml": {
+          "sha256": "774ce254f01cde1079d43e81a0db30ac82b3b2bae875b07c4fe28403ba30b6a9"
+        },
+        "template/word/media": {
+          "directory": true
+        },
+        "template/word/media/1bbb3a0274906de3b6a25a0c0fb799d364b43eab.png": {
+          "sha256": "ddb8947a7e0fa93d69f626e296979c2333003e00ce2c42909ec43d2cfb8194dc"
+        },
+        "template/word/media/218857879d6287b87460540cea2d8ec053df7685.png": {
+          "sha256": "f4112599fbad39c81f14fed472843e555d5ae8d2875748d528c458c2e4333397"
+        },
+        "template/word/media/22b7a6ebcdf0e660764270218b32d59f125252b1.png": {
+          "sha256": "1ec9f0952161ecb7b08a93ccb6dfb91fc7f18934416ea1e3ebdeb4e458c7963e"
+        },
+        "template/word/media/3688abd88a9bb5c823383c5a24db9fb1a27fb11b.png": {
+          "sha256": "ff04cd57304558ddccade4f5918fea3b9157457eebaae6f5fbba1fcac0ae7a72"
+        },
+        "template/word/media/4259b930987b521684a9d5fdcb8c85a5e0699888.png": {
+          "sha256": "694c9cf59254cb01290debb3886d878216b387119037cd6516384be73bc622e9"
+        },
+        "template/word/media/51407415158921d9b2cdff831b1c0b6eb56efef1.png": {
+          "sha256": "46bb410860cd643cad30196f3e74a5b1b007b1d67550ea8781ebd9cf76406d4b"
+        },
+        "template/word/media/93b6764f7192ce47a8c3257fe6d80a68d84833ff.png": {
+          "sha256": "32cb1af0047ef04a810c0b37032bd2b1409fd30e95681d77dfbb989768227455"
+        },
+        "template/word/media/aac1111da8b496d20aec0126921d924d0169b14c.png": {
+          "sha256": "bb9ae020e31c8c9196b778fb4b8b7c972326e97234fa9425b1d1abbfe6145e25"
+        },
+        "template/word/media/c8eab09bbe813dc6fe1001e38fae01b5b7482cd0.png": {
+          "sha256": "364bea28437bd6e319955478e94b6c0830757d726af6333fd2226a60748d83a9"
+        },
+        "template/word/media/ef2a28216bc4f5f75b2374f0c9b8a5946ff37628.png": {
+          "sha256": "e0cb0d3d8ddd28b2577dd153861afd388ec073821a07ca14e3e6fa1436ede533"
+        },
+        "template/word/numbering.xml": {
+          "sha256": "aa734605fd720f5165a205574027c26e0a1be12992cb5fb339544d737576209f"
+        },
+        "template/word/settings.xml": {
+          "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
+        },
+        "template/word/styles.xml": {
+          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+        },
+        "template/word/theme": {
+          "directory": true
+        },
+        "template/word/theme/theme1.xml": {
+          "sha256": "14d6fc4b249d866d8ab97f1ee68e6601c3feedc56857db791418573bf378f6de"
+        }
+      },
+      "fixture_identities_after": {
+        "article.docx": {
+          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+        },
+        "article_pkg": {
+          "directory": true
+        },
+        "article_pkg/old_article.docx": {
+          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+        },
+        "template": {
+          "directory": true
+        },
+        "template/[Content_Types].xml": {
+          "sha256": "441ca5a936418c64142008e642d20155f7a857c429fc909737284cf224460834"
+        },
+        "template/_rels": {
+          "directory": true
+        },
+        "template/_rels/.rels": {
+          "sha256": "641d22a23aa9eb550103a7a01471eaeda5e84c69413e6e03e7fd290b4811a756"
+        },
+        "template/docProps": {
+          "directory": true
+        },
+        "template/docProps/app.xml": {
+          "sha256": "579eba9a8d602575736c3880cf5b529aabbadee0e8cc0e4df8573db0ceadbd4b"
+        },
+        "template/docProps/core.xml": {
+          "sha256": "cc0115a2176f8142574618b84d2eb8f233c1f02351f7fc1543a9156dae2b271b"
+        },
+        "template/docProps/custom.xml": {
+          "sha256": "8ec73cc7ce297e42cc652a1d1884d4ffb18ffa0ba7a6502a36f8da90d1be61a1"
+        },
+        "template/word": {
+          "directory": true
+        },
+        "template/word/_rels": {
+          "directory": true
+        },
+        "template/word/_rels/document.xml.rels": {
+          "sha256": "d1c0d14a8d339e5e6e19c4ecb5196ec574e62bbd6208bbf96775d3aef26f3984"
+        },
+        "template/word/_rels/endnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/fontTable.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/footer1.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/footnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/document.xml": {
+          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+        },
+        "template/word/endnotes.xml": {
+          "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
+        },
+        "template/word/fontTable.xml": {
+          "sha256": "a746dbb577ec5d68983d659707c0750ca89d40b9d3316e31af331d5e1c736bad"
+        },
+        "template/word/footer1.xml": {
+          "sha256": "691071e722f9d8999798d89799fcd70754f1a82a66f36f0d83522ff5a12f3503"
+        },
+        "template/word/footnotes.xml": {
+          "sha256": "774ce254f01cde1079d43e81a0db30ac82b3b2bae875b07c4fe28403ba30b6a9"
+        },
+        "template/word/media": {
+          "directory": true
+        },
+        "template/word/media/1bbb3a0274906de3b6a25a0c0fb799d364b43eab.png": {
+          "sha256": "ddb8947a7e0fa93d69f626e296979c2333003e00ce2c42909ec43d2cfb8194dc"
+        },
+        "template/word/media/218857879d6287b87460540cea2d8ec053df7685.png": {
+          "sha256": "f4112599fbad39c81f14fed472843e555d5ae8d2875748d528c458c2e4333397"
+        },
+        "template/word/media/22b7a6ebcdf0e660764270218b32d59f125252b1.png": {
+          "sha256": "1ec9f0952161ecb7b08a93ccb6dfb91fc7f18934416ea1e3ebdeb4e458c7963e"
+        },
+        "template/word/media/3688abd88a9bb5c823383c5a24db9fb1a27fb11b.png": {
+          "sha256": "ff04cd57304558ddccade4f5918fea3b9157457eebaae6f5fbba1fcac0ae7a72"
+        },
+        "template/word/media/4259b930987b521684a9d5fdcb8c85a5e0699888.png": {
+          "sha256": "694c9cf59254cb01290debb3886d878216b387119037cd6516384be73bc622e9"
+        },
+        "template/word/media/51407415158921d9b2cdff831b1c0b6eb56efef1.png": {
+          "sha256": "46bb410860cd643cad30196f3e74a5b1b007b1d67550ea8781ebd9cf76406d4b"
+        },
+        "template/word/media/93b6764f7192ce47a8c3257fe6d80a68d84833ff.png": {
+          "sha256": "32cb1af0047ef04a810c0b37032bd2b1409fd30e95681d77dfbb989768227455"
+        },
+        "template/word/media/aac1111da8b496d20aec0126921d924d0169b14c.png": {
+          "sha256": "bb9ae020e31c8c9196b778fb4b8b7c972326e97234fa9425b1d1abbfe6145e25"
+        },
+        "template/word/media/c8eab09bbe813dc6fe1001e38fae01b5b7482cd0.png": {
+          "sha256": "364bea28437bd6e319955478e94b6c0830757d726af6333fd2226a60748d83a9"
+        },
+        "template/word/media/ef2a28216bc4f5f75b2374f0c9b8a5946ff37628.png": {
+          "sha256": "e0cb0d3d8ddd28b2577dd153861afd388ec073821a07ca14e3e6fa1436ede533"
+        },
+        "template/word/numbering.xml": {
+          "sha256": "aa734605fd720f5165a205574027c26e0a1be12992cb5fb339544d737576209f"
+        },
+        "template/word/settings.xml": {
+          "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
+        },
+        "template/word/styles.xml": {
+          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+        },
+        "template/word/theme": {
+          "directory": true
+        },
+        "template/word/theme/theme1.xml": {
+          "sha256": "14d6fc4b249d866d8ab97f1ee68e6601c3feedc56857db791418573bf378f6de"
+        }
+      },
+      "passed": true
+    },
+    {
+      "name": "collision_temporary_hardlink_to_destination",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/collision_temporary_hardlink_to_destination",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "unsafe build paths: temporary archive aliases ARTICLE_DOCX\n",
+      "expected_diagnostic": "unsafe build paths",
+      "destination_preserved": true,
+      "template_and_all_fixture_bytes_preserved": true,
+      "fixture_identities_before": {
+        "article.docx": {
+          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+        },
+        "article.docx.tmp-build": {
+          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+        },
+        "template": {
+          "directory": true
+        },
+        "template/[Content_Types].xml": {
+          "sha256": "441ca5a936418c64142008e642d20155f7a857c429fc909737284cf224460834"
+        },
+        "template/_rels": {
+          "directory": true
+        },
+        "template/_rels/.rels": {
+          "sha256": "641d22a23aa9eb550103a7a01471eaeda5e84c69413e6e03e7fd290b4811a756"
+        },
+        "template/docProps": {
+          "directory": true
+        },
+        "template/docProps/app.xml": {
+          "sha256": "579eba9a8d602575736c3880cf5b529aabbadee0e8cc0e4df8573db0ceadbd4b"
+        },
+        "template/docProps/core.xml": {
+          "sha256": "cc0115a2176f8142574618b84d2eb8f233c1f02351f7fc1543a9156dae2b271b"
+        },
+        "template/docProps/custom.xml": {
+          "sha256": "8ec73cc7ce297e42cc652a1d1884d4ffb18ffa0ba7a6502a36f8da90d1be61a1"
+        },
+        "template/word": {
+          "directory": true
+        },
+        "template/word/_rels": {
+          "directory": true
+        },
+        "template/word/_rels/document.xml.rels": {
+          "sha256": "d1c0d14a8d339e5e6e19c4ecb5196ec574e62bbd6208bbf96775d3aef26f3984"
+        },
+        "template/word/_rels/endnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/fontTable.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/footer1.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/footnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/document.xml": {
+          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+        },
+        "template/word/endnotes.xml": {
+          "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
+        },
+        "template/word/fontTable.xml": {
+          "sha256": "a746dbb577ec5d68983d659707c0750ca89d40b9d3316e31af331d5e1c736bad"
+        },
+        "template/word/footer1.xml": {
+          "sha256": "691071e722f9d8999798d89799fcd70754f1a82a66f36f0d83522ff5a12f3503"
+        },
+        "template/word/footnotes.xml": {
+          "sha256": "774ce254f01cde1079d43e81a0db30ac82b3b2bae875b07c4fe28403ba30b6a9"
+        },
+        "template/word/media": {
+          "directory": true
+        },
+        "template/word/media/1bbb3a0274906de3b6a25a0c0fb799d364b43eab.png": {
+          "sha256": "ddb8947a7e0fa93d69f626e296979c2333003e00ce2c42909ec43d2cfb8194dc"
+        },
+        "template/word/media/218857879d6287b87460540cea2d8ec053df7685.png": {
+          "sha256": "f4112599fbad39c81f14fed472843e555d5ae8d2875748d528c458c2e4333397"
+        },
+        "template/word/media/22b7a6ebcdf0e660764270218b32d59f125252b1.png": {
+          "sha256": "1ec9f0952161ecb7b08a93ccb6dfb91fc7f18934416ea1e3ebdeb4e458c7963e"
+        },
+        "template/word/media/3688abd88a9bb5c823383c5a24db9fb1a27fb11b.png": {
+          "sha256": "ff04cd57304558ddccade4f5918fea3b9157457eebaae6f5fbba1fcac0ae7a72"
+        },
+        "template/word/media/4259b930987b521684a9d5fdcb8c85a5e0699888.png": {
+          "sha256": "694c9cf59254cb01290debb3886d878216b387119037cd6516384be73bc622e9"
+        },
+        "template/word/media/51407415158921d9b2cdff831b1c0b6eb56efef1.png": {
+          "sha256": "46bb410860cd643cad30196f3e74a5b1b007b1d67550ea8781ebd9cf76406d4b"
+        },
+        "template/word/media/93b6764f7192ce47a8c3257fe6d80a68d84833ff.png": {
+          "sha256": "32cb1af0047ef04a810c0b37032bd2b1409fd30e95681d77dfbb989768227455"
+        },
+        "template/word/media/aac1111da8b496d20aec0126921d924d0169b14c.png": {
+          "sha256": "bb9ae020e31c8c9196b778fb4b8b7c972326e97234fa9425b1d1abbfe6145e25"
+        },
+        "template/word/media/c8eab09bbe813dc6fe1001e38fae01b5b7482cd0.png": {
+          "sha256": "364bea28437bd6e319955478e94b6c0830757d726af6333fd2226a60748d83a9"
+        },
+        "template/word/media/ef2a28216bc4f5f75b2374f0c9b8a5946ff37628.png": {
+          "sha256": "e0cb0d3d8ddd28b2577dd153861afd388ec073821a07ca14e3e6fa1436ede533"
+        },
+        "template/word/numbering.xml": {
+          "sha256": "aa734605fd720f5165a205574027c26e0a1be12992cb5fb339544d737576209f"
+        },
+        "template/word/settings.xml": {
+          "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
+        },
+        "template/word/styles.xml": {
+          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+        },
+        "template/word/theme": {
+          "directory": true
+        },
+        "template/word/theme/theme1.xml": {
+          "sha256": "14d6fc4b249d866d8ab97f1ee68e6601c3feedc56857db791418573bf378f6de"
+        }
+      },
+      "fixture_identities_after": {
+        "article.docx": {
+          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+        },
+        "article.docx.tmp-build": {
+          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+        },
+        "template": {
+          "directory": true
+        },
+        "template/[Content_Types].xml": {
+          "sha256": "441ca5a936418c64142008e642d20155f7a857c429fc909737284cf224460834"
+        },
+        "template/_rels": {
+          "directory": true
+        },
+        "template/_rels/.rels": {
+          "sha256": "641d22a23aa9eb550103a7a01471eaeda5e84c69413e6e03e7fd290b4811a756"
+        },
+        "template/docProps": {
+          "directory": true
+        },
+        "template/docProps/app.xml": {
+          "sha256": "579eba9a8d602575736c3880cf5b529aabbadee0e8cc0e4df8573db0ceadbd4b"
+        },
+        "template/docProps/core.xml": {
+          "sha256": "cc0115a2176f8142574618b84d2eb8f233c1f02351f7fc1543a9156dae2b271b"
+        },
+        "template/docProps/custom.xml": {
+          "sha256": "8ec73cc7ce297e42cc652a1d1884d4ffb18ffa0ba7a6502a36f8da90d1be61a1"
+        },
+        "template/word": {
+          "directory": true
+        },
+        "template/word/_rels": {
+          "directory": true
+        },
+        "template/word/_rels/document.xml.rels": {
+          "sha256": "d1c0d14a8d339e5e6e19c4ecb5196ec574e62bbd6208bbf96775d3aef26f3984"
+        },
+        "template/word/_rels/endnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/fontTable.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/footer1.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/footnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/document.xml": {
+          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+        },
+        "template/word/endnotes.xml": {
+          "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
+        },
+        "template/word/fontTable.xml": {
+          "sha256": "a746dbb577ec5d68983d659707c0750ca89d40b9d3316e31af331d5e1c736bad"
+        },
+        "template/word/footer1.xml": {
+          "sha256": "691071e722f9d8999798d89799fcd70754f1a82a66f36f0d83522ff5a12f3503"
+        },
+        "template/word/footnotes.xml": {
+          "sha256": "774ce254f01cde1079d43e81a0db30ac82b3b2bae875b07c4fe28403ba30b6a9"
+        },
+        "template/word/media": {
+          "directory": true
+        },
+        "template/word/media/1bbb3a0274906de3b6a25a0c0fb799d364b43eab.png": {
+          "sha256": "ddb8947a7e0fa93d69f626e296979c2333003e00ce2c42909ec43d2cfb8194dc"
+        },
+        "template/word/media/218857879d6287b87460540cea2d8ec053df7685.png": {
+          "sha256": "f4112599fbad39c81f14fed472843e555d5ae8d2875748d528c458c2e4333397"
+        },
+        "template/word/media/22b7a6ebcdf0e660764270218b32d59f125252b1.png": {
+          "sha256": "1ec9f0952161ecb7b08a93ccb6dfb91fc7f18934416ea1e3ebdeb4e458c7963e"
+        },
+        "template/word/media/3688abd88a9bb5c823383c5a24db9fb1a27fb11b.png": {
+          "sha256": "ff04cd57304558ddccade4f5918fea3b9157457eebaae6f5fbba1fcac0ae7a72"
+        },
+        "template/word/media/4259b930987b521684a9d5fdcb8c85a5e0699888.png": {
+          "sha256": "694c9cf59254cb01290debb3886d878216b387119037cd6516384be73bc622e9"
+        },
+        "template/word/media/51407415158921d9b2cdff831b1c0b6eb56efef1.png": {
+          "sha256": "46bb410860cd643cad30196f3e74a5b1b007b1d67550ea8781ebd9cf76406d4b"
+        },
+        "template/word/media/93b6764f7192ce47a8c3257fe6d80a68d84833ff.png": {
+          "sha256": "32cb1af0047ef04a810c0b37032bd2b1409fd30e95681d77dfbb989768227455"
+        },
+        "template/word/media/aac1111da8b496d20aec0126921d924d0169b14c.png": {
+          "sha256": "bb9ae020e31c8c9196b778fb4b8b7c972326e97234fa9425b1d1abbfe6145e25"
+        },
+        "template/word/media/c8eab09bbe813dc6fe1001e38fae01b5b7482cd0.png": {
+          "sha256": "364bea28437bd6e319955478e94b6c0830757d726af6333fd2226a60748d83a9"
+        },
+        "template/word/media/ef2a28216bc4f5f75b2374f0c9b8a5946ff37628.png": {
+          "sha256": "e0cb0d3d8ddd28b2577dd153861afd388ec073821a07ca14e3e6fa1436ede533"
+        },
+        "template/word/numbering.xml": {
+          "sha256": "aa734605fd720f5165a205574027c26e0a1be12992cb5fb339544d737576209f"
+        },
+        "template/word/settings.xml": {
+          "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
+        },
+        "template/word/styles.xml": {
+          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+        },
+        "template/word/theme": {
+          "directory": true
+        },
+        "template/word/theme/theme1.xml": {
+          "sha256": "14d6fc4b249d866d8ab97f1ee68e6601c3feedc56857db791418573bf378f6de"
+        }
+      },
+      "passed": true
+    },
+    {
+      "name": "collision_destination_inside_template",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/collision_destination_inside_template",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "unsafe build paths: ARTICLE_DOCX is inside or aliases the ARTICLE_TEMPLATE\n",
+      "expected_diagnostic": "unsafe build paths",
+      "destination_preserved": true,
+      "template_and_all_fixture_bytes_preserved": true,
+      "fixture_identities_before": {
+        "template": {
+          "directory": true
+        },
+        "template/[Content_Types].xml": {
+          "sha256": "441ca5a936418c64142008e642d20155f7a857c429fc909737284cf224460834"
+        },
+        "template/_rels": {
+          "directory": true
+        },
+        "template/_rels/.rels": {
+          "sha256": "641d22a23aa9eb550103a7a01471eaeda5e84c69413e6e03e7fd290b4811a756"
+        },
+        "template/docProps": {
+          "directory": true
+        },
+        "template/docProps/app.xml": {
+          "sha256": "579eba9a8d602575736c3880cf5b529aabbadee0e8cc0e4df8573db0ceadbd4b"
+        },
+        "template/docProps/core.xml": {
+          "sha256": "cc0115a2176f8142574618b84d2eb8f233c1f02351f7fc1543a9156dae2b271b"
+        },
+        "template/docProps/custom.xml": {
+          "sha256": "8ec73cc7ce297e42cc652a1d1884d4ffb18ffa0ba7a6502a36f8da90d1be61a1"
+        },
+        "template/old_article.docx": {
+          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+        },
+        "template/word": {
+          "directory": true
+        },
+        "template/word/_rels": {
+          "directory": true
+        },
+        "template/word/_rels/document.xml.rels": {
+          "sha256": "d1c0d14a8d339e5e6e19c4ecb5196ec574e62bbd6208bbf96775d3aef26f3984"
+        },
+        "template/word/_rels/endnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/fontTable.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/footer1.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/footnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/document.xml": {
+          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+        },
+        "template/word/endnotes.xml": {
+          "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
+        },
+        "template/word/fontTable.xml": {
+          "sha256": "a746dbb577ec5d68983d659707c0750ca89d40b9d3316e31af331d5e1c736bad"
+        },
+        "template/word/footer1.xml": {
+          "sha256": "691071e722f9d8999798d89799fcd70754f1a82a66f36f0d83522ff5a12f3503"
+        },
+        "template/word/footnotes.xml": {
+          "sha256": "774ce254f01cde1079d43e81a0db30ac82b3b2bae875b07c4fe28403ba30b6a9"
+        },
+        "template/word/media": {
+          "directory": true
+        },
+        "template/word/media/1bbb3a0274906de3b6a25a0c0fb799d364b43eab.png": {
+          "sha256": "ddb8947a7e0fa93d69f626e296979c2333003e00ce2c42909ec43d2cfb8194dc"
+        },
+        "template/word/media/218857879d6287b87460540cea2d8ec053df7685.png": {
+          "sha256": "f4112599fbad39c81f14fed472843e555d5ae8d2875748d528c458c2e4333397"
+        },
+        "template/word/media/22b7a6ebcdf0e660764270218b32d59f125252b1.png": {
+          "sha256": "1ec9f0952161ecb7b08a93ccb6dfb91fc7f18934416ea1e3ebdeb4e458c7963e"
+        },
+        "template/word/media/3688abd88a9bb5c823383c5a24db9fb1a27fb11b.png": {
+          "sha256": "ff04cd57304558ddccade4f5918fea3b9157457eebaae6f5fbba1fcac0ae7a72"
+        },
+        "template/word/media/4259b930987b521684a9d5fdcb8c85a5e0699888.png": {
+          "sha256": "694c9cf59254cb01290debb3886d878216b387119037cd6516384be73bc622e9"
+        },
+        "template/word/media/51407415158921d9b2cdff831b1c0b6eb56efef1.png": {
+          "sha256": "46bb410860cd643cad30196f3e74a5b1b007b1d67550ea8781ebd9cf76406d4b"
+        },
+        "template/word/media/93b6764f7192ce47a8c3257fe6d80a68d84833ff.png": {
+          "sha256": "32cb1af0047ef04a810c0b37032bd2b1409fd30e95681d77dfbb989768227455"
+        },
+        "template/word/media/aac1111da8b496d20aec0126921d924d0169b14c.png": {
+          "sha256": "bb9ae020e31c8c9196b778fb4b8b7c972326e97234fa9425b1d1abbfe6145e25"
+        },
+        "template/word/media/c8eab09bbe813dc6fe1001e38fae01b5b7482cd0.png": {
+          "sha256": "364bea28437bd6e319955478e94b6c0830757d726af6333fd2226a60748d83a9"
+        },
+        "template/word/media/ef2a28216bc4f5f75b2374f0c9b8a5946ff37628.png": {
+          "sha256": "e0cb0d3d8ddd28b2577dd153861afd388ec073821a07ca14e3e6fa1436ede533"
+        },
+        "template/word/numbering.xml": {
+          "sha256": "aa734605fd720f5165a205574027c26e0a1be12992cb5fb339544d737576209f"
+        },
+        "template/word/settings.xml": {
+          "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
+        },
+        "template/word/styles.xml": {
+          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+        },
+        "template/word/theme": {
+          "directory": true
+        },
+        "template/word/theme/theme1.xml": {
+          "sha256": "14d6fc4b249d866d8ab97f1ee68e6601c3feedc56857db791418573bf378f6de"
+        }
+      },
+      "fixture_identities_after": {
+        "template": {
+          "directory": true
+        },
+        "template/[Content_Types].xml": {
+          "sha256": "441ca5a936418c64142008e642d20155f7a857c429fc909737284cf224460834"
+        },
+        "template/_rels": {
+          "directory": true
+        },
+        "template/_rels/.rels": {
+          "sha256": "641d22a23aa9eb550103a7a01471eaeda5e84c69413e6e03e7fd290b4811a756"
+        },
+        "template/docProps": {
+          "directory": true
+        },
+        "template/docProps/app.xml": {
+          "sha256": "579eba9a8d602575736c3880cf5b529aabbadee0e8cc0e4df8573db0ceadbd4b"
+        },
+        "template/docProps/core.xml": {
+          "sha256": "cc0115a2176f8142574618b84d2eb8f233c1f02351f7fc1543a9156dae2b271b"
+        },
+        "template/docProps/custom.xml": {
+          "sha256": "8ec73cc7ce297e42cc652a1d1884d4ffb18ffa0ba7a6502a36f8da90d1be61a1"
+        },
+        "template/old_article.docx": {
+          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+        },
+        "template/word": {
+          "directory": true
+        },
+        "template/word/_rels": {
+          "directory": true
+        },
+        "template/word/_rels/document.xml.rels": {
+          "sha256": "d1c0d14a8d339e5e6e19c4ecb5196ec574e62bbd6208bbf96775d3aef26f3984"
+        },
+        "template/word/_rels/endnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/fontTable.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/footer1.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/footnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/document.xml": {
+          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+        },
+        "template/word/endnotes.xml": {
+          "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
+        },
+        "template/word/fontTable.xml": {
+          "sha256": "a746dbb577ec5d68983d659707c0750ca89d40b9d3316e31af331d5e1c736bad"
+        },
+        "template/word/footer1.xml": {
+          "sha256": "691071e722f9d8999798d89799fcd70754f1a82a66f36f0d83522ff5a12f3503"
+        },
+        "template/word/footnotes.xml": {
+          "sha256": "774ce254f01cde1079d43e81a0db30ac82b3b2bae875b07c4fe28403ba30b6a9"
+        },
+        "template/word/media": {
+          "directory": true
+        },
+        "template/word/media/1bbb3a0274906de3b6a25a0c0fb799d364b43eab.png": {
+          "sha256": "ddb8947a7e0fa93d69f626e296979c2333003e00ce2c42909ec43d2cfb8194dc"
+        },
+        "template/word/media/218857879d6287b87460540cea2d8ec053df7685.png": {
+          "sha256": "f4112599fbad39c81f14fed472843e555d5ae8d2875748d528c458c2e4333397"
+        },
+        "template/word/media/22b7a6ebcdf0e660764270218b32d59f125252b1.png": {
+          "sha256": "1ec9f0952161ecb7b08a93ccb6dfb91fc7f18934416ea1e3ebdeb4e458c7963e"
+        },
+        "template/word/media/3688abd88a9bb5c823383c5a24db9fb1a27fb11b.png": {
+          "sha256": "ff04cd57304558ddccade4f5918fea3b9157457eebaae6f5fbba1fcac0ae7a72"
+        },
+        "template/word/media/4259b930987b521684a9d5fdcb8c85a5e0699888.png": {
+          "sha256": "694c9cf59254cb01290debb3886d878216b387119037cd6516384be73bc622e9"
+        },
+        "template/word/media/51407415158921d9b2cdff831b1c0b6eb56efef1.png": {
+          "sha256": "46bb410860cd643cad30196f3e74a5b1b007b1d67550ea8781ebd9cf76406d4b"
+        },
+        "template/word/media/93b6764f7192ce47a8c3257fe6d80a68d84833ff.png": {
+          "sha256": "32cb1af0047ef04a810c0b37032bd2b1409fd30e95681d77dfbb989768227455"
+        },
+        "template/word/media/aac1111da8b496d20aec0126921d924d0169b14c.png": {
+          "sha256": "bb9ae020e31c8c9196b778fb4b8b7c972326e97234fa9425b1d1abbfe6145e25"
+        },
+        "template/word/media/c8eab09bbe813dc6fe1001e38fae01b5b7482cd0.png": {
+          "sha256": "364bea28437bd6e319955478e94b6c0830757d726af6333fd2226a60748d83a9"
+        },
+        "template/word/media/ef2a28216bc4f5f75b2374f0c9b8a5946ff37628.png": {
+          "sha256": "e0cb0d3d8ddd28b2577dd153861afd388ec073821a07ca14e3e6fa1436ede533"
+        },
+        "template/word/numbering.xml": {
+          "sha256": "aa734605fd720f5165a205574027c26e0a1be12992cb5fb339544d737576209f"
+        },
+        "template/word/settings.xml": {
+          "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
+        },
+        "template/word/styles.xml": {
+          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+        },
+        "template/word/theme": {
+          "directory": true
+        },
+        "template/word/theme/theme1.xml": {
+          "sha256": "14d6fc4b249d866d8ab97f1ee68e6601c3feedc56857db791418573bf378f6de"
+        }
+      },
+      "passed": true
+    },
+    {
+      "name": "collision_temporary_hardlink_to_input",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/collision_temporary_hardlink_to_input",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "unsafe build paths: temporary archive aliases ARTICLE_MD\n",
+      "expected_diagnostic": "unsafe build paths",
+      "destination_preserved": true,
+      "template_and_all_fixture_bytes_preserved": true,
+      "fixture_identities_before": {
+        "article.docx": {
+          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+        },
+        "article.docx.tmp-build": {
+          "sha256": "f420fc740de3fd9390bd39b7e564f085206c1daf0ec28cd952cbbbc23d81158c"
+        },
+        "article.md": {
+          "sha256": "f420fc740de3fd9390bd39b7e564f085206c1daf0ec28cd952cbbbc23d81158c"
+        },
+        "template": {
+          "directory": true
+        },
+        "template/[Content_Types].xml": {
+          "sha256": "441ca5a936418c64142008e642d20155f7a857c429fc909737284cf224460834"
+        },
+        "template/_rels": {
+          "directory": true
+        },
+        "template/_rels/.rels": {
+          "sha256": "641d22a23aa9eb550103a7a01471eaeda5e84c69413e6e03e7fd290b4811a756"
+        },
+        "template/docProps": {
+          "directory": true
+        },
+        "template/docProps/app.xml": {
+          "sha256": "579eba9a8d602575736c3880cf5b529aabbadee0e8cc0e4df8573db0ceadbd4b"
+        },
+        "template/docProps/core.xml": {
+          "sha256": "cc0115a2176f8142574618b84d2eb8f233c1f02351f7fc1543a9156dae2b271b"
+        },
+        "template/docProps/custom.xml": {
+          "sha256": "8ec73cc7ce297e42cc652a1d1884d4ffb18ffa0ba7a6502a36f8da90d1be61a1"
+        },
+        "template/word": {
+          "directory": true
+        },
+        "template/word/_rels": {
+          "directory": true
+        },
+        "template/word/_rels/document.xml.rels": {
+          "sha256": "d1c0d14a8d339e5e6e19c4ecb5196ec574e62bbd6208bbf96775d3aef26f3984"
+        },
+        "template/word/_rels/endnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/fontTable.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/footer1.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/footnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/document.xml": {
+          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+        },
+        "template/word/endnotes.xml": {
+          "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
+        },
+        "template/word/fontTable.xml": {
+          "sha256": "a746dbb577ec5d68983d659707c0750ca89d40b9d3316e31af331d5e1c736bad"
+        },
+        "template/word/footer1.xml": {
+          "sha256": "691071e722f9d8999798d89799fcd70754f1a82a66f36f0d83522ff5a12f3503"
+        },
+        "template/word/footnotes.xml": {
+          "sha256": "774ce254f01cde1079d43e81a0db30ac82b3b2bae875b07c4fe28403ba30b6a9"
+        },
+        "template/word/media": {
+          "directory": true
+        },
+        "template/word/media/1bbb3a0274906de3b6a25a0c0fb799d364b43eab.png": {
+          "sha256": "ddb8947a7e0fa93d69f626e296979c2333003e00ce2c42909ec43d2cfb8194dc"
+        },
+        "template/word/media/218857879d6287b87460540cea2d8ec053df7685.png": {
+          "sha256": "f4112599fbad39c81f14fed472843e555d5ae8d2875748d528c458c2e4333397"
+        },
+        "template/word/media/22b7a6ebcdf0e660764270218b32d59f125252b1.png": {
+          "sha256": "1ec9f0952161ecb7b08a93ccb6dfb91fc7f18934416ea1e3ebdeb4e458c7963e"
+        },
+        "template/word/media/3688abd88a9bb5c823383c5a24db9fb1a27fb11b.png": {
+          "sha256": "ff04cd57304558ddccade4f5918fea3b9157457eebaae6f5fbba1fcac0ae7a72"
+        },
+        "template/word/media/4259b930987b521684a9d5fdcb8c85a5e0699888.png": {
+          "sha256": "694c9cf59254cb01290debb3886d878216b387119037cd6516384be73bc622e9"
+        },
+        "template/word/media/51407415158921d9b2cdff831b1c0b6eb56efef1.png": {
+          "sha256": "46bb410860cd643cad30196f3e74a5b1b007b1d67550ea8781ebd9cf76406d4b"
+        },
+        "template/word/media/93b6764f7192ce47a8c3257fe6d80a68d84833ff.png": {
+          "sha256": "32cb1af0047ef04a810c0b37032bd2b1409fd30e95681d77dfbb989768227455"
+        },
+        "template/word/media/aac1111da8b496d20aec0126921d924d0169b14c.png": {
+          "sha256": "bb9ae020e31c8c9196b778fb4b8b7c972326e97234fa9425b1d1abbfe6145e25"
+        },
+        "template/word/media/c8eab09bbe813dc6fe1001e38fae01b5b7482cd0.png": {
+          "sha256": "364bea28437bd6e319955478e94b6c0830757d726af6333fd2226a60748d83a9"
+        },
+        "template/word/media/ef2a28216bc4f5f75b2374f0c9b8a5946ff37628.png": {
+          "sha256": "e0cb0d3d8ddd28b2577dd153861afd388ec073821a07ca14e3e6fa1436ede533"
+        },
+        "template/word/numbering.xml": {
+          "sha256": "aa734605fd720f5165a205574027c26e0a1be12992cb5fb339544d737576209f"
+        },
+        "template/word/settings.xml": {
+          "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
+        },
+        "template/word/styles.xml": {
+          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+        },
+        "template/word/theme": {
+          "directory": true
+        },
+        "template/word/theme/theme1.xml": {
+          "sha256": "14d6fc4b249d866d8ab97f1ee68e6601c3feedc56857db791418573bf378f6de"
+        }
+      },
+      "fixture_identities_after": {
+        "article.docx": {
+          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+        },
+        "article.docx.tmp-build": {
+          "sha256": "f420fc740de3fd9390bd39b7e564f085206c1daf0ec28cd952cbbbc23d81158c"
+        },
+        "article.md": {
+          "sha256": "f420fc740de3fd9390bd39b7e564f085206c1daf0ec28cd952cbbbc23d81158c"
+        },
+        "template": {
+          "directory": true
+        },
+        "template/[Content_Types].xml": {
+          "sha256": "441ca5a936418c64142008e642d20155f7a857c429fc909737284cf224460834"
+        },
+        "template/_rels": {
+          "directory": true
+        },
+        "template/_rels/.rels": {
+          "sha256": "641d22a23aa9eb550103a7a01471eaeda5e84c69413e6e03e7fd290b4811a756"
+        },
+        "template/docProps": {
+          "directory": true
+        },
+        "template/docProps/app.xml": {
+          "sha256": "579eba9a8d602575736c3880cf5b529aabbadee0e8cc0e4df8573db0ceadbd4b"
+        },
+        "template/docProps/core.xml": {
+          "sha256": "cc0115a2176f8142574618b84d2eb8f233c1f02351f7fc1543a9156dae2b271b"
+        },
+        "template/docProps/custom.xml": {
+          "sha256": "8ec73cc7ce297e42cc652a1d1884d4ffb18ffa0ba7a6502a36f8da90d1be61a1"
+        },
+        "template/word": {
+          "directory": true
+        },
+        "template/word/_rels": {
+          "directory": true
+        },
+        "template/word/_rels/document.xml.rels": {
+          "sha256": "d1c0d14a8d339e5e6e19c4ecb5196ec574e62bbd6208bbf96775d3aef26f3984"
+        },
+        "template/word/_rels/endnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/fontTable.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/footer1.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/_rels/footnotes.xml.rels": {
+          "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
+        },
+        "template/word/document.xml": {
+          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+        },
+        "template/word/endnotes.xml": {
+          "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
+        },
+        "template/word/fontTable.xml": {
+          "sha256": "a746dbb577ec5d68983d659707c0750ca89d40b9d3316e31af331d5e1c736bad"
+        },
+        "template/word/footer1.xml": {
+          "sha256": "691071e722f9d8999798d89799fcd70754f1a82a66f36f0d83522ff5a12f3503"
+        },
+        "template/word/footnotes.xml": {
+          "sha256": "774ce254f01cde1079d43e81a0db30ac82b3b2bae875b07c4fe28403ba30b6a9"
+        },
+        "template/word/media": {
+          "directory": true
+        },
+        "template/word/media/1bbb3a0274906de3b6a25a0c0fb799d364b43eab.png": {
+          "sha256": "ddb8947a7e0fa93d69f626e296979c2333003e00ce2c42909ec43d2cfb8194dc"
+        },
+        "template/word/media/218857879d6287b87460540cea2d8ec053df7685.png": {
+          "sha256": "f4112599fbad39c81f14fed472843e555d5ae8d2875748d528c458c2e4333397"
+        },
+        "template/word/media/22b7a6ebcdf0e660764270218b32d59f125252b1.png": {
+          "sha256": "1ec9f0952161ecb7b08a93ccb6dfb91fc7f18934416ea1e3ebdeb4e458c7963e"
+        },
+        "template/word/media/3688abd88a9bb5c823383c5a24db9fb1a27fb11b.png": {
+          "sha256": "ff04cd57304558ddccade4f5918fea3b9157457eebaae6f5fbba1fcac0ae7a72"
+        },
+        "template/word/media/4259b930987b521684a9d5fdcb8c85a5e0699888.png": {
+          "sha256": "694c9cf59254cb01290debb3886d878216b387119037cd6516384be73bc622e9"
+        },
+        "template/word/media/51407415158921d9b2cdff831b1c0b6eb56efef1.png": {
+          "sha256": "46bb410860cd643cad30196f3e74a5b1b007b1d67550ea8781ebd9cf76406d4b"
+        },
+        "template/word/media/93b6764f7192ce47a8c3257fe6d80a68d84833ff.png": {
+          "sha256": "32cb1af0047ef04a810c0b37032bd2b1409fd30e95681d77dfbb989768227455"
+        },
+        "template/word/media/aac1111da8b496d20aec0126921d924d0169b14c.png": {
+          "sha256": "bb9ae020e31c8c9196b778fb4b8b7c972326e97234fa9425b1d1abbfe6145e25"
+        },
+        "template/word/media/c8eab09bbe813dc6fe1001e38fae01b5b7482cd0.png": {
+          "sha256": "364bea28437bd6e319955478e94b6c0830757d726af6333fd2226a60748d83a9"
+        },
+        "template/word/media/ef2a28216bc4f5f75b2374f0c9b8a5946ff37628.png": {
+          "sha256": "e0cb0d3d8ddd28b2577dd153861afd388ec073821a07ca14e3e6fa1436ede533"
+        },
+        "template/word/numbering.xml": {
+          "sha256": "aa734605fd720f5165a205574027c26e0a1be12992cb5fb339544d737576209f"
+        },
+        "template/word/settings.xml": {
+          "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
+        },
+        "template/word/styles.xml": {
+          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+        },
+        "template/word/theme": {
+          "directory": true
+        },
+        "template/word/theme/theme1.xml": {
+          "sha256": "14d6fc4b249d866d8ab97f1ee68e6601c3feedc56857db791418573bf378f6de"
+        }
+      },
+      "passed": true
+    }
+  ],
+  "all_passed": true
+}

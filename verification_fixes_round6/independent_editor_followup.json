@@ -1,0 +1,201 @@
+{
+  "scope": "Independent rerun of all 14 original scratch fixtures, including five previously failing visible inline controls. No document or editor edits.",
+  "script": "/Users/samnimoh/Desktop/chromo/tools/apply_edits.py",
+  "script_sha256_before": "978273fa74bb892d50e5870c13a2daf2225fd465d2af7514feda42abfe1c67d2",
+  "script_sha256_after": "978273fa74bb892d50e5870c13a2daf2225fd465d2af7514feda42abfe1c67d2",
+  "script_stable": true,
+  "prior_review": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/independent_editor_review.json",
+  "prior_review_sha256": "93ef4aea3a51e02775b9ea072dc6f14f2e02fcd6933ec28b8a9453683ea09ea8",
+  "primary_regression_count": 49,
+  "primary_regression_source_matches": true,
+  "results": [
+    {
+      "name": "same_paragraph_mixed_spacing_ambiguous",
+      "returncode": 1,
+      "xml_unchanged": true,
+      "expected_code": 1,
+      "result_texts": [
+        "alpha beta / alpha  beta"
+      ],
+      "stdout": "applied 0 | not located 0 | run-conflicts 0 | ambiguous 1\n  of applied, spanning >1 run: 0\n\nAMBIGUOUS (quote is not unique \u2014 add \"occurrence\": <1-based int>):\n   [0] -: 2 matches: 'alpha beta'\n",
+      "stderr": "\nREFUSING TO WRITE: 0 not located, 1 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 0 that matched.\n",
+      "passed": true,
+      "previously_failed": false
+    },
+    {
+      "name": "three_mixed_candidates_occurrence_3",
+      "returncode": 0,
+      "xml_unchanged": false,
+      "expected_code": 0,
+      "result_texts": [
+        "alpha   beta",
+        "alpha beta",
+        "new phrase"
+      ],
+      "stdout": "applied 1 | not located 0 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n\nwrote word/document.xml: 244 -> 244 bytes, 1 runs modified\n",
+      "stderr": "",
+      "passed": true,
+      "previously_failed": false
+    },
+    {
+      "name": "multi_run_preserves_prefix_suffix",
+      "returncode": 0,
+      "xml_unchanged": false,
+      "expected_code": 0,
+      "result_texts": [
+        "left new phrase right"
+      ],
+      "stdout": "applied 1 | not located 0 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 1\n\nwrote word/document.xml: 253 -> 253 bytes, 3 runs modified\n",
+      "stderr": "",
+      "passed": true,
+      "previously_failed": false
+    },
+    {
+      "name": "content_control_runs",
+      "returncode": 0,
+      "xml_unchanged": false,
+      "expected_code": 0,
+      "result_texts": [
+        "new phrase"
+      ],
+      "stdout": "applied 1 | not located 0 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 1\n\nwrote word/document.xml: 222 -> 222 bytes, 2 runs modified\n",
+      "stderr": "",
+      "passed": true,
+      "previously_failed": false
+    },
+    {
+      "name": "escaped_entities_across_runs",
+      "returncode": 0,
+      "xml_unchanged": false,
+      "expected_code": 0,
+      "result_texts": [
+        "new &lt; literal"
+      ],
+      "stdout": "applied 1 | not located 0 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 1\n\nwrote word/document.xml: 184 -> 188 bytes, 2 runs modified\n",
+      "stderr": "",
+      "passed": true,
+      "previously_failed": false
+    },
+    {
+      "name": "block_boundary_occurrence_cannot_create_match",
+      "returncode": 1,
+      "xml_unchanged": true,
+      "expected_code": 1,
+      "result_texts": [
+        "alpha ",
+        "beta"
+      ],
+      "stdout": "applied 0 | not located 0 | run-conflicts 0 | ambiguous 1\n  of applied, spanning >1 run: 0\n\nAMBIGUOUS (quote is not unique \u2014 add \"occurrence\": <1-based int>):\n   [0] -: 0 matches: 'occurrence must be a 1-based integer within the match count: alpha beta'\n",
+      "stderr": "\nREFUSING TO WRITE: 0 not located, 1 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 0 that matched.\n",
+      "passed": true,
+      "previously_failed": false
+    },
+    {
+      "name": "drawing_boundary",
+      "returncode": 1,
+      "xml_unchanged": true,
+      "expected_code": 1,
+      "result_texts": [
+        "alpha beta"
+      ],
+      "stdout": "applied 0 | not located 1 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n\nNOT LOCATED:\n   [0] -: 'alpha beta'\n",
+      "stderr": "\nREFUSING TO WRITE: 1 not located, 0 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 0 that matched.\n",
+      "passed": true,
+      "previously_failed": false
+    },
+    {
+      "name": "mixed_list_bad_occurrence_no_write",
+      "returncode": 1,
+      "xml_unchanged": true,
+      "expected_code": 1,
+      "result_texts": [
+        "alpha beta / gamma"
+      ],
+      "stdout": "applied 1 | not located 0 | run-conflicts 0 | ambiguous 1\n  of applied, spanning >1 run: 0\n\nAMBIGUOUS (quote is not unique \u2014 add \"occurrence\": <1-based int>):\n   [1] -: 1 matches: 'occurrence must be a 1-based integer within the match count: gamma'\n",
+      "stderr": "\nREFUSING TO WRITE: 0 not located, 1 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 1 that matched.\n",
+      "passed": true,
+      "previously_failed": false
+    },
+    {
+      "name": "mixed_list_ambiguous_no_write",
+      "returncode": 1,
+      "xml_unchanged": true,
+      "expected_code": 1,
+      "result_texts": [
+        "unique / alpha beta / alpha  beta"
+      ],
+      "stdout": "applied 1 | not located 0 | run-conflicts 0 | ambiguous 1\n  of applied, spanning >1 run: 0\n\nAMBIGUOUS (quote is not unique \u2014 add \"occurrence\": <1-based int>):\n   [1] -: 2 matches: 'alpha beta'\n",
+      "stderr": "\nREFUSING TO WRITE: 0 not located, 1 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 1 that matched.\n",
+      "passed": true,
+      "previously_failed": false
+    },
+    {
+      "name": "visible_inline_sym",
+      "returncode": 1,
+      "xml_unchanged": true,
+      "expected_code": 1,
+      "result_texts": [
+        "alphabeta"
+      ],
+      "stdout": "applied 0 | not located 1 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n\nNOT LOCATED:\n   [0] -: 'alphabeta'\n",
+      "stderr": "\nREFUSING TO WRITE: 1 not located, 0 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 0 that matched.\n",
+      "passed": true,
+      "previously_failed": true
+    },
+    {
+      "name": "visible_inline_noBreakHyphen",
+      "returncode": 1,
+      "xml_unchanged": true,
+      "expected_code": 1,
+      "result_texts": [
+        "alphabeta"
+      ],
+      "stdout": "applied 0 | not located 1 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n\nNOT LOCATED:\n   [0] -: 'alphabeta'\n",
+      "stderr": "\nREFUSING TO WRITE: 1 not located, 0 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 0 that matched.\n",
+      "passed": true,
+      "previously_failed": true
+    },
+    {
+      "name": "visible_inline_softHyphen",
+      "returncode": 1,
+      "xml_unchanged": true,
+      "expected_code": 1,
+      "result_texts": [
+        "alphabeta"
+      ],
+      "stdout": "applied 0 | not located 1 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n\nNOT LOCATED:\n   [0] -: 'alphabeta'\n",
+      "stderr": "\nREFUSING TO WRITE: 1 not located, 0 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 0 that matched.\n",
+      "passed": true,
+      "previously_failed": true
+    },
+    {
+      "name": "visible_inline_footnoteReference",
+      "returncode": 1,
+      "xml_unchanged": true,
+      "expected_code": 1,
+      "result_texts": [
+        "alphabeta"
+      ],
+      "stdout": "applied 0 | not located 1 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n\nNOT LOCATED:\n   [0] -: 'alphabeta'\n",
+      "stderr": "\nREFUSING TO WRITE: 1 not located, 0 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 0 that matched.\n",
+      "passed": true,
+      "previously_failed": true
+    },
+    {
+      "name": "visible_inline_endnoteReference",
+      "returncode": 1,
+      "xml_unchanged": true,
+      "expected_code": 1,
+      "result_texts": [
+        "alphabeta"
+      ],
+      "stdout": "applied 0 | not located 1 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n\nNOT LOCATED:\n   [0] -: 'alphabeta'\n",
+      "stderr": "\nREFUSING TO WRITE: 1 not located, 0 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 0 that matched.\n",
+      "passed": true,
+      "previously_failed": true
+    }
+  ],
+  "all_passed": true,
+  "remaining_findings": [],
+  "scope_limit": "Bounded fixture and code review, not a proof of complete WordprocessingML support."
+}
