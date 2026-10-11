@@ -1,0 +1,27 @@
+{
+  "status": "bounded_pass",
+  "all_passed": true,
+  "current_article_sha256": "6c45b8f509d87a512af773ab1d771d51e8d2c8d89343ae6e1356f161fc0494b4",
+  "builder_sha256": "9d90d195263494b40658623a72405c4132b7d9581549855d65b3ded7362cb776",
+  "all_uncompressed_package_parts_identical": true,
+  "package_parts": {
+    "[Content_Types].xml": "973bef5daa0929739617319b438e142be7d092f63973c566e61730aead8da929",
+    "docProps/app.xml": "579eba9a8d602575736c3880cf5b529aabbadee0e8cc0e4df8573db0ceadbd4b",
+    "docProps/custom.xml": "8ec73cc7ce297e42cc652a1d1884d4ffb18ffa0ba7a6502a36f8da90d1be61a1",
+    "docProps/core.xml": "ef36ce62223999e1ee6ac4a6d92a6dca5cf0b581855869354222cb9dce17f90c",
+    "_rels/.rels": "5b85658f56eef32fc6001cc494f6b2269a6ff6d4e361b1a9dc0eaae4f28a8be4",
+    "word/fontTable.xml": "a746dbb577ec5d68983d659707c0750ca89d40b9d3316e31af331d5e1c736bad",
+    "word/document.xml": "52235407ae73dfccaf4e0ce84a6b76d21d23e338be9fcb1e77fa3c8dff1ac672",
+    "word/settings.xml": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a",
+    "word/styles.xml": "619d734d8ca4ef36c12d430339eba98e932d59c4e4e0502ce8c51c46160e159f",
+    "word/theme/theme1.xml": "14d6fc4b249d866d8ab97f1ee68e6601c3feedc56857db791418573bf378f6de",
+    "word/_rels/document.xml.rels": "7a9bb774d5071eec1fcb44baf40894f91225d8db35a363cb8806ed993d95a09f",
+    "word/_rels/fontTable.xml.rels": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09",
+    "word/media/218857879d6287b87460540cea2d8ec053df7685.png": "f4112599fbad39c81f14fed472843e555d5ae8d2875748d528c458c2e4333397",
+    "word/media/93b6764f7192ce47a8c3257fe6d80a68d84833ff.png": "32cb1af0047ef04a810c0b37032bd2b1409fd30e95681d77dfbb989768227455",
+    "word/media/c8eab09bbe813dc6fe1001e38fae01b5b7482cd0.png": "364bea28437bd6e319955478e94b6c0830757d726af6333fd2226a60748d83a9"
+  },
+  "current_article_unmodified": true,
+  "stdout": "document.xml well-formed\nwrote /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_round7_builder_equivalence_zyzj521x/rebuilt.docx  1.19 MB\n",
+  "scope": "Scratch document assembly using the final helper and current canonical template/source. Every part equals the current article; ZIP timestamps need not match."
+}

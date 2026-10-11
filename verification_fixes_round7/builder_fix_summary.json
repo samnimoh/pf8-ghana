@@ -1,0 +1,54 @@
+{
+  "status": "awaiting_independent_review",
+  "scope": "Article helper and relevant README only; no deliverable/source-scientific-file edits or commits. Parent owns rebuilding, rendering and versioning.",
+  "builder": {
+    "path": "/Users/samnimoh/Desktop/chromo/tools/build_article.py",
+    "bytes": 28947,
+    "sha256": "55a7b960ab42804d814e783d660b8573985d17fd0330abeac5b650311ed2ef2f"
+  },
+  "readme": {
+    "path": "/Users/samnimoh/Desktop/chromo/tools/README.md",
+    "bytes": 5452,
+    "sha256": "b6852792419c85010034c6ab9c0bd5f0ad96827a6bbb40fd92c79fe0b3962793"
+  },
+  "new_regressions": {
+    "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/builder_regression_results.json",
+    "bytes": 47758,
+    "sha256": "15cce53557a9c9315a86011e58b130eb361429148ddc5467486d2b336af3f6d3"
+  },
+  "new_regression_driver": {
+    "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/builder_regression_tests.py",
+    "bytes": 12303,
+    "sha256": "a7ed8201b26240d4028860ad5caf4be25ac35c23b015886401c9c147e101dc82"
+  },
+  "prior_regressions_adapted_copy": {
+    "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/builder_round6_regression_results.json",
+    "bytes": 176300,
+    "sha256": "fb1e41bfec52ef2f2d16fd79ac6a7698a1ac0e35557ea6447c97988803678f2e"
+  },
+  "prior_regressions_adapted_driver": {
+    "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/builder_round6_regression_tests.py",
+    "bytes": 15795,
+    "sha256": "b7260eda7cbdb4554dce36fd2f5b13e68c7f7239ea7fb0cc65cfa29246648562"
+  },
+  "adaptations_to_prior_driver": [
+    "Output evidence filename relocated to verification_fixes_round7.",
+    "Expected article/XML oracle rebuilt by changed helper in scratch for intentional header/metadata changes.",
+    "Original verification_fixes_round6 driver and result files not edited."
+  ],
+  "tests_passed": 59,
+  "changes": [
+    "Exclusive unique sibling created with mkstemp; archive writes/fsync/CRC/OPC validation use its original descriptor.",
+    "Only the owned regular temporary inode is eligible for replacement/cleanup; pre-existing legacy links/files are not opened/removed. Existing alias/path guards retained.",
+    "Destination permissions retained; all injected failures preserve original destination.",
+    "Table 2 explicitly labels first/second-zone count columns and widens them within the same table width; numerical cells unchanged.",
+    "Article core title derived from first visible Markdown title. Existing other core properties/custom metadata target retained; missing unreferenced core metadata added deterministically."
+  ],
+  "limits": [
+    "No DOCX/PDF rendering performed by this agent; parent will rebuild and inspect changed Table 2 layout.",
+    "Per-destination replacement only; whole-project transactions and crash/power-loss durability are not certified.",
+    "The inode check rejects a detected temp pathname substitution and avoids unlinking the foreign object; it is not a proof against arbitrary concurrent hostile filesystem races.",
+    "OPC validation is retained; full OOXML schema and image decoding remain outside scope."
+  ],
+  "real_document_and_pdf_bytes_unchanged": true
+}

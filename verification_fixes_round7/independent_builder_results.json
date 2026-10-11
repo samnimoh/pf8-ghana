@@ -1,0 +1,234 @@
+{
+  "generated_utc": "2026-10-11T11:26:31.334488+00:00",
+  "builder": {
+    "path": "/Users/samnimoh/Desktop/chromo/tools/build_article.py",
+    "bytes": 28947,
+    "sha256": "55a7b960ab42804d814e783d660b8573985d17fd0330abeac5b650311ed2ef2f"
+  },
+  "driver": {
+    "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/independent_builder_tests.py",
+    "bytes": 11580,
+    "sha256": "006ab7fb5d2e9c2efb31bd657d7c4a926bc6bdbeece08a15ea6a6c2658600509"
+  },
+  "builder_stable": true,
+  "protected_before": [
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx",
+      "bytes": 4048301,
+      "sha256": "c1774fafc8db9a4b18ee39cec7b36397cca39a6cffb311b82ac974774896b920"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx",
+      "bytes": 4049126,
+      "sha256": "05f941e8a11af7edafb2490f24438f512ead053e968f96babd2711b082634fff"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.docx",
+      "bytes": 1193292,
+      "sha256": "6c45b8f509d87a512af773ab1d771d51e8d2c8d89343ae6e1356f161fc0494b4"
+    }
+  ],
+  "protected_after": [
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx",
+      "bytes": 4048301,
+      "sha256": "c1774fafc8db9a4b18ee39cec7b36397cca39a6cffb311b82ac974774896b920"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx",
+      "bytes": 4049126,
+      "sha256": "05f941e8a11af7edafb2490f24438f512ead053e968f96babd2711b082634fff"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.docx",
+      "bytes": 1193292,
+      "sha256": "6c45b8f509d87a512af773ab1d771d51e8d2c8d89343ae6e1356f161fc0494b4"
+    }
+  ],
+  "protected_bytes_unchanged": true,
+  "tests": [
+    {
+      "name": "legacy_unrelated_link_success",
+      "returncode": 0,
+      "expected_success": true,
+      "stderr": "",
+      "destination_preserved": null,
+      "sentinel_preserved": true,
+      "source_template_preserved": true,
+      "legacy_link_preserved": true,
+      "temporary_present": false,
+      "core_target": "docProps/core.xml",
+      "core_title": "Scratch & title with formatting FST",
+      "visible_title": "Scratch & title with formatting FST",
+      "other_core_properties_preserved": true,
+      "headers": [
+        "Zone pair",
+        "n (first zone)",
+        "n (second zone)",
+        "FST",
+        "95% CI",
+        "Excludes zero"
+      ],
+      "passed": true
+    },
+    {
+      "name": "legacy_unrelated_link_archive_failure",
+      "returncode": 1,
+      "expected_success": false,
+      "stderr": "Traceback (most recent call last):\n  File \"/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_round7_independent_builder_7bccz9g8/wrapper.py\", line 35, in <module>\n    runpy.run_path(builder,run_name='__main__')\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 506, in <module>\n    zf.write(full, os.path.relpath(full, OUT))\n  File \"/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_round7_independent_builder_7bccz9g8/wrapper.py\", line 15, in fail\n    if n==3: raise OSError('independent archive write failure')\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nOSError: independent archive write failure\n",
+      "destination_preserved": true,
+      "sentinel_preserved": true,
+      "source_template_preserved": true,
+      "legacy_link_preserved": true,
+      "temporary_present": false,
+      "passed": true
+    },
+    {
+      "name": "no_prior_destination_default_mode",
+      "returncode": 0,
+      "expected_success": true,
+      "stderr": "",
+      "destination_preserved": null,
+      "sentinel_preserved": true,
+      "source_template_preserved": true,
+      "legacy_link_preserved": true,
+      "temporary_present": false,
+      "core_target": "docProps/core.xml",
+      "core_title": "Scratch & title with formatting FST",
+      "visible_title": "Scratch & title with formatting FST",
+      "other_core_properties_preserved": true,
+      "headers": [
+        "Zone pair",
+        "n (first zone)",
+        "n (second zone)",
+        "FST",
+        "95% CI",
+        "Excludes zero"
+      ],
+      "passed": true
+    },
+    {
+      "name": "fchmod",
+      "returncode": 1,
+      "expected_success": false,
+      "stderr": "Traceback (most recent call last):\n  File \"/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_round7_independent_builder_7bccz9g8/wrapper.py\", line 35, in <module>\n    runpy.run_path(builder,run_name='__main__')\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 508, in <module>\n    os.fchmod(fh.fileno(), stat.S_IMODE(Path(DOCX).stat().st_mode) if Path(DOCX).exists() else 0o644)\n  File \"/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_round7_independent_builder_7bccz9g8/wrapper.py\", line 19, in fail\n    def fail(*a,**kw): raise OSError('independent fchmod failure')\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nOSError: independent fchmod failure\n",
+      "destination_preserved": true,
+      "sentinel_preserved": true,
+      "source_template_preserved": true,
+      "legacy_link_preserved": true,
+      "temporary_present": false,
+      "passed": true
+    },
+    {
+      "name": "keyboard_interrupt",
+      "returncode": -2,
+      "expected_success": false,
+      "stderr": "Traceback (most recent call last):\n  File \"/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_round7_independent_builder_7bccz9g8/wrapper.py\", line 35, in <module>\n    runpy.run_path(builder,run_name='__main__')\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 512, in <module>\n    if zf.testzip() is not None:\n       ^^^^^^^^^^^^\n  File \"/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_round7_independent_builder_7bccz9g8/wrapper.py\", line 22, in fail\n    def fail(*a,**kw): raise KeyboardInterrupt('independent integrity interruption')\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyboardInterrupt: independent integrity interruption\n",
+      "destination_preserved": true,
+      "sentinel_preserved": true,
+      "source_template_preserved": true,
+      "legacy_link_preserved": true,
+      "temporary_present": false,
+      "passed": true
+    },
+    {
+      "name": "swap_regular",
+      "returncode": 1,
+      "expected_success": false,
+      "stderr": "Traceback (most recent call last):\n  File \"/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_round7_independent_builder_7bccz9g8/wrapper.py\", line 35, in <module>\n    runpy.run_path(builder,run_name='__main__')\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 516, in <module>\n    raise RuntimeError(\"temporary archive pathname no longer identifies the owned file\")\nRuntimeError: temporary archive pathname no longer identifies the owned file\n",
+      "destination_preserved": true,
+      "sentinel_preserved": true,
+      "source_template_preserved": true,
+      "legacy_link_preserved": true,
+      "temporary_present": true,
+      "passed": true
+    },
+    {
+      "name": "swap_hardlink",
+      "returncode": 1,
+      "expected_success": false,
+      "stderr": "Traceback (most recent call last):\n  File \"/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_round7_independent_builder_7bccz9g8/wrapper.py\", line 35, in <module>\n    runpy.run_path(builder,run_name='__main__')\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 516, in <module>\n    raise RuntimeError(\"temporary archive pathname no longer identifies the owned file\")\nRuntimeError: temporary archive pathname no longer identifies the owned file\n",
+      "destination_preserved": true,
+      "sentinel_preserved": true,
+      "source_template_preserved": true,
+      "legacy_link_preserved": true,
+      "temporary_present": true,
+      "passed": true
+    },
+    {
+      "name": "delete_temporary",
+      "returncode": 1,
+      "expected_success": false,
+      "stderr": "Traceback (most recent call last):\n  File \"/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_round7_independent_builder_7bccz9g8/wrapper.py\", line 35, in <module>\n    runpy.run_path(builder,run_name='__main__')\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 516, in <module>\n    raise RuntimeError(\"temporary archive pathname no longer identifies the owned file\")\nRuntimeError: temporary archive pathname no longer identifies the owned file\n",
+      "destination_preserved": true,
+      "sentinel_preserved": true,
+      "source_template_preserved": true,
+      "legacy_link_preserved": true,
+      "temporary_present": false,
+      "passed": true
+    },
+    {
+      "name": "duplicate_core_relationship_rejected",
+      "returncode": 1,
+      "expected_success": false,
+      "stderr": "Traceback (most recent call last):\n  File \"/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_round7_independent_builder_7bccz9g8/wrapper.py\", line 35, in <module>\n    runpy.run_path(builder,run_name='__main__')\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 429, in <module>\n    raise ValueError(\"package has multiple core-properties relationships\")\nValueError: package has multiple core-properties relationships\n",
+      "destination_preserved": true,
+      "sentinel_preserved": true,
+      "source_template_preserved": true,
+      "legacy_link_preserved": true,
+      "temporary_present": false,
+      "passed": true
+    },
+    {
+      "name": "external_core_relationship_rejected",
+      "returncode": 1,
+      "expected_success": false,
+      "stderr": "Traceback (most recent call last):\n  File \"/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_round7_independent_builder_7bccz9g8/wrapper.py\", line 35, in <module>\n    runpy.run_path(builder,run_name='__main__')\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 437, in <module>\n    raise ValueError(\"invalid core-properties relationship target\")\nValueError: invalid core-properties relationship target\n",
+      "destination_preserved": true,
+      "sentinel_preserved": true,
+      "source_template_preserved": true,
+      "legacy_link_preserved": true,
+      "temporary_present": false,
+      "passed": true
+    },
+    {
+      "name": "unrelated_core_properties_retained",
+      "returncode": 0,
+      "expected_success": true,
+      "stderr": "",
+      "destination_preserved": null,
+      "sentinel_preserved": true,
+      "source_template_preserved": true,
+      "legacy_link_preserved": true,
+      "temporary_present": false,
+      "core_target": "docProps/core.xml",
+      "core_title": "Scratch & title with formatting FST",
+      "visible_title": "Scratch & title with formatting FST",
+      "other_core_properties_preserved": true,
+      "headers": [
+        "Zone pair",
+        "n (first zone)",
+        "n (second zone)",
+        "FST",
+        "95% CI",
+        "Excludes zero"
+      ],
+      "passed": true
+    },
+    {
+      "name": "encoded_core_override_supported_by_validator",
+      "returncode": 1,
+      "expected_success": true,
+      "stderr": "Traceback (most recent call last):\n  File \"/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_round7_independent_builder_7bccz9g8/wrapper.py\", line 35, in <module>\n    runpy.run_path(builder,run_name='__main__')\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 514, in <module>\n    validate_package(zf)\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 149, in validate_package\n    raise ValueError(f\"duplicate content-type override: {part}\")\nValueError: duplicate content-type override: /docProps/core.xml\n",
+      "destination_preserved": true,
+      "sentinel_preserved": true,
+      "source_template_preserved": true,
+      "legacy_link_preserved": true,
+      "temporary_present": false,
+      "passed": false
+    }
+  ],
+  "tests_passed": 11,
+  "all_passed": false,
+  "scope": "Independent scratch-only assembly checks; no scientific execution, shipping document changes, rendering or previous evidence overwrite."
+}

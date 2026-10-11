@@ -1,0 +1,1095 @@
+{
+  "builder": {
+    "path": "/Users/samnimoh/Desktop/chromo/tools/build_article.py",
+    "bytes": 28947,
+    "sha256": "55a7b960ab42804d814e783d660b8573985d17fd0330abeac5b650311ed2ef2f"
+  },
+  "driver": {
+    "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/builder_regression_tests.py",
+    "bytes": 12303,
+    "sha256": "a7ed8201b26240d4028860ad5caf4be25ac35c23b015886401c9c147e101dc82"
+  },
+  "tests": [
+    {
+      "case": "normal_metadata_headers_mode",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/fault_driver.py",
+        "",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/normal_metadata_headers_mode/created_temp.txt",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/normal_metadata_headers_mode/unrelated.txt"
+      ],
+      "returncode": 0,
+      "stdout": "document.xml well-formed\nwrote /private/tmp/pf8-round7-builder-n75dm9lh/normal_metadata_headers_mode/article.docx  1.16 MB\n",
+      "stderr": "",
+      "destination_before": {
+        "path": "/private/tmp/pf8-round7-builder-n75dm9lh/normal_metadata_headers_mode/article.docx",
+        "bytes": 1193182,
+        "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
+      },
+      "destination_after": {
+        "path": "/private/tmp/pf8-round7-builder-n75dm9lh/normal_metadata_headers_mode/article.docx",
+        "bytes": 1163911,
+        "sha256": "787c9e25cd2f8249bc08785465336be679ecbcf2a909b4a96a531e8b9953b5ea"
+      },
+      "destination_is_regular": true,
+      "destination_mode": "0o640",
+      "unrelated_sentinel_preserved": true,
+      "legacy_path_preserved": true,
+      "created_temporary": "/private/tmp/pf8-round7-builder-n75dm9lh/normal_metadata_headers_mode/article.docx.tmp-build-9ouug59b.tmp",
+      "created_temporary_lexists_after": false,
+      "core_title": "Scratch title",
+      "visible_title": "Scratch title",
+      "table_2_headers": [
+        "Zone pair",
+        "n (first zone)",
+        "n (second zone)",
+        "FST",
+        "95% CI",
+        "Excludes zero"
+      ],
+      "table_2_count_columns": [
+        [
+          "204",
+          "1,334"
+        ],
+        [
+          "204",
+          "25"
+        ],
+        [
+          "337",
+          "25"
+        ],
+        [
+          "337",
+          "1,334"
+        ],
+        [
+          "1,334",
+          "25"
+        ],
+        [
+          "204",
+          "337"
+        ]
+      ],
+      "inherited_title_changed": true,
+      "creator_preserved": true,
+      "passed": true
+    },
+    {
+      "case": "unrelated_legacy_symlink_success",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/fault_driver.py",
+        "",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/unrelated_legacy_symlink_success/created_temp.txt",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/unrelated_legacy_symlink_success/unrelated.txt"
+      ],
+      "returncode": 0,
+      "stdout": "document.xml well-formed\nwrote /private/tmp/pf8-round7-builder-n75dm9lh/unrelated_legacy_symlink_success/article.docx  1.16 MB\n",
+      "stderr": "",
+      "destination_before": {
+        "path": "/private/tmp/pf8-round7-builder-n75dm9lh/unrelated_legacy_symlink_success/article.docx",
+        "bytes": 1193182,
+        "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
+      },
+      "destination_after": {
+        "path": "/private/tmp/pf8-round7-builder-n75dm9lh/unrelated_legacy_symlink_success/article.docx",
+        "bytes": 1163911,
+        "sha256": "787c9e25cd2f8249bc08785465336be679ecbcf2a909b4a96a531e8b9953b5ea"
+      },
+      "destination_is_regular": true,
+      "destination_mode": "0o640",
+      "unrelated_sentinel_preserved": true,
+      "legacy_path_preserved": true,
+      "created_temporary": "/private/tmp/pf8-round7-builder-n75dm9lh/unrelated_legacy_symlink_success/article.docx.tmp-build-h0rm0ug5.tmp",
+      "created_temporary_lexists_after": false,
+      "core_title": "Scratch title",
+      "visible_title": "Scratch title",
+      "table_2_headers": [
+        "Zone pair",
+        "n (first zone)",
+        "n (second zone)",
+        "FST",
+        "95% CI",
+        "Excludes zero"
+      ],
+      "table_2_count_columns": [
+        [
+          "204",
+          "1,334"
+        ],
+        [
+          "204",
+          "25"
+        ],
+        [
+          "337",
+          "25"
+        ],
+        [
+          "337",
+          "1,334"
+        ],
+        [
+          "1,334",
+          "25"
+        ],
+        [
+          "204",
+          "337"
+        ]
+      ],
+      "inherited_title_changed": true,
+      "creator_preserved": true,
+      "passed": true
+    },
+    {
+      "case": "unrelated_legacy_symlink_failure",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/fault_driver.py",
+        "archive",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/unrelated_legacy_symlink_failure/created_temp.txt",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/unrelated_legacy_symlink_failure/unrelated.txt"
+      ],
+      "returncode": 1,
+      "stdout": "document.xml well-formed\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/private/tmp/pf8-round7-builder-n75dm9lh/fault_driver.py\", line 41, in <module>\n    runpy.run_path(builder,run_name='__main__')\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 506, in <module>\n    zf.write(full, os.path.relpath(full, OUT))\n  File \"/private/tmp/pf8-round7-builder-n75dm9lh/fault_driver.py\", line 16, in fail\n    if n==5: raise OSError('injected archive-write failure')\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nOSError: injected archive-write failure\n",
+      "destination_before": {
+        "path": "/private/tmp/pf8-round7-builder-n75dm9lh/unrelated_legacy_symlink_failure/article.docx",
+        "bytes": 1193182,
+        "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
+      },
+      "destination_after": {
+        "path": "/private/tmp/pf8-round7-builder-n75dm9lh/unrelated_legacy_symlink_failure/article.docx",
+        "bytes": 1193182,
+        "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
+      },
+      "destination_is_regular": true,
+      "destination_mode": "0o640",
+      "unrelated_sentinel_preserved": true,
+      "legacy_path_preserved": true,
+      "created_temporary": "/private/tmp/pf8-round7-builder-n75dm9lh/unrelated_legacy_symlink_failure/article.docx.tmp-build-vin0y5_5.tmp",
+      "created_temporary_lexists_after": false,
+      "passed": true
+    },
+    {
+      "case": "destination_alias_rejected",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/fault_driver.py",
+        "",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/destination_alias_rejected/created_temp.txt",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/destination_alias_rejected/unrelated.txt"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "unsafe build paths: temporary archive aliases ARTICLE_DOCX\n",
+      "destination_before": {
+        "path": "/private/tmp/pf8-round7-builder-n75dm9lh/destination_alias_rejected/article.docx",
+        "bytes": 1193182,
+        "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
+      },
+      "destination_after": {
+        "path": "/private/tmp/pf8-round7-builder-n75dm9lh/destination_alias_rejected/article.docx",
+        "bytes": 1193182,
+        "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
+      },
+      "destination_is_regular": true,
+      "destination_mode": "0o640",
+      "unrelated_sentinel_preserved": true,
+      "legacy_path_preserved": true,
+      "created_temporary": null,
+      "created_temporary_lexists_after": false,
+      "passed": true
+    },
+    {
+      "case": "dangling_legacy_symlink_untouched",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/fault_driver.py",
+        "",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/dangling_legacy_symlink_untouched/created_temp.txt",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/dangling_legacy_symlink_untouched/unrelated.txt"
+      ],
+      "returncode": 0,
+      "stdout": "document.xml well-formed\nwrote /private/tmp/pf8-round7-builder-n75dm9lh/dangling_legacy_symlink_untouched/article.docx  1.16 MB\n",
+      "stderr": "",
+      "destination_before": {
+        "path": "/private/tmp/pf8-round7-builder-n75dm9lh/dangling_legacy_symlink_untouched/article.docx",
+        "bytes": 1193182,
+        "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
+      },
+      "destination_after": {
+        "path": "/private/tmp/pf8-round7-builder-n75dm9lh/dangling_legacy_symlink_untouched/article.docx",
+        "bytes": 1163911,
+        "sha256": "787c9e25cd2f8249bc08785465336be679ecbcf2a909b4a96a531e8b9953b5ea"
+      },
+      "destination_is_regular": true,
+      "destination_mode": "0o640",
+      "unrelated_sentinel_preserved": true,
+      "legacy_path_preserved": true,
+      "created_temporary": "/private/tmp/pf8-round7-builder-n75dm9lh/dangling_legacy_symlink_untouched/article.docx.tmp-build-gfnozpla.tmp",
+      "created_temporary_lexists_after": false,
+      "core_title": "Scratch title",
+      "visible_title": "Scratch title",
+      "table_2_headers": [
+        "Zone pair",
+        "n (first zone)",
+        "n (second zone)",
+        "FST",
+        "95% CI",
+        "Excludes zero"
+      ],
+      "table_2_count_columns": [
+        [
+          "204",
+          "1,334"
+        ],
+        [
+          "204",
+          "25"
+        ],
+        [
+          "337",
+          "25"
+        ],
+        [
+          "337",
+          "1,334"
+        ],
+        [
+          "1,334",
+          "25"
+        ],
+        [
+          "204",
+          "337"
+        ]
+      ],
+      "inherited_title_changed": true,
+      "creator_preserved": true,
+      "passed": true
+    },
+    {
+      "case": "regular_legacy_temp_untouched",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/fault_driver.py",
+        "",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/regular_legacy_temp_untouched/created_temp.txt",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/regular_legacy_temp_untouched/unrelated.txt"
+      ],
+      "returncode": 0,
+      "stdout": "document.xml well-formed\nwrote /private/tmp/pf8-round7-builder-n75dm9lh/regular_legacy_temp_untouched/article.docx  1.16 MB\n",
+      "stderr": "",
+      "destination_before": {
+        "path": "/private/tmp/pf8-round7-builder-n75dm9lh/regular_legacy_temp_untouched/article.docx",
+        "bytes": 1193182,
+        "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
+      },
+      "destination_after": {
+        "path": "/private/tmp/pf8-round7-builder-n75dm9lh/regular_legacy_temp_untouched/article.docx",
+        "bytes": 1163911,
+        "sha256": "787c9e25cd2f8249bc08785465336be679ecbcf2a909b4a96a531e8b9953b5ea"
+      },
+      "destination_is_regular": true,
+      "destination_mode": "0o640",
+      "unrelated_sentinel_preserved": true,
+      "legacy_path_preserved": true,
+      "created_temporary": "/private/tmp/pf8-round7-builder-n75dm9lh/regular_legacy_temp_untouched/article.docx.tmp-build-dmnw3wyt.tmp",
+      "created_temporary_lexists_after": false,
+      "core_title": "Scratch title",
+      "visible_title": "Scratch title",
+      "table_2_headers": [
+        "Zone pair",
+        "n (first zone)",
+        "n (second zone)",
+        "FST",
+        "95% CI",
+        "Excludes zero"
+      ],
+      "table_2_count_columns": [
+        [
+          "204",
+          "1,334"
+        ],
+        [
+          "204",
+          "25"
+        ],
+        [
+          "337",
+          "25"
+        ],
+        [
+          "337",
+          "1,334"
+        ],
+        [
+          "1,334",
+          "25"
+        ],
+        [
+          "204",
+          "337"
+        ]
+      ],
+      "inherited_title_changed": true,
+      "creator_preserved": true,
+      "passed": true
+    },
+    {
+      "case": "failure_archive",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/fault_driver.py",
+        "archive",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/failure_archive/created_temp.txt",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/failure_archive/unrelated.txt"
+      ],
+      "returncode": 1,
+      "stdout": "document.xml well-formed\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/private/tmp/pf8-round7-builder-n75dm9lh/fault_driver.py\", line 41, in <module>\n    runpy.run_path(builder,run_name='__main__')\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 506, in <module>\n    zf.write(full, os.path.relpath(full, OUT))\n  File \"/private/tmp/pf8-round7-builder-n75dm9lh/fault_driver.py\", line 16, in fail\n    if n==5: raise OSError('injected archive-write failure')\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nOSError: injected archive-write failure\n",
+      "destination_before": {
+        "path": "/private/tmp/pf8-round7-builder-n75dm9lh/failure_archive/article.docx",
+        "bytes": 1193182,
+        "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
+      },
+      "destination_after": {
+        "path": "/private/tmp/pf8-round7-builder-n75dm9lh/failure_archive/article.docx",
+        "bytes": 1193182,
+        "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
+      },
+      "destination_is_regular": true,
+      "destination_mode": "0o640",
+      "unrelated_sentinel_preserved": true,
+      "legacy_path_preserved": true,
+      "created_temporary": "/private/tmp/pf8-round7-builder-n75dm9lh/failure_archive/article.docx.tmp-build-pggbqwc8.tmp",
+      "created_temporary_lexists_after": false,
+      "passed": true
+    },
+    {
+      "case": "failure_fsync",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/fault_driver.py",
+        "fsync",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/failure_fsync/created_temp.txt",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/failure_fsync/unrelated.txt"
+      ],
+      "returncode": 1,
+      "stdout": "document.xml well-formed\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/private/tmp/pf8-round7-builder-n75dm9lh/fault_driver.py\", line 41, in <module>\n    runpy.run_path(builder,run_name='__main__')\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 509, in <module>\n    os.fsync(fh.fileno())\n  File \"/private/tmp/pf8-round7-builder-n75dm9lh/fault_driver.py\", line 20, in fail\n    def fail(*a,**kw): raise OSError('injected fsync failure')\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nOSError: injected fsync failure\n",
+      "destination_before": {
+        "path": "/private/tmp/pf8-round7-builder-n75dm9lh/failure_fsync/article.docx",
+        "bytes": 1193182,
+        "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
+      },
+      "destination_after": {
+        "path": "/private/tmp/pf8-round7-builder-n75dm9lh/failure_fsync/article.docx",
+        "bytes": 1193182,
+        "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
+      },
+      "destination_is_regular": true,
+      "destination_mode": "0o640",
+      "unrelated_sentinel_preserved": true,
+      "legacy_path_preserved": true,
+      "created_temporary": "/private/tmp/pf8-round7-builder-n75dm9lh/failure_fsync/article.docx.tmp-build-0o3_wzn6.tmp",
+      "created_temporary_lexists_after": false,
+      "passed": true
+    },
+    {
+      "case": "failure_integrity",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/fault_driver.py",
+        "integrity",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/failure_integrity/created_temp.txt",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/failure_integrity/unrelated.txt"
+      ],
+      "returncode": 1,
+      "stdout": "document.xml well-formed\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/private/tmp/pf8-round7-builder-n75dm9lh/fault_driver.py\", line 41, in <module>\n    runpy.run_path(builder,run_name='__main__')\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 513, in <module>\n    raise RuntimeError(\"archive failed its own integrity check\")\nRuntimeError: archive failed its own integrity check\n",
+      "destination_before": {
+        "path": "/private/tmp/pf8-round7-builder-n75dm9lh/failure_integrity/article.docx",
+        "bytes": 1193182,
+        "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
+      },
+      "destination_after": {
+        "path": "/private/tmp/pf8-round7-builder-n75dm9lh/failure_integrity/article.docx",
+        "bytes": 1193182,
+        "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
+      },
+      "destination_is_regular": true,
+      "destination_mode": "0o640",
+      "unrelated_sentinel_preserved": true,
+      "legacy_path_preserved": true,
+      "created_temporary": "/private/tmp/pf8-round7-builder-n75dm9lh/failure_integrity/article.docx.tmp-build-dxywqqk3.tmp",
+      "created_temporary_lexists_after": false,
+      "passed": true
+    },
+    {
+      "case": "failure_semantic",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/fault_driver.py",
+        "semantic",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/failure_semantic/created_temp.txt",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/failure_semantic/unrelated.txt"
+      ],
+      "returncode": 1,
+      "stdout": "document.xml well-formed\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/private/tmp/pf8-round7-builder-n75dm9lh/fault_driver.py\", line 41, in <module>\n    runpy.run_path(builder,run_name='__main__')\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 514, in <module>\n    validate_package(zf)\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 122, in validate_package\n    raise ValueError(\"article package is missing required parts: \" + \", \".join(absent))\nValueError: article package is missing required parts: word/media/218857879d6287b87460540cea2d8ec053df7685.png\n",
+      "destination_before": {
+        "path": "/private/tmp/pf8-round7-builder-n75dm9lh/failure_semantic/article.docx",
+        "bytes": 1193182,
+        "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
+      },
+      "destination_after": {
+        "path": "/private/tmp/pf8-round7-builder-n75dm9lh/failure_semantic/article.docx",
+        "bytes": 1193182,
+        "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
+      },
+      "destination_is_regular": true,
+      "destination_mode": "0o640",
+      "unrelated_sentinel_preserved": true,
+      "legacy_path_preserved": true,
+      "created_temporary": "/private/tmp/pf8-round7-builder-n75dm9lh/failure_semantic/article.docx.tmp-build-sjldgc81.tmp",
+      "created_temporary_lexists_after": false,
+      "passed": true
+    },
+    {
+      "case": "failure_replace",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/fault_driver.py",
+        "replace",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/failure_replace/created_temp.txt",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/failure_replace/unrelated.txt"
+      ],
+      "returncode": 1,
+      "stdout": "document.xml well-formed\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/private/tmp/pf8-round7-builder-n75dm9lh/fault_driver.py\", line 41, in <module>\n    runpy.run_path(builder,run_name='__main__')\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 517, in <module>\n    os.replace(_tmp, DOCX)                      # atomic on the same filesystem\n    ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/tmp/pf8-round7-builder-n75dm9lh/fault_driver.py\", line 31, in fail\n    def fail(*a,**kw): raise OSError('injected replacement failure')\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nOSError: injected replacement failure\n",
+      "destination_before": {
+        "path": "/private/tmp/pf8-round7-builder-n75dm9lh/failure_replace/article.docx",
+        "bytes": 1193182,
+        "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
+      },
+      "destination_after": {
+        "path": "/private/tmp/pf8-round7-builder-n75dm9lh/failure_replace/article.docx",
+        "bytes": 1193182,
+        "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
+      },
+      "destination_is_regular": true,
+      "destination_mode": "0o640",
+      "unrelated_sentinel_preserved": true,
+      "legacy_path_preserved": true,
+      "created_temporary": "/private/tmp/pf8-round7-builder-n75dm9lh/failure_replace/article.docx.tmp-build-08zg2kbn.tmp",
+      "created_temporary_lexists_after": false,
+      "passed": true
+    },
+    {
+      "case": "failure_temp_create",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/fault_driver.py",
+        "temp_create",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/failure_temp_create/created_temp.txt",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/failure_temp_create/unrelated.txt"
+      ],
+      "returncode": 1,
+      "stdout": "document.xml well-formed\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/private/tmp/pf8-round7-builder-n75dm9lh/fault_driver.py\", line 41, in <module>\n    runpy.run_path(builder,run_name='__main__')\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 487, in <module>\n    _fd, _tmp = tempfile.mkstemp(prefix=Path(DOCX).name + \".tmp-build-\", suffix=\".tmp\",\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/tmp/pf8-round7-builder-n75dm9lh/fault_driver.py\", line 5, in capture\n    if phase=='temp_create': raise OSError('injected temporary creation failure')\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nOSError: injected temporary creation failure\n",
+      "destination_before": {
+        "path": "/private/tmp/pf8-round7-builder-n75dm9lh/failure_temp_create/article.docx",
+        "bytes": 1193182,
+        "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
+      },
+      "destination_after": {
+        "path": "/private/tmp/pf8-round7-builder-n75dm9lh/failure_temp_create/article.docx",
+        "bytes": 1193182,
+        "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
+      },
+      "destination_is_regular": true,
+      "destination_mode": "0o640",
+      "unrelated_sentinel_preserved": true,
+      "legacy_path_preserved": true,
+      "created_temporary": null,
+      "created_temporary_lexists_after": false,
+      "passed": true
+    },
+    {
+      "case": "swapped_unique_temp_never_followed_or_unlinked",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/fault_driver.py",
+        "temp_swap",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/swapped_unique_temp_never_followed_or_unlinked/created_temp.txt",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/swapped_unique_temp_never_followed_or_unlinked/unrelated.txt"
+      ],
+      "returncode": 1,
+      "stdout": "document.xml well-formed\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/private/tmp/pf8-round7-builder-n75dm9lh/fault_driver.py\", line 41, in <module>\n    runpy.run_path(builder,run_name='__main__')\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 516, in <module>\n    raise RuntimeError(\"temporary archive pathname no longer identifies the owned file\")\nRuntimeError: temporary archive pathname no longer identifies the owned file\n",
+      "destination_before": {
+        "path": "/private/tmp/pf8-round7-builder-n75dm9lh/swapped_unique_temp_never_followed_or_unlinked/article.docx",
+        "bytes": 1193182,
+        "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
+      },
+      "destination_after": {
+        "path": "/private/tmp/pf8-round7-builder-n75dm9lh/swapped_unique_temp_never_followed_or_unlinked/article.docx",
+        "bytes": 1193182,
+        "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
+      },
+      "destination_is_regular": true,
+      "destination_mode": "0o640",
+      "unrelated_sentinel_preserved": true,
+      "legacy_path_preserved": true,
+      "created_temporary": "/private/tmp/pf8-round7-builder-n75dm9lh/swapped_unique_temp_never_followed_or_unlinked/article.docx.tmp-build-zxuy8dm_.tmp",
+      "created_temporary_lexists_after": true,
+      "passed": true
+    },
+    {
+      "case": "missing_title_rejected",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/fault_driver.py",
+        "",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/missing_title_rejected/created_temp.txt",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/missing_title_rejected/unrelated.txt"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "missing article title: ARTICLE_MD must contain a nonempty '# ' title\n",
+      "destination_before": {
+        "path": "/private/tmp/pf8-round7-builder-n75dm9lh/missing_title_rejected/article.docx",
+        "bytes": 1193182,
+        "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
+      },
+      "destination_after": {
+        "path": "/private/tmp/pf8-round7-builder-n75dm9lh/missing_title_rejected/article.docx",
+        "bytes": 1193182,
+        "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
+      },
+      "destination_is_regular": true,
+      "destination_mode": "0o640",
+      "unrelated_sentinel_preserved": true,
+      "legacy_path_preserved": true,
+      "created_temporary": null,
+      "created_temporary_lexists_after": false,
+      "passed": true
+    },
+    {
+      "case": "formatted_title_matches_visible",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/fault_driver.py",
+        "",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/formatted_title_matches_visible/created_temp.txt",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/formatted_title_matches_visible/unrelated.txt"
+      ],
+      "returncode": 0,
+      "stdout": "document.xml well-formed\nwrote /private/tmp/pf8-round7-builder-n75dm9lh/formatted_title_matches_visible/article.docx  1.16 MB\n",
+      "stderr": "",
+      "destination_before": {
+        "path": "/private/tmp/pf8-round7-builder-n75dm9lh/formatted_title_matches_visible/article.docx",
+        "bytes": 1193182,
+        "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
+      },
+      "destination_after": {
+        "path": "/private/tmp/pf8-round7-builder-n75dm9lh/formatted_title_matches_visible/article.docx",
+        "bytes": 1163984,
+        "sha256": "6e42227813d9397363e3916f9348b0a431b2cc1a017b0a0549355329e40b28a3"
+      },
+      "destination_is_regular": true,
+      "destination_mode": "0o640",
+      "unrelated_sentinel_preserved": true,
+      "legacy_path_preserved": true,
+      "created_temporary": "/private/tmp/pf8-round7-builder-n75dm9lh/formatted_title_matches_visible/article.docx.tmp-build-5k2sopak.tmp",
+      "created_temporary_lexists_after": false,
+      "core_title": "A & B and C FST <plain>",
+      "visible_title": "A & B and C FST <plain>",
+      "table_2_headers": [
+        "Zone pair",
+        "n (first zone)",
+        "n (second zone)",
+        "FST",
+        "95% CI",
+        "Excludes zero"
+      ],
+      "table_2_count_columns": [
+        [
+          "204",
+          "1,334"
+        ],
+        [
+          "204",
+          "25"
+        ],
+        [
+          "337",
+          "25"
+        ],
+        [
+          "337",
+          "1,334"
+        ],
+        [
+          "1,334",
+          "25"
+        ],
+        [
+          "204",
+          "337"
+        ]
+      ],
+      "inherited_title_changed": true,
+      "creator_preserved": true,
+      "passed": true
+    },
+    {
+      "case": "missing_core_title_added",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/fault_driver.py",
+        "",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/missing_core_title_added/created_temp.txt",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/missing_core_title_added/unrelated.txt"
+      ],
+      "returncode": 0,
+      "stdout": "document.xml well-formed\nwrote /private/tmp/pf8-round7-builder-n75dm9lh/missing_core_title_added/article.docx  1.16 MB\n",
+      "stderr": "",
+      "destination_before": {
+        "path": "/private/tmp/pf8-round7-builder-n75dm9lh/missing_core_title_added/article.docx",
+        "bytes": 1193182,
+        "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
+      },
+      "destination_after": {
+        "path": "/private/tmp/pf8-round7-builder-n75dm9lh/missing_core_title_added/article.docx",
+        "bytes": 1163912,
+        "sha256": "8b080a7603f9d1cd10a0930705edbb75f891f5ae1969270a7394b3507500dc05"
+      },
+      "destination_is_regular": true,
+      "destination_mode": "0o640",
+      "unrelated_sentinel_preserved": true,
+      "legacy_path_preserved": true,
+      "created_temporary": "/private/tmp/pf8-round7-builder-n75dm9lh/missing_core_title_added/article.docx.tmp-build-kv8gfz28.tmp",
+      "created_temporary_lexists_after": false,
+      "core_title": "Scratch title",
+      "visible_title": "Scratch title",
+      "table_2_headers": [
+        "Zone pair",
+        "n (first zone)",
+        "n (second zone)",
+        "FST",
+        "95% CI",
+        "Excludes zero"
+      ],
+      "table_2_count_columns": [
+        [
+          "204",
+          "1,334"
+        ],
+        [
+          "204",
+          "25"
+        ],
+        [
+          "337",
+          "25"
+        ],
+        [
+          "337",
+          "1,334"
+        ],
+        [
+          "1,334",
+          "25"
+        ],
+        [
+          "204",
+          "337"
+        ]
+      ],
+      "inherited_title_changed": true,
+      "creator_preserved": true,
+      "passed": true
+    },
+    {
+      "case": "duplicate_core_titles_replaced",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/fault_driver.py",
+        "",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/duplicate_core_titles_replaced/created_temp.txt",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/duplicate_core_titles_replaced/unrelated.txt"
+      ],
+      "returncode": 0,
+      "stdout": "document.xml well-formed\nwrote /private/tmp/pf8-round7-builder-n75dm9lh/duplicate_core_titles_replaced/article.docx  1.16 MB\n",
+      "stderr": "",
+      "destination_before": {
+        "path": "/private/tmp/pf8-round7-builder-n75dm9lh/duplicate_core_titles_replaced/article.docx",
+        "bytes": 1193182,
+        "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
+      },
+      "destination_after": {
+        "path": "/private/tmp/pf8-round7-builder-n75dm9lh/duplicate_core_titles_replaced/article.docx",
+        "bytes": 1163911,
+        "sha256": "9b7a060ea2e06d5f1f43db0bd9233eebca27ed08538ec2f56ebf153c9ab4b1a7"
+      },
+      "destination_is_regular": true,
+      "destination_mode": "0o640",
+      "unrelated_sentinel_preserved": true,
+      "legacy_path_preserved": true,
+      "created_temporary": "/private/tmp/pf8-round7-builder-n75dm9lh/duplicate_core_titles_replaced/article.docx.tmp-build-ykq8yqyn.tmp",
+      "created_temporary_lexists_after": false,
+      "core_title": "Scratch title",
+      "visible_title": "Scratch title",
+      "table_2_headers": [
+        "Zone pair",
+        "n (first zone)",
+        "n (second zone)",
+        "FST",
+        "95% CI",
+        "Excludes zero"
+      ],
+      "table_2_count_columns": [
+        [
+          "204",
+          "1,334"
+        ],
+        [
+          "204",
+          "25"
+        ],
+        [
+          "337",
+          "25"
+        ],
+        [
+          "337",
+          "1,334"
+        ],
+        [
+          "1,334",
+          "25"
+        ],
+        [
+          "204",
+          "337"
+        ]
+      ],
+      "inherited_title_changed": true,
+      "creator_preserved": true,
+      "passed": true
+    },
+    {
+      "case": "core_absent_unreferenced",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/fault_driver.py",
+        "",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/core_absent_unreferenced/created_temp.txt",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/core_absent_unreferenced/unrelated.txt"
+      ],
+      "returncode": 0,
+      "stdout": "document.xml well-formed\nwrote /private/tmp/pf8-round7-builder-n75dm9lh/core_absent_unreferenced/article.docx  1.16 MB\n",
+      "stderr": "",
+      "destination_before": {
+        "path": "/private/tmp/pf8-round7-builder-n75dm9lh/core_absent_unreferenced/article.docx",
+        "bytes": 1193182,
+        "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
+      },
+      "destination_after": {
+        "path": "/private/tmp/pf8-round7-builder-n75dm9lh/core_absent_unreferenced/article.docx",
+        "bytes": 1163716,
+        "sha256": "876b56b68cad237c532a2526dcd6d7b70c753c98d8572d6708c267d3e912d7a0"
+      },
+      "destination_is_regular": true,
+      "destination_mode": "0o640",
+      "unrelated_sentinel_preserved": true,
+      "legacy_path_preserved": true,
+      "created_temporary": "/private/tmp/pf8-round7-builder-n75dm9lh/core_absent_unreferenced/article.docx.tmp-build-497u6px2.tmp",
+      "created_temporary_lexists_after": false,
+      "core_title": "Scratch title",
+      "visible_title": "Scratch title",
+      "table_2_headers": [
+        "Zone pair",
+        "n (first zone)",
+        "n (second zone)",
+        "FST",
+        "95% CI",
+        "Excludes zero"
+      ],
+      "table_2_count_columns": [
+        [
+          "204",
+          "1,334"
+        ],
+        [
+          "204",
+          "25"
+        ],
+        [
+          "337",
+          "25"
+        ],
+        [
+          "337",
+          "1,334"
+        ],
+        [
+          "1,334",
+          "25"
+        ],
+        [
+          "204",
+          "337"
+        ]
+      ],
+      "inherited_title_changed": true,
+      "creator_preserved": null,
+      "passed": true
+    },
+    {
+      "case": "custom_core_properties_target_preserved",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/fault_driver.py",
+        "",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/custom_core_properties_target_preserved/created_temp.txt",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/custom_core_properties_target_preserved/unrelated.txt"
+      ],
+      "returncode": 0,
+      "stdout": "document.xml well-formed\nwrote /private/tmp/pf8-round7-builder-n75dm9lh/custom_core_properties_target_preserved/article.docx  1.16 MB\n",
+      "stderr": "",
+      "destination_before": {
+        "path": "/private/tmp/pf8-round7-builder-n75dm9lh/custom_core_properties_target_preserved/article.docx",
+        "bytes": 1193182,
+        "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
+      },
+      "destination_after": {
+        "path": "/private/tmp/pf8-round7-builder-n75dm9lh/custom_core_properties_target_preserved/article.docx",
+        "bytes": 1163928,
+        "sha256": "368b996091a068b8f7bd8d721d44cf69914b3a796efb9d2aeb3c22d5d4db1fd8"
+      },
+      "destination_is_regular": true,
+      "destination_mode": "0o640",
+      "unrelated_sentinel_preserved": true,
+      "legacy_path_preserved": true,
+      "created_temporary": "/private/tmp/pf8-round7-builder-n75dm9lh/custom_core_properties_target_preserved/article.docx.tmp-build-7t40tdbd.tmp",
+      "created_temporary_lexists_after": false,
+      "core_title": "Scratch title",
+      "visible_title": "Scratch title",
+      "table_2_headers": [
+        "Zone pair",
+        "n (first zone)",
+        "n (second zone)",
+        "FST",
+        "95% CI",
+        "Excludes zero"
+      ],
+      "table_2_count_columns": [
+        [
+          "204",
+          "1,334"
+        ],
+        [
+          "204",
+          "25"
+        ],
+        [
+          "337",
+          "25"
+        ],
+        [
+          "337",
+          "1,334"
+        ],
+        [
+          "1,334",
+          "25"
+        ],
+        [
+          "204",
+          "337"
+        ]
+      ],
+      "inherited_title_changed": true,
+      "creator_preserved": true,
+      "passed": true
+    },
+    {
+      "case": "missing_referenced_core_rejected",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/fault_driver.py",
+        "",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/missing_referenced_core_rejected/created_temp.txt",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/missing_referenced_core_rejected/unrelated.txt"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/private/tmp/pf8-round7-builder-n75dm9lh/fault_driver.py\", line 41, in <module>\n    runpy.run_path(builder,run_name='__main__')\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 440, in <module>\n    raise ValueError(f\"core-properties relationship refers to absent part: /{core_part}\")\nValueError: core-properties relationship refers to absent part: /docProps/core.xml\n",
+      "destination_before": {
+        "path": "/private/tmp/pf8-round7-builder-n75dm9lh/missing_referenced_core_rejected/article.docx",
+        "bytes": 1193182,
+        "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
+      },
+      "destination_after": {
+        "path": "/private/tmp/pf8-round7-builder-n75dm9lh/missing_referenced_core_rejected/article.docx",
+        "bytes": 1193182,
+        "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
+      },
+      "destination_is_regular": true,
+      "destination_mode": "0o640",
+      "unrelated_sentinel_preserved": true,
+      "legacy_path_preserved": true,
+      "created_temporary": null,
+      "created_temporary_lexists_after": false,
+      "passed": true
+    },
+    {
+      "case": "invalid_core_root_rejected",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/fault_driver.py",
+        "",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/invalid_core_root_rejected/created_temp.txt",
+        "/private/tmp/pf8-round7-builder-n75dm9lh/invalid_core_root_rejected/unrelated.txt"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/private/tmp/pf8-round7-builder-n75dm9lh/fault_driver.py\", line 41, in <module>\n    runpy.run_path(builder,run_name='__main__')\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 455, in <module>\n    raise ValueError(\"invalid core-properties root\")\nValueError: invalid core-properties root\n",
+      "destination_before": {
+        "path": "/private/tmp/pf8-round7-builder-n75dm9lh/invalid_core_root_rejected/article.docx",
+        "bytes": 1193182,
+        "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
+      },
+      "destination_after": {
+        "path": "/private/tmp/pf8-round7-builder-n75dm9lh/invalid_core_root_rejected/article.docx",
+        "bytes": 1193182,
+        "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
+      },
+      "destination_is_regular": true,
+      "destination_mode": "0o640",
+      "unrelated_sentinel_preserved": true,
+      "legacy_path_preserved": true,
+      "created_temporary": null,
+      "created_temporary_lexists_after": false,
+      "passed": true
+    }
+  ],
+  "tests_passed": 21,
+  "all_passed": true,
+  "protected_before": [
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx",
+      "bytes": 4048231,
+      "sha256": "6f61aebaa4bb6c104b31038eb97ef7ddddc0b48c636b8f2f190993c9069e6115"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.pdf",
+      "bytes": 5114869,
+      "sha256": "101f01d3b48573e921c18063f1eca21e83dfd70ed86ea65c72032c392caa9460"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx",
+      "bytes": 4049001,
+      "sha256": "0d6497fa02a98d40f2e0084ad137886075f2feb4c29f2ed0b52e022d43f95937"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.pdf",
+      "bytes": 5118291,
+      "sha256": "456a798054a7c9e081bcd0ff8a9f41498aa2d59cf14d65ca9e65fe996d2a1c81"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.docx",
+      "bytes": 1193182,
+      "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.pdf",
+      "bytes": 708316,
+      "sha256": "6475240dc4a51ac6836a71a47c4f6fc5b2fee95c43e7079e76e8b3a07e0aed05"
+    }
+  ],
+  "protected_after": [
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx",
+      "bytes": 4048231,
+      "sha256": "6f61aebaa4bb6c104b31038eb97ef7ddddc0b48c636b8f2f190993c9069e6115"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.pdf",
+      "bytes": 5114869,
+      "sha256": "101f01d3b48573e921c18063f1eca21e83dfd70ed86ea65c72032c392caa9460"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx",
+      "bytes": 4049001,
+      "sha256": "0d6497fa02a98d40f2e0084ad137886075f2feb4c29f2ed0b52e022d43f95937"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.pdf",
+      "bytes": 5118291,
+      "sha256": "456a798054a7c9e081bcd0ff8a9f41498aa2d59cf14d65ca9e65fe996d2a1c81"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.docx",
+      "bytes": 1193182,
+      "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.pdf",
+      "bytes": 708316,
+      "sha256": "6475240dc4a51ac6836a71a47c4f6fc5b2fee95c43e7079e76e8b3a07e0aed05"
+    }
+  ],
+  "scope": "Scratch document assembly only; no scientific runs or deliverable writes. File identity/mode, legacy and unique temporary paths, failure preservation, metadata title and unchanged Table 2 counts checked."
+}

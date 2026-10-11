@@ -1,4 +1,4 @@
-import re, os, sys, shutil, zipfile, html, posixpath
+import re, os, sys, shutil, zipfile, html, posixpath, tempfile, stat
 from urllib.parse import unquote, urlsplit
 from xml.etree import ElementTree as ET
 from pathlib import Path
@@ -9,7 +9,7 @@ MD   = os.environ["ARTICLE_MD"]
 DOCX = os.environ["ARTICLE_DOCX"]
 REFS = os.environ.get("ARTICLE_REFS",
     os.path.join(os.path.dirname(os.path.abspath(__file__)), "references_apa.txt"))
-_tmp = DOCX + ".tmp-build"
+_legacy_tmp = DOCX + ".tmp-build"
 
 
 def inside(path, parent):
@@ -42,20 +42,20 @@ if inside(_source_real, _work_real) or inside(_work_real, _source_real):
     sys.exit("unsafe build paths: ARTICLE_TEMPLATE overlaps the article_pkg work package")
 if _work_path.is_symlink():
     sys.exit("unsafe build paths: article_pkg work package is a symlink")
-for _name, _value in (("ARTICLE_DOCX", DOCX), ("temporary archive", _tmp),
+for _name, _value in (("ARTICLE_DOCX", DOCX), ("temporary archive", _legacy_tmp),
                        ("ARTICLE_MD", MD), ("ARTICLE_REFS", REFS)):
     _path = Path(os.path.abspath(_value))
     if (inside(_path, _work_path) or inside(_path.resolve(), _work_real)
             or aliases_file_in(_path, _work_real)):
         sys.exit(f"unsafe build paths: {_name} is inside or aliases the article_pkg work package")
-for _name, _value in (("ARTICLE_DOCX", DOCX), ("temporary archive", _tmp)):
+for _name, _value in (("ARTICLE_DOCX", DOCX), ("temporary archive", _legacy_tmp)):
     _path = Path(_value)
     if inside(_path.resolve(), _source_real) or aliases_file_in(_path, _source_real):
         sys.exit(f"unsafe build paths: {_name} is inside or aliases the ARTICLE_TEMPLATE")
     for _input_name, _input_value in (("ARTICLE_MD", MD), ("ARTICLE_REFS", REFS)):
         if aliases(_path, Path(_input_value)):
             sys.exit(f"unsafe build paths: {_name} aliases {_input_name}")
-if aliases(Path(_tmp), Path(DOCX)):
+if aliases(Path(_legacy_tmp), Path(DOCX)):
     sys.exit("unsafe build paths: temporary archive aliases ARTICLE_DOCX")
 
 for _p, _what in ((SRC, "ARTICLE_TEMPLATE (an unzipped .docx supplying styles/theme/fonts/media)"),
@@ -303,14 +303,14 @@ T1 = table("**Table 1** Composition of the analysis set, with the sequencing stu
  [1450,750,2250,620,2000,1050,1180])
 
 T2 = table("**Table 2** Pairwise Hudson F~ST~ between agro-ecological zones on 3,916 SNPs and 1,900 isolates, with block-jackknife 95% confidence intervals. Five of the six intervals exclude zero.",
- ["Zone pair","n","n","F~ST~","95% CI","Excludes zero"],
+ ["Zone pair","n (first zone)","n (second zone)","F~ST~","95% CI","Excludes zero"],
  [["Coastal savanna × Guinea savanna","204","1,334","0.00232","0.00128 – 0.00336","Yes"],
   ["Coastal savanna × Transitional zone","204","25","0.00158","0.00006 – 0.00309","Yes"],
   ["Deciduous forest × Transitional zone","337","25","0.00158","0.00017 – 0.00298","Yes"],
   ["Deciduous forest × Guinea savanna","337","1,334","0.00134","0.00088 – 0.00180","Yes"],
   ["Guinea savanna × Transitional zone","1,334","25","0.00047","−0.00083 – 0.00178","No"],
   ["Coastal savanna × Deciduous forest","204","337","0.00045","0.00019 – 0.00070","Yes"]],
- [3100,600,600,1000,1900,1100])
+ [2700,1000,1000,1000,1700,900])
 
 T3 = table("**Table 3** Resistance-marker frequencies overall and by agro-ecological zone. Denominators are isolates called at that codon or, for haplotypes, isolates called at every constituent codon. The chi-square column tests heterogeneity across the four zones.",
  ["Marker","Overall","n","Coastal savanna","Deciduous forest","Guinea savanna","Transitional","χ² p"],
@@ -351,6 +351,7 @@ PLACE = {"[[FIG1]]": figure(1,"rId8"), "[[FIG2]]": figure(2,"rId10"), "[[FIG3]]"
 
 # ---------------- markdown -> body ----------------
 body=[]
+article_title = None
 for raw in open(MD, encoding="utf-8").read().split("\n"):
     line=raw.rstrip()
     if line.strip() in PLACE:
@@ -362,8 +363,15 @@ for raw in open(MD, encoding="utf-8").read().split("\n"):
     if line.startswith("## "):
         body.append(para(line[3:], style="Heading1", after=160)); continue
     if line.startswith("# "):
+        if article_title is None:
+            # Derive metadata from the same runs used for the visible title.
+            title_runs = ET.fromstring('<title xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">'
+                                       + runs(line[2:]) + '</title>')
+            article_title = ''.join(title_runs.itertext()).strip()
         body.append(para(line[2:], style="Heading1", after=240)); continue
     body.append(para(line))
+if not article_title:
+    sys.exit("missing article title: ARTICLE_MD must contain a nonempty '# ' title")
 
 # references
 body.append(para("References", style="Heading1", after=160))
@@ -408,25 +416,106 @@ for declaration in list(ct_tree.getroot()):
 ET.register_namespace("", CT_NS)
 ct_tree.write(ct_path, encoding="utf-8", xml_declaration=True)
 
+# Templates can carry the working record's metadata. Match the article's visible
+# title while preserving the other core properties and their existing location.
+CP_NS = "http://schemas.openxmlformats.org/package/2006/metadata/core-properties"
+DC_NS = "http://purl.org/dc/elements/1.1/"
+CORE_REL = REL_NS + "/metadata/core-properties"
+CORE_MIME = "application/vnd.openxmlformats-package.core-properties+xml"
+root_rels_path = Path(OUT) / "_rels/.rels"
+root_rels_tree = ET.parse(root_rels_path)
+core_rels = [rel for rel in root_rels_tree.getroot() if rel.get("Type") == CORE_REL]
+if len(core_rels) > 1:
+    raise ValueError("package has multiple core-properties relationships")
+if core_rels:
+    core_rel = core_rels[0]
+    core_uri = urlsplit(core_rel.get("Target", ""))
+    core_part = posixpath.normpath(unquote(core_uri.path).lstrip("/"))
+    if (core_rel.get("TargetMode", "Internal") != "Internal" or core_uri.scheme
+            or core_uri.netloc or core_uri.query or core_part in {"", ".", ".."}
+            or core_part.startswith("../")):
+        raise ValueError("invalid core-properties relationship target")
+    core_path = Path(OUT) / core_part
+    if not core_path.is_file():
+        raise ValueError(f"core-properties relationship refers to absent part: /{core_part}")
+    core_tree = ET.parse(core_path)
+else:
+    core_part = "docProps/core.xml"
+    core_path = Path(OUT) / core_part
+    core_tree = ET.parse(core_path) if core_path.exists() else ET.ElementTree(ET.Element("{" + CP_NS + "}coreProperties"))
+    used_ids = {rel.get("Id") for rel in root_rels_tree.getroot()}
+    core_id = "rIdCoreProperties"
+    suffix = 1
+    while core_id in used_ids:
+        core_id = f"rIdCoreProperties{suffix}"
+        suffix += 1
+    ET.SubElement(root_rels_tree.getroot(), "{" + REL_NS + "}Relationship",
+                  {"Id": core_id, "Type": CORE_REL, "Target": core_part})
+if core_tree.getroot().tag != "{" + CP_NS + "}coreProperties":
+    raise ValueError("invalid core-properties root")
+titles = core_tree.getroot().findall("{" + DC_NS + "}title")
+title = titles[0] if titles else ET.SubElement(core_tree.getroot(), "{" + DC_NS + "}title")
+for duplicate in titles[1:]:
+    core_tree.getroot().remove(duplicate)
+for child in list(title):
+    title.remove(child)
+title.text = article_title
+for prefix, namespace in (("cp", CP_NS), ("dc", DC_NS),
+        ("dcterms", "http://purl.org/dc/terms/"), ("xsi", "http://www.w3.org/2001/XMLSchema-instance")):
+    ET.register_namespace(prefix, namespace)
+core_path.parent.mkdir(parents=True, exist_ok=True)
+core_tree.write(core_path, encoding="utf-8", xml_declaration=True)
+core_overrides = [item for item in ct_tree.getroot()
+                  if item.tag == "{" + CT_NS + "}Override" and unquote(item.get("PartName", "")) == "/" + core_part]
+if len(core_overrides) > 1:
+    raise ValueError("duplicate core-properties content-type override")
+if core_overrides:
+    core_overrides[0].set("ContentType", CORE_MIME)
+else:
+    ET.SubElement(ct_tree.getroot(), "{" + CT_NS + "}Override",
+                  {"PartName": "/" + core_part, "ContentType": CORE_MIME})
+ET.register_namespace("", CT_NS)
+ct_tree.write(ct_path, encoding="utf-8", xml_declaration=True)
+ET.register_namespace("", REL_NS)
+root_rels_tree.write(root_rels_path, encoding="utf-8", xml_declaration=True)
+
 import xml.dom.minidom as mdom
 mdom.parse(f"{OUT}/word/document.xml")
 print("document.xml well-formed")
-# Build to a sibling temp file and swap it in only once it is complete, so a
-# failure part-way through can never destroy an existing deliverable.
+# Create an exclusive sibling and retain its descriptor through writing and
+# validation. A pre-existing legacy temp path is never opened or cleaned up.
+_fd, _tmp = tempfile.mkstemp(prefix=Path(DOCX).name + ".tmp-build-", suffix=".tmp",
+                            dir=Path(DOCX).parent)
+_owned = os.fstat(_fd)
+
+
+def owns_temporary():
+    try:
+        current = os.lstat(_tmp)
+    except FileNotFoundError:
+        return False
+    return stat.S_ISREG(current.st_mode) and (current.st_dev, current.st_ino) == (_owned.st_dev, _owned.st_ino)
+
+
 try:
-    with zipfile.ZipFile(_tmp, "w", zipfile.ZIP_DEFLATED) as zf:
-        for root, _, files in os.walk(OUT):
-            for f in files:
-                full = os.path.join(root, f)
-                zf.write(full, os.path.relpath(full, OUT))
-    with open(_tmp, "rb") as fh:
+    with os.fdopen(_fd, "w+b") as fh:
+        with zipfile.ZipFile(fh, "w", zipfile.ZIP_DEFLATED) as zf:
+            for root, _, files in os.walk(OUT):
+                for f in files:
+                    full = os.path.join(root, f)
+                    zf.write(full, os.path.relpath(full, OUT))
+        fh.flush()
+        os.fchmod(fh.fileno(), stat.S_IMODE(Path(DOCX).stat().st_mode) if Path(DOCX).exists() else 0o644)
         os.fsync(fh.fileno())
-    with zipfile.ZipFile(_tmp) as zf:
-        if zf.testzip() is not None:
-            raise RuntimeError("archive failed its own integrity check")
-        validate_package(zf)
+        fh.seek(0)
+        with zipfile.ZipFile(fh) as zf:
+            if zf.testzip() is not None:
+                raise RuntimeError("archive failed its own integrity check")
+            validate_package(zf)
+    if not owns_temporary():
+        raise RuntimeError("temporary archive pathname no longer identifies the owned file")
     os.replace(_tmp, DOCX)                      # atomic on the same filesystem
 except BaseException:
-    if os.path.exists(_tmp): os.remove(_tmp)    # leave any existing DOCX untouched
+    if owns_temporary(): os.remove(_tmp)        # clean up only this build's file
     raise
 print(f"wrote {DOCX}  {os.path.getsize(DOCX)/1e6:.2f} MB")

@@ -1,0 +1,53 @@
+{
+  "generated_utc": "2026-10-11T11:35:36.674584+00:00",
+  "status": "bounded_pass",
+  "all_passed": true,
+  "checks": 8,
+  "builder": {
+    "path": "/Users/samnimoh/Desktop/chromo/tools/build_article.py",
+    "bytes": 28960,
+    "sha256": "9d90d195263494b40658623a72405c4132b7d9581549855d65b3ded7362cb776"
+  },
+  "driver": {
+    "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/builder_encoded_core_followup_tests.py",
+    "bytes": 4918,
+    "sha256": "165b36121cd1da3e6ac9498f4b0d4a44b87c7181983651e1d6ca3091bc9b308e"
+  },
+  "results": [
+    {
+      "name": "encoded core override build succeeds",
+      "passed": true,
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "name": "output archive CRC valid",
+      "passed": true
+    },
+    {
+      "name": "one decoded core override retained with original URI",
+      "passed": true
+    },
+    {
+      "name": "metadata equals visible scratch title",
+      "passed": true
+    },
+    {
+      "name": "scratch template bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "no owned temporary file remains",
+      "passed": true
+    },
+    {
+      "name": "shipping DOCX deliverables unchanged by regression",
+      "passed": true
+    },
+    {
+      "name": "tested builder source unchanged during run",
+      "passed": true
+    }
+  ],
+  "scope": "One encoded core PartName scratch-package regression and eight resulting checks. No prior evidence overwritten; no shipping document or scientific pipeline modified."
+}

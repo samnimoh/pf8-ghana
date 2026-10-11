@@ -38,11 +38,14 @@ zip -q -r -X <repo>/article/Additional_file_1.docx '[Content_Types].xml' _rels w
 These were added after a review demonstrated each failure on synthetic input:
 
 - **`build_article.py` preserves its destination on detected build failures.** It checks the
-  required template parts, builds to `<target>.tmp-build`, fsyncs, checks CRCs and validates
+  required template parts, securely creates a unique sibling temporary file, fsyncs, checks CRCs and validates
   retained XML, content types and internal relationship targets before `os.replace()`.
   Missing figures and referenced parts, as well as injected archive, integrity-check, fsync
   and replacement failures, leave the existing deliverable byte-identical. Temporary archives
-  are removed on failure. These checks do not certify the full OOXML schema or image decoding.
+  created by that build are removed on failure. A pre-existing `<target>.tmp-build` path is never
+  opened or removed; aliases to known inputs or the destination are still rejected. Archive writes
+  and validation use the original temporary-file descriptor, and replacement checks its identity.
+  These checks do not certify the full OOXML schema or image decoding.
   Template, destination, temporary archive and text-input paths are checked for overlaps or
   aliases with the disposable work package before it is removed; unsafe combinations are rejected.
 - **`build_article.py` is self-contained.** The APA reference list is vendored at
@@ -57,5 +60,15 @@ These were added after a review demonstrated each failure on synthetic input:
   `occurrence` is named, and a quote cannot join separate paragraphs into a false match.
 
 Regression drivers and results for these corrections are in `verification_fixes_round6/`.
+The temporary-file, Table 2 header and metadata-title regressions are in `verification_fixes_round7/`.
+The article's core metadata title is derived from its first visible Markdown title during each build.
+The supplement builder derives its core metadata title from its unique visible supplement title.
+Table 2 names its count columns `n (first zone)` and `n (second zone)` in zone-pair order.
 The article builder keeps headings with the following paragraph and repeats table headers
 across page breaks. The working record uses the same heading pagination safeguards in its styles.
+
+Review utilities resolve Git using `tools/git_runtime.py`: set `PF8_GIT` to an executable path
+or command name, or leave it unset to use `git` on `PATH`. Invalid explicit overrides fail
+without falling back. Imports are anchored to each utility's location and work with Python
+`-I` from another directory. See `verification_fixes_round7/GIT_RESOLUTION.md` for the nine
+updated utilities and the boundaries of the historical checks they perform.
