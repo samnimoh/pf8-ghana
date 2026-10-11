@@ -29,6 +29,9 @@ SOURCES = {
     "warning": "corrected/DIMRED_FILENAME_WARNING.md",
     "figure": "corrected/dimred_comparison_zone_qcset.png",
     "lean_validation": "verification_audit/lean_validation.json",
+    "remote_log": "verification_review_round5/server_readonly_snapshot/step03_qcset.log",
+    "remote_script": "verification_review_round5/server_readonly_snapshot/step03_umap.py",
+    "remote_checksums": "verification_review_round5/server_readonly_snapshot/checksums_and_dates.txt",
 }
 
 
@@ -106,10 +109,11 @@ def main():
     prior_map={x['path']:x['sha256'] for x in previous['current_source_and_baseline_artifact_identities']}
     tracked=git('ls-files','-z').decode().rstrip('\0').split('\0')
     commits=git('log','--format=%H%x09%aI%x09%s').decode().splitlines()
-    baseline='3f0130dd'  # resolved below; no reliance on an unverified abbreviated suffix
     baseline=git('rev-parse','3f0130d').decode().strip()
+    correction=git('rev-parse','e590ba7').decode().strip()
     head=git('rev-parse','HEAD').decode().strip()
     baseline_paths=git('ls-tree','-r','--name-only',baseline).decode().splitlines()
+    correction_paths=git('ls-tree','-r','--name-only',correction).decode().splitlines()
     baseline_checks=[]
     for relative in ('Pf8_Ghana_manuscript_REVISED.docx','Pf8_Ghana_manuscript_REVISED.pdf',
                      'article/Additional_file_1.docx','article/Additional_file_1.pdf',
@@ -152,22 +156,27 @@ def main():
       'notes_later_numerical_caveat_retained':'remaining three are moderate p-values' in notes and 'does not identify a particular build' in notes,
       'authors_funding_contributions_citation_repository_placeholders_remain':all(s in normalized['article'] for s in ('AUTHOR NAMES AND AFFILIATIONS TO BE SUPPLIED','FUNDING STATEMENT TO BE SUPPLIED','AUTHOR CONTRIBUTIONS TO BE SUPPLIED','CITATION TO BE SUPPLIED: WHO World Malaria Report','REPOSITORY DOI TO BE SUPPLIED')),
       'known_scientific_audit_logs_and_lean_files_unchanged':bool(scientific) and not any(r['changed'] for r in scientific),
-      'git_baseline_has_8084_files_current_has_8086':len(baseline_paths)==8084 and len(tracked)==8086,
-      'git_contains_baseline_plus_one_correction_commit':len(commits)==2 and head.startswith('e590ba7') and baseline.startswith('3f0130d'),
+      'git_baseline_has_8084_and_scientific_correction_has_8086_files':len(baseline_paths)==8084 and len(correction_paths)==8086,
+      'git_records_baseline_and_combined_scientific_correction':any(c.startswith(correction) for c in commits) and any(c.startswith(baseline) for c in commits),
       'git_baseline_matches_ten_prior_reviewed_source_identities':len(baseline_checks)==10 and all(c['matches'] for c in baseline_checks),
-      'claimed_analysis_cohort_log_not_among_tracked_files':not any(Path(p).name=='step03_qcset.log' for p in tracked),
+      'review_archives_remote_1900_cohort_log':b'Ghana submatrix (1900, 1900) built for this subset' in blobs['remote_log'],
+      'remote_log_snapshot_matches_remote_sha256':inputs['remote_log']['sha256']=='51e0865e8b74e0f91b068d272977da2bbbd66e895944ac0b1695cf180a586a45',
+      'current_remote_script_snapshot_matches_remote_sha256':inputs['remote_script']['sha256']=='e22282a9db9fed371bba75046a45829f7b142f9c853ee3623dfc863dfeb97574',
+      'both_cohort_csv_sha256_values_match_server':all(inputs[k]['sha256'] in blobs['remote_checksums'].decode() for k in ('n1900_alias','n4905_alias')),
+      'unqualified_FDR_control_summary_remains':all('replaced an uncorrected quantile with an FDR-controlled list' in normalized[k] for k in ('main','supplement')),
+      'live_near_panmixia_claims_remain':all('Near-panmixia, by contrast, is robust' in normalized[k] and 'the panmixia estimate was always well determined' in normalized[k] for k in ('main','supplement')),
     }
     validation={'generated_utc':datetime.now(timezone.utc).isoformat(),'checker':str(Path(__file__).resolve()),
       'checker_sha256':sha(Path(__file__).read_bytes()),'runtime':sys.executable,'input_identities':inputs,
       'assertion_meaning':'Passing confirms the stated fix or remaining finding; not statistical or provenance certification.',
       'assertions':checks,'ordination':{'article_paragraph':ordinal,'metrics':comparisons,'discussion_silhouettes':discussion_checks,'canonical_facts':fact_checks},
       'supplementary_numbering':{'captions':captions,'obsolete_caption_explanations':stale_captions},
-      'git':{'baseline':baseline,'head':head,'commits':commits,'baseline_file_count':len(baseline_paths),'current_file_count':len(tracked),
-             'baseline_identity_checks':baseline_checks,'claimed_analysis_log_tracked':False},
+      'git':{'baseline':baseline,'scientific_correction':correction,'head':head,'commits':commits,'baseline_file_count':len(baseline_paths),'scientific_correction_file_count':len(correction_paths),'current_file_count':len(tracked),
+             'baseline_identity_checks':baseline_checks,'remote_log_archived_this_review':True},
       'scope_limits':['Saved output identities and printed metrics were checked; no dimensionality-reduction inference was rerun.',
-                      'The quoted 1900-matrix log and suffix-patched generating script were not newly archived locally.',
+                      'The 1900-matrix log and current server script are now archived; the current script is newer than the log, so its identity does not authenticate the exact historical generating revision.',
                       'Git captures current snapshots and edits; it does not authenticate pre-existing run lineage.',
-                      'Scientific pipeline and remote audit scripts were not executed; no new Lean build or implementation proof.']}
+                      'Scientific pipeline and remote audit scripts were not executed; read-only checksums and file reads were performed; no new Lean build or implementation proof.']}
     (OUT/'revision_validation.json').write_text(json.dumps(validation,indent=2,ensure_ascii=False)+'\n')
     print(json.dumps({'passed':sum(checks.values()),'total':len(checks),'failed':[k for k,v in checks.items() if not v]}))
     return 0 if all(checks.values()) else 1

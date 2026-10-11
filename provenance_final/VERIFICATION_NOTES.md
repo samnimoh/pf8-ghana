@@ -23,6 +23,14 @@ tables; they cannot yet regenerate them from raw data.
 
 ## TreeMix: the `-se` doubt is refuted, and every printed p-value is explained
 
+> **Superseded in part — read the “Numerics” section under Round 5 before using this one.**
+> This account calls the two zero sentinels an *underflow*; they are not. The true tails are
+> representable, and what rounds to zero is `1 - fl(Φ(z))`. This section also treats the
+> reproduction as categorical evidence about the generating run: the later section narrows that to
+> twelve of fifteen values at full displayed precision, with the rest consistent with rounded
+> inputs, and to evidence that jackknife standard errors were computed rather than identification
+> of a build, command or lineage.
+
 An earlier version of this file claimed that "five of six reproduce to three significant
 figures". That was wrong. The corrected accounting, over all 15 migration edges in m = 0–5:
 
@@ -52,7 +60,7 @@ the stated variance-explained rule picks **m = 3** over the full 0–5 sweep (0.
 and m = 2 only after the range is capped at 2 on identifiability grounds. The two criteria
 disagree. The manuscript now says so.
 
-## pfk13 Asn458Asp — confirmed genuine at read level
+## pfk13 Asn458Asp — consistent with a real variant in the release’s called fields
 
 Codon 458 draws on Pf3D7_13_v3 1,725,626 / 1,725,625 / 1,725,624.
 
@@ -137,7 +145,8 @@ records, which the reconstruction never reads**, so the mixed-call rule is not w
 the archived aggregate logs do not show what does. That is an evidence gap, not a demonstrated error. Counts
 reconcile exactly with the reported table (Lys76Thr 133, Gln271Glu 138, Ile431Val 26;
 homozygous-reference 1,741 and 1,735 against reported 1,741 and 1,735). No residue anywhere
-in the panel is `X`, confirming independently that no spanning deletion was ever substituted.
+in the panel is `X`, which is consistent with no spanning deletion having been substituted —
+though it is the panel’s own output checked against itself, not independent confirmation.
 Both multi-base REF records differ from the reference at their first base only. None of the
 57 codons is record-free. **Real defect; no effect on any published number that this evidence reaches.** The qualification
 matters: the per-allele checker archived here covers the two records that carry both supported and

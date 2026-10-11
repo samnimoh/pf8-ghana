@@ -1,0 +1,52 @@
+{
+  "generated_utc": "2026-10-11T05:16:25.629Z",
+  "operation": "Read-only checksums and reads of existing aggregate outputs, saved log and current script; no scientific script execution.",
+  "server": "gyadu / bacg2",
+  "python_version_observed": "3.10.22",
+  "csv_comparisons": [
+    {
+      "local": "/Users/samnimoh/Desktop/chromo/corrected/dimred_comparison_n1900_analysisset.csv",
+      "remote": "/media/biodataA/pf8/gyadu/results/dimred_comparison_qcset.csv",
+      "local_md5": "1662bd0176878d4dbf312b502894de70",
+      "remote_md5": "1662bd0176878d4dbf312b502894de70",
+      "sha256": "3d104ce26973ded0659c283be4fc0bf0e9c9eeed45c1ae0544bc60e1d0331499",
+      "matches": true
+    },
+    {
+      "local": "/Users/samnimoh/Desktop/chromo/corrected/dimred_comparison_n4905_qcpassset.csv",
+      "remote": "/media/biodataA/pf8/gyadu/results/dimred_comparison.csv",
+      "local_md5": "e8fe3b719b184988b0c7eacd99d900f0",
+      "remote_md5": "e8fe3b719b184988b0c7eacd99d900f0",
+      "sha256": "70878f53aa97e2ec1631690f1ed1028286a436534e388696f82e8adda79665dd",
+      "matches": true
+    },
+    {
+      "local": "/Users/samnimoh/Desktop/chromo/corrected/final_fst_pairwise.csv",
+      "remote": "/media/biodataA/pf8/gyadu/results/fst_pairwise.csv",
+      "local_md5": "ffa9601d61d58155384922dd6810f601",
+      "remote_md5": "ffa9601d61d58155384922dd6810f601",
+      "matches": true
+    },
+    {
+      "local": "/Users/samnimoh/Desktop/chromo/corrected/sensitivity_summary.csv",
+      "remote": "/media/biodataA/pf8/gyadu/results/sensitivity_summary.csv",
+      "local_md5": "e8cb05e2692bd24b4e8d6f54920d7484",
+      "remote_md5": "e8cb05e2692bd24b4e8d6f54920d7484",
+      "matches": true
+    },
+    {
+      "local": "/Users/samnimoh/Desktop/chromo/corrected/mantel_jackknife_region.csv",
+      "remote": "/media/biodataA/pf8/gyadu/results/mantel_jackknife_region.csv",
+      "local_md5": "779b9e379b6640afbbeb39409206ed69",
+      "remote_md5": "779b9e379b6640afbbeb39409206ed69",
+      "matches": true
+    }
+  ],
+  "server_file_dates": {
+    "current_step03_script": "2026-10-10 14:00:53.556839627 +0000",
+    "saved_step03_qcset_log": "2026-10-10 12:59:44.273912698 +0000"
+  },
+  "cohort_evidence": "Saved log identifies analysis_samples.csv (1,900 isolates), Ghana submatrix (1900, 1900), and the reported new metrics. The legacy output is supported by the existing archived 4905 log.",
+  "scope_limit": "Current script is newer than the saved log; it has repaired suffix print statements. These reads do not establish the exact historical generating script hash, command or full input lineage.",
+  "lookup_correction": "Project status skill names fst_pairwise_final.csv, absent on this server. A read-only file lookup located results/fst_pairwise.csv, whose checksum matches the local final_fst_pairwise.csv."
+}

@@ -1,7 +1,7 @@
 {
-  "generated_utc": "2026-10-11T05:07:31.429206+00:00",
+  "generated_utc": "2026-10-11T05:15:57.927232+00:00",
   "checker": "/Users/samnimoh/Desktop/chromo/verification_review_round5/check_current_revision.py",
-  "checker_sha256": "49e2469dea20dfb72dabfc3e97b94c62e1ec69bdfa3d33d2fe4b34948583b328",
+  "checker_sha256": "c028716e0686d8184f98f7abe1d61ef355defaa37a93c3abac1d392ed0dfc232",
   "runtime": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
   "input_identities": {
     "article": {
@@ -78,6 +78,21 @@
       "path": "/Users/samnimoh/Desktop/chromo/verification_audit/lean_validation.json",
       "bytes": 12260,
       "sha256": "8f3ec31140fb8c06b092ff8619dd5f6ddb396203bdefce195ba1a0c45e2ff4bc"
+    },
+    "remote_log": {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_review_round5/server_readonly_snapshot/step03_qcset.log",
+      "bytes": 3282,
+      "sha256": "51e0865e8b74e0f91b068d272977da2bbbd66e895944ac0b1695cf180a586a45"
+    },
+    "remote_script": {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_review_round5/server_readonly_snapshot/step03_umap.py",
+      "bytes": 16692,
+      "sha256": "e22282a9db9fed371bba75046a45829f7b142f9c853ee3623dfc863dfeb97574"
+    },
+    "remote_checksums": {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_review_round5/server_readonly_snapshot/checksums_and_dates.txt",
+      "bytes": 648,
+      "sha256": "06587bd68943fecccf25c3c52330691b26095aff053fc2a9caab65c440f71ef5"
     }
   },
   "assertion_meaning": "Passing confirms the stated fix or remaining finding; not statistical or provenance certification.",
@@ -109,10 +124,15 @@
     "notes_later_numerical_caveat_retained": true,
     "authors_funding_contributions_citation_repository_placeholders_remain": true,
     "known_scientific_audit_logs_and_lean_files_unchanged": true,
-    "git_baseline_has_8084_files_current_has_8086": true,
-    "git_contains_baseline_plus_one_correction_commit": true,
+    "git_baseline_has_8084_and_scientific_correction_has_8086_files": true,
+    "git_records_baseline_and_combined_scientific_correction": true,
     "git_baseline_matches_ten_prior_reviewed_source_identities": true,
-    "claimed_analysis_cohort_log_not_among_tracked_files": true
+    "review_archives_remote_1900_cohort_log": true,
+    "remote_log_snapshot_matches_remote_sha256": true,
+    "current_remote_script_snapshot_matches_remote_sha256": true,
+    "both_cohort_csv_sha256_values_match_server": true,
+    "unqualified_FDR_control_summary_remains": true,
+    "live_near_panmixia_claims_remain": true
   },
   "ordination": {
     "article_paragraph": "Three ordinations of the published Pf8 genotype-distance submatrix for the 1,900 isolates were compared (Fig. 2). UMAP achieved a trustworthiness of 0.499 and a Spearman correlation of -0.066 between embedded and original distances (McInnes et al. 2018); t-SNE reached 0.526 and 0.196; PCoA reached 0.510 and 0.287. PCoA preserves global distance structure best, while all three embeddings discard most of it; UMAP's negative coefficient means its layout does not merely lose the original distance ordering but weakly inverts it, so apparent separations in that panel carry no quantitative meaning. Silhouette coefficients computed by zone are negative in every case: -0.020 on the original distances, -0.277 for UMAP, -0.063 for t-SNE and -0.079 for PCoA. Isolates are on average closer to members of other zones than to members of their own, in the original distance space as well as in each embedding. Zone-coloured isolates overlap extensively in Fig. 2, and no method recovers zone as a cluster boundary.",
@@ -390,13 +410,16 @@
   },
   "git": {
     "baseline": "3f0130d551d961195ab118a31f8a251cd46c26f5",
-    "head": "e590ba75576f74316a03f225b288a47e4f53f23f",
+    "scientific_correction": "e590ba75576f74316a03f225b288a47e4f53f23f",
+    "head": "1afaf4b5d23207eb8c3e3e3507dbc8613926e04c",
     "commits": [
+      "1afaf4b5d23207eb8c3e3e3507dbc8613926e04c\t2026-10-11T05:08:06Z\tAdd project instructions, agents, skills and vendored build tools",
       "e590ba75576f74316a03f225b288a47e4f53f23f\t2026-10-11T04:42:40Z\tCorrect the ordination cohort attribution and propagate round-4 findings",
       "3f0130d551d961195ab118a31f8a251cd46c26f5\t2026-10-11T04:38:03Z\tBaseline: state as reviewed on 11 October 2026"
     ],
     "baseline_file_count": 8084,
-    "current_file_count": 8086,
+    "scientific_correction_file_count": 8086,
+    "current_file_count": 8123,
     "baseline_identity_checks": [
       {
         "path": "Pf8_Ghana_manuscript_REVISED.docx",
@@ -459,12 +482,12 @@
         "matches": true
       }
     ],
-    "claimed_analysis_log_tracked": false
+    "remote_log_archived_this_review": true
   },
   "scope_limits": [
     "Saved output identities and printed metrics were checked; no dimensionality-reduction inference was rerun.",
-    "The quoted 1900-matrix log and suffix-patched generating script were not newly archived locally.",
+    "The 1900-matrix log and current server script are now archived; the current script is newer than the log, so its identity does not authenticate the exact historical generating revision.",
     "Git captures current snapshots and edits; it does not authenticate pre-existing run lineage.",
-    "Scientific pipeline and remote audit scripts were not executed; no new Lean build or implementation proof."
+    "Scientific pipeline and remote audit scripts were not executed; read-only checksums and file reads were performed; no new Lean build or implementation proof."
   ]
 }

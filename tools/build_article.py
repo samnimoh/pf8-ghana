@@ -4,7 +4,13 @@ SRC  = os.environ.get("ARTICLE_TEMPLATE", "supp")   # unzipped docx supplying st
 OUT  = "article_pkg"
 MD   = os.environ["ARTICLE_MD"]
 DOCX = os.environ["ARTICLE_DOCX"]
-REFS = "/private/tmp/claude-501/-Users-samnimoh-Desktop-chromo/b76dd48a-5125-4a44-b252-fbc7c286f5c8/scratchpad/refs_all.txt"
+REFS = os.environ.get("ARTICLE_REFS",
+    os.path.join(os.path.dirname(os.path.abspath(__file__)), "references_apa.txt"))
+
+for _p, _what in ((SRC, "ARTICLE_TEMPLATE (an unzipped .docx supplying styles/theme/fonts/media)"),
+                  (MD,  "ARTICLE_MD"), (REFS, "ARTICLE_REFS / tools/references_apa.txt")):
+    if not os.path.exists(_p):
+        sys.exit(f"missing input: {_what} -> {_p}")
 
 IMG = {  # our figure number -> (source media file, width_emu, height_emu)
  1: ("93b6764f7192ce47a8c3257fe6d80a68d84833ff.png", 5486400, 3657600),
@@ -207,11 +213,21 @@ open(f"{OUT}/[Content_Types].xml","w",encoding="utf-8").write(ct)
 import xml.dom.minidom as mdom
 mdom.parse(f"{OUT}/word/document.xml")
 print("document.xml well-formed")
-if os.path.exists(DOCX): os.remove(DOCX)
-zf=zipfile.ZipFile(DOCX,"w",zipfile.ZIP_DEFLATED)
-for root,_,files in os.walk(OUT):
-    for f in files:
-        full=os.path.join(root,f)
-        zf.write(full, os.path.relpath(full,OUT))
-zf.close()
+# Build to a sibling temp file and swap it in only once it is complete, so a
+# failure part-way through can never destroy an existing deliverable.
+_tmp = DOCX + ".tmp-build"
+try:
+    with zipfile.ZipFile(_tmp, "w", zipfile.ZIP_DEFLATED) as zf:
+        for root, _, files in os.walk(OUT):
+            for f in files:
+                full = os.path.join(root, f)
+                zf.write(full, os.path.relpath(full, OUT))
+    with open(_tmp, "rb") as fh:
+        os.fsync(fh.fileno())
+    if zipfile.ZipFile(_tmp).testzip() is not None:
+        raise RuntimeError("archive failed its own integrity check")
+    os.replace(_tmp, DOCX)                      # atomic on the same filesystem
+except BaseException:
+    if os.path.exists(_tmp): os.remove(_tmp)    # leave any existing DOCX untouched
+    raise
 print(f"wrote {DOCX}  {os.path.getsize(DOCX)/1e6:.2f} MB")

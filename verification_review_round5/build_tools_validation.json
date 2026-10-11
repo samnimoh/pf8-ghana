@@ -1,0 +1,115 @@
+{
+  "generated_utc": "2026-10-11T05:17:51.232723+00:00",
+  "runtime": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+  "checker": {
+    "path": "/Users/samnimoh/Desktop/chromo/verification_review_round5/check_build_tools.py",
+    "bytes": 4052,
+    "sha256": "c52dc409a5532dd83349009b1f13496286e866e57a0959f209469544567009b3"
+  },
+  "sources": [
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/tools/apply_edits.py",
+      "bytes": 2779,
+      "sha256": "e9635f8cf3ab745931185462ff396489e9bc4e04f14fce4eba789bf5bccc5273"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/tools/build_article.py",
+      "bytes": 14130,
+      "sha256": "6169c5568428e74eb4a72e1d15620f954907edc0192f75ce74b7cd3f2feb29da"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/tools/make_supplement.py",
+      "bytes": 6470,
+      "sha256": "547cc95ee27e1d32cb3ffb90e4051fef715120c2167a64ace1592eb6f018c0fd"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/tools/README.md",
+      "bytes": 2204,
+      "sha256": "90c035fed632ba23fa967148d01d1ff3af49ab127728aca82d613d329ea96a3a"
+    }
+  ],
+  "syntax_parse": {
+    "apply_edits.py": true,
+    "build_article.py": true,
+    "make_supplement.py": true
+  },
+  "references_dependency": {
+    "path": "/private/tmp/claude-501/-Users-samnimoh-Desktop-chromo/b76dd48a-5125-4a44-b252-fbc7c286f5c8/scratchpad/refs_all.txt",
+    "exists_on_review_machine": true,
+    "inside_repository": false
+  },
+  "synthetic_cases": [
+    {
+      "case": "documented_two_key_schema",
+      "input_xml": "<w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:body><w:p><w:r><w:t>alpha</w:t></w:r></w:p></w:body></w:document>",
+      "edits": [
+        {
+          "quote": "alpha",
+          "repl": "BETA"
+        }
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/samnimoh/Desktop/chromo/tools/apply_edits.py\", line 53, in <module>\n    applied.append((n, e[\"concept\"], e[\"sev\"], j-i))\n                       ~^^^^^^^^^^^\nKeyError: 'concept'\n",
+      "output_xml": "<w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:body><w:p><w:r><w:t>alpha</w:t></w:r></w:p></w:body></w:document>",
+      "source_changed": false,
+      "leftover": null
+    },
+    {
+      "case": "one_valid_one_missing",
+      "input_xml": "<w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:body><w:p><w:r><w:t>alpha</w:t></w:r></w:p></w:body></w:document>",
+      "edits": [
+        {
+          "quote": "alpha",
+          "repl": "BETA",
+          "concept": "synthetic review",
+          "sev": "P2"
+        },
+        {
+          "quote": "not present",
+          "repl": "GAMMA",
+          "concept": "synthetic review",
+          "sev": "P2"
+        }
+      ],
+      "exit_code": 0,
+      "stdout": "applied 1 | not located 1 | run-conflicts 0\n  of applied, spanning >1 run: 0\n\nNOT LOCATED:\n   [1] synthetic review: 'not present'\n  leftover written: 1 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_synthetic_edit_sr6ks7js/leftover.json\n\nwrote word/document.xml: 151 -> 150 bytes, 1 runs modified\n",
+      "stderr": "",
+      "output_xml": "<w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:body><w:p><w:r><w:t>BETA</w:t></w:r></w:p></w:body></w:document>",
+      "source_changed": true,
+      "leftover": [
+        {
+          "quote": "not present",
+          "repl": "GAMMA",
+          "concept": "synthetic review",
+          "sev": "P2"
+        }
+      ]
+    },
+    {
+      "case": "duplicate_quote",
+      "input_xml": "<w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:body><w:p><w:r><w:t>alpha alpha</w:t></w:r></w:p></w:body></w:document>",
+      "edits": [
+        {
+          "quote": "alpha",
+          "repl": "BETA",
+          "concept": "synthetic review",
+          "sev": "P2"
+        }
+      ],
+      "exit_code": 0,
+      "stdout": "applied 1 | not located 0 | run-conflicts 0\n  of applied, spanning >1 run: 0\n  leftover written: 0 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_synthetic_edit_jwj9xsx5/leftover.json\n\nwrote word/document.xml: 157 -> 156 bytes, 1 runs modified\n",
+      "stderr": "",
+      "output_xml": "<w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:body><w:p><w:r><w:t>BETA alpha</w:t></w:r></w:p></w:body></w:document>",
+      "source_changed": true,
+      "leftover": []
+    }
+  ],
+  "confirmed_findings": {
+    "documented_schema_raises_key_error": true,
+    "missing_edit_does_not_prevent_partial_write": true,
+    "duplicate_quote_silently_changes_only_first_occurrence": true,
+    "article_references_depend_on_absolute_external_path": true
+  },
+  "scope": "Only document helpers were run, on synthetic OOXML in disposable temporary directories. No manuscript or scientific source was edited; the article/supplement builders were not run."
+}

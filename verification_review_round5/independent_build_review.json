@@ -1,0 +1,180 @@
+{
+  "review_kind": "Independent document build and editing tool review; scratch-only tests",
+  "created_utc": "2026-10-11T05:20:02.511837+00:00",
+  "reviewed_commit": "1afaf4b",
+  "source_identities": [
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/tools/build_article.py",
+      "sha256": "6169c5568428e74eb4a72e1d15620f954907edc0192f75ce74b7cd3f2feb29da",
+      "bytes": 14130,
+      "matches_reviewed_commit": true
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/tools/make_supplement.py",
+      "sha256": "547cc95ee27e1d32cb3ffb90e4051fef715120c2167a64ace1592eb6f018c0fd",
+      "bytes": 6470,
+      "matches_reviewed_commit": true
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/tools/apply_edits.py",
+      "sha256": "e9635f8cf3ab745931185462ff396489e9bc4e04f14fce4eba789bf5bccc5273",
+      "bytes": 2779,
+      "matches_reviewed_commit": true
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/tools/README.md",
+      "sha256": "90c035fed632ba23fa967148d01d1ff3af49ab127728aca82d613d329ea96a3a",
+      "bytes": 2204,
+      "matches_reviewed_commit": true
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/article/article.md",
+      "sha256": "f420fc740de3fd9390bd39b7e564f085206c1daf0ec28cd952cbbbc23d81158c",
+      "bytes": 49210,
+      "matches_reviewed_commit": true
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx",
+      "sha256": "6d8c39c1b65c2d25036d83a9f88c76b849172ecce0679b970ae2015e3a75cc2b",
+      "bytes": 4044463,
+      "matches_reviewed_commit": true
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.docx",
+      "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "bytes": 1193793,
+      "matches_reviewed_commit": true
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx",
+      "sha256": "4c739cf78d0699a1a067066d374258fc9838e317e99c901030109b4ad5d6ea9f",
+      "bytes": 4043771,
+      "matches_reviewed_commit": true
+    }
+  ],
+  "python_executable": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+  "external_reference_dependency": {
+    "path": "/private/tmp/claude-501/-Users-samnimoh-Desktop-chromo/b76dd48a-5125-4a44-b252-fbc7c286f5c8/scratchpad/refs_all.txt",
+    "exists_at_test": true,
+    "exists_at_recording": true,
+    "sha256": "7c9333469481e1c4f2ac1fd665ec1c8db0dc115fcc002a509d2d1cdf0c409738",
+    "bytes": 11766,
+    "tracked_in_repository": false,
+    "hardcoded_source_line": 7,
+    "environment_override": false,
+    "repository_fallback": false
+  },
+  "successful_article_build": {
+    "cwd": "/private/tmp/pf8_article_builder_review_v0j0vtrq",
+    "setup": "Unzip current article/Additional_file_1.docx into the scratch supp/ directory; do not modify template contents.",
+    "argv": [
+      "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "-I",
+      "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+    ],
+    "environment_overrides": {
+      "ARTICLE_TEMPLATE": "/private/tmp/pf8_article_builder_review_v0j0vtrq/supp",
+      "ARTICLE_MD": "/Users/samnimoh/Desktop/chromo/article/article.md",
+      "ARTICLE_DOCX": "/private/tmp/pf8_article_builder_review_v0j0vtrq/article.docx"
+    },
+    "observed_exit_code": 0,
+    "observed_stdout": "document.xml well-formed\nwrote /private/tmp/pf8_article_builder_review_v0j0vtrq/article.docx  1.19 MB\n",
+    "output_path": "/private/tmp/pf8_article_builder_review_v0j0vtrq/article.docx",
+    "output_sha256": "0ca599e4830a3d54b98d20dfb37f439eefaeadbd7c623eb194cfcbf99aea6366",
+    "semantic_comparison": {
+      "method": "Parse word/document.xml and compare all w:p flattened w:t text strings in occurrence order. Empty paragraphs retained. Formatting, package bytes and layout excluded.",
+      "generated_paragraph_count": 468,
+      "current_paragraph_count": 468,
+      "all_paragraph_texts_equal": true
+    }
+  },
+  "successful_supplement_build": {
+    "cwd": "/private/tmp/pf8_supplement_builder_review_f_8odwnu",
+    "setup": "Copy only word/document.xml from current Pf8_Ghana_manuscript_REVISED.docx into scratch word/document.xml.",
+    "argv": [
+      "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "-I",
+      "/Users/samnimoh/Desktop/chromo/tools/make_supplement.py"
+    ],
+    "observed_exit_code": 0,
+    "observed_stdout": "captions: figures 23, tables 52\noriginal labels used more than once (6): ['6.10', '6.11', '6.7', '6.7a', '6.8', '6.9']\nmentions rewritten: 217\nafter renumbering: Figure S1\u2013S23 (23 captions), Table S1\u2013S52 (52 captions), no duplicates\nnumbering is contiguous and complete\n  ok title 1\n  ok title 2\n  ok subtitle\n  ok status\n  ok preamble\ndocument.xml 2618863 bytes\n",
+    "output_path": "/private/tmp/pf8_supplement_builder_review_f_8odwnu/word/document.xml",
+    "output_sha256": "539f75d629c387d7c4ef3f0a3eac86c6a05edf6742c18b38c3e2deea2741c09c",
+    "semantic_comparison": {
+      "method": "Parse generated scratch XML and current supplement DOCX word/document.xml; compare all w:p flattened w:t text strings in occurrence order. Empty paragraphs retained. Formatting, package bytes and layout excluded.",
+      "generated_paragraph_count": 4078,
+      "current_paragraph_count": 4078,
+      "all_paragraph_texts_equal": true
+    }
+  },
+  "archive_write_failure_test": {
+    "cwd": "/private/tmp/pf8_article_builder_review_v0j0vtrq",
+    "setup": "After successful article build, write ORIGINAL_REVIEW_SENTINEL bytes to scratch atomicity_test.docx. Use unchanged builder, same template and Markdown; override ARTICLE_DOCX with scratch sentinel destination. Inject OSError at zipfile.ZipFile.write using an in-process monkeypatch.",
+    "argv": [
+      "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "-I",
+      "-c",
+      "import zipfile,runpy; zipfile.ZipFile.write=lambda *args,**kwargs: (_ for _ in ()).throw(OSError(\"injected archive write failure\")); runpy.run_path('/Users/samnimoh/Desktop/chromo/tools/build_article.py',run_name=\"__main__\")"
+    ],
+    "environment_overrides": {
+      "ARTICLE_TEMPLATE": "/private/tmp/pf8_article_builder_review_v0j0vtrq/supp",
+      "ARTICLE_MD": "/Users/samnimoh/Desktop/chromo/article/article.md",
+      "ARTICLE_DOCX": "/private/tmp/pf8_article_builder_review_v0j0vtrq/atomicity_test.docx"
+    },
+    "observed_exit_code": 1,
+    "observed_exception": {
+      "type": "OSError",
+      "message": "injected archive write failure",
+      "builder_line": 215
+    },
+    "source_destination_removal_line": 210,
+    "original_destination": {
+      "utf8": "ORIGINAL_REVIEW_SENTINEL",
+      "hex": "4f524947494e414c5f5245564945575f53454e54494e454c",
+      "bytes": 24,
+      "sha256": "1a729dc9fbea547e3c293af708c33a37f027a39ae1d20c6071cb47c9bd91eee9"
+    },
+    "final_destination": {
+      "path": "/private/tmp/pf8_article_builder_review_v0j0vtrq/atomicity_test.docx",
+      "exists": true,
+      "hex": "504b0506000000000000000000000000000000000000",
+      "bytes": 22,
+      "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85"
+    },
+    "original_preserved": false,
+    "interpretation": "The existing output is deleted before ZIP construction completes. A controlled write failure replaces it with an empty 22-byte ZIP. The test demonstrates non-atomic replacement; no real project deliverable was changed."
+  },
+  "documented_edit_schema_test": {
+    "cwd": "/private/tmp/pf8_edit_contract_review_mubbm_n4",
+    "setup": "Create a minimal OOXML document with one text run alpha, and edits.json containing only the documented quote and repl keys.",
+    "input_xml": "<w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:body><w:p><w:r><w:t>alpha</w:t></w:r></w:p></w:body></w:document>",
+    "input_edits": [
+      {
+        "quote": "alpha",
+        "repl": "beta"
+      }
+    ],
+    "argv": [
+      "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "-I",
+      "/Users/samnimoh/Desktop/chromo/tools/apply_edits.py"
+    ],
+    "environment_overrides": {
+      "EDITS": "/private/tmp/pf8_edit_contract_review_mubbm_n4/edits.json",
+      "DRY": "1"
+    },
+    "observed_exit_code": 1,
+    "observed_exception": {
+      "type": "KeyError",
+      "message": "concept",
+      "source_line": 53
+    }
+  },
+  "limits": [
+    "No tests were rerun to create this record. Counts and hashes were obtained by reading the retained scratch artifacts and current source files; source bytes match the reviewed Git commit.",
+    "Successful clean-directory builds used the existing external temporary reference file. They establish same-machine reproducibility, not checkout-only portability.",
+    "Paragraph-text equality does not certify identical formatting, image identity, rendered page layout, PDF regeneration or byte-identical DOCX packages.",
+    "The archive error was deliberately injected into a scratch-only build. It establishes failure behavior without asserting that this filesystem error occurred in production.",
+    "No scientific analysis, biological audit or remote command was executed; no manuscript, tool source, template or published deliverable was modified."
+  ]
+}
