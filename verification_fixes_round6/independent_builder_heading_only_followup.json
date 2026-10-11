@@ -1,0 +1,590 @@
+{
+  "scope": "Independent scratch-only path-alias and root-office-document follow-up; no tools or deliverables changed.",
+  "builder_sha256_before": "1a47dac964385684583c1552ccde75d3140f3204cd0c89ea9a6a711a62e05e15",
+  "builder_sha256_after": "1a47dac964385684583c1552ccde75d3140f3204cd0c89ea9a6a711a62e05e15",
+  "source_hash_stable": true,
+  "python": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+  "driver": "/private/tmp/pf8_independent_builder_followup.py",
+  "driver_sha256": "f0f11da0f77c6672a369ccd241be79391a09a38b51b6c0ba49588e016b06046d",
+  "template_snapshot_sha256": "3691a6dc7de007be8c7a8a33ed0558d773b1b9c667626837d2fcac424cedab30",
+  "scratch": "/private/tmp/pf8_builder_independent_followup_tzny_5vz",
+  "tests": [
+    {
+      "name": "normal_separate_paths",
+      "returncode": 0,
+      "stdout": "document.xml well-formed\nwrote /private/tmp/pf8_builder_independent_followup_tzny_5vz/normal_separate_paths/prior.docx  1.19 MB\n",
+      "stderr": "",
+      "source_template_preserved": true,
+      "markdown_preserved": true,
+      "references_preserved": true,
+      "destination_preserved": false,
+      "entire_case_tree_preserved": false,
+      "cwd": "/private/tmp/pf8_builder_independent_followup_tzny_5vz/normal_separate_paths",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "passed": true,
+      "zip_crc_error": null
+    },
+    {
+      "name": "source_equals_work",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "unsafe build paths: ARTICLE_TEMPLATE overlaps the article_pkg work package\n",
+      "source_template_preserved": true,
+      "markdown_preserved": true,
+      "references_preserved": true,
+      "destination_preserved": true,
+      "entire_case_tree_preserved": true,
+      "cwd": "/private/tmp/pf8_builder_independent_followup_tzny_5vz/source_equals_work",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "passed": true,
+      "guard_diagnostic_present": true
+    },
+    {
+      "name": "source_below_work",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "unsafe build paths: ARTICLE_TEMPLATE overlaps the article_pkg work package\n",
+      "source_template_preserved": true,
+      "markdown_preserved": true,
+      "references_preserved": true,
+      "destination_preserved": true,
+      "entire_case_tree_preserved": true,
+      "cwd": "/private/tmp/pf8_builder_independent_followup_tzny_5vz/source_below_work",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "passed": true,
+      "guard_diagnostic_present": true
+    },
+    {
+      "name": "source_contains_work",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "unsafe build paths: ARTICLE_TEMPLATE overlaps the article_pkg work package\n",
+      "source_template_preserved": true,
+      "markdown_preserved": true,
+      "references_preserved": true,
+      "destination_preserved": true,
+      "entire_case_tree_preserved": true,
+      "cwd": "/private/tmp/pf8_builder_independent_followup_tzny_5vz/source_contains_work",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "passed": true,
+      "guard_diagnostic_present": true
+    },
+    {
+      "name": "source_symlink_to_work",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "unsafe build paths: ARTICLE_TEMPLATE overlaps the article_pkg work package\n",
+      "source_template_preserved": true,
+      "markdown_preserved": true,
+      "references_preserved": true,
+      "destination_preserved": true,
+      "entire_case_tree_preserved": true,
+      "cwd": "/private/tmp/pf8_builder_independent_followup_tzny_5vz/source_symlink_to_work",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "passed": true,
+      "guard_diagnostic_present": true
+    },
+    {
+      "name": "work_is_symlink",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "unsafe build paths: article_pkg work package is a symlink\n",
+      "source_template_preserved": true,
+      "markdown_preserved": true,
+      "references_preserved": true,
+      "destination_preserved": true,
+      "entire_case_tree_preserved": true,
+      "cwd": "/private/tmp/pf8_builder_independent_followup_tzny_5vz/work_is_symlink",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "passed": true,
+      "guard_diagnostic_present": true
+    },
+    {
+      "name": "destination_inside_work",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "unsafe build paths: ARTICLE_DOCX is inside or aliases the article_pkg work package\n",
+      "source_template_preserved": true,
+      "markdown_preserved": true,
+      "references_preserved": true,
+      "destination_preserved": true,
+      "entire_case_tree_preserved": true,
+      "cwd": "/private/tmp/pf8_builder_independent_followup_tzny_5vz/destination_inside_work",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "passed": true,
+      "guard_diagnostic_present": true
+    },
+    {
+      "name": "destination_nested_in_work",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "unsafe build paths: ARTICLE_DOCX is inside or aliases the article_pkg work package\n",
+      "source_template_preserved": true,
+      "markdown_preserved": true,
+      "references_preserved": true,
+      "destination_preserved": true,
+      "entire_case_tree_preserved": true,
+      "cwd": "/private/tmp/pf8_builder_independent_followup_tzny_5vz/destination_nested_in_work",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "passed": true,
+      "guard_diagnostic_present": true
+    },
+    {
+      "name": "destination_symlink_to_work_file",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "unsafe build paths: ARTICLE_DOCX is inside or aliases the article_pkg work package\n",
+      "source_template_preserved": true,
+      "markdown_preserved": true,
+      "references_preserved": true,
+      "destination_preserved": true,
+      "entire_case_tree_preserved": true,
+      "cwd": "/private/tmp/pf8_builder_independent_followup_tzny_5vz/destination_symlink_to_work_file",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "passed": true,
+      "guard_diagnostic_present": true
+    },
+    {
+      "name": "destination_hardlink_to_work_file",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "unsafe build paths: ARTICLE_DOCX is inside or aliases the article_pkg work package\n",
+      "source_template_preserved": true,
+      "markdown_preserved": true,
+      "references_preserved": true,
+      "destination_preserved": true,
+      "entire_case_tree_preserved": true,
+      "cwd": "/private/tmp/pf8_builder_independent_followup_tzny_5vz/destination_hardlink_to_work_file",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "passed": true,
+      "guard_diagnostic_present": true
+    },
+    {
+      "name": "md_inside_work",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "unsafe build paths: ARTICLE_MD is inside or aliases the article_pkg work package\n",
+      "source_template_preserved": true,
+      "markdown_preserved": true,
+      "references_preserved": true,
+      "destination_preserved": true,
+      "entire_case_tree_preserved": true,
+      "cwd": "/private/tmp/pf8_builder_independent_followup_tzny_5vz/md_inside_work",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "passed": true,
+      "guard_diagnostic_present": true
+    },
+    {
+      "name": "md_hardlink_to_work",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "unsafe build paths: ARTICLE_MD is inside or aliases the article_pkg work package\n",
+      "source_template_preserved": true,
+      "markdown_preserved": true,
+      "references_preserved": true,
+      "destination_preserved": true,
+      "entire_case_tree_preserved": true,
+      "cwd": "/private/tmp/pf8_builder_independent_followup_tzny_5vz/md_hardlink_to_work",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "passed": true,
+      "guard_diagnostic_present": true
+    },
+    {
+      "name": "refs_inside_work",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "unsafe build paths: ARTICLE_REFS is inside or aliases the article_pkg work package\n",
+      "source_template_preserved": true,
+      "markdown_preserved": true,
+      "references_preserved": true,
+      "destination_preserved": true,
+      "entire_case_tree_preserved": true,
+      "cwd": "/private/tmp/pf8_builder_independent_followup_tzny_5vz/refs_inside_work",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "passed": true,
+      "guard_diagnostic_present": true
+    },
+    {
+      "name": "refs_hardlink_to_work",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "unsafe build paths: ARTICLE_REFS is inside or aliases the article_pkg work package\n",
+      "source_template_preserved": true,
+      "markdown_preserved": true,
+      "references_preserved": true,
+      "destination_preserved": true,
+      "entire_case_tree_preserved": true,
+      "cwd": "/private/tmp/pf8_builder_independent_followup_tzny_5vz/refs_hardlink_to_work",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "passed": true,
+      "guard_diagnostic_present": true
+    },
+    {
+      "name": "destination_inside_source",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "unsafe build paths: ARTICLE_DOCX is inside or aliases the ARTICLE_TEMPLATE\n",
+      "source_template_preserved": true,
+      "markdown_preserved": true,
+      "references_preserved": true,
+      "destination_preserved": true,
+      "entire_case_tree_preserved": true,
+      "cwd": "/private/tmp/pf8_builder_independent_followup_tzny_5vz/destination_inside_source",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "passed": true,
+      "guard_diagnostic_present": true
+    },
+    {
+      "name": "destination_hardlink_to_source_part",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "unsafe build paths: ARTICLE_DOCX is inside or aliases the ARTICLE_TEMPLATE\n",
+      "source_template_preserved": true,
+      "markdown_preserved": true,
+      "references_preserved": true,
+      "destination_preserved": true,
+      "entire_case_tree_preserved": true,
+      "cwd": "/private/tmp/pf8_builder_independent_followup_tzny_5vz/destination_hardlink_to_source_part",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "passed": true,
+      "guard_diagnostic_present": true
+    },
+    {
+      "name": "destination_direct_aliases_md",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "unsafe build paths: ARTICLE_DOCX aliases ARTICLE_MD\n",
+      "source_template_preserved": true,
+      "markdown_preserved": true,
+      "references_preserved": true,
+      "destination_preserved": true,
+      "entire_case_tree_preserved": true,
+      "cwd": "/private/tmp/pf8_builder_independent_followup_tzny_5vz/destination_direct_aliases_md",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "passed": true,
+      "guard_diagnostic_present": true
+    },
+    {
+      "name": "destination_symlink_aliases_md",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "unsafe build paths: ARTICLE_DOCX aliases ARTICLE_MD\n",
+      "source_template_preserved": true,
+      "markdown_preserved": true,
+      "references_preserved": true,
+      "destination_preserved": true,
+      "entire_case_tree_preserved": true,
+      "cwd": "/private/tmp/pf8_builder_independent_followup_tzny_5vz/destination_symlink_aliases_md",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "passed": true,
+      "guard_diagnostic_present": true
+    },
+    {
+      "name": "destination_hard_aliases_md",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "unsafe build paths: ARTICLE_DOCX aliases ARTICLE_MD\n",
+      "source_template_preserved": true,
+      "markdown_preserved": true,
+      "references_preserved": true,
+      "destination_preserved": true,
+      "entire_case_tree_preserved": true,
+      "cwd": "/private/tmp/pf8_builder_independent_followup_tzny_5vz/destination_hard_aliases_md",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "passed": true,
+      "guard_diagnostic_present": true
+    },
+    {
+      "name": "destination_direct_aliases_refs",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "unsafe build paths: ARTICLE_DOCX aliases ARTICLE_REFS\n",
+      "source_template_preserved": true,
+      "markdown_preserved": true,
+      "references_preserved": true,
+      "destination_preserved": true,
+      "entire_case_tree_preserved": true,
+      "cwd": "/private/tmp/pf8_builder_independent_followup_tzny_5vz/destination_direct_aliases_refs",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "passed": true,
+      "guard_diagnostic_present": true
+    },
+    {
+      "name": "destination_symlink_aliases_refs",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "unsafe build paths: ARTICLE_DOCX aliases ARTICLE_REFS\n",
+      "source_template_preserved": true,
+      "markdown_preserved": true,
+      "references_preserved": true,
+      "destination_preserved": true,
+      "entire_case_tree_preserved": true,
+      "cwd": "/private/tmp/pf8_builder_independent_followup_tzny_5vz/destination_symlink_aliases_refs",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "passed": true,
+      "guard_diagnostic_present": true
+    },
+    {
+      "name": "destination_hard_aliases_refs",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "unsafe build paths: ARTICLE_DOCX aliases ARTICLE_REFS\n",
+      "source_template_preserved": true,
+      "markdown_preserved": true,
+      "references_preserved": true,
+      "destination_preserved": true,
+      "entire_case_tree_preserved": true,
+      "cwd": "/private/tmp/pf8_builder_independent_followup_tzny_5vz/destination_hard_aliases_refs",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "passed": true,
+      "guard_diagnostic_present": true
+    },
+    {
+      "name": "temporary_symlink_alias_output",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "unsafe build paths: temporary archive aliases ARTICLE_DOCX\n",
+      "source_template_preserved": true,
+      "markdown_preserved": true,
+      "references_preserved": true,
+      "destination_preserved": true,
+      "entire_case_tree_preserved": true,
+      "cwd": "/private/tmp/pf8_builder_independent_followup_tzny_5vz/temporary_symlink_alias_output",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "passed": true,
+      "guard_diagnostic_present": true
+    },
+    {
+      "name": "temporary_hardlink_alias_output",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "unsafe build paths: temporary archive aliases ARTICLE_DOCX\n",
+      "source_template_preserved": true,
+      "markdown_preserved": true,
+      "references_preserved": true,
+      "destination_preserved": true,
+      "entire_case_tree_preserved": true,
+      "cwd": "/private/tmp/pf8_builder_independent_followup_tzny_5vz/temporary_hardlink_alias_output",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "passed": true,
+      "guard_diagnostic_present": true
+    },
+    {
+      "name": "temporary_symlink_alias_md",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "unsafe build paths: temporary archive aliases ARTICLE_MD\n",
+      "source_template_preserved": true,
+      "markdown_preserved": true,
+      "references_preserved": true,
+      "destination_preserved": true,
+      "entire_case_tree_preserved": true,
+      "cwd": "/private/tmp/pf8_builder_independent_followup_tzny_5vz/temporary_symlink_alias_md",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "passed": true,
+      "guard_diagnostic_present": true
+    },
+    {
+      "name": "temporary_hardlink_alias_md",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "unsafe build paths: temporary archive aliases ARTICLE_MD\n",
+      "source_template_preserved": true,
+      "markdown_preserved": true,
+      "references_preserved": true,
+      "destination_preserved": true,
+      "entire_case_tree_preserved": true,
+      "cwd": "/private/tmp/pf8_builder_independent_followup_tzny_5vz/temporary_hardlink_alias_md",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "passed": true,
+      "guard_diagnostic_present": true
+    },
+    {
+      "name": "temporary_symlink_alias_refs",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "unsafe build paths: temporary archive aliases ARTICLE_REFS\n",
+      "source_template_preserved": true,
+      "markdown_preserved": true,
+      "references_preserved": true,
+      "destination_preserved": true,
+      "entire_case_tree_preserved": true,
+      "cwd": "/private/tmp/pf8_builder_independent_followup_tzny_5vz/temporary_symlink_alias_refs",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "passed": true,
+      "guard_diagnostic_present": true
+    },
+    {
+      "name": "temporary_hardlink_alias_refs",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "unsafe build paths: temporary archive aliases ARTICLE_REFS\n",
+      "source_template_preserved": true,
+      "markdown_preserved": true,
+      "references_preserved": true,
+      "destination_preserved": true,
+      "entire_case_tree_preserved": true,
+      "cwd": "/private/tmp/pf8_builder_independent_followup_tzny_5vz/temporary_hardlink_alias_refs",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "passed": true,
+      "guard_diagnostic_present": true
+    },
+    {
+      "name": "two_internal_root_documents",
+      "returncode": 1,
+      "stdout": "document.xml well-formed\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 427, in <module>\n    validate_package(zf)\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 206, in validate_package\n    raise ValueError(\"package root does not reference word/document.xml as its exactly one office document\")\nValueError: package root does not reference word/document.xml as its exactly one office document\n",
+      "source_template_preserved": true,
+      "markdown_preserved": true,
+      "references_preserved": true,
+      "destination_preserved": true,
+      "entire_case_tree_preserved": false,
+      "cwd": "/private/tmp/pf8_builder_independent_followup_tzny_5vz/two_internal_root_documents",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "passed": true,
+      "guard_diagnostic_present": true
+    },
+    {
+      "name": "extra_external_root_document",
+      "returncode": 1,
+      "stdout": "document.xml well-formed\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 427, in <module>\n    validate_package(zf)\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 206, in validate_package\n    raise ValueError(\"package root does not reference word/document.xml as its exactly one office document\")\nValueError: package root does not reference word/document.xml as its exactly one office document\n",
+      "source_template_preserved": true,
+      "markdown_preserved": true,
+      "references_preserved": true,
+      "destination_preserved": true,
+      "entire_case_tree_preserved": false,
+      "cwd": "/private/tmp/pf8_builder_independent_followup_tzny_5vz/extra_external_root_document",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "passed": true,
+      "guard_diagnostic_present": true
+    }
+  ],
+  "test_count": 30,
+  "all_passed": true,
+  "failed_checks": [],
+  "limits": [
+    "No full OOXML schema, image decoding, concurrent-write or filesystem-race certification.",
+    "Original adverse review remains unchanged in independent_builder_review.json."
+  ]
+}

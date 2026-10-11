@@ -1,0 +1,71 @@
+{
+  "generated_utc": "2026-10-11T07:15:36.310046+00:00",
+  "reviewer": "final_document_check",
+  "reviewed_script": {
+    "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/merge_visual_reviews.py",
+    "bytes": 3779,
+    "sha256": "75a48fdecbfb1f7e3736b9f5c72776d7288fa315c80dfb2117d8146cf14d0251"
+  },
+  "status": "bounded_pass",
+  "findings": [],
+  "observations": [
+    "Current merger validates exact three unique render labels and N unique render images before dictionary construction. The earlier duplicate-collapse hardening observation is resolved.",
+    "Optimization guard rejects Python -O before evidence reads or output writes.",
+    "Current source/PDF/PNG identities and exact nonoverlapping coverage in all four actual part records passed independent validation."
+  ],
+  "current_part_validation": [
+    {
+      "label": "manuscript",
+      "part": [
+        1,
+        100
+      ],
+      "status": "pass",
+      "record": {
+        "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/visual_manuscript_part_1_100.json",
+        "bytes": 27020,
+        "sha256": "5b1abb74015da824a06012c4962630bfa5d1501107c3242de58fc25d7fa9fea5"
+      }
+    },
+    {
+      "label": "manuscript",
+      "part": [
+        101,
+        197
+      ],
+      "status": "pass",
+      "record": {
+        "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/visual_manuscript_part_101_197.json",
+        "bytes": 21523,
+        "sha256": "6ccb61eef7f37c384c99f207825eb3328ef7da1150479b7cbba290bd83cb569a"
+      }
+    },
+    {
+      "label": "supplement",
+      "part": [
+        1,
+        100
+      ],
+      "status": "pass",
+      "record": {
+        "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/visual_supplement_part_1_100.json",
+        "bytes": 27919,
+        "sha256": "ff2d624d32ac3ea439fa74ad9c3ef729746078ba4a92cb1157417a6d5da21c4c"
+      }
+    },
+    {
+      "label": "supplement",
+      "part": [
+        101,
+        198
+      ],
+      "status": "pass",
+      "record": {
+        "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/visual_supplement_part_101_198.json",
+        "bytes": 21959,
+        "sha256": "f318feb57f32d35a15d5dab98ec7bcbb503446b3a76a1d7f4bb2056786b4b8ec"
+      }
+    }
+  ],
+  "scope": "Read-only review of final merger and actual part inputs; no execution of merger, publisher, scientific pipeline, or document source edit."
+}

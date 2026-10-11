@@ -1,0 +1,26 @@
+{
+  "source": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx",
+  "before_sha256": "6b81fcb360f2412f1787a1e23a7cff3d84ba021ec2ce576b6306166b8de3a135",
+  "after_sha256": "6f61aebaa4bb6c104b31038eb97ef7ddddc0b48c636b8f2f190993c9069e6115",
+  "scope": "Only keepNext/keepLines flags added to the three used heading styles; no text, figures or analysis changes.",
+  "styles_before_sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2",
+  "styles_after_sha256": "619d734d8ca4ef36c12d430339eba98e932d59c4e4e0502ce8c51c46160e159f",
+  "all_other_members_preserved": true,
+  "changes": [
+    {
+      "style_id": "Heading1",
+      "before_xml": "<w:style w:type=\"paragraph\" w:styleId=\"Heading1\"><w:name w:val=\"Heading 1\"/><w:basedOn w:val=\"Normal\"/><w:next w:val=\"Normal\"/><w:qFormat/><w:pPr><w:spacing w:after=\"160\" w:before=\"320\"/><w:outlineLvl w:val=\"0\"/></w:pPr><w:rPr><w:rFonts w:ascii=\"Calibri\" w:cs=\"Calibri\" w:eastAsia=\"Calibri\" w:hAnsi=\"Calibri\"/><w:b/><w:bCs/><w:color w:val=\"1F4E79\"/><w:sz w:val=\"30\"/><w:szCs w:val=\"30\"/></w:rPr></w:style>",
+      "after_xml": "<w:style w:type=\"paragraph\" w:styleId=\"Heading1\"><w:name w:val=\"Heading 1\"/><w:basedOn w:val=\"Normal\"/><w:next w:val=\"Normal\"/><w:qFormat/><w:pPr><w:keepNext/><w:keepLines/><w:spacing w:after=\"160\" w:before=\"320\"/><w:outlineLvl w:val=\"0\"/></w:pPr><w:rPr><w:rFonts w:ascii=\"Calibri\" w:cs=\"Calibri\" w:eastAsia=\"Calibri\" w:hAnsi=\"Calibri\"/><w:b/><w:bCs/><w:color w:val=\"1F4E79\"/><w:sz w:val=\"30\"/><w:szCs w:val=\"30\"/></w:rPr></w:style>"
+    },
+    {
+      "style_id": "Heading2",
+      "before_xml": "<w:style w:type=\"paragraph\" w:styleId=\"Heading2\"><w:name w:val=\"Heading 2\"/><w:basedOn w:val=\"Normal\"/><w:next w:val=\"Normal\"/><w:qFormat/><w:pPr><w:spacing w:after=\"120\" w:before=\"260\"/><w:outlineLvl w:val=\"1\"/></w:pPr><w:rPr><w:rFonts w:ascii=\"Calibri\" w:cs=\"Calibri\" w:eastAsia=\"Calibri\" w:hAnsi=\"Calibri\"/><w:b/><w:bCs/><w:color w:val=\"2E6DA4\"/><w:sz w:val=\"25\"/><w:szCs w:val=\"25\"/></w:rPr></w:style>",
+      "after_xml": "<w:style w:type=\"paragraph\" w:styleId=\"Heading2\"><w:name w:val=\"Heading 2\"/><w:basedOn w:val=\"Normal\"/><w:next w:val=\"Normal\"/><w:qFormat/><w:pPr><w:keepNext/><w:keepLines/><w:spacing w:after=\"120\" w:before=\"260\"/><w:outlineLvl w:val=\"1\"/></w:pPr><w:rPr><w:rFonts w:ascii=\"Calibri\" w:cs=\"Calibri\" w:eastAsia=\"Calibri\" w:hAnsi=\"Calibri\"/><w:b/><w:bCs/><w:color w:val=\"2E6DA4\"/><w:sz w:val=\"25\"/><w:szCs w:val=\"25\"/></w:rPr></w:style>"
+    },
+    {
+      "style_id": "Heading3",
+      "before_xml": "<w:style w:type=\"paragraph\" w:styleId=\"Heading3\"><w:name w:val=\"Heading 3\"/><w:basedOn w:val=\"Normal\"/><w:next w:val=\"Normal\"/><w:qFormat/><w:pPr><w:spacing w:after=\"100\" w:before=\"200\"/><w:outlineLvl w:val=\"2\"/></w:pPr><w:rPr><w:rFonts w:ascii=\"Calibri\" w:cs=\"Calibri\" w:eastAsia=\"Calibri\" w:hAnsi=\"Calibri\"/><w:b/><w:bCs/><w:color w:val=\"3A3A3A\"/><w:sz w:val=\"22\"/><w:szCs w:val=\"22\"/></w:rPr></w:style>",
+      "after_xml": "<w:style w:type=\"paragraph\" w:styleId=\"Heading3\"><w:name w:val=\"Heading 3\"/><w:basedOn w:val=\"Normal\"/><w:next w:val=\"Normal\"/><w:qFormat/><w:pPr><w:keepNext/><w:keepLines/><w:spacing w:after=\"100\" w:before=\"200\"/><w:outlineLvl w:val=\"2\"/></w:pPr><w:rPr><w:rFonts w:ascii=\"Calibri\" w:cs=\"Calibri\" w:eastAsia=\"Calibri\" w:hAnsi=\"Calibri\"/><w:b/><w:bCs/><w:color w:val=\"3A3A3A\"/><w:sz w:val=\"22\"/><w:szCs w:val=\"22\"/></w:rPr></w:style>"
+    }
+  ]
+}

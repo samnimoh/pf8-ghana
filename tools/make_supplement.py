@@ -95,8 +95,9 @@ pre=(para("This document is the complete analysis record behind the main article
  + para(f"Display items are numbered sequentially in the order they appear: Figure S1 to Figure S{NF} and Table S1 "
   f"to Table S{NT}. Every caption carries its own number. In the working report from which this document derives, "
   f"{len(dups)} labels had each been used for more than one display item and three carried letter suffixes, so a "
-  f"cross-reference could be ambiguous; the numbering here removes that, and each cross-reference was bound to the "
-  f"nearest caption carrying its original label. Section numbering is unchanged, so references of the form "
+  f"cross-reference could be ambiguous. Captions here have unique labels. References to reused original labels "
+  f"are assigned to the nearest matching caption; this rule does not by itself establish the intended referent, "
+  f"which requires contextual review. Section numbering is unchanged, so references of the form "
   f"“Section 6.9” still resolve within this document.", "Numbering. ")
  + para("Section 11 is the reference list. Every entry was checked against a primary source — the publisher’s "
   "deposit, the journal’s record, the archive record or the issuing organisation’s page — rather than against a "

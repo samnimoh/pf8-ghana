@@ -1,0 +1,49 @@
+{
+  "manuscript": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx",
+  "before_sha256": "94b93ef2e1501a10d38fa17ad53d255a9ba0898e854e8eea89c95b34512c1d60",
+  "after_sha256": "6b81fcb360f2412f1787a1e23a7cff3d84ba021ec2ce576b6306166b8de3a135",
+  "document_xml_before_sha256": "dd48fbe31c730d7769d69fb9dda7dd850ff3b71172318f498eb67509215a6867",
+  "document_xml_after_sha256": "0f4ee9b3bd1b7a31de3590866558cf1eaa06bf3b42d423c1112e12ba2b6d414b",
+  "unrelated_package_members_preserved": true,
+  "applied": [
+    {
+      "concept": "Git-status propagation",
+      "quote": "But the episode is also the clearest argument this project has produced for version control, which is gap (ii) in the paragraph below: nothing in the setup would have detected the truncation except someone opening the file.",
+      "repl": "The episode motivates the Git tracking now in place, which can detect changes in tracked files. Gap (ii) below concerns the exact historical generating state, which current tracking does not establish retrospectively.",
+      "occurrences": 1
+    },
+    {
+      "concept": "Git-status propagation",
+      "quote": "(ii) The project is not under version control, so the exact script state at run time is not recoverable other than from the files currently on disk; the unmodified originals are in pf8_ghana_pipeline.zip. The accidental truncation recorded in the note above is a direct consequence of this gap.",
+      "repl": "(ii) The project is now under Git version control, but the baseline archive does not establish the exact script state used by the historical runs; pf8_ghana_pipeline.zip contains the unmodified originals. Git can detect subsequent changes in tracked files, but cannot retrospectively prove the contents of the lost historical output.",
+      "occurrences": 1
+    },
+    {
+      "concept": "Git-status propagation",
+      "quote": "the project is not under version control, so the script state behind the reported run is recoverable only from those files, the exact commands and script revisions of that run are not archived, and pf8_ghana_pipeline.zip holds only the unmodified originals, which predate this revision's corrections and will not reproduce the reported numbers",
+      "repl": "the project is now under Git version control, but the baseline archive does not establish the exact commands and script revisions used by the historical runs; pf8_ghana_pipeline.zip holds only the unmodified originals, which predate this revision's corrections and will not reproduce the reported numbers",
+      "occurrences": 1
+    },
+    {
+      "concept": "Git-status propagation",
+      "quote": "What the incident does establish belongs in the record: nothing under results/ is write-protected, the project is not under version control, and this file was recoverable only because its own inputs happened to survive. A file whose inputs had also been overwritten would have been unrecoverable and, on this evidence, unnoticed until someone opened it.",
+      "repl": "What the incident establishes belongs in the record: the file was recoverable because its own inputs survived, and outputs were not protected against overwrite. The project is now under Git version control, which can detect changes in tracked files, but the baseline archive does not establish the contents of the lost historical table. Current tracking neither prevents an overwrite nor retrospectively recovers an unarchived file whose inputs were also lost.",
+      "occurrences": 1
+    },
+    {
+      "concept": "Practical-consequence propagation",
+      "quote": "A difference can be highly significant at n = 1,900 and still be too small to matter for any operational purpose. That is what is being claimed here.",
+      "repl": "The difference is statistically detectable at n = 1,900 and small in the measured ancestry component; its operational consequences have not been tested.",
+      "occurrences": 1
+    },
+    {
+      "concept": "Sampling-design propagation",
+      "quote": "the structure is negligible and the distance gradient is not robust, so what the analysis establishes about space is a magnitude rather than a pattern, and the surveillance-design implication rests on that measured magnitude alone.",
+      "repl": "common-variant differentiation is very low but detectable and the distance gradient is not robust. The measured differentiation and ancestry contrasts do not establish that a sparse sampling design is adequate; surveillance representativeness also depends on marker geography and sampling design.",
+      "occurrences": 1
+    }
+  ],
+  "article_md_before_sha256": "925cdc5fc6ec01d79ce61586085524d1566e0ceb6ef5b4f4e47d1d707b6057c6",
+  "article_md_after_sha256": "925cdc5fc6ec01d79ce61586085524d1566e0ceb6ef5b4f4e47d1d707b6057c6",
+  "article_edits": []
+}

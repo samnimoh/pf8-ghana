@@ -1,0 +1,24 @@
+{
+  "results": [
+    {
+      "script": "merge_visual_reviews.py",
+      "sha256": "75a48fdecbfb1f7e3736b9f5c72776d7288fa315c80dfb2117d8146cf14d0251",
+      "optimized_python_refused": true,
+      "exit_code": 1
+    },
+    {
+      "script": "publish_reviewed_pdfs.py",
+      "sha256": "4b007a712d50d0bdeacabc5881cdbfdf8af68aefaa6459216a4c1685d2485db5",
+      "optimized_python_refused": true,
+      "exit_code": 1
+    },
+    {
+      "script": "make_fix_manifest.py",
+      "sha256": "bd7171bcf85064645c763d0fae1fde7c3c57e3f46b535772ecc2119bbe9005ef",
+      "optimized_python_refused": true,
+      "exit_code": 1
+    }
+  ],
+  "all_passed": true,
+  "scope": "All three final validation gates refuse optimized Python before any file reads or writes."
+}

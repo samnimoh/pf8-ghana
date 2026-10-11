@@ -1,0 +1,243 @@
+{
+  "scope": "Independent focused layout and scratch package/failure regression. No source or deliverable edited; no scientific code executed.",
+  "builder_sha256_before": "e2331bfd9fa40433e5761d633c78ae9c2892624a8a1a32f96a348c8e1b82057f",
+  "builder_sha256_after": "e2331bfd9fa40433e5761d633c78ae9c2892624a8a1a32f96a348c8e1b82057f",
+  "source_hash_stable": true,
+  "template_snapshot_sha256": "0d6497fa02a98d40f2e0084ad137886075f2feb4c29f2ed0b52e022d43f95937",
+  "article_snapshot_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
+  "markdown_snapshot_sha256": "925cdc5fc6ec01d79ce61586085524d1566e0ceb6ef5b4f4e47d1d707b6057c6",
+  "references_snapshot_sha256": "7c9333469481e1c4f2ac1fd665ec1c8db0dc115fcc002a509d2d1cdf0c409738",
+  "driver": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/independent_builder_layout_tests.py",
+  "driver_sha256": "0df8d3ddb27337e6177d27a51e4230fb130b0b18a79d3dc020aa6279969aee9c",
+  "python": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+  "scratch": "/private/tmp/pf8_independent_layout_kmyap_fx",
+  "tests": [
+    {
+      "name": "previous_builder_control",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/private/tmp/pf8_independent_layout_kmyap_fx/previous_builder.py"
+      ],
+      "cwd": "/private/tmp/pf8_independent_layout_kmyap_fx/previous_builder_control",
+      "returncode": 0,
+      "stdout": "document.xml well-formed\nwrote /private/tmp/pf8_independent_layout_kmyap_fx/previous_builder_control/article.docx  1.19 MB\n",
+      "stderr": "",
+      "all_source_bytes_preserved": true,
+      "temporary_archive_absent": true,
+      "destination_sha256": "f667cacb08e8be698c4610f8bacd1dc91c2ed2ba76d253bd78d7075ec21f96f8",
+      "passed": true
+    },
+    {
+      "name": "final_builder_normal",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_independent_layout_kmyap_fx/final_builder_normal",
+      "returncode": 0,
+      "stdout": "document.xml well-formed\nwrote /private/tmp/pf8_independent_layout_kmyap_fx/final_builder_normal/article.docx  1.19 MB\n",
+      "stderr": "",
+      "all_source_bytes_preserved": true,
+      "temporary_archive_absent": true,
+      "destination_sha256": "44fb9a8c4842783811f11c7046654036328bc376712389992e7d33d7bf6f5c51",
+      "passed": true
+    },
+    {
+      "name": "only_declared_heading_and_header_XML_changes",
+      "passed": true,
+      "heading_flag_pairs_added": 36,
+      "repeat_header_flags_added": 4,
+      "previous_xml_sha256": "ff275e6013bdd85f7fed67eb1fad28a59bc4c963ad098ef3309f30d0c42f62a3",
+      "final_xml_sha256": "66bcf4cc9b567bd3671005b4eebc9b17ca4ae9b271612e43c82f0c59304e09e2"
+    },
+    {
+      "name": "paragraph_text_and_other_package_parts_preserved",
+      "passed": true,
+      "paragraph_count": 468,
+      "non_document_parts_compared": 14
+    },
+    {
+      "name": "heading_flags_have_correct_scope_and_values",
+      "passed": true,
+      "heading_counts": {
+        "Heading1": 10,
+        "Heading2": 26
+      },
+      "bad_paragraph_indices": []
+    },
+    {
+      "name": "only_first_table_rows_repeat_as_headers",
+      "passed": true,
+      "table_count": 4,
+      "bad_header_rows": []
+    },
+    {
+      "name": "actual_article_matches_final_builder_content",
+      "passed": true,
+      "actual_article_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
+    },
+    {
+      "name": "missing_required_figure",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_independent_layout_kmyap_fx/missing_required_figure",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "missing or empty ARTICLE_TEMPLATE part: word/media/218857879d6287b87460540cea2d8ec053df7685.png -> /private/tmp/pf8_independent_layout_kmyap_fx/missing_required_figure/source/word/media/218857879d6287b87460540cea2d8ec053df7685.png\n",
+      "all_source_bytes_preserved": true,
+      "temporary_archive_absent": true,
+      "destination_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
+      "destination_preserved": true,
+      "expected_diagnostic": "missing or empty ARTICLE_TEMPLATE part",
+      "passed": true
+    },
+    {
+      "name": "missing_transitive_font",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_independent_layout_kmyap_fx/missing_transitive_font",
+      "returncode": 1,
+      "stdout": "document.xml well-formed\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 427, in <module>\n    validate_package(zf)\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 201, in validate_package\n    raise ValueError(f\"missing relationship target: {name} {rid} -> {target}\")\nValueError: missing relationship target: word/_rels/fontTable.xml.rels rIdIndependentMissing -> fonts/absent.odttf\n",
+      "all_source_bytes_preserved": true,
+      "temporary_archive_absent": true,
+      "destination_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
+      "destination_preserved": true,
+      "expected_diagnostic": "missing relationship target",
+      "passed": true
+    },
+    {
+      "name": "duplicate_root_document",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_independent_layout_kmyap_fx/duplicate_root_document",
+      "returncode": 1,
+      "stdout": "document.xml well-formed\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 427, in <module>\n    validate_package(zf)\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 206, in validate_package\n    raise ValueError(\"package root does not reference word/document.xml as its exactly one office document\")\nValueError: package root does not reference word/document.xml as its exactly one office document\n",
+      "all_source_bytes_preserved": true,
+      "temporary_archive_absent": true,
+      "destination_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
+      "destination_preserved": true,
+      "expected_diagnostic": "exactly one office document",
+      "passed": true
+    },
+    {
+      "name": "failure_write",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/private/tmp/pf8_independent_layout_kmyap_fx/fault_driver.py",
+        "write",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_independent_layout_kmyap_fx/failure_write",
+      "returncode": 1,
+      "stdout": "document.xml well-formed\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/private/tmp/pf8_independent_layout_kmyap_fx/fault_driver.py\", line 25, in <module>\n    runpy.run_path(sys.argv[2],run_name='__main__')\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 421, in <module>\n    zf.write(full, os.path.relpath(full, OUT))\n  File \"/private/tmp/pf8_independent_layout_kmyap_fx/fault_driver.py\", line 8, in fail\n    if counter[0]==5:raise OSError('independent write failure')\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nOSError: independent write failure\n",
+      "all_source_bytes_preserved": true,
+      "temporary_archive_absent": true,
+      "destination_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
+      "destination_preserved": true,
+      "expected_diagnostic": "independent write failure",
+      "passed": true
+    },
+    {
+      "name": "failure_crc",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/private/tmp/pf8_independent_layout_kmyap_fx/fault_driver.py",
+        "crc",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_independent_layout_kmyap_fx/failure_crc",
+      "returncode": 1,
+      "stdout": "document.xml well-formed\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/private/tmp/pf8_independent_layout_kmyap_fx/fault_driver.py\", line 25, in <module>\n    runpy.run_path(sys.argv[2],run_name='__main__')\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 426, in <module>\n    raise RuntimeError(\"archive failed its own integrity check\")\nRuntimeError: archive failed its own integrity check\n",
+      "all_source_bytes_preserved": true,
+      "temporary_archive_absent": true,
+      "destination_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
+      "destination_preserved": true,
+      "expected_diagnostic": "archive failed its own integrity check",
+      "passed": true
+    },
+    {
+      "name": "failure_fsync",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/private/tmp/pf8_independent_layout_kmyap_fx/fault_driver.py",
+        "fsync",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_independent_layout_kmyap_fx/failure_fsync",
+      "returncode": 1,
+      "stdout": "document.xml well-formed\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/private/tmp/pf8_independent_layout_kmyap_fx/fault_driver.py\", line 25, in <module>\n    runpy.run_path(sys.argv[2],run_name='__main__')\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 423, in <module>\n    os.fsync(fh.fileno())\n  File \"/private/tmp/pf8_independent_layout_kmyap_fx/fault_driver.py\", line 14, in fail\n    def fail(*args,**kwargs):raise OSError('independent fsync failure')\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nOSError: independent fsync failure\n",
+      "all_source_bytes_preserved": true,
+      "temporary_archive_absent": true,
+      "destination_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
+      "destination_preserved": true,
+      "expected_diagnostic": "independent fsync failure",
+      "passed": true
+    },
+    {
+      "name": "failure_replace",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/private/tmp/pf8_independent_layout_kmyap_fx/fault_driver.py",
+        "replace",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_independent_layout_kmyap_fx/failure_replace",
+      "returncode": 1,
+      "stdout": "document.xml well-formed\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/private/tmp/pf8_independent_layout_kmyap_fx/fault_driver.py\", line 25, in <module>\n    runpy.run_path(sys.argv[2],run_name='__main__')\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 428, in <module>\n    os.replace(_tmp, DOCX)                      # atomic on the same filesystem\n    ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/tmp/pf8_independent_layout_kmyap_fx/fault_driver.py\", line 17, in fail\n    def fail(*args,**kwargs):raise OSError('independent replacement failure')\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nOSError: independent replacement failure\n",
+      "all_source_bytes_preserved": true,
+      "temporary_archive_absent": true,
+      "destination_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
+      "destination_preserved": true,
+      "expected_diagnostic": "independent replacement failure",
+      "passed": true
+    },
+    {
+      "name": "failure_skip_image",
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/private/tmp/pf8_independent_layout_kmyap_fx/fault_driver.py",
+        "skip_image",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "cwd": "/private/tmp/pf8_independent_layout_kmyap_fx/failure_skip_image",
+      "returncode": 1,
+      "stdout": "document.xml well-formed\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/private/tmp/pf8_independent_layout_kmyap_fx/fault_driver.py\", line 25, in <module>\n    runpy.run_path(sys.argv[2],run_name='__main__')\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 427, in <module>\n    validate_package(zf)\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 122, in validate_package\n    raise ValueError(\"article package is missing required parts: \" + \", \".join(absent))\nValueError: article package is missing required parts: word/media/218857879d6287b87460540cea2d8ec053df7685.png\n",
+      "all_source_bytes_preserved": true,
+      "temporary_archive_absent": true,
+      "destination_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
+      "destination_preserved": true,
+      "expected_diagnostic": "article package is missing required parts",
+      "passed": true
+    }
+  ],
+  "test_count": 15,
+  "all_passed": true,
+  "failed_checks": [],
+  "limits": [
+    "No full OOXML schema or rendering validation; parent performs final PDF/layout QA.",
+    "Tests are scoped regressions for document helpers, not analysis reproducibility or statistical validity."
+  ]
+}

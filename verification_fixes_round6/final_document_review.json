@@ -1,0 +1,172 @@
+{
+  "scope": "Read-only final text/package review. Root performs PDF rendering and visual QA. No scientific pipeline or biological calculation executed.",
+  "reviewer": "final_document_check",
+  "git_head_at_check": "bb1b8db5aafcb174f33c778ceb80053fa5c464e8",
+  "baseline_commit": "d59bbf6722c36b8f8f09e707a2290fbb699ed83f",
+  "source_sha256": {
+    "Pf8_Ghana_manuscript_REVISED.docx": "6f61aebaa4bb6c104b31038eb97ef7ddddc0b48c636b8f2f190993c9069e6115",
+    "article/Additional_file_1.docx": "0d6497fa02a98d40f2e0084ad137886075f2feb4c29f2ed0b52e022d43f95937",
+    "article/Pf8_Ghana_article.docx": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
+    "article/article.md": "925cdc5fc6ec01d79ce61586085524d1566e0ceb6ef5b4f4e47d1d707b6057c6",
+    "article/CANONICAL_FACTS_FOR_ARTICLE.md": "e0cf717eba8b244ae0e522078010dc4610337b140c2dfb2820d3bae63d02295b",
+    "provenance_final/VERIFICATION_NOTES.md": "2efa775460fe1195dcbca591cf90f23d93a872e8979ac8e51e1f1ceba560b585",
+    "tools/build_article.py": "e2331bfd9fa40433e5761d633c78ae9c2892624a8a1a32f96a348c8e1b82057f"
+  },
+  "checks": {
+    "manuscript_exactly_matches_accepted_edits": true,
+    "additional_six_proposals_applied": true,
+    "manuscript_paragraph_count_unchanged": true,
+    "unrelated_manuscript_package_parts_preserved": true,
+    "article_markdown_exactly_matches_four_accepted_edits": true,
+    "article_docx_paragraphs_exactly_match_four_accepted_edits": true,
+    "supplement_extra_preamble_paragraphs": 4,
+    "supplement_differences_other_than_numbering_and_front_matter": 3,
+    "supplement_table_labels_contiguous_unique": true,
+    "supplement_figure_labels_contiguous_unique": true,
+    "known_caption_fragments_absent": true,
+    "unsupported_cascade_Table_6_8_pointer_removed": true,
+    "live_not_under_version_control_assertions_absent": true,
+    "canonical_facts_and_saved_scientific_inputs_outputs_unchanged": true,
+    "replacement_numeric_tokens_unchanged_except_removed_unsupported_reference": true,
+    "existing_provenance_notes_preserved_with_correction_appendix_only": true,
+    "manuscript_heading_style_delta_exact_and_scoped": true,
+    "manuscript_heading_direct_overrides_absent": true,
+    "manuscript_document_XML_identical_to_accepted_editorial_revision": true,
+    "derivative_style_bytes_identical_to_manuscript": true,
+    "independent_builder_regressions_match_final_source": true,
+    "actual_article_identity_matches_independent_layout_recheck": true
+  },
+  "edit_plan_sha256": "f0333e9d0da51c9ec3d9a5e5de4eeb02f1c63613545a6ea3df47ca39040fee71",
+  "additional_edit_plan_sha256": "314f8e611d1fc77f2deb009bfe8892c4435b5cc4482964f040926ccb10744e82",
+  "numeric_token_edit_exceptions": [
+    {
+      "paragraph_index": 731,
+      "quote_numbers": [
+        "6.8",
+        "10.1"
+      ],
+      "replacement_numbers": [
+        "10.1"
+      ],
+      "quote": ", Table 6.8 and Section 10.1 use this wording",
+      "repl": " and Section 10.1 use this wording"
+    }
+  ],
+  "manuscript_unexpected_paragraph_differences": [],
+  "supplement_alignment_differences": [
+    {
+      "manuscript_paragraph_index": 1,
+      "supplement_paragraph_index": 1,
+      "manuscript": "Fine-scale spatial population genomics of Plasmodium falciparum across Ghana's agro-ecological zones: a Pf8 analysis",
+      "supplement": "Additional file 1 — Supplementary material for: Population differentiation and antimalarial resistance-marker frequencies in Plasmodium falciparum across the agro-ecological zones of Ghana, 2009–2021"
+    },
+    {
+      "manuscript_paragraph_index": 2,
+      "supplement_paragraph_index": 2,
+      "manuscript": "Revised working analysis report — second edition",
+      "supplement": "Full analysis record: methods detail, complete results, robustness checks and correction history"
+    },
+    {
+      "manuscript_paragraph_index": 7,
+      "supplement_paragraph_index": 7,
+      "manuscript": "Status: Revised working manuscript for internal review",
+      "supplement": "Status: Supplementary material accompanying the main article"
+    }
+  ],
+  "live_version_control_assertions": [],
+  "remaining_panmixia_mating_mentions": [
+    {
+      "paragraph_index": 146,
+      "text": "[Interpreted] Conclusion. At the resolution these data permit, Ghanaian P. falciparum shows very low but statistically detectable differentiation at the retained common variants. Five of the six pairwise estimates have 95% confidence intervals excluding zero; only Guinea savanna against the transitional zone, where n = 25, spans it. Very low is not the same as undetectable, and neither is a demonstration of random mating, for which these data contain no direct evidence. What the sensitivity analysis adds is stability of the magnitude rather than absence of the effect: the maximum pairwise FST stays within 0.00204-0.00255 across all six threshold scenarios, over 1,900 to 4,403 isolates and 3,275 to 10,876 SNPs, so the headline result is insensitive to both of the cuts that define the dataset. The companion claim does not survive the same treatment. The region-level isolation-by-distance result is significant at the published thresholds and at MAF >= 0.02, but in only 2 of 6 threshold scenarios and 4 of 7 leave-one-region-out replicates, and this report therefore no longer asserts a distance effect, weak or otherwise. What remains of the spatial signal is a single south-to-north contrast, visible in the FST ranking and in the K = 2 minor component, with no robust evidence that genetic distance scales with geographic distance. That very low differentiation describes the retained common-variant panel; it does not establish that sparse sampling adequately characterises population structure. Marker-frequency representativeness is a separate question, and the resistance panel in this analysis shows significant between-zone variation at p < 0.001 at pfdhfr, pfdhps and pfaat1. That threshold is stated because it is a selection: on the four-zone chi-square as reported, several further loci are nominally significant at p < 0.05, among them pfcrt I356T (p = 1.6 x 10 to the -3), pfmdr2 I492V (p = 0.020) and pfmdr1 N86Y (p = 0.029). Low neutral FST therefore does not license an assumption that marker frequencies are spatially representative. The pfk13 result is a genuine tested negative - no screened resistance allele occurs at any of the 23 codons, which cover the complete WHO-validated set of 14 and all 6 candidates: twenty-two are fixed at the reference residue and codon 458 is at 0.9995 on a single Asn458Asp call, which is not the validated N458Y, on 1,845 to 1,876 isolates called per codon - rather than an untested absence; it is also a statement about 2009-2021 and not about current parasite populations. The XtX set remains a ranked candidate list, of which 13 SNPs survive FDR 10% and two adjacent chromosome-11 sites - one of them the fifth-ranked SNP overall - are flagged lower confidence on ExcessHet and InbreedingCoeff grounds. All zone-level results describe a compound variable in which ecology, administrative region, collection period and sequencing study cannot be separated; that is a property of the Pf8 metadata, not of the analysis."
+    },
+    {
+      "paragraph_index": 978,
+      "text": "[Observed] The measured differentiation, by contrast, is stable across every threshold tested, and that stability is what the sensitivity analysis strengthens. Stability of a very low, detectable common-variant estimate is not an estimate of random mating or of contemporary exchange. Maximum pairwise FST stays within 0.00204 to 0.00255 across all six scenarios — a total spread of 0.0005 — over isolate counts from 1,900 to 4,403 and SNP counts from 3,275 to 10,876. The headline conclusion is insensitive to both thresholds, across more than a doubling of the sample and nearly a trebling of the panel, and that is the strongest single piece of evidence for it anywhere in this analysis."
+    },
+    {
+      "paragraph_index": 980,
+      "text": "Tripling the SNP count via MAF ≥ 0.01 (3,916 to 10,876 sites) lowers FST to 0.00204, as expected if rarer variants are less differentiated between zones. The measured differentiation remains very low at the lower MAF floor; this is a comparison of panel-specific estimates, not evidence about a mating system or contemporary exchange."
+    },
+    {
+      "paragraph_index": 981,
+      "text": "Why one conclusion strengthens while the other falls. The two outcomes are not in tension, and the asymmetry is instructive rather than suspicious. Maximum FST is a point estimate pooled over thousands of sites, so it moves little when the site set or the sample changes, and six scenarios agreeing to within 0.0005 is a genuine stability result. The Mantel p-value is a significance verdict on a correlation over 21 pairwise points from seven populations, and at baseline it sat at 0.0252 — inside the top half of the interval below 0.05, with very little margin. A verdict with that little margin, resting on that few points, is exactly the kind that threshold choices can decide, and here they do. The check shows that the magnitude of measured common-variant differentiation is stable across the tested thresholds, whereas the significance of the distance correlation is not; it does not estimate panmixia."
+    },
+    {
+      "paragraph_index": 2046,
+      "text": "[Interpreted] The original manuscript's statement that \"the minority component is present at similar low frequency everywhere\" and the summary claim of \"no ancestry structure aligned to geography\" are both false as written, and neither was ever tested. The corrected statement is that zone affects minor-component ancestry significantly but negligibly. Significantly: p = 1.05 x 10-22, robust to call rate, Fws and collection year. Negligibly: zone accounts for 1.9 per cent of the variance on the ANOVA measure and 5.4 per cent on the rank measure, the between-zone spread in means runs only from 0.042 to 0.092, and the whole K = 2 model improves on no structure at all by 0.54 per cent of cross-validation error. The measured zone-associated ancestry contrast is small; neither its practical consequences nor the mating system is established by this analysis."
+    },
+    {
+      "paragraph_index": 3143,
+      "text": "[Interpreted] The evidence for very low but detectable common-variant differentiation is strong, but it is neither five independent lines nor a test of random mating. FST, ADMIXTURE and TreeMix are three summaries of one genotype matrix: all three are computed from the same per-zone allele counts, and at this level of differentiation a four-population covariance matrix and the pairwise FST matrix are near-deterministic functions of each other. Only the ordinations use a different input — MalariaGEN's published Pf8 genotype-distance matrix — and they are now computed on the same 1,900 isolates as everything else, because stage 3 has been re-run on the analysis set (silhouette by zone −0.020; Table 8.2 row 21, Figure 8.1). The agreement between rows 1, 3 and 4 of Table 7.1 is therefore substantially arithmetic, not corroborative. What this revision adds is robustness rather than independence: the FST summary has been recomputed under six combinations of the two thresholds that define the dataset, and the maximum pairwise value moves only between 0.00204 and 0.00255 (row 5 of Table 7.1; Table 8.3). Those six scenarios are not independent lines either — they are the same pipeline on overlapping data — but they establish that the headline does not depend on the analyst's threshold choices, which is a different and more useful thing. The region-level Mantel test does not share that robustness, and it has to be given up. It is a fourth summary of the same matrix, computed from region-level FST, so it was never independent of the others; and it is significant in only 2 of 6 threshold scenarios and 4 of 7 leave-one-region-out replicates, so it cannot be cited as a converging line at all (Table 7.2, row 1). It was the result carrying a supported distance-gradient claim, and losing it is a real loss rather than a tidying-up. Described accurately, what remains is: three summaries of one 3,916-SNP genotype matrix (ADMIXTURE on 3,385 LD-pruned sites of it), plus three ordinations of an independently published distance matrix on the same 1,900 isolates, all pointing the same way, and insensitive to both thresholds that define the dataset. Sensitivity strengthens the measured-differentiation result. A robust isolation-by-distance result is not established."
+    },
+    {
+      "paragraph_index": 3529,
+      "text": "[Calculated] Very low, detectable common-variant differentiation survives both thresholds that define the dataset, and that stability is the best-evidenced result the analysis holds. It is a statement about a measured allele-frequency statistic, not about the mating system or the rate of contemporary exchange. scripts/step13_sensitivity.py loads the genotype matrix once, rebuilds the analysis matrix under six threshold scenarios and recomputes pairwise FST and the region-level Mantel test for each. The two thresholds varied are the ones that do the most work in the pipeline: the Fws monoclonality cut, which discards 57 per cent of isolates and does so unevenly by zone, and the MAF floor, which discards 99.8 per cent of sites. Across all six scenarios the maximum pairwise FST ranges only 0.00204 to 0.00255 — a total spread of 0.0005 — over sample sizes from 1,900 to 4,403 isolates and SNP counts from 3,275 to 10,876, and the maximum pair is coastal savanna against Guinea savanna in every one of them. Two secondary readings are worth recording. Relaxing Fws slightly raises FST (0.00232 at Fws >= 0.95, 0.00255 at Fws >= 0.80), so the polyclonal isolates the filter removes were not masking differentiation — the direction a reviewer would most likely suspect is the opposite of the one observed. And tripling the SNP count by lowering the MAF floor to 0.01 lowers it (0.00204), as expected if rarer variants are less differentiated between zones. A conclusion that holds at 1,900 isolates and 3,916 SNPs and also at 4,403 isolates and 10,876 SNPs is being tested rather than assumed."
+    },
+    {
+      "paragraph_index": 3607,
+      "text": "Robustness, where it stops, and the one conclusion it removed. The population-genetic conclusions did not change when the SNP panel grew by 16.6 per cent, the BayPass scan became reproducible and false-discovery accounting was added — and one of them has now been tested against the two thresholds that define the dataset and did change. What survived: maximum FST stayed within 0.00204–0.00255 across six threshold scenarios spanning 1,900 to 4,403 isolates and 3,275 to 10,876 SNPs; the ADMIXTURE cross-validation curve stayed near-flat with a negligible K = 2 improvement; re-running the ordinations on the analysis set left the silhouette slightly more negative rather than less; and the 19 outliers came through a quality check with every significant difference in their favour, though two chromosome-11 sites are downgraded on an ExcessHet and InbreedingCoeff signal the check itself surfaced. What did not survive: isolation by distance, significant in two of six threshold scenarios and four of seven region jackknife replicates, now reported as not robust. Near-panmixia and isolation by distance were graded together in the previous version, both under \"robust to the largest correction the pipeline received\"; they are not the same kind of result and the same six scenarios separate them cleanly. The resistance results are a third case and should not be described as robust in the same sentence as either: the first correction created the finding and the second changed its content. The triple mutant moved from an implied 0.786–0.908 to a measured 0.771, a locus at 0.897 appeared that had been absent altogether, two pfk13 variants were reclassified, a marker discrepancy dissolved into an annotation bug, and the central functional interpretation was reversed. Two successive corrections in the same place is itself a result about the process, recorded in Appendix F. The threshold sensitivity was not run on the codon panel, so nothing is claimed about the resistance frequencies' behaviour under other thresholds."
+    },
+    {
+      "paragraph_index": 3977,
+      "text": "[Observed] This appendix exists for traceability, and it now records three rounds. Round one, 9–10 October 2026: an adversarial multi-agent audit. Eight reviewers working across separate dimensions raised 110 findings, each of which was then put to three independent verifiers prompted to refute it and defaulting to refuted where they could not substantiate the claim. A finding counts as confirmed only where at least two of three verifiers failed to refute it after checking the code, data or outputs themselves. Sixty-one findings were confirmed — 14 high severity, 31 medium, 16 low — with 19 disputed and 21 refuted. Thirty verifications in the reproducibility dimension were lost to a rate limit and are recorded as unverified rather than confirmed. Seven confirmed defects required code changes; stages 4 to 9 were re-run on 10 October 2026 with all seven in place. Round two, 10 October 2026: an external critique of the corrected manuscript. It raised five points. All five were upheld and four were defects in the analysis code, not in the prose — in the resistance panel that round one had introduced to fix its own largest finding. The panel was rebuilt as scripts/step12_codon_panel.py and every resistance number in this revision was read from that script's outputs. This is the fourth consecutive round in which a correction contained its own defect, and the pattern is consistent: each layer was checked for internal consistency against our own outputs, and what escaped was external correctness — whether the marker list matched an authoritative source, whether the annotation direction matched the reference genome, whether a co-occurrence claim had co-occurrence data behind it. The verification architecture was built to catch stale numbers, and it did. It was not built to ask whether the inputs were the right ones. Round three, 10 October 2026: the four outstanding robustness checks. This round was not an audit of the manuscript but the execution of four items that Section 10.4 carried as outstanding, and it is recorded here because one of them overturned a conclusion instead of confirming it. The Fws and MAF sensitivity analysis (scripts/step13_sensitivity.py) withdrew isolation by distance as a supported result — significant in two of six threshold scenarios — and, from the same six runs, was initially described as making near-panmixia the best-evidenced conclusion in the manuscript. That earlier label is now withdrawn: the six runs establish stability of measured common-variant differentiation, not the mating system. The outlier quality check cleared the exported-protein artefact concern and downgraded two chromosome-11 SNPs on an ExcessHet and InbreedingCoeff signal. Stage 3 was re-run on the analysis set. The GeoJSON provenance cannot be closed analytically and remains open. Round three found no defect in the prose and none in the analysis code; what it found was that a published result depended on the thresholds that produced it. Two integrity incidents occurred during the round and are registered as rows 13 and 14 of Table F.1 rather than left in the logs."
+    }
+  ],
+  "scientific_file_changes": [],
+  "provenance_note_change": {
+    "path": "provenance_final/VERIFICATION_NOTES.md",
+    "old_sha256": "09bdab689bf1153e91c880072bfb9b7de955c5ef888a247dfe3e40b367b86a3d",
+    "new_sha256": "2efa775460fe1195dcbca591cf90f23d93a872e8979ac8e51e1f1ceba560b585",
+    "scope": "Appended correction record; no prior note text changed."
+  },
+  "intentional_heading_style_delta": {
+    "exact_three_style_delta": true,
+    "old_styles_sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2",
+    "new_styles_sha256": "619d734d8ca4ef36c12d430339eba98e932d59c4e4e0502ce8c51c46160e159f",
+    "affected_style_ids": [
+      "Heading1",
+      "Heading2",
+      "Heading3"
+    ],
+    "paragraphs_using_each_style": {
+      "Heading1": 14,
+      "Heading2": 64,
+      "Heading3": 44
+    },
+    "direct_heading_flag_override_paragraph_indices": [],
+    "scope": "Exactly keepNext/keepLines inserted in the three named style pPr elements; all other style bytes compared unchanged."
+  },
+  "manuscript_editorial_XML_sha256": "0f4ee9b3bd1b7a31de3590866558cf1eaa06bf3b42d423c1112e12ba2b6d414b",
+  "manuscript_final_XML_sha256": "0f4ee9b3bd1b7a31de3590866558cf1eaa06bf3b42d423c1112e12ba2b6d414b",
+  "final_builder_followup": {
+    "builder_sha256": "e2331bfd9fa40433e5761d633c78ae9c2892624a8a1a32f96a348c8e1b82057f",
+    "independent_alias_package_checks": 30,
+    "independent_layout_package_failure_checks": 15,
+    "source_matched_and_all_passed": true
+  },
+  "manual_review": {
+    "panmixia_mating_assertions": "Remaining mentions are explicit exclusions or previous-version history; no live inference of panmixia or random mating located.",
+    "unconditional_TreeMix_history_or_exchange_claims": "Methods, summary cells and conclusions qualify improved covariance fit and conditional edge statistics; original gene-flow thesis objective is preserved and its answered status narrowed.",
+    "remaining_practical_consequence_claims": "The two proposed propagation omissions at paragraph indices 3183 and 3649 are corrected in the actual final manuscript and supplement.",
+    "historical_withdrawals": "Historical quotations, discarded panmixia wording and original thesis objectives retained with explicit caveats.",
+    "number_integrity": "Expected accepted replacements preserve scientific quantities; only the unsupported Table 6.8 reference is removed. Scientific inputs and outputs checked by unchanged Git file identity, without recomputation."
+  },
+  "findings": [],
+  "resolved_during_final_review": {
+    "Git_status_paragraph_indices": [
+      3521,
+      3522,
+      3965,
+      4033
+    ],
+    "practical_consequences_paragraph_index": 3183,
+    "sampling_design_paragraph_index": 3649,
+    "resolution_verified_in_actual_DOCX": true
+  },
+  "limits": [
+    "PDFs not reviewed by this agent while regeneration was in progress.",
+    "Review verifies the scoped corrections and edit integrity, not all citations or every scientific inference in the full record.",
+    "No new Lean implementation proof or end-to-end scientific pipeline validation performed."
+  ],
+  "status": "bounded_pass"
+}

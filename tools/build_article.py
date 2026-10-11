@@ -248,6 +248,8 @@ def runs(text, base="", extra=""):
 def para(text, style=None, after=160, ind=None, size=None, italic=False, align=None):
     pr=""
     if style: pr+=f'<w:pStyle w:val="{style}"/>'
+    # Inherited template styles may let a heading fall alone at a page end.
+    if style in {"Heading1", "Heading2"}: pr+="<w:keepNext/><w:keepLines/>"
     if align: pr+=f'<w:jc w:val="{align}"/>'
     pr+=f'<w:spacing w:after="{after}" w:line="276"/>'
     if ind: pr+=f'<w:ind w:left="{ind[0]}" w:hanging="{ind[1]}"/>'
@@ -285,7 +287,7 @@ def table(caption, header, rows, widths):
           '<w:top w:val="single" w:sz="6" w:color="999999"/><w:bottom w:val="single" w:sz="6" w:color="999999"/>'
           '<w:insideH w:val="single" w:sz="4" w:color="CCCCCC"/></w:tblBorders></w:tblPr>'
           f'<w:tblGrid>{tw}</w:tblGrid>')
-    out+='<w:tr>'+''.join(cell(h,w,bold=True) for h,w in zip(header,widths))+'</w:tr>'
+    out+='<w:tr><w:trPr><w:tblHeader/></w:trPr>'+''.join(cell(h,w,bold=True) for h,w in zip(header,widths))+'</w:tr>'
     for r in rows:
         out+='<w:tr>'+''.join(cell(str(c),w) for c,w in zip(r,widths))+'</w:tr>'
     out+='</w:tbl>'+para("", after=200)

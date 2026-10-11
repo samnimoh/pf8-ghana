@@ -1,0 +1,33 @@
+{
+  "before_sha256": {
+    "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx": "6f61aebaa4bb6c104b31038eb97ef7ddddc0b48c636b8f2f190993c9069e6115",
+    "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx": "3691a6dc7de007be8c7a8a33ed0558d773b1b9c667626837d2fcac424cedab30",
+    "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.docx": "93b2785b4034b90cb6f4457ebc22388508487ce1ef3d475f1afdedb4b83f65f2"
+  },
+  "after_sha256": {
+    "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx": "6f61aebaa4bb6c104b31038eb97ef7ddddc0b48c636b8f2f190993c9069e6115",
+    "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx": "0d6497fa02a98d40f2e0084ad137886075f2feb4c29f2ed0b52e022d43f95937",
+    "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.docx": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
+  },
+  "commands": [
+    {
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/make_supplement.py"
+      ],
+      "stdout": "captions: figures 23, tables 52\noriginal labels used more than once (6): ['6.10', '6.11', '6.7', '6.7a', '6.8', '6.9']\nmentions rewritten: 213\nafter renumbering: Figure S1\u2013S23 (23 captions), Table S1\u2013S52 (52 captions), no duplicates\nnumbering is contiguous and complete\n  ok title 1\n  ok title 2\n  ok subtitle\n  ok status\n  ok preamble\ndocument.xml 2622044 bytes\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
+      ],
+      "stdout": "document.xml well-formed\nwrote /Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.docx  1.19 MB\n",
+      "stderr": ""
+    }
+  ],
+  "scope": "Local document assembly only; scientific calculations and outputs unchanged."
+}

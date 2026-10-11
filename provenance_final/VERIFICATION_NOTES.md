@@ -232,3 +232,37 @@ input-domain checks are now under `audit_scripts/` and `audit_logs/`, with a REA
 what they do and do not establish. They run against the public Pf8 store, so they can be
 re-executed; they are not an independent examination of read alignments, and they do not
 establish that the archived outputs were produced by the archived scripts.
+
+# Round 6 document and helper corrections
+
+The current working record and article now describe very low, detectable differentiation at
+retained common variants and its stability across the tested filters. The interpretation was
+propagated through abstracts, answers, tables and correction narratives; it does not estimate
+the mating system, contemporary exchange or the adequacy of a sparse sampling design.
+TreeMix summary answers now carry the same fixed-graph qualification as the methods. Earlier
+panmixia interpretations remain only as explicitly withdrawn history or excluded inferences.
+Scientific numbers, analysis scripts, output tables and figure bytes were preserved.
+
+The unsupported Table 6.8 pointer in the canonical-panel cascade paragraph was removed rather
+than assigned a speculative replacement. The two unfinished caption sentences were removed.
+Current Git tracking is distinguished from the still-unestablished exact generating state of
+historical runs. The supplement was regenerated from the working record and the article from
+its Markdown source; neither derivative was patched independently.
+
+The editor now counts exact and spacing-variant matches together, validates occurrence indices,
+and prevents quotes from crossing paragraph, cell or displayed-control boundaries. The article
+builder validates retained package dependencies before replacement and rejects paths that
+overlap or alias its disposable work directory. Primary regression suites passed 49 editor
+checks and 38 builder checks; independent follow-up suites passed 14 and 30 respectively.
+These checks concern document helpers, not statistical calibration or full OOXML-schema/image
+validation. The existing Lean reference proofs were unchanged; no implementation-refinement
+proof or complete historical input/command lineage was added.
+
+Rendered-page review also found headings alone at page ends. Pagination flags were added to the
+three used heading styles in the working record and to article-builder headings, and article
+table headers repeat across page breaks. These formatting changes preserve all paragraph text.
+
+Edit plans, independent reviews, source identities and build evidence are archived in
+`verification_fixes_round6/`. PDF synchronization and visual review are recorded there after
+the final rebuild. The six findings are assessed individually in its correction record; this
+entry does not certify every claim in the full analysis or fill publication placeholders.

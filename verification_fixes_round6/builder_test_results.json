@@ -1,11 +1,11 @@
 {
   "scope": "Scratch document packages only; no scientific code executed or deliverable written.",
   "python": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
-  "scratch_directory": "/private/tmp/pf8_builder_fixes_mdt0v6af",
-  "builder_sha256_before": "384d6c65172c5bd0714329e76a1404e3eb6fdb099d38931a5b416611fad5997c",
-  "builder_sha256_after": "384d6c65172c5bd0714329e76a1404e3eb6fdb099d38931a5b416611fad5997c",
-  "template_docx_sha256_at_start": "e954fe87a94a40fd954f3eb5b74638d6892ce79fcd23a3be364c169bb0fd948d",
-  "article_docx_sha256_at_start": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+  "scratch_directory": "/private/tmp/pf8_builder_fixes_ontssp4o",
+  "builder_sha256_before": "e2331bfd9fa40433e5761d633c78ae9c2892624a8a1a32f96a348c8e1b82057f",
+  "builder_sha256_after": "e2331bfd9fa40433e5761d633c78ae9c2892624a8a1a32f96a348c8e1b82057f",
+  "template_docx_sha256_at_start": "0d6497fa02a98d40f2e0084ad137886075f2feb4c29f2ed0b52e022d43f95937",
+  "article_docx_sha256_at_start": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
   "test_driver_sha256": "678548bc28b2354ded2401ae5cb260c15793de4bc5331c0b9714107073154b77",
   "results": [
     {
@@ -15,13 +15,13 @@
         "-I",
         "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
       ],
-      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/normal_from_unrelated_directory",
+      "cwd": "/private/tmp/pf8_builder_fixes_ontssp4o/normal_from_unrelated_directory",
       "returncode": 0,
-      "stdout": "document.xml well-formed\nwrote /private/tmp/pf8_builder_fixes_mdt0v6af/normal_from_unrelated_directory/article.docx  1.19 MB\n",
+      "stdout": "document.xml well-formed\nwrote /private/tmp/pf8_builder_fixes_ontssp4o/normal_from_unrelated_directory/article.docx  1.19 MB\n",
       "stderr": "",
       "destination_preserved": false,
-      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
-      "after_sha256": "83a433e2076617b7b4e1913fb2a279d5cd9ec2ea8924df97eb969929b093a835",
+      "before_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
+      "after_sha256": "ef837dd8f695478abbbfc34215e903ba947f4c70c35cd90a079cb004b25e9852",
       "temporary_archive_exists": false,
       "zip_crc_error": null,
       "exact_current_document_xml_match": true,
@@ -35,13 +35,13 @@
         "-I",
         "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
       ],
-      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/missing_figure_1",
+      "cwd": "/private/tmp/pf8_builder_fixes_ontssp4o/missing_figure_1",
       "returncode": 1,
       "stdout": "",
-      "stderr": "missing or empty ARTICLE_TEMPLATE part: word/media/93b6764f7192ce47a8c3257fe6d80a68d84833ff.png -> /private/tmp/pf8_builder_fixes_mdt0v6af/missing_figure_1/template/word/media/93b6764f7192ce47a8c3257fe6d80a68d84833ff.png\n",
+      "stderr": "missing or empty ARTICLE_TEMPLATE part: word/media/93b6764f7192ce47a8c3257fe6d80a68d84833ff.png -> /private/tmp/pf8_builder_fixes_ontssp4o/missing_figure_1/template/word/media/93b6764f7192ce47a8c3257fe6d80a68d84833ff.png\n",
       "destination_preserved": true,
-      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
-      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "before_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
+      "after_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
       "temporary_archive_exists": false,
       "expected_diagnostic": "word/media/93b6764f7192ce47a8c3257fe6d80a68d84833ff.png",
       "passed": true
@@ -53,13 +53,13 @@
         "-I",
         "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
       ],
-      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/missing_figure_2",
+      "cwd": "/private/tmp/pf8_builder_fixes_ontssp4o/missing_figure_2",
       "returncode": 1,
       "stdout": "",
-      "stderr": "missing or empty ARTICLE_TEMPLATE part: word/media/218857879d6287b87460540cea2d8ec053df7685.png -> /private/tmp/pf8_builder_fixes_mdt0v6af/missing_figure_2/template/word/media/218857879d6287b87460540cea2d8ec053df7685.png\n",
+      "stderr": "missing or empty ARTICLE_TEMPLATE part: word/media/218857879d6287b87460540cea2d8ec053df7685.png -> /private/tmp/pf8_builder_fixes_ontssp4o/missing_figure_2/template/word/media/218857879d6287b87460540cea2d8ec053df7685.png\n",
       "destination_preserved": true,
-      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
-      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "before_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
+      "after_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
       "temporary_archive_exists": false,
       "expected_diagnostic": "word/media/218857879d6287b87460540cea2d8ec053df7685.png",
       "passed": true
@@ -71,13 +71,13 @@
         "-I",
         "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
       ],
-      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/missing_figure_3",
+      "cwd": "/private/tmp/pf8_builder_fixes_ontssp4o/missing_figure_3",
       "returncode": 1,
       "stdout": "",
-      "stderr": "missing or empty ARTICLE_TEMPLATE part: word/media/c8eab09bbe813dc6fe1001e38fae01b5b7482cd0.png -> /private/tmp/pf8_builder_fixes_mdt0v6af/missing_figure_3/template/word/media/c8eab09bbe813dc6fe1001e38fae01b5b7482cd0.png\n",
+      "stderr": "missing or empty ARTICLE_TEMPLATE part: word/media/c8eab09bbe813dc6fe1001e38fae01b5b7482cd0.png -> /private/tmp/pf8_builder_fixes_ontssp4o/missing_figure_3/template/word/media/c8eab09bbe813dc6fe1001e38fae01b5b7482cd0.png\n",
       "destination_preserved": true,
-      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
-      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "before_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
+      "after_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
       "temporary_archive_exists": false,
       "expected_diagnostic": "word/media/c8eab09bbe813dc6fe1001e38fae01b5b7482cd0.png",
       "passed": true
@@ -89,13 +89,13 @@
         "-I",
         "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
       ],
-      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/missing_word_styles.xml",
+      "cwd": "/private/tmp/pf8_builder_fixes_ontssp4o/missing_word_styles.xml",
       "returncode": 1,
       "stdout": "",
-      "stderr": "missing or empty ARTICLE_TEMPLATE part: word/styles.xml -> /private/tmp/pf8_builder_fixes_mdt0v6af/missing_word_styles.xml/template/word/styles.xml\n",
+      "stderr": "missing or empty ARTICLE_TEMPLATE part: word/styles.xml -> /private/tmp/pf8_builder_fixes_ontssp4o/missing_word_styles.xml/template/word/styles.xml\n",
       "destination_preserved": true,
-      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
-      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "before_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
+      "after_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
       "temporary_archive_exists": false,
       "expected_diagnostic": "word/styles.xml",
       "passed": true
@@ -107,13 +107,13 @@
         "-I",
         "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
       ],
-      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/missing_word_settings.xml",
+      "cwd": "/private/tmp/pf8_builder_fixes_ontssp4o/missing_word_settings.xml",
       "returncode": 1,
       "stdout": "",
-      "stderr": "missing or empty ARTICLE_TEMPLATE part: word/settings.xml -> /private/tmp/pf8_builder_fixes_mdt0v6af/missing_word_settings.xml/template/word/settings.xml\n",
+      "stderr": "missing or empty ARTICLE_TEMPLATE part: word/settings.xml -> /private/tmp/pf8_builder_fixes_ontssp4o/missing_word_settings.xml/template/word/settings.xml\n",
       "destination_preserved": true,
-      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
-      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "before_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
+      "after_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
       "temporary_archive_exists": false,
       "expected_diagnostic": "word/settings.xml",
       "passed": true
@@ -125,13 +125,13 @@
         "-I",
         "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
       ],
-      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/missing_word_theme_theme1.xml",
+      "cwd": "/private/tmp/pf8_builder_fixes_ontssp4o/missing_word_theme_theme1.xml",
       "returncode": 1,
       "stdout": "",
-      "stderr": "missing or empty ARTICLE_TEMPLATE part: word/theme/theme1.xml -> /private/tmp/pf8_builder_fixes_mdt0v6af/missing_word_theme_theme1.xml/template/word/theme/theme1.xml\n",
+      "stderr": "missing or empty ARTICLE_TEMPLATE part: word/theme/theme1.xml -> /private/tmp/pf8_builder_fixes_ontssp4o/missing_word_theme_theme1.xml/template/word/theme/theme1.xml\n",
       "destination_preserved": true,
-      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
-      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "before_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
+      "after_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
       "temporary_archive_exists": false,
       "expected_diagnostic": "word/theme/theme1.xml",
       "passed": true
@@ -143,13 +143,13 @@
         "-I",
         "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
       ],
-      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/missing_word_fontTable.xml",
+      "cwd": "/private/tmp/pf8_builder_fixes_ontssp4o/missing_word_fontTable.xml",
       "returncode": 1,
       "stdout": "",
-      "stderr": "missing or empty ARTICLE_TEMPLATE part: word/fontTable.xml -> /private/tmp/pf8_builder_fixes_mdt0v6af/missing_word_fontTable.xml/template/word/fontTable.xml\n",
+      "stderr": "missing or empty ARTICLE_TEMPLATE part: word/fontTable.xml -> /private/tmp/pf8_builder_fixes_ontssp4o/missing_word_fontTable.xml/template/word/fontTable.xml\n",
       "destination_preserved": true,
-      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
-      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "before_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
+      "after_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
       "temporary_archive_exists": false,
       "expected_diagnostic": "word/fontTable.xml",
       "passed": true
@@ -161,13 +161,13 @@
         "-I",
         "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
       ],
-      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/missing_Content_Types.xml",
+      "cwd": "/private/tmp/pf8_builder_fixes_ontssp4o/missing_Content_Types.xml",
       "returncode": 1,
       "stdout": "",
-      "stderr": "missing or empty ARTICLE_TEMPLATE part: [Content_Types].xml -> /private/tmp/pf8_builder_fixes_mdt0v6af/missing_Content_Types.xml/template/[Content_Types].xml\n",
+      "stderr": "missing or empty ARTICLE_TEMPLATE part: [Content_Types].xml -> /private/tmp/pf8_builder_fixes_ontssp4o/missing_Content_Types.xml/template/[Content_Types].xml\n",
       "destination_preserved": true,
-      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
-      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "before_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
+      "after_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
       "temporary_archive_exists": false,
       "expected_diagnostic": "[Content_Types].xml",
       "passed": true
@@ -179,13 +179,13 @@
         "-I",
         "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
       ],
-      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/missing__rels_.rels",
+      "cwd": "/private/tmp/pf8_builder_fixes_ontssp4o/missing__rels_.rels",
       "returncode": 1,
       "stdout": "",
-      "stderr": "missing or empty ARTICLE_TEMPLATE part: _rels/.rels -> /private/tmp/pf8_builder_fixes_mdt0v6af/missing__rels_.rels/template/_rels/.rels\n",
+      "stderr": "missing or empty ARTICLE_TEMPLATE part: _rels/.rels -> /private/tmp/pf8_builder_fixes_ontssp4o/missing__rels_.rels/template/_rels/.rels\n",
       "destination_preserved": true,
-      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
-      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "before_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
+      "after_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
       "temporary_archive_exists": false,
       "expected_diagnostic": "_rels/.rels",
       "passed": true
@@ -197,13 +197,13 @@
         "-I",
         "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
       ],
-      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/empty_figure",
+      "cwd": "/private/tmp/pf8_builder_fixes_ontssp4o/empty_figure",
       "returncode": 1,
       "stdout": "",
-      "stderr": "missing or empty ARTICLE_TEMPLATE part: word/media/218857879d6287b87460540cea2d8ec053df7685.png -> /private/tmp/pf8_builder_fixes_mdt0v6af/empty_figure/template/word/media/218857879d6287b87460540cea2d8ec053df7685.png\n",
+      "stderr": "missing or empty ARTICLE_TEMPLATE part: word/media/218857879d6287b87460540cea2d8ec053df7685.png -> /private/tmp/pf8_builder_fixes_ontssp4o/empty_figure/template/word/media/218857879d6287b87460540cea2d8ec053df7685.png\n",
       "destination_preserved": true,
-      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
-      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "before_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
+      "after_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
       "temporary_archive_exists": false,
       "expected_diagnostic": "missing or empty ARTICLE_TEMPLATE part",
       "passed": true
@@ -215,13 +215,13 @@
         "-I",
         "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
       ],
-      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/malformed_styles",
+      "cwd": "/private/tmp/pf8_builder_fixes_ontssp4o/malformed_styles",
       "returncode": 1,
       "stdout": "",
       "stderr": "invalid ARTICLE_TEMPLATE XML: word/styles.xml: no element found: line 1, column 8\n",
       "destination_preserved": true,
-      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
-      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "before_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
+      "after_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
       "temporary_archive_exists": false,
       "expected_diagnostic": "invalid ARTICLE_TEMPLATE XML: word/styles.xml",
       "passed": true
@@ -233,13 +233,13 @@
         "-I",
         "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
       ],
-      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/missing_root_metadata_dependency",
+      "cwd": "/private/tmp/pf8_builder_fixes_ontssp4o/missing_root_metadata_dependency",
       "returncode": 1,
       "stdout": "document.xml well-formed\n",
-      "stderr": "Traceback (most recent call last):\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 425, in <module>\n    validate_package(zf)\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 147, in validate_package\n    raise ValueError(f\"content-type override refers to absent part: {part}\")\nValueError: content-type override refers to absent part: /docProps/core.xml\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 427, in <module>\n    validate_package(zf)\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 147, in validate_package\n    raise ValueError(f\"content-type override refers to absent part: {part}\")\nValueError: content-type override refers to absent part: /docProps/core.xml\n",
       "destination_preserved": true,
-      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
-      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "before_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
+      "after_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
       "temporary_archive_exists": false,
       "expected_diagnostic": "absent part: /docProps/core.xml",
       "passed": true
@@ -251,13 +251,13 @@
         "-I",
         "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
       ],
-      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/incorrect_style_content_type",
+      "cwd": "/private/tmp/pf8_builder_fixes_ontssp4o/incorrect_style_content_type",
       "returncode": 1,
       "stdout": "document.xml well-formed\n",
-      "stderr": "Traceback (most recent call last):\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 425, in <module>\n    validate_package(zf)\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 161, in validate_package\n    raise ValueError(f\"incorrect content type for {name}: {mime}\")\nValueError: incorrect content type for word/styles.xml: application/xml\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 427, in <module>\n    validate_package(zf)\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 161, in validate_package\n    raise ValueError(f\"incorrect content type for {name}: {mime}\")\nValueError: incorrect content type for word/styles.xml: application/xml\n",
       "destination_preserved": true,
-      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
-      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "before_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
+      "after_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
       "temporary_archive_exists": false,
       "expected_diagnostic": "incorrect content type for word/styles.xml",
       "passed": true
@@ -269,13 +269,13 @@
         "-I",
         "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
       ],
-      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/missing_transitive_font_dependency",
+      "cwd": "/private/tmp/pf8_builder_fixes_ontssp4o/missing_transitive_font_dependency",
       "returncode": 1,
       "stdout": "document.xml well-formed\n",
-      "stderr": "Traceback (most recent call last):\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 425, in <module>\n    validate_package(zf)\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 201, in validate_package\n    raise ValueError(f\"missing relationship target: {name} {rid} -> {target}\")\nValueError: missing relationship target: word/_rels/fontTable.xml.rels rIdExtra -> fonts/missing.odttf\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 427, in <module>\n    validate_package(zf)\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 201, in validate_package\n    raise ValueError(f\"missing relationship target: {name} {rid} -> {target}\")\nValueError: missing relationship target: word/_rels/fontTable.xml.rels rIdExtra -> fonts/missing.odttf\n",
       "destination_preserved": true,
-      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
-      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "before_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
+      "after_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
       "temporary_archive_exists": false,
       "expected_diagnostic": "missing relationship target: word/_rels/fontTable.xml.rels rIdExtra",
       "passed": true
@@ -287,13 +287,13 @@
         "-I",
         "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
       ],
-      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/orphan_retained_relationship",
+      "cwd": "/private/tmp/pf8_builder_fixes_ontssp4o/orphan_retained_relationship",
       "returncode": 1,
       "stdout": "document.xml well-formed\n",
-      "stderr": "Traceback (most recent call last):\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 425, in <module>\n    validate_package(zf)\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 176, in validate_package\n    raise ValueError(f\"orphan relationship part: {name} (owner {owner} is absent)\")\nValueError: orphan relationship part: word/_rels/absent.xml.rels (owner word/absent.xml is absent)\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 427, in <module>\n    validate_package(zf)\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 176, in validate_package\n    raise ValueError(f\"orphan relationship part: {name} (owner {owner} is absent)\")\nValueError: orphan relationship part: word/_rels/absent.xml.rels (owner word/absent.xml is absent)\n",
       "destination_preserved": true,
-      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
-      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "before_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
+      "after_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
       "temporary_archive_exists": false,
       "expected_diagnostic": "orphan relationship part",
       "passed": true
@@ -305,13 +305,13 @@
         "-I",
         "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
       ],
-      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/unresolved_relationship_id",
+      "cwd": "/private/tmp/pf8_builder_fixes_ontssp4o/unresolved_relationship_id",
       "returncode": 1,
       "stdout": "document.xml well-formed\n",
-      "stderr": "Traceback (most recent call last):\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 425, in <module>\n    validate_package(zf)\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 214, in validate_package\n    raise ValueError(f\"unresolved relationship ID in {name}: {value}\")\nValueError: unresolved relationship ID in word/fontTable.xml: rIdMissing\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 427, in <module>\n    validate_package(zf)\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 214, in validate_package\n    raise ValueError(f\"unresolved relationship ID in {name}: {value}\")\nValueError: unresolved relationship ID in word/fontTable.xml: rIdMissing\n",
       "destination_preserved": true,
-      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
-      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "before_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
+      "after_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
       "temporary_archive_exists": false,
       "expected_diagnostic": "unresolved relationship ID in word/fontTable.xml: rIdMissing",
       "passed": true
@@ -323,13 +323,13 @@
         "-I",
         "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
       ],
-      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/incorrect_root_document",
+      "cwd": "/private/tmp/pf8_builder_fixes_ontssp4o/incorrect_root_document",
       "returncode": 1,
       "stdout": "document.xml well-formed\n",
-      "stderr": "Traceback (most recent call last):\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 425, in <module>\n    validate_package(zf)\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 206, in validate_package\n    raise ValueError(\"package root does not reference word/document.xml as its exactly one office document\")\nValueError: package root does not reference word/document.xml as its exactly one office document\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 427, in <module>\n    validate_package(zf)\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 206, in validate_package\n    raise ValueError(\"package root does not reference word/document.xml as its exactly one office document\")\nValueError: package root does not reference word/document.xml as its exactly one office document\n",
       "destination_preserved": true,
-      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
-      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "before_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
+      "after_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
       "temporary_archive_exists": false,
       "expected_diagnostic": "package root does not reference word/document.xml",
       "passed": true
@@ -341,13 +341,13 @@
         "-I",
         "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
       ],
-      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/duplicate_root_office_document",
+      "cwd": "/private/tmp/pf8_builder_fixes_ontssp4o/duplicate_root_office_document",
       "returncode": 1,
       "stdout": "document.xml well-formed\n",
-      "stderr": "Traceback (most recent call last):\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 425, in <module>\n    validate_package(zf)\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 206, in validate_package\n    raise ValueError(\"package root does not reference word/document.xml as its exactly one office document\")\nValueError: package root does not reference word/document.xml as its exactly one office document\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 427, in <module>\n    validate_package(zf)\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 206, in validate_package\n    raise ValueError(\"package root does not reference word/document.xml as its exactly one office document\")\nValueError: package root does not reference word/document.xml as its exactly one office document\n",
       "destination_preserved": true,
-      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
-      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "before_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
+      "after_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
       "temporary_archive_exists": false,
       "expected_diagnostic": "exactly one office document",
       "passed": true
@@ -359,13 +359,13 @@
         "-I",
         "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
       ],
-      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/external_relationship_not_local_part",
+      "cwd": "/private/tmp/pf8_builder_fixes_ontssp4o/external_relationship_not_local_part",
       "returncode": 0,
-      "stdout": "document.xml well-formed\nwrote /private/tmp/pf8_builder_fixes_mdt0v6af/external_relationship_not_local_part/article.docx  1.19 MB\n",
+      "stdout": "document.xml well-formed\nwrote /private/tmp/pf8_builder_fixes_ontssp4o/external_relationship_not_local_part/article.docx  1.19 MB\n",
       "stderr": "",
       "destination_preserved": false,
-      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
-      "after_sha256": "f51f1db75c4f644c3878eb56c4785f32c67f7c6390d22a4a49b031b02d54fd73",
+      "before_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
+      "after_sha256": "c54b350fad3423897bc238debff79e9ab2de7195418fa3a830d26b930ad7dd3a",
       "temporary_archive_exists": false,
       "zip_crc_error": null,
       "exact_current_document_xml_match": true,
@@ -377,17 +377,17 @@
       "command": [
         "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
         "-I",
-        "/private/tmp/pf8_builder_fixes_mdt0v6af/builder_fault_driver.py",
+        "/private/tmp/pf8_builder_fixes_ontssp4o/builder_fault_driver.py",
         "archive_write",
         "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
       ],
-      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/failure_archive_write",
+      "cwd": "/private/tmp/pf8_builder_fixes_ontssp4o/failure_archive_write",
       "returncode": 1,
       "stdout": "document.xml well-formed\n",
-      "stderr": "Traceback (most recent call last):\n  File \"/private/tmp/pf8_builder_fixes_mdt0v6af/builder_fault_driver.py\", line 25, in <module>\n    runpy.run_path(sys.argv[2],run_name=\"__main__\")\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 419, in <module>\n    zf.write(full, os.path.relpath(full, OUT))\n  File \"/private/tmp/pf8_builder_fixes_mdt0v6af/builder_fault_driver.py\", line 8, in fail\n    if n[0]==5: raise OSError(\"synthetic fifth archive write failure\")\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nOSError: synthetic fifth archive write failure\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/private/tmp/pf8_builder_fixes_ontssp4o/builder_fault_driver.py\", line 25, in <module>\n    runpy.run_path(sys.argv[2],run_name=\"__main__\")\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 421, in <module>\n    zf.write(full, os.path.relpath(full, OUT))\n  File \"/private/tmp/pf8_builder_fixes_ontssp4o/builder_fault_driver.py\", line 8, in fail\n    if n[0]==5: raise OSError(\"synthetic fifth archive write failure\")\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nOSError: synthetic fifth archive write failure\n",
       "destination_preserved": true,
-      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
-      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "before_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
+      "after_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
       "temporary_archive_exists": false,
       "expected_diagnostic": "synthetic fifth archive write failure",
       "passed": true
@@ -397,17 +397,17 @@
       "command": [
         "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
         "-I",
-        "/private/tmp/pf8_builder_fixes_mdt0v6af/builder_fault_driver.py",
+        "/private/tmp/pf8_builder_fixes_ontssp4o/builder_fault_driver.py",
         "integrity_check",
         "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
       ],
-      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/failure_integrity_check",
+      "cwd": "/private/tmp/pf8_builder_fixes_ontssp4o/failure_integrity_check",
       "returncode": 1,
       "stdout": "document.xml well-formed\n",
-      "stderr": "Traceback (most recent call last):\n  File \"/private/tmp/pf8_builder_fixes_mdt0v6af/builder_fault_driver.py\", line 25, in <module>\n    runpy.run_path(sys.argv[2],run_name=\"__main__\")\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 424, in <module>\n    raise RuntimeError(\"archive failed its own integrity check\")\nRuntimeError: archive failed its own integrity check\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/private/tmp/pf8_builder_fixes_ontssp4o/builder_fault_driver.py\", line 25, in <module>\n    runpy.run_path(sys.argv[2],run_name=\"__main__\")\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 426, in <module>\n    raise RuntimeError(\"archive failed its own integrity check\")\nRuntimeError: archive failed its own integrity check\n",
       "destination_preserved": true,
-      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
-      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "before_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
+      "after_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
       "temporary_archive_exists": false,
       "expected_diagnostic": "archive failed its own integrity check",
       "passed": true
@@ -417,17 +417,17 @@
       "command": [
         "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
         "-I",
-        "/private/tmp/pf8_builder_fixes_mdt0v6af/builder_fault_driver.py",
+        "/private/tmp/pf8_builder_fixes_ontssp4o/builder_fault_driver.py",
         "fsync",
         "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
       ],
-      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/failure_fsync",
+      "cwd": "/private/tmp/pf8_builder_fixes_ontssp4o/failure_fsync",
       "returncode": 1,
       "stdout": "document.xml well-formed\n",
-      "stderr": "Traceback (most recent call last):\n  File \"/private/tmp/pf8_builder_fixes_mdt0v6af/builder_fault_driver.py\", line 25, in <module>\n    runpy.run_path(sys.argv[2],run_name=\"__main__\")\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 421, in <module>\n    os.fsync(fh.fileno())\n  File \"/private/tmp/pf8_builder_fixes_mdt0v6af/builder_fault_driver.py\", line 14, in fail\n    def fail(*a,**kw): raise OSError(\"synthetic fsync failure\")\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nOSError: synthetic fsync failure\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/private/tmp/pf8_builder_fixes_ontssp4o/builder_fault_driver.py\", line 25, in <module>\n    runpy.run_path(sys.argv[2],run_name=\"__main__\")\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 423, in <module>\n    os.fsync(fh.fileno())\n  File \"/private/tmp/pf8_builder_fixes_ontssp4o/builder_fault_driver.py\", line 14, in fail\n    def fail(*a,**kw): raise OSError(\"synthetic fsync failure\")\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nOSError: synthetic fsync failure\n",
       "destination_preserved": true,
-      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
-      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "before_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
+      "after_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
       "temporary_archive_exists": false,
       "expected_diagnostic": "synthetic fsync failure",
       "passed": true
@@ -437,17 +437,17 @@
       "command": [
         "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
         "-I",
-        "/private/tmp/pf8_builder_fixes_mdt0v6af/builder_fault_driver.py",
+        "/private/tmp/pf8_builder_fixes_ontssp4o/builder_fault_driver.py",
         "replace",
         "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
       ],
-      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/failure_replace",
+      "cwd": "/private/tmp/pf8_builder_fixes_ontssp4o/failure_replace",
       "returncode": 1,
       "stdout": "document.xml well-formed\n",
-      "stderr": "Traceback (most recent call last):\n  File \"/private/tmp/pf8_builder_fixes_mdt0v6af/builder_fault_driver.py\", line 25, in <module>\n    runpy.run_path(sys.argv[2],run_name=\"__main__\")\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 426, in <module>\n    os.replace(_tmp, DOCX)                      # atomic on the same filesystem\n    ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/tmp/pf8_builder_fixes_mdt0v6af/builder_fault_driver.py\", line 17, in fail\n    def fail(*a,**kw): raise OSError(\"synthetic atomic replacement failure\")\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nOSError: synthetic atomic replacement failure\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/private/tmp/pf8_builder_fixes_ontssp4o/builder_fault_driver.py\", line 25, in <module>\n    runpy.run_path(sys.argv[2],run_name=\"__main__\")\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 428, in <module>\n    os.replace(_tmp, DOCX)                      # atomic on the same filesystem\n    ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/tmp/pf8_builder_fixes_ontssp4o/builder_fault_driver.py\", line 17, in fail\n    def fail(*a,**kw): raise OSError(\"synthetic atomic replacement failure\")\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nOSError: synthetic atomic replacement failure\n",
       "destination_preserved": true,
-      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
-      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "before_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
+      "after_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
       "temporary_archive_exists": false,
       "expected_diagnostic": "synthetic atomic replacement failure",
       "passed": true
@@ -457,17 +457,17 @@
       "command": [
         "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
         "-I",
-        "/private/tmp/pf8_builder_fixes_mdt0v6af/builder_fault_driver.py",
+        "/private/tmp/pf8_builder_fixes_ontssp4o/builder_fault_driver.py",
         "semantic_missing_image",
         "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
       ],
-      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/failure_semantic_missing_image",
+      "cwd": "/private/tmp/pf8_builder_fixes_ontssp4o/failure_semantic_missing_image",
       "returncode": 1,
       "stdout": "document.xml well-formed\n",
-      "stderr": "Traceback (most recent call last):\n  File \"/private/tmp/pf8_builder_fixes_mdt0v6af/builder_fault_driver.py\", line 25, in <module>\n    runpy.run_path(sys.argv[2],run_name=\"__main__\")\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 425, in <module>\n    validate_package(zf)\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 122, in validate_package\n    raise ValueError(\"article package is missing required parts: \" + \", \".join(absent))\nValueError: article package is missing required parts: word/media/218857879d6287b87460540cea2d8ec053df7685.png\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/private/tmp/pf8_builder_fixes_ontssp4o/builder_fault_driver.py\", line 25, in <module>\n    runpy.run_path(sys.argv[2],run_name=\"__main__\")\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 427, in <module>\n    validate_package(zf)\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 122, in validate_package\n    raise ValueError(\"article package is missing required parts: \" + \", \".join(absent))\nValueError: article package is missing required parts: word/media/218857879d6287b87460540cea2d8ec053df7685.png\n",
       "destination_preserved": true,
-      "before_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
-      "after_sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001",
+      "before_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
+      "after_sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45",
       "temporary_archive_exists": false,
       "expected_diagnostic": "article package is missing required parts",
       "passed": true
@@ -479,7 +479,7 @@
         "-I",
         "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
       ],
-      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/collision_source_equals_work",
+      "cwd": "/private/tmp/pf8_builder_fixes_ontssp4o/collision_source_equals_work",
       "returncode": 1,
       "stdout": "",
       "stderr": "unsafe build paths: ARTICLE_TEMPLATE overlaps the article_pkg work package\n",
@@ -488,7 +488,7 @@
       "template_and_all_fixture_bytes_preserved": true,
       "fixture_identities_before": {
         "article.docx": {
-          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+          "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
         },
         "article_pkg": {
           "directory": true
@@ -536,7 +536,7 @@
           "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
         },
         "article_pkg/word/document.xml": {
-          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+          "sha256": "f520237fb83a2278864646e91a8f8e29a1f418902eed4e1ea3e11d759e42318b"
         },
         "article_pkg/word/endnotes.xml": {
           "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
@@ -590,7 +590,7 @@
           "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
         },
         "article_pkg/word/styles.xml": {
-          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+          "sha256": "619d734d8ca4ef36c12d430339eba98e932d59c4e4e0502ce8c51c46160e159f"
         },
         "article_pkg/word/theme": {
           "directory": true
@@ -601,7 +601,7 @@
       },
       "fixture_identities_after": {
         "article.docx": {
-          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+          "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
         },
         "article_pkg": {
           "directory": true
@@ -649,7 +649,7 @@
           "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
         },
         "article_pkg/word/document.xml": {
-          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+          "sha256": "f520237fb83a2278864646e91a8f8e29a1f418902eed4e1ea3e11d759e42318b"
         },
         "article_pkg/word/endnotes.xml": {
           "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
@@ -703,7 +703,7 @@
           "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
         },
         "article_pkg/word/styles.xml": {
-          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+          "sha256": "619d734d8ca4ef36c12d430339eba98e932d59c4e4e0502ce8c51c46160e159f"
         },
         "article_pkg/word/theme": {
           "directory": true
@@ -721,7 +721,7 @@
         "-I",
         "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
       ],
-      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/collision_source_inside_work",
+      "cwd": "/private/tmp/pf8_builder_fixes_ontssp4o/collision_source_inside_work",
       "returncode": 1,
       "stdout": "",
       "stderr": "unsafe build paths: ARTICLE_TEMPLATE overlaps the article_pkg work package\n",
@@ -730,7 +730,7 @@
       "template_and_all_fixture_bytes_preserved": true,
       "fixture_identities_before": {
         "article.docx": {
-          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+          "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
         },
         "article_pkg": {
           "directory": true
@@ -781,7 +781,7 @@
           "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
         },
         "article_pkg/nested_template/word/document.xml": {
-          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+          "sha256": "f520237fb83a2278864646e91a8f8e29a1f418902eed4e1ea3e11d759e42318b"
         },
         "article_pkg/nested_template/word/endnotes.xml": {
           "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
@@ -835,7 +835,7 @@
           "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
         },
         "article_pkg/nested_template/word/styles.xml": {
-          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+          "sha256": "619d734d8ca4ef36c12d430339eba98e932d59c4e4e0502ce8c51c46160e159f"
         },
         "article_pkg/nested_template/word/theme": {
           "directory": true
@@ -846,7 +846,7 @@
       },
       "fixture_identities_after": {
         "article.docx": {
-          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+          "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
         },
         "article_pkg": {
           "directory": true
@@ -897,7 +897,7 @@
           "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
         },
         "article_pkg/nested_template/word/document.xml": {
-          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+          "sha256": "f520237fb83a2278864646e91a8f8e29a1f418902eed4e1ea3e11d759e42318b"
         },
         "article_pkg/nested_template/word/endnotes.xml": {
           "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
@@ -951,7 +951,7 @@
           "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
         },
         "article_pkg/nested_template/word/styles.xml": {
-          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+          "sha256": "619d734d8ca4ef36c12d430339eba98e932d59c4e4e0502ce8c51c46160e159f"
         },
         "article_pkg/nested_template/word/theme": {
           "directory": true
@@ -969,7 +969,7 @@
         "-I",
         "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
       ],
-      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/collision_source_contains_work/template",
+      "cwd": "/private/tmp/pf8_builder_fixes_ontssp4o/collision_source_contains_work/template",
       "returncode": 1,
       "stdout": "",
       "stderr": "unsafe build paths: ARTICLE_TEMPLATE overlaps the article_pkg work package\n",
@@ -978,7 +978,7 @@
       "template_and_all_fixture_bytes_preserved": true,
       "fixture_identities_before": {
         "article.docx": {
-          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+          "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
         },
         "template": {
           "directory": true
@@ -1032,7 +1032,7 @@
           "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
         },
         "template/word/document.xml": {
-          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+          "sha256": "f520237fb83a2278864646e91a8f8e29a1f418902eed4e1ea3e11d759e42318b"
         },
         "template/word/endnotes.xml": {
           "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
@@ -1086,7 +1086,7 @@
           "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
         },
         "template/word/styles.xml": {
-          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+          "sha256": "619d734d8ca4ef36c12d430339eba98e932d59c4e4e0502ce8c51c46160e159f"
         },
         "template/word/theme": {
           "directory": true
@@ -1097,7 +1097,7 @@
       },
       "fixture_identities_after": {
         "article.docx": {
-          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+          "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
         },
         "template": {
           "directory": true
@@ -1151,7 +1151,7 @@
           "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
         },
         "template/word/document.xml": {
-          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+          "sha256": "f520237fb83a2278864646e91a8f8e29a1f418902eed4e1ea3e11d759e42318b"
         },
         "template/word/endnotes.xml": {
           "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
@@ -1205,7 +1205,7 @@
           "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
         },
         "template/word/styles.xml": {
-          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+          "sha256": "619d734d8ca4ef36c12d430339eba98e932d59c4e4e0502ce8c51c46160e159f"
         },
         "template/word/theme": {
           "directory": true
@@ -1223,7 +1223,7 @@
         "-I",
         "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
       ],
-      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/collision_source_symlink_to_work",
+      "cwd": "/private/tmp/pf8_builder_fixes_ontssp4o/collision_source_symlink_to_work",
       "returncode": 1,
       "stdout": "",
       "stderr": "unsafe build paths: ARTICLE_TEMPLATE overlaps the article_pkg work package\n",
@@ -1232,7 +1232,7 @@
       "template_and_all_fixture_bytes_preserved": true,
       "fixture_identities_before": {
         "article.docx": {
-          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+          "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
         },
         "article_pkg": {
           "directory": true
@@ -1280,7 +1280,7 @@
           "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
         },
         "article_pkg/word/document.xml": {
-          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+          "sha256": "f520237fb83a2278864646e91a8f8e29a1f418902eed4e1ea3e11d759e42318b"
         },
         "article_pkg/word/endnotes.xml": {
           "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
@@ -1334,7 +1334,7 @@
           "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
         },
         "article_pkg/word/styles.xml": {
-          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+          "sha256": "619d734d8ca4ef36c12d430339eba98e932d59c4e4e0502ce8c51c46160e159f"
         },
         "article_pkg/word/theme": {
           "directory": true
@@ -1343,12 +1343,12 @@
           "sha256": "14d6fc4b249d866d8ab97f1ee68e6601c3feedc56857db791418573bf378f6de"
         },
         "source_alias": {
-          "symlink": "/private/tmp/pf8_builder_fixes_mdt0v6af/collision_source_symlink_to_work/article_pkg"
+          "symlink": "/private/tmp/pf8_builder_fixes_ontssp4o/collision_source_symlink_to_work/article_pkg"
         }
       },
       "fixture_identities_after": {
         "article.docx": {
-          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+          "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
         },
         "article_pkg": {
           "directory": true
@@ -1396,7 +1396,7 @@
           "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
         },
         "article_pkg/word/document.xml": {
-          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+          "sha256": "f520237fb83a2278864646e91a8f8e29a1f418902eed4e1ea3e11d759e42318b"
         },
         "article_pkg/word/endnotes.xml": {
           "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
@@ -1450,7 +1450,7 @@
           "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
         },
         "article_pkg/word/styles.xml": {
-          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+          "sha256": "619d734d8ca4ef36c12d430339eba98e932d59c4e4e0502ce8c51c46160e159f"
         },
         "article_pkg/word/theme": {
           "directory": true
@@ -1459,7 +1459,7 @@
           "sha256": "14d6fc4b249d866d8ab97f1ee68e6601c3feedc56857db791418573bf378f6de"
         },
         "source_alias": {
-          "symlink": "/private/tmp/pf8_builder_fixes_mdt0v6af/collision_source_symlink_to_work/article_pkg"
+          "symlink": "/private/tmp/pf8_builder_fixes_ontssp4o/collision_source_symlink_to_work/article_pkg"
         }
       },
       "passed": true
@@ -1471,7 +1471,7 @@
         "-I",
         "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
       ],
-      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/collision_work_symlink_to_source",
+      "cwd": "/private/tmp/pf8_builder_fixes_ontssp4o/collision_work_symlink_to_source",
       "returncode": 1,
       "stdout": "",
       "stderr": "unsafe build paths: ARTICLE_TEMPLATE overlaps the article_pkg work package\n",
@@ -1480,10 +1480,10 @@
       "template_and_all_fixture_bytes_preserved": true,
       "fixture_identities_before": {
         "article.docx": {
-          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+          "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
         },
         "article_pkg": {
-          "symlink": "/private/tmp/pf8_builder_fixes_mdt0v6af/collision_work_symlink_to_source/template"
+          "symlink": "/private/tmp/pf8_builder_fixes_ontssp4o/collision_work_symlink_to_source/template"
         },
         "template": {
           "directory": true
@@ -1531,7 +1531,7 @@
           "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
         },
         "template/word/document.xml": {
-          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+          "sha256": "f520237fb83a2278864646e91a8f8e29a1f418902eed4e1ea3e11d759e42318b"
         },
         "template/word/endnotes.xml": {
           "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
@@ -1585,7 +1585,7 @@
           "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
         },
         "template/word/styles.xml": {
-          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+          "sha256": "619d734d8ca4ef36c12d430339eba98e932d59c4e4e0502ce8c51c46160e159f"
         },
         "template/word/theme": {
           "directory": true
@@ -1596,10 +1596,10 @@
       },
       "fixture_identities_after": {
         "article.docx": {
-          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+          "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
         },
         "article_pkg": {
-          "symlink": "/private/tmp/pf8_builder_fixes_mdt0v6af/collision_work_symlink_to_source/template"
+          "symlink": "/private/tmp/pf8_builder_fixes_ontssp4o/collision_work_symlink_to_source/template"
         },
         "template": {
           "directory": true
@@ -1647,7 +1647,7 @@
           "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
         },
         "template/word/document.xml": {
-          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+          "sha256": "f520237fb83a2278864646e91a8f8e29a1f418902eed4e1ea3e11d759e42318b"
         },
         "template/word/endnotes.xml": {
           "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
@@ -1701,7 +1701,7 @@
           "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
         },
         "template/word/styles.xml": {
-          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+          "sha256": "619d734d8ca4ef36c12d430339eba98e932d59c4e4e0502ce8c51c46160e159f"
         },
         "template/word/theme": {
           "directory": true
@@ -1719,7 +1719,7 @@
         "-I",
         "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
       ],
-      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/collision_destination_inside_work",
+      "cwd": "/private/tmp/pf8_builder_fixes_ontssp4o/collision_destination_inside_work",
       "returncode": 1,
       "stdout": "",
       "stderr": "unsafe build paths: ARTICLE_DOCX is inside or aliases the article_pkg work package\n",
@@ -1731,7 +1731,7 @@
           "directory": true
         },
         "article_pkg/article.docx": {
-          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+          "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
         },
         "template": {
           "directory": true
@@ -1779,7 +1779,7 @@
           "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
         },
         "template/word/document.xml": {
-          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+          "sha256": "f520237fb83a2278864646e91a8f8e29a1f418902eed4e1ea3e11d759e42318b"
         },
         "template/word/endnotes.xml": {
           "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
@@ -1833,7 +1833,7 @@
           "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
         },
         "template/word/styles.xml": {
-          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+          "sha256": "619d734d8ca4ef36c12d430339eba98e932d59c4e4e0502ce8c51c46160e159f"
         },
         "template/word/theme": {
           "directory": true
@@ -1847,7 +1847,7 @@
           "directory": true
         },
         "article_pkg/article.docx": {
-          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+          "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
         },
         "template": {
           "directory": true
@@ -1895,7 +1895,7 @@
           "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
         },
         "template/word/document.xml": {
-          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+          "sha256": "f520237fb83a2278864646e91a8f8e29a1f418902eed4e1ea3e11d759e42318b"
         },
         "template/word/endnotes.xml": {
           "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
@@ -1949,7 +1949,7 @@
           "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
         },
         "template/word/styles.xml": {
-          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+          "sha256": "619d734d8ca4ef36c12d430339eba98e932d59c4e4e0502ce8c51c46160e159f"
         },
         "template/word/theme": {
           "directory": true
@@ -1967,7 +1967,7 @@
         "-I",
         "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
       ],
-      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/collision_destination_lexically_inside_work",
+      "cwd": "/private/tmp/pf8_builder_fixes_ontssp4o/collision_destination_lexically_inside_work",
       "returncode": 1,
       "stdout": "",
       "stderr": "unsafe build paths: ARTICLE_DOCX is inside or aliases the article_pkg work package\n",
@@ -1976,13 +1976,13 @@
       "template_and_all_fixture_bytes_preserved": true,
       "fixture_identities_before": {
         "article.docx": {
-          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+          "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
         },
         "article_pkg": {
           "directory": true
         },
         "article_pkg/alias.docx": {
-          "symlink": "/private/tmp/pf8_builder_fixes_mdt0v6af/collision_destination_lexically_inside_work/article.docx"
+          "symlink": "/private/tmp/pf8_builder_fixes_ontssp4o/collision_destination_lexically_inside_work/article.docx"
         },
         "template": {
           "directory": true
@@ -2030,7 +2030,7 @@
           "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
         },
         "template/word/document.xml": {
-          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+          "sha256": "f520237fb83a2278864646e91a8f8e29a1f418902eed4e1ea3e11d759e42318b"
         },
         "template/word/endnotes.xml": {
           "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
@@ -2084,7 +2084,7 @@
           "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
         },
         "template/word/styles.xml": {
-          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+          "sha256": "619d734d8ca4ef36c12d430339eba98e932d59c4e4e0502ce8c51c46160e159f"
         },
         "template/word/theme": {
           "directory": true
@@ -2095,13 +2095,13 @@
       },
       "fixture_identities_after": {
         "article.docx": {
-          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+          "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
         },
         "article_pkg": {
           "directory": true
         },
         "article_pkg/alias.docx": {
-          "symlink": "/private/tmp/pf8_builder_fixes_mdt0v6af/collision_destination_lexically_inside_work/article.docx"
+          "symlink": "/private/tmp/pf8_builder_fixes_ontssp4o/collision_destination_lexically_inside_work/article.docx"
         },
         "template": {
           "directory": true
@@ -2149,7 +2149,7 @@
           "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
         },
         "template/word/document.xml": {
-          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+          "sha256": "f520237fb83a2278864646e91a8f8e29a1f418902eed4e1ea3e11d759e42318b"
         },
         "template/word/endnotes.xml": {
           "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
@@ -2203,7 +2203,7 @@
           "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
         },
         "template/word/styles.xml": {
-          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+          "sha256": "619d734d8ca4ef36c12d430339eba98e932d59c4e4e0502ce8c51c46160e159f"
         },
         "template/word/theme": {
           "directory": true
@@ -2221,7 +2221,7 @@
         "-I",
         "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
       ],
-      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/collision_destination_resolves_inside_work",
+      "cwd": "/private/tmp/pf8_builder_fixes_ontssp4o/collision_destination_resolves_inside_work",
       "returncode": 1,
       "stdout": "",
       "stderr": "unsafe build paths: ARTICLE_DOCX is inside or aliases the article_pkg work package\n",
@@ -2230,13 +2230,13 @@
       "template_and_all_fixture_bytes_preserved": true,
       "fixture_identities_before": {
         "article.docx": {
-          "symlink": "/private/tmp/pf8_builder_fixes_mdt0v6af/collision_destination_resolves_inside_work/article_pkg/article.docx"
+          "symlink": "/private/tmp/pf8_builder_fixes_ontssp4o/collision_destination_resolves_inside_work/article_pkg/article.docx"
         },
         "article_pkg": {
           "directory": true
         },
         "article_pkg/article.docx": {
-          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+          "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
         },
         "template": {
           "directory": true
@@ -2284,7 +2284,7 @@
           "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
         },
         "template/word/document.xml": {
-          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+          "sha256": "f520237fb83a2278864646e91a8f8e29a1f418902eed4e1ea3e11d759e42318b"
         },
         "template/word/endnotes.xml": {
           "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
@@ -2338,7 +2338,7 @@
           "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
         },
         "template/word/styles.xml": {
-          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+          "sha256": "619d734d8ca4ef36c12d430339eba98e932d59c4e4e0502ce8c51c46160e159f"
         },
         "template/word/theme": {
           "directory": true
@@ -2349,13 +2349,13 @@
       },
       "fixture_identities_after": {
         "article.docx": {
-          "symlink": "/private/tmp/pf8_builder_fixes_mdt0v6af/collision_destination_resolves_inside_work/article_pkg/article.docx"
+          "symlink": "/private/tmp/pf8_builder_fixes_ontssp4o/collision_destination_resolves_inside_work/article_pkg/article.docx"
         },
         "article_pkg": {
           "directory": true
         },
         "article_pkg/article.docx": {
-          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+          "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
         },
         "template": {
           "directory": true
@@ -2403,7 +2403,7 @@
           "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
         },
         "template/word/document.xml": {
-          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+          "sha256": "f520237fb83a2278864646e91a8f8e29a1f418902eed4e1ea3e11d759e42318b"
         },
         "template/word/endnotes.xml": {
           "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
@@ -2457,7 +2457,7 @@
           "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
         },
         "template/word/styles.xml": {
-          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+          "sha256": "619d734d8ca4ef36c12d430339eba98e932d59c4e4e0502ce8c51c46160e159f"
         },
         "template/word/theme": {
           "directory": true
@@ -2475,7 +2475,7 @@
         "-I",
         "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
       ],
-      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/collision_temporary_resolves_inside_work",
+      "cwd": "/private/tmp/pf8_builder_fixes_ontssp4o/collision_temporary_resolves_inside_work",
       "returncode": 1,
       "stdout": "",
       "stderr": "unsafe build paths: temporary archive is inside or aliases the article_pkg work package\n",
@@ -2484,10 +2484,10 @@
       "template_and_all_fixture_bytes_preserved": true,
       "fixture_identities_before": {
         "article.docx": {
-          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+          "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
         },
         "article.docx.tmp-build": {
-          "symlink": "/private/tmp/pf8_builder_fixes_mdt0v6af/collision_temporary_resolves_inside_work/article_pkg/keep.bin"
+          "symlink": "/private/tmp/pf8_builder_fixes_ontssp4o/collision_temporary_resolves_inside_work/article_pkg/keep.bin"
         },
         "article_pkg": {
           "directory": true
@@ -2541,7 +2541,7 @@
           "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
         },
         "template/word/document.xml": {
-          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+          "sha256": "f520237fb83a2278864646e91a8f8e29a1f418902eed4e1ea3e11d759e42318b"
         },
         "template/word/endnotes.xml": {
           "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
@@ -2595,7 +2595,7 @@
           "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
         },
         "template/word/styles.xml": {
-          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+          "sha256": "619d734d8ca4ef36c12d430339eba98e932d59c4e4e0502ce8c51c46160e159f"
         },
         "template/word/theme": {
           "directory": true
@@ -2606,10 +2606,10 @@
       },
       "fixture_identities_after": {
         "article.docx": {
-          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+          "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
         },
         "article.docx.tmp-build": {
-          "symlink": "/private/tmp/pf8_builder_fixes_mdt0v6af/collision_temporary_resolves_inside_work/article_pkg/keep.bin"
+          "symlink": "/private/tmp/pf8_builder_fixes_ontssp4o/collision_temporary_resolves_inside_work/article_pkg/keep.bin"
         },
         "article_pkg": {
           "directory": true
@@ -2663,7 +2663,7 @@
           "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
         },
         "template/word/document.xml": {
-          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+          "sha256": "f520237fb83a2278864646e91a8f8e29a1f418902eed4e1ea3e11d759e42318b"
         },
         "template/word/endnotes.xml": {
           "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
@@ -2717,7 +2717,7 @@
           "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
         },
         "template/word/styles.xml": {
-          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+          "sha256": "619d734d8ca4ef36c12d430339eba98e932d59c4e4e0502ce8c51c46160e159f"
         },
         "template/word/theme": {
           "directory": true
@@ -2735,7 +2735,7 @@
         "-I",
         "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
       ],
-      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/collision_destination_hardlink_in_work",
+      "cwd": "/private/tmp/pf8_builder_fixes_ontssp4o/collision_destination_hardlink_in_work",
       "returncode": 1,
       "stdout": "",
       "stderr": "unsafe build paths: ARTICLE_DOCX is inside or aliases the article_pkg work package\n",
@@ -2744,13 +2744,13 @@
       "template_and_all_fixture_bytes_preserved": true,
       "fixture_identities_before": {
         "article.docx": {
-          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+          "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
         },
         "article_pkg": {
           "directory": true
         },
         "article_pkg/old_article.docx": {
-          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+          "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
         },
         "template": {
           "directory": true
@@ -2798,7 +2798,7 @@
           "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
         },
         "template/word/document.xml": {
-          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+          "sha256": "f520237fb83a2278864646e91a8f8e29a1f418902eed4e1ea3e11d759e42318b"
         },
         "template/word/endnotes.xml": {
           "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
@@ -2852,7 +2852,7 @@
           "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
         },
         "template/word/styles.xml": {
-          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+          "sha256": "619d734d8ca4ef36c12d430339eba98e932d59c4e4e0502ce8c51c46160e159f"
         },
         "template/word/theme": {
           "directory": true
@@ -2863,13 +2863,13 @@
       },
       "fixture_identities_after": {
         "article.docx": {
-          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+          "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
         },
         "article_pkg": {
           "directory": true
         },
         "article_pkg/old_article.docx": {
-          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+          "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
         },
         "template": {
           "directory": true
@@ -2917,7 +2917,7 @@
           "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
         },
         "template/word/document.xml": {
-          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+          "sha256": "f520237fb83a2278864646e91a8f8e29a1f418902eed4e1ea3e11d759e42318b"
         },
         "template/word/endnotes.xml": {
           "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
@@ -2971,7 +2971,7 @@
           "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
         },
         "template/word/styles.xml": {
-          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+          "sha256": "619d734d8ca4ef36c12d430339eba98e932d59c4e4e0502ce8c51c46160e159f"
         },
         "template/word/theme": {
           "directory": true
@@ -2989,7 +2989,7 @@
         "-I",
         "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
       ],
-      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/collision_temporary_hardlink_to_destination",
+      "cwd": "/private/tmp/pf8_builder_fixes_ontssp4o/collision_temporary_hardlink_to_destination",
       "returncode": 1,
       "stdout": "",
       "stderr": "unsafe build paths: temporary archive aliases ARTICLE_DOCX\n",
@@ -2998,10 +2998,10 @@
       "template_and_all_fixture_bytes_preserved": true,
       "fixture_identities_before": {
         "article.docx": {
-          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+          "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
         },
         "article.docx.tmp-build": {
-          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+          "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
         },
         "template": {
           "directory": true
@@ -3049,7 +3049,7 @@
           "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
         },
         "template/word/document.xml": {
-          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+          "sha256": "f520237fb83a2278864646e91a8f8e29a1f418902eed4e1ea3e11d759e42318b"
         },
         "template/word/endnotes.xml": {
           "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
@@ -3103,7 +3103,7 @@
           "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
         },
         "template/word/styles.xml": {
-          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+          "sha256": "619d734d8ca4ef36c12d430339eba98e932d59c4e4e0502ce8c51c46160e159f"
         },
         "template/word/theme": {
           "directory": true
@@ -3114,10 +3114,10 @@
       },
       "fixture_identities_after": {
         "article.docx": {
-          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+          "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
         },
         "article.docx.tmp-build": {
-          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+          "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
         },
         "template": {
           "directory": true
@@ -3165,7 +3165,7 @@
           "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
         },
         "template/word/document.xml": {
-          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+          "sha256": "f520237fb83a2278864646e91a8f8e29a1f418902eed4e1ea3e11d759e42318b"
         },
         "template/word/endnotes.xml": {
           "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
@@ -3219,7 +3219,7 @@
           "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
         },
         "template/word/styles.xml": {
-          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+          "sha256": "619d734d8ca4ef36c12d430339eba98e932d59c4e4e0502ce8c51c46160e159f"
         },
         "template/word/theme": {
           "directory": true
@@ -3237,7 +3237,7 @@
         "-I",
         "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
       ],
-      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/collision_destination_inside_template",
+      "cwd": "/private/tmp/pf8_builder_fixes_ontssp4o/collision_destination_inside_template",
       "returncode": 1,
       "stdout": "",
       "stderr": "unsafe build paths: ARTICLE_DOCX is inside or aliases the ARTICLE_TEMPLATE\n",
@@ -3270,7 +3270,7 @@
           "sha256": "8ec73cc7ce297e42cc652a1d1884d4ffb18ffa0ba7a6502a36f8da90d1be61a1"
         },
         "template/old_article.docx": {
-          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+          "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
         },
         "template/word": {
           "directory": true
@@ -3294,7 +3294,7 @@
           "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
         },
         "template/word/document.xml": {
-          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+          "sha256": "f520237fb83a2278864646e91a8f8e29a1f418902eed4e1ea3e11d759e42318b"
         },
         "template/word/endnotes.xml": {
           "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
@@ -3348,7 +3348,7 @@
           "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
         },
         "template/word/styles.xml": {
-          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+          "sha256": "619d734d8ca4ef36c12d430339eba98e932d59c4e4e0502ce8c51c46160e159f"
         },
         "template/word/theme": {
           "directory": true
@@ -3383,7 +3383,7 @@
           "sha256": "8ec73cc7ce297e42cc652a1d1884d4ffb18ffa0ba7a6502a36f8da90d1be61a1"
         },
         "template/old_article.docx": {
-          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+          "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
         },
         "template/word": {
           "directory": true
@@ -3407,7 +3407,7 @@
           "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
         },
         "template/word/document.xml": {
-          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+          "sha256": "f520237fb83a2278864646e91a8f8e29a1f418902eed4e1ea3e11d759e42318b"
         },
         "template/word/endnotes.xml": {
           "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
@@ -3461,7 +3461,7 @@
           "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
         },
         "template/word/styles.xml": {
-          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+          "sha256": "619d734d8ca4ef36c12d430339eba98e932d59c4e4e0502ce8c51c46160e159f"
         },
         "template/word/theme": {
           "directory": true
@@ -3479,7 +3479,7 @@
         "-I",
         "/Users/samnimoh/Desktop/chromo/tools/build_article.py"
       ],
-      "cwd": "/private/tmp/pf8_builder_fixes_mdt0v6af/collision_temporary_hardlink_to_input",
+      "cwd": "/private/tmp/pf8_builder_fixes_ontssp4o/collision_temporary_hardlink_to_input",
       "returncode": 1,
       "stdout": "",
       "stderr": "unsafe build paths: temporary archive aliases ARTICLE_MD\n",
@@ -3488,13 +3488,13 @@
       "template_and_all_fixture_bytes_preserved": true,
       "fixture_identities_before": {
         "article.docx": {
-          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+          "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
         },
         "article.docx.tmp-build": {
-          "sha256": "f420fc740de3fd9390bd39b7e564f085206c1daf0ec28cd952cbbbc23d81158c"
+          "sha256": "925cdc5fc6ec01d79ce61586085524d1566e0ceb6ef5b4f4e47d1d707b6057c6"
         },
         "article.md": {
-          "sha256": "f420fc740de3fd9390bd39b7e564f085206c1daf0ec28cd952cbbbc23d81158c"
+          "sha256": "925cdc5fc6ec01d79ce61586085524d1566e0ceb6ef5b4f4e47d1d707b6057c6"
         },
         "template": {
           "directory": true
@@ -3542,7 +3542,7 @@
           "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
         },
         "template/word/document.xml": {
-          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+          "sha256": "f520237fb83a2278864646e91a8f8e29a1f418902eed4e1ea3e11d759e42318b"
         },
         "template/word/endnotes.xml": {
           "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
@@ -3596,7 +3596,7 @@
           "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
         },
         "template/word/styles.xml": {
-          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+          "sha256": "619d734d8ca4ef36c12d430339eba98e932d59c4e4e0502ce8c51c46160e159f"
         },
         "template/word/theme": {
           "directory": true
@@ -3607,13 +3607,13 @@
       },
       "fixture_identities_after": {
         "article.docx": {
-          "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+          "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
         },
         "article.docx.tmp-build": {
-          "sha256": "f420fc740de3fd9390bd39b7e564f085206c1daf0ec28cd952cbbbc23d81158c"
+          "sha256": "925cdc5fc6ec01d79ce61586085524d1566e0ceb6ef5b4f4e47d1d707b6057c6"
         },
         "article.md": {
-          "sha256": "f420fc740de3fd9390bd39b7e564f085206c1daf0ec28cd952cbbbc23d81158c"
+          "sha256": "925cdc5fc6ec01d79ce61586085524d1566e0ceb6ef5b4f4e47d1d707b6057c6"
         },
         "template": {
           "directory": true
@@ -3661,7 +3661,7 @@
           "sha256": "bf64631f0bc7bd46712fef822bcfb22e069fa5779e133980ca0c9d81f00efc09"
         },
         "template/word/document.xml": {
-          "sha256": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368"
+          "sha256": "f520237fb83a2278864646e91a8f8e29a1f418902eed4e1ea3e11d759e42318b"
         },
         "template/word/endnotes.xml": {
           "sha256": "52f6c33e62c233e0d9f9c41ec259ffd943ea9cdc413293d43e6ffb213682a5cf"
@@ -3715,7 +3715,7 @@
           "sha256": "7fc7b64a8db3d7a315143624f352546ec42be9f8f4133341a993c91e9cff3e9a"
         },
         "template/word/styles.xml": {
-          "sha256": "9588f27ce0afcb8c7aec47a3a8868519c77ac98ca40262de30fdfaab4dfceff2"
+          "sha256": "619d734d8ca4ef36c12d430339eba98e932d59c4e4e0502ce8c51c46160e159f"
         },
         "template/word/theme": {
           "directory": true

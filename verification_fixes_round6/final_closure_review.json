@@ -1,0 +1,135 @@
+{
+  "scope": "Read-only closure review of PDF publication guards and the actual current verifier. Publisher not executed; visual reviews may still be pending.",
+  "reviewed_scripts": {
+    "publish_reviewed_pdfs.py": {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/publish_reviewed_pdfs.py",
+      "bytes": 4659,
+      "sha256": "3942dbb10f55c780e4d29f9e3f8676b540dca218585d07c3d53cc183c7c41fd4"
+    },
+    "verify_documents.py": {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/verify_documents.py",
+      "bytes": 8495,
+      "sha256": "cef169082ebdcfb1f52e57ea82596d21a3178557cd051501473764da25d65764"
+    },
+    "independent_builder_followup_tests.py": {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/independent_builder_followup_tests.py",
+      "bytes": 10002,
+      "sha256": "f0f11da0f77c6672a369ccd241be79391a09a38b51b6c0ba49588e016b06046d"
+    },
+    "make_fix_manifest.py": {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/make_fix_manifest.py",
+      "bytes": 5017,
+      "sha256": "2c0f3c6a5eea51aad1ea5d4e87ecd17bf4d819cefc59f520f038994398a7690b"
+    },
+    "CORRECTIONS.md": {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/CORRECTIONS.md",
+      "bytes": 4626,
+      "sha256": "4dc5da1c9b387e1d89c1a5ad834de82f120e3ca5aa1f071a562b6f890baa1665"
+    }
+  },
+  "publication_gates": {
+    "exactly_three_unique_render_labels_required": true,
+    "current_reviewed_source_hashes_rechecked": true,
+    "current_source_and_review_and_render_identity_equality_required": true,
+    "current_PDF_and_review_and_render_identity_equality_required": true,
+    "full_original_detail_page_census_required": true,
+    "complete_unique_render_and_approved_image_maps_required": true,
+    "actual_approved_image_hashes_rechecked": true,
+    "all_three_PDFs_staged_before_replacement": true,
+    "sibling_temporary_files_and_fsync_used": true,
+    "staged_and_published_PDF_hashes_verified": true,
+    "cleanup_is_in_finally": true
+  },
+  "manifest_gates": {
+    "manifest_excludes_its_own_identity": true,
+    "current_published_PDF_identities_rechecked": true,
+    "current_reviewed_source_hashes_rechecked": true,
+    "exactly_three_unique_publication_labels_required": true,
+    "published_PDF_to_reviewed_render_equality_asserted": true,
+    "baseline_and_precommit_HEAD_named_precisely": true,
+    "formal_historical_and_statistical_limits_retained": true
+  },
+  "correction_record_review": {
+    "six_findings_and_counts_match_actual_evidence": true,
+    "verification_scope_and_publication_limits_explicit": true,
+    "delivery_dependency": "Final visual/publication paragraphs describe the intended completed record; deliver only after all final visual records, publication and manifest exist."
+  },
+  "actual_verifier_check_count": 25,
+  "actual_verifier_checks": {
+    "manuscript_exactly_matches_reviewed_edits": true,
+    "manuscript_xml_structure_preserved": true,
+    "manuscript_figure_bytes_preserved": true,
+    "scientific_numerical_tokens_preserved": true,
+    "manuscript_styles_have_only_reviewed_heading_flags": true,
+    "article_source_exactly_matches_reviewed_edits": true,
+    "supplement_figure_bytes_preserved": true,
+    "supplement_captions_unique_contiguous": true,
+    "main_unsupported_cascade_reference_removed": true,
+    "main_caption_fragments_removed": true,
+    "main_stale_current_git_status_removed": true,
+    "main_graph_confidence_is_conditional": true,
+    "main_live_panmixia_estimate_claim_removed": true,
+    "supplement_unsupported_cascade_reference_removed": true,
+    "supplement_caption_fragments_removed": true,
+    "supplement_stale_current_git_status_removed": true,
+    "supplement_graph_confidence_is_conditional": true,
+    "supplement_live_panmixia_estimate_claim_removed": true,
+    "scientific_sources_outputs_and_prior_reviews_unchanged": true,
+    "earlier_verification_notes_preserved_before_new_entry": true,
+    "editor_49_regressions_pass_for_final_source": true,
+    "builder_38_regressions_pass_for_final_source": true,
+    "builder_15_independent_layout_package_checks_pass": true,
+    "editor_independent_final_version_passes": true,
+    "builder_independent_final_version_passes": true
+  },
+  "actual_verifier_summary": "{\"passed\": 25, \"total\": 25, \"failed\": []}",
+  "actual_verifier_matches_saved_evidence": true,
+  "previous_scientific_output_and_review_identities_checked": 298,
+  "actual_final_review_source_hashes_match": true,
+  "render_identity_checks": [
+    {
+      "label": "article",
+      "source_identity_matches": true,
+      "PDF_identity_matches": true,
+      "PDF_page_count_matches": true,
+      "page_image_count": 18,
+      "page_image_identities_match": true,
+      "page_image_paths_unique": true,
+      "visual_review_available": true,
+      "visual_review_source_and_pdf_match": true,
+      "visual_full_original_detail_page_census_matches": true,
+      "visual_image_identity_map_matches": true
+    },
+    {
+      "label": "manuscript",
+      "source_identity_matches": true,
+      "PDF_identity_matches": true,
+      "PDF_page_count_matches": true,
+      "page_image_count": 197,
+      "page_image_identities_match": true,
+      "page_image_paths_unique": true,
+      "visual_review_available": false
+    },
+    {
+      "label": "supplement",
+      "source_identity_matches": true,
+      "PDF_identity_matches": true,
+      "PDF_page_count_matches": true,
+      "page_image_count": 198,
+      "page_image_identities_match": true,
+      "page_image_paths_unique": true,
+      "visual_review_available": false
+    }
+  ],
+  "preserved_independent_driver_is_byte_identical": true,
+  "unexpected_scientific_changes": [],
+  "resolved_finding": "Publisher initially omitted equality between approved PNG identities and render PNG identities; final patch requires complete unique identity maps and rehashes actual images.",
+  "findings": [],
+  "status": "bounded_pass",
+  "limits": [
+    "This review does not claim that pending visual reviews are complete, or that publication has run.",
+    "Replacement is atomic per PDF, not a transactional all-three-PDF replacement with rollback.",
+    "No concurrent-write/filesystem-race or power-loss durability certification.",
+    "No scientific pipeline execution, statistical validity certification or new Lean implementation proof."
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "generated_utc": "2026-10-11T06:20:55.981966+00:00",
+  "reviewer": "root",
+  "source": {
+    "path": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.docx",
+    "bytes": 1193182,
+    "sha256": "c90ae5399d8be4dca3c1be138a56cd7f00984529585d0d535d84cafee40e6d45"
+  },
+  "rendered_pdf": {
+    "path": "/private/tmp/pf8_round6_fixed_render/article/Pf8_Ghana_article.pdf",
+    "bytes": 708316,
+    "sha256": "6475240dc4a51ac6836a71a47c4f6fc5b2fee95c43e7079e76e8b3a07e0aed05"
+  },
+  "pages": 18,
+  "original_detail_pages_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "page_images_inspected": [
+    {
+      "path": "/private/tmp/pf8_round6_fixed_render/article/page-1.png",
+      "bytes": 243016,
+      "sha256": "2efc59373349ac6dbf4e0205b4970ef64dd34d58a769a34f749d6d53ddf0c089"
+    },
+    {
+      "path": "/private/tmp/pf8_round6_fixed_render/article/page-2.png",
+      "bytes": 275647,
+      "sha256": "d5aaaafe6ccd604932cf85e708eca7d46e1b2dfd7d709abf7f3144f7e4650bbe"
+    },
+    {
+      "path": "/private/tmp/pf8_round6_fixed_render/article/page-3.png",
+      "bytes": 266301,
+      "sha256": "2730004d544e227e349e778a4ff81980b0d579478ac6be3ade04152503b02094"
+    },
+    {
+      "path": "/private/tmp/pf8_round6_fixed_render/article/page-4.png",
+      "bytes": 233333,
+      "sha256": "8ca8d9caa388a356bf30d849687a01a319e2e83d9cf92e101f502465fb465faa"
+    },
+    {
+      "path": "/private/tmp/pf8_round6_fixed_render/article/page-5.png",
+      "bytes": 261387,
+      "sha256": "e0455acf185d7a4f822ced39f0be25adf8ce2bebe3416a4a6f6688754584f65b"
+    },
+    {
+      "path": "/private/tmp/pf8_round6_fixed_render/article/page-6.png",
+      "bytes": 209798,
+      "sha256": "7311d549e96e67b1ded6298a63d58b6caa6dde1ff5344310c55f0322b4c26cb0"
+    },
+    {
+      "path": "/private/tmp/pf8_round6_fixed_render/article/page-7.png",
+      "bytes": 192488,
+      "sha256": "12055af03d95d0cd309fa76fcaac7059b3ccd1b0c2038a2e2d7452e3ae8b5d91"
+    },
+    {
+      "path": "/private/tmp/pf8_round6_fixed_render/article/page-8.png",
+      "bytes": 254719,
+      "sha256": "2f3f517880ad9129d84d37797b4373595bb1c0617447e30f8eef9cc88db19c6c"
+    },
+    {
+      "path": "/private/tmp/pf8_round6_fixed_render/article/page-9.png",
+      "bytes": 236353,
+      "sha256": "8dddd05cad7d2d12832ad46ba9759f46383e79006ace0dec92ea6586eda7005f"
+    },
+    {
+      "path": "/private/tmp/pf8_round6_fixed_render/article/page-10.png",
+      "bytes": 260000,
+      "sha256": "082786b6d40c4b5290fd0e22d53bad6a24db10f4e709b4881951699296a7cd90"
+    },
+    {
+      "path": "/private/tmp/pf8_round6_fixed_render/article/page-11.png",
+      "bytes": 187196,
+      "sha256": "4900c22a14bfdbcac5a6d8cb651d073fd496812d7903f52f19d49defa16776ea"
+    },
+    {
+      "path": "/private/tmp/pf8_round6_fixed_render/article/page-12.png",
+      "bytes": 240566,
+      "sha256": "3a0ed761d007bd3bd0f4a66893e6f44e5c0249a537f27503971515c2e36f1219"
+    },
+    {
+      "path": "/private/tmp/pf8_round6_fixed_render/article/page-13.png",
+      "bytes": 276544,
+      "sha256": "acf2aecbf39d938a03664aa3b24a1820d9fec30965e1ca07b8b9dd1d87a07e3b"
+    },
+    {
+      "path": "/private/tmp/pf8_round6_fixed_render/article/page-14.png",
+      "bytes": 265244,
+      "sha256": "7a4b7c00a304304160010e1df3919a99eb508e8e6f42386081055d34c7199875"
+    },
+    {
+      "path": "/private/tmp/pf8_round6_fixed_render/article/page-15.png",
+      "bytes": 251396,
+      "sha256": "815d88cb26c8847b67fb99e1d6c6eedf96baf5652493bb04a8fdb17201805144"
+    },
+    {
+      "path": "/private/tmp/pf8_round6_fixed_render/article/page-16.png",
+      "bytes": 269806,
+      "sha256": "d7e56316383a93018a999fdbdfa8b1b5ddca25f658ac3ef9202c096c1d753ad6"
+    },
+    {
+      "path": "/private/tmp/pf8_round6_fixed_render/article/page-17.png",
+      "bytes": 306945,
+      "sha256": "fc2dfce8e2f0a182adef602169ba49c52814344ac07ea3eb0b271888eba05328"
+    },
+    {
+      "path": "/private/tmp/pf8_round6_fixed_render/article/page-18.png",
+      "bytes": 239350,
+      "sha256": "926ba815456957e52f83e906e7bbc72c38f43e50c441545d7c1ebf76e9f2db3a"
+    }
+  ],
+  "findings": [],
+  "observations": [
+    "No clipping, overlap, broken glyphs or stranded headings seen in all 18 final page images at original detail.",
+    "Tables 1 and4 continue with repeated headers; Figures 1\u20133 and captions are readable.",
+    "Author, citation, funding, contribution and repository-deposit placeholders remain visible, as separately acknowledged publication work."
+  ],
+  "scope": "Layout check of actual final 18-page article only; no certification of every scientific claim.",
+  "status": "bounded_pass"
+}

@@ -1,25 +1,25 @@
 {
   "scope": "Independent scratch-only path-alias and root-office-document follow-up; no tools or deliverables changed.",
-  "builder_sha256_before": "384d6c65172c5bd0714329e76a1404e3eb6fdb099d38931a5b416611fad5997c",
-  "builder_sha256_after": "384d6c65172c5bd0714329e76a1404e3eb6fdb099d38931a5b416611fad5997c",
+  "builder_sha256_before": "e2331bfd9fa40433e5761d633c78ae9c2892624a8a1a32f96a348c8e1b82057f",
+  "builder_sha256_after": "e2331bfd9fa40433e5761d633c78ae9c2892624a8a1a32f96a348c8e1b82057f",
   "source_hash_stable": true,
   "python": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
   "driver": "/private/tmp/pf8_independent_builder_followup.py",
   "driver_sha256": "f0f11da0f77c6672a369ccd241be79391a09a38b51b6c0ba49588e016b06046d",
-  "template_snapshot_sha256": "e954fe87a94a40fd954f3eb5b74638d6892ce79fcd23a3be364c169bb0fd948d",
-  "scratch": "/private/tmp/pf8_builder_independent_followup_39tz5n5h",
+  "template_snapshot_sha256": "0d6497fa02a98d40f2e0084ad137886075f2feb4c29f2ed0b52e022d43f95937",
+  "scratch": "/private/tmp/pf8_builder_independent_followup_coonkuym",
   "tests": [
     {
       "name": "normal_separate_paths",
       "returncode": 0,
-      "stdout": "document.xml well-formed\nwrote /private/tmp/pf8_builder_independent_followup_39tz5n5h/normal_separate_paths/prior.docx  1.19 MB\n",
+      "stdout": "document.xml well-formed\nwrote /private/tmp/pf8_builder_independent_followup_coonkuym/normal_separate_paths/prior.docx  1.19 MB\n",
       "stderr": "",
       "source_template_preserved": true,
       "markdown_preserved": true,
       "references_preserved": true,
       "destination_preserved": false,
       "entire_case_tree_preserved": false,
-      "cwd": "/private/tmp/pf8_builder_independent_followup_39tz5n5h/normal_separate_paths",
+      "cwd": "/private/tmp/pf8_builder_independent_followup_coonkuym/normal_separate_paths",
       "command": [
         "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
         "-I",
@@ -38,7 +38,7 @@
       "references_preserved": true,
       "destination_preserved": true,
       "entire_case_tree_preserved": true,
-      "cwd": "/private/tmp/pf8_builder_independent_followup_39tz5n5h/source_equals_work",
+      "cwd": "/private/tmp/pf8_builder_independent_followup_coonkuym/source_equals_work",
       "command": [
         "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
         "-I",
@@ -57,7 +57,7 @@
       "references_preserved": true,
       "destination_preserved": true,
       "entire_case_tree_preserved": true,
-      "cwd": "/private/tmp/pf8_builder_independent_followup_39tz5n5h/source_below_work",
+      "cwd": "/private/tmp/pf8_builder_independent_followup_coonkuym/source_below_work",
       "command": [
         "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
         "-I",
@@ -76,7 +76,7 @@
       "references_preserved": true,
       "destination_preserved": true,
       "entire_case_tree_preserved": true,
-      "cwd": "/private/tmp/pf8_builder_independent_followup_39tz5n5h/source_contains_work",
+      "cwd": "/private/tmp/pf8_builder_independent_followup_coonkuym/source_contains_work",
       "command": [
         "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
         "-I",
@@ -95,7 +95,7 @@
       "references_preserved": true,
       "destination_preserved": true,
       "entire_case_tree_preserved": true,
-      "cwd": "/private/tmp/pf8_builder_independent_followup_39tz5n5h/source_symlink_to_work",
+      "cwd": "/private/tmp/pf8_builder_independent_followup_coonkuym/source_symlink_to_work",
       "command": [
         "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
         "-I",
@@ -114,7 +114,7 @@
       "references_preserved": true,
       "destination_preserved": true,
       "entire_case_tree_preserved": true,
-      "cwd": "/private/tmp/pf8_builder_independent_followup_39tz5n5h/work_is_symlink",
+      "cwd": "/private/tmp/pf8_builder_independent_followup_coonkuym/work_is_symlink",
       "command": [
         "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
         "-I",
@@ -133,7 +133,7 @@
       "references_preserved": true,
       "destination_preserved": true,
       "entire_case_tree_preserved": true,
-      "cwd": "/private/tmp/pf8_builder_independent_followup_39tz5n5h/destination_inside_work",
+      "cwd": "/private/tmp/pf8_builder_independent_followup_coonkuym/destination_inside_work",
       "command": [
         "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
         "-I",
@@ -152,7 +152,7 @@
       "references_preserved": true,
       "destination_preserved": true,
       "entire_case_tree_preserved": true,
-      "cwd": "/private/tmp/pf8_builder_independent_followup_39tz5n5h/destination_nested_in_work",
+      "cwd": "/private/tmp/pf8_builder_independent_followup_coonkuym/destination_nested_in_work",
       "command": [
         "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
         "-I",
@@ -171,7 +171,7 @@
       "references_preserved": true,
       "destination_preserved": true,
       "entire_case_tree_preserved": true,
-      "cwd": "/private/tmp/pf8_builder_independent_followup_39tz5n5h/destination_symlink_to_work_file",
+      "cwd": "/private/tmp/pf8_builder_independent_followup_coonkuym/destination_symlink_to_work_file",
       "command": [
         "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
         "-I",
@@ -190,7 +190,7 @@
       "references_preserved": true,
       "destination_preserved": true,
       "entire_case_tree_preserved": true,
-      "cwd": "/private/tmp/pf8_builder_independent_followup_39tz5n5h/destination_hardlink_to_work_file",
+      "cwd": "/private/tmp/pf8_builder_independent_followup_coonkuym/destination_hardlink_to_work_file",
       "command": [
         "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
         "-I",
@@ -209,7 +209,7 @@
       "references_preserved": true,
       "destination_preserved": true,
       "entire_case_tree_preserved": true,
-      "cwd": "/private/tmp/pf8_builder_independent_followup_39tz5n5h/md_inside_work",
+      "cwd": "/private/tmp/pf8_builder_independent_followup_coonkuym/md_inside_work",
       "command": [
         "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
         "-I",
@@ -228,7 +228,7 @@
       "references_preserved": true,
       "destination_preserved": true,
       "entire_case_tree_preserved": true,
-      "cwd": "/private/tmp/pf8_builder_independent_followup_39tz5n5h/md_hardlink_to_work",
+      "cwd": "/private/tmp/pf8_builder_independent_followup_coonkuym/md_hardlink_to_work",
       "command": [
         "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
         "-I",
@@ -247,7 +247,7 @@
       "references_preserved": true,
       "destination_preserved": true,
       "entire_case_tree_preserved": true,
-      "cwd": "/private/tmp/pf8_builder_independent_followup_39tz5n5h/refs_inside_work",
+      "cwd": "/private/tmp/pf8_builder_independent_followup_coonkuym/refs_inside_work",
       "command": [
         "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
         "-I",
@@ -266,7 +266,7 @@
       "references_preserved": true,
       "destination_preserved": true,
       "entire_case_tree_preserved": true,
-      "cwd": "/private/tmp/pf8_builder_independent_followup_39tz5n5h/refs_hardlink_to_work",
+      "cwd": "/private/tmp/pf8_builder_independent_followup_coonkuym/refs_hardlink_to_work",
       "command": [
         "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
         "-I",
@@ -285,7 +285,7 @@
       "references_preserved": true,
       "destination_preserved": true,
       "entire_case_tree_preserved": true,
-      "cwd": "/private/tmp/pf8_builder_independent_followup_39tz5n5h/destination_inside_source",
+      "cwd": "/private/tmp/pf8_builder_independent_followup_coonkuym/destination_inside_source",
       "command": [
         "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
         "-I",
@@ -304,7 +304,7 @@
       "references_preserved": true,
       "destination_preserved": true,
       "entire_case_tree_preserved": true,
-      "cwd": "/private/tmp/pf8_builder_independent_followup_39tz5n5h/destination_hardlink_to_source_part",
+      "cwd": "/private/tmp/pf8_builder_independent_followup_coonkuym/destination_hardlink_to_source_part",
       "command": [
         "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
         "-I",
@@ -323,7 +323,7 @@
       "references_preserved": true,
       "destination_preserved": true,
       "entire_case_tree_preserved": true,
-      "cwd": "/private/tmp/pf8_builder_independent_followup_39tz5n5h/destination_direct_aliases_md",
+      "cwd": "/private/tmp/pf8_builder_independent_followup_coonkuym/destination_direct_aliases_md",
       "command": [
         "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
         "-I",
@@ -342,7 +342,7 @@
       "references_preserved": true,
       "destination_preserved": true,
       "entire_case_tree_preserved": true,
-      "cwd": "/private/tmp/pf8_builder_independent_followup_39tz5n5h/destination_symlink_aliases_md",
+      "cwd": "/private/tmp/pf8_builder_independent_followup_coonkuym/destination_symlink_aliases_md",
       "command": [
         "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
         "-I",
@@ -361,7 +361,7 @@
       "references_preserved": true,
       "destination_preserved": true,
       "entire_case_tree_preserved": true,
-      "cwd": "/private/tmp/pf8_builder_independent_followup_39tz5n5h/destination_hard_aliases_md",
+      "cwd": "/private/tmp/pf8_builder_independent_followup_coonkuym/destination_hard_aliases_md",
       "command": [
         "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
         "-I",
@@ -380,7 +380,7 @@
       "references_preserved": true,
       "destination_preserved": true,
       "entire_case_tree_preserved": true,
-      "cwd": "/private/tmp/pf8_builder_independent_followup_39tz5n5h/destination_direct_aliases_refs",
+      "cwd": "/private/tmp/pf8_builder_independent_followup_coonkuym/destination_direct_aliases_refs",
       "command": [
         "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
         "-I",
@@ -399,7 +399,7 @@
       "references_preserved": true,
       "destination_preserved": true,
       "entire_case_tree_preserved": true,
-      "cwd": "/private/tmp/pf8_builder_independent_followup_39tz5n5h/destination_symlink_aliases_refs",
+      "cwd": "/private/tmp/pf8_builder_independent_followup_coonkuym/destination_symlink_aliases_refs",
       "command": [
         "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
         "-I",
@@ -418,7 +418,7 @@
       "references_preserved": true,
       "destination_preserved": true,
       "entire_case_tree_preserved": true,
-      "cwd": "/private/tmp/pf8_builder_independent_followup_39tz5n5h/destination_hard_aliases_refs",
+      "cwd": "/private/tmp/pf8_builder_independent_followup_coonkuym/destination_hard_aliases_refs",
       "command": [
         "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
         "-I",
@@ -437,7 +437,7 @@
       "references_preserved": true,
       "destination_preserved": true,
       "entire_case_tree_preserved": true,
-      "cwd": "/private/tmp/pf8_builder_independent_followup_39tz5n5h/temporary_symlink_alias_output",
+      "cwd": "/private/tmp/pf8_builder_independent_followup_coonkuym/temporary_symlink_alias_output",
       "command": [
         "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
         "-I",
@@ -456,7 +456,7 @@
       "references_preserved": true,
       "destination_preserved": true,
       "entire_case_tree_preserved": true,
-      "cwd": "/private/tmp/pf8_builder_independent_followup_39tz5n5h/temporary_hardlink_alias_output",
+      "cwd": "/private/tmp/pf8_builder_independent_followup_coonkuym/temporary_hardlink_alias_output",
       "command": [
         "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
         "-I",
@@ -475,7 +475,7 @@
       "references_preserved": true,
       "destination_preserved": true,
       "entire_case_tree_preserved": true,
-      "cwd": "/private/tmp/pf8_builder_independent_followup_39tz5n5h/temporary_symlink_alias_md",
+      "cwd": "/private/tmp/pf8_builder_independent_followup_coonkuym/temporary_symlink_alias_md",
       "command": [
         "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
         "-I",
@@ -494,7 +494,7 @@
       "references_preserved": true,
       "destination_preserved": true,
       "entire_case_tree_preserved": true,
-      "cwd": "/private/tmp/pf8_builder_independent_followup_39tz5n5h/temporary_hardlink_alias_md",
+      "cwd": "/private/tmp/pf8_builder_independent_followup_coonkuym/temporary_hardlink_alias_md",
       "command": [
         "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
         "-I",
@@ -513,7 +513,7 @@
       "references_preserved": true,
       "destination_preserved": true,
       "entire_case_tree_preserved": true,
-      "cwd": "/private/tmp/pf8_builder_independent_followup_39tz5n5h/temporary_symlink_alias_refs",
+      "cwd": "/private/tmp/pf8_builder_independent_followup_coonkuym/temporary_symlink_alias_refs",
       "command": [
         "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
         "-I",
@@ -532,7 +532,7 @@
       "references_preserved": true,
       "destination_preserved": true,
       "entire_case_tree_preserved": true,
-      "cwd": "/private/tmp/pf8_builder_independent_followup_39tz5n5h/temporary_hardlink_alias_refs",
+      "cwd": "/private/tmp/pf8_builder_independent_followup_coonkuym/temporary_hardlink_alias_refs",
       "command": [
         "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
         "-I",
@@ -545,13 +545,13 @@
       "name": "two_internal_root_documents",
       "returncode": 1,
       "stdout": "document.xml well-formed\n",
-      "stderr": "Traceback (most recent call last):\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 425, in <module>\n    validate_package(zf)\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 206, in validate_package\n    raise ValueError(\"package root does not reference word/document.xml as its exactly one office document\")\nValueError: package root does not reference word/document.xml as its exactly one office document\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 427, in <module>\n    validate_package(zf)\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 206, in validate_package\n    raise ValueError(\"package root does not reference word/document.xml as its exactly one office document\")\nValueError: package root does not reference word/document.xml as its exactly one office document\n",
       "source_template_preserved": true,
       "markdown_preserved": true,
       "references_preserved": true,
       "destination_preserved": true,
       "entire_case_tree_preserved": false,
-      "cwd": "/private/tmp/pf8_builder_independent_followup_39tz5n5h/two_internal_root_documents",
+      "cwd": "/private/tmp/pf8_builder_independent_followup_coonkuym/two_internal_root_documents",
       "command": [
         "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
         "-I",
@@ -564,13 +564,13 @@
       "name": "extra_external_root_document",
       "returncode": 1,
       "stdout": "document.xml well-formed\n",
-      "stderr": "Traceback (most recent call last):\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 425, in <module>\n    validate_package(zf)\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 206, in validate_package\n    raise ValueError(\"package root does not reference word/document.xml as its exactly one office document\")\nValueError: package root does not reference word/document.xml as its exactly one office document\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 427, in <module>\n    validate_package(zf)\n  File \"/Users/samnimoh/Desktop/chromo/tools/build_article.py\", line 206, in validate_package\n    raise ValueError(\"package root does not reference word/document.xml as its exactly one office document\")\nValueError: package root does not reference word/document.xml as its exactly one office document\n",
       "source_template_preserved": true,
       "markdown_preserved": true,
       "references_preserved": true,
       "destination_preserved": true,
       "entire_case_tree_preserved": false,
-      "cwd": "/private/tmp/pf8_builder_independent_followup_39tz5n5h/extra_external_root_document",
+      "cwd": "/private/tmp/pf8_builder_independent_followup_coonkuym/extra_external_root_document",
       "command": [
         "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
         "-I",

@@ -1,0 +1,396 @@
+{
+  "status": "paused_before_heading_layout_fix; not a final shipping signoff",
+  "scope": "Read-only visual review of pre-heading-layout-fix rendered supplement.",
+  "pages_total": 198,
+  "overview_contact_sheets_inspected": [
+    {
+      "path": "/private/tmp/pf8_round6_fixed_render/supplement/contact-1.png",
+      "sha256": "15fef76cf76a35922cf42b8eb1fb11796823a188e26d2433f8e1e6484229ead1",
+      "bytes": 905418
+    },
+    {
+      "path": "/private/tmp/pf8_round6_fixed_render/supplement/contact-2.png",
+      "sha256": "12799a61ecd7036228bbb355b94b2465e9368784bb4f3035352934d8ca6d88e2",
+      "bytes": 791985
+    },
+    {
+      "path": "/private/tmp/pf8_round6_fixed_render/supplement/contact-3.png",
+      "sha256": "667761c9ef75c6ecfdd8eff2368595e67cb0ec1376067771da23884485e36d4f",
+      "bytes": 984474
+    },
+    {
+      "path": "/private/tmp/pf8_round6_fixed_render/supplement/contact-4.png",
+      "sha256": "37a7a162f702748a104dbd9f4b35c1132e5871c2ec8e458a9386fce664f36658",
+      "bytes": 940980
+    },
+    {
+      "path": "/private/tmp/pf8_round6_fixed_render/supplement/contact-5.png",
+      "sha256": "beaa25d418b95bb04ff6b4abfb0131cb9cd5c13bd04cb8e8a35f7b6b19d3dae6",
+      "bytes": 906172
+    },
+    {
+      "path": "/private/tmp/pf8_round6_fixed_render/supplement/contact-6.png",
+      "sha256": "f96e1e58ee75362020e2f8de639a5347dae634cc90246e127b6a85d74fcf9004",
+      "bytes": 909013
+    },
+    {
+      "path": "/private/tmp/pf8_round6_fixed_render/supplement/contact-7.png",
+      "sha256": "7dd397b3d449cc4d2d783cd4ab6deb802d11410f9d95c700010d8039727966c6",
+      "bytes": 830053
+    },
+    {
+      "path": "/private/tmp/pf8_round6_fixed_render/supplement/contact-8.png",
+      "sha256": "fe1ffe7ffa86fc6052974a5645f03d616967479532bb40cc672b99f9a9e3a6bb",
+      "bytes": 1002566
+    },
+    {
+      "path": "/private/tmp/pf8_round6_fixed_render/supplement/contact-9.png",
+      "sha256": "cc8a0c2937002aa09a099836f0b72cb494e799642420c614c14bd4a7f9112073",
+      "bytes": 1003320
+    },
+    {
+      "path": "/private/tmp/pf8_round6_fixed_render/supplement/contact-10.png",
+      "sha256": "ccf9bd0bf68cd7cb33fe2d05b841263978a7b2da62f78baeee9a40b87d3e553a",
+      "bytes": 938374
+    },
+    {
+      "path": "/private/tmp/pf8_round6_fixed_render/supplement/contact-11.png",
+      "sha256": "075c870708e40017c90a6f65d1e9821dd635d17b2eeaa0a23fe47c281f39d4cc",
+      "bytes": 1045814
+    },
+    {
+      "path": "/private/tmp/pf8_round6_fixed_render/supplement/contact-12.png",
+      "sha256": "ee531928c873cd02f8615a03e5f573a25db98c546150753f0484d88b94d45fc3",
+      "bytes": 902134
+    },
+    {
+      "path": "/private/tmp/pf8_round6_fixed_render/supplement/contact-13.png",
+      "sha256": "f100a47a984c29a05f1a3d328038d758a78acd6ca527a54c08d0ca6222f221d9",
+      "bytes": 303261
+    }
+  ],
+  "overview_pages_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153,
+    154,
+    155,
+    156,
+    157,
+    158,
+    159,
+    160,
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167,
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174,
+    175,
+    176,
+    177,
+    178,
+    179,
+    180,
+    181,
+    182,
+    183,
+    184,
+    185,
+    186,
+    187,
+    188,
+    189,
+    190,
+    191,
+    192,
+    193,
+    194,
+    195,
+    196,
+    197,
+    198
+  ],
+  "original_detail_pages_inspected": [
+    {
+      "path": "/private/tmp/pf8_round6_fixed_render/supplement/page-1.png",
+      "sha256": "54d77aced021a69c7c84011fce33fcd93bab3587485a37824fabc5280e61dc8e",
+      "bytes": 88719,
+      "page": 1
+    },
+    {
+      "path": "/private/tmp/pf8_round6_fixed_render/supplement/page-2.png",
+      "sha256": "ce836ac4fe18ed975e9e1bc179824964557fa9b77b21a10ebbe0d5fe76813f87",
+      "bytes": 176642,
+      "page": 2
+    },
+    {
+      "path": "/private/tmp/pf8_round6_fixed_render/supplement/page-3.png",
+      "sha256": "4352ce56d6d15330a52a496bd7f4d671c2c851b5fc57f5751ce54b4134be6e19",
+      "bytes": 187236,
+      "page": 3
+    },
+    {
+      "path": "/private/tmp/pf8_round6_fixed_render/supplement/page-4.png",
+      "sha256": "0b0d3b4308732d8e28d00ba6ac758afaed2e2153bae72464745987a68e7cc3f5",
+      "bytes": 182627,
+      "page": 4
+    },
+    {
+      "path": "/private/tmp/pf8_round6_fixed_render/supplement/page-5.png",
+      "sha256": "c7c649cb98916e1ee7466ac089b3343d7adbe7c035b08971a743b10abd2a572c",
+      "bytes": 42357,
+      "page": 5
+    },
+    {
+      "path": "/private/tmp/pf8_round6_fixed_render/supplement/page-6.png",
+      "sha256": "0d699e10988a4cfc3b27cb64717cfc350b0950257094bbb58b60b3392aa66e5d",
+      "bytes": 275315,
+      "page": 6
+    },
+    {
+      "path": "/private/tmp/pf8_round6_fixed_render/supplement/page-7.png",
+      "sha256": "d92cdbaa6a2201064d760000d890f6ebcbf7508bd5f0335fc4d4885892bbffb0",
+      "bytes": 299985,
+      "page": 7
+    },
+    {
+      "path": "/private/tmp/pf8_round6_fixed_render/supplement/page-8.png",
+      "sha256": "5866510507250a811750e015434de19262e5bc15b4d1f2e452d594e6f90c0ecc",
+      "bytes": 316566,
+      "page": 8
+    }
+  ],
+  "detail_page_count": 8,
+  "render_source_identity": {
+    "path": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx",
+    "bytes": 4048982,
+    "sha256": "3691a6dc7de007be8c7a8a33ed0558d773b1b9c667626837d2fcac424cedab30"
+  },
+  "source_identity_at_capture": {
+    "path": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx",
+    "sha256": "3691a6dc7de007be8c7a8a33ed0558d773b1b9c667626837d2fcac424cedab30",
+    "bytes": 4048982
+  },
+  "render_source_still_matches": true,
+  "rendered_pdf_identity": {
+    "path": "/private/tmp/pf8_round6_fixed_render/supplement/Additional_file_1.pdf",
+    "sha256": "7906a1bdf57e0ab29e024e1d79ab0c5f22f9b5e51284c089188dc7a6a4a5f44d",
+    "bytes": 5117729
+  },
+  "published_pdf_identity_at_capture": {
+    "path": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.pdf",
+    "sha256": "28092864e6bb5f1a0849a3459b6b02fc01eac9567cfb64c81dc9d6346637e3fc",
+    "bytes": 5169150
+  },
+  "observations": [
+    {
+      "kind": "front_matter",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "result": "Text and footer are clear. Numbering scope on page 2 states Figure S1\u2013S23 and Table S1\u2013S52."
+    },
+    {
+      "kind": "preexisting_usability",
+      "pages": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "result": "Contents entries have dot leaders but no page numbers. Page 5 directs the reader to build the contents field."
+    },
+    {
+      "kind": "preexisting_publication_placeholders",
+      "pages": [
+        1
+      ],
+      "result": "Author and affiliation placeholders remain visible."
+    },
+    {
+      "kind": "candidate_orphan_heading_from_overview",
+      "pages": [
+        10,
+        36
+      ],
+      "result": "Introduction/1.1 headings on page 10 and subsection 3.5 on page 36 appear stranded at page bottoms. Not yet independently inspected at original detail; parent is fixing heading pagination."
+    },
+    {
+      "kind": "overview_layout",
+      "pages": "1\u2013198",
+      "result": "No obvious clipping, overlap, empty pages or broken tables. Sparse end-of-section and final pages appear deliberate."
+    }
+  ],
+  "scope_limits": [
+    "All page contacts were inspected, but original-detail inspection was paused after page 8 at parent request.",
+    "Source headings and artifacts are being regenerated; this record applies only to the stored pre-fix images and hashes.",
+    "Overview inspection cannot certify small text or every line/row boundary."
+  ],
+  "source_or_deliverable_modified_by_review": false
+}
