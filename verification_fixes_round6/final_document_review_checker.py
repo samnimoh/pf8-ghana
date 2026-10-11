@@ -7,6 +7,7 @@ import io
 import json
 import re
 import subprocess
+import runpy
 import xml.etree.ElementTree as ET
 import zipfile
 
@@ -14,7 +15,8 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = Path(__file__).resolve().parent
 BASE = 'd59bbf6722c36b8f8f09e707a2290fbb699ed83f'
 W = '{http://schemas.openxmlformats.org/wordprocessingml/2006/main}'
-GIT = '/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/git'
+# Anchor shared helper discovery to this script so Python -I works from any cwd.
+GIT = runpy.run_path(str(ROOT / 'tools' / 'git_runtime.py'))['resolve_git']()
 
 
 def git(*args):

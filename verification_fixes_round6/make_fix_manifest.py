@@ -5,10 +5,12 @@ import hashlib
 import json
 from pathlib import Path
 import subprocess
+import runpy
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = Path(__file__).resolve().parent
-GIT = '/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/git'
+# Anchor shared helper discovery to this script so Python -I works from any cwd.
+GIT = runpy.run_path(str(ROOT / 'tools' / 'git_runtime.py'))['resolve_git']()
 
 
 def identity(path):

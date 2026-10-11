@@ -1,0 +1,470 @@
+{
+  "generated_utc": "2026-10-11T11:25:13.113939+00:00",
+  "status": "bounded_pass",
+  "checks": 47,
+  "all_passed": true,
+  "python": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+  "baseline": "64515dc5f0cb707552bfd0e9ed89a97f61fc6fca",
+  "reviewed_inputs": [
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/tools/git_runtime.py",
+      "bytes": 2498,
+      "sha256": "040121c74aabd8dcb0d05db1f1108468e851d55dd7f86dad7cab551d0614e263"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_review_round5/check_current_revision.py",
+      "bytes": 15381,
+      "sha256": "601930a2b8dfdf7032dfd480de8da0d186298026e8b836db7698385e90ba03f5"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_review_round5/finalize_review.py",
+      "bytes": 6356,
+      "sha256": "d9f582dcd44f92f3d0c3424eaa84a4c5a6c80ae9586b2a0e84025653e244f1ca"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_review_round6/check_current_revision.py",
+      "bytes": 10611,
+      "sha256": "970a8f1ad759b57e5a23f7886b6e9107f96309f9e4e47842cc48b8bee4f9866d"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_review_round6/finalize_review.py",
+      "bytes": 6428,
+      "sha256": "1316aa8d2bf894f7d76a5c342050fad1c250a1676a4756636151aa62348fb408"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/independent_builder_layout_tests.py",
+      "bytes": 10449,
+      "sha256": "f9992238a12a9d202b148e0727b5587298f5d06bff78b1d52a21bd532dd65485"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/make_fix_manifest.py",
+      "bytes": 5215,
+      "sha256": "b1e61095730ffd696635254eb0477037209e85c9770913f2029281181c6094f2"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/verify_documents.py",
+      "bytes": 8569,
+      "sha256": "2fcb87254d84551900528b4d9b2542cc601bc002f267878dc881f1a3b74c2767"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/final_document_review_checker.py",
+      "bytes": 17244,
+      "sha256": "7cbc7335b1e4d5e23d5ef9d77eb405a01da1a0a56f97ce1e5cf1fe39607754a1"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/final_closure_review_checker.py",
+      "bytes": 11874,
+      "sha256": "45671a9f11601dbcc71e1c37182c129460408ce7512d11906b8c814b7ba2473b"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/git_portability_tests.py",
+      "bytes": 13072,
+      "sha256": "274329ba59c27e20198866992eb122e166f3c31eb2cc40ddb6d97d7321871a2f"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/git_portability_results.json",
+      "bytes": 33165,
+      "sha256": "b46b4fc94be586e046c52c0b1cdc7000897945f7c00804ad47ab40c115885457"
+    }
+  ],
+  "driver": {
+    "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/independent_git_probe_tests.py",
+    "bytes": 10261,
+    "sha256": "e179aa672766a557d2662dc2ce0303b5ac6d044d79f5f46aee5d9b2abe2ed9c1"
+  },
+  "results": [
+    {
+      "name": "absolute override bypasses absent PATH and cwd traps",
+      "passed": true,
+      "returncode": 0,
+      "result": {
+        "git": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_independent_git_xm6y5j0h/unrelated cwd/git '$; literal",
+        "isolated": true
+      },
+      "diagnostic": ""
+    },
+    {
+      "name": "literal quote dollar semicolon path is one executable argument",
+      "passed": true,
+      "returncode": 0,
+      "result": {
+        "git": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_independent_git_xm6y5j0h/unrelated cwd/git '$; literal",
+        "isolated": true
+      },
+      "diagnostic": ""
+    },
+    {
+      "name": "literal special-character executable name has no shell side effect",
+      "passed": true
+    },
+    {
+      "name": "relative override survives subsequent cwd change",
+      "passed": true,
+      "returncode": 0,
+      "result": {
+        "git": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_independent_git_xm6y5j0h/unrelated cwd/git '$; literal",
+        "isolated": true
+      },
+      "diagnostic": ""
+    },
+    {
+      "name": "relative PATH result survives subsequent cwd change",
+      "passed": true,
+      "returncode": 0,
+      "result": {
+        "git": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_independent_git_xm6y5j0h/bin/git",
+        "isolated": true
+      },
+      "diagnostic": ""
+    },
+    {
+      "name": "broken explicit symlink does not use valid PATH fallback",
+      "passed": true,
+      "returncode": 1,
+      "result": null,
+      "diagnostic": "Traceback (most recent call last):\n  File \"<string>\", line 7, in <module>\n  File \"/Users/samnimoh/Desktop/chromo/tools/git_runtime.py\", line 33, in resolve_git\n    raise RuntimeError(f'Cannot resolve executable Git from {origin}: {requested!r}. Set PF8_GIT to an executable Git path or install Git on PATH.')\nRuntimeError: Cannot resolve executable Git from PF8_GIT: '/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_independent_git_xm6y5j0h/broken Git link'. Set PF8_GIT to an executable Git path or install Git on PATH.\n"
+    },
+    {
+      "name": "bare explicit name cannot use missing PATH default",
+      "passed": true,
+      "returncode": 1,
+      "result": null,
+      "diagnostic": "Traceback (most recent call last):\n  File \"<string>\", line 7, in <module>\n  File \"/Users/samnimoh/Desktop/chromo/tools/git_runtime.py\", line 30, in resolve_git\n    raise RuntimeError(f'Cannot resolve Git from {origin}: PATH is missing or empty. Set PF8_GIT to an executable Git path.')\nRuntimeError: Cannot resolve Git from PF8_GIT: PATH is missing or empty. Set PF8_GIT to an executable Git path.\n"
+    },
+    {
+      "name": "malformed stdout is caught as actionable execution error",
+      "passed": true,
+      "returncode": 1,
+      "result": null,
+      "diagnostic": ", timeout)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py\", line 2153, in _communicate\n    stdout = self._translate_newlines(stdout,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py\", line 1086, in _translate_newlines\n    data = data.decode(encoding, errors)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nUnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<string>\", line 7, in <module>\n  File \"/Users/samnimoh/Desktop/chromo/tools/git_runtime.py\", line 43, in resolve_git\n    raise RuntimeError(f'Cannot execute Git resolved from {origin}: {executable}: {exc}') from exc\nRuntimeError: Cannot execute Git resolved from PF8_GIT: /private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_independent_git_xm6y5j0h/malformed stdout: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte\n"
+    },
+    {
+      "name": "timeout branch is caught as actionable execution error",
+      "passed": true,
+      "returncode": 1,
+      "result": null,
+      "diagnostic": "Traceback (most recent call last):\n  File \"/Users/samnimoh/Desktop/chromo/tools/git_runtime.py\", line 38, in resolve_git\n    version = subprocess.run(\n              ^^^^^^^^^^^^^^^\n  File \"<string>\", line 5, in fail\nsubprocess.TimeoutExpired: Command '['/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_independent_git_xm6y5j0h/bin/git', '--version']' timed out after 10 seconds\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<string>\", line 7, in <module>\n  File \"/Users/samnimoh/Desktop/chromo/tools/git_runtime.py\", line 43, in resolve_git\n    raise RuntimeError(f'Cannot execute Git resolved from {origin}: {executable}: {exc}') from exc\nRuntimeError: Cannot execute Git resolved from PF8_GIT: /private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_independent_git_xm6y5j0h/bin/git: Command '['/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_independent_git_xm6y5j0h/bin/git', '--version']' timed out after 10 seconds\n"
+    },
+    {
+      "name": "verification_review_round5/check_current_revision.py: executable AST outside Git bootstrap unchanged",
+      "passed": true
+    },
+    {
+      "name": "verification_review_round5/check_current_revision.py: isolated unrelated cwd bootstrap PATH",
+      "passed": true,
+      "returncode": 0,
+      "result": {
+        "git": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_independent_git_xm6y5j0h/bin/git",
+        "root": "/Users/samnimoh/Desktop/chromo",
+        "unchanged_sys_path": true,
+        "isolated": true
+      },
+      "diagnostic": ""
+    },
+    {
+      "name": "verification_review_round5/check_current_revision.py: isolated unrelated cwd bootstrap explicit override no PATH",
+      "passed": true,
+      "returncode": 0,
+      "result": {
+        "git": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_independent_git_xm6y5j0h/unrelated cwd/git '$; literal",
+        "root": "/Users/samnimoh/Desktop/chromo",
+        "unchanged_sys_path": true,
+        "isolated": true
+      },
+      "diagnostic": ""
+    },
+    {
+      "name": "verification_review_round5/check_current_revision.py: missing Git fails before post-bootstrap work",
+      "passed": true,
+      "returncode": 1,
+      "diagnostic": "Traceback (most recent call last):\n  File \"<string>\", line 18, in <module>\n  File \"<frozen importlib._bootstrap_external>\", line 999, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed\n  File \"/Users/samnimoh/Desktop/chromo/verification_review_round5/check_current_revision.py\", line 19, in <module>\n    GIT = runpy.run_path(str(ROOT / 'tools' / 'git_runtime.py'))['resolve_git']()\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/samnimoh/Desktop/chromo/tools/git_runtime.py\", line 30, in resolve_git\n    raise RuntimeError(f'Cannot resolve Git from {origin}: PATH is missing or empty. Set PF8_GIT to an executable Git path.')\nRuntimeError: Cannot resolve Git from PATH: PATH is missing or empty. Set PF8_GIT to an executable Git path.\n"
+    },
+    {
+      "name": "verification_review_round5/finalize_review.py: executable AST outside Git bootstrap unchanged",
+      "passed": true
+    },
+    {
+      "name": "verification_review_round5/finalize_review.py: isolated unrelated cwd bootstrap PATH",
+      "passed": true,
+      "returncode": 0,
+      "result": {
+        "git": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_independent_git_xm6y5j0h/bin/git",
+        "root": "/Users/samnimoh/Desktop/chromo",
+        "unchanged_sys_path": true,
+        "isolated": true
+      },
+      "diagnostic": ""
+    },
+    {
+      "name": "verification_review_round5/finalize_review.py: isolated unrelated cwd bootstrap explicit override no PATH",
+      "passed": true,
+      "returncode": 0,
+      "result": {
+        "git": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_independent_git_xm6y5j0h/unrelated cwd/git '$; literal",
+        "root": "/Users/samnimoh/Desktop/chromo",
+        "unchanged_sys_path": true,
+        "isolated": true
+      },
+      "diagnostic": ""
+    },
+    {
+      "name": "verification_review_round5/finalize_review.py: missing Git fails before post-bootstrap work",
+      "passed": true,
+      "returncode": 1,
+      "diagnostic": "Traceback (most recent call last):\n  File \"<string>\", line 18, in <module>\n  File \"<frozen importlib._bootstrap_external>\", line 999, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed\n  File \"/Users/samnimoh/Desktop/chromo/verification_review_round5/finalize_review.py\", line 14, in <module>\n    GIT = runpy.run_path(str(ROOT / 'tools' / 'git_runtime.py'))['resolve_git']()\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/samnimoh/Desktop/chromo/tools/git_runtime.py\", line 30, in resolve_git\n    raise RuntimeError(f'Cannot resolve Git from {origin}: PATH is missing or empty. Set PF8_GIT to an executable Git path.')\nRuntimeError: Cannot resolve Git from PATH: PATH is missing or empty. Set PF8_GIT to an executable Git path.\n"
+    },
+    {
+      "name": "verification_review_round6/check_current_revision.py: executable AST outside Git bootstrap unchanged",
+      "passed": true
+    },
+    {
+      "name": "verification_review_round6/check_current_revision.py: isolated unrelated cwd bootstrap PATH",
+      "passed": true,
+      "returncode": 0,
+      "result": {
+        "git": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_independent_git_xm6y5j0h/bin/git",
+        "root": "/Users/samnimoh/Desktop/chromo",
+        "unchanged_sys_path": true,
+        "isolated": true
+      },
+      "diagnostic": ""
+    },
+    {
+      "name": "verification_review_round6/check_current_revision.py: isolated unrelated cwd bootstrap explicit override no PATH",
+      "passed": true,
+      "returncode": 0,
+      "result": {
+        "git": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_independent_git_xm6y5j0h/unrelated cwd/git '$; literal",
+        "root": "/Users/samnimoh/Desktop/chromo",
+        "unchanged_sys_path": true,
+        "isolated": true
+      },
+      "diagnostic": ""
+    },
+    {
+      "name": "verification_review_round6/check_current_revision.py: missing Git fails before post-bootstrap work",
+      "passed": true,
+      "returncode": 1,
+      "diagnostic": "Traceback (most recent call last):\n  File \"<string>\", line 18, in <module>\n  File \"<frozen importlib._bootstrap_external>\", line 999, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed\n  File \"/Users/samnimoh/Desktop/chromo/verification_review_round6/check_current_revision.py\", line 16, in <module>\n    GIT = runpy.run_path(str(ROOT / 'tools' / 'git_runtime.py'))['resolve_git']()\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/samnimoh/Desktop/chromo/tools/git_runtime.py\", line 30, in resolve_git\n    raise RuntimeError(f'Cannot resolve Git from {origin}: PATH is missing or empty. Set PF8_GIT to an executable Git path.')\nRuntimeError: Cannot resolve Git from PATH: PATH is missing or empty. Set PF8_GIT to an executable Git path.\n"
+    },
+    {
+      "name": "verification_review_round6/finalize_review.py: executable AST outside Git bootstrap unchanged",
+      "passed": true
+    },
+    {
+      "name": "verification_review_round6/finalize_review.py: isolated unrelated cwd bootstrap PATH",
+      "passed": true,
+      "returncode": 0,
+      "result": {
+        "git": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_independent_git_xm6y5j0h/bin/git",
+        "root": "/Users/samnimoh/Desktop/chromo",
+        "unchanged_sys_path": true,
+        "isolated": true
+      },
+      "diagnostic": ""
+    },
+    {
+      "name": "verification_review_round6/finalize_review.py: isolated unrelated cwd bootstrap explicit override no PATH",
+      "passed": true,
+      "returncode": 0,
+      "result": {
+        "git": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_independent_git_xm6y5j0h/unrelated cwd/git '$; literal",
+        "root": "/Users/samnimoh/Desktop/chromo",
+        "unchanged_sys_path": true,
+        "isolated": true
+      },
+      "diagnostic": ""
+    },
+    {
+      "name": "verification_review_round6/finalize_review.py: missing Git fails before post-bootstrap work",
+      "passed": true,
+      "returncode": 1,
+      "diagnostic": "Traceback (most recent call last):\n  File \"<string>\", line 18, in <module>\n  File \"<frozen importlib._bootstrap_external>\", line 999, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed\n  File \"/Users/samnimoh/Desktop/chromo/verification_review_round6/finalize_review.py\", line 14, in <module>\n    GIT = runpy.run_path(str(ROOT / 'tools' / 'git_runtime.py'))['resolve_git']()\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/samnimoh/Desktop/chromo/tools/git_runtime.py\", line 30, in resolve_git\n    raise RuntimeError(f'Cannot resolve Git from {origin}: PATH is missing or empty. Set PF8_GIT to an executable Git path.')\nRuntimeError: Cannot resolve Git from PATH: PATH is missing or empty. Set PF8_GIT to an executable Git path.\n"
+    },
+    {
+      "name": "verification_fixes_round6/independent_builder_layout_tests.py: executable AST outside Git bootstrap unchanged",
+      "passed": true
+    },
+    {
+      "name": "verification_fixes_round6/independent_builder_layout_tests.py: isolated unrelated cwd bootstrap PATH",
+      "passed": true,
+      "returncode": 0,
+      "result": {
+        "git": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_independent_git_xm6y5j0h/bin/git",
+        "root": "/Users/samnimoh/Desktop/chromo",
+        "unchanged_sys_path": true,
+        "isolated": true
+      },
+      "diagnostic": ""
+    },
+    {
+      "name": "verification_fixes_round6/independent_builder_layout_tests.py: isolated unrelated cwd bootstrap explicit override no PATH",
+      "passed": true,
+      "returncode": 0,
+      "result": {
+        "git": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_independent_git_xm6y5j0h/unrelated cwd/git '$; literal",
+        "root": "/Users/samnimoh/Desktop/chromo",
+        "unchanged_sys_path": true,
+        "isolated": true
+      },
+      "diagnostic": ""
+    },
+    {
+      "name": "verification_fixes_round6/independent_builder_layout_tests.py: missing Git fails before post-bootstrap work",
+      "passed": true,
+      "returncode": 1,
+      "diagnostic": "Traceback (most recent call last):\n  File \"<string>\", line 18, in <module>\n  File \"<frozen importlib._bootstrap_external>\", line 999, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed\n  File \"/Users/samnimoh/Desktop/chromo/verification_fixes_round6/independent_builder_layout_tests.py\", line 20, in <module>\n    GIT = runpy.run_path(str(ROOT / 'tools' / 'git_runtime.py'))['resolve_git']()\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/samnimoh/Desktop/chromo/tools/git_runtime.py\", line 30, in resolve_git\n    raise RuntimeError(f'Cannot resolve Git from {origin}: PATH is missing or empty. Set PF8_GIT to an executable Git path.')\nRuntimeError: Cannot resolve Git from PATH: PATH is missing or empty. Set PF8_GIT to an executable Git path.\n"
+    },
+    {
+      "name": "verification_fixes_round6/make_fix_manifest.py: executable AST outside Git bootstrap unchanged",
+      "passed": true
+    },
+    {
+      "name": "verification_fixes_round6/make_fix_manifest.py: isolated unrelated cwd bootstrap PATH",
+      "passed": true,
+      "returncode": 0,
+      "result": {
+        "git": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_independent_git_xm6y5j0h/bin/git",
+        "root": "/Users/samnimoh/Desktop/chromo",
+        "unchanged_sys_path": true,
+        "isolated": true
+      },
+      "diagnostic": ""
+    },
+    {
+      "name": "verification_fixes_round6/make_fix_manifest.py: isolated unrelated cwd bootstrap explicit override no PATH",
+      "passed": true,
+      "returncode": 0,
+      "result": {
+        "git": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_independent_git_xm6y5j0h/unrelated cwd/git '$; literal",
+        "root": "/Users/samnimoh/Desktop/chromo",
+        "unchanged_sys_path": true,
+        "isolated": true
+      },
+      "diagnostic": ""
+    },
+    {
+      "name": "verification_fixes_round6/make_fix_manifest.py: missing Git fails before post-bootstrap work",
+      "passed": true,
+      "returncode": 1,
+      "diagnostic": "Traceback (most recent call last):\n  File \"<string>\", line 18, in <module>\n  File \"<frozen importlib._bootstrap_external>\", line 999, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed\n  File \"/Users/samnimoh/Desktop/chromo/verification_fixes_round6/make_fix_manifest.py\", line 13, in <module>\n    GIT = runpy.run_path(str(ROOT / 'tools' / 'git_runtime.py'))['resolve_git']()\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/samnimoh/Desktop/chromo/tools/git_runtime.py\", line 30, in resolve_git\n    raise RuntimeError(f'Cannot resolve Git from {origin}: PATH is missing or empty. Set PF8_GIT to an executable Git path.')\nRuntimeError: Cannot resolve Git from PATH: PATH is missing or empty. Set PF8_GIT to an executable Git path.\n"
+    },
+    {
+      "name": "verification_fixes_round6/verify_documents.py: executable AST outside Git bootstrap unchanged",
+      "passed": true
+    },
+    {
+      "name": "verification_fixes_round6/verify_documents.py: isolated unrelated cwd bootstrap PATH",
+      "passed": true,
+      "returncode": 0,
+      "result": {
+        "git": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_independent_git_xm6y5j0h/bin/git",
+        "root": "/Users/samnimoh/Desktop/chromo",
+        "unchanged_sys_path": true,
+        "isolated": true
+      },
+      "diagnostic": ""
+    },
+    {
+      "name": "verification_fixes_round6/verify_documents.py: isolated unrelated cwd bootstrap explicit override no PATH",
+      "passed": true,
+      "returncode": 0,
+      "result": {
+        "git": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_independent_git_xm6y5j0h/unrelated cwd/git '$; literal",
+        "root": "/Users/samnimoh/Desktop/chromo",
+        "unchanged_sys_path": true,
+        "isolated": true
+      },
+      "diagnostic": ""
+    },
+    {
+      "name": "verification_fixes_round6/verify_documents.py: missing Git fails before post-bootstrap work",
+      "passed": true,
+      "returncode": 1,
+      "diagnostic": "Traceback (most recent call last):\n  File \"<string>\", line 18, in <module>\n  File \"<frozen importlib._bootstrap_external>\", line 999, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed\n  File \"/Users/samnimoh/Desktop/chromo/verification_fixes_round6/verify_documents.py\", line 18, in <module>\n    GIT = runpy.run_path(str(ROOT / 'tools' / 'git_runtime.py'))['resolve_git']()\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/samnimoh/Desktop/chromo/tools/git_runtime.py\", line 30, in resolve_git\n    raise RuntimeError(f'Cannot resolve Git from {origin}: PATH is missing or empty. Set PF8_GIT to an executable Git path.')\nRuntimeError: Cannot resolve Git from PATH: PATH is missing or empty. Set PF8_GIT to an executable Git path.\n"
+    },
+    {
+      "name": "verification_fixes_round6/final_document_review_checker.py: executable AST outside Git bootstrap unchanged",
+      "passed": true
+    },
+    {
+      "name": "verification_fixes_round6/final_document_review_checker.py: isolated unrelated cwd bootstrap PATH",
+      "passed": true,
+      "returncode": 0,
+      "result": {
+        "git": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_independent_git_xm6y5j0h/bin/git",
+        "root": "/Users/samnimoh/Desktop/chromo",
+        "unchanged_sys_path": true,
+        "isolated": true
+      },
+      "diagnostic": ""
+    },
+    {
+      "name": "verification_fixes_round6/final_document_review_checker.py: isolated unrelated cwd bootstrap explicit override no PATH",
+      "passed": true,
+      "returncode": 0,
+      "result": {
+        "git": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_independent_git_xm6y5j0h/unrelated cwd/git '$; literal",
+        "root": "/Users/samnimoh/Desktop/chromo",
+        "unchanged_sys_path": true,
+        "isolated": true
+      },
+      "diagnostic": ""
+    },
+    {
+      "name": "verification_fixes_round6/final_document_review_checker.py: missing Git fails before post-bootstrap work",
+      "passed": true,
+      "returncode": 1,
+      "diagnostic": "Traceback (most recent call last):\n  File \"<string>\", line 18, in <module>\n  File \"<frozen importlib._bootstrap_external>\", line 999, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed\n  File \"/Users/samnimoh/Desktop/chromo/verification_fixes_round6/final_document_review_checker.py\", line 19, in <module>\n    GIT = runpy.run_path(str(ROOT / 'tools' / 'git_runtime.py'))['resolve_git']()\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/samnimoh/Desktop/chromo/tools/git_runtime.py\", line 30, in resolve_git\n    raise RuntimeError(f'Cannot resolve Git from {origin}: PATH is missing or empty. Set PF8_GIT to an executable Git path.')\nRuntimeError: Cannot resolve Git from PATH: PATH is missing or empty. Set PF8_GIT to an executable Git path.\n"
+    },
+    {
+      "name": "verification_fixes_round6/final_closure_review_checker.py: executable AST outside Git bootstrap unchanged",
+      "passed": true
+    },
+    {
+      "name": "verification_fixes_round6/final_closure_review_checker.py: isolated unrelated cwd bootstrap PATH",
+      "passed": true,
+      "returncode": 0,
+      "result": {
+        "git": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_independent_git_xm6y5j0h/bin/git",
+        "root": "/Users/samnimoh/Desktop/chromo",
+        "unchanged_sys_path": true,
+        "isolated": true
+      },
+      "diagnostic": ""
+    },
+    {
+      "name": "verification_fixes_round6/final_closure_review_checker.py: isolated unrelated cwd bootstrap explicit override no PATH",
+      "passed": true,
+      "returncode": 0,
+      "result": {
+        "git": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_independent_git_xm6y5j0h/unrelated cwd/git '$; literal",
+        "root": "/Users/samnimoh/Desktop/chromo",
+        "unchanged_sys_path": true,
+        "isolated": true
+      },
+      "diagnostic": ""
+    },
+    {
+      "name": "verification_fixes_round6/final_closure_review_checker.py: missing Git fails before post-bootstrap work",
+      "passed": true,
+      "returncode": 1,
+      "diagnostic": "Traceback (most recent call last):\n  File \"<string>\", line 18, in <module>\n  File \"<frozen importlib._bootstrap_external>\", line 999, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed\n  File \"/Users/samnimoh/Desktop/chromo/verification_fixes_round6/final_closure_review_checker.py\", line 18, in <module>\n    GIT = runpy.run_path(str(ROOT / 'tools' / 'git_runtime.py'))['resolve_git']()\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/samnimoh/Desktop/chromo/tools/git_runtime.py\", line 30, in resolve_git\n    raise RuntimeError(f'Cannot resolve Git from {origin}: PATH is missing or empty. Set PF8_GIT to an executable Git path.')\nRuntimeError: Cannot resolve Git from PATH: PATH is missing or empty. Set PF8_GIT to an executable Git path.\n"
+    },
+    {
+      "name": "helper utilities and primary portability evidence unchanged",
+      "passed": true
+    },
+    {
+      "name": "all protected historical JSON evidence unchanged",
+      "passed": true,
+      "count": 70
+    }
+  ],
+  "scope": "Independent scratch executables, isolated real-script bootstrap only, read-only Git and AST comparison. No main function, document builder, deliverable or scientific analysis executed.",
+  "limits": [
+    "Bootstrap probes deliberately stop every utility immediately after Git initialization.",
+    "Historical main functions retain their original expected revisions and inputs.",
+    "A successful version prefix is a suitability check, not cryptographic executable authentication; later executable replacement is outside scope."
+  ]
+}

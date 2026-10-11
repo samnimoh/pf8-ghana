@@ -7,6 +7,7 @@ import json
 import os
 import shutil
 import subprocess
+import runpy
 import sys
 import tempfile
 import xml.etree.ElementTree as ET
@@ -15,7 +16,8 @@ import zipfile
 ROOT = Path(__file__).resolve().parents[1]
 OUT = Path(__file__).resolve().parent
 BUILDER = ROOT/'tools/build_article.py'
-GIT = '/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/git'
+# Anchor shared helper discovery to this script so Python -I works from any cwd.
+GIT = runpy.run_path(str(ROOT / 'tools' / 'git_runtime.py'))['resolve_git']()
 W = '{http://schemas.openxmlformats.org/wordprocessingml/2006/main}'
 R = 'http://schemas.openxmlformats.org/package/2006/relationships'
 D = 'http://schemas.openxmlformats.org/officeDocument/2006/relationships'

@@ -1,0 +1,539 @@
+{
+  "generated_utc": "2026-10-11T11:21:25.479487+00:00",
+  "status": "bounded_pass",
+  "all_passed": true,
+  "checks": 57,
+  "current_head": "64515dc5f0cb707552bfd0e9ed89a97f61fc6fca",
+  "baseline_head": "e7c4cd41b1f631209d25f2ff35eed6ba9c0ec6cd",
+  "python": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+  "helper": {
+    "path": "/Users/samnimoh/Desktop/chromo/tools/git_runtime.py",
+    "bytes": 2498,
+    "sha256": "040121c74aabd8dcb0d05db1f1108468e851d55dd7f86dad7cab551d0614e263"
+  },
+  "utilities": [
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/final_closure_review_checker.py",
+      "bytes": 11874,
+      "sha256": "45671a9f11601dbcc71e1c37182c129460408ce7512d11906b8c814b7ba2473b"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/final_document_review_checker.py",
+      "bytes": 17244,
+      "sha256": "7cbc7335b1e4d5e23d5ef9d77eb405a01da1a0a56f97ce1e5cf1fe39607754a1"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/independent_builder_layout_tests.py",
+      "bytes": 10449,
+      "sha256": "f9992238a12a9d202b148e0727b5587298f5d06bff78b1d52a21bd532dd65485"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/make_fix_manifest.py",
+      "bytes": 5215,
+      "sha256": "b1e61095730ffd696635254eb0477037209e85c9770913f2029281181c6094f2"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/verify_documents.py",
+      "bytes": 8569,
+      "sha256": "2fcb87254d84551900528b4d9b2542cc601bc002f267878dc881f1a3b74c2767"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_review_round5/check_current_revision.py",
+      "bytes": 15381,
+      "sha256": "601930a2b8dfdf7032dfd480de8da0d186298026e8b836db7698385e90ba03f5"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_review_round5/finalize_review.py",
+      "bytes": 6356,
+      "sha256": "d9f582dcd44f92f3d0c3424eaa84a4c5a6c80ae9586b2a0e84025653e244f1ca"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_review_round6/check_current_revision.py",
+      "bytes": 10611,
+      "sha256": "970a8f1ad759b57e5a23f7886b6e9107f96309f9e4e47842cc48b8bee4f9866d"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_review_round6/finalize_review.py",
+      "bytes": 6428,
+      "sha256": "1316aa8d2bf894f7d76a5c342050fad1c250a1676a4756636151aa62348fb408"
+    }
+  ],
+  "test_driver": {
+    "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/git_portability_tests.py",
+    "bytes": 13072,
+    "sha256": "274329ba59c27e20198866992eb122e166f3c31eb2cc40ddb6d97d7321871a2f"
+  },
+  "results": [
+    {
+      "name": "PATH-only finds Git in directory containing spaces",
+      "passed": true,
+      "returncode": 0,
+      "resolved": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_git_portability_704tmaik/bin with spaces/git",
+      "diagnostic": ""
+    },
+    {
+      "name": "absolute override works without PATH",
+      "passed": true,
+      "returncode": 0,
+      "resolved": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_git_portability_704tmaik/explicit Git",
+      "diagnostic": ""
+    },
+    {
+      "name": "override wins over another executable on PATH",
+      "passed": true,
+      "returncode": 0,
+      "resolved": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_git_portability_704tmaik/explicit Git",
+      "diagnostic": ""
+    },
+    {
+      "name": "override command name is resolved on PATH",
+      "passed": true,
+      "returncode": 0,
+      "resolved": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_git_portability_704tmaik/explicit Git",
+      "diagnostic": ""
+    },
+    {
+      "name": "explicit relative override becomes absolute",
+      "passed": true,
+      "returncode": 0,
+      "resolved": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_git_portability_704tmaik/clean cwd/relative Git",
+      "diagnostic": ""
+    },
+    {
+      "name": "symlink override resolves to executable target",
+      "passed": true,
+      "returncode": 0,
+      "resolved": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_git_portability_704tmaik/explicit Git",
+      "diagnostic": ""
+    },
+    {
+      "name": "relative PATH entry becomes absolute before subprocess cwd changes",
+      "passed": true,
+      "returncode": 0,
+      "resolved": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_git_portability_704tmaik/bin with spaces/git",
+      "diagnostic": ""
+    },
+    {
+      "name": "missing PATH does not use cwd Git",
+      "passed": true,
+      "returncode": 1,
+      "resolved": null,
+      "diagnostic": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/Users/samnimoh/Desktop/chromo/tools/git_runtime.py\", line 30, in resolve_git\n    raise RuntimeError(f'Cannot resolve Git from {origin}: PATH is missing or empty. Set PF8_GIT to an executable Git path.')\nRuntimeError: Cannot resolve Git from PATH: PATH is missing or empty. Set PF8_GIT to an executable Git path.\n"
+    },
+    {
+      "name": "empty PATH does not use cwd Git",
+      "passed": true,
+      "returncode": 1,
+      "resolved": null,
+      "diagnostic": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/Users/samnimoh/Desktop/chromo/tools/git_runtime.py\", line 30, in resolve_git\n    raise RuntimeError(f'Cannot resolve Git from {origin}: PATH is missing or empty. Set PF8_GIT to an executable Git path.')\nRuntimeError: Cannot resolve Git from PATH: PATH is missing or empty. Set PF8_GIT to an executable Git path.\n"
+    },
+    {
+      "name": "PATH without Git fails actionably",
+      "passed": true,
+      "returncode": 1,
+      "resolved": null,
+      "diagnostic": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/Users/samnimoh/Desktop/chromo/tools/git_runtime.py\", line 33, in resolve_git\n    raise RuntimeError(f'Cannot resolve executable Git from {origin}: {requested!r}. Set PF8_GIT to an executable Git path or install Git on PATH.')\nRuntimeError: Cannot resolve executable Git from PATH: 'git'. Set PF8_GIT to an executable Git path or install Git on PATH.\n"
+    },
+    {
+      "name": "missing explicit override never falls back to valid PATH",
+      "passed": true,
+      "returncode": 1,
+      "resolved": null,
+      "diagnostic": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/Users/samnimoh/Desktop/chromo/tools/git_runtime.py\", line 33, in resolve_git\n    raise RuntimeError(f'Cannot resolve executable Git from {origin}: {requested!r}. Set PF8_GIT to an executable Git path or install Git on PATH.')\nRuntimeError: Cannot resolve executable Git from PF8_GIT: '/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_git_portability_704tmaik/missing Git'. Set PF8_GIT to an executable Git path or install Git on PATH.\n"
+    },
+    {
+      "name": "nonexecutable override fails without fallback",
+      "passed": true,
+      "returncode": 1,
+      "resolved": null,
+      "diagnostic": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/Users/samnimoh/Desktop/chromo/tools/git_runtime.py\", line 33, in resolve_git\n    raise RuntimeError(f'Cannot resolve executable Git from {origin}: {requested!r}. Set PF8_GIT to an executable Git path or install Git on PATH.')\nRuntimeError: Cannot resolve executable Git from PF8_GIT: '/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_git_portability_704tmaik/nonexecutable Git'. Set PF8_GIT to an executable Git path or install Git on PATH.\n"
+    },
+    {
+      "name": "directory override fails without fallback",
+      "passed": true,
+      "returncode": 1,
+      "resolved": null,
+      "diagnostic": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/Users/samnimoh/Desktop/chromo/tools/git_runtime.py\", line 33, in resolve_git\n    raise RuntimeError(f'Cannot resolve executable Git from {origin}: {requested!r}. Set PF8_GIT to an executable Git path or install Git on PATH.')\nRuntimeError: Cannot resolve executable Git from PF8_GIT: '/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_git_portability_704tmaik/bin with spaces'. Set PF8_GIT to an executable Git path or install Git on PATH.\n"
+    },
+    {
+      "name": "empty override is rejected",
+      "passed": true,
+      "returncode": 1,
+      "resolved": null,
+      "diagnostic": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/Users/samnimoh/Desktop/chromo/tools/git_runtime.py\", line 27, in resolve_git\n    raise RuntimeError('PF8_GIT is empty; set an executable Git path or unset it to use PATH.')\nRuntimeError: PF8_GIT is empty; set an executable Git path or unset it to use PATH.\n"
+    },
+    {
+      "name": "executable non-Git override is rejected",
+      "passed": true,
+      "returncode": 1,
+      "resolved": null,
+      "diagnostic": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/Users/samnimoh/Desktop/chromo/tools/git_runtime.py\", line 45, in resolve_git\n    raise RuntimeError(f'Executable resolved from {origin} did not report a Git version: {executable} (exit {version.returncode}).')\nRuntimeError: Executable resolved from PF8_GIT did not report a Git version: /private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_git_portability_704tmaik/not Git (exit 0).\n"
+    },
+    {
+      "name": "nonzero version command is rejected",
+      "passed": true,
+      "returncode": 1,
+      "resolved": null,
+      "diagnostic": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/Users/samnimoh/Desktop/chromo/tools/git_runtime.py\", line 45, in resolve_git\n    raise RuntimeError(f'Executable resolved from {origin} did not report a Git version: {executable} (exit {version.returncode}).')\nRuntimeError: Executable resolved from PF8_GIT did not report a Git version: /private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_git_portability_704tmaik/failed Git (exit 7).\n"
+    },
+    {
+      "name": "malformed executable reports execution failure",
+      "passed": true,
+      "returncode": 1,
+      "resolved": null,
+      "diagnostic": "38, in resolve_git\n    version = subprocess.run(\n              ^^^^^^^^^^^^^^^\n  File \"/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py\", line 548, in run\n    with Popen(*popenargs, **kwargs) as process:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py\", line 1026, in __init__\n    self._execute_child(args, executable, preexec_fn, close_fds,\n  File \"/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py\", line 1955, in _execute_child\n    raise child_exception_type(errno_num, err_msg, err_filename)\nOSError: [Errno 8] Exec format error: '/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_git_portability_704tmaik/malformed executable'\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/Users/samnimoh/Desktop/chromo/tools/git_runtime.py\", line 43, in resolve_git\n    raise RuntimeError(f'Cannot execute Git resolved from {origin}: {executable}: {exc}') from exc\nRuntimeError: Cannot execute Git resolved from PF8_GIT: /private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_git_portability_704tmaik/malformed executable: [Errno 8] Exec format error: '/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_git_portability_704tmaik/malformed executable'\n"
+    },
+    {
+      "name": "executable non-Git on PATH is rejected",
+      "passed": true,
+      "returncode": 1,
+      "resolved": null,
+      "diagnostic": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/Users/samnimoh/Desktop/chromo/tools/git_runtime.py\", line 45, in resolve_git\n    raise RuntimeError(f'Executable resolved from {origin} did not report a Git version: {executable} (exit {version.returncode}).')\nRuntimeError: Executable resolved from PATH did not report a Git version: /private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_git_portability_704tmaik/wrong bin/git (exit 0).\n"
+    },
+    {
+      "name": "verification_fixes_round6/final_closure_review_checker.py: only resolver wiring changes executable AST",
+      "passed": true
+    },
+    {
+      "name": "verification_fixes_round6/final_closure_review_checker.py: isolated import PATH-only",
+      "passed": true,
+      "returncode": 0,
+      "import_scope": "full",
+      "result": {
+        "git": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_git_portability_704tmaik/bin with spaces/git",
+        "root": "/Users/samnimoh/Desktop/chromo",
+        "import_path_unchanged": true,
+        "bounded": false
+      },
+      "diagnostic": ""
+    },
+    {
+      "name": "verification_fixes_round6/final_closure_review_checker.py: isolated import override without PATH",
+      "passed": true,
+      "returncode": 0,
+      "import_scope": "full",
+      "result": {
+        "git": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_git_portability_704tmaik/explicit Git",
+        "root": "/Users/samnimoh/Desktop/chromo",
+        "import_path_unchanged": true,
+        "bounded": false
+      },
+      "diagnostic": ""
+    },
+    {
+      "name": "verification_fixes_round6/final_closure_review_checker.py: isolated import missing Git fails early",
+      "passed": true,
+      "returncode": 1,
+      "diagnostic": "Traceback (most recent call last):\n  File \"<string>\", line 19, in <module>\n  File \"<frozen importlib._bootstrap_external>\", line 999, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed\n  File \"/Users/samnimoh/Desktop/chromo/verification_fixes_round6/final_closure_review_checker.py\", line 18, in <module>\n    GIT = runpy.run_path(str(ROOT / 'tools' / 'git_runtime.py'))['resolve_git']()\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/samnimoh/Desktop/chromo/tools/git_runtime.py\", line 30, in resolve_git\n    raise RuntimeError(f'Cannot resolve Git from {origin}: PATH is missing or empty. Set PF8_GIT to an executable Git path.')\nRuntimeError: Cannot resolve Git from PATH: PATH is missing or empty. Set PF8_GIT to an executable Git path.\n"
+    },
+    {
+      "name": "verification_fixes_round6/final_document_review_checker.py: only resolver wiring changes executable AST",
+      "passed": true
+    },
+    {
+      "name": "verification_fixes_round6/final_document_review_checker.py: isolated import PATH-only",
+      "passed": true,
+      "returncode": 0,
+      "import_scope": "full",
+      "result": {
+        "git": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_git_portability_704tmaik/bin with spaces/git",
+        "root": "/Users/samnimoh/Desktop/chromo",
+        "import_path_unchanged": true,
+        "bounded": false
+      },
+      "diagnostic": ""
+    },
+    {
+      "name": "verification_fixes_round6/final_document_review_checker.py: isolated import override without PATH",
+      "passed": true,
+      "returncode": 0,
+      "import_scope": "full",
+      "result": {
+        "git": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_git_portability_704tmaik/explicit Git",
+        "root": "/Users/samnimoh/Desktop/chromo",
+        "import_path_unchanged": true,
+        "bounded": false
+      },
+      "diagnostic": ""
+    },
+    {
+      "name": "verification_fixes_round6/final_document_review_checker.py: isolated import missing Git fails early",
+      "passed": true,
+      "returncode": 1,
+      "diagnostic": "Traceback (most recent call last):\n  File \"<string>\", line 19, in <module>\n  File \"<frozen importlib._bootstrap_external>\", line 999, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed\n  File \"/Users/samnimoh/Desktop/chromo/verification_fixes_round6/final_document_review_checker.py\", line 19, in <module>\n    GIT = runpy.run_path(str(ROOT / 'tools' / 'git_runtime.py'))['resolve_git']()\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/samnimoh/Desktop/chromo/tools/git_runtime.py\", line 30, in resolve_git\n    raise RuntimeError(f'Cannot resolve Git from {origin}: PATH is missing or empty. Set PF8_GIT to an executable Git path.')\nRuntimeError: Cannot resolve Git from PATH: PATH is missing or empty. Set PF8_GIT to an executable Git path.\n"
+    },
+    {
+      "name": "verification_fixes_round6/independent_builder_layout_tests.py: only resolver wiring changes executable AST",
+      "passed": true
+    },
+    {
+      "name": "verification_fixes_round6/independent_builder_layout_tests.py: isolated import PATH-only",
+      "passed": true,
+      "returncode": 0,
+      "import_scope": "bounded",
+      "result": {
+        "git": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_git_portability_704tmaik/bin with spaces/git",
+        "root": "/Users/samnimoh/Desktop/chromo",
+        "import_path_unchanged": true,
+        "bounded": true
+      },
+      "diagnostic": ""
+    },
+    {
+      "name": "verification_fixes_round6/independent_builder_layout_tests.py: isolated import override without PATH",
+      "passed": true,
+      "returncode": 0,
+      "import_scope": "bounded",
+      "result": {
+        "git": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_git_portability_704tmaik/explicit Git",
+        "root": "/Users/samnimoh/Desktop/chromo",
+        "import_path_unchanged": true,
+        "bounded": true
+      },
+      "diagnostic": ""
+    },
+    {
+      "name": "verification_fixes_round6/independent_builder_layout_tests.py: isolated import missing Git fails early",
+      "passed": true,
+      "returncode": 1,
+      "diagnostic": "Traceback (most recent call last):\n  File \"<string>\", line 19, in <module>\n  File \"<frozen importlib._bootstrap_external>\", line 999, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed\n  File \"/Users/samnimoh/Desktop/chromo/verification_fixes_round6/independent_builder_layout_tests.py\", line 20, in <module>\n    GIT = runpy.run_path(str(ROOT / 'tools' / 'git_runtime.py'))['resolve_git']()\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/samnimoh/Desktop/chromo/tools/git_runtime.py\", line 30, in resolve_git\n    raise RuntimeError(f'Cannot resolve Git from {origin}: PATH is missing or empty. Set PF8_GIT to an executable Git path.')\nRuntimeError: Cannot resolve Git from PATH: PATH is missing or empty. Set PF8_GIT to an executable Git path.\n"
+    },
+    {
+      "name": "verification_fixes_round6/make_fix_manifest.py: only resolver wiring changes executable AST",
+      "passed": true
+    },
+    {
+      "name": "verification_fixes_round6/make_fix_manifest.py: isolated import PATH-only",
+      "passed": true,
+      "returncode": 0,
+      "import_scope": "full",
+      "result": {
+        "git": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_git_portability_704tmaik/bin with spaces/git",
+        "root": "/Users/samnimoh/Desktop/chromo",
+        "import_path_unchanged": true,
+        "bounded": false
+      },
+      "diagnostic": ""
+    },
+    {
+      "name": "verification_fixes_round6/make_fix_manifest.py: isolated import override without PATH",
+      "passed": true,
+      "returncode": 0,
+      "import_scope": "full",
+      "result": {
+        "git": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_git_portability_704tmaik/explicit Git",
+        "root": "/Users/samnimoh/Desktop/chromo",
+        "import_path_unchanged": true,
+        "bounded": false
+      },
+      "diagnostic": ""
+    },
+    {
+      "name": "verification_fixes_round6/make_fix_manifest.py: isolated import missing Git fails early",
+      "passed": true,
+      "returncode": 1,
+      "diagnostic": "Traceback (most recent call last):\n  File \"<string>\", line 19, in <module>\n  File \"<frozen importlib._bootstrap_external>\", line 999, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed\n  File \"/Users/samnimoh/Desktop/chromo/verification_fixes_round6/make_fix_manifest.py\", line 13, in <module>\n    GIT = runpy.run_path(str(ROOT / 'tools' / 'git_runtime.py'))['resolve_git']()\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/samnimoh/Desktop/chromo/tools/git_runtime.py\", line 30, in resolve_git\n    raise RuntimeError(f'Cannot resolve Git from {origin}: PATH is missing or empty. Set PF8_GIT to an executable Git path.')\nRuntimeError: Cannot resolve Git from PATH: PATH is missing or empty. Set PF8_GIT to an executable Git path.\n"
+    },
+    {
+      "name": "verification_fixes_round6/verify_documents.py: only resolver wiring changes executable AST",
+      "passed": true
+    },
+    {
+      "name": "verification_fixes_round6/verify_documents.py: isolated import PATH-only",
+      "passed": true,
+      "returncode": 0,
+      "import_scope": "full",
+      "result": {
+        "git": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_git_portability_704tmaik/bin with spaces/git",
+        "root": "/Users/samnimoh/Desktop/chromo",
+        "import_path_unchanged": true,
+        "bounded": false
+      },
+      "diagnostic": ""
+    },
+    {
+      "name": "verification_fixes_round6/verify_documents.py: isolated import override without PATH",
+      "passed": true,
+      "returncode": 0,
+      "import_scope": "full",
+      "result": {
+        "git": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_git_portability_704tmaik/explicit Git",
+        "root": "/Users/samnimoh/Desktop/chromo",
+        "import_path_unchanged": true,
+        "bounded": false
+      },
+      "diagnostic": ""
+    },
+    {
+      "name": "verification_fixes_round6/verify_documents.py: isolated import missing Git fails early",
+      "passed": true,
+      "returncode": 1,
+      "diagnostic": "Traceback (most recent call last):\n  File \"<string>\", line 19, in <module>\n  File \"<frozen importlib._bootstrap_external>\", line 999, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed\n  File \"/Users/samnimoh/Desktop/chromo/verification_fixes_round6/verify_documents.py\", line 18, in <module>\n    GIT = runpy.run_path(str(ROOT / 'tools' / 'git_runtime.py'))['resolve_git']()\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/samnimoh/Desktop/chromo/tools/git_runtime.py\", line 30, in resolve_git\n    raise RuntimeError(f'Cannot resolve Git from {origin}: PATH is missing or empty. Set PF8_GIT to an executable Git path.')\nRuntimeError: Cannot resolve Git from PATH: PATH is missing or empty. Set PF8_GIT to an executable Git path.\n"
+    },
+    {
+      "name": "verification_review_round5/check_current_revision.py: only resolver wiring changes executable AST",
+      "passed": true
+    },
+    {
+      "name": "verification_review_round5/check_current_revision.py: isolated import PATH-only",
+      "passed": true,
+      "returncode": 0,
+      "import_scope": "full",
+      "result": {
+        "git": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_git_portability_704tmaik/bin with spaces/git",
+        "root": "/Users/samnimoh/Desktop/chromo",
+        "import_path_unchanged": true,
+        "bounded": false
+      },
+      "diagnostic": ""
+    },
+    {
+      "name": "verification_review_round5/check_current_revision.py: isolated import override without PATH",
+      "passed": true,
+      "returncode": 0,
+      "import_scope": "full",
+      "result": {
+        "git": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_git_portability_704tmaik/explicit Git",
+        "root": "/Users/samnimoh/Desktop/chromo",
+        "import_path_unchanged": true,
+        "bounded": false
+      },
+      "diagnostic": ""
+    },
+    {
+      "name": "verification_review_round5/check_current_revision.py: isolated import missing Git fails early",
+      "passed": true,
+      "returncode": 1,
+      "diagnostic": "Traceback (most recent call last):\n  File \"<string>\", line 19, in <module>\n  File \"<frozen importlib._bootstrap_external>\", line 999, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed\n  File \"/Users/samnimoh/Desktop/chromo/verification_review_round5/check_current_revision.py\", line 19, in <module>\n    GIT = runpy.run_path(str(ROOT / 'tools' / 'git_runtime.py'))['resolve_git']()\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/samnimoh/Desktop/chromo/tools/git_runtime.py\", line 30, in resolve_git\n    raise RuntimeError(f'Cannot resolve Git from {origin}: PATH is missing or empty. Set PF8_GIT to an executable Git path.')\nRuntimeError: Cannot resolve Git from PATH: PATH is missing or empty. Set PF8_GIT to an executable Git path.\n"
+    },
+    {
+      "name": "verification_review_round5/finalize_review.py: only resolver wiring changes executable AST",
+      "passed": true
+    },
+    {
+      "name": "verification_review_round5/finalize_review.py: isolated import PATH-only",
+      "passed": true,
+      "returncode": 0,
+      "import_scope": "full",
+      "result": {
+        "git": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_git_portability_704tmaik/bin with spaces/git",
+        "root": "/Users/samnimoh/Desktop/chromo",
+        "import_path_unchanged": true,
+        "bounded": false
+      },
+      "diagnostic": ""
+    },
+    {
+      "name": "verification_review_round5/finalize_review.py: isolated import override without PATH",
+      "passed": true,
+      "returncode": 0,
+      "import_scope": "full",
+      "result": {
+        "git": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_git_portability_704tmaik/explicit Git",
+        "root": "/Users/samnimoh/Desktop/chromo",
+        "import_path_unchanged": true,
+        "bounded": false
+      },
+      "diagnostic": ""
+    },
+    {
+      "name": "verification_review_round5/finalize_review.py: isolated import missing Git fails early",
+      "passed": true,
+      "returncode": 1,
+      "diagnostic": "Traceback (most recent call last):\n  File \"<string>\", line 19, in <module>\n  File \"<frozen importlib._bootstrap_external>\", line 999, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed\n  File \"/Users/samnimoh/Desktop/chromo/verification_review_round5/finalize_review.py\", line 14, in <module>\n    GIT = runpy.run_path(str(ROOT / 'tools' / 'git_runtime.py'))['resolve_git']()\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/samnimoh/Desktop/chromo/tools/git_runtime.py\", line 30, in resolve_git\n    raise RuntimeError(f'Cannot resolve Git from {origin}: PATH is missing or empty. Set PF8_GIT to an executable Git path.')\nRuntimeError: Cannot resolve Git from PATH: PATH is missing or empty. Set PF8_GIT to an executable Git path.\n"
+    },
+    {
+      "name": "verification_review_round6/check_current_revision.py: only resolver wiring changes executable AST",
+      "passed": true
+    },
+    {
+      "name": "verification_review_round6/check_current_revision.py: isolated import PATH-only",
+      "passed": true,
+      "returncode": 0,
+      "import_scope": "full",
+      "result": {
+        "git": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_git_portability_704tmaik/bin with spaces/git",
+        "root": "/Users/samnimoh/Desktop/chromo",
+        "import_path_unchanged": true,
+        "bounded": false
+      },
+      "diagnostic": ""
+    },
+    {
+      "name": "verification_review_round6/check_current_revision.py: isolated import override without PATH",
+      "passed": true,
+      "returncode": 0,
+      "import_scope": "full",
+      "result": {
+        "git": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_git_portability_704tmaik/explicit Git",
+        "root": "/Users/samnimoh/Desktop/chromo",
+        "import_path_unchanged": true,
+        "bounded": false
+      },
+      "diagnostic": ""
+    },
+    {
+      "name": "verification_review_round6/check_current_revision.py: isolated import missing Git fails early",
+      "passed": true,
+      "returncode": 1,
+      "diagnostic": "Traceback (most recent call last):\n  File \"<string>\", line 19, in <module>\n  File \"<frozen importlib._bootstrap_external>\", line 999, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed\n  File \"/Users/samnimoh/Desktop/chromo/verification_review_round6/check_current_revision.py\", line 16, in <module>\n    GIT = runpy.run_path(str(ROOT / 'tools' / 'git_runtime.py'))['resolve_git']()\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/samnimoh/Desktop/chromo/tools/git_runtime.py\", line 30, in resolve_git\n    raise RuntimeError(f'Cannot resolve Git from {origin}: PATH is missing or empty. Set PF8_GIT to an executable Git path.')\nRuntimeError: Cannot resolve Git from PATH: PATH is missing or empty. Set PF8_GIT to an executable Git path.\n"
+    },
+    {
+      "name": "verification_review_round6/finalize_review.py: only resolver wiring changes executable AST",
+      "passed": true
+    },
+    {
+      "name": "verification_review_round6/finalize_review.py: isolated import PATH-only",
+      "passed": true,
+      "returncode": 0,
+      "import_scope": "full",
+      "result": {
+        "git": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_git_portability_704tmaik/bin with spaces/git",
+        "root": "/Users/samnimoh/Desktop/chromo",
+        "import_path_unchanged": true,
+        "bounded": false
+      },
+      "diagnostic": ""
+    },
+    {
+      "name": "verification_review_round6/finalize_review.py: isolated import override without PATH",
+      "passed": true,
+      "returncode": 0,
+      "import_scope": "full",
+      "result": {
+        "git": "/private/var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_git_portability_704tmaik/explicit Git",
+        "root": "/Users/samnimoh/Desktop/chromo",
+        "import_path_unchanged": true,
+        "bounded": false
+      },
+      "diagnostic": ""
+    },
+    {
+      "name": "verification_review_round6/finalize_review.py: isolated import missing Git fails early",
+      "passed": true,
+      "returncode": 1,
+      "diagnostic": "Traceback (most recent call last):\n  File \"<string>\", line 19, in <module>\n  File \"<frozen importlib._bootstrap_external>\", line 999, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed\n  File \"/Users/samnimoh/Desktop/chromo/verification_review_round6/finalize_review.py\", line 14, in <module>\n    GIT = runpy.run_path(str(ROOT / 'tools' / 'git_runtime.py'))['resolve_git']()\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/samnimoh/Desktop/chromo/tools/git_runtime.py\", line 30, in resolve_git\n    raise RuntimeError(f'Cannot resolve Git from {origin}: PATH is missing or empty. Set PF8_GIT to an executable Git path.')\nRuntimeError: Cannot resolve Git from PATH: PATH is missing or empty. Set PF8_GIT to an executable Git path.\n"
+    },
+    {
+      "name": "actual resolved Git performs read-only repository query",
+      "passed": true,
+      "executable": "/usr/bin/git",
+      "version": "git version 2.54.0 (Apple Git-157)"
+    },
+    {
+      "name": "original JSON review and result evidence remains byte-identical",
+      "passed": true,
+      "protected_count": 70
+    },
+    {
+      "name": "tested helper and nine utility source identities remain stable",
+      "passed": true
+    }
+  ],
+  "scope": "Scratch resolver executions, read-only Git queries, AST comparison and isolated utility imports. No utility main function, scientific script, Lean artifact, server, document builder or deliverable was executed or changed by these tests.",
+  "limitations": [
+    "The historical independent_builder_layout_tests.py module executes its body at import; this review stops its actual import immediately after GIT initialization to avoid re-running historical package builds or overwriting evidence.",
+    "Historical revision/check/finalization main functions still encode their original expected heads and inputs; portable Git discovery does not promise that those old assertions pass against later project states.",
+    "Git --version validates executable identity at resolution time; later removal or replacement of the executable is outside this check."
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "generated_utc": "2026-10-11T11:25:31.241602+00:00",
+  "status": "bounded_pass",
+  "findings": [],
+  "checks": 47,
+  "all_passed": true,
+  "reviewed_inputs": [
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/tools/git_runtime.py",
+      "bytes": 2498,
+      "sha256": "040121c74aabd8dcb0d05db1f1108468e851d55dd7f86dad7cab551d0614e263"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_review_round5/check_current_revision.py",
+      "bytes": 15381,
+      "sha256": "601930a2b8dfdf7032dfd480de8da0d186298026e8b836db7698385e90ba03f5"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_review_round5/finalize_review.py",
+      "bytes": 6356,
+      "sha256": "d9f582dcd44f92f3d0c3424eaa84a4c5a6c80ae9586b2a0e84025653e244f1ca"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_review_round6/check_current_revision.py",
+      "bytes": 10611,
+      "sha256": "970a8f1ad759b57e5a23f7886b6e9107f96309f9e4e47842cc48b8bee4f9866d"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_review_round6/finalize_review.py",
+      "bytes": 6428,
+      "sha256": "1316aa8d2bf894f7d76a5c342050fad1c250a1676a4756636151aa62348fb408"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/independent_builder_layout_tests.py",
+      "bytes": 10449,
+      "sha256": "f9992238a12a9d202b148e0727b5587298f5d06bff78b1d52a21bd532dd65485"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/make_fix_manifest.py",
+      "bytes": 5215,
+      "sha256": "b1e61095730ffd696635254eb0477037209e85c9770913f2029281181c6094f2"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/verify_documents.py",
+      "bytes": 8569,
+      "sha256": "2fcb87254d84551900528b4d9b2542cc601bc002f267878dc881f1a3b74c2767"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/final_document_review_checker.py",
+      "bytes": 17244,
+      "sha256": "7cbc7335b1e4d5e23d5ef9d77eb405a01da1a0a56f97ce1e5cf1fe39607754a1"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/final_closure_review_checker.py",
+      "bytes": 11874,
+      "sha256": "45671a9f11601dbcc71e1c37182c129460408ce7512d11906b8c814b7ba2473b"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/git_portability_tests.py",
+      "bytes": 13072,
+      "sha256": "274329ba59c27e20198866992eb122e166f3c31eb2cc40ddb6d97d7321871a2f"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/git_portability_results.json",
+      "bytes": 33165,
+      "sha256": "b46b4fc94be586e046c52c0b1cdc7000897945f7c00804ad47ab40c115885457"
+    }
+  ],
+  "test_driver": {
+    "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/independent_git_probe_tests.py",
+    "bytes": 10261,
+    "sha256": "e179aa672766a557d2662dc2ce0303b5ac6d044d79f5f46aee5d9b2abe2ed9c1"
+  },
+  "test_results": {
+    "path": "/Users/samnimoh/Desktop/chromo/verification_fixes_round7/independent_git_probe_results.json",
+    "bytes": 28323,
+    "sha256": "a67ddbfbc6dfdcb96fd87b674888738097a997c654132dbef3a018d4ff7a6e6e"
+  },
+  "conclusions": [
+    {
+      "claim": "All nine utilities resolve helper location from their own __file__ under Python -I in an unrelated cwd without adding import paths.",
+      "status": "confirmed",
+      "evidence": "Actual bounded module initialization passed with PATH Git and an explicit path containing spaces and shell metacharacters; cwd stdlib/helper trap files were not imported."
+    },
+    {
+      "claim": "Invalid overrides do not fall back, and missing PATH does not implicitly use defaults.",
+      "status": "confirmed",
+      "evidence": "Missing/broken explicit targets and bare-name overrides with absent PATH failed before post-bootstrap work."
+    },
+    {
+      "claim": "Only Git bootstrap wiring changed the nine utilities executable logic.",
+      "status": "confirmed",
+      "evidence": "AST comparison against pre-fix commit 64515dc5f0cb707552bfd0e9ed89a97f61fc6fca equals original after removing the new runpy import and restoring original GIT assignment."
+    },
+    {
+      "claim": "All historical verification main functions now pass against current project state.",
+      "status": "not_established",
+      "evidence": "Main functions deliberately not executed; expected historical revisions/inputs remain as previously authored."
+    }
+  ],
+  "source_references": [
+    "tools/git_runtime.py:20-46",
+    "verification_review_round5/check_current_revision.py:16-19",
+    "verification_review_round5/finalize_review.py:11-14",
+    "verification_review_round6/check_current_revision.py:13-16",
+    "verification_review_round6/finalize_review.py:11-14",
+    "verification_fixes_round6/independent_builder_layout_tests.py:16-20",
+    "verification_fixes_round6/make_fix_manifest.py:10-13",
+    "verification_fixes_round6/verify_documents.py:15-18",
+    "verification_fixes_round6/final_document_review_checker.py:14-19",
+    "verification_fixes_round6/final_closure_review_checker.py:15-18"
+  ],
+  "scope": "Independent scratch executables, isolated real-script bootstrap only, read-only Git and AST comparison. No main function, document builder, deliverable or scientific analysis executed.",
+  "limits": [
+    "Bootstrap probes deliberately stop every utility immediately after Git initialization.",
+    "Historical main functions retain their original expected revisions and inputs.",
+    "A successful version prefix is a suitability check, not cryptographic executable authentication; later executable replacement is outside scope.",
+    "This review confirms Git discovery/bootstrap and preserved executable AST; it does not rerun scientific pipelines, Lean proofs, archived verification bodies or document generation."
+  ]
+}
