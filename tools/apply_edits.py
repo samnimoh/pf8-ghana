@@ -1,12 +1,13 @@
 import json, os, re, html, sys
+import xml.etree.ElementTree as ET
 
 XML = "word/document.xml"
 EDITS = os.environ["EDITS"]
 DRY = os.environ.get("DRY","1") == "1"
 
 x = open(XML, encoding="utf-8").read()
-RUN = re.compile(r'<w:t(?: xml:space="preserve")?>(.*?)</w:t>', re.S)
-spans = [(m.start(1), m.end(1)) for m in RUN.finditer(x)]
+RUN = re.compile(r'<w:t\b[^>]*(?<!/)>(.*?)</w:t>', re.S)
+spans = [(m.start(1), m.end(1)) for m in RUN.finditer(x) if m.group(1)]
 dec   = [html.unescape(x[a:b]) for a, b in spans]
 starts, o = [], 0
 for d in dec:
@@ -14,28 +15,79 @@ for d in dec:
 flat = "".join(dec)
 def enc(s): return s.replace("&","&amp;").replace("<","&lt;").replace(">","&gt;")
 
-def locate(q, occurrence=None):
-    """Locate q in the flattened text.
+# Keep the XML byte ranges for lossless editing, but use the parsed structure to
+# determine where matching is allowed. Formatting runs may join within a
+# paragraph; paragraph/cell boundaries and explicit controls must never invent a
+# contiguous quote. Displayed symbols, hyphens and reference marks interrupt
+# text just as explicit breaks do. A nested paragraph also interrupts its outer
+# paragraph.
+W = "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}"
+BOUNDARIES = {W + tag for tag in (
+    "p", "tc", "tab", "ptab", "br", "cr", "drawing", "object", "pict",
+    "sym", "noBreakHyphen", "softHyphen", "pgNum",
+    "footnoteReference", "endnoteReference", "commentReference", "annotationRef",
+    "footnoteRef", "endnoteRef", "separator", "continuationSeparator",
+)}
+block_ids, parsed_text = [], []
+block_id = 0
+
+def collect_blocks(node, paragraph_depth=0):
+    global block_id
+    if node.tag in BOUNDARIES:
+        block_id += 1
+    if node.tag == W + "p":
+        paragraph_depth += 1
+    if node.tag == W + "t" and node.text:
+        if not paragraph_depth:
+            block_id += 1
+        block_ids.append(block_id)
+        parsed_text.append(node.text)
+        if not paragraph_depth:
+            block_id += 1
+    for child in node:
+        collect_blocks(child, paragraph_depth)
+    if node.tag in BOUNDARIES:
+        block_id += 1
+
+collect_blocks(ET.fromstring(x))
+if parsed_text != dec:
+    sys.exit("REFUSING TO WRITE: XML text ranges do not match the parsed document.")
+blocks = []
+for k, identity in enumerate(block_ids):
+    end = starts[k] + len(dec[k])
+    if blocks and identity == blocks[-1][0]:
+        blocks[-1] = (identity, blocks[-1][1], end)
+    else:
+        blocks.append((identity, starts[k], end))
+
+UNSPECIFIED = object()
+
+def locate(q, occurrence=UNSPECIFIED):
+    """Locate q across runs within a single logical text block.
 
     A quote must be UNIQUE unless the edit names an `occurrence` (1-based):
     silently editing the first of several identical passages is how a
-    half-corrected document gets produced.
+    half-corrected document gets produced. Exact and spacing-variant matches
+    belong to the same candidate list, in document order.
     """
-    hits = [m.start() for m in re.finditer(re.escape(q), flat)]
+    if occurrence is not UNSPECIFIED and (type(occurrence) is not int or occurrence < 1):
+        return -3, 0
+    pat = "".join(r"\s+" if part.isspace() else re.escape(part)
+                  for part in re.split(r"(\s+)", q) if part)
+    # Lookahead counts overlapping matches as well; a unique location must really
+    # be unique, rather than the first non-overlapping result of re.finditer().
+    matcher = re.compile("(?=(" + pat + "))")
+    hits = [(a + m.start(1), m.end(1) - m.start(1))
+            for _, a, b in blocks for m in matcher.finditer(flat[a:b])]
+    if occurrence is not UNSPECIFIED:
+        if occurrence > len(hits):
+            return -3, len(hits)
+        return hits[occurrence - 1]
+    if not hits:
+        return -1, 0
     if len(hits) > 1:
-        if occurrence is None:
-            return -2, len(hits)          # ambiguous
-        if not (1 <= occurrence <= len(hits)):
-            return -3, len(hits)          # out of range
-        return hits[occurrence - 1], len(q)
-    if hits: return hits[0], len(q)
-    # whitespace-tolerant retry
-    pat = re.escape(q)
-    pat = re.sub(r'(\\\s)+', r'\\s+', pat)
-    pat = pat.replace(r'\ ', r'\s+')
-    m = re.search(pat, flat)
-    if m: return m.start(), m.end()-m.start()
-    return -1, 0
+        return -2, len(hits)
+    return hits[0]
 
 edits = json.load(open(EDITS))
 import bisect
@@ -46,11 +98,12 @@ for n, e in enumerate(edits):
     q, r = e["quote"], e["repl"]
     if not q.strip() or not r.strip():
         missing.append((n, e.get("concept","-"), "empty")); continue
-    pos, ln = locate(q, e.get("occurrence"))
+    pos, ln = locate(q, e.get("occurrence", UNSPECIFIED))
     if pos == -2:
         ambiguous.append((n, e.get("concept","-"), ln, q[:70])); continue
     if pos == -3:
-        ambiguous.append((n, e.get("concept","-"), ln, "occurrence out of range: "+q[:50])); continue
+        ambiguous.append((n, e.get("concept","-"), ln,
+                          "occurrence must be a 1-based integer within the match count: "+q[:50])); continue
     if pos < 0:
         missing.append((n, e.get("concept","-"), q[:70])); continue
     end = pos + ln

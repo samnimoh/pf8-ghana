@@ -1,0 +1,947 @@
+{
+  "script": "/Users/samnimoh/Desktop/chromo/tools/apply_edits.py",
+  "script_sha256": "978273fa74bb892d50e5870c13a2daf2225fd465d2af7514feda42abfe1c67d2",
+  "driver": "/Users/samnimoh/Desktop/chromo/verification_fixes_round6/editor_regression_tests.py",
+  "driver_sha256": "cdd6dffd4a199d7e4a3e10d6adfd5f51d2d8cc028c07f6a577143b73ca95519e",
+  "python": "/Users/samnimoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+  "scope": "Synthetic and copied word/document.xml only; no DOCX was modified.",
+  "copied_sources": [
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx",
+      "sha256": "00508aa9cc2d0f10efb403123a0283cc40f9c938e79ceff54e470f4edcab5844"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx",
+      "sha256": "e954fe87a94a40fd954f3eb5b74638d6892ce79fcd23a3be364c169bb0fd948d"
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.docx",
+      "sha256": "a6ecd6e185bb46d00be52b40f9eb250e9e0a563dcc1da84efebdfa5e976e3001"
+    }
+  ],
+  "passed": 49,
+  "tests": [
+    {
+      "name": "optional_metadata_unique",
+      "status": "passed",
+      "returncode": 0,
+      "xml_unchanged": false,
+      "paragraph_texts": [
+        "new phrase"
+      ],
+      "paragraph_count": 1,
+      "xml_sha256_before": "4337bacacc64c63a0642e0c960b9f477c4f5762eb3ed28aabe78010cb787fbbc",
+      "xml_sha256_after": "efaa945b5547a5c4313fa7b3981b3762e1cb0f20a23f3f17ae0ece2f178f14d4",
+      "leftover": [],
+      "stdout": "applied 1 | not located 0 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n  leftover written: 0 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_87qmuhvr/leftover.json\n\nwrote word/document.xml: 215 -> 215 bytes, 1 runs modified\n",
+      "stderr": ""
+    },
+    {
+      "name": "exact_duplicates_rejected",
+      "status": "passed",
+      "returncode": 1,
+      "xml_unchanged": true,
+      "paragraph_texts": [
+        "alpha beta",
+        "alpha beta"
+      ],
+      "paragraph_count": 2,
+      "xml_sha256_before": "f35ecf2f89094f416314b6231858f68e14d95fcf07b176c70fdad3d80389e965",
+      "xml_sha256_after": "f35ecf2f89094f416314b6231858f68e14d95fcf07b176c70fdad3d80389e965",
+      "leftover": [
+        {
+          "quote": "alpha beta",
+          "repl": "new phrase"
+        }
+      ],
+      "stdout": "applied 0 | not located 0 | run-conflicts 0 | ambiguous 1\n  of applied, spanning >1 run: 0\n\nAMBIGUOUS (quote is not unique \u2014 add \"occurrence\": <1-based int>):\n   [0] -: 2 matches: 'alpha beta'\n  leftover written: 1 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_uxnrw__6/leftover.json\n",
+      "stderr": "\nREFUSING TO WRITE: 0 not located, 1 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 0 that matched.\n"
+    },
+    {
+      "name": "whitespace_duplicates_rejected",
+      "status": "passed",
+      "returncode": 1,
+      "xml_unchanged": true,
+      "paragraph_texts": [
+        "alpha  beta",
+        "alpha   beta"
+      ],
+      "paragraph_count": 2,
+      "xml_sha256_before": "7c72e9de54afbc36def5defa35c19c6a8a7ccb18c5d145c10e86047494c864af",
+      "xml_sha256_after": "7c72e9de54afbc36def5defa35c19c6a8a7ccb18c5d145c10e86047494c864af",
+      "leftover": [
+        {
+          "quote": "alpha beta",
+          "repl": "new phrase"
+        }
+      ],
+      "stdout": "applied 0 | not located 0 | run-conflicts 0 | ambiguous 1\n  of applied, spanning >1 run: 0\n\nAMBIGUOUS (quote is not unique \u2014 add \"occurrence\": <1-based int>):\n   [0] -: 2 matches: 'alpha beta'\n  leftover written: 1 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_sc_40460/leftover.json\n",
+      "stderr": "\nREFUSING TO WRITE: 0 not located, 1 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 0 that matched.\n"
+    },
+    {
+      "name": "mixed_exact_and_variant_rejected",
+      "status": "passed",
+      "returncode": 1,
+      "xml_unchanged": true,
+      "paragraph_texts": [
+        "alpha beta",
+        "alpha  beta"
+      ],
+      "paragraph_count": 2,
+      "xml_sha256_before": "35b76a310aa2156f339e1de61f9eea0bd68f5ef47af8a54a08803e95d249dcb9",
+      "xml_sha256_after": "35b76a310aa2156f339e1de61f9eea0bd68f5ef47af8a54a08803e95d249dcb9",
+      "leftover": [
+        {
+          "quote": "alpha beta",
+          "repl": "new phrase"
+        }
+      ],
+      "stdout": "applied 0 | not located 0 | run-conflicts 0 | ambiguous 1\n  of applied, spanning >1 run: 0\n\nAMBIGUOUS (quote is not unique \u2014 add \"occurrence\": <1-based int>):\n   [0] -: 2 matches: 'alpha beta'\n  leftover written: 1 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_2ync8pw1/leftover.json\n",
+      "stderr": "\nREFUSING TO WRITE: 0 not located, 1 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 0 that matched.\n"
+    },
+    {
+      "name": "spacing_occurrence_second",
+      "status": "passed",
+      "returncode": 0,
+      "xml_unchanged": false,
+      "paragraph_texts": [
+        "alpha  beta",
+        "new phrase"
+      ],
+      "paragraph_count": 2,
+      "xml_sha256_before": "7c72e9de54afbc36def5defa35c19c6a8a7ccb18c5d145c10e86047494c864af",
+      "xml_sha256_after": "0bd0a5bbcbccf7cd1a6aa101ee1f80d38b190e04462eec7f81a0f8bb4870801b",
+      "leftover": [],
+      "stdout": "applied 1 | not located 0 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n  leftover written: 0 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_ms4lctaz/leftover.json\n\nwrote word/document.xml: 282 -> 280 bytes, 1 runs modified\n",
+      "stderr": ""
+    },
+    {
+      "name": "mixed_exact_occurrence_document_order",
+      "status": "passed",
+      "returncode": 0,
+      "xml_unchanged": false,
+      "paragraph_texts": [
+        "alpha  beta",
+        "new phrase"
+      ],
+      "paragraph_count": 2,
+      "xml_sha256_before": "2999cccc8311e5bbade2cc7d56da1cd64cceb60c4542ee1cafea027882cb7daf",
+      "xml_sha256_after": "0bd0a5bbcbccf7cd1a6aa101ee1f80d38b190e04462eec7f81a0f8bb4870801b",
+      "leftover": [],
+      "stdout": "applied 1 | not located 0 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n  leftover written: 0 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_vkytzhdg/leftover.json\n\nwrote word/document.xml: 280 -> 280 bytes, 1 runs modified\n",
+      "stderr": ""
+    },
+    {
+      "name": "single_occurrence_one",
+      "status": "passed",
+      "returncode": 0,
+      "xml_unchanged": false,
+      "paragraph_texts": [
+        "new phrase"
+      ],
+      "paragraph_count": 1,
+      "xml_sha256_before": "4337bacacc64c63a0642e0c960b9f477c4f5762eb3ed28aabe78010cb787fbbc",
+      "xml_sha256_after": "efaa945b5547a5c4313fa7b3981b3762e1cb0f20a23f3f17ae0ece2f178f14d4",
+      "leftover": [],
+      "stdout": "applied 1 | not located 0 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n  leftover written: 0 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_yli8cih0/leftover.json\n\nwrote word/document.xml: 215 -> 215 bytes, 1 runs modified\n",
+      "stderr": ""
+    },
+    {
+      "name": "invalid_occurrence_0_int",
+      "status": "passed",
+      "returncode": 1,
+      "xml_unchanged": true,
+      "paragraph_texts": [
+        "alpha beta"
+      ],
+      "paragraph_count": 1,
+      "xml_sha256_before": "4337bacacc64c63a0642e0c960b9f477c4f5762eb3ed28aabe78010cb787fbbc",
+      "xml_sha256_after": "4337bacacc64c63a0642e0c960b9f477c4f5762eb3ed28aabe78010cb787fbbc",
+      "leftover": [
+        {
+          "quote": "alpha beta",
+          "repl": "new phrase",
+          "occurrence": 0
+        }
+      ],
+      "stdout": "applied 0 | not located 0 | run-conflicts 0 | ambiguous 1\n  of applied, spanning >1 run: 0\n\nAMBIGUOUS (quote is not unique \u2014 add \"occurrence\": <1-based int>):\n   [0] -: 0 matches: 'occurrence must be a 1-based integer within the match count: alpha beta'\n  leftover written: 1 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_wja6w_2v/leftover.json\n",
+      "stderr": "\nREFUSING TO WRITE: 0 not located, 1 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 0 that matched.\n"
+    },
+    {
+      "name": "invalid_occurrence_1_int",
+      "status": "passed",
+      "returncode": 1,
+      "xml_unchanged": true,
+      "paragraph_texts": [
+        "alpha beta"
+      ],
+      "paragraph_count": 1,
+      "xml_sha256_before": "4337bacacc64c63a0642e0c960b9f477c4f5762eb3ed28aabe78010cb787fbbc",
+      "xml_sha256_after": "4337bacacc64c63a0642e0c960b9f477c4f5762eb3ed28aabe78010cb787fbbc",
+      "leftover": [
+        {
+          "quote": "alpha beta",
+          "repl": "new phrase",
+          "occurrence": -1
+        }
+      ],
+      "stdout": "applied 0 | not located 0 | run-conflicts 0 | ambiguous 1\n  of applied, spanning >1 run: 0\n\nAMBIGUOUS (quote is not unique \u2014 add \"occurrence\": <1-based int>):\n   [0] -: 0 matches: 'occurrence must be a 1-based integer within the match count: alpha beta'\n  leftover written: 1 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_acgrufun/leftover.json\n",
+      "stderr": "\nREFUSING TO WRITE: 0 not located, 1 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 0 that matched.\n"
+    },
+    {
+      "name": "invalid_occurrence_2_int",
+      "status": "passed",
+      "returncode": 1,
+      "xml_unchanged": true,
+      "paragraph_texts": [
+        "alpha beta"
+      ],
+      "paragraph_count": 1,
+      "xml_sha256_before": "4337bacacc64c63a0642e0c960b9f477c4f5762eb3ed28aabe78010cb787fbbc",
+      "xml_sha256_after": "4337bacacc64c63a0642e0c960b9f477c4f5762eb3ed28aabe78010cb787fbbc",
+      "leftover": [
+        {
+          "quote": "alpha beta",
+          "repl": "new phrase",
+          "occurrence": 2
+        }
+      ],
+      "stdout": "applied 0 | not located 0 | run-conflicts 0 | ambiguous 1\n  of applied, spanning >1 run: 0\n\nAMBIGUOUS (quote is not unique \u2014 add \"occurrence\": <1-based int>):\n   [0] -: 1 matches: 'occurrence must be a 1-based integer within the match count: alpha beta'\n  leftover written: 1 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_ako4sf48/leftover.json\n",
+      "stderr": "\nREFUSING TO WRITE: 0 not located, 1 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 0 that matched.\n"
+    },
+    {
+      "name": "invalid_occurrence_3_bool",
+      "status": "passed",
+      "returncode": 1,
+      "xml_unchanged": true,
+      "paragraph_texts": [
+        "alpha beta"
+      ],
+      "paragraph_count": 1,
+      "xml_sha256_before": "4337bacacc64c63a0642e0c960b9f477c4f5762eb3ed28aabe78010cb787fbbc",
+      "xml_sha256_after": "4337bacacc64c63a0642e0c960b9f477c4f5762eb3ed28aabe78010cb787fbbc",
+      "leftover": [
+        {
+          "quote": "alpha beta",
+          "repl": "new phrase",
+          "occurrence": true
+        }
+      ],
+      "stdout": "applied 0 | not located 0 | run-conflicts 0 | ambiguous 1\n  of applied, spanning >1 run: 0\n\nAMBIGUOUS (quote is not unique \u2014 add \"occurrence\": <1-based int>):\n   [0] -: 0 matches: 'occurrence must be a 1-based integer within the match count: alpha beta'\n  leftover written: 1 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_i4wfi14x/leftover.json\n",
+      "stderr": "\nREFUSING TO WRITE: 0 not located, 1 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 0 that matched.\n"
+    },
+    {
+      "name": "invalid_occurrence_4_bool",
+      "status": "passed",
+      "returncode": 1,
+      "xml_unchanged": true,
+      "paragraph_texts": [
+        "alpha beta"
+      ],
+      "paragraph_count": 1,
+      "xml_sha256_before": "4337bacacc64c63a0642e0c960b9f477c4f5762eb3ed28aabe78010cb787fbbc",
+      "xml_sha256_after": "4337bacacc64c63a0642e0c960b9f477c4f5762eb3ed28aabe78010cb787fbbc",
+      "leftover": [
+        {
+          "quote": "alpha beta",
+          "repl": "new phrase",
+          "occurrence": false
+        }
+      ],
+      "stdout": "applied 0 | not located 0 | run-conflicts 0 | ambiguous 1\n  of applied, spanning >1 run: 0\n\nAMBIGUOUS (quote is not unique \u2014 add \"occurrence\": <1-based int>):\n   [0] -: 0 matches: 'occurrence must be a 1-based integer within the match count: alpha beta'\n  leftover written: 1 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_qd0ep02m/leftover.json\n",
+      "stderr": "\nREFUSING TO WRITE: 0 not located, 1 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 0 that matched.\n"
+    },
+    {
+      "name": "invalid_occurrence_5_str",
+      "status": "passed",
+      "returncode": 1,
+      "xml_unchanged": true,
+      "paragraph_texts": [
+        "alpha beta"
+      ],
+      "paragraph_count": 1,
+      "xml_sha256_before": "4337bacacc64c63a0642e0c960b9f477c4f5762eb3ed28aabe78010cb787fbbc",
+      "xml_sha256_after": "4337bacacc64c63a0642e0c960b9f477c4f5762eb3ed28aabe78010cb787fbbc",
+      "leftover": [
+        {
+          "quote": "alpha beta",
+          "repl": "new phrase",
+          "occurrence": "1"
+        }
+      ],
+      "stdout": "applied 0 | not located 0 | run-conflicts 0 | ambiguous 1\n  of applied, spanning >1 run: 0\n\nAMBIGUOUS (quote is not unique \u2014 add \"occurrence\": <1-based int>):\n   [0] -: 0 matches: 'occurrence must be a 1-based integer within the match count: alpha beta'\n  leftover written: 1 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix__cl1d4pv/leftover.json\n",
+      "stderr": "\nREFUSING TO WRITE: 0 not located, 1 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 0 that matched.\n"
+    },
+    {
+      "name": "invalid_occurrence_6_float",
+      "status": "passed",
+      "returncode": 1,
+      "xml_unchanged": true,
+      "paragraph_texts": [
+        "alpha beta"
+      ],
+      "paragraph_count": 1,
+      "xml_sha256_before": "4337bacacc64c63a0642e0c960b9f477c4f5762eb3ed28aabe78010cb787fbbc",
+      "xml_sha256_after": "4337bacacc64c63a0642e0c960b9f477c4f5762eb3ed28aabe78010cb787fbbc",
+      "leftover": [
+        {
+          "quote": "alpha beta",
+          "repl": "new phrase",
+          "occurrence": 1.0
+        }
+      ],
+      "stdout": "applied 0 | not located 0 | run-conflicts 0 | ambiguous 1\n  of applied, spanning >1 run: 0\n\nAMBIGUOUS (quote is not unique \u2014 add \"occurrence\": <1-based int>):\n   [0] -: 0 matches: 'occurrence must be a 1-based integer within the match count: alpha beta'\n  leftover written: 1 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_y4rwn_kv/leftover.json\n",
+      "stderr": "\nREFUSING TO WRITE: 0 not located, 1 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 0 that matched.\n"
+    },
+    {
+      "name": "invalid_occurrence_7_NoneType",
+      "status": "passed",
+      "returncode": 1,
+      "xml_unchanged": true,
+      "paragraph_texts": [
+        "alpha beta"
+      ],
+      "paragraph_count": 1,
+      "xml_sha256_before": "4337bacacc64c63a0642e0c960b9f477c4f5762eb3ed28aabe78010cb787fbbc",
+      "xml_sha256_after": "4337bacacc64c63a0642e0c960b9f477c4f5762eb3ed28aabe78010cb787fbbc",
+      "leftover": [
+        {
+          "quote": "alpha beta",
+          "repl": "new phrase",
+          "occurrence": null
+        }
+      ],
+      "stdout": "applied 0 | not located 0 | run-conflicts 0 | ambiguous 1\n  of applied, spanning >1 run: 0\n\nAMBIGUOUS (quote is not unique \u2014 add \"occurrence\": <1-based int>):\n   [0] -: 0 matches: 'occurrence must be a 1-based integer within the match count: alpha beta'\n  leftover written: 1 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_hbmbshpv/leftover.json\n",
+      "stderr": "\nREFUSING TO WRITE: 0 not located, 1 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 0 that matched.\n"
+    },
+    {
+      "name": "duplicate_occurrence_out_of_range",
+      "status": "passed",
+      "returncode": 1,
+      "xml_unchanged": true,
+      "paragraph_texts": [
+        "alpha beta",
+        "alpha beta"
+      ],
+      "paragraph_count": 2,
+      "xml_sha256_before": "f35ecf2f89094f416314b6231858f68e14d95fcf07b176c70fdad3d80389e965",
+      "xml_sha256_after": "f35ecf2f89094f416314b6231858f68e14d95fcf07b176c70fdad3d80389e965",
+      "leftover": [
+        {
+          "quote": "alpha beta",
+          "repl": "new phrase",
+          "occurrence": 3
+        }
+      ],
+      "stdout": "applied 0 | not located 0 | run-conflicts 0 | ambiguous 1\n  of applied, spanning >1 run: 0\n\nAMBIGUOUS (quote is not unique \u2014 add \"occurrence\": <1-based int>):\n   [0] -: 2 matches: 'occurrence must be a 1-based integer within the match count: alpha beta'\n  leftover written: 1 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_krxi7ljz/leftover.json\n",
+      "stderr": "\nREFUSING TO WRITE: 0 not located, 1 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 0 that matched.\n"
+    },
+    {
+      "name": "overlapping_locations_rejected",
+      "status": "passed",
+      "returncode": 1,
+      "xml_unchanged": true,
+      "paragraph_texts": [
+        "aaaa"
+      ],
+      "paragraph_count": 1,
+      "xml_sha256_before": "61b23bf1de2ea6aceb787cf2eeab3e348b63f08c893e3e90ad981b295be9681a",
+      "xml_sha256_after": "61b23bf1de2ea6aceb787cf2eeab3e348b63f08c893e3e90ad981b295be9681a",
+      "leftover": [
+        {
+          "quote": "aaa",
+          "repl": "new"
+        }
+      ],
+      "stdout": "applied 0 | not located 0 | run-conflicts 0 | ambiguous 1\n  of applied, spanning >1 run: 0\n\nAMBIGUOUS (quote is not unique \u2014 add \"occurrence\": <1-based int>):\n   [0] -: 2 matches: 'aaa'\n  leftover written: 1 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_tgkl6a0w/leftover.json\n",
+      "stderr": "\nREFUSING TO WRITE: 0 not located, 1 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 0 that matched.\n"
+    },
+    {
+      "name": "quote_spanning_formatting_runs",
+      "status": "passed",
+      "returncode": 0,
+      "xml_unchanged": false,
+      "paragraph_texts": [
+        "before new phrase after"
+      ],
+      "paragraph_count": 1,
+      "xml_sha256_before": "e091b867d7a15547160a6dbd07d14c5bea4cde4f7f2deba085669347f20823fc",
+      "xml_sha256_after": "0643403bfdac2ca03d6aa4ce0f39e6254fde0a2cdb6fa232e84914c68d5ad3f7",
+      "leftover": [],
+      "stdout": "applied 1 | not located 0 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 1\n  leftover written: 0 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_oye4mutn/leftover.json\n\nwrote word/document.xml: 271 -> 271 bytes, 2 runs modified\n",
+      "stderr": ""
+    },
+    {
+      "name": "all_quote_whitespace_normalized",
+      "status": "passed",
+      "returncode": 0,
+      "xml_unchanged": false,
+      "paragraph_texts": [
+        "new phrase"
+      ],
+      "paragraph_count": 1,
+      "xml_sha256_before": "6b18bc75d643a4582d049b470c75f4f087ab9c24392abb954790a798031e3951",
+      "xml_sha256_after": "efaa945b5547a5c4313fa7b3981b3762e1cb0f20a23f3f17ae0ece2f178f14d4",
+      "leftover": [],
+      "stdout": "applied 1 | not located 0 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n  leftover written: 0 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_vxj_w1jr/leftover.json\n\nwrote word/document.xml: 216 -> 215 bytes, 1 runs modified\n",
+      "stderr": ""
+    },
+    {
+      "name": "paragraph_boundary_not_joined",
+      "status": "passed",
+      "returncode": 1,
+      "xml_unchanged": true,
+      "paragraph_texts": [
+        "end of one",
+        "start of next"
+      ],
+      "paragraph_count": 2,
+      "xml_sha256_before": "5c6f4326b3fdb6b429a13d33b0bdf780e14429668e97f64dc54f82e9207e2274",
+      "xml_sha256_after": "5c6f4326b3fdb6b429a13d33b0bdf780e14429668e97f64dc54f82e9207e2274",
+      "leftover": [
+        {
+          "quote": "onestart",
+          "repl": "merged"
+        }
+      ],
+      "stdout": "applied 0 | not located 1 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n\nNOT LOCATED:\n   [0] -: 'onestart'\n  leftover written: 1 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_ltx01yl7/leftover.json\n",
+      "stderr": "\nREFUSING TO WRITE: 1 not located, 0 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 0 that matched.\n"
+    },
+    {
+      "name": "table_cell_boundary_not_joined",
+      "status": "passed",
+      "returncode": 1,
+      "xml_unchanged": true,
+      "paragraph_texts": [
+        "end of one",
+        "start of next"
+      ],
+      "paragraph_count": 2,
+      "xml_sha256_before": "3823e31a96d0231d11ba2c829622a856aadfa8749cadaac8e057d5741b43d54f",
+      "xml_sha256_after": "3823e31a96d0231d11ba2c829622a856aadfa8749cadaac8e057d5741b43d54f",
+      "leftover": [
+        {
+          "quote": "onestart",
+          "repl": "merged"
+        }
+      ],
+      "stdout": "applied 0 | not located 1 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n\nNOT LOCATED:\n   [0] -: 'onestart'\n  leftover written: 1 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_klzrzl32/leftover.json\n",
+      "stderr": "\nREFUSING TO WRITE: 1 not located, 0 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 0 that matched.\n"
+    },
+    {
+      "name": "empty_nested_paragraph_boundary_not_joined",
+      "status": "passed",
+      "returncode": 1,
+      "xml_unchanged": true,
+      "paragraph_texts": [
+        "end of onestart of next",
+        ""
+      ],
+      "paragraph_count": 2,
+      "xml_sha256_before": "f89cf195e60b5fa2dea5eccbe1a5de3882fed28d53d4538a91822686397c75a7",
+      "xml_sha256_after": "f89cf195e60b5fa2dea5eccbe1a5de3882fed28d53d4538a91822686397c75a7",
+      "leftover": [
+        {
+          "quote": "onestart",
+          "repl": "merged"
+        }
+      ],
+      "stdout": "applied 0 | not located 1 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n\nNOT LOCATED:\n   [0] -: 'onestart'\n  leftover written: 1 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_2bmms3i8/leftover.json\n",
+      "stderr": "\nREFUSING TO WRITE: 1 not located, 0 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 0 that matched.\n"
+    },
+    {
+      "name": "explicit_tab_not_silently_removed",
+      "status": "passed",
+      "returncode": 1,
+      "xml_unchanged": true,
+      "paragraph_texts": [
+        "end of onestart of next"
+      ],
+      "paragraph_count": 1,
+      "xml_sha256_before": "01cfe68da183cb02795c99072566dbcafb4f929ceb9dacaca375c63b903bd156",
+      "xml_sha256_after": "01cfe68da183cb02795c99072566dbcafb4f929ceb9dacaca375c63b903bd156",
+      "leftover": [
+        {
+          "quote": "onestart",
+          "repl": "merged"
+        }
+      ],
+      "stdout": "applied 0 | not located 1 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n\nNOT LOCATED:\n   [0] -: 'onestart'\n  leftover written: 1 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_x5a2jtl0/leftover.json\n",
+      "stderr": "\nREFUSING TO WRITE: 1 not located, 0 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 0 that matched.\n"
+    },
+    {
+      "name": "explicit_br_not_silently_removed",
+      "status": "passed",
+      "returncode": 1,
+      "xml_unchanged": true,
+      "paragraph_texts": [
+        "end of onestart of next"
+      ],
+      "paragraph_count": 1,
+      "xml_sha256_before": "e6d6146c756ee4abd945206629544751457212a6034e75ffa8a715f30b16e049",
+      "xml_sha256_after": "e6d6146c756ee4abd945206629544751457212a6034e75ffa8a715f30b16e049",
+      "leftover": [
+        {
+          "quote": "onestart",
+          "repl": "merged"
+        }
+      ],
+      "stdout": "applied 0 | not located 1 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n\nNOT LOCATED:\n   [0] -: 'onestart'\n  leftover written: 1 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_b7rebi_d/leftover.json\n",
+      "stderr": "\nREFUSING TO WRITE: 1 not located, 0 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 0 that matched.\n"
+    },
+    {
+      "name": "explicit_cr_not_silently_removed",
+      "status": "passed",
+      "returncode": 1,
+      "xml_unchanged": true,
+      "paragraph_texts": [
+        "end of onestart of next"
+      ],
+      "paragraph_count": 1,
+      "xml_sha256_before": "2bab9bf497890aba7de9d55702bd5c169830313bf3d54b48fc008d17ad8c8e8e",
+      "xml_sha256_after": "2bab9bf497890aba7de9d55702bd5c169830313bf3d54b48fc008d17ad8c8e8e",
+      "leftover": [
+        {
+          "quote": "onestart",
+          "repl": "merged"
+        }
+      ],
+      "stdout": "applied 0 | not located 1 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n\nNOT LOCATED:\n   [0] -: 'onestart'\n  leftover written: 1 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_71x662xt/leftover.json\n",
+      "stderr": "\nREFUSING TO WRITE: 1 not located, 0 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 0 that matched.\n"
+    },
+    {
+      "name": "displayed_sym_boundary_not_joined",
+      "status": "passed",
+      "returncode": 1,
+      "xml_unchanged": true,
+      "paragraph_texts": [
+        "end of onestart of next"
+      ],
+      "paragraph_count": 1,
+      "xml_sha256_before": "d5af4922f029336df32739adca0f46f6f856af112df2bf0c755f989adf9be178",
+      "xml_sha256_after": "d5af4922f029336df32739adca0f46f6f856af112df2bf0c755f989adf9be178",
+      "leftover": [
+        {
+          "quote": "onestart",
+          "repl": "merged"
+        }
+      ],
+      "stdout": "applied 0 | not located 1 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n\nNOT LOCATED:\n   [0] -: 'onestart'\n  leftover written: 1 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_ho855eiv/leftover.json\n",
+      "stderr": "\nREFUSING TO WRITE: 1 not located, 0 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 0 that matched.\n"
+    },
+    {
+      "name": "displayed_noBreakHyphen_boundary_not_joined",
+      "status": "passed",
+      "returncode": 1,
+      "xml_unchanged": true,
+      "paragraph_texts": [
+        "end of onestart of next"
+      ],
+      "paragraph_count": 1,
+      "xml_sha256_before": "5342cf73b77d6aae631ea4acc12cd8acd4e3f9d5fb57747a482b19b9a1632683",
+      "xml_sha256_after": "5342cf73b77d6aae631ea4acc12cd8acd4e3f9d5fb57747a482b19b9a1632683",
+      "leftover": [
+        {
+          "quote": "onestart",
+          "repl": "merged"
+        }
+      ],
+      "stdout": "applied 0 | not located 1 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n\nNOT LOCATED:\n   [0] -: 'onestart'\n  leftover written: 1 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_i7ar3r2t/leftover.json\n",
+      "stderr": "\nREFUSING TO WRITE: 1 not located, 0 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 0 that matched.\n"
+    },
+    {
+      "name": "displayed_softHyphen_boundary_not_joined",
+      "status": "passed",
+      "returncode": 1,
+      "xml_unchanged": true,
+      "paragraph_texts": [
+        "end of onestart of next"
+      ],
+      "paragraph_count": 1,
+      "xml_sha256_before": "2b1399af0778283c7fc8b76ac757908629043c2f477ab103d3108b5f23c3a7be",
+      "xml_sha256_after": "2b1399af0778283c7fc8b76ac757908629043c2f477ab103d3108b5f23c3a7be",
+      "leftover": [
+        {
+          "quote": "onestart",
+          "repl": "merged"
+        }
+      ],
+      "stdout": "applied 0 | not located 1 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n\nNOT LOCATED:\n   [0] -: 'onestart'\n  leftover written: 1 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_4t30fydn/leftover.json\n",
+      "stderr": "\nREFUSING TO WRITE: 1 not located, 0 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 0 that matched.\n"
+    },
+    {
+      "name": "displayed_pgNum_boundary_not_joined",
+      "status": "passed",
+      "returncode": 1,
+      "xml_unchanged": true,
+      "paragraph_texts": [
+        "end of onestart of next"
+      ],
+      "paragraph_count": 1,
+      "xml_sha256_before": "b69980b2f898d7beb35f25815c61ac5b3fbef1d24db5b37d052d856e543605bb",
+      "xml_sha256_after": "b69980b2f898d7beb35f25815c61ac5b3fbef1d24db5b37d052d856e543605bb",
+      "leftover": [
+        {
+          "quote": "onestart",
+          "repl": "merged"
+        }
+      ],
+      "stdout": "applied 0 | not located 1 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n\nNOT LOCATED:\n   [0] -: 'onestart'\n  leftover written: 1 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_li1dmpue/leftover.json\n",
+      "stderr": "\nREFUSING TO WRITE: 1 not located, 0 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 0 that matched.\n"
+    },
+    {
+      "name": "displayed_footnoteReference_boundary_not_joined",
+      "status": "passed",
+      "returncode": 1,
+      "xml_unchanged": true,
+      "paragraph_texts": [
+        "end of onestart of next"
+      ],
+      "paragraph_count": 1,
+      "xml_sha256_before": "c93265beffa2d817df5a6d7d1ca706d7424afda790eeeb538e401ee38e5ed14f",
+      "xml_sha256_after": "c93265beffa2d817df5a6d7d1ca706d7424afda790eeeb538e401ee38e5ed14f",
+      "leftover": [
+        {
+          "quote": "onestart",
+          "repl": "merged"
+        }
+      ],
+      "stdout": "applied 0 | not located 1 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n\nNOT LOCATED:\n   [0] -: 'onestart'\n  leftover written: 1 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_2hcwnp6a/leftover.json\n",
+      "stderr": "\nREFUSING TO WRITE: 1 not located, 0 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 0 that matched.\n"
+    },
+    {
+      "name": "displayed_endnoteReference_boundary_not_joined",
+      "status": "passed",
+      "returncode": 1,
+      "xml_unchanged": true,
+      "paragraph_texts": [
+        "end of onestart of next"
+      ],
+      "paragraph_count": 1,
+      "xml_sha256_before": "320d72b15b78de9a4dc4fdf3027caf1a3425acf38b9c127deb11974d171e0dad",
+      "xml_sha256_after": "320d72b15b78de9a4dc4fdf3027caf1a3425acf38b9c127deb11974d171e0dad",
+      "leftover": [
+        {
+          "quote": "onestart",
+          "repl": "merged"
+        }
+      ],
+      "stdout": "applied 0 | not located 1 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n\nNOT LOCATED:\n   [0] -: 'onestart'\n  leftover written: 1 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_yus2w2w7/leftover.json\n",
+      "stderr": "\nREFUSING TO WRITE: 1 not located, 0 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 0 that matched.\n"
+    },
+    {
+      "name": "displayed_commentReference_boundary_not_joined",
+      "status": "passed",
+      "returncode": 1,
+      "xml_unchanged": true,
+      "paragraph_texts": [
+        "end of onestart of next"
+      ],
+      "paragraph_count": 1,
+      "xml_sha256_before": "94c4d3331995d28970ff584f67ede197dcc221ff56edd80086162182174efc27",
+      "xml_sha256_after": "94c4d3331995d28970ff584f67ede197dcc221ff56edd80086162182174efc27",
+      "leftover": [
+        {
+          "quote": "onestart",
+          "repl": "merged"
+        }
+      ],
+      "stdout": "applied 0 | not located 1 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n\nNOT LOCATED:\n   [0] -: 'onestart'\n  leftover written: 1 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_x6gvfthv/leftover.json\n",
+      "stderr": "\nREFUSING TO WRITE: 1 not located, 0 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 0 that matched.\n"
+    },
+    {
+      "name": "displayed_annotationRef_boundary_not_joined",
+      "status": "passed",
+      "returncode": 1,
+      "xml_unchanged": true,
+      "paragraph_texts": [
+        "end of onestart of next"
+      ],
+      "paragraph_count": 1,
+      "xml_sha256_before": "02ab1666bcd7802eb0140aabe310b013762a1d35607ccb3023895e1792d27b27",
+      "xml_sha256_after": "02ab1666bcd7802eb0140aabe310b013762a1d35607ccb3023895e1792d27b27",
+      "leftover": [
+        {
+          "quote": "onestart",
+          "repl": "merged"
+        }
+      ],
+      "stdout": "applied 0 | not located 1 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n\nNOT LOCATED:\n   [0] -: 'onestart'\n  leftover written: 1 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_rji5xqc5/leftover.json\n",
+      "stderr": "\nREFUSING TO WRITE: 1 not located, 0 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 0 that matched.\n"
+    },
+    {
+      "name": "displayed_footnoteRef_boundary_not_joined",
+      "status": "passed",
+      "returncode": 1,
+      "xml_unchanged": true,
+      "paragraph_texts": [
+        "end of onestart of next"
+      ],
+      "paragraph_count": 1,
+      "xml_sha256_before": "f02aa5c74a2d50f815c4bc47a29c455620b6769fd368142bf43c10b2de1dd10b",
+      "xml_sha256_after": "f02aa5c74a2d50f815c4bc47a29c455620b6769fd368142bf43c10b2de1dd10b",
+      "leftover": [
+        {
+          "quote": "onestart",
+          "repl": "merged"
+        }
+      ],
+      "stdout": "applied 0 | not located 1 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n\nNOT LOCATED:\n   [0] -: 'onestart'\n  leftover written: 1 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_v48ibk2o/leftover.json\n",
+      "stderr": "\nREFUSING TO WRITE: 1 not located, 0 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 0 that matched.\n"
+    },
+    {
+      "name": "displayed_endnoteRef_boundary_not_joined",
+      "status": "passed",
+      "returncode": 1,
+      "xml_unchanged": true,
+      "paragraph_texts": [
+        "end of onestart of next"
+      ],
+      "paragraph_count": 1,
+      "xml_sha256_before": "5be0a6df48afacaaf2e7a07058f716ee2716bcfe67ae22f31b2bbb434e31f859",
+      "xml_sha256_after": "5be0a6df48afacaaf2e7a07058f716ee2716bcfe67ae22f31b2bbb434e31f859",
+      "leftover": [
+        {
+          "quote": "onestart",
+          "repl": "merged"
+        }
+      ],
+      "stdout": "applied 0 | not located 1 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n\nNOT LOCATED:\n   [0] -: 'onestart'\n  leftover written: 1 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_aer5jnho/leftover.json\n",
+      "stderr": "\nREFUSING TO WRITE: 1 not located, 0 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 0 that matched.\n"
+    },
+    {
+      "name": "displayed_separator_boundary_not_joined",
+      "status": "passed",
+      "returncode": 1,
+      "xml_unchanged": true,
+      "paragraph_texts": [
+        "end of onestart of next"
+      ],
+      "paragraph_count": 1,
+      "xml_sha256_before": "ce4ba3262056a077ff69a017626b64ffc447a0b1fa737a4f758fe96d01d703a0",
+      "xml_sha256_after": "ce4ba3262056a077ff69a017626b64ffc447a0b1fa737a4f758fe96d01d703a0",
+      "leftover": [
+        {
+          "quote": "onestart",
+          "repl": "merged"
+        }
+      ],
+      "stdout": "applied 0 | not located 1 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n\nNOT LOCATED:\n   [0] -: 'onestart'\n  leftover written: 1 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_n1sfy5rg/leftover.json\n",
+      "stderr": "\nREFUSING TO WRITE: 1 not located, 0 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 0 that matched.\n"
+    },
+    {
+      "name": "displayed_continuationSeparator_boundary_not_joined",
+      "status": "passed",
+      "returncode": 1,
+      "xml_unchanged": true,
+      "paragraph_texts": [
+        "end of onestart of next"
+      ],
+      "paragraph_count": 1,
+      "xml_sha256_before": "872eedd206276de1474d97f77a55347e8a145178f84897bb632a2a44238bf171",
+      "xml_sha256_after": "872eedd206276de1474d97f77a55347e8a145178f84897bb632a2a44238bf171",
+      "leftover": [
+        {
+          "quote": "onestart",
+          "repl": "merged"
+        }
+      ],
+      "stdout": "applied 0 | not located 1 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n\nNOT LOCATED:\n   [0] -: 'onestart'\n  leftover written: 1 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_dm5a2tqn/leftover.json\n",
+      "stderr": "\nREFUSING TO WRITE: 1 not located, 0 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 0 that matched.\n"
+    },
+    {
+      "name": "displayed_ptab_boundary_not_joined",
+      "status": "passed",
+      "returncode": 1,
+      "xml_unchanged": true,
+      "paragraph_texts": [
+        "end of onestart of next"
+      ],
+      "paragraph_count": 1,
+      "xml_sha256_before": "823ac3c9165173fd7329a1055e96776f7a1909c297f5cc4fdaec9941e73c672b",
+      "xml_sha256_after": "823ac3c9165173fd7329a1055e96776f7a1909c297f5cc4fdaec9941e73c672b",
+      "leftover": [
+        {
+          "quote": "onestart",
+          "repl": "merged"
+        }
+      ],
+      "stdout": "applied 0 | not located 1 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n\nNOT LOCATED:\n   [0] -: 'onestart'\n  leftover written: 1 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_fp5u4ucl/leftover.json\n",
+      "stderr": "\nREFUSING TO WRITE: 1 not located, 0 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 0 that matched.\n"
+    },
+    {
+      "name": "edit_within_reference_boundary_preserves_marker",
+      "status": "passed",
+      "returncode": 0,
+      "xml_unchanged": false,
+      "paragraph_texts": [
+        "new phrase tail"
+      ],
+      "paragraph_count": 1,
+      "xml_sha256_before": "18aed8059d607f8826ca16a336676f241016d6600d07029ce1eb9de2bfade406",
+      "xml_sha256_after": "0ad6d80a58b82e0f01f567fa9000e71170e23534e2dfab7834f2ef2829768090",
+      "leftover": [],
+      "stdout": "applied 1 | not located 0 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n  leftover written: 0 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_ylr3l1xf/leftover.json\n\nwrote word/document.xml: 241 -> 241 bytes, 1 runs modified\n",
+      "stderr": ""
+    },
+    {
+      "name": "empty_text_nodes_and_run_spanning",
+      "status": "passed",
+      "returncode": 0,
+      "xml_unchanged": false,
+      "paragraph_texts": [
+        "new phrase"
+      ],
+      "paragraph_count": 1,
+      "xml_sha256_before": "55bf466bccc7a95be44b46507e474761d7154a44c8e907779e9b0b97cb512e5c",
+      "xml_sha256_after": "5bc5f7659d656539ccafa60dc7dd729c4b1c38adeb416957084cb56b6a5d912e",
+      "leftover": [],
+      "stdout": "applied 1 | not located 0 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 1\n  leftover written: 0 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_x8gxl46k/leftover.json\n\nwrote word/document.xml: 243 -> 243 bytes, 2 runs modified\n",
+      "stderr": ""
+    },
+    {
+      "name": "escaped_text_spanning_runs",
+      "status": "passed",
+      "returncode": 0,
+      "xml_unchanged": false,
+      "paragraph_texts": [
+        "D & E > F"
+      ],
+      "paragraph_count": 1,
+      "xml_sha256_before": "0fae7266be8b2473070db0bce5fe1d960b4457659f88e117478234fedf0735dc",
+      "xml_sha256_after": "1464bd589ee8b53a26f0dcd437cf939bae9de19fd1a9c055b2fa5b3a484fa414",
+      "leftover": [],
+      "stdout": "applied 1 | not located 0 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 1\n  leftover written: 0 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_8q1yo_en/leftover.json\n\nwrote word/document.xml: 264 -> 264 bytes, 2 runs modified\n",
+      "stderr": ""
+    },
+    {
+      "name": "unmatched_edit_preserves_all_bytes",
+      "status": "passed",
+      "returncode": 1,
+      "xml_unchanged": true,
+      "paragraph_texts": [
+        "alpha beta"
+      ],
+      "paragraph_count": 1,
+      "xml_sha256_before": "4337bacacc64c63a0642e0c960b9f477c4f5762eb3ed28aabe78010cb787fbbc",
+      "xml_sha256_after": "4337bacacc64c63a0642e0c960b9f477c4f5762eb3ed28aabe78010cb787fbbc",
+      "leftover": [
+        {
+          "quote": "not present",
+          "repl": "replacement"
+        }
+      ],
+      "stdout": "applied 1 | not located 1 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n\nNOT LOCATED:\n   [1] -: 'not present'\n  leftover written: 1 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_ai1saf10/leftover.json\n",
+      "stderr": "\nREFUSING TO WRITE: 1 not located, 0 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 1 that matched.\n"
+    },
+    {
+      "name": "explicit_partial_opt_in",
+      "status": "passed",
+      "returncode": 0,
+      "xml_unchanged": false,
+      "paragraph_texts": [
+        "new phrase"
+      ],
+      "paragraph_count": 1,
+      "xml_sha256_before": "4337bacacc64c63a0642e0c960b9f477c4f5762eb3ed28aabe78010cb787fbbc",
+      "xml_sha256_after": "efaa945b5547a5c4313fa7b3981b3762e1cb0f20a23f3f17ae0ece2f178f14d4",
+      "leftover": [
+        {
+          "quote": "not present",
+          "repl": "replacement"
+        }
+      ],
+      "stdout": "applied 1 | not located 1 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n\nNOT LOCATED:\n   [1] -: 'not present'\n  leftover written: 1 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_iw7t7ry4/leftover.json\n\nwrote word/document.xml: 215 -> 215 bytes, 1 runs modified\n",
+      "stderr": ""
+    },
+    {
+      "name": "dry_run_never_writes",
+      "status": "passed",
+      "returncode": 0,
+      "xml_unchanged": true,
+      "paragraph_texts": [
+        "alpha beta"
+      ],
+      "paragraph_count": 1,
+      "xml_sha256_before": "4337bacacc64c63a0642e0c960b9f477c4f5762eb3ed28aabe78010cb787fbbc",
+      "xml_sha256_after": "4337bacacc64c63a0642e0c960b9f477c4f5762eb3ed28aabe78010cb787fbbc",
+      "leftover": [],
+      "stdout": "applied 1 | not located 0 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n  leftover written: 0 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_t_c5iwyl/leftover.json\n\n(dry run \u2014 nothing written)\n",
+      "stderr": ""
+    },
+    {
+      "name": "same_run_conflict_is_deferred",
+      "status": "passed",
+      "returncode": 0,
+      "xml_unchanged": false,
+      "paragraph_texts": [
+        "A beta"
+      ],
+      "paragraph_count": 1,
+      "xml_sha256_before": "4337bacacc64c63a0642e0c960b9f477c4f5762eb3ed28aabe78010cb787fbbc",
+      "xml_sha256_after": "c4b105b69de1e6c6df54c1cae26d184f9ffef84d32a2c841b23ea4ec9f9b3627",
+      "leftover": [
+        {
+          "quote": "beta",
+          "repl": "B"
+        }
+      ],
+      "stdout": "applied 1 | not located 0 | run-conflicts 1 | ambiguous 0\n  of applied, spanning >1 run: 0\n\nCONFLICTS (overlapping runs, skipped \u2014 re-run to apply):\n   [1] -: 'beta'\n  leftover written: 1 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_4rk24j7r/leftover.json\n\nwrote word/document.xml: 215 -> 211 bytes, 1 runs modified\n",
+      "stderr": ""
+    },
+    {
+      "name": "documented_conflict_replay_finishes",
+      "status": "passed",
+      "returncode": 0,
+      "xml_unchanged": false,
+      "paragraph_texts": [
+        "A B"
+      ],
+      "paragraph_count": 1,
+      "xml_sha256_before": "c4b105b69de1e6c6df54c1cae26d184f9ffef84d32a2c841b23ea4ec9f9b3627",
+      "xml_sha256_after": "0bc5fd9292665d6b4c748729299e1b3ab1cc83d89c450bdf37ee93492e04d5b1",
+      "leftover": [],
+      "stdout": "applied 1 | not located 0 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n  leftover written: 0 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_l6tjwqxx/leftover.json\n\nwrote word/document.xml: 211 -> 208 bytes, 1 runs modified\n",
+      "stderr": ""
+    },
+    {
+      "name": "copied_document_parse_Pf8_Ghana_manuscript_REVISED",
+      "status": "passed",
+      "returncode": 0,
+      "xml_unchanged": true,
+      "paragraph_texts": null,
+      "paragraph_count": 4074,
+      "xml_sha256_before": "041546a4d62be3ba28d05e6efba42e021f1e359593feeb32d6d2584aa7b4bb8b",
+      "xml_sha256_after": "041546a4d62be3ba28d05e6efba42e021f1e359593feeb32d6d2584aa7b4bb8b",
+      "leftover": [],
+      "stdout": "applied 0 | not located 0 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n  leftover written: 0 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_2u47f5s4/leftover.json\n\n(dry run \u2014 nothing written)\n",
+      "stderr": ""
+    },
+    {
+      "name": "copied_document_parse_Additional_file_1",
+      "status": "passed",
+      "returncode": 0,
+      "xml_unchanged": true,
+      "paragraph_texts": null,
+      "paragraph_count": 4078,
+      "xml_sha256_before": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368",
+      "xml_sha256_after": "82e852c77340691dc02b0ddb03dda368afab5e2fab5e805936603e26d2a48368",
+      "leftover": [],
+      "stdout": "applied 0 | not located 0 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n  leftover written: 0 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_dqvhffrd/leftover.json\n\n(dry run \u2014 nothing written)\n",
+      "stderr": ""
+    },
+    {
+      "name": "copied_document_parse_Pf8_Ghana_article",
+      "status": "passed",
+      "returncode": 0,
+      "xml_unchanged": true,
+      "paragraph_texts": null,
+      "paragraph_count": 468,
+      "xml_sha256_before": "9e7d5b00249ac81dd636c2664623da470e6ee4411feb46e325f97f5aa7a99091",
+      "xml_sha256_after": "9e7d5b00249ac81dd636c2664623da470e6ee4411feb46e325f97f5aa7a99091",
+      "leftover": [],
+      "stdout": "applied 0 | not located 0 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n  leftover written: 0 -> /var/folders/6k/lj5f4kh17hz4htwf4pbm9r4w0000gn/T/pf8_editor_fix_ovcz2sl6/leftover.json\n\n(dry run \u2014 nothing written)\n",
+      "stderr": ""
+    }
+  ]
+}

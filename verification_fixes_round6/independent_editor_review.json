@@ -1,0 +1,378 @@
+{
+  "scope": "Independent scratch-only editor review; no source edits or DOCX modifications.",
+  "script_sha256_before": "9e6e315312ae911b090ad14c9a896017d2ff5151bd4f5017d39380413ec0e3b8",
+  "script_sha256_after": "9e6e315312ae911b090ad14c9a896017d2ff5151bd4f5017d39380413ec0e3b8",
+  "regression_evidence_source_matches": true,
+  "regression_test_count": 35,
+  "results": [
+    {
+      "name": "same_paragraph_mixed_spacing_ambiguous",
+      "source_xml": "<w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:body><w:p><w:r><w:t>alpha beta / alpha  beta</w:t></w:r></w:p></w:body></w:document>",
+      "edits": [
+        {
+          "quote": "alpha beta",
+          "repl": "new phrase"
+        }
+      ],
+      "returncode": 1,
+      "stdout": "applied 0 | not located 0 | run-conflicts 0 | ambiguous 1\n  of applied, spanning >1 run: 0\n\nAMBIGUOUS (quote is not unique \u2014 add \"occurrence\": <1-based int>):\n   [0] -: 2 matches: 'alpha beta'\n",
+      "stderr": "\nREFUSING TO WRITE: 0 not located, 1 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 0 that matched.\n",
+      "xml_unchanged": true,
+      "result_texts": [
+        "alpha beta / alpha  beta"
+      ],
+      "after_xml": "<w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:body><w:p><w:r><w:t>alpha beta / alpha  beta</w:t></w:r></w:p></w:body></w:document>",
+      "expected_code": 1,
+      "expected_texts": null,
+      "passed": true
+    },
+    {
+      "name": "three_mixed_candidates_occurrence_3",
+      "source_xml": "<w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:body><w:p><w:r><w:t>alpha   beta</w:t></w:r></w:p><w:p><w:r><w:t>alpha beta</w:t></w:r></w:p><w:p><w:r><w:t>alpha\tbeta</w:t></w:r></w:p></w:body></w:document>",
+      "edits": [
+        {
+          "quote": "alpha beta",
+          "repl": "new phrase",
+          "occurrence": 3
+        }
+      ],
+      "returncode": 0,
+      "stdout": "applied 1 | not located 0 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n\nwrote word/document.xml: 244 -> 244 bytes, 1 runs modified\n",
+      "stderr": "",
+      "xml_unchanged": false,
+      "result_texts": [
+        "alpha   beta",
+        "alpha beta",
+        "new phrase"
+      ],
+      "after_xml": "<w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:body><w:p><w:r><w:t>alpha   beta</w:t></w:r></w:p><w:p><w:r><w:t>alpha beta</w:t></w:r></w:p><w:p><w:r><w:t>new phrase</w:t></w:r></w:p></w:body></w:document>",
+      "expected_code": 0,
+      "expected_texts": [
+        "alpha   beta",
+        "alpha beta",
+        "new phrase"
+      ],
+      "passed": true
+    },
+    {
+      "name": "multi_run_preserves_prefix_suffix",
+      "source_xml": "<w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:body><w:p><w:r><w:rPr><w:b/></w:rPr><w:t>left al</w:t></w:r><w:r><w:t>pha </w:t></w:r><w:r><w:rPr><w:i/></w:rPr><w:t>beta right</w:t></w:r></w:p></w:body></w:document>",
+      "edits": [
+        {
+          "quote": "alpha beta",
+          "repl": "new phrase"
+        }
+      ],
+      "returncode": 0,
+      "stdout": "applied 1 | not located 0 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 1\n\nwrote word/document.xml: 253 -> 253 bytes, 3 runs modified\n",
+      "stderr": "",
+      "xml_unchanged": false,
+      "result_texts": [
+        "left new phrase right"
+      ],
+      "after_xml": "<w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:body><w:p><w:r><w:rPr><w:b/></w:rPr><w:t>left new phrase</w:t></w:r><w:r><w:t></w:t></w:r><w:r><w:rPr><w:i/></w:rPr><w:t> right</w:t></w:r></w:p></w:body></w:document>",
+      "expected_code": 0,
+      "expected_texts": [
+        "left new phrase right"
+      ],
+      "passed": true
+    },
+    {
+      "name": "content_control_runs",
+      "source_xml": "<w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:body><w:p><w:r><w:t>alpha </w:t></w:r><w:sdt><w:sdtContent><w:r><w:t>beta</w:t></w:r></w:sdtContent></w:sdt></w:p></w:body></w:document>",
+      "edits": [
+        {
+          "quote": "alpha beta",
+          "repl": "new phrase"
+        }
+      ],
+      "returncode": 0,
+      "stdout": "applied 1 | not located 0 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 1\n\nwrote word/document.xml: 222 -> 222 bytes, 2 runs modified\n",
+      "stderr": "",
+      "xml_unchanged": false,
+      "result_texts": [
+        "new phrase"
+      ],
+      "after_xml": "<w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:body><w:p><w:r><w:t>new phrase</w:t></w:r><w:sdt><w:sdtContent><w:r><w:t></w:t></w:r></w:sdtContent></w:sdt></w:p></w:body></w:document>",
+      "expected_code": 0,
+      "expected_texts": [
+        "new phrase"
+      ],
+      "passed": true
+    },
+    {
+      "name": "escaped_entities_across_runs",
+      "source_xml": "<w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:body><w:p><w:r><w:t>alpha &amp; </w:t></w:r><w:r><w:t>beta</w:t></w:r></w:p></w:body></w:document>",
+      "edits": [
+        {
+          "quote": "alpha & beta",
+          "repl": "new &lt; literal"
+        }
+      ],
+      "returncode": 0,
+      "stdout": "applied 1 | not located 0 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 1\n\nwrote word/document.xml: 184 -> 188 bytes, 2 runs modified\n",
+      "stderr": "",
+      "xml_unchanged": false,
+      "result_texts": [
+        "new &lt; literal"
+      ],
+      "after_xml": "<w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:body><w:p><w:r><w:t>new &amp;lt; literal</w:t></w:r><w:r><w:t></w:t></w:r></w:p></w:body></w:document>",
+      "expected_code": 0,
+      "expected_texts": [
+        "new &lt; literal"
+      ],
+      "passed": true
+    },
+    {
+      "name": "block_boundary_occurrence_cannot_create_match",
+      "source_xml": "<w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:body><w:p><w:r><w:t>alpha </w:t></w:r></w:p><w:p><w:r><w:t>beta</w:t></w:r></w:p></w:body></w:document>",
+      "edits": [
+        {
+          "quote": "alpha beta",
+          "repl": "new phrase",
+          "occurrence": 1
+        }
+      ],
+      "returncode": 1,
+      "stdout": "applied 0 | not located 0 | run-conflicts 0 | ambiguous 1\n  of applied, spanning >1 run: 0\n\nAMBIGUOUS (quote is not unique \u2014 add \"occurrence\": <1-based int>):\n   [0] -: 0 matches: 'occurrence must be a 1-based integer within the match count: alpha beta'\n",
+      "stderr": "\nREFUSING TO WRITE: 0 not located, 1 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 0 that matched.\n",
+      "xml_unchanged": true,
+      "result_texts": [
+        "alpha ",
+        "beta"
+      ],
+      "after_xml": "<w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:body><w:p><w:r><w:t>alpha </w:t></w:r></w:p><w:p><w:r><w:t>beta</w:t></w:r></w:p></w:body></w:document>",
+      "expected_code": 1,
+      "expected_texts": null,
+      "passed": true
+    },
+    {
+      "name": "drawing_boundary",
+      "source_xml": "<w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:body><w:p><w:r><w:t>alpha </w:t><w:drawing/><w:t>beta</w:t></w:r></w:p></w:body></w:document>",
+      "edits": [
+        {
+          "quote": "alpha beta",
+          "repl": "new phrase"
+        }
+      ],
+      "returncode": 1,
+      "stdout": "applied 0 | not located 1 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 0\n\nNOT LOCATED:\n   [0] -: 'alpha beta'\n",
+      "stderr": "\nREFUSING TO WRITE: 1 not located, 0 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 0 that matched.\n",
+      "xml_unchanged": true,
+      "result_texts": [
+        "alpha beta"
+      ],
+      "after_xml": "<w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:body><w:p><w:r><w:t>alpha </w:t><w:drawing/><w:t>beta</w:t></w:r></w:p></w:body></w:document>",
+      "expected_code": 1,
+      "expected_texts": null,
+      "passed": true
+    },
+    {
+      "name": "mixed_list_bad_occurrence_no_write",
+      "source_xml": "<w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:body><w:p><w:r><w:t>alpha beta / gamma</w:t></w:r></w:p></w:body></w:document>",
+      "edits": [
+        {
+          "quote": "alpha beta",
+          "repl": "new phrase"
+        },
+        {
+          "quote": "gamma",
+          "repl": "delta",
+          "occurrence": 2
+        }
+      ],
+      "returncode": 1,
+      "stdout": "applied 1 | not located 0 | run-conflicts 0 | ambiguous 1\n  of applied, spanning >1 run: 0\n\nAMBIGUOUS (quote is not unique \u2014 add \"occurrence\": <1-based int>):\n   [1] -: 1 matches: 'occurrence must be a 1-based integer within the match count: gamma'\n",
+      "stderr": "\nREFUSING TO WRITE: 0 not located, 1 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 1 that matched.\n",
+      "xml_unchanged": true,
+      "result_texts": [
+        "alpha beta / gamma"
+      ],
+      "after_xml": "<w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:body><w:p><w:r><w:t>alpha beta / gamma</w:t></w:r></w:p></w:body></w:document>",
+      "expected_code": 1,
+      "expected_texts": null,
+      "passed": true
+    },
+    {
+      "name": "mixed_list_ambiguous_no_write",
+      "source_xml": "<w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:body><w:p><w:r><w:t>unique / alpha beta / alpha  beta</w:t></w:r></w:p></w:body></w:document>",
+      "edits": [
+        {
+          "quote": "unique",
+          "repl": "changed"
+        },
+        {
+          "quote": "alpha beta",
+          "repl": "new phrase"
+        }
+      ],
+      "returncode": 1,
+      "stdout": "applied 1 | not located 0 | run-conflicts 0 | ambiguous 1\n  of applied, spanning >1 run: 0\n\nAMBIGUOUS (quote is not unique \u2014 add \"occurrence\": <1-based int>):\n   [1] -: 2 matches: 'alpha beta'\n",
+      "stderr": "\nREFUSING TO WRITE: 0 not located, 1 ambiguous. Fix the edit list, or set ALLOW_PARTIAL=1 to write the 1 that matched.\n",
+      "xml_unchanged": true,
+      "result_texts": [
+        "unique / alpha beta / alpha  beta"
+      ],
+      "after_xml": "<w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:body><w:p><w:r><w:t>unique / alpha beta / alpha  beta</w:t></w:r></w:p></w:body></w:document>",
+      "expected_code": 1,
+      "expected_texts": null,
+      "passed": true
+    },
+    {
+      "name": "visible_inline_sym",
+      "source_xml": "<w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:body><w:p><w:r><w:t>alpha</w:t><w:sym w:font=\"Symbol\" w:char=\"F061\"/><w:t>beta</w:t></w:r></w:p></w:body></w:document>",
+      "edits": [
+        {
+          "quote": "alphabeta",
+          "repl": "merged"
+        }
+      ],
+      "returncode": 0,
+      "stdout": "applied 1 | not located 0 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 1\n\nwrote word/document.xml: 204 -> 201 bytes, 2 runs modified\n",
+      "stderr": "",
+      "xml_unchanged": false,
+      "result_texts": [
+        "merged"
+      ],
+      "after_xml": "<w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:body><w:p><w:r><w:t>merged</w:t><w:sym w:font=\"Symbol\" w:char=\"F061\"/><w:t></w:t></w:r></w:p></w:body></w:document>",
+      "expected_code": 1,
+      "expected_texts": null,
+      "passed": false
+    },
+    {
+      "name": "visible_inline_noBreakHyphen",
+      "source_xml": "<w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:body><w:p><w:r><w:t>alpha</w:t><w:noBreakHyphen/><w:t>beta</w:t></w:r></w:p></w:body></w:document>",
+      "edits": [
+        {
+          "quote": "alphabeta",
+          "repl": "merged"
+        }
+      ],
+      "returncode": 0,
+      "stdout": "applied 1 | not located 0 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 1\n\nwrote word/document.xml: 184 -> 181 bytes, 2 runs modified\n",
+      "stderr": "",
+      "xml_unchanged": false,
+      "result_texts": [
+        "merged"
+      ],
+      "after_xml": "<w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:body><w:p><w:r><w:t>merged</w:t><w:noBreakHyphen/><w:t></w:t></w:r></w:p></w:body></w:document>",
+      "expected_code": 1,
+      "expected_texts": null,
+      "passed": false
+    },
+    {
+      "name": "visible_inline_softHyphen",
+      "source_xml": "<w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:body><w:p><w:r><w:t>alpha</w:t><w:softHyphen/><w:t>beta</w:t></w:r></w:p></w:body></w:document>",
+      "edits": [
+        {
+          "quote": "alphabeta",
+          "repl": "merged"
+        }
+      ],
+      "returncode": 0,
+      "stdout": "applied 1 | not located 0 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 1\n\nwrote word/document.xml: 181 -> 178 bytes, 2 runs modified\n",
+      "stderr": "",
+      "xml_unchanged": false,
+      "result_texts": [
+        "merged"
+      ],
+      "after_xml": "<w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:body><w:p><w:r><w:t>merged</w:t><w:softHyphen/><w:t></w:t></w:r></w:p></w:body></w:document>",
+      "expected_code": 1,
+      "expected_texts": null,
+      "passed": false
+    },
+    {
+      "name": "visible_inline_footnoteReference",
+      "source_xml": "<w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:body><w:p><w:r><w:t>alpha</w:t><w:footnoteReference w:id=\"1\"/><w:t>beta</w:t></w:r></w:p></w:body></w:document>",
+      "edits": [
+        {
+          "quote": "alphabeta",
+          "repl": "merged"
+        }
+      ],
+      "returncode": 0,
+      "stdout": "applied 1 | not located 0 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 1\n\nwrote word/document.xml: 197 -> 194 bytes, 2 runs modified\n",
+      "stderr": "",
+      "xml_unchanged": false,
+      "result_texts": [
+        "merged"
+      ],
+      "after_xml": "<w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:body><w:p><w:r><w:t>merged</w:t><w:footnoteReference w:id=\"1\"/><w:t></w:t></w:r></w:p></w:body></w:document>",
+      "expected_code": 1,
+      "expected_texts": null,
+      "passed": false
+    },
+    {
+      "name": "visible_inline_endnoteReference",
+      "source_xml": "<w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:body><w:p><w:r><w:t>alpha</w:t><w:endnoteReference w:id=\"1\"/><w:t>beta</w:t></w:r></w:p></w:body></w:document>",
+      "edits": [
+        {
+          "quote": "alphabeta",
+          "repl": "merged"
+        }
+      ],
+      "returncode": 0,
+      "stdout": "applied 1 | not located 0 | run-conflicts 0 | ambiguous 0\n  of applied, spanning >1 run: 1\n\nwrote word/document.xml: 196 -> 193 bytes, 2 runs modified\n",
+      "stderr": "",
+      "xml_unchanged": false,
+      "result_texts": [
+        "merged"
+      ],
+      "after_xml": "<w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:body><w:p><w:r><w:t>merged</w:t><w:endnoteReference w:id=\"1\"/><w:t></w:t></w:r></w:p></w:body></w:document>",
+      "expected_code": 1,
+      "expected_texts": null,
+      "passed": false
+    }
+  ],
+  "current_document_control_counts": [
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/Pf8_Ghana_manuscript_REVISED.docx",
+      "inline_control_occurrences": {
+        "sym": 0,
+        "noBreakHyphen": 0,
+        "softHyphen": 0,
+        "footnoteReference": 0,
+        "endnoteReference": 0
+      }
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/article/Additional_file_1.docx",
+      "inline_control_occurrences": {
+        "sym": 0,
+        "noBreakHyphen": 0,
+        "softHyphen": 0,
+        "footnoteReference": 0,
+        "endnoteReference": 0
+      }
+    },
+    {
+      "path": "/Users/samnimoh/Desktop/chromo/article/Pf8_Ghana_article.docx",
+      "inline_control_occurrences": {
+        "sym": 0,
+        "noBreakHyphen": 0,
+        "softHyphen": 0,
+        "footnoteReference": 0,
+        "endnoteReference": 0
+      }
+    }
+  ],
+  "findings": [
+    {
+      "title": "Visible inline controls are omitted from logical matching boundaries",
+      "severity": "P2",
+      "evidence_cases": [
+        "visible_inline_sym",
+        "visible_inline_noBreakHyphen",
+        "visible_inline_softHyphen",
+        "visible_inline_footnoteReference",
+        "visible_inline_endnoteReference"
+      ],
+      "details": "The matcher joins w:t nodes across symbol, hyphen and note-reference controls. The synthetic quote alphabeta is absent from visible text but is accepted, and the intervening control remains after the replacement. Add these non-text controls to the boundary set; formatting-only wrappers should remain supported."
+    }
+  ],
+  "intentional_supported_behavior_changes": [
+    "Cross-paragraph/cell/control concatenations now reject.",
+    "Whitespace variants and exact candidates share one document-order occurrence list.",
+    "Overlapping candidates are counted as ambiguous."
+  ]
+}
